@@ -1,0 +1,12 @@
+{ 
+  "parent": "minecraft:block/wall_inventory", 
+  "textures": { 
+    "wall": "delbase:block/blood_sand" 
+  } 
+} 
+{ 
+  "parent": "minecraft:block/wall_inventory", 
+  "textures": { 
+    "wall": "delbase:block/blood_sand" 
+  } 
+} 

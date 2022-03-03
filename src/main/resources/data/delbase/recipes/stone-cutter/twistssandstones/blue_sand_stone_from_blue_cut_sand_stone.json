@@ -1,0 +1,8 @@
+{ 
+  "type": "minecraft:stonecutting", 
+  "ingredient": { 
+    "item": "delbase:blue_cut_sand_stone" 
+  }, 
+  "result": "delbase:blue_sand_stone", 
+  "count": 1 
+} 

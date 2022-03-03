@@ -1,0 +1,30 @@
+{
+  "language.name": "English",
+  "language.region": "United States",
+  "language.code": "en_us",
+
+  "Sands": "",
+  "block.delbase.sand": "Energetic Sand",
+  "block.delbase.red_sand": "Energetic Red Sand",
+  "block.delbase.blood_sand": "Energetic Dark Red Sand",
+  "block.delbase.white_sand": "Energetic White Sand",
+  "block.delbase.orange_sand": "Energetic Orange Sand",
+  "block.delbase.magenta_sand": "Energetic Magenta Sand",
+  "block.delbase.light_blue_sand": "Energetic Light Blue Sand",
+  "block.delbase.yellow_sand": "Energetic Yellow Sand",
+  "block.delbase.lime_sand": "Energetic Lime Sand",
+  "block.delbase.pink_sand": "Energetic Pink Sand",
+  "block.delbase.gray_sand": "Energetic Gray Sand",
+  "block.delbase.light_gray_sand": "Energetic Light Gray Sand",
+  "block.delbase.cyan_sand": "Energetic Cyan Sand",
+  "block.delbase.purple_sand": "Energetic Purple Sand",
+  "block.delbase.blue_sand": "Energetic Blue Sand",
+  "block.delbase.green_sand": "Energetic Green Sand",
+  "block.delbase.brown_sand": "Energetic Brown Sand",
+  "block.delbase.black_sand": "Energetic Black Sand",
+
+  "Stones": "",
+
+  "Creative_Tabs": "",
+  "itemGroup.dephoegon_blocks": "Dephoegons' Blocks"
+}

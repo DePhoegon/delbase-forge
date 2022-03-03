@@ -1,0 +1,9 @@
+{
+  "parent": "delbase:block/template/stairs",
+  "textures": {
+    "bottom": "minecraft:block/jungle_log_top",
+    "top": "minecraft:block/jungle_log_top",
+    "side": "minecraft:block/jungle_log",
+    "inside": "minecraft:block/jungle_log_top"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "replace": false,
+  "values": [
+    "#delbase:walls/wall_wood",
+    "#delbase:walls/wall_log",
+    "#delbase:slabs/slab_wood",
+    "#delbase:slabs/slab_log",
+    "#delbase:stairs/stair_wood",
+    "#delbase:stairs/stair_log",
+    "#delbase:ashed"
+  ]
+}

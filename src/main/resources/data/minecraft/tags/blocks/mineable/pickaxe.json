@@ -1,0 +1,7 @@
+{
+  "replace": false,
+  "values": [
+    "#delbase:stone_all",
+    "#delbase:gemlike_all"
+  ]
+}

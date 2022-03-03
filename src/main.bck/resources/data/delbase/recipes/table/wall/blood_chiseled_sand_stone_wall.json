@@ -1,0 +1,13 @@
+{ 
+  "type": "minecraft:crafting_shaped", 
+  "pattern": [ "yyy","yyy" ], 
+  "key": { 
+    "y": { 
+      "item": "delbase:blood_chiseled_sand_stone" 
+    } 
+  }, 
+  "result":{ 
+    "item": "delbase:blood_chiseled_sand_stone_wall", 
+    "count": 6 
+  } 
+} 

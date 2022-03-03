@@ -1,0 +1,107 @@
+concrete
+[all colors]
+wall / stair / slab
+
+================
+BLockstate, Block & Item Model Files, Loot_table
+
+ash_slab
+ash_wall
+ash_stair
+ash_pillar
+ash_block
+
+================
+[sand&red_sand] - Verify recipes
+sand,
+solid_sand,
+sand_slab,
+sand_slab_energy,
+chiseled_sand_stone_slab,
+chiseled_sand_stone_slab_energy,
+cut_sand_stone_slab_energy,
+sand_stone_slab_energy,
+smooth_sand_stone_slab_energy,
+sand_stair,
+chiseled_sand_stone_stair,
+cut_sand_stone_stair,
+chiseled_sand_stone_wall,
+cut_sand_stone_wall,
+sand_wall,
+smooth_sand_stone_wall,
+=========================
+
+
+Quartz Walls  [Blockstate, register, model files, item model, loot table]
+- quartz_wall
+- smooth_quartz_wall
+- chiseled_quartz_wall
+- quartz_brick_wall
+- quartz_pillar_wall
+
+Quartz Slabs  [Blockstate, register, model files, item model, loot table]
+- chiseled_quartz_slab
+- quartz_brick_slab
+- quartz_pillar_slab
+
+Quartz Stairs  [Blockstate, register, model files, item model, loot table]
+- quartz_brick_stair
+- quartz_pillar_stair
+- chiseled_quartz_stair
+
+Concrete Slabs  [Blockstate, register, model files, item model, loot table]
+- red_concrete_slab
+- white_concrete_slab
+- orange_concrete_slab
+- magenta_concrete_slab
+- light_blue_concrete_slab
+- yellow_concrete_slab
+- lime_concrete_slab
+- pink_concrete_slab
+- gray_concrete_slab
+- light_gray_concrete_slab
+- cyan_concrete_slab
+- purple_concrete_slab
+- blue_concrete_slab
+- green_concrete_slab
+- brown_concrete_slab
+- black_concrete_slab
+
+Concrete Walls  [Blockstate, register, model files, item model, loot table]
+- red_concrete_wall
+- white_concrete_wall
+- orange_concrete_wall
+- magenta_concrete_wall
+- light_blue_concrete_wall
+- yellow_concrete_wall
+- lime_concrete_wall
+- pink_concrete_wall
+- gray_concrete_wall
+- light_gray_concrete_wall
+- cyan_concrete_wall
+- purple_concrete_wall
+- blue_concrete_wall
+- green_concrete_wall
+- brown_concrete_wall
+- black_concrete_wall
+
+Concrete Stairs  [Blockstate, register, model files, item model, loot table]
+- red_concrete_stair
+- white_concrete_stair
+- orange_concrete_stair
+- magenta_concrete_stair
+- light_blue_concrete_stair
+- yellow_concrete_stair
+- lime_concrete_stair
+- pink_concrete_stair
+- gray_concrete_stair
+- light_gray_concrete_stair
+- cyan_concrete_stair
+- purple_concrete_stair
+- blue_concrete_stair
+- green_concrete_stair
+- brown_concrete_stair
+- black_concrete_stair
+
+Model files[block&item], Recipes, loot, tags
+=======================

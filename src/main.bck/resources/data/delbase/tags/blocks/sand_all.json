@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "#delbase:slabs_sand",
+    "#delbase:sand_blocks",
+    "#delbase:walls_sand",
+    "#delbase:stairs_sand"
+  ]
+}

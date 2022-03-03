@@ -1,0 +1,12 @@
+public static final RegistryObject<StairBlock> OVERRIDE_SPRUCE_STAIRS = register("spruce_stairs",
+            ()-> new stairBlock(BlockBehaviour.Properties.copy(SPRUCE_STAIRS).sound(SoundType.WOOD),"","","", true));
+    public static final RegistryObject<StairBlock> OVERRIDE_OAK_STAIRS = register("oak_stairs",
+            ()-> new stairBlock(BlockBehaviour.Properties.copy(OAK_STAIRS).sound(SoundType.WOOD),"","","", true));
+    public static final RegistryObject<StairBlock> OVERRIDE_DARK_OAK_STAIRS = register("dark_oak_stairs",
+            ()-> new stairBlock(BlockBehaviour.Properties.copy(DARK_OAK_STAIRS).sound(SoundType.WOOD),"","","", true));
+    public static final RegistryObject<StairBlock> OVERRIDE_ACACIA_STAIRS = register("acacia_stairs",
+            ()-> new stairBlock(BlockBehaviour.Properties.copy(ACACIA_STAIRS).sound(SoundType.WOOD),"","","", true));
+    public static final RegistryObject<StairBlock> OVERRIDE_JUNGLE_STAIRS = register("jungle_stairs",
+            ()-> new stairBlock(BlockBehaviour.Properties.copy(JUNGLE_STAIRS).sound(SoundType.WOOD),"","","", true));
+    public static final RegistryObject<StairBlock> OVERRIDE_BIRCH_STAIRS = register("birch_stairs",
+            ()-> new stairBlock(BlockBehaviour.Properties.copy(BIRCH_STAIRS).sound(SoundType.WOOD),"","","", true));

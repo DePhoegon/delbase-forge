@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "delbase:chiseled_quartz_stair",
+    "delbase:quartz_brick_stair",
+    "delbase:quartz_pillar_stair"
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "replace": false,
+  "values": [
+    "#delbase:slabs/slab_smooth_sand_stone",
+    "#delbase:stairs/stair_smooth_sand_stone",
+    "#delbase:walls/wall_smooth_sand_stone",
+    "#delbase:solids/smooth_sand_stone_block",
+    "#delbase:slabs/slab_sand_stone",
+    "#delbase:stairs/stair_sand_stone",
+    "#delbase:walls/wall_sand_stone",
+    "#delbase:solids/sand_stone_block",
+    "#delbase:pillars/pillar_cut_sand_stone",
+    "#delbase:slabs/slab_cut_sand_stone",
+    "#delbase:stairs/stair_cut_sand_stone",
+    "#delbase:walls/wall_cut_sand_stone",
+    "#delbase:slabs/slab_concrete",
+    "#delbase:stairs/stair_concrete",
+    "#delbase:walls/wall_concrete",
+    "#delbase:slabs/slab_chiseled_sand_stone",
+    "#delbase:stairs/stair_chiseled_sand_stone",
+    "#delbase:walls/wall_chiseled_sand_stone",
+    "#delbase:solids/chiseled_sand_stone_block"
+  ]
+}
