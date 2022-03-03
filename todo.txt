@@ -1,15 +1,10 @@
 concrete
 [all colors]
 wall / stair / slab
-
-================
-BLockstate, Block & Item Model Files, Loot_table
-
-ash_slab
-ash_wall
-ash_stair
-ash_pillar
-ash_block
+{x/x/x} BlockState
+{inventory//} Block Model Files
+{//} Item Model Files
+{//} Loot Tables
 
 ================
 [sand&red_sand] - Verify recipes

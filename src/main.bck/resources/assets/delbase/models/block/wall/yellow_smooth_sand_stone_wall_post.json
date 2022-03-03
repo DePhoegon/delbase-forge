@@ -1,6 +1,0 @@
-{ 
-  "parent": "minecraft:block/template_wall_post", 
-  "textures": { 
-    "wall": "delbase:block/yellow_sand_stone_top"
-  } 
-} 

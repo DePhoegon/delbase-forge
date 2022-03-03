@@ -1,8 +1,0 @@
-{ 
-  "parent": "minecraft:block/inner_stairs", 
-  "textures": { 
-    "bottom": "delbase:block/white_sand", 
-    "top": "delbase:block/white_sand", 
-    "side": "delbase:block/white_sand" 
-   } 
-} 

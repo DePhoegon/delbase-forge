@@ -1,8 +1,0 @@
-{
-  "replace": false,
-  "values": [
-    "#delbase:pillar_sandstones",
-    "#delbase:sandstones_full_blocks",
-    "#delbase:stairs_sandstone"
-  ]
-}

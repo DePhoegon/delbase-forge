@@ -36,8 +36,8 @@ public class burnChance {
                 WallSide south = burningBlock.getValue(SOUTH_WALL);
                 boolean up = burningBlock.getValue(WallBlock.UP);
                 if (ashReplaceRNG()){
-                    ((Level) world).destroyBlock(pos, false);
-                    ((Level) world).setBlock(pos, ashBlock.setValue(WallBlock.WATERLOGGED, waterlogged).setValue(WallBlock.EAST_WALL, east).setValue(WallBlock.WEST_WALL, west).setValue(WallBlock.NORTH_WALL, north).setValue(WallBlock.SOUTH_WALL, south).setValue(WallBlock.UP, up),1);
+                    
+                    ((Level) world).setBlockAndUpdate(pos, ashBlock.setValue(WallBlock.WATERLOGGED, waterlogged).setValue(WallBlock.EAST_WALL, east).setValue(WallBlock.WEST_WALL, west).setValue(WallBlock.NORTH_WALL, north).setValue(WallBlock.SOUTH_WALL, south).setValue(WallBlock.UP, up));
                 } // chance to replace block with supplied ashBlock.
             }
         }
@@ -47,8 +47,8 @@ public class burnChance {
                 Half half = burningBlock.getValue(StairBlock.HALF);
                 StairsShape shape = burningBlock.getValue(SHAPE);
                 if (ashReplaceRNG()) {
-                    ((Level) world).destroyBlock(pos, false);
-                    ((Level) world).setBlock(pos, ashBlock.setValue(StairBlock.FACING, facing).setValue(StairBlock.HALF, half).setValue(SHAPE, shape).setValue(StairBlock.WATERLOGGED, waterlogged),1 );
+                    
+                    ((Level) world).setBlockAndUpdate(pos, ashBlock.setValue(StairBlock.FACING, facing).setValue(StairBlock.HALF, half).setValue(SHAPE, shape).setValue(StairBlock.WATERLOGGED, waterlogged));
                 }// chance to replace block with supplied ashBlock.
             }
         }
@@ -56,8 +56,8 @@ public class burnChance {
             if (threshHold(burnCap,burnThreshHold)) {
                 SlabType type = burningBlock.getValue(SlabBlock.TYPE);
                 if (ashReplaceRNG()) {
-                    ((Level) world).destroyBlock(pos, false);
-                    ((Level) world).setBlock(pos, ashBlock.setValue(SlabBlock.TYPE, type).setValue(SlabBlock.WATERLOGGED, waterlogged),1);
+                    
+                    ((Level) world).setBlockAndUpdate(pos, ashBlock.setValue(SlabBlock.TYPE, type).setValue(SlabBlock.WATERLOGGED, waterlogged));
                 } // chance to replace block with supplied ashBlock.
             }
         }
@@ -65,8 +65,8 @@ public class burnChance {
             if (threshHold(burnCap, burnThreshHold)) {
                 Direction.Axis axis = burningBlock.getValue(AXIS);
                 if(ashReplaceRNG()) {
-                    ((Level) world).destroyBlock(pos, false);
-                    ((Level) world).setBlock(pos, ashBlock.setValue(AXIS, axis),1);
+                    
+                    ((Level) world).setBlockAndUpdate(pos, ashBlock.setValue(AXIS, axis));
                 } // chance to replace block with supplied ashBlock.
             }
         }
@@ -75,8 +75,8 @@ public class burnChance {
         if (genBlock) {
             if (ashReplaceRNG()) {
                 BlockState defaultBlock = ashBlock.getBlock().defaultBlockState();
-                ((Level) world).destroyBlock(pos, false);
-                ((Level) world).setBlock(pos, defaultBlock,1);
+                
+                ((Level) world).setBlockAndUpdate(pos, defaultBlock);
             } // chance to replace block with supplied ashBlock.
         }
     }
