@@ -1,15 +1,1 @@
-red
-white
-orange
-magenta
-light_blue
-yellow
-lime
-pink
-gray
-light_gray
-purple
-blue
-brown
-black
-green
+get terracotta colors
