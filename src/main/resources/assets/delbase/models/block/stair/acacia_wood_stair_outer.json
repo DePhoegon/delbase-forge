@@ -4,6 +4,6 @@
     "bottom": "minecraft:block/acacia_log",
     "top": "minecraft:block/acacia_log",
     "side": "minecraft:block/acacia_log",
-    "inside": "minecraft:block/acacia_log_top"
+    "inside": "minecraft:block/acacia_log"
   }
 }

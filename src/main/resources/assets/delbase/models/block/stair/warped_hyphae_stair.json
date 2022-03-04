@@ -4,6 +4,6 @@
     "bottom": "minecraft:block/warped_stem",
     "top": "minecraft:block/warped_stem",
     "side": "minecraft:block/warped_stem",
-    "inside": "minecraft:block/warped_stem_top"
+    "inside": "minecraft:block/warped_stem"
   }
 }
