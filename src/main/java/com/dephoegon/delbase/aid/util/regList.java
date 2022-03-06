@@ -36,6 +36,7 @@ public class regList {
         slabQuartz.register();
         slabConcrete.register();
         slabWood.register();
+        slabTerracotta.register();
 
 
         //Stairs
@@ -47,6 +48,7 @@ public class regList {
         stairQuartz.register();
         stairConcrete.register();
         stairWood.register();
+        stairTerracotta.register();
 
         //Pillars
         axiCutSandStones.register();
