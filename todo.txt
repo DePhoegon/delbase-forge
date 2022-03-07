@@ -11,16 +11,16 @@ BlockStates
 -Stairs [x]
 -Walls []
 Block Model files
--Slabs [x//]
--Stairs [//]
+-Slabs [x/x/x]
+-Stairs [x/x/x]
 -Walls [///]
 Item Model Files
--Slabs []
--Stairs []
+-Slabs [x]
+-Stairs [x]
 -Walls []
 Loot_table files
--Slabs []
--Stairs []
+-Slabs [x]
+-Stairs [x]
 -Walls []
 
 ======

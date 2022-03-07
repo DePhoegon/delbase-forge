@@ -7,7 +7,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "delbase:acacia_log_stair"
+          "name": "delbase:light_gray_terracotta_stair"
         }
       ],
       "conditions": [
