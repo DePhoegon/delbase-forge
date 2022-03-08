@@ -9,15 +9,15 @@ Register Terracotta Variants
 BlockStates
 -Slabs [x]
 -Stairs [x]
--Walls []
+-Walls [x]
 Block Model files
 -Slabs [x/x/x]
 -Stairs [x/x/x]
--Walls [///]
+-Walls [x/x/x/x]
 Item Model Files
 -Slabs [x]
 -Stairs [x]
--Walls []
+-Walls [x]
 Loot_table files
 -Slabs [x]
 -Stairs [x]
