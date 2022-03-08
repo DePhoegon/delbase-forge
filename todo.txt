@@ -5,7 +5,7 @@ Get Terracotta colors [put in tempList] {x}
 Register Terracotta Variants
 -Slabs [x]
 -Stairs [x]
--Walls []
+-Walls [x]
 BlockStates
 -Slabs [x]
 -Stairs [x]

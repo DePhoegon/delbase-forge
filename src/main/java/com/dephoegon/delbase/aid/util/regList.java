@@ -62,6 +62,7 @@ public class regList {
         wallQuartz.register();
         wallConcrete.register();
         wallWood.register();
+        wallTerracotta.register();
 
         //Fences
 
