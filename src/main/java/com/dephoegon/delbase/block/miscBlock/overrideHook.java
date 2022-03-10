@@ -1,4 +1,4 @@
-package com.dephoegon.delbase.block.blockOverride;
+package com.dephoegon.delbase.block.miscBlock;
 
 import com.dephoegon.delbase.aid.block.stock.axisBlock;
 import com.dephoegon.delbase.aid.block.stock.genBlock;

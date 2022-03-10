@@ -3,10 +3,13 @@ package com.dephoegon.delbase.aid.util;
 import com.dephoegon.delbase.block.axis.axiCutSandStones;
 import com.dephoegon.delbase.block.general.*;
 import com.dephoegon.delbase.block.gravity.gravColorSands;
+import com.dephoegon.delbase.block.miscBlock.slabMisc;
+import com.dephoegon.delbase.block.miscBlock.stairMisc;
+import com.dephoegon.delbase.block.miscBlock.wallMisc;
 import com.dephoegon.delbase.block.slab.*;
 import com.dephoegon.delbase.block.stair.*;
 import com.dephoegon.delbase.block.wall.*;
-import com.dephoegon.delbase.block.blockOverride.overrideHook;
+import com.dephoegon.delbase.block.miscBlock.overrideHook;
 
 public class regList {
     public static void listOrder() {
@@ -37,6 +40,7 @@ public class regList {
         slabConcrete.register();
         slabWood.register();
         slabTerracotta.register();
+        slabMisc.register();
 
 
         //Stairs
@@ -49,6 +53,7 @@ public class regList {
         stairConcrete.register();
         stairWood.register();
         stairTerracotta.register();
+        stairMisc.register();
 
         //Pillars
         axiCutSandStones.register();
@@ -63,6 +68,7 @@ public class regList {
         wallConcrete.register();
         wallWood.register();
         wallTerracotta.register();
+        wallMisc.register();
 
         //Fences
 

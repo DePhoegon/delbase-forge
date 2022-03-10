@@ -10,6 +10,9 @@
     "#delbase:stairs/stair_sand_stone",
     "#delbase:stairs/stair_smooth_sand_stone",
     "#delbase:stairs/stair_wood",
-    "#delbase:stairs/stair_sand"
+    "#delbase:stairs/stair_sand",
+    "#delbase:stairs/stair_misc_stonelike",
+    "#delbase:stairs/stair_misc_gemlike",
+    "#delbase:stairs/stair_misc_woodlike"
   ]
 }

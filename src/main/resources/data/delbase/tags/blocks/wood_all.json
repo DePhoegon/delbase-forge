@@ -7,6 +7,8 @@
     "#delbase:slabs/slab_log",
     "#delbase:stairs/stair_wood",
     "#delbase:stairs/stair_log",
-    "#delbase:ashed"
+    "#delbase:ashed",
+    "#delbase:slabs/slab_misc_woodlike",
+    "#delbase:stairs/stair_misc_woodlike"
   ]
 }

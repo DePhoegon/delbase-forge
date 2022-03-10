@@ -3,6 +3,8 @@
   "values": [
     "#delbase:walls/wall_quartz",
     "#delbase:stairs/stair_quartz",
-    "#delbase:slabs/slab_quartz"
+    "#delbase:slabs/slab_quartz",
+    "#delbase:slabs/slab_misc_gemlike",
+    "#delbase:stairs/stair_misc_gemlike"
   ]
 }
