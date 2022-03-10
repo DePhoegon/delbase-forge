@@ -19,6 +19,9 @@
     "#delbase:slabs/slab_chiseled_sand_stone",
     "#delbase:stairs/stair_chiseled_sand_stone",
     "#delbase:walls/wall_chiseled_sand_stone",
-    "#delbase:solids/chiseled_sand_stone_block"
+    "#delbase:solids/chiseled_sand_stone_block",
+    "#delbase:walls/wall_terracotta",
+    "#delbase:stairs/stair_terracotta",
+    "#delbase:slabs/slab_terracotta"
   ]
 }

@@ -1,27 +1,42 @@
 Build Example set for showcase.
 {x} Acacia fountain sub-set
 =======
-Get Terracotta colors [put in tempList] {x}
-Register Terracotta Variants
--Slabs [x]
--Stairs [x]
--Walls [x]
-BlockStates
--Slabs [x]
--Stairs [x]
--Walls [x]
-Block Model files
--Slabs [x/x/x]
--Stairs [x/x/x]
--Walls [x/x/x/x]
-Item Model Files
--Slabs [x]
--Stairs [x]
--Walls [x]
-Loot_table files
--Slabs [x]
--Stairs [x]
--Walls []
+Finish pre-planed blocks
+{templist}
+'Walls'
+register
+[0/15]
+blockstate
+[0/15]
+blocks models
+[0/15]
+item model
+[0/15]
+loot table
+[0/15]
 
+'Slabs'
+register
+[0/14]
+blockstate
+[0/14]
+blocks models
+[0/14]
+item model
+[0/14]
+loot table
+[0/14]
+
+'Stair'
+register
+[0/14]
+blockstate
+[0/14]
+blocks models
+[0/14]
+item model
+[0/14]
+loot table
+[0/14]
 ======
 Verify recipes

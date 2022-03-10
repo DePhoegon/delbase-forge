@@ -29,7 +29,7 @@ public class wallTerracotta {
     public static final RegistryObject<WallBlock> ORANGE_TERRACOTTA_WALL = register("orange_terracotta_wall",
             () -> new terracottaWall(BlockBehaviour.Properties.copy(ORANGE_TERRACOTTA).sound(SoundType.STONE)
                     ,"","",""));
-    public static final RegistryObject<WallBlock> MAGENTA_TERRACOTTA_WALL = register("orange_terracotta_wall",
+    public static final RegistryObject<WallBlock> MAGENTA_TERRACOTTA_WALL = register("magenta_terracotta_wall",
             () -> new terracottaWall(BlockBehaviour.Properties.copy(MAGENTA_TERRACOTTA).sound(SoundType.STONE)
                     ,"","",""));
     public static final RegistryObject<WallBlock> LIGHT_BLUE_TERRACOTTA_WALL = register("light_blue_terracotta_wall",

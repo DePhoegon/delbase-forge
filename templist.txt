@@ -1,19 +1,20 @@
-Terracotta
-====
-white
-orange
-magenta
-light_blue
-yellow
-lime
-pink
-gray
-light_gray
-cyan
-purple
-blue
-brown
-green
-red
-black
-terracotta
+Stairs / Walls / Slabs
+=================
+end_stone
+bone_block
+dried_kelp
+glowstone
+basalt (pillar)
+polished_basalt (pillar)
+smooth_basalt
+raw_gold_block
+raw_copper_block
+raw_iron_block
+coal_block
+cracked_polished_blackstone_bricks
+chiseled_polished_blackstone
+dripstone_block
+
+Walls
+==============
+purpur_block
