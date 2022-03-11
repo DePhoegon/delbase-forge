@@ -3,6 +3,8 @@ package com.dephoegon.delbase.block.stair;
 import com.dephoegon.delbase.aid.block.alt.woodStair;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.crafting.RecipeType;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.StairBlock;
@@ -13,6 +15,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
+import javax.annotation.Nullable;
 import java.util.function.Supplier;
 
 import static com.dephoegon.delbase.delbase.BASE_BLOCK;
@@ -128,7 +131,11 @@ public class stairWood {
     private static <T extends Block> RegistryObject<T> register(String name, Supplier<T> block) {
         RegistryObject<T> exit = BLOCKS.register(name, block);
         ITEMS.register(name, () -> new BlockItem(exit.get(),
-                new Item.Properties().stacksTo(64).tab(BASE_BLOCK)));
+                new Item.Properties().stacksTo(64).tab(BASE_BLOCK)){
+            public int getBurnTime(ItemStack stack, @Nullable RecipeType<?> recipeType) {
+                return 5001;
+            }
+        });
         return exit;
     }
 }

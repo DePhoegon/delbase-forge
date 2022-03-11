@@ -7,9 +7,9 @@ register
 blockstate
 [15/15]
 blocks models
-[1/15]
+[15/15]
 item model
-[1/15]
+[15/15]
 loot table
 [1/15]
 tags
