@@ -24,6 +24,7 @@
     "#delbase:stairs/stair_terracotta",
     "#delbase:slabs/slab_terracotta",
     "#delbase:slabs/slab_misc_stonelike",
-    "#delbase:stairs/stair_misc_stonelike"
+    "#delbase:stairs/stair_misc_stonelike",
+    "#delbase:walls/wall_misc_stonelike"
   ]
 }

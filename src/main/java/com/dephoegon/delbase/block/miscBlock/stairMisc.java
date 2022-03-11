@@ -33,7 +33,7 @@ public class stairMisc {
             ()-> new stairBlock(DRIED_KELP_BLOCK::defaultBlockState, BlockBehaviour.Properties.copy(DRIED_KELP_BLOCK).sound(SoundType.GRASS)
                     ,"","","", true));
     public static final RegistryObject<StairBlock> GLOWSTONE_STAIR = register("glowstone_stair",
-            ()-> new stairBlock(GLOWSTONE::defaultBlockState, BlockBehaviour.Properties.copy(GLOWSTONE).sound(SoundType.GLASS)
+            ()-> new stairBlock(GLOWSTONE::defaultBlockState, BlockBehaviour.Properties.copy(GLOWSTONE).sound(SoundType.GLASS).lightLevel((blockState)->{return 15;})
                     ,"","","", false));
     public static final RegistryObject<StairBlock> BASALT_STAIR = register("basalt_stair",
             ()-> new stairBlock(BASALT::defaultBlockState, BlockBehaviour.Properties.copy(BASALT).sound(SoundType.STONE)

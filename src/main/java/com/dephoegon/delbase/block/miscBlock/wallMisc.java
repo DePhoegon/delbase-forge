@@ -32,6 +32,42 @@ public class wallMisc {
     public static final RegistryObject<WallBlock> DRIED_KELP_WALL = register("dried_kelp_wall",
             () -> new wallBlock(BlockBehaviour.Properties.copy(DRIED_KELP_BLOCK).sound(SoundType.GRASS),
                     "","","",true));
+    public static final RegistryObject<WallBlock> GLOWSTONE_WALL = register("glowstone_wall",
+            () -> new wallBlock(BlockBehaviour.Properties.copy(GLOWSTONE).sound(SoundType.GLASS).lightLevel((blockState)->{return 15;}),
+                    "","","",false));
+    public static final RegistryObject<WallBlock> BASALT_WALL = register("basalt_wall",
+            () -> new wallBlock(BlockBehaviour.Properties.copy(BASALT).sound(SoundType.STONE),
+                    "","","",false));
+    public static final RegistryObject<WallBlock> POLISHED_BASALT_WALL = register("polished_basalt_wall",
+            () -> new wallBlock(BlockBehaviour.Properties.copy(POLISHED_BASALT).sound(SoundType.STONE),
+                    "","","",false));
+    public static final RegistryObject<WallBlock> SMOOTH_BASALT_WALL = register("smooth_basalt_wall",
+            () -> new wallBlock(BlockBehaviour.Properties.copy(SMOOTH_BASALT).sound(SoundType.STONE),
+                    "","","",false));
+    public static final RegistryObject<WallBlock> RAW_GOLD_WALL = register("raw_gold_wall",
+            () -> new wallBlock(BlockBehaviour.Properties.copy(RAW_GOLD_BLOCK).sound(SoundType.METAL),
+                    "","","",false));
+    public static final RegistryObject<WallBlock> RAW_COPPER_WALL = register("raw_copper_wall",
+            () -> new wallBlock(BlockBehaviour.Properties.copy(RAW_COPPER_BLOCK).sound(SoundType.METAL),
+                    "","","",false));
+    public static final RegistryObject<WallBlock> RAW_IRON_WALL = register("raw_iron_wall",
+            () -> new wallBlock(BlockBehaviour.Properties.copy(RAW_IRON_BLOCK).sound(SoundType.METAL),
+                    "","","",false));
+    public static final RegistryObject<WallBlock> COAL_BLOCK_WALL = register("coal_block_wall",
+            () -> new wallBlock(BlockBehaviour.Properties.copy(COAL_BLOCK).sound(SoundType.WOOD),
+                    "","","",true));
+    public static final RegistryObject<WallBlock> CRACKED_POLISHED_BLACKSTONE_BRICK_WALL = register("cracked_polished_blackstone_brick_wall",
+            () -> new wallBlock(BlockBehaviour.Properties.copy(CRACKED_POLISHED_BLACKSTONE_BRICKS).sound(SoundType.STONE),
+                    "","","",false));
+    public static final RegistryObject<WallBlock> CHISELED_POLISHED_BLACKSTONE_WALL = register("chiseled_polished_blackstone_wall",
+            () -> new wallBlock(BlockBehaviour.Properties.copy(CHISELED_POLISHED_BLACKSTONE).sound(SoundType.STONE),
+                    "","","",false));
+    public static final RegistryObject<WallBlock> DRIPSTONE_WALL = register("dripstone_wall",
+            () -> new wallBlock(BlockBehaviour.Properties.copy(DRIPSTONE_BLOCK).sound(SoundType.STONE),
+                    "","","",false));
+    public static final RegistryObject<WallBlock> PURPUR_BLOCK_WALL = register("purpur_block_wall",
+            () -> new wallBlock(BlockBehaviour.Properties.copy(PURPUR_BLOCK).sound(SoundType.STONE),
+                    "","","",false));
 
     public static void register() {
         IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();

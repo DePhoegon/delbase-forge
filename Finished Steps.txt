@@ -1,0 +1,85 @@
+Double-Checked, Checklist
+---
+Tested & verified
+==========
+Custom Template Jsons
+- Stairs
+== allows Insides to be different than the outsides (including the top)
+
+- Walls
+== Allows the walls to have separate textures between the side & top, (walls)
+== Wraps the post in a singular texture
+
+- Walls [Twisted]
+== built to turn a vertical texture on it's side, & not stretch it.
+== has single texture posts
+
+- Asset Block model folder structure
+
+- Tags Folder structure
+
+- java class file structure
+
+- java class separation for color changing
+
+- Shortlist - todo list, for planing future moves
+
+Recipes
+=============
+
+
+
+Finalized Textures [not including normal Minecraft ones]
+=====================================
+
+
+Recipes
+============
+
+
+TAGS
+============
+
+
+ITEMS
+===============
+
+
+
+Textures [excludes Normal Minecraft]
+==================
+
+
+
+Extra Functionality
+===================
+Burning Blocks turn into Ash Versions {Select Blocks}
+
+
+
+Language File [Completion by java class registrations]
+==================
+
+
+Walls [By type] { Registered / Blockstate / Model files / loot table }
+=============
+
+
+
+Stairs [By type]
+==============
+
+
+
+Slabs [By type]
+=================
+
+
+Fences [By type]
+===============
+
+
+
+Showcases
+============
+Acacia fountain sub-set

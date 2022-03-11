@@ -1,21 +1,19 @@
-Build Example set for showcase.
-{x} Acacia fountain sub-set
-=======
 Finish pre-planed blocks
 {templist}
+
 'Walls'
 register
-[3/15]
+[15/15]
 blockstate
-[0/15]
+[15/15]
 blocks models
-[0/15]
+[1/15]
 item model
-[0/15]
+[1/15]
 loot table
-[0/15]
+[1/15]
 tags
-[0/15]
+[15/15]
 
 'Slabs'
 register
@@ -44,5 +42,3 @@ loot table
 [0/14]
 tags
 [14/14]
-======
-Verify recipes

@@ -11,6 +11,9 @@
     "#delbase:walls/wall_sand_stone",
     "#delbase:walls/wall_smooth_sand_stone",
     "#delbase:walls/wall_wood",
-    "#delbase:walls/wall_terracotta"
+    "#delbase:walls/wall_terracotta",
+    "#delbase:walls/wall_misc_stonelike",
+    "#delbase:walls/wall_misc_gemlike",
+    "#delbase:walls/wall_misc_woodlike"
   ]
 }

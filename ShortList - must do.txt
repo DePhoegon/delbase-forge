@@ -1,0 +1,14 @@
+Build Example set for showcase.
+{x} Acacia fountain sub-set
+
+=================
+
+Verify recipes
+
+Verify concepts on how to get them
+
+Verify Texture fitting
+
+================
+
+Get color changing method nailed down

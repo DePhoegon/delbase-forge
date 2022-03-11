@@ -24,41 +24,41 @@ public class slabSmoothSandStonesEnergy {
     private static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, Mod_ID);
 
     public static final RegistryObject<SlabBlock> OVERRIDE_SMOOTH_SAND_STONE_SLAB_ENERGY = register("smooth_sand_stone_slab_energy",
-            () -> new smoothSandStoneSlabEnergy(BlockBehaviour.Properties.copy(SMOOTH_SANDSTONE).sound(SoundType.STONE),"","",""));
+            () -> new smoothSandStoneSlabEnergy(BlockBehaviour.Properties.copy(SMOOTH_SANDSTONE).sound(SoundType.STONE).lightLevel((blockState)->{return 5;}),"","",""));
     public static final RegistryObject<SlabBlock> OVERRIDE_RED_SMOOTH_SAND_STONE_SLAB_ENERGY = register("red_smooth_sand_stone_slab_energy",
-            () -> new smoothSandStoneSlabEnergy(BlockBehaviour.Properties.copy(SMOOTH_SANDSTONE).sound(SoundType.STONE),"","",""));
+            () -> new smoothSandStoneSlabEnergy(BlockBehaviour.Properties.copy(SMOOTH_SANDSTONE).sound(SoundType.STONE).lightLevel((blockState)->{return 5;}),"","",""));
     public static final RegistryObject<SlabBlock> BLOOD_SMOOTH_SAND_STONE_SLAB_ENERGY = register("blood_smooth_sand_stone_slab_energy",
-            () -> new smoothSandStoneSlabEnergy(BlockBehaviour.Properties.copy(SMOOTH_SANDSTONE).sound(SoundType.STONE),"","",""));
+            () -> new smoothSandStoneSlabEnergy(BlockBehaviour.Properties.copy(SMOOTH_SANDSTONE).sound(SoundType.STONE).lightLevel((blockState)->{return 5;}),"","",""));
     public static final RegistryObject<SlabBlock> WHITE_SMOOTH_SAND_STONE_SLAB_ENERGY = register("white_smooth_sand_stone_slab_energy",
-            () -> new smoothSandStoneSlabEnergy(BlockBehaviour.Properties.copy(SMOOTH_SANDSTONE).sound(SoundType.STONE),"","",""));
+            () -> new smoothSandStoneSlabEnergy(BlockBehaviour.Properties.copy(SMOOTH_SANDSTONE).sound(SoundType.STONE).lightLevel((blockState)->{return 5;}),"","",""));
     public static final RegistryObject<SlabBlock> ORANGE_SMOOTH_SAND_STONE_SLAB_ENERGY = register("orange_smooth_sand_stone_slab_energy",
-            () -> new smoothSandStoneSlabEnergy(BlockBehaviour.Properties.copy(SMOOTH_SANDSTONE).sound(SoundType.STONE),"","",""));
+            () -> new smoothSandStoneSlabEnergy(BlockBehaviour.Properties.copy(SMOOTH_SANDSTONE).sound(SoundType.STONE).lightLevel((blockState)->{return 5;}),"","",""));
     public static final RegistryObject<SlabBlock> MAGENTA_SMOOTH_SAND_STONE_SLAB_ENERGY = register("magenta_smooth_sand_stone_slab_energy",
-            () -> new smoothSandStoneSlabEnergy(BlockBehaviour.Properties.copy(SMOOTH_SANDSTONE).sound(SoundType.STONE),"","",""));
+            () -> new smoothSandStoneSlabEnergy(BlockBehaviour.Properties.copy(SMOOTH_SANDSTONE).sound(SoundType.STONE).lightLevel((blockState)->{return 5;}),"","",""));
     public static final RegistryObject<SlabBlock> LIGHT_BLUE_SMOOTH_SAND_STONE_SLAB_ENERGY = register("light_blue_smooth_sand_stone_slab_energy",
-            () -> new smoothSandStoneSlabEnergy(BlockBehaviour.Properties.copy(SMOOTH_SANDSTONE).sound(SoundType.STONE),"","",""));
+            () -> new smoothSandStoneSlabEnergy(BlockBehaviour.Properties.copy(SMOOTH_SANDSTONE).sound(SoundType.STONE).lightLevel((blockState)->{return 5;}),"","",""));
     public static final RegistryObject<SlabBlock> YELLOW_SMOOTH_SAND_STONE_SLAB_ENERGY = register("yellow_smooth_sand_stone_slab_energy",
-            () -> new smoothSandStoneSlabEnergy(BlockBehaviour.Properties.copy(SMOOTH_SANDSTONE).sound(SoundType.STONE),"","",""));
+            () -> new smoothSandStoneSlabEnergy(BlockBehaviour.Properties.copy(SMOOTH_SANDSTONE).sound(SoundType.STONE).lightLevel((blockState)->{return 5;}),"","",""));
     public static final RegistryObject<SlabBlock> LIME_SMOOTH_SAND_STONE_SLAB_ENERGY = register("lime_smooth_sand_stone_slab_energy",
-            () -> new smoothSandStoneSlabEnergy(BlockBehaviour.Properties.copy(SMOOTH_SANDSTONE).sound(SoundType.STONE),"","",""));
+            () -> new smoothSandStoneSlabEnergy(BlockBehaviour.Properties.copy(SMOOTH_SANDSTONE).sound(SoundType.STONE).lightLevel((blockState)->{return 5;}),"","",""));
     public static final RegistryObject<SlabBlock> PINK_SMOOTH_SAND_STONE_SLAB_ENERGY = register("pink_smooth_sand_stone_slab_energy",
-            () -> new smoothSandStoneSlabEnergy(BlockBehaviour.Properties.copy(SMOOTH_SANDSTONE).sound(SoundType.STONE),"","",""));
+            () -> new smoothSandStoneSlabEnergy(BlockBehaviour.Properties.copy(SMOOTH_SANDSTONE).sound(SoundType.STONE).lightLevel((blockState)->{return 5;}),"","",""));
     public static final RegistryObject<SlabBlock> GRAY_SMOOTH_SAND_STONE_SLAB_ENERGY = register("gray_smooth_sand_stone_slab_energy",
-            () -> new smoothSandStoneSlabEnergy(BlockBehaviour.Properties.copy(SMOOTH_SANDSTONE).sound(SoundType.STONE),"","",""));
+            () -> new smoothSandStoneSlabEnergy(BlockBehaviour.Properties.copy(SMOOTH_SANDSTONE).sound(SoundType.STONE).lightLevel((blockState)->{return 5;}),"","",""));
     public static final RegistryObject<SlabBlock> LIGHT_GRAY_SMOOTH_SAND_STONE_SLAB_ENERGY = register("light_gray_smooth_sand_stone_slab_energy",
-            () -> new smoothSandStoneSlabEnergy(BlockBehaviour.Properties.copy(SMOOTH_SANDSTONE).sound(SoundType.STONE),"","",""));
+            () -> new smoothSandStoneSlabEnergy(BlockBehaviour.Properties.copy(SMOOTH_SANDSTONE).sound(SoundType.STONE).lightLevel((blockState)->{return 5;}),"","",""));
     public static final RegistryObject<SlabBlock> CYAN_SMOOTH_SAND_STONE_SLAB_ENERGY = register("cyan_smooth_sand_stone_slab_energy",
-            () -> new smoothSandStoneSlabEnergy(BlockBehaviour.Properties.copy(SMOOTH_SANDSTONE).sound(SoundType.STONE),"","",""));
+            () -> new smoothSandStoneSlabEnergy(BlockBehaviour.Properties.copy(SMOOTH_SANDSTONE).sound(SoundType.STONE).lightLevel((blockState)->{return 5;}),"","",""));
     public static final RegistryObject<SlabBlock> PURPLE_SMOOTH_SAND_STONE_SLAB_ENERGY = register("purple_smooth_sand_stone_slab_energy",
-            () -> new smoothSandStoneSlabEnergy(BlockBehaviour.Properties.copy(SMOOTH_SANDSTONE).sound(SoundType.STONE),"","",""));
+            () -> new smoothSandStoneSlabEnergy(BlockBehaviour.Properties.copy(SMOOTH_SANDSTONE).sound(SoundType.STONE).lightLevel((blockState)->{return 5;}),"","",""));
     public static final RegistryObject<SlabBlock> BLUE_SMOOTH_SAND_STONE_SLAB_ENERGY = register("blue_smooth_sand_stone_slab_energy",
-            () -> new smoothSandStoneSlabEnergy(BlockBehaviour.Properties.copy(SMOOTH_SANDSTONE).sound(SoundType.STONE),"","",""));
+            () -> new smoothSandStoneSlabEnergy(BlockBehaviour.Properties.copy(SMOOTH_SANDSTONE).sound(SoundType.STONE).lightLevel((blockState)->{return 5;}),"","",""));
     public static final RegistryObject<SlabBlock> GREEN_SMOOTH_SAND_STONE_SLAB_ENERGY = register("green_smooth_sand_stone_slab_energy",
-            () -> new smoothSandStoneSlabEnergy(BlockBehaviour.Properties.copy(SMOOTH_SANDSTONE).sound(SoundType.STONE),"","",""));
+            () -> new smoothSandStoneSlabEnergy(BlockBehaviour.Properties.copy(SMOOTH_SANDSTONE).sound(SoundType.STONE).lightLevel((blockState)->{return 5;}),"","",""));
     public static final RegistryObject<SlabBlock> BROWN_SMOOTH_SAND_STONE_SLAB_ENERGY = register("brown_smooth_sand_stone_slab_energy",
-            () -> new smoothSandStoneSlabEnergy(BlockBehaviour.Properties.copy(SMOOTH_SANDSTONE).sound(SoundType.STONE),"","",""));
+            () -> new smoothSandStoneSlabEnergy(BlockBehaviour.Properties.copy(SMOOTH_SANDSTONE).sound(SoundType.STONE).lightLevel((blockState)->{return 5;}),"","",""));
     public static final RegistryObject<SlabBlock> BLACK_SMOOTH_SAND_STONE_SLAB_ENERGY = register("black_smooth_sand_stone_slab_energy",
-            () -> new smoothSandStoneSlabEnergy(BlockBehaviour.Properties.copy(SMOOTH_SANDSTONE).sound(SoundType.STONE),"","",""));
+            () -> new smoothSandStoneSlabEnergy(BlockBehaviour.Properties.copy(SMOOTH_SANDSTONE).sound(SoundType.STONE).lightLevel((blockState)->{return 5;}),"","",""));
 
     public static void register() {
         IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
