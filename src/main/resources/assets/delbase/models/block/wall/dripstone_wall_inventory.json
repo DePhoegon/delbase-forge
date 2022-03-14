@@ -1,7 +1,7 @@
 {
   "parent": "delbase:block/template/wall_inventory",
   "textures": {
-    "wall": "minecraft:block/dripstone",
-    "top": "minecraft:block/dripstone"
+    "wall": "minecraft:block/dripstone_block",
+    "top": "minecraft:block/dripstone_block"
   }
 }

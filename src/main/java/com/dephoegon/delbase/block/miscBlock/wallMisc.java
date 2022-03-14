@@ -41,6 +41,9 @@ public class wallMisc {
     public static final RegistryObject<WallBlock> BASALT_WALL = register("basalt_wall",
             () -> new wallBlock(BlockBehaviour.Properties.copy(BASALT).sound(SoundType.STONE),
                     "","","",false),0);
+    public static final RegistryObject<WallBlock> COBBLED_BASALT_WALL = register("cobbled_basalt_wall",
+            () -> new wallBlock(BlockBehaviour.Properties.copy(BASALT).sound(SoundType.STONE),
+                    "","","",false),0);
     public static final RegistryObject<WallBlock> POLISHED_BASALT_WALL = register("polished_basalt_wall",
             () -> new wallBlock(BlockBehaviour.Properties.copy(POLISHED_BASALT).sound(SoundType.STONE),
                     "","","",false),0);

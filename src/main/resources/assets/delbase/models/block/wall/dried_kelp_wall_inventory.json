@@ -1,7 +1,7 @@
 {
   "parent": "delbase:block/template/wall_inventory",
   "textures": {
-    "wall": "minecraft:block/dried_kelp_side",
-    "top": "minecraft:block/dried_kelp_top"
+    "wall": "delbase:block/dried_kelp_noband",
+    "top": "delbase:block/dried_kelp_noband"
   }
 }

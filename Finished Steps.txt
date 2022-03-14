@@ -25,6 +25,25 @@ Custom Template Jsons
 - Shortlist - todo list, for planing future moves
 
 - Added burning times to ash/burnable custom blocks
+
+-Minor Fixes
+= Modified dried_kelp texture for walls, removed band
+= Fixed Bone Block texture
+= Modified wall_post template
+= fixed red sandstone & sandstone wall posts
+= corrected chiseled_polished_blackstone
+==- top swapped for polished blackstone
+= Basalt walls tweaked
+==- created cobbled basalt (tops)
+== made basalt walls al around, left as is
+= left polished basalt as is
+= fixed dripstone texture typo
+= Polished Basalt
+==- adjusted top texture (side) to edit out bands, and even out the colors between e/w & n/s walls
+
+
+
+
 Recipes
 =============
 

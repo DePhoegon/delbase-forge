@@ -2,6 +2,6 @@
   "parent": "delbase:block/template/wall_inventory",
   "textures": {
     "wall": "minecraft:block/basalt_side",
-    "top": "minecraft:block/basalt_top"
+    "top": "minecraft:block/basalt_side"
   }
 }

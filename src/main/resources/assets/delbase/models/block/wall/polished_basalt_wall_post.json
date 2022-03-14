@@ -2,6 +2,6 @@
   "parent": "delbase:block/template/wall_post",
   "textures": {
     "wall": "minecraft:block/polished_basalt_side",
-    "top": "minecraft:block/polished_basalt_top"
+    "top": "delbase:block/polished_basalt_side"
   }
 }

@@ -8,10 +8,10 @@
       "faces": {
         "down":  { "texture": "#top", "cullface": "down" },
         "up":    { "texture": "#top", "cullface": "up" },
-        "north": { "texture": "#top" },
-        "south": { "texture": "#top" },
-        "west":  { "texture": "#top" },
-        "east":  { "texture": "#top" }
+        "north": { "texture": "#wall" },
+        "south": { "texture": "#wall" },
+        "west":  { "texture": "#wall" },
+        "east":  { "texture": "#wall" }
       },
       "__comment": "Center post, Separate Texture for top & bottom for textured walls"
     }

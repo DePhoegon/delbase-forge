@@ -1,20 +1,6 @@
 Finish pre-planed blocks
 {templist}
 
-'Walls'
-register
-[15/15]
-blockstate
-[15/15]
-blocks models
-[15/15]
-item model
-[15/15]
-loot table
-[1/15]
-tags
-[15/15]
-
 'Slabs'
 register
 [14/14]
