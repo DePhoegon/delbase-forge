@@ -2,6 +2,6 @@
   "parent": "delbase:block/template/wall_side",
   "textures": {
     "wall": "minecraft:block/crimson_stem",
-    "top": "minecraft:block/crimson_stem"
+    "top": "delbase:block/crimson_stem_wall_top"
   }
 }

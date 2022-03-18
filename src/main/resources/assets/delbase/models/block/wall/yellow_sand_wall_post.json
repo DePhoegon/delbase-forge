@@ -1,6 +1,6 @@
 { 
   "parent": "minecraft:block/template_wall_post", 
   "textures": { 
-    "wall": "delbase:block/yellow_sand" 
+    "wall": "minecraft:block/yellow_concrete_powder"
   } 
 } 

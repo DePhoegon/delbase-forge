@@ -5,7 +5,7 @@ Finish pre-planed blocks
 register
 [14/14]
 blockstate
-[0/14]
+[14/14]
 blocks models
 [0/14]
 item model
@@ -17,14 +17,21 @@ tags
 
 'Stair'
 register
-[14/14]
+[15/15]
 blockstate
-[0/14]
+[15/15]
 blocks models
-[0/14]
+[15/15]
 item model
-[0/14]
+[15/15]
 loot table
-[0/14]
+[15/15]
 tags
-[14/14]
+[15/15]
+
+
+=============
+swap my sand for the colored concrete powders
+alter recipe for sands
+-1 dye 4 sand = 4 colored sand
+-1color sand + 1 gravel = 2 color concrete powder

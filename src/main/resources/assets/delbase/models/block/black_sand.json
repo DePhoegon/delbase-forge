@@ -1,6 +1,6 @@
 { 
   "parent": "minecraft:block/cube_all", 
    "textures": { 
-     "all": "delbase:block/black_sand" 
+     "all": "minecraft:block/black_concrete_powder"
   } 
 } 

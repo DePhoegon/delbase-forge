@@ -1,46 +1,161 @@
+This Mod is in flux, It will be a soft decration Mod, that will focus on resource recovery.
 
-Source installation information for modders
--------------------------------------------
-This code follows the Minecraft Forge installation methodology. It will apply
-some small patches to the vanilla MCP source code, giving you and it access 
-to some of the data and functions you need to build a successful mod.
+Color shifting has not been finalized yet (method)
 
-Note also that the patches are built against "un-renamed" MCP source code (aka
-SRG Names) - this means that you will not be able to read them directly against
-normal code.
-
-Setup Process:
+Vanilla material recovery will be focused on first.
+-- addon mods will be made to support other mods with this one, to avoid insane bloat & conflicts
+{
+    This has been more than slightly taxing, and enlightening about how Minecraft uses its own textures and just how to work with it to preform results.
+    Got to have love for my all the backbone work that helped make this easier from the start.
+    This sort of rambling list is to help grow & show what I have done in progress & prevent being demotivated from not seeing progress.
+}
 ==============================
+Double-Checked, Checklist
+-Not Final yet
+---
+Tested & verified
+==========
+Custom Template Jsons
+- Stairs
+== allows Insides to be different than the outsides (including the top)
 
-Step 1: Open your command-line and browse to the folder where you extracted the zip file.
+- Walls
+== Allows the walls to have separate textures between the side & top, (walls)
+== Wraps the post in a singular texture
 
-Step 2: You're left with a choice.
-If you prefer to use Eclipse:
-1. Run the following command: `gradlew genEclipseRuns` (`./gradlew genEclipseRuns` if you are on Mac/Linux)
-2. Open Eclipse, Import > Existing Gradle Project > Select Folder 
-   or run `gradlew eclipse` to generate the project.
+- Walls [Twisted]
+== built to turn a vertical texture on it's side, & not stretch it.
+== has single texture posts
 
-If you prefer to use IntelliJ:
-1. Open IDEA, and import project.
-2. Select your build.gradle file and have it import.
-3. Run the following command: `gradlew genIntellijRuns` (`./gradlew genIntellijRuns` if you are on Mac/Linux)
-4. Refresh the Gradle Project in IDEA if required.
+- Asset Block model folder structure
 
-If at any point you are missing libraries in your IDE, or you've run into problems you can 
-run `gradlew --refresh-dependencies` to refresh the local cache. `gradlew clean` to reset everything 
-{this does not affect your code} and then start the process again.
+- Tags Folder structure
 
-Mapping Names:
-=============================
-By default, the MDK is configured to use the official mapping names from Mojang for methods and fields 
-in the Minecraft codebase. These names are covered by a specific license. All modders should be aware of this
-license, if you do not agree with it you can change your mapping names to other crowdsourced names in your 
-build.gradle. For the latest license text, refer to the mapping file itself, or the reference copy here:
-https://github.com/MinecraftForge/MCPConfig/blob/master/Mojang.md
+- java class file structure
 
-Additional Resources: 
-=========================
-Community Documentation: http://mcforge.readthedocs.io/en/latest/gettingstarted/  
-LexManos' Install Video: https://www.youtube.com/watch?v=8VEdtQLuLO0  
-Forge Forum: https://forums.minecraftforge.net/  
-Forge Discord: https://discord.gg/UvedJ9m  
+- java class separation for color changing
+
+- Shortlist - todo list, for planing future moves
+
+- Added burning times to ash/burnable custom blocks
+
+-Minor Fixes
+= Modified dried_kelp texture for walls, removed band
+= Fixed Bone Block texture
+= Modified wall_post template
+= fixed red sandstone & sandstone wall posts
+= corrected chiseled_polished_blackstone
+==- top swapped for polished blackstone
+= Basalt walls tweaked
+==- created cobbled basalt (tops)
+== made basalt walls al around, left as is
+= left polished basalt as is
+= fixed dripstone texture typo
+= Polished Basalt
+==- adjusted top texture (side) to edit out bands, and even out the colors between e/w & n/s walls
+= Corrected accidental duplication of json file contents
+
+-Texture work
+=[Wall] top of wall side/tall side
+==- made to look as if north/south looks the same as east/west
+==- Animated Crimson stem texture
+=kelp....  kelp
+==- Centered the dried kelp bands
+====- Wall Posts
+====- Dried_kelp_Blocks
+====- Stairs, Uvlock = false
+= Basalt Stairs
+== split top into separate cobbled basalt stair
+= Color Sands
+==- Swapped to use concrete powders.
+====- reworking planned
+====- aligning custom texture to better match normal minecraft.
+======- more practice needed, concrete power texture as stand ins
+= [Stairs/Block/wall_post/slab]
+==- Texture centering for 16x16 textures, with a 'center band' at x px 8, y px 8
+===- using kelp name, allows wider/larger pixels in game with minimal impact
+===- allowing for effectively a 15x15 texture them in a 16x16 minimal input
+
+-Json Structure
+= Sub folders are in use to clean up the insane amount of files & make it far easier to organized & know if a file is or is not missing/ and far easier & faster to find based on knowing what block it is.
+
+Recipes
+============
+
+
+TAGS
+============
+
+
+ITEMS
+===============
+
+
+
+Textures [excludes Normal Minecraft]
+==================
+texture animations ~
+- crimson_hyphae wall tops
+Planks
+-log walls (top x-section)
+Wood/Stripped Wood
+-Wood wall (top x-section)
+
+
+Extra Functionality
+===================
+Burning Blocks turn into Ash Versions {Select Blocks}
+
+
+
+Language File [Completion by java class registrations]
+==================
+
+
+Walls [By type] { Registered / Blockstate / Model files / loot table }
+=============
+Wood
+Stripped Wood
+Log
+Stripped Log
+MISC
+-quartz
+-blackstone
+-glowstone
+-coal_block
+-kelp_block
+-raw gold/copper/iron
+-dripstone
+-endstone
+-boneblock
+
+Stairs [By type]
+==============
+Wood
+Stripped Wood
+Log
+Stripped Log
+MISC
+-quartz
+-blackstone
+-glowstone
+-coal_block
+-kelp_block
+-raw gold/copper/iron
+-dripstone
+-endstone
+-boneblock
+
+
+Slabs [By type]
+=================
+
+
+Fences [By type]
+===============
+
+
+
+Showcases
+============
+Acacia fountain sub-set

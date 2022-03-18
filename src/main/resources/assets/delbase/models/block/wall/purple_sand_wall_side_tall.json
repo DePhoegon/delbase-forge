@@ -1,6 +1,6 @@
 { 
   "parent": "minecraft:block/template_wall_side_tall", 
   "textures": { 
-    "wall": "delbase:block/purple_sand" 
+    "wall": "minecraft:block/purple_concrete_powder"
   } 
 } 

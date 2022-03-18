@@ -2,6 +2,6 @@
   "parent": "delbase:block/template/wall_side",
   "textures": {
     "wall": "minecraft:block/stripped_warped_stem",
-    "top": "minecraft:block/stripped_warped_stem"
+    "top": "delbase:block/stripped_warped_stem_wall_top"
   }
 }

@@ -1,6 +1,6 @@
 { 
   "parent": "minecraft:block/wall_inventory", 
   "textures": { 
-    "wall": "delbase:block/orange_sand" 
+    "wall": "minecraft:block/orange_concrete_powder"
   } 
 } 

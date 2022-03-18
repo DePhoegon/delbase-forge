@@ -2,6 +2,6 @@
   "parent": "delbase:block/template/wall_side",
   "textures": {
     "wall": "minecraft:block/spruce_log",
-    "top": "minecraft:block/spruce_log"
+    "top": "delbase:block/spruce_log_wall_top"
   }
 }

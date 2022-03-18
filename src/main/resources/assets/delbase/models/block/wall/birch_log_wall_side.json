@@ -2,6 +2,6 @@
   "parent": "delbase:block/template/wall_side",
   "textures": {
     "wall": "minecraft:block/birch_planks",
-    "top": "minecraft:block/birch_planks"
+    "top": "delbase:block/birch_planks_wall_top"
   }
 }

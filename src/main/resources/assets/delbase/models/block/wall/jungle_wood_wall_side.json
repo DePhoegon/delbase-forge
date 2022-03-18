@@ -2,6 +2,6 @@
   "parent": "delbase:block/template/wall_side",
   "textures": {
     "wall": "minecraft:block/jungle_log",
-    "top": "minecraft:block/jungle_log"
+    "top": "delbase:block/jungle_log_wall_top"
   }
 }
