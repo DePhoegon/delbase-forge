@@ -9,9 +9,7 @@ glowstone
 dried_kelp
     [dried_kelp_side / dried_kelp_top]
 basalt
-    [basalt_side]
-cobbled_basalt -stair only
-    [basalt_top]
+    [basalt_side / basalt_top]
 polished_basalt
     [polished_basalt_side / polished_basalt_top]
 smooth_basalt
@@ -29,5 +27,5 @@ cracked_polished_blackstone_brick
 chiseled_polished_blackstone
     [chiseled_polished_blackstone]
 dripstone
-    [dripstone]
+    [dripstone_block]
 

@@ -54,6 +54,22 @@ Custom Template Jsons
 = Polished Basalt
 ==- adjusted top texture (side) to edit out bands, and even out the colors between e/w & n/s walls
 = Corrected accidental duplication of json file contents
+= tag file fix
+==- fixed tag files for walls
+====- [ smooth / cut / chiseled ] sand_stone & sand_stone
+= changed bottom slab of colored sand_stone (top side to bottom texture)
+= basalt_stair
+==- fixed blockstate typos
+=smooth_basalt_stair
+==- blockstate reference fix
+= dark_oak_stair
+==- fix inisde texture of outer_stair
+= dripstone stair
+==- fixed typo in texture name
+= raw_copper stair
+==- fixed typo in json file name
+=chiseled_polished_blackstone_stair
+==- fixed inside wall of stair to smooth blackstone
 
 -Texture work
 =[Wall] top of wall side/tall side
@@ -75,6 +91,10 @@ Custom Template Jsons
 ==- Texture centering for 16x16 textures, with a 'center band' at x px 8, y px 8
 ===- using kelp name, allows wider/larger pixels in game with minimal impact
 ===- allowing for effectively a 15x15 texture them in a 16x16 minimal input
+= Log/Column stairs
+==- adjusted all inside standing textures, with new textures (straight up)
+==- own set of json model files (parent ones)
+
 
 -Json Structure
 = Sub folders are in use to clean up the insane amount of files & make it far easier to organized & know if a file is or is not missing/ and far easier & faster to find based on knowing what block it is.
@@ -149,7 +169,11 @@ MISC
 
 Slabs [By type]
 =================
-
+-sand
+-sandstone
+-chiseled_sandstone
+-cut_sandstone
+-smooth_sandstone
 
 Fences [By type]
 ===============

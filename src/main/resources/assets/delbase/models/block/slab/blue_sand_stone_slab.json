@@ -2,7 +2,7 @@
   "parent": "minecraft:block/slab", 
   "textures": { 
     "bottom": "delbase:block/blue_sand_stone_bottom", 
-    "top": "delbase:block/blue_sand_stone_top", 
+    "top": "delbase:block/blue_sand_stone_bottom", 
     "side": "delbase:block/blue_sand_stone" 
   } 
 } 

@@ -1,9 +1,9 @@
 {
   "parent": "delbase:block/template/inner_stairs",
   "textures": {
-    "bottom": "minecraft:block/chiseld_polished_blackstone",
-    "top": "minecraft:block/chiseld_polished_blackstone",
-    "side": "minecraft:block/chiseld_polished_blackstone",
-    "inside": "minecraft:block/chiseld_polished_blackstone"
+    "bottom": "minecraft:block/chiseled_polished_blackstone",
+    "top": "minecraft:block/chiseled_polished_blackstone",
+    "side": "minecraft:block/chiseled_polished_blackstone",
+    "inside": "minecraft:block/polished_blackstone"
   }
 }
