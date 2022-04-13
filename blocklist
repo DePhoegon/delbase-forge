@@ -1,0 +1,343 @@
+Concrete
+-All colors
+Terracotta
+-All Colors
+
+Cut sandstone
+cut red sandstone
+chiseled sandstone
+chiseled red sandstone
+sandstone
+red sandstone
+
+sand
+red sand
+
+Cut Sandstone slab
+Cut red sandstone slab
+smooth sandstone slab
+smooth red sandstone slab
+sandstone slab
+red sandstone slab
+
+sandstone stair
+red sandstone stair
+smooth sandstone stair
+smooth red sandstone stair
+
+sandstone wall
+red sandstone wall
+
+------------------------- Backup
+BlockState place_me = null;
+        boolean place = false;
+        boolean lock_cut = false;
+        if (inHand.equals(cleanse.getItem())) {
+            if (state != CUT_SANDSTONE.defaultBlockState()) { place = true; }
+            if (state == CUT_RED_SANDSTONE.defaultBlockState()) { playerEntity.addItem(red); }
+            if (state == BLOOD_CUT_SAND_STONE.get().defaultBlockState()) { playerEntity.addItem(blood); }
+            if (state == WHITE_CUT_SAND_STONE.get().defaultBlockState()) { playerEntity.addItem(white); }
+            if (state == ORANGE_CUT_SAND_STONE.get().defaultBlockState()) { playerEntity.addItem(orange); }
+            if (state == MAGENTA_CUT_SAND_STONE.get().defaultBlockState()) { playerEntity.addItem(magenta); }
+            if (state == LIGHT_BLUE_CUT_SAND_STONE.get().defaultBlockState()) { playerEntity.addItem(light_blue); }
+            if (state == YELLOW_CUT_SAND_STONE.get().defaultBlockState()) { playerEntity.addItem(yellow); }
+            if (state == LIME_CUT_SAND_STONE.get().defaultBlockState()) { playerEntity.addItem(lime); }
+            if (state == PINK_CUT_SAND_STONE.get().defaultBlockState()) { playerEntity.addItem(pink); }
+            if (state == GRAY_CUT_SAND_STONE.get().defaultBlockState()) { playerEntity.addItem(gray); }
+            if (state == LIGHT_GRAY_CUT_SAND_STONE.get().defaultBlockState()) { playerEntity.addItem(light_gray); }
+            if (state == CYAN_CUT_SAND_STONE.get().defaultBlockState()) { playerEntity.addItem(cyan); }
+            if (state == PURPLE_CUT_SAND_STONE.get().defaultBlockState()) { playerEntity.addItem(purple); }
+            if (state == BLUE_CUT_SAND_STONE.get().defaultBlockState()) { playerEntity.addItem(blue); }
+            if (state == GREEN_CUT_SAND_STONE.get().defaultBlockState()) { playerEntity.addItem(green); }
+            if (state == BROWN_CUT_SAND_STONE.get().defaultBlockState()) { playerEntity.addItem(brown); }
+            if (state == BLACK_CUT_SAND_STONE.get().defaultBlockState()) { playerEntity.addItem(black); }
+            if (place) {
+                place_me = CUT_SANDSTONE.defaultBlockState();
+                lock_cut = true;
+            }
+        }
+        if (inHand.equals(red.getItem())) {
+            place = true;
+            if (state == CUT_RED_SANDSTONE.defaultBlockState()) {
+                playerEntity.addItem(cleanse);
+                place_me = BLOOD_CUT_SAND_STONE.get().defaultBlockState();
+                lock_cut = true;
+            }
+            if (state == YELLOW_CUT_SAND_STONE.get().defaultBlockState()) {
+                place_me = ORANGE_CUT_SAND_STONE.get().defaultBlockState();
+                playerEntity.addItem(orange);
+            }
+            if (state == BLUE_CUT_SAND_STONE.get().defaultBlockState()) {
+                place_me = PURPLE_CUT_SAND_STONE.get().defaultBlockState();
+                playerEntity.addItem(purple);
+            }
+            if (state == WHITE_CUT_SAND_STONE.get().defaultBlockState()) {
+                place_me = PINK_CUT_SAND_STONE.get().defaultBlockState();
+                playerEntity.addItem(pink);
+            }
+            if (state == BLOOD_CUT_SAND_STONE.get().defaultBlockState()) {
+                place_me = CUT_RED_SANDSTONE.defaultBlockState();
+                playerEntity.addItem(red);
+            }
+            if (place_me == null) {
+                place_me = CUT_RED_SANDSTONE.defaultBlockState();
+                lock_cut = true;
+                playerEntity.addItem(cleanse);
+            }
+        }
+        if (inHand.equals(blood.getItem())) {
+            if (state != BLOOD_CUT_SAND_STONE.get().defaultBlockState()) { place = true; }
+            if (state == CUT_SANDSTONE.defaultBlockState()) { lock_cut = true; }
+            if (state == CUT_RED_SANDSTONE.defaultBlockState()) {
+                lock_cut = true;
+                playerEntity.addItem(red);
+                place_me = BLOOD_CUT_SAND_STONE.get().defaultBlockState();
+            }
+            if (state == YELLOW_CUT_SAND_STONE.get().defaultBlockState()) {
+                place_me = ORANGE_CUT_SAND_STONE.get().defaultBlockState();
+                playerEntity.addItem(red);
+            }
+            if (state == BLUE_CUT_SAND_STONE.get().defaultBlockState()) {
+                place_me = PURPLE_CUT_SAND_STONE.get().defaultBlockState();
+                playerEntity.addItem(red);
+            }
+            if (state == WHITE_CUT_SAND_STONE.get().defaultBlockState()) {
+                place_me = PINK_CUT_SAND_STONE.get().defaultBlockState();
+                playerEntity.addItem(red);
+            }
+            if (place_me == null && place) {
+                place_me = BLOOD_CUT_SAND_STONE.get().defaultBlockState();
+                playerEntity.addItem(cleanse);
+            }
+        }
+        if (inHand.equals(white.getItem())) {
+            if (state != WHITE_CUT_SAND_STONE.get().defaultBlockState()) { place = true; }
+            if (state == CUT_RED_SANDSTONE.defaultBlockState()) {
+                lock_cut = true;
+                place_me = PINK_CUT_SAND_STONE.get().defaultBlockState();
+                playerEntity.addItem(pink);
+            }
+            if (state == CUT_SANDSTONE.defaultBlockState()) { lock_cut = true; }
+            if (state == BLOOD_CUT_SAND_STONE.get().defaultBlockState()) {
+                place_me = PINK_CUT_SAND_STONE.get().defaultBlockState();
+                playerEntity.addItem(pink);
+            }
+            if (state == GREEN_CUT_SAND_STONE.get().defaultBlockState()) {
+                place_me = LIME_CUT_SAND_STONE.get().defaultBlockState();
+                playerEntity.addItem(lime);
+            }
+            if (state == BLUE_CUT_SAND_STONE.get().defaultBlockState()) {
+                place_me = LIGHT_BLUE_CUT_SAND_STONE.get().defaultBlockState();
+                playerEntity.addItem(light_blue);
+            }
+            if (state == BLACK_CUT_SAND_STONE.get().defaultBlockState()) {
+                place_me = GRAY_CUT_SAND_STONE.get().defaultBlockState();
+                playerEntity.addItem(gray);
+            }
+            if (state == GRAY_CUT_SAND_STONE.get().defaultBlockState()) {
+                place_me = LIGHT_GRAY_CUT_SAND_STONE.get().defaultBlockState();
+                playerEntity.addItem(light_gray);
+            }
+            if (place && place_me == null) {
+                place_me = WHITE_CUT_SAND_STONE.get().defaultBlockState();
+                playerEntity.addItem(cleanse);
+            }
+        }
+        if (inHand.equals(orange.getItem())) {
+            if (state != ORANGE_CUT_SAND_STONE.get().defaultBlockState()) { place = true; }
+            if (state == CUT_RED_SANDSTONE.defaultBlockState()) { lock_cut = true; }
+            if (state == CUT_SANDSTONE.defaultBlockState()) { lock_cut = true; }
+            if (place) {
+                place_me = ORANGE_CUT_SAND_STONE.get().defaultBlockState();
+                playerEntity.addItem(cleanse);
+            }
+        }
+        if (inHand.equals(magenta.getItem())) {
+            if (state != MAGENTA_CUT_SAND_STONE.get().defaultBlockState()) { place = true; }
+            if (state == CUT_RED_SANDSTONE.defaultBlockState()) { lock_cut = true; }
+            if (state == CUT_SANDSTONE.defaultBlockState()) { lock_cut = true; }
+            if (place) {
+                place_me = MAGENTA_CUT_SAND_STONE.get().defaultBlockState();
+                playerEntity.addItem(cleanse);
+            }
+        }
+        if (inHand.equals(light_blue.getItem())) {
+            if (state != LIGHT_BLUE_CUT_SAND_STONE.get().defaultBlockState()) { place = true; }
+            if (state == CUT_RED_SANDSTONE.defaultBlockState()) { lock_cut = true; }
+            if (state == CUT_SANDSTONE.defaultBlockState()) { lock_cut = true; }
+            if (place) {
+                place_me = LIGHT_BLUE_CUT_SAND_STONE.get().defaultBlockState();
+                playerEntity.addItem(cleanse);
+            }
+        }
+        if (inHand.equals(yellow.getItem())) {
+            if (state != YELLOW_CUT_SAND_STONE.get().defaultBlockState()) { place = true; }
+            if (state == CUT_RED_SANDSTONE.defaultBlockState()) {
+                lock_cut = true;
+                place_me = ORANGE_CUT_SAND_STONE.get().defaultBlockState();
+                playerEntity.addItem(orange);
+            }
+            if (state == CUT_SANDSTONE.defaultBlockState()) { lock_cut = true; }
+            if (state == BLOOD_CUT_SAND_STONE.get().defaultBlockState()) {
+                place_me = ORANGE_CUT_SAND_STONE.get().defaultBlockState();
+                playerEntity.addItem(red);
+            }
+            if (place && place_me == null) {
+                place_me = YELLOW_CUT_SAND_STONE.get().defaultBlockState();
+                playerEntity.addItem(cleanse);
+            }
+        }
+        if (inHand.equals(lime.getItem())) {
+            if (state != LIME_CUT_SAND_STONE.get().defaultBlockState()) { place = true; }
+            if (state == CUT_RED_SANDSTONE.defaultBlockState()) { lock_cut = true; }
+            if (state == CUT_SANDSTONE.defaultBlockState()) { lock_cut = true; }
+            if (place) {
+                place_me = LIME_CUT_SAND_STONE.get().defaultBlockState();
+                playerEntity.addItem(cleanse);
+            }
+        }
+        if (inHand.equals(pink.getItem())) {
+            if (state != PINK_CUT_SAND_STONE.get().defaultBlockState()) { place = true; }
+            if (state == CUT_RED_SANDSTONE.defaultBlockState()) { lock_cut = true; }
+            if (state == CUT_SANDSTONE.defaultBlockState()) { lock_cut = true; }
+            if (state == PURPLE_CUT_SAND_STONE.get().defaultBlockState()) {
+                place_me = MAGENTA_CUT_SAND_STONE.get().defaultBlockState();
+                playerEntity.addItem(magenta);
+            }
+            if (state == BLACK_CUT_SAND_STONE.get().defaultBlockState()) {
+                place_me = CUT_RED_SANDSTONE.defaultBlockState();
+                lock_cut = true;
+                playerEntity.addItem(red);
+            }
+            if (place && place_me == null) {
+                place_me = PINK_CUT_SAND_STONE.get().defaultBlockState();
+                playerEntity.addItem(cleanse);
+            }
+        }
+        if (inHand.equals(gray.getItem())) {
+            if (state != GRAY_CUT_SAND_STONE.get().defaultBlockState()) { place = true; }
+            if (state == CUT_RED_SANDSTONE.defaultBlockState()) { lock_cut = true; }
+            if (state == CUT_SANDSTONE.defaultBlockState()) { lock_cut = true; }
+            if (state == WHITE_CUT_SAND_STONE.get().defaultBlockState()) {
+                place_me = LIGHT_GRAY_CUT_SAND_STONE.get().defaultBlockState();
+                playerEntity.addItem(light_gray);
+            }
+            if (place && place_me == null) {
+                place_me = GRAY_CUT_SAND_STONE.get().defaultBlockState();
+                playerEntity.addItem(cleanse);
+            }
+        }
+        if (inHand.equals(light_gray.getItem())) {
+            if (state != LIGHT_GRAY_CUT_SAND_STONE.get().defaultBlockState()) { place = true; }
+            if (state == CUT_RED_SANDSTONE.defaultBlockState()) { lock_cut = true; }
+            if (state == CUT_SANDSTONE.defaultBlockState()) { lock_cut = true; }
+            if (state == BLACK_CUT_SAND_STONE.get().defaultBlockState()) {
+                place_me = GRAY_CUT_SAND_STONE.get().defaultBlockState();
+                playerEntity.addItem(gray);
+            }
+            if (place && place_me == null) {
+                place_me = LIGHT_GRAY_CUT_SAND_STONE.get().defaultBlockState();
+                playerEntity.addItem(cleanse);
+            }
+        }
+        if (inHand.equals(cyan.getItem())) {
+            if (state != CYAN_CUT_SAND_STONE.get().defaultBlockState()) { place = true; }
+            if (state == CUT_RED_SANDSTONE.defaultBlockState()) { lock_cut = true; }
+            if (state == CUT_SANDSTONE.defaultBlockState()) { lock_cut = true; }
+            if (place) {
+                place_me = CYAN_CUT_SAND_STONE.get().defaultBlockState();
+                playerEntity.addItem(cleanse);
+            }
+        }
+        if (inHand.equals(purple.getItem())) {
+            if (state != PURPLE_CUT_SAND_STONE.get().defaultBlockState()) { place = true; }
+            if (state == CUT_RED_SANDSTONE.defaultBlockState()) { lock_cut = true; }
+            if (state == CUT_SANDSTONE.defaultBlockState()) { lock_cut = true; }
+            if (state == PINK_CUT_SAND_STONE.get().defaultBlockState()) {
+                place_me = MAGENTA_CUT_SAND_STONE.get().defaultBlockState();
+                playerEntity.addItem(magenta);
+            }
+            if (place && place_me == null) {
+                place_me = PURPLE_CUT_SAND_STONE.get().defaultBlockState();
+                playerEntity.addItem(cleanse);
+            }
+        }
+        if (inHand.equals(blue.getItem())) {
+            if (state != BLUE_CUT_SAND_STONE.get().defaultBlockState()) { place = true; }
+            if (state == CUT_RED_SANDSTONE.defaultBlockState()) {
+                lock_cut = true;
+                place_me = PURPLE_CUT_SAND_STONE.get().defaultBlockState();
+                playerEntity.addItem(purple);
+            }
+            if (state == CUT_SANDSTONE.defaultBlockState()) { lock_cut = true; }
+            if (state == GREEN_CUT_SAND_STONE.get().defaultBlockState()) {
+                place_me = CYAN_CUT_SAND_STONE.get().defaultBlockState();
+                playerEntity.addItem(cyan);
+            }
+            if (state == WHITE_CUT_SAND_STONE.get().defaultBlockState()) {
+                place_me = LIGHT_BLUE_CUT_SAND_STONE.get().defaultBlockState();
+                playerEntity.addItem(light_blue);
+            }
+            if (place && place_me == null) {
+                place_me = BLUE_CUT_SAND_STONE.get().defaultBlockState();
+                playerEntity.addItem(cleanse);
+            }
+
+        }
+        if (inHand.equals(green.getItem())) {
+            if (state != GRAY_CUT_SAND_STONE.get().defaultBlockState()) { place = true; }
+            if (state == CUT_RED_SANDSTONE.defaultBlockState()) { lock_cut = true; }
+            if (state == CUT_SANDSTONE.defaultBlockState()) { lock_cut = true; }
+            if (state == WHITE_CUT_SAND_STONE.get().defaultBlockState()) {
+                place_me = LIME_CUT_SAND_STONE.get().defaultBlockState();
+                playerEntity.addItem(lime);
+            }
+            if (state == BLUE_CUT_SAND_STONE.get().defaultBlockState()) {
+                place_me = PURPLE_CUT_SAND_STONE.get().defaultBlockState();
+                playerEntity.addItem(purple);
+            }
+            if (place && place_me == null) {
+                place_me = GREEN_CUT_SAND_STONE.get().defaultBlockState();
+                playerEntity.addItem(cleanse);
+            }
+        }
+        if (inHand.equals(brown.getItem())) {
+            if (state != BROWN_CUT_SAND_STONE.get().defaultBlockState()) { place = true; }
+            if (state == CUT_RED_SANDSTONE.defaultBlockState()) { lock_cut = true; }
+            if (state == CUT_SANDSTONE.defaultBlockState()) { lock_cut = true; }
+            if (place) {
+                place_me = BROWN_CUT_SAND_STONE.get().defaultBlockState();
+                playerEntity.addItem(cleanse);
+            }
+        }
+        if (inHand.equals(black.getItem())) {
+            if (state != BLACK_CUT_SAND_STONE.get().defaultBlockState()) { place = true; }
+            if (state == CUT_RED_SANDSTONE.defaultBlockState()) { lock_cut = true; }
+            if (state == CUT_SANDSTONE.defaultBlockState()) { lock_cut = true; }
+            if (state == LIGHT_GRAY_CUT_SAND_STONE.get().defaultBlockState()) {
+                place_me = GRAY_CUT_SAND_STONE.get().defaultBlockState();
+                playerEntity.addItem(gray);
+            }
+            if (state == LIGHT_BLUE_CUT_SAND_STONE.get().defaultBlockState()) {
+                place_me = BLUE_CUT_SAND_STONE.get().defaultBlockState();
+                playerEntity.addItem(blue);
+            }
+            if (state == LIME_CUT_SAND_STONE.get().defaultBlockState()) {
+                place_me = GREEN_CUT_SAND_STONE.get().defaultBlockState();
+                playerEntity.addItem(green);
+            }
+            if (state == PINK_CUT_SAND_STONE.get().defaultBlockState()) {
+                place_me = CUT_RED_SANDSTONE.defaultBlockState();
+                playerEntity.addItem(red);
+                lock_cut = true;
+            }
+            if (place && place_me == null) {
+                place_me = BLACK_CUT_SAND_STONE.get().defaultBlockState();
+                playerEntity.addItem(cleanse);
+            }
+        }
+
+        if (place) {
+            blockReplacer.axisPlacement(world, blockPos, place_me, lock_cut);
+            return InteractionResult.CONSUME;
+        } else return InteractionResult.FAIL;

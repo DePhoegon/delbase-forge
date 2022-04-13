@@ -28,4 +28,25 @@ chiseled_polished_blackstone
     [chiseled_polished_blackstone]
 dripstone
     [dripstone_block]
+===================================
+cleanse
+red
+blood
+white
+orange
 
+magenta
+light_blue
+yellow
+lime
+pink
+
+gray
+light_gray
+cyan
+purple
+blue
+
+green
+brown
+black

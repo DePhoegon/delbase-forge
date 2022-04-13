@@ -14,6 +14,7 @@ import com.dephoegon.delbase.block.miscBlock.overrideHook;
 public class regList {
     public static void listOrder() {
         //aid
+        blockArrayList.setBlockArrays();
 
         //Items
 

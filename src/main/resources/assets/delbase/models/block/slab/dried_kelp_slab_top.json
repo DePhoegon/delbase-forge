@@ -1,5 +1,5 @@
 {
-  "parent": "delbase:block/template/slab_kelp",
+  "parent": "delbase:block/template/slab_top_kelp",
   "textures": {
     "bottom": "minecraft:block/dried_kelp_top",
     "top": "minecraft:block/dried_kelp_top",

@@ -1,37 +1,13 @@
 Finish pre-planed blocks
 {templist}
 
-'Slabs'
-register
-[14/14]
-blockstate
-[14/14]
-blocks models
-[0/14]
-item model
-[0/14]
-loot table
-[0/14]
-tags
-[14/14]
-
-'Stair'
-register
-[15/15]
-blockstate
-[15/15]
-blocks models
-[15/15]
-item model
-[15/15]
-loot table
-[15/15]
-tags
-[15/15]
-
-
-=============
 swap my sand for the colored concrete powders
 alter recipe for sands
 -1 dye 4 sand = 4 colored sand
 -1color sand + 1 gravel = 2 color concrete powder
+
+=========
+
+create logic to skip colors inside ColorMixInteraction
+-allowing for incomplete sets to be put in.
+== Currently only setup to skip over BaseDefault & DarkRed/Blood colors

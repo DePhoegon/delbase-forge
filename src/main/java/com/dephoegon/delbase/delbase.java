@@ -18,6 +18,7 @@ import net.minecraftforge.event.server.ServerStartingEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.lwjgl.system.CallbackI;
 
 import java.util.stream.Collectors;
 
@@ -36,6 +37,10 @@ public class delbase
         public ItemStack makeIcon() {
             return new ItemStack(Items.REDSTONE_BLOCK);
         }
+    };
+    public static final CreativeModeTab DELBASE_ITEMS = new CreativeModeTab("dephoegon_items") {
+        @Override
+        public ItemStack makeIcon() { return new ItemStack(Items.RED_DYE); }
     };
     public delbase() {
         regList.listOrder();
