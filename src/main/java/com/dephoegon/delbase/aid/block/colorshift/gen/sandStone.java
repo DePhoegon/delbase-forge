@@ -1,4 +1,4 @@
-package com.dephoegon.delbase.aid.block.colorshift;
+package com.dephoegon.delbase.aid.block.colorshift.gen;
 
 import com.dephoegon.delbase.aid.util.kb;
 import net.minecraft.network.chat.Component;

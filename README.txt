@@ -39,6 +39,19 @@ Custom Template Jsons
 
 - Added burning times to ash/burnable custom blocks
 
+- Color Logic
+= Setup around Minecraft color mixing
+= setup to swap around a set of blocks
+= setup around enabling any missing blocks of that set.
+
+- Color Swapping
+= typeselector used to call the color logic with a set of blocks, and is divided into types
+= blockDye used to call the type selector with the  6 varying times.
+== axis, slabs, stairs, walls, generalblocks, gravity.
+==~ Based on practical  differences in placement information & where they are in java classes.
+== uses array sets to catch & use built in vanilla Minecraft blocks without doing a catch-all with something vast (Blocks catching Slabs, stairs, rotated pillars, as well as general blocks)
+== Used of a interchanging & versatile color swap based on Built in MC colors & MC color mixing, allowing for leaving out of colors of a set
+
 -Minor Fixes
 = Modified dried_kelp texture for walls, removed band
 = Fixed Bone Block texture

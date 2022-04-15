@@ -1,6 +1,6 @@
 package com.dephoegon.delbase.block.axis;
 
-import com.dephoegon.delbase.aid.block.colorshift.cutSandStone;
+import com.dephoegon.delbase.aid.block.colorshift.axis.cutSandStone;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;

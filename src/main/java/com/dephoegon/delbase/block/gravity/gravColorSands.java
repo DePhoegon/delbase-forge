@@ -1,7 +1,7 @@
 package com.dephoegon.delbase.block.gravity;
 
-import com.dephoegon.delbase.aid.block.colorshift.sandBlock;
-import com.dephoegon.delbase.aid.block.colorshift.solidSandBlock;
+import com.dephoegon.delbase.aid.block.colorshift.grav.sandBlock;
+import com.dephoegon.delbase.aid.block.colorshift.grav.solidSandBlock;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;

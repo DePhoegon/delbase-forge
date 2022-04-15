@@ -1,7 +1,6 @@
 package com.dephoegon.delbase.aid.block.item;
 
 import com.dephoegon.delbase.aid.block.stock.*;
-import com.dephoegon.delbase.aid.event.typeSelector;
 import com.dephoegon.delbase.aid.util.kb;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
@@ -18,6 +17,7 @@ import org.jetbrains.annotations.NotNull;
 import javax.annotation.Nullable;
 import java.util.List;
 
+import static com.dephoegon.delbase.aid.event.typeSelector.*;
 import static com.dephoegon.delbase.aid.util.blockArrayList.*;
 
 public class blockDye extends DyeItem {
@@ -53,13 +53,12 @@ public class blockDye extends DyeItem {
         Block block = world.getBlockState(blockpos).getBlock();
         String dye = "null";
 
-        if (block instanceof axisBlock || getAxis_list().contains(defaultBlockState)) { return typeSelector.axis_select(world, blockpos, defaultBlockState, block,player, dye_hand); }
-        if (block instanceof slabBlock  || getSlab_list().contains(defaultBlockState)) { return typeSelector.slab_select(world, blockpos, defaultBlockState, block, player, dye_hand); }
-        if (block instanceof genBlock || getGeneral_list().contains(defaultBlockState)) return InteractionResult.SUCCESS;
-        if (block instanceof gravBlock || getGravity_list().contains(defaultBlockState)) return InteractionResult.SUCCESS;
-        if (block instanceof stairBlock || getStair_list().contains(defaultBlockState)) return InteractionResult.SUCCESS;
-        if (block instanceof wallBlock || getWall_list().contains(defaultBlockState)) return InteractionResult.SUCCESS;
-
+        if (block instanceof axisBlock || getAxis_list().contains(defaultBlockState)) { return axis_select(world, blockpos, defaultBlockState, block, player, dye_hand); }
+        if (block instanceof slabBlock  || getSlab_list().contains(defaultBlockState)) { return slab_select(world, blockpos, defaultBlockState, block, player, dye_hand); }
+        if (block instanceof genBlock || getGeneral_list().contains(defaultBlockState)) { return gen_select(world, blockpos, defaultBlockState, block, player, dye_hand); }
+        if (block instanceof gravBlock || getGravity_list().contains(defaultBlockState)) { return grav_select(world, blockpos, defaultBlockState, block, player, dye_hand); }
+        if (block instanceof stairBlock || getStair_list().contains(defaultBlockState)) { return stair_select(world, blockpos, defaultBlockState, block, player, dye_hand); }
+        if (block instanceof wallBlock || getWall_list().contains(defaultBlockState)) { return wall_select(world, blockpos, defaultBlockState, block, player, dye_hand); }
         return InteractionResult.FAIL;
     }
 }

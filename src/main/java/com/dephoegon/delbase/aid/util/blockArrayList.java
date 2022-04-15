@@ -100,6 +100,8 @@ public abstract class blockArrayList {
         general_set.add(CHISELED_RED_SANDSTONE.defaultBlockState());
         general_set.add(SANDSTONE.defaultBlockState());
         general_set.add(RED_SANDSTONE.defaultBlockState());
+        general_set.add(SMOOTH_RED_SANDSTONE.defaultBlockState());
+        general_set.add(SMOOTH_SANDSTONE.defaultBlockState());
         general_list = general_set;
     }
     public static ArrayList<Object> getGeneral_list() { return general_list; }

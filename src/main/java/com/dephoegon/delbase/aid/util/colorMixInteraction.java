@@ -77,53 +77,62 @@ public class colorMixInteraction {
                 }
         }
         if (inHand.equals(red.getItem())) {
-            place = true;
+            if (RedBaseDefaultBlock != null) { place = true; }
             if (TargetBlock == RedBaseDefaultBlock && DarkRedDefaultBlock != null) {
                 playerEntity.addItem(cleanse);
                 place_me = DarkRedDefaultBlock;
                 lock_cut = true;
+                place = true;
             }
-            if (TargetBlock == YellowDefaultBlock) {
+            if (TargetBlock == YellowDefaultBlock && OrangeDefaultBlock != null) {
                 place_me = OrangeDefaultBlock;
                 playerEntity.addItem(orange);
+                place = true;
             }
-            if (TargetBlock == BlueDefaultBlock) {
+            if (TargetBlock == BlueDefaultBlock && PurpleDefaultBlock != null) {
                 place_me = PurpleDefaultBlock;
                 playerEntity.addItem(purple);
+                place = true;
             }
-            if (TargetBlock == WhiteDefaultBlock) {
+            if (TargetBlock == WhiteDefaultBlock && PinkDefaultBlock != null) {
                 place_me = PinkDefaultBlock;
                 playerEntity.addItem(pink);
+                place = true;
             }
-            if (TargetBlock == DarkRedDefaultBlock) {
+            if (TargetBlock == DarkRedDefaultBlock && RedBaseDefaultBlock != null) {
                 place_me = RedBaseDefaultBlock;
                 playerEntity.addItem(red);
+                place = true;
             }
-            if (place_me == null) {
+            if (place && place_me == null) {
                 place_me = RedBaseDefaultBlock;
                 lock_cut = true;
                 playerEntity.addItem(cleanse);
             }
         }
-        if (inHand.equals(blood.getItem()) && DarkRedDefaultBlock != null) {
-            if (TargetBlock != DarkRedDefaultBlock) { place = true; }
+        if (inHand.equals(blood.getItem())) {
+            if (TargetBlock != DarkRedDefaultBlock && DarkRedDefaultBlock != null) { place = true; }
             if (TargetBlock == BaseDefaultBlock) { lock_cut = true; }
-            if (TargetBlock == RedBaseDefaultBlock) {
+            if (TargetBlock == RedBaseDefaultBlock && DarkRedDefaultBlock != null) {
                 lock_cut = true;
                 playerEntity.addItem(red);
                 place_me = DarkRedDefaultBlock;
+                place = true;
             }
-            if (TargetBlock == YellowDefaultBlock) {
+            if (TargetBlock == YellowDefaultBlock && OrangeDefaultBlock != null) {
                 place_me = OrangeDefaultBlock;
                 playerEntity.addItem(red);
+                place = true;
             }
-            if (TargetBlock == BlueDefaultBlock) {
+            if (TargetBlock == BlueDefaultBlock && PurpleDefaultBlock != null) {
                 place_me = PurpleDefaultBlock;
                 playerEntity.addItem(red);
+                place = true;
             }
-            if (TargetBlock == WhiteDefaultBlock) {
+            if (TargetBlock == WhiteDefaultBlock && PinkDefaultBlock != null) {
                 place_me = PinkDefaultBlock;
                 playerEntity.addItem(red);
+                place = true;
             }
             if (place_me == null && place) {
                 place_me = DarkRedDefaultBlock;
@@ -131,32 +140,38 @@ public class colorMixInteraction {
             }
         }
         if (inHand.equals(white.getItem())) {
-            if (TargetBlock != WhiteDefaultBlock) { place = true; }
-            if (TargetBlock == RedBaseDefaultBlock) {
+            if (TargetBlock != WhiteDefaultBlock && WhiteDefaultBlock != null) { place = true; }
+            if (TargetBlock == RedBaseDefaultBlock && PinkDefaultBlock != null) {
                 lock_cut = true;
                 place_me = PinkDefaultBlock;
                 playerEntity.addItem(pink);
+                place = true;
             }
             if (TargetBlock == BaseDefaultBlock) { lock_cut = true; }
-            if (TargetBlock == DarkRedDefaultBlock) {
+            if (TargetBlock == DarkRedDefaultBlock && PinkDefaultBlock != null) {
                 place_me = PinkDefaultBlock;
                 playerEntity.addItem(pink);
+                place = true;
             }
-            if (TargetBlock == GreenDefaultBlock) {
+            if (TargetBlock == GreenDefaultBlock && LimeDefaultBlock != null) {
                 place_me = LimeDefaultBlock;
                 playerEntity.addItem(lime);
+                place = true;
             }
-            if (TargetBlock == BlueDefaultBlock) {
+            if (TargetBlock == BlueDefaultBlock && LightBlueDefaultBlock != null) {
                 place_me = LightBlueDefaultBlock;
                 playerEntity.addItem(light_blue);
+                place = true;
             }
-            if (TargetBlock == BlackDefaultBlock) {
+            if (TargetBlock == BlackDefaultBlock && GrayDefaultBlock != null) {
                 place_me = GrayDefaultBlock;
                 playerEntity.addItem(gray);
+                place = true;
             }
-            if (TargetBlock == GrayDefaultBlock) {
+            if (TargetBlock == GrayDefaultBlock && LightGrayDefaultBlock != null) {
                 place_me = LightGrayDefaultBlock;
                 playerEntity.addItem(light_gray);
+                place = true;
             }
             if (place && place_me == null) {
                 place_me = WhiteDefaultBlock;
@@ -164,7 +179,7 @@ public class colorMixInteraction {
             }
         }
         if (inHand.equals(orange.getItem())) {
-            if (TargetBlock != OrangeDefaultBlock) { place = true; }
+            if (TargetBlock != OrangeDefaultBlock && OrangeDefaultBlock != null) { place = true; }
             if (TargetBlock == RedBaseDefaultBlock) { lock_cut = true; }
             if (TargetBlock == BaseDefaultBlock) { lock_cut = true; }
             if (place) {
@@ -173,7 +188,7 @@ public class colorMixInteraction {
             }
         }
         if (inHand.equals(magenta.getItem())) {
-            if (TargetBlock != MagentaDefaultBlock) { place = true; }
+            if (TargetBlock != MagentaDefaultBlock && MagentaDefaultBlock != null) { place = true; }
             if (TargetBlock == RedBaseDefaultBlock) { lock_cut = true; }
             if (TargetBlock == BaseDefaultBlock) { lock_cut = true; }
             if (place) {
@@ -182,7 +197,7 @@ public class colorMixInteraction {
             }
         }
         if (inHand.equals(light_blue.getItem())) {
-            if (TargetBlock != LightBlueDefaultBlock) { place = true; }
+            if (TargetBlock != LightBlueDefaultBlock && LightBlueDefaultBlock != null) { place = true; }
             if (TargetBlock == RedBaseDefaultBlock) { lock_cut = true; }
             if (TargetBlock == BaseDefaultBlock) { lock_cut = true; }
             if (place) {
@@ -191,16 +206,18 @@ public class colorMixInteraction {
             }
         }
         if (inHand.equals(yellow.getItem())) {
-            if (TargetBlock != YellowDefaultBlock) { place = true; }
-            if (TargetBlock == RedBaseDefaultBlock) {
+            if (TargetBlock != YellowDefaultBlock && YellowDefaultBlock != null) { place = true; }
+            if (TargetBlock == RedBaseDefaultBlock && OrangeDefaultBlock != null) {
                 lock_cut = true;
                 place_me = OrangeDefaultBlock;
                 playerEntity.addItem(orange);
+                place = true;
             }
             if (TargetBlock == BaseDefaultBlock) { lock_cut = true; }
-            if (TargetBlock == DarkRedDefaultBlock) {
+            if (TargetBlock == DarkRedDefaultBlock && OrangeDefaultBlock != null) {
                 place_me = OrangeDefaultBlock;
                 playerEntity.addItem(red);
+                place = true;
             }
             if (place && place_me == null) {
                 place_me = YellowDefaultBlock;
@@ -208,7 +225,7 @@ public class colorMixInteraction {
             }
         }
         if (inHand.equals(lime.getItem())) {
-            if (TargetBlock != LimeDefaultBlock) { place = true; }
+            if (TargetBlock != LimeDefaultBlock && LimeDefaultBlock != null) { place = true; }
             if (TargetBlock == RedBaseDefaultBlock) { lock_cut = true; }
             if (TargetBlock == BaseDefaultBlock) { lock_cut = true; }
             if (place) {
@@ -217,17 +234,19 @@ public class colorMixInteraction {
             }
         }
         if (inHand.equals(pink.getItem())) {
-            if (TargetBlock != PinkDefaultBlock) { place = true; }
+            if (TargetBlock != PinkDefaultBlock && PinkDefaultBlock != null) { place = true; }
             if (TargetBlock == RedBaseDefaultBlock) { lock_cut = true; }
             if (TargetBlock == BaseDefaultBlock) { lock_cut = true; }
-            if (TargetBlock == PurpleDefaultBlock) {
+            if (TargetBlock == PurpleDefaultBlock && MagentaDefaultBlock != null) {
                 place_me = MagentaDefaultBlock;
                 playerEntity.addItem(magenta);
+                place = true;
             }
-            if (TargetBlock == BlackDefaultBlock) {
+            if (TargetBlock == BlackDefaultBlock && RedBaseDefaultBlock != null) {
                 place_me = RedBaseDefaultBlock;
                 lock_cut = true;
                 playerEntity.addItem(red);
+                place = true;
             }
             if (place && place_me == null) {
                 place_me = PinkDefaultBlock;
@@ -235,12 +254,13 @@ public class colorMixInteraction {
             }
         }
         if (inHand.equals(gray.getItem())) {
-            if (TargetBlock != GrayDefaultBlock) { place = true; }
+            if (TargetBlock != GrayDefaultBlock && GrayDefaultBlock != null) { place = true; }
             if (TargetBlock == RedBaseDefaultBlock) { lock_cut = true; }
             if (TargetBlock == BaseDefaultBlock) { lock_cut = true; }
-            if (TargetBlock == WhiteDefaultBlock) {
+            if (TargetBlock == WhiteDefaultBlock && LightGrayDefaultBlock != null) {
                 place_me = LightGrayDefaultBlock;
                 playerEntity.addItem(light_gray);
+                place = true;
             }
             if (place && place_me == null) {
                 place_me = GrayDefaultBlock;
@@ -248,12 +268,13 @@ public class colorMixInteraction {
             }
         }
         if (inHand.equals(light_gray.getItem())) {
-            if (TargetBlock != LightGrayDefaultBlock) { place = true; }
+            if (TargetBlock != LightGrayDefaultBlock && LightGrayDefaultBlock != null) { place = true; }
             if (TargetBlock == RedBaseDefaultBlock) { lock_cut = true; }
             if (TargetBlock == BaseDefaultBlock) { lock_cut = true; }
-            if (TargetBlock == BlackDefaultBlock) {
+            if (TargetBlock == BlackDefaultBlock && GrayDefaultBlock != null) {
                 place_me = GrayDefaultBlock;
                 playerEntity.addItem(gray);
+                place = true;
             }
             if (place && place_me == null) {
                 place_me = LightGrayDefaultBlock;
@@ -261,7 +282,7 @@ public class colorMixInteraction {
             }
         }
         if (inHand.equals(cyan.getItem())) {
-            if (TargetBlock != CyanDefaultBlock) { place = true; }
+            if (TargetBlock != CyanDefaultBlock && CyanDefaultBlock != null) { place = true; }
             if (TargetBlock == RedBaseDefaultBlock) { lock_cut = true; }
             if (TargetBlock == BaseDefaultBlock) { lock_cut = true; }
             if (place) {
@@ -270,12 +291,13 @@ public class colorMixInteraction {
             }
         }
         if (inHand.equals(purple.getItem())) {
-            if (TargetBlock != PurpleDefaultBlock) { place = true; }
+            if (TargetBlock != PurpleDefaultBlock && PurpleDefaultBlock != null) { place = true; }
             if (TargetBlock == RedBaseDefaultBlock) { lock_cut = true; }
             if (TargetBlock == BaseDefaultBlock) { lock_cut = true; }
-            if (TargetBlock == PinkDefaultBlock) {
+            if (TargetBlock == PinkDefaultBlock && MagentaDefaultBlock != null) {
                 place_me = MagentaDefaultBlock;
                 playerEntity.addItem(magenta);
+                place = true;
             }
             if (place && place_me == null) {
                 place_me = PurpleDefaultBlock;
@@ -283,20 +305,23 @@ public class colorMixInteraction {
             }
         }
         if (inHand.equals(blue.getItem())) {
-            if (TargetBlock != BlueDefaultBlock) { place = true; }
-            if (TargetBlock == RedBaseDefaultBlock) {
+            if (TargetBlock != BlueDefaultBlock && BlueDefaultBlock != null) { place = true; }
+            if (TargetBlock == RedBaseDefaultBlock && PurpleDefaultBlock != null) {
                 lock_cut = true;
                 place_me = PurpleDefaultBlock;
                 playerEntity.addItem(purple);
+                place = true;
             }
             if (TargetBlock == BaseDefaultBlock) { lock_cut = true; }
-            if (TargetBlock == GreenDefaultBlock) {
+            if (TargetBlock == GreenDefaultBlock && CyanDefaultBlock != null) {
                 place_me = CyanDefaultBlock;
                 playerEntity.addItem(cyan);
+                place = true;
             }
-            if (TargetBlock == WhiteDefaultBlock) {
+            if (TargetBlock == WhiteDefaultBlock && LightBlueDefaultBlock != null) {
                 place_me = LightBlueDefaultBlock;
                 playerEntity.addItem(light_blue);
+                place = true;
             }
             if (place && place_me == null) {
                 place_me = BlueDefaultBlock;
@@ -305,16 +330,18 @@ public class colorMixInteraction {
 
         }
         if (inHand.equals(green.getItem())) {
-            if (TargetBlock != GrayDefaultBlock) { place = true; }
+            if (TargetBlock != GrayDefaultBlock && GrayDefaultBlock != null) { place = true; }
             if (TargetBlock == RedBaseDefaultBlock) { lock_cut = true; }
             if (TargetBlock == BaseDefaultBlock) { lock_cut = true; }
-            if (TargetBlock == WhiteDefaultBlock) {
+            if (TargetBlock == WhiteDefaultBlock && LimeDefaultBlock != null) {
                 place_me = LimeDefaultBlock;
                 playerEntity.addItem(lime);
+                place = true;
             }
-            if (TargetBlock == BlueDefaultBlock) {
+            if (TargetBlock == BlueDefaultBlock && PurpleDefaultBlock != null) {
                 place_me = PurpleDefaultBlock;
                 playerEntity.addItem(purple);
+                place = true;
             }
             if (place && place_me == null) {
                 place_me = GreenDefaultBlock;
@@ -322,7 +349,7 @@ public class colorMixInteraction {
             }
         }
         if (inHand.equals(brown.getItem())) {
-            if (TargetBlock != BrownDefaultBlock) { place = true; }
+            if (TargetBlock != BrownDefaultBlock && BrownDefaultBlock != null) { place = true; }
             if (TargetBlock == RedBaseDefaultBlock) { lock_cut = true; }
             if (TargetBlock == BaseDefaultBlock) { lock_cut = true; }
             if (place) {
@@ -331,25 +358,29 @@ public class colorMixInteraction {
             }
         }
         if (inHand.equals(black.getItem())) {
-            if (TargetBlock != BlackDefaultBlock) { place = true; }
+            if (TargetBlock != BlackDefaultBlock && BlackDefaultBlock != null) { place = true; }
             if (TargetBlock == RedBaseDefaultBlock) { lock_cut = true; }
             if (TargetBlock == BaseDefaultBlock) { lock_cut = true; }
-            if (TargetBlock == LightGrayDefaultBlock) {
+            if (TargetBlock == LightGrayDefaultBlock && GrayDefaultBlock != null) {
                 place_me = GrayDefaultBlock;
                 playerEntity.addItem(gray);
+                place = true;
             }
-            if (TargetBlock == LightBlueDefaultBlock) {
+            if (TargetBlock == LightBlueDefaultBlock && BlueDefaultBlock != null) {
                 place_me = BlueDefaultBlock;
                 playerEntity.addItem(blue);
+                place = true;
             }
-            if (TargetBlock == LimeDefaultBlock) {
+            if (TargetBlock == LimeDefaultBlock && GreenDefaultBlock != null) {
                 place_me = GreenDefaultBlock;
                 playerEntity.addItem(green);
+                place = true;
             }
-            if (TargetBlock == PinkDefaultBlock) {
+            if (TargetBlock == PinkDefaultBlock && RedBaseDefaultBlock != null) {
                 place_me = RedBaseDefaultBlock;
                 playerEntity.addItem(red);
                 lock_cut = true;
+                place = true;
             }
             if (place && place_me == null) {
                 place_me = BlackDefaultBlock;

@@ -1,4 +1,4 @@
-package com.dephoegon.delbase.aid.block.colorshift;
+package com.dephoegon.delbase.aid.block.colorshift.axis;
 
 import com.dephoegon.delbase.aid.block.stock.axisBlock;
 import com.dephoegon.delbase.aid.util.kb;

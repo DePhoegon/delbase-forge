@@ -1,6 +1,6 @@
 package com.dephoegon.delbase.block.general;
 
-import com.dephoegon.delbase.aid.block.colorshift.smoothSandStone;
+import com.dephoegon.delbase.aid.block.colorshift.gen.smoothSandStone;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;

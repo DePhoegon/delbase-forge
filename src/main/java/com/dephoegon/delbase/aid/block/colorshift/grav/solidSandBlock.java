@@ -1,4 +1,4 @@
-package com.dephoegon.delbase.aid.block.colorshift;
+package com.dephoegon.delbase.aid.block.colorshift.grav;
 
 import com.dephoegon.delbase.aid.block.stock.gravBlock;
 import net.minecraft.core.BlockPos;
@@ -8,12 +8,10 @@ import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.material.FluidState;
-import org.jetbrains.annotations.Contract;
-import org.jetbrains.annotations.NotNull;
 
-public class sandBlock extends gravBlock {
-    public sandBlock(int dustColorIn, Properties properties, String normToolTip, String shiftToolTip, String ctrlToolTip, @NotNull boolean falls) {
-        super(dustColorIn, properties, normToolTip, shiftToolTip, ctrlToolTip, falls);
+public class solidSandBlock extends gravBlock {
+    public solidSandBlock(int dustColorIn, Properties properties, String normToolTip, String shiftToolTip, String ctrlToolTip) {
+        super(dustColorIn, properties, normToolTip, shiftToolTip, ctrlToolTip, false);
     }
     @Override
     public boolean canSustainPlant(BlockState state, BlockGetter world, BlockPos pos, Direction facing, net.minecraftforge.common.IPlantable plantable) {
