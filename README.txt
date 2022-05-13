@@ -76,7 +76,7 @@ Custom Template Jsons
 =smooth_basalt_stair
 ==- blockstate reference fix
 = dark_oak_stair
-==- fix inisde texture of outer_stair
+==- fix inside texture of outer_stair
 = dripstone stair
 ==- fixed typo in texture name
 = raw_copper stair

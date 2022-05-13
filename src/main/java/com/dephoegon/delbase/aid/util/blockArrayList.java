@@ -1,7 +1,16 @@
 package com.dephoegon.delbase.aid.util;
 
+import com.dephoegon.delbase.aid.block.colorshift.grav.solidSandBlock;
+import com.dephoegon.delbase.aid.block.stock.energySlab;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.state.BlockState;
+import org.jetbrains.annotations.NotNull;
+
 import java.util.ArrayList;
 
+import static com.dephoegon.delbase.block.miscBlock.slabMisc.GLOWSTONE_SLAB;
+import static com.dephoegon.delbase.block.miscBlock.stairMisc.GLOWSTONE_STAIR;
+import static com.dephoegon.delbase.block.miscBlock.wallMisc.GLOWSTONE_WALL;
 import static net.minecraft.world.level.block.Blocks.*;
 
 public abstract class blockArrayList {
@@ -13,6 +22,27 @@ public abstract class blockArrayList {
     private static ArrayList<Object> gravity_list = new ArrayList<>();
     private static ArrayList<Object> wall_list = new ArrayList<>();
     private static ArrayList<Object> axis_list = new ArrayList<>();
+    private static ArrayList<Object> fall_hold = new ArrayList<>();
+
+    // Blocks for holding up falling blocks, outside custom classes
+    private static void setFall_hold() {
+        ArrayList<Object> fall_set = new ArrayList<>();
+        fall_set.add(REDSTONE_ORE.defaultBlockState());
+        fall_set.add(REDSTONE_BLOCK.defaultBlockState());
+        fall_set.add(REDSTONE_LAMP.defaultBlockState());
+        fall_set.add(GLOWSTONE.defaultBlockState());
+        fall_hold = fall_set;
+    }
+    private static ArrayList<Object> getFall_hold() { return fall_hold; }
+    public static boolean checkFallLock(@NotNull Block block) { return
+            block.defaultBlockState() == GLOWSTONE_SLAB.get().defaultBlockState() ||
+                    block.defaultBlockState() == GLOWSTONE_STAIR.get().defaultBlockState() ||
+                    block.defaultBlockState() == GLOWSTONE_WALL.get().defaultBlockState() ||
+                    block instanceof energySlab ||
+                    block instanceof solidSandBlock ||
+                    getFall_hold().contains(block.defaultBlockState());
+    }
+
 
     // Color swapping matching list
     private static void setTerracotta_list() {
@@ -122,8 +152,9 @@ public abstract class blockArrayList {
     }
     public static ArrayList<Object> getWall_list() { return wall_list; }
 
-    // call methods to set private lists
+    // call methods to set private lists, called first in register list to avoid any issue
     public static void setBlockArrays() {
+        setFall_hold();
         setGeneral_list();
         setSlab_list();
         setStair_list();

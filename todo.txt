@@ -8,6 +8,4 @@ alter recipe for sands
 
 =========
 
-create logic to skip colors inside ColorMixInteraction
--allowing for incomplete sets to be put in.
-== Currently only setup to skip over BaseDefault & DarkRed/Blood colors
+_from_solid_sand.json

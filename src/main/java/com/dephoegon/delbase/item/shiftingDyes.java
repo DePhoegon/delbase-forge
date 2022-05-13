@@ -8,9 +8,9 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
-import org.lwjgl.system.CallbackI;
 
-import static com.dephoegon.delbase.delbase.*;
+import static com.dephoegon.delbase.delbase.DELBASE_ITEMS;
+import static com.dephoegon.delbase.delbase.Mod_ID;
 
 public class shiftingDyes {
     private static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, Mod_ID);

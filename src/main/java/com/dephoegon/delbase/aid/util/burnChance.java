@@ -15,15 +15,14 @@ import net.minecraft.world.level.block.state.properties.StairsShape;
 import net.minecraft.world.level.block.state.properties.WallSide;
 import org.jetbrains.annotations.NotNull;
 
-import static net.minecraft.world.level.block.Blocks.FIRE;
 import static net.minecraft.world.level.block.StairBlock.SHAPE;
 import static net.minecraft.world.level.block.state.properties.BlockStateProperties.*;
 
 public class burnChance {
     private static boolean ashReplaceRNG() {
-        if (randomNum(4,1)<2) { return true; } else { return false; }
+        return randomNum(8) < 3;
     } //used to control % odds for replacing blocks/spawning fire
-    private static boolean threshHold(int cap, int thresh) { return randomNum(cap, 1) > thresh; }
+    private static boolean threshHold(int cap, int thresh) { return randomNum(cap) > thresh; }
     public static void rngBurn(@NotNull BlockGetter world, @NotNull BlockState burningBlock, @NotNull BlockState ashBlock, BlockPos pos, int burnThreshHold, int burnCap){
         // Double Comparison is used to avoid drastic failure.  (they should always match, but if for some reason it manages to pull the wrong blockstate, it won't break the game.
         boolean genBlock;
@@ -80,5 +79,5 @@ public class burnChance {
             } // chance to replace block with supplied ashBlock.
         }
     }
-    private static int randomNum(int max, int min){ return (int) (Math.random()*(max-min+1)+min); }
+    private static int randomNum(int max){ return (int) (Math.random()*(max- 1 +1)+ 1); }
 }

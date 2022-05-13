@@ -19,10 +19,10 @@ import static com.dephoegon.delbase.aid.util.burnChance.rngBurn;
 import static com.dephoegon.delbase.block.general.ashBlocks.ASH_WALL;
 
 public class wallBlock extends WallBlock {
-    private String tip0;
-    private String tip1;
-    private String tip2;
-    private boolean flame;
+    private final String tip0;
+    private final String tip1;
+    private final String tip2;
+    private final boolean flame;
     public wallBlock(Properties properties, String normToolTip, String shiftToolTip, String ctrlToolTip, boolean flames) {
         super(properties);
         if(normToolTip.equals("")) { tip0 = null; } else { tip0 = "\u00A77\u00A7o"+normToolTip; }
@@ -31,7 +31,7 @@ public class wallBlock extends WallBlock {
         flame = flames;
     }
     @Override
-    public void appendHoverText(ItemStack stack, @Nullable BlockGetter worldIn, List<Component> toolTip, TooltipFlag flag) {
+    public void appendHoverText(@NotNull ItemStack stack, @Nullable BlockGetter worldIn, @NotNull List<Component> toolTip, @NotNull TooltipFlag flag) {
         super.appendHoverText(stack, worldIn, toolTip, flag);
         if(!kb.HShift() && !kb.HCtrl() && tip0 != null) toolTip.add(new TextComponent(tip0)); //if neither pressed, show tip0 (if not empty)
         if(kb.HCtrl() && tip2 != null) toolTip.add(new TextComponent(tip2)); //if ctrl, show tip2 (if not empty), do first

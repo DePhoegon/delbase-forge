@@ -1,9 +1,9 @@
 {
   "parent": "delbase:block/template/stairs",
   "textures": {
-    "bottom": "minecraft:block/basalt_top",
-    "top": "minecraft:block/basalt_top",
+    "bottom": "minecraft:block/basalt_side",
+    "top": "minecraft:block/basalt_side",
     "side": "minecraft:block/basalt_side",
-    "inside": "minecraft:block/basalt_top"
+    "inside": "minecraft:block/basalt_side"
   }
 }

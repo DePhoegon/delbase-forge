@@ -4,14 +4,11 @@ import com.dephoegon.delbase.aid.block.stock.stairBlock;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.RecipeType;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.FurnaceBlock;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.StairBlock;
 import net.minecraft.world.level.block.state.BlockBehaviour;
-import net.minecraftforge.common.ForgeHooks;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.DeferredRegister;
@@ -39,7 +36,7 @@ public class stairMisc {
             ()-> new stairBlock(DRIED_KELP_BLOCK::defaultBlockState, BlockBehaviour.Properties.copy(DRIED_KELP_BLOCK).sound(SoundType.GRASS)
                     ,"","","", true),4001);
     public static final RegistryObject<StairBlock> GLOWSTONE_STAIR = register("glowstone_stair",
-            ()-> new stairBlock(GLOWSTONE::defaultBlockState, BlockBehaviour.Properties.copy(GLOWSTONE).sound(SoundType.GLASS).lightLevel((blockState)->{return 15;})
+            ()-> new stairBlock(GLOWSTONE::defaultBlockState, BlockBehaviour.Properties.copy(GLOWSTONE).sound(SoundType.GLASS).lightLevel((blockState)-> 15)
                     ,"","","", false),0);
     public static final RegistryObject<StairBlock> BASALT_STAIR = register("basalt_stair",
             ()-> new stairBlock(BASALT::defaultBlockState, BlockBehaviour.Properties.copy(BASALT).sound(SoundType.STONE)
@@ -49,6 +46,9 @@ public class stairMisc {
                     ,"","","", false),0);
     public static final RegistryObject<StairBlock> SMOOTH_BASALT_STAIR = register("smooth_basalt_stair",
             ()-> new stairBlock(SMOOTH_BASALT::defaultBlockState, BlockBehaviour.Properties.copy(SMOOTH_BASALT).sound(SoundType.STONE)
+                    ,"","","", false),0);
+    public static final RegistryObject<StairBlock> COBBLED_BASALT_STAIR = register("cobbled_basalt_stair",
+            ()-> new stairBlock(BASALT::defaultBlockState, BlockBehaviour.Properties.copy(BASALT).sound(SoundType.STONE)
                     ,"","","", false),0);
     public static final RegistryObject<StairBlock> RAW_GOLD_STAIR = register("raw_gold_stair",
             ()-> new stairBlock(RAW_GOLD_BLOCK::defaultBlockState, BlockBehaviour.Properties.copy(RAW_GOLD_BLOCK).sound(SoundType.METAL)

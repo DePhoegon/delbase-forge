@@ -36,7 +36,7 @@ public class slabMisc {
             ()-> new slabBlock(BlockBehaviour.Properties.copy(DRIED_KELP_BLOCK).sound(SoundType.GRASS)
                     ,"","","", true),4001);
     public static final RegistryObject<SlabBlock> GLOWSTONE_SLAB = register("glowstone_slab",
-            ()-> new slabBlock(BlockBehaviour.Properties.copy(GLOWSTONE).sound(SoundType.GLASS).lightLevel((blockState)->{return 15;})
+            ()-> new slabBlock(BlockBehaviour.Properties.copy(GLOWSTONE).sound(SoundType.GLASS).lightLevel((blockState)-> 15)
                     ,"","","", false),0);
     public static final RegistryObject<SlabBlock> BASALT_SLAB = register("basalt_slab",
             ()-> new slabBlock(BlockBehaviour.Properties.copy(BASALT).sound(SoundType.STONE)

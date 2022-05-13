@@ -1,8 +1,6 @@
 {
   "replace": false,
   "values": [
-    "delbase:sand",
-    "delbase:red_sand",
     "delbase:blood_sand",
     "delbase:white_sand",
     "delbase:orange_sand",

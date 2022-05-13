@@ -10,6 +10,7 @@ import com.dephoegon.delbase.block.slab.*;
 import com.dephoegon.delbase.block.stair.*;
 import com.dephoegon.delbase.block.wall.*;
 import com.dephoegon.delbase.block.miscBlock.overrideHook;
+import com.dephoegon.delbase.item.shiftingDyes;
 
 public class regList {
     public static void listOrder() {
@@ -17,6 +18,7 @@ public class regList {
         blockArrayList.setBlockArrays();
 
         //Items
+        shiftingDyes.register();
 
         //Standard Blocks
         genChiseledSandStones.register();
@@ -78,5 +80,7 @@ public class regList {
 
         //Overrides
         overrideHook.register();
+
+        //Special
     }
 }

@@ -29,16 +29,16 @@ displayName="Dephoegons' Base Blocks" #mandatory
 # A file name (in the root of the mod JAR) containing a logo for display
 logoFile="examplemod.png" #optional
 # A text field displayed in the mod UI
-credits="Thanks for this example mod goes to Java" #optional
+credits="Lack of Sanity, Myself, Trial & Error, Family, and My friend(s) for listening to insanity." #optional
 # A text field displayed in the mod UI
 authors="DePhoegon" #optional
 # The description text for the mod (multi line!) (#mandatory)
 description='''
-This is a long form description of the mod. You can write whatever you want here
+This is a decoration & resource reclaimation mod.
 
-Have some lorem ipsum.
+The astehtic of the pack is meant to be in-line the base game visuals.
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed mollis lacinia magna. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed sagittis luctus odio eu tempus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque volutpat ligula eget lacus auctor sagittis. In hac habitasse platea dictumst. Nunc gravida elit vitae sem vehicula efficitur. Donec mattis ipsum et arcu lobortis, eleifend sagittis sem rutrum. Cras pharetra quam eget posuere fermentum. Sed id tincidunt justo. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+The resource reclaimation aspects are designed around non-modded armors. Support/patch mods will be needed to extend to modded items/materials.
 '''
 # A dependency - use the . to indicate dependency for a specific modid. Dependencies are optional.
 [[dependencies.delbase]] #optional

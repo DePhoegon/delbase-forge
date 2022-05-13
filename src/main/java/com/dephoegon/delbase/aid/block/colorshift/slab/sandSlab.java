@@ -12,27 +12,27 @@ import net.minecraft.world.level.block.state.properties.SlabType;
 import net.minecraft.world.level.material.FluidState;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.jetbrains.annotations.NotNull;
 
 public class sandSlab extends slabBlock {
-    private static final Logger log = LogManager.getLogger();
     public sandSlab(Properties properties, String normToolTip, String shiftToolTip, String ctrlToolTip) {
         super(properties, normToolTip, shiftToolTip, ctrlToolTip, false);
     }
     @Override
-    public boolean canSustainPlant(BlockState state, BlockGetter world, BlockPos pos, Direction facing, net.minecraftforge.common.IPlantable plantable) {
+    public boolean canSustainPlant(BlockState state, @NotNull BlockGetter world, BlockPos pos, @NotNull Direction facing, net.minecraftforge.common.IPlantable plantable) {
         BlockState plant = plantable.getPlant(world, pos.relative(facing));
-        SlabType stype = state.getValue(TYPE);
-        boolean wlogged = state.getValue(SlabBlock.WATERLOGGED);
+        SlabType s_type = state.getValue(TYPE);
+        boolean w_logged = state.getValue(SlabBlock.WATERLOGGED);
         net.minecraftforge.common.PlantType type = plantable.getPlantType(world, pos.relative(facing));
-        if (stype != SlabType.BOTTOM) {
+        if (s_type != SlabType.BOTTOM) {
             if (plant.getBlock() == Blocks.CACTUS) {
                 return true;
             }
             if (plant.getBlock() == Blocks.SUGAR_CANE) {
                 for (Direction direction : Direction.Plane.HORIZONTAL) {
-                    BlockState blockstate1 = world.getBlockState(pos.relative(direction));
-                    FluidState fluidstate = world.getFluidState(pos.relative(direction));
-                    if (wlogged || fluidstate.is(FluidTags.WATER) || blockstate1.is(Blocks.FROSTED_ICE)) {
+                    BlockState blockState = world.getBlockState(pos.relative(direction));
+                    FluidState fluidState = world.getFluidState(pos.relative(direction));
+                    if (w_logged || fluidState.is(FluidTags.WATER) || blockState.is(Blocks.FROSTED_ICE)) {
                         return true;
                     }
                 }

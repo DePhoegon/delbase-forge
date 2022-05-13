@@ -36,7 +36,7 @@ public class wallMisc {
             () -> new wallBlock(BlockBehaviour.Properties.copy(DRIED_KELP_BLOCK).sound(SoundType.GRASS),
                     "","","",true),4001);
     public static final RegistryObject<WallBlock> GLOWSTONE_WALL = register("glowstone_wall",
-            () -> new wallBlock(BlockBehaviour.Properties.copy(GLOWSTONE).sound(SoundType.GLASS).lightLevel((blockState)->{return 15;}),
+            () -> new wallBlock(BlockBehaviour.Properties.copy(GLOWSTONE).sound(SoundType.GLASS).lightLevel((blockState)-> 15),
                     "","","",false),0);
     public static final RegistryObject<WallBlock> BASALT_WALL = register("basalt_wall",
             () -> new wallBlock(BlockBehaviour.Properties.copy(BASALT).sound(SoundType.STONE),

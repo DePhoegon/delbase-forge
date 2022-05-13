@@ -21,9 +21,9 @@ import static com.dephoegon.delbase.aid.event.typeSelector.*;
 import static com.dephoegon.delbase.aid.util.blockArrayList.*;
 
 public class blockDye extends DyeItem {
-    private String tip0;
-    private String tip1;
-    private String tip2;
+    private final String tip0;
+    private final String tip1;
+    private final String tip2;
 
     public blockDye(DyeColor dyeColor, Properties properties, String normToolTip, String shiftToolTip, String ctrlToolTip) {
         super(dyeColor, properties);
@@ -33,7 +33,7 @@ public class blockDye extends DyeItem {
     }
 
     @Override
-    public void appendHoverText(ItemStack stack, @Nullable Level level, List<Component> toolTip, TooltipFlag flag) {
+    public void appendHoverText(@NotNull ItemStack stack, @Nullable Level level, @NotNull List<Component> toolTip, @NotNull TooltipFlag flag) {
         super.appendHoverText(stack, level, toolTip, flag);
         if(!kb.HShift() && !kb.HCtrl() && tip0 != null) toolTip.add(new TextComponent(tip0)); //if neither pressed, show tip0 (if not empty)
         if(kb.HCtrl() && tip2 != null) toolTip.add(new TextComponent(tip2)); //if ctrl, show tip2 (if not empty), do first
@@ -51,7 +51,6 @@ public class blockDye extends DyeItem {
         assert player != null;
         Item dye_hand = player.getItemInHand(context.getHand()).getItem();
         Block block = world.getBlockState(blockpos).getBlock();
-        String dye = "null";
 
         if (block instanceof axisBlock || getAxis_list().contains(defaultBlockState)) { return axis_select(world, blockpos, defaultBlockState, block, player, dye_hand); }
         if (block instanceof slabBlock  || getSlab_list().contains(defaultBlockState)) { return slab_select(world, blockpos, defaultBlockState, block, player, dye_hand); }

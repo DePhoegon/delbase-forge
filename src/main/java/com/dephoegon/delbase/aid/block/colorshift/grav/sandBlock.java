@@ -8,15 +8,14 @@ import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.material.FluidState;
-import org.jetbrains.annotations.Contract;
 import org.jetbrains.annotations.NotNull;
 
 public class sandBlock extends gravBlock {
-    public sandBlock(int dustColorIn, Properties properties, String normToolTip, String shiftToolTip, String ctrlToolTip, @NotNull boolean falls) {
+    public sandBlock(int dustColorIn, Properties properties, String normToolTip, String shiftToolTip, String ctrlToolTip, boolean falls) {
         super(dustColorIn, properties, normToolTip, shiftToolTip, ctrlToolTip, falls);
     }
     @Override
-    public boolean canSustainPlant(BlockState state, BlockGetter world, BlockPos pos, Direction facing, net.minecraftforge.common.IPlantable plantable) {
+    public boolean canSustainPlant(@NotNull BlockState state, @NotNull BlockGetter world, BlockPos pos, @NotNull Direction facing, net.minecraftforge.common.IPlantable plantable) {
         BlockState plant = plantable.getPlant(world, pos.relative(facing));
         net.minecraftforge.common.PlantType type = plantable.getPlantType(world, pos.relative(facing));
         if (plant.getBlock() == Blocks.CACTUS)
