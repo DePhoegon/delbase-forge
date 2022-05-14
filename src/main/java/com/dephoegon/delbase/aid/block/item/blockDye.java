@@ -5,6 +5,7 @@ import com.dephoegon.delbase.aid.util.kb;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.TextComponent;
+import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.*;
@@ -27,18 +28,18 @@ public class blockDye extends DyeItem {
 
     public blockDye(DyeColor dyeColor, Properties properties, String normToolTip, String shiftToolTip, String ctrlToolTip) {
         super(dyeColor, properties);
-        if(normToolTip.equals("")) { tip0 = null; } else { tip0 = "\u00A77\u00A7o"+normToolTip; }
-        if(shiftToolTip.equals("")) { tip1 = null; } else { tip1 = "\u00A77\u00A7o"+shiftToolTip; }
-        if(ctrlToolTip.equals("")) { tip2 = null; } else { tip2 = "\u00A77\u00A7o"+ctrlToolTip; }
+        if(normToolTip.equals("")) { tip0 = null; } else { tip0 = normToolTip; }
+        if(shiftToolTip.equals("")) { tip1 = null; } else { tip1 = shiftToolTip; }
+        if(ctrlToolTip.equals("")) { tip2 = null; } else { tip2 = ctrlToolTip; }
     }
 
     @Override
     public void appendHoverText(@NotNull ItemStack stack, @Nullable Level level, @NotNull List<Component> toolTip, @NotNull TooltipFlag flag) {
         super.appendHoverText(stack, level, toolTip, flag);
-        if(!kb.HShift() && !kb.HCtrl() && tip0 != null) toolTip.add(new TextComponent(tip0)); //if neither pressed, show tip0 (if not empty)
-        if(kb.HCtrl() && tip2 != null) toolTip.add(new TextComponent(tip2)); //if ctrl, show tip2 (if not empty), do first
+        if(!kb.HShift() && !kb.HCtrl() && tip0 != null) toolTip.add(new TranslatableComponent(tip0)); //if neither pressed, show tip0 (if not empty)
+        if(kb.HCtrl() && tip2 != null) toolTip.add(new TranslatableComponent(tip2)); //if ctrl, show tip2 (if not empty), do first
         if(kb.HShift() && tip1 != null) //noinspection GrazieInspection
-            toolTip.add(new TextComponent(tip1)); //if shift, show tip1 (if not empty)
+            toolTip.add(new TranslatableComponent(tip1)); //if shift, show tip1 (if not empty)
     }
 
 

@@ -722,12 +722,40 @@
   "block.delbase.dripstone_wall": "Dripstone Wall",
   "block.delbase.purpur_block_wall": "PurPur Block Wall",
 
+  "block.delbase.acacia_wood_fence": "Acacia Wood Fence",
+  "block.delbase.acacia_log_fence": "Acacia Log Fence",
+  "block.delbase.acacia_wood_fence_gate": "Acacia Wood Fence Gate",
+  "block.delbase.acacia_log_fence_gate": "Acacia Log Fence Gate",
+  "block.delbase.stripped_acacia_wood_fence": "Stripped Acacia Wood Fence",
+  "block.delbase.stripped_acacia_log_fence": "Stripped Acacia Log Fence",
+  "block.delbase.stripped_acacia_wood_fence_gate": "Stripped Acacia Wood Fence Gate",
+  "block.delbase.stripped_acacia_log_fence_gate": "Stripped Acacia Log Fence Gate",
+  "block.delbase.birch_wood_fence": "Birch Wood Fence",
+  "block.delbase.birch_log_fence": "Birch Log Fence",
+  "block.delbase.birch_wood_fence_gate": "Birch Wood Fence Gate",
+  "block.delbase.birch_log_fence_gate": "Birch Log Fence Gate",
+  "block.delbase.stripped_birch_wood_fence": "Stripped Birch Wood Fence",
+  "block.delbase.stripped_birch_log_fence": "Stripped Birch Log Fence",
+  "block.delbase.stripped_birch_wood_fence_gate": "Stripped Birch Wood Fence Gate",
+  "block.delbase.stripped_birch_log_fence_gate": "Stripped Birch Log Fence Gate",
+
   "block.delbase.ash_slab": "Ash Slab",
   "block.delbase.ash_stair": "Ash Stair",
   "block.delbase.ash_log": "Ash Log",
   "block.delbase.ash_wall": "Ash Wall",
   "block.delbase.ash_block": "Ash Block",
+  "block.delbase.ash_fence": "Ash Fence",
+  "block.delbase.ash_fence_gate": "Ash Fence Gate",
 
   "itemGroup.dephoegon_blocks": "DePhoegons' Blocks",
-  "itemGroup.dephoegon_items": "DePhoegons' Items"
+  "itemGroup.dephoegon_items": "DePhoegons' Items",
+
+  "tooltip.delbase.info.more": "§7§oHold Shift for More Details & Control for Flavor Text",
+  "tooltip.delbase.info.control.more": "§7§oHold Control for Flavor Text",
+  "tooltip.delbase.info.shift.more": "§7§oHold Shift for More Details",
+  "tooltip.delbase.color.shifter": "§7§oUse on Colorful Blocks to change it's color",
+  "tooltip.delbase.sand.hold.flavor": "§7§oForever Attracted towards the Infused Energy.",
+  "tooltip.delbase.sand.hold.info": "§7§oWill not fall if under an Energetic Slabs",
+  "tooltip.delbase.sand.solid.flavor": "§7§oIs attracted to itself, to the exclusion of gravity.",
+  "tooltip.delbase.sand.solid.info": "§7§oDoes not fall"
 }

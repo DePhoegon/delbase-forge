@@ -1,6 +1,7 @@
 package com.dephoegon.delbase.aid.util;
 
 import com.dephoegon.delbase.block.axis.axiCutSandStones;
+import com.dephoegon.delbase.block.fence.woodenFences;
 import com.dephoegon.delbase.block.general.*;
 import com.dephoegon.delbase.block.gravity.gravColorSands;
 import com.dephoegon.delbase.block.miscBlock.slabMisc;
@@ -74,6 +75,7 @@ public class regList {
         wallMisc.register();
 
         //Fences
+        woodenFences.register();
 
         //Special block
         ashBlocks.register();

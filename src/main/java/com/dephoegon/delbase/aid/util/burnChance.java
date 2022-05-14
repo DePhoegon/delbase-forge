@@ -4,15 +4,9 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.level.block.RotatedPillarBlock;
-import net.minecraft.world.level.block.SlabBlock;
-import net.minecraft.world.level.block.StairBlock;
-import net.minecraft.world.level.block.WallBlock;
+import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.level.block.state.properties.Half;
-import net.minecraft.world.level.block.state.properties.SlabType;
-import net.minecraft.world.level.block.state.properties.StairsShape;
-import net.minecraft.world.level.block.state.properties.WallSide;
+import net.minecraft.world.level.block.state.properties.*;
 import org.jetbrains.annotations.NotNull;
 
 import static net.minecraft.world.level.block.StairBlock.SHAPE;
@@ -64,13 +58,37 @@ public class burnChance {
             if (threshHold(burnCap, burnThreshHold)) {
                 Direction.Axis axis = burningBlock.getValue(AXIS);
                 if(ashReplaceRNG()) {
-                    
                     ((Level) world).setBlockAndUpdate(pos, ashBlock.setValue(AXIS, axis));
                 } // chance to replace block with supplied ashBlock.
             }
         }
-        genBlock = !(burningBlock.getBlock() instanceof WallBlock) && !(burningBlock.getBlock() instanceof StairBlock) && !(burningBlock.getBlock() instanceof SlabBlock) && !(burningBlock.getBlock() instanceof RotatedPillarBlock) &&
-                !(ashBlock.getBlock() instanceof WallBlock) && !(ashBlock.getBlock() instanceof StairBlock) && !(ashBlock.getBlock() instanceof SlabBlock) && !(ashBlock.getBlock() instanceof RotatedPillarBlock);
+        if (burningBlock.getBlock() instanceof FenceBlock && ashBlock.getBlock() instanceof FenceBlock) {
+            if (threshHold(burnCap, burnThreshHold)) {
+                Boolean east = burningBlock.getValue(CrossCollisionBlock.EAST);
+                Boolean west = burningBlock.getValue(CrossCollisionBlock.WEST);
+                Boolean south = burningBlock.getValue(CrossCollisionBlock.SOUTH);
+                Boolean north = burningBlock.getValue(CrossCollisionBlock.NORTH);
+                if (ashReplaceRNG()){
+                    ((Level) world).setBlockAndUpdate(pos, ashBlock.setValue(CrossCollisionBlock.EAST, east).setValue(CrossCollisionBlock.WEST, west).setValue(CrossCollisionBlock.NORTH, north).setValue(CrossCollisionBlock.SOUTH, south));
+                }
+            }
+        }
+        if (burningBlock.getBlock() instanceof FenceGateBlock && ashBlock.getBlock() instanceof FenceGateBlock) {
+            if (threshHold(burnCap, burnThreshHold)) {
+                Boolean open = burningBlock.getValue(OPEN);
+                Boolean powered = burningBlock.getValue(POWERED);
+                Boolean inWall = burningBlock.getValue(IN_WALL);
+                Direction facing = burningBlock.getValue(HorizontalDirectionalBlock.FACING);
+                if (ashReplaceRNG()) {
+                    ((Level) world).setBlockAndUpdate(pos, ashBlock.setValue(OPEN, open).setValue(POWERED, powered).setValue(IN_WALL, inWall).setValue(HorizontalDirectionalBlock.FACING, facing));
+                }
+            }
+        }
+        genBlock = !(burningBlock.getBlock() instanceof WallBlock) && !(burningBlock.getBlock() instanceof StairBlock) &&
+                !(burningBlock.getBlock() instanceof SlabBlock) && !(burningBlock.getBlock() instanceof RotatedPillarBlock) &&
+                !(ashBlock.getBlock() instanceof WallBlock) && !(ashBlock.getBlock() instanceof StairBlock) &&
+                !(ashBlock.getBlock() instanceof SlabBlock) && !(ashBlock.getBlock() instanceof RotatedPillarBlock &&
+                !(burningBlock.getBlock() instanceof FenceBlock) && !(burningBlock.getBlock() instanceof FenceGateBlock));
         if (genBlock) {
             if (ashReplaceRNG()) {
                 BlockState defaultBlock = ashBlock.getBlock().defaultBlockState();

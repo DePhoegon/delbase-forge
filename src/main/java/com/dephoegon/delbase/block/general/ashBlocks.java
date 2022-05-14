@@ -39,7 +39,12 @@ public class ashBlocks {
     public static final RegistryObject<Block> ASH_BLOCK = register("ash_block",
             ()-> new genBlock(BlockBehaviour.Properties.copy(OAK_PLANKS).sound(SoundType.WOOD),
                     "","","", false),16000);
-
+    public static final RegistryObject<FenceBlock> ASH_FENCE = register("ash_fence",
+            () -> new fenceBlock(BlockBehaviour.Properties.copy(OAK_FENCE).sound(SoundType.WOOD),
+                    "","","", false), 5000);
+    public static final RegistryObject<FenceGateBlock> ASH_FENCE_GATE = register("ash_fence_gate",
+            () -> new fenceGateBlock(BlockBehaviour.Properties.copy(OAK_FENCE_GATE).sound(SoundType.WOOD),
+                    "","","", false), 5000);
     public static void register() {
         IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
         BLOCKS.register(eventBus);

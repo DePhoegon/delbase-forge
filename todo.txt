@@ -1,11 +1,11 @@
-Finish pre-planed blocks
-{templist}
-
-swap my sand for the colored concrete powders
-alter recipe for sands
--1 dye 4 sand = 4 colored sand
--1color sand + 1 gravel = 2 color concrete powder
-
-=========
-
-_from_solid_sand.json
+Fences & Fence Gates
+[Blockstate/Block Models/item model/textures]
+Wood Variants {Missing ones are [-/-/-/-]
+Acacia Wood [x/-/-/-]
+Acacia Log [x/-/-/-]
+Stripped Acacia Wood [x/-/-/-]
+Stripped Acacia Log [x/-/-/-]
+Birch Wood [x/-/-/-]
+Birch Log [x/-/-/-]
+Stripped Birch Wood [x/-/-/-]
+Stripped Birch Log [x/-/-/-]

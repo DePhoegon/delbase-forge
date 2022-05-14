@@ -1,12 +1,35 @@
-public static final RegistryObject<StairBlock> OVERRIDE_SPRUCE_STAIRS = register("spruce_stairs",
-            ()-> new stairBlock(BlockBehaviour.Properties.copy(SPRUCE_STAIRS).sound(SoundType.WOOD),"","","", true));
-    public static final RegistryObject<StairBlock> OVERRIDE_OAK_STAIRS = register("oak_stairs",
-            ()-> new stairBlock(BlockBehaviour.Properties.copy(OAK_STAIRS).sound(SoundType.WOOD),"","","", true));
-    public static final RegistryObject<StairBlock> OVERRIDE_DARK_OAK_STAIRS = register("dark_oak_stairs",
-            ()-> new stairBlock(BlockBehaviour.Properties.copy(DARK_OAK_STAIRS).sound(SoundType.WOOD),"","","", true));
-    public static final RegistryObject<StairBlock> OVERRIDE_ACACIA_STAIRS = register("acacia_stairs",
-            ()-> new stairBlock(BlockBehaviour.Properties.copy(ACACIA_STAIRS).sound(SoundType.WOOD),"","","", true));
-    public static final RegistryObject<StairBlock> OVERRIDE_JUNGLE_STAIRS = register("jungle_stairs",
-            ()-> new stairBlock(BlockBehaviour.Properties.copy(JUNGLE_STAIRS).sound(SoundType.WOOD),"","","", true));
-    public static final RegistryObject<StairBlock> OVERRIDE_BIRCH_STAIRS = register("birch_stairs",
-            ()-> new stairBlock(BlockBehaviour.Properties.copy(BIRCH_STAIRS).sound(SoundType.WOOD),"","","", true));
+public static final RegistryObject<FenceBlock> BIRCH_WOOD_FENCE = register("birch_wood_fence",
+            () -> new fenceBlock(BlockBehaviour.Properties.copy(OAK_FENCE).sound(SoundType.WOOD),
+                    "","","", true), 5000);
+    public static final RegistryObject<FenceGateBlock> BIRCH_WOOD_FENCE_GATE = register("birch_wood_fence_gate",
+            () -> new fenceGateBlock(BlockBehaviour.Properties.copy(OAK_FENCE_GATE).sound(SoundType.WOOD),
+                    "","","", true), 5000);
+    public static final RegistryObject<FenceBlock> BIRCH_LOG_FENCE = register("birch_log_fence",
+            () -> new fenceBlock(BlockBehaviour.Properties.copy(OAK_FENCE).sound(SoundType.WOOD),
+                    "","","", true), 5000);
+    public static final RegistryObject<FenceGateBlock> BIRCH_LOG_FENCE_GATE = register("birch_log_fence_gate",
+            () -> new fenceGateBlock(BlockBehaviour.Properties.copy(OAK_FENCE_GATE).sound(SoundType.WOOD),
+                    "","","", true), 5000);
+    public static final RegistryObject<FenceBlock> STRIPPED_BIRCH_WOOD_FENCE = register("stripped_birch_wood_fence",
+            () -> new fenceBlock(BlockBehaviour.Properties.copy(OAK_FENCE).sound(SoundType.WOOD),
+                    "","","", true), 5000);
+    public static final RegistryObject<FenceGateBlock> STRIPPED_BIRCH_WOOD_FENCE_GATE = register("stripped_birch_wood_fence_gate",
+            () -> new fenceGateBlock(BlockBehaviour.Properties.copy(OAK_FENCE_GATE).sound(SoundType.WOOD),
+                    "","","", true), 5000);
+    public static final RegistryObject<FenceBlock> STRIPPED_BIRCH_LOG_FENCE = register("stripped_birch_log_fence",
+            () -> new fenceBlock(BlockBehaviour.Properties.copy(OAK_FENCE).sound(SoundType.WOOD),
+                    "","","", true), 5000);
+    public static final RegistryObject<FenceGateBlock> STRIPPED_BIRCH_LOG_FENCE_GATE = register("stripped_birch_log_fence_gate",
+            () -> new fenceGateBlock(BlockBehaviour.Properties.copy(OAK_FENCE_GATE).sound(SoundType.WOOD),
+                    "","","", true), 5000);
+
+=========
+
+"block.delbase.birch_wood_fence": "Birch Wood Fence",
+  "block.delbase.birch_log_fence": "Birch Log Fence",
+  "block.delbase.birch_wood_fence_gate": "Birch Wood Fence Gate",
+  "block.delbase.birch_log_fence_gate": "Birch Log Fence Gate",
+  "block.delbase.stripped_birch_wood_fence": "Stripped Birch Wood Fence",
+  "block.delbase.stripped_birch_log_fence": "Stripped Birch Log Fence",
+  "block.delbase.stripped_birch_wood_fence_gate": "Stripped Birch Wood Fence Gate",
+  "block.delbase.stripped_birch_log_fence_gate": "Stripped Birch Log Fence Gate"

@@ -1,15 +1,13 @@
 package com.dephoegon.delbase.aid.block.stock;
-
 import com.dephoegon.delbase.aid.util.kb;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.network.chat.Component;
-import net.minecraft.network.chat.TextComponent;
 import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.level.BlockGetter;
-import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.FenceGateBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
@@ -17,21 +15,20 @@ import org.jetbrains.annotations.Nullable;
 import java.util.List;
 
 import static com.dephoegon.delbase.aid.util.burnChance.rngBurn;
-import static com.dephoegon.delbase.block.general.ashBlocks.ASH_BLOCK;
+import static com.dephoegon.delbase.block.general.ashBlocks.ASH_FENCE_GATE;
 
-public class genBlock extends Block {
+public class fenceGateBlock extends FenceGateBlock {
     private final String tip0;
     private final String tip1;
     private final String tip2;
     private final boolean flame;
-    public genBlock(Properties properties, String normToolTip, String shiftToolTip, String ctrlToolTip, boolean flames) {
+    public fenceGateBlock(Properties properties, String normToolTip, String shiftToolTip, String ctrlToolTip, boolean flames) {
         super(properties);
         if(normToolTip.equals("")) { tip0 = null; } else { tip0 = normToolTip; }
         if(shiftToolTip.equals("")) { tip1 = null; } else { tip1 = shiftToolTip; }
         if(ctrlToolTip.equals("")) { tip2 = null; } else { tip2 = ctrlToolTip; }
         flame = flames;
     }
-
     @Override
     public void appendHoverText(@NotNull ItemStack stack, @Nullable BlockGetter worldIn, @NotNull List<Component> toolTip, @NotNull TooltipFlag flag) {
         super.appendHoverText(stack, worldIn, toolTip, flag);
@@ -44,8 +41,7 @@ public class genBlock extends Block {
     public boolean isFlammable(BlockState state, BlockGetter world, BlockPos pos, Direction face)
     {
         if (flame) {
-            rngBurn(world, state, ASH_BLOCK.get().defaultBlockState(), pos, 40, 60);
-            return true;
+            rngBurn(world, state, ASH_FENCE_GATE.get().defaultBlockState(), pos, 40, 60);
         }
         return false;
     }
