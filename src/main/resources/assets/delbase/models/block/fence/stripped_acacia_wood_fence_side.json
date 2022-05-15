@@ -1,6 +1,6 @@
 {
   "parent": "delbase:block/template/fence_side",
   "textures": {
-    "texture": "delbase:block/ash_log_top"
+    "texture": "minecraft:block/stripped_acacia_log"
   }
 }

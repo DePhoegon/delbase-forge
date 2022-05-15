@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "delbase:acacia_wood_fence_gate",
+    "delbase:acacia_log_fence_gate",
+    "delbase:birch_wood_fence_gate",
+    "delbase:birch_log_fence_gate"
+  ]
+}

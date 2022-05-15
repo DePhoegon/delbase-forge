@@ -1,11 +1,13 @@
 Fences & Fence Gates
 [Blockstate/Block Models/item model/textures]
 Wood Variants {Missing ones are [-/-/-/-]
-Acacia Wood [x/-/-/-]
-Acacia Log [x/-/-/-]
-Stripped Acacia Wood [x/-/-/-]
-Stripped Acacia Log [x/-/-/-]
+Acacia Wood [x/x/x/x]
+Acacia Log [x/x/x/x]
+Stripped Acacia Wood [x/x/x/x]
+Stripped Acacia Log [x/x/x/x]
 Birch Wood [x/-/-/-]
 Birch Log [x/-/-/-]
 Stripped Birch Wood [x/-/-/-]
 Stripped Birch Log [x/-/-/-]
+
+

@@ -1,6 +1,8 @@
 {
   "replace": false,
   "values": [
-    "delbase:ash_fence"
+    "delbase:ash_fence",
+    "#delbase:fences/wooden_fences",
+    "#delbase:fences/stripped_wooden_fences"
   ]
 }
