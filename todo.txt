@@ -5,9 +5,9 @@ Acacia Wood [x/x/x/x]
 Acacia Log [x/x/x/x]
 Stripped Acacia Wood [x/x/x/x]
 Stripped Acacia Log [x/x/x/x]
-Birch Wood [x/-/-/-]
-Birch Log [x/-/-/-]
-Stripped Birch Wood [x/-/-/-]
-Stripped Birch Log [x/-/-/-]
+Birch Wood [x/x/x/x]
+Birch Log [x/x/x/x]
+Stripped Birch Wood [x/x/x/x]
+Stripped Birch Log [x/x/x/x]
 
 
