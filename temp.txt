@@ -1,35 +1,35 @@
-public static final RegistryObject<FenceBlock> BIRCH_WOOD_FENCE = register("birch_wood_fence",
-            () -> new fenceBlock(BlockBehaviour.Properties.copy(OAK_FENCE).sound(SoundType.WOOD),
+public static final RegistryObject<FenceBlock> SPRUCE_WOOD_FENCE = register("spruce_wood_fence",
+            () -> new fenceBlock(BlockBehaviour.Properties.copy(SPRUCE_FENCE).sound(SoundType.WOOD),
                     "","","", true), 5000);
-    public static final RegistryObject<FenceGateBlock> BIRCH_WOOD_FENCE_GATE = register("birch_wood_fence_gate",
-            () -> new fenceGateBlock(BlockBehaviour.Properties.copy(OAK_FENCE_GATE).sound(SoundType.WOOD),
+    public static final RegistryObject<FenceGateBlock> SPRUCE_WOOD_FENCE_GATE = register("spruce_wood_fence_gate",
+            () -> new fenceGateBlock(BlockBehaviour.Properties.copy(SPRUCE_FENCE_GATE).sound(SoundType.WOOD),
                     "","","", true), 5000);
-    public static final RegistryObject<FenceBlock> BIRCH_LOG_FENCE = register("birch_log_fence",
-            () -> new fenceBlock(BlockBehaviour.Properties.copy(OAK_FENCE).sound(SoundType.WOOD),
+    public static final RegistryObject<FenceBlock> SPRUCE_LOG_FENCE = register("spruce_log_fence",
+            () -> new fenceBlock(BlockBehaviour.Properties.copy(SPRUCE_FENCE).sound(SoundType.WOOD),
                     "","","", true), 5000);
-    public static final RegistryObject<FenceGateBlock> BIRCH_LOG_FENCE_GATE = register("birch_log_fence_gate",
-            () -> new fenceGateBlock(BlockBehaviour.Properties.copy(OAK_FENCE_GATE).sound(SoundType.WOOD),
+    public static final RegistryObject<FenceGateBlock> SPRUCE_LOG_FENCE_GATE = register("spruce_log_fence_gate",
+            () -> new fenceGateBlock(BlockBehaviour.Properties.copy(SPRUCE_FENCE_GATE).sound(SoundType.WOOD),
                     "","","", true), 5000);
-    public static final RegistryObject<FenceBlock> STRIPPED_BIRCH_WOOD_FENCE = register("stripped_birch_wood_fence",
-            () -> new fenceBlock(BlockBehaviour.Properties.copy(OAK_FENCE).sound(SoundType.WOOD),
+    public static final RegistryObject<FenceBlock> STRIPPED_SPRUCE_WOOD_FENCE = register("stripped_spruce_wood_fence",
+            () -> new fenceBlock(BlockBehaviour.Properties.copy(SPRUCE_FENCE).sound(SoundType.WOOD),
                     "","","", true), 5000);
-    public static final RegistryObject<FenceGateBlock> STRIPPED_BIRCH_WOOD_FENCE_GATE = register("stripped_birch_wood_fence_gate",
-            () -> new fenceGateBlock(BlockBehaviour.Properties.copy(OAK_FENCE_GATE).sound(SoundType.WOOD),
+    public static final RegistryObject<FenceGateBlock> STRIPPED_SPRUCE_WOOD_FENCE_GATE = register("stripped_spruce_wood_fence_gate",
+            () -> new fenceGateBlock(BlockBehaviour.Properties.copy(SPRUCE_FENCE_GATE).sound(SoundType.WOOD),
                     "","","", true), 5000);
-    public static final RegistryObject<FenceBlock> STRIPPED_BIRCH_LOG_FENCE = register("stripped_birch_log_fence",
-            () -> new fenceBlock(BlockBehaviour.Properties.copy(OAK_FENCE).sound(SoundType.WOOD),
+    public static final RegistryObject<FenceBlock> STRIPPED_SPRUCE_LOG_FENCE = register("stripped_spruce_log_fence",
+            () -> new fenceBlock(BlockBehaviour.Properties.copy(SPRUCE_FENCE).sound(SoundType.WOOD),
                     "","","", true), 5000);
-    public static final RegistryObject<FenceGateBlock> STRIPPED_BIRCH_LOG_FENCE_GATE = register("stripped_birch_log_fence_gate",
-            () -> new fenceGateBlock(BlockBehaviour.Properties.copy(OAK_FENCE_GATE).sound(SoundType.WOOD),
+    public static final RegistryObject<FenceGateBlock> STRIPPED_SPRUCE_LOG_FENCE_GATE = register("stripped_spruce_log_fence_gate",
+            () -> new fenceGateBlock(BlockBehaviour.Properties.copy(SPRUCE_FENCE_GATE).sound(SoundType.WOOD),
                     "","","", true), 5000);
 
 =========
 
-"block.delbase.birch_wood_fence": "Birch Wood Fence",
-  "block.delbase.birch_log_fence": "Birch Log Fence",
-  "block.delbase.birch_wood_fence_gate": "Birch Wood Fence Gate",
-  "block.delbase.birch_log_fence_gate": "Birch Log Fence Gate",
-  "block.delbase.stripped_birch_wood_fence": "Stripped Birch Wood Fence",
-  "block.delbase.stripped_birch_log_fence": "Stripped Birch Log Fence",
-  "block.delbase.stripped_birch_wood_fence_gate": "Stripped Birch Wood Fence Gate",
-  "block.delbase.stripped_birch_log_fence_gate": "Stripped Birch Log Fence Gate"
+"block.delbase.spruce_wood_fence": "Spruce Wood Fence",
+  "block.delbase.spruce_log_fence": "Spruce Log Fence",
+  "block.delbase.spruce_wood_fence_gate": "Spruce Wood Fence Gate",
+  "block.delbase.spruce_log_fence_gate": "Spruce Log Fence Gate",
+  "block.delbase.stripped_spruce_wood_fence": "Stripped Spruce Wood Fence",
+  "block.delbase.stripped_spruce_log_fence": "Stripped Spruce Log Fence",
+  "block.delbase.stripped_spruce_wood_fence_gate": "Stripped Spruce Wood Fence Gate",
+  "block.delbase.stripped_spruce_log_fence_gate": "Stripped Spruce Log Fence Gate"
