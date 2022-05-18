@@ -77,28 +77,28 @@ public class woodenFences {
                     "","","", true), 5000);
     public static final RegistryObject<FenceBlock> CRIMSON_HYPHAE_FENCE = register("crimson_hyphae_fence",
             () -> new fenceBlock(BlockBehaviour.Properties.copy(OAK_FENCE).sound(SoundType.WOOD),
-                    "","","", true), 5000);
+                    "","","", false), 0);
     public static final RegistryObject<FenceGateBlock> CRIMSON_HYPHAE_FENCE_GATE = register("crimson_hyphae_fence_gate",
             () -> new fenceGateBlock(BlockBehaviour.Properties.copy(OAK_FENCE_GATE).sound(SoundType.WOOD),
-                    "","","", true), 5000);
+                    "","","", false), 0);
     public static final RegistryObject<FenceBlock> CRIMSON_STEM_FENCE = register("crimson_stem_fence",
             () -> new fenceBlock(BlockBehaviour.Properties.copy(OAK_FENCE).sound(SoundType.WOOD),
-                    "","","", true), 5000);
+                    "","","", false), 0);
     public static final RegistryObject<FenceGateBlock> CRIMSON_STEM_FENCE_GATE = register("crimson_stem_fence_gate",
             () -> new fenceGateBlock(BlockBehaviour.Properties.copy(OAK_FENCE_GATE).sound(SoundType.WOOD),
-                    "","","", true), 5000);
+                    "","","", false), 0);
     public static final RegistryObject<FenceBlock> STRIPPED_CRIMSON_HYPHAE_FENCE = register("stripped_crimson_hyphae_fence",
             () -> new fenceBlock(BlockBehaviour.Properties.copy(OAK_FENCE).sound(SoundType.WOOD),
-                    "","","", true), 5000);
+                    "","","", false), 0);
     public static final RegistryObject<FenceGateBlock> STRIPPED_CRIMSON_HYPHAE_FENCE_GATE = register("stripped_crimson_hyphae_fence_gate",
             () -> new fenceGateBlock(BlockBehaviour.Properties.copy(OAK_FENCE_GATE).sound(SoundType.WOOD),
-                    "","","", true), 5000);
+                    "","","", false), 0);
     public static final RegistryObject<FenceBlock> STRIPPED_CRIMSON_STEM_FENCE = register("stripped_crimson_stem_fence",
             () -> new fenceBlock(BlockBehaviour.Properties.copy(OAK_FENCE).sound(SoundType.WOOD),
-                    "","","", true), 5000);
+                    "","","", false), 0);
     public static final RegistryObject<FenceGateBlock> STRIPPED_CRIMSON_STEM_FENCE_GATE = register("stripped_crimson_stem_fence_gate",
             () -> new fenceGateBlock(BlockBehaviour.Properties.copy(OAK_FENCE_GATE).sound(SoundType.WOOD),
-                    "","","", true), 5000);
+                    "","","", false), 0);
     public static final RegistryObject<FenceBlock> DARK_OAK_WOOD_FENCE = register("dark_oak_wood_fence",
             () -> new fenceBlock(BlockBehaviour.Properties.copy(OAK_FENCE).sound(SoundType.WOOD),
                     "","","", true), 5000);
@@ -197,28 +197,28 @@ public class woodenFences {
                     "","","", true), 5000);
     public static final RegistryObject<FenceBlock> WARPED_HYPHAE_FENCE = register("warped_hyphae_fence",
             () -> new fenceBlock(BlockBehaviour.Properties.copy(OAK_FENCE).sound(SoundType.WOOD),
-                    "","","", true), 5000);
+                    "","","", false), 0);
     public static final RegistryObject<FenceGateBlock> WARPED_HYPHAE_FENCE_GATE = register("warped_hyphae_fence_gate",
             () -> new fenceGateBlock(BlockBehaviour.Properties.copy(OAK_FENCE_GATE).sound(SoundType.WOOD),
-                    "","","", true), 5000);
+                    "","","", false), 0);
     public static final RegistryObject<FenceBlock> WARPED_STEM_FENCE = register("warped_stem_fence",
             () -> new fenceBlock(BlockBehaviour.Properties.copy(OAK_FENCE).sound(SoundType.WOOD),
-                    "","","", true), 5000);
+                    "","","", false), 0);
     public static final RegistryObject<FenceGateBlock> WARPED_STEM_FENCE_GATE = register("warped_stem_fence_gate",
             () -> new fenceGateBlock(BlockBehaviour.Properties.copy(OAK_FENCE_GATE).sound(SoundType.WOOD),
-                    "","","", true), 5000);
+                    "","","", false), 0);
     public static final RegistryObject<FenceBlock> STRIPPED_WARPED_HYPHAE_FENCE = register("stripped_warped_hyphae_fence",
             () -> new fenceBlock(BlockBehaviour.Properties.copy(OAK_FENCE).sound(SoundType.WOOD),
-                    "","","", true), 5000);
+                    "","","", false), 0);
     public static final RegistryObject<FenceGateBlock> STRIPPED_WARPED_HYPHAE_FENCE_GATE = register("stripped_warped_hyphae_fence_gate",
             () -> new fenceGateBlock(BlockBehaviour.Properties.copy(OAK_FENCE_GATE).sound(SoundType.WOOD),
-                    "","","", true), 5000);
+                    "","","", false), 0);
     public static final RegistryObject<FenceBlock> STRIPPED_WARPED_STEM_FENCE = register("stripped_warped_stem_fence",
             () -> new fenceBlock(BlockBehaviour.Properties.copy(OAK_FENCE).sound(SoundType.WOOD),
-                    "","","", true), 5000);
+                    "","","", false), 0);
     public static final RegistryObject<FenceGateBlock> STRIPPED_WARPED_STEM_FENCE_GATE = register("stripped_warped_stem_fence_gate",
             () -> new fenceGateBlock(BlockBehaviour.Properties.copy(OAK_FENCE_GATE).sound(SoundType.WOOD),
-                    "","","", true), 5000);
+                    "","","", false), 0);
     public static void register() {
         IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
         BLOCKS.register(eventBus);
