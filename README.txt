@@ -27,6 +27,13 @@ Custom Template Jsons
 == built to turn a vertical texture on it's side, & not stretch it.
 == has single texture posts
 
+- Fence / Fence Gates
+== Custon Template JSONs [type 1]
+=== side wrapped posts
+=== top wrapped bars/doors
+== Wood / Stripped
+== Log / Stripped
+
 - Asset Block model folder structure
 
 - Tags Folder structure
@@ -83,6 +90,7 @@ Custom Template Jsons
 ==- fixed typo in json file name
 =chiseled_polished_blackstone_stair
 ==- fixed inside wall of stair to smooth blackstone
+= many typo in fence JSONs
 
 -Texture work
 =[Wall] top of wall side/tall side
@@ -118,6 +126,17 @@ Recipes
 
 TAGS
 ============
+all Wall
+all Fences
+all Stairs
+all Stones
+all wood
+ash
+"Below in Minecraft namespace"
+axe minable
+pickaxe minable
+fences
+walls
 
 
 ITEMS
@@ -133,6 +152,12 @@ Planks
 -log walls (top x-section)
 Wood/Stripped Wood
 -Wood wall (top x-section)
+Inside Texture For Stairs
+- bone block
+- logs
+- quartz versions
+- polished blackstone (for chiseled blackstone)
+
 
 
 Extra Functionality
@@ -147,12 +172,16 @@ Language File [Completion by java class registrations]
 
 Walls [By type] { Registered / Blockstate / Model files / loot table }
 =============
-Wood
-Stripped Wood
-Log
-Stripped Log
+Woods
+Logs
+quartz
+sands
+sandstone
+smooth sandstone
+chiseled sandstone
+concrete
+terracotta
 MISC
--quartz
 -blackstone
 -glowstone
 -coal_block
@@ -169,7 +198,36 @@ Stripped Wood
 Log
 Stripped Log
 MISC
--quartz
+-blackstone
+-glowstone
+-coal_block
+-kelp_block
+-raw gold/copper/iron
+-dripstone
+-endstone
+-boneblock
+chiseled sandstone
+cut sandstone
+concrete
+sands
+sandstones
+smooth sandstones
+terracotta
+quartz
+
+Stairs [By type]
+================
+chiseled sandstone
+concrete
+cut sandstone
+quartz
+sands
+sandstone
+smooth sandstone
+terracotta
+wood
+logs
+MISC
 -blackstone
 -glowstone
 -coal_block
@@ -179,19 +237,49 @@ MISC
 -endstone
 -boneblock
 
-
 Slabs [By type]
 =================
--sand
--sandstone
--chiseled_sandstone
--cut_sandstone
--smooth_sandstone
+chiseled sandstone / energy version
+concrete
+cut sandstone / energy versions
+quartz
+sands / energy versions
+sandstone / energy verions
+smooth sandstone / energy versions
+terracotta
+woods
+logs
+MISC
+-blackstone
+-glowstone
+-coal_block
+-kelp_block
+-raw gold/copper/iron
+-dripstone
+-endstone
+-boneblock
 
 Fences [By type]
 ===============
+Woods
+Logs
 
+Full Blocks [By Type]
+======================
+{axis} cut sandstone
+{general} chiseled sandstone
+{general} Ashed
+{general} sandstone
+{general} smooth sandstone
+{Gravity} colored sands
 
+Overrides [By Type] { To enable being burnt & replace by ash version }
+====================
+Vanilla Wood Blocks
+Vanilla Log Blocks
+Vanilla Planks
+Vanilla Plank slabs
+Vanilla Plank Stairs
 
 Showcases
 ============

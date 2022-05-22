@@ -1,4 +1,97 @@
-Fences & Fence Gates
-[Blockstate/Block Models/item model/textures]
+To Adjust
 
-Other block sets
+chiseled polished blackstone slab
+- bottom slab
+~ top texture change to polished blackstone
+- top slab
+~ bottom texture change to polished blackstone
+
+Override Wood Fences to burn into ash  version
+
+Setup color swap for fence sets as they get put in
+- terracotta
+- sand
+- sandstone
+- cut sandstone
+- smooth sandstone
+- chiseled sandstone
+- concrete
+---------------
+
+== New Fence / Fence Gates
+
+chiseled quartz
+- flip side & top for fence
+
+quartz pillar
+~ fence post
+-  top = _top
+-  side = side w/ lins up & down 
+~ fence side
+-  lines sideways (side texture tilted)
+~ fence gates
+- post part
+= same as fence post
+- gate sides/top
+= same as fence side
+ 
+
+chiseled sandstone
+-fence post / fence side / gate (closed)
+~ same as wall
+- fence gate (open) 
+~ same as wall (uv lock side if possible)
+
+sandstone
+- fence post
+~ same as wall
+- fence side 
+~ wrapped in side texture
+- gates
+~ Posts same as fence post
+~ 'doors'- same as walls
+
+cut sandstone
+- Same as chiseled sandstone
+
+sand / terracotta / concrete / smooth sandstone / quartz block / quartz brick / smooth quartz
+- all 1 texture (same as wood fences)
+
+basalt
+-same as walls
+~ 1 cobbled version (all 1 texture)
+~ 1 fully coverd with sided (basalt side, not smooth basalt)
+
+polished basalt / smooth basalt / glowstone / endstone / dripstone
+- same as walls
+
+boneblock
+-fence post
+~ same as wall
+-fence side
+~ same as wall (for now)
+~ consider using inside texture from stairs for posts
+-fence gate
+~ posts same as wall post
+~ 'doors' same as wall (for now)
+~ consider using inside texture from stairs for 'doors'
+
+kelp block
+- fence 
+~ same as walls
+- gates 
+~ post (same as wall post)
+~ 'doors' (same as walls)
+
+chiseled polished blackstone
+-fence / gates 
+~ same as wall versions
+= fence side, tops & bottoms of the bars are polished blackstone
+= fence side, sides of bar are the chiseled polished blackstone
+
+purpur block / raw gold / raw iron / raw copper / coal block / cracked polished blackstone bricks
+-fence /gate
+~ same as walls
+-- coal block, to be able to used in furnance 
+
+
