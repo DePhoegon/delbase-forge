@@ -1,10 +1,7 @@
-To Adjust
+Sand fences / concrete fences / terracotta fences
 
-chiseled polished blackstone slab
-- bottom slab
-~ top texture change to polished blackstone
-- top slab
-~ bottom texture change to polished blackstone
+=======================
+To Adjust
 
 Override Wood Fences to burn into ash  version
 

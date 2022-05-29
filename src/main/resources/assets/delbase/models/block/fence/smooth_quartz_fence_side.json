@@ -1,0 +1,6 @@
+{
+  "parent": "delbase:block/template/fence_side",
+  "textures": {
+    "texture": "minecraft:block/quartz_block_bottom"
+  }
+}

@@ -92,7 +92,6 @@ public class burnChance {
         if (genBlock) {
             if (ashReplaceRNG()) {
                 BlockState defaultBlock = ashBlock.getBlock().defaultBlockState();
-                
                 ((Level) world).setBlockAndUpdate(pos, defaultBlock);
             } // chance to replace block with supplied ashBlock.
         }
