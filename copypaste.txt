@@ -1,36 +1,18 @@
-public static final RegistryObject<SandBlock> OVERRIDE_SOLID_SAND = register("solid_sand",
-            () -> new solidSand(14406560, BlockBehaviour.Properties.copy(SAND).sound(SoundType.SAND), "Energy Bonded Sand","Does Not Support Plants","Will not Fall",false));
-    public static final RegistryObject<SandBlock> OVERRIDE_RED_SOLID_SAND = register("red_solid_sand",
-            () -> new solidSand(11098145, BlockBehaviour.Properties.copy(SAND).sound(SoundType.SAND),"Energy Bonded Sand","Does Not Support Plants","Will not Fall",false));
-    public static final RegistryObject<SandBlock> BLOOD_SOLID_SAND = register("blood_solid_sand",
-            () -> new solidSand(0xff0000, BlockBehaviour.Properties.copy(SAND).sound(SoundType.SAND),"Energy Bonded Sand","Does Not Support Plants","Will not Fall",false));
-    public static final RegistryObject<SandBlock> WHITE_SOLID_SAND = register("white_solid_sand",
-            () -> new solidSand(0xffffff, BlockBehaviour.Properties.copy(SAND).sound(SoundType.SAND),"Energy Bonded Sand","Does Not Support Plants","Will not Fall",false));
-    public static final RegistryObject<SandBlock> ORANGE_SOLID_SAND = register("orange_solid_sand",
-            () -> new solidSand(0xffa500, BlockBehaviour.Properties.copy(SAND).sound(SoundType.SAND),"Energy Bonded Sand","Does Not Support Plants","Will not Fall",false));
-    public static final RegistryObject<SandBlock> MAGENTA_SOLID_SAND = register("magenta_solid_sand",
-            () -> new solidSand(0xff00ff, BlockBehaviour.Properties.copy(SAND).sound(SoundType.SAND),"Energy Bonded Sand","Does Not Support Plants","Will not Fall",false));
-    public static final RegistryObject<SandBlock> LIGHT_BLUE_SOLID_SAND = register("light_blue_solid_sand",
-            () -> new solidSand(0xadd8e6, BlockBehaviour.Properties.copy(SAND).sound(SoundType.SAND),"Energy Bonded Sand","Does Not Support Plants","Will not Fall",false));
-    public static final RegistryObject<SandBlock> YELLOW_SOLID_SAND = register("yellow_solid_sand",
-            () -> new solidSand(0xffff00, BlockBehaviour.Properties.copy(SAND).sound(SoundType.SAND),"Energy Bonded Sand","Does Not Support Plants","Will not Fall",false));
-    public static final RegistryObject<SandBlock> LIME_SOLID_SAND = register("lime_solid_sand",
-            () -> new solidSand(0x00ff00, BlockBehaviour.Properties.copy(SAND).sound(SoundType.SAND),"Energy Bonded Sand","Does Not Support Plants","Will not Fall",false));
-    public static final RegistryObject<SandBlock> PINK_SOLID_SAND = register("pink_solid_sand",
-            () -> new solidSand(0xffc0cb, BlockBehaviour.Properties.copy(SAND).sound(SoundType.SAND),"Energy Bonded Sand","Does Not Support Plants","Will not Fall",false));
-    public static final RegistryObject<SandBlock> GRAY_SOLID_SAND = register("gray_solid_sand",
-            () -> new solidSand(0x808080, BlockBehaviour.Properties.copy(SAND).sound(SoundType.SAND),"Energy Bonded Sand","Does Not Support Plants","Will not Fall",false));
-    public static final RegistryObject<SandBlock> LIGHT_GRAY_SOLID_SAND = register("light_gray_solid_sand",
-            () -> new solidSand(0xd3d3d3, BlockBehaviour.Properties.copy(SAND).sound(SoundType.SAND),"Energy Bonded Sand","Does Not Support Plants","Will not Fall",false));
-    public static final RegistryObject<SandBlock> CYAN_SOLID_SAND = register("cyan_solid_sand",
-            () -> new solidSand(0x00ffff, BlockBehaviour.Properties.copy(SAND).sound(SoundType.SAND),"Energy Bonded Sand","Does Not Support Plants","Will not Fall",false));
-    public static final RegistryObject<SandBlock> PURPLE_SOLID_SAND = register("purple_solid_sand",
-            () -> new solidSand(0x800080, BlockBehaviour.Properties.copy(SAND).sound(SoundType.SAND),"Energy Bonded Sand","Does Not Support Plants","Will not Fall",false));
-    public static final RegistryObject<SandBlock> BLUE_SOLID_SAND = register("blue_solid_sand",
-            () -> new solidSand(0x0000ff, BlockBehaviour.Properties.copy(SAND).sound(SoundType.SAND),"Energy Bonded Sand","Does Not Support Plants","Will not Fall",false));
-    public static final RegistryObject<SandBlock> GREEN_SOLID_SAND = register("green_solid_sand",
-            () -> new solidSand(0x008000, BlockBehaviour.Properties.copy(SAND).sound(SoundType.SAND),"Energy Bonded Sand","Does Not Support Plants","Will not Fall",false));
-    public static final RegistryObject<SandBlock> BROWN_SOLID_SAND = register("brown_solid_sand",
-            () -> new solidSand(0x714e32, BlockBehaviour.Properties.copy(SAND).sound(SoundType.SAND),"Energy Bonded Sand","Does Not Support Plants","Will not Fall",false));
-    public static final RegistryObject<SandBlock> BLACK_SOLID_SAND = register("black_solid_sand",
-            () -> new solidSand(0x000000, BlockBehaviour.Properties.copy(SAND).sound(SoundType.SAND),"Energy Bonded Sand","Does Not Support Plants","Will not Fall",false));
+node c:\node\fences white chiseled_sand_stone 1 1 2 1 white_sand_stone_top white_chiseled_sand_stone
+node c:\node\fences orange chiseled_sand_stone 1 1 2 1 orange_sand_stone_top orange_chiseled_sand_stone
+node c:\node\fences magenta chiseled_sand_stone 1 1 2 1 magenta_sand_stone_top magenta_chiseled_sand_stone
+node c:\node\fences light_blue chiseled_sand_stone 1 1 2 1 light_blue_sand_stone_top light_blue_chiseled_sand_stone
+node c:\node\fences yellow chiseled_sand_stone 1 1 2 1 yellow_sand_stone_top yellow_sand_stone_top
+node c:\node\fences lime chiseled_sand_stone 1 1 2 1 lime_sand_stone_top lime_chiseled_sand_stone
+node c:\node\fences pink chiseled_sand_stone 1 1 2 1 pink_sand_stone_top pink_chiseled_sand_stone
+node c:\node\fences gray chiseled_sand_stone 1 1 2 1 gray_sand_stone_top gray_chiseled_sand_stone
+node c:\node\fences light_gray chiseled_sand_stone 1 1 2 1 light_gray_sand_stone_top light_gray_chiseled_sand_stone
+node c:\node\fences cyan chiseled_sand_stone 1 1 2 1 cyan_sand_stone_top cyan_chiseled_sand_stone
+node c:\node\fences purple chiseled_sand_stone 1 1 2 1 purple_sand_stone_top purple_chiseled_sand_stone
+node c:\node\fences blue chiseled_sand_stone 1 1 2 1 blue_sand_stone_top blue_chiseled_sand_stone
+node c:\node\fences brown chiseled_sand_stone 1 1 2 1 brown_sand_stone_top brown_chiseled_sand_stone
+node c:\node\fences green chiseled_sand_stone 1 1 2 1 green_sand_stone_top green_chiseled_sand_stone
+node c:\node\fences red chiseled_sand_stone 1 1 2 0 red_sandstone_top chiseled_red_sandstone
+node c:\node\fences black chiseled_sand_stone 1 1 2 1 black_sand_stone_top black_chiseled_sand_stone
+node c:\node\fences chiseled_sand_stone 0 1 1 2 0 sandstone_top chiseled_sandstone
+node c:\node\fences blood chiseled_sand_stone 1 1 2 1 blood_sand_stone_top blood_chiseled_sand_stone

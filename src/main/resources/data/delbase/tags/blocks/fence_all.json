@@ -3,6 +3,10 @@
   "values": [
     "delbase:ash_fence",
     "#delbase:fences/wooden_fences",
-    "#delbase:fences/stripped_wooden_fences"
+    "#delbase:fences/stripped_wooden_fences",
+    "#delbase:fences/sand_fences",
+    "#delbase:fences/quartz_fences",
+    "#delbase:fences/concrete_fences",
+    "#delbase:fences/terracotta_fences"
   ]
 }

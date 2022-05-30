@@ -21,18 +21,25 @@ Custom Template Jsons
 
 - Walls
 == Allows the walls to have separate textures between the side & top, (walls)
-== Wraps the post in a singular texture
+== Posts have sided & top textures
 
 - Walls [Twisted]
 == built to turn a vertical texture on it's side, & not stretch it.
 == has single texture posts
 
 - Fence / Fence Gates
-== Custom Template JSONs [type 1]
-=== side wrapped posts
-=== top wrapped bars/doors
-== Wood / Stripped
-== Log / Stripped
+== Custom Template in place
+~~ fence side, alignment of texture on bars
+~~ top & sided textures for two texture blocks
+~~ manually assigned quartz(s) to built in template for fence side
+== JSONs in place for all block variants now
+~~ adjustments to be made on a few ones.
+== use of built in templates for single textured fences/gates
+== Completed verions by type
+~~ Wood & Log
+~~ Stripped Wood & Stripped Logs
+~~ quartz
+~~
 
 - Asset Block model folder structure
 
@@ -61,6 +68,7 @@ Custom Template Jsons
 
 - Fence / Fence Gate
 = Created NodeJS JSON maker for fences, and fence gates
+== tweaked js file & own template files.
 
 -Minor Fixes
 = Modified dried_kelp texture for walls, removed band

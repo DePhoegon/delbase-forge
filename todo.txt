@@ -1,4 +1,32 @@
-Sand fences / concrete fences / terracotta fences
+Fence & Fence Gates (JSONs in place)
+------
+chiseled sandstones (color set)
+cut sandstones (color set)
+cobbled basalt
+basalt
+smooth basalt
+glowstone
+end stone
+dripstone
+cracked polished blackstone brick
+raw gold
+raw copper
+raw iron
+purpur block
+coal block
+polished basalt
+bone block
+chiseled_polished_blackstone
+dried kelp block
+----------
+Language entries
+tag files
+register
+ensure coal fence/gate burns in furnaces
+adjust dried kelp model
+inspect cut sandstones, chiseled sandstones, & other 2 textured fence/gate
+-- tune as needed
+ensure glowstone emits light
 
 =======================
 To Adjust
@@ -15,80 +43,21 @@ Setup color swap for fence sets as they get put in
 - concrete
 ---------------
 
-== New Fence / Fence Gates
+==================================================
 
-chiseled quartz
-- flip side & top for fence
+Followup steps (after fences)
+- triple check all the blocks
+- Crafting recipes
+== get JEI/NEI intergration if possible
+- turn own dyes into 'small piles' (x8) to use on blocks in world
+- use tags to do crafting reciepes  to allow use of normal dyes to turn 8 of a set into 8 of one color
+- 'consider' custom machine to do colors [ not looking favorable]
+- 'consider' custom machine to take apart armor/items to recover resources
+- 'consider' nether touches.
+- 'consider' obsidian for variants
+- 'consider' item to take the color out of blocks
+== 'consider' destroying block in exchange for some color/blocks
+== 'consider' blocks that would be useful with this.
+== 'consider' swapping out blocks for another for colors (ideas like full logs/wood blocks)
 
-quartz pillar
-~ fence post
--  top = _top
--  side = side w/ lins up & down 
-~ fence side
--  lines sideways (side texture tilted)
-~ fence gates
-- post part
-= same as fence post
-- gate sides/top
-= same as fence side
- 
-
-chiseled sandstone
--fence post / fence side / gate (closed)
-~ same as wall
-- fence gate (open) 
-~ same as wall (uv lock side if possible)
-
-sandstone
-- fence post
-~ same as wall
-- fence side 
-~ wrapped in side texture
-- gates
-~ Posts same as fence post
-~ 'doors'- same as walls
-
-cut sandstone
-- Same as chiseled sandstone
-
-sand / terracotta / concrete / smooth sandstone / quartz block / quartz brick / smooth quartz
-- all 1 texture (same as wood fences)
-
-basalt
--same as walls
-~ 1 cobbled version (all 1 texture)
-~ 1 fully coverd with sided (basalt side, not smooth basalt)
-
-polished basalt / smooth basalt / glowstone / endstone / dripstone
-- same as walls
-
-boneblock
--fence post
-~ same as wall
--fence side
-~ same as wall (for now)
-~ consider using inside texture from stairs for posts
--fence gate
-~ posts same as wall post
-~ 'doors' same as wall (for now)
-~ consider using inside texture from stairs for 'doors'
-
-kelp block
-- fence 
-~ same as walls
-- gates 
-~ post (same as wall post)
-~ 'doors' (same as walls)
-
-chiseled polished blackstone
--fence / gates 
-~ same as wall versions
-= fence side, tops & bottoms of the bars are polished blackstone
-= fence side, sides of bar are the chiseled polished blackstone
-
-purpur block / raw gold / raw iron / raw copper / coal block / cracked polished blackstone bricks
--fence /gate
-~ same as walls
--- coal block, to be able to used in furnance 
-
-
+-work on in game book discovery of mechanics

@@ -1,5 +1,5 @@
 {
-  "parent": "delbase:block/template/fence_side",
+  "parent": "minecraft:block/fence_side",
   "textures": {
     "texture": "minecraft:block/chiseled_quartz_block_top"
   }
