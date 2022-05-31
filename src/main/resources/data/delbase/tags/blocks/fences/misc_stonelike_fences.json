@@ -1,0 +1,15 @@
+{
+  "replace": false,
+  "values": [
+    "delbase:cobbled_basalt_fence",
+    "delbase:basalt_fence",
+    "delbase:smooth_basalt_fence",
+    "delbase:end_stone_fence",
+    "delbase:dripstone_fence",
+    "delbase:cracked_polished_blackstone_brick_fence",
+    "delbase:chiseled_polished_blackstone_fence",
+    "delbase:polished_basalt_fence",
+    "delbase:bone_block_fence",
+    "delbase:purpur_block_fence"
+  ]
+}

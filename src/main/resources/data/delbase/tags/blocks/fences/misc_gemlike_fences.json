@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "delbase:glowstone_fence",
+    "delbase:raw_gold_fence",
+    "delbase:raw_copper_fence",
+    "delbase:raw_iron_fence"
+  ]
+}

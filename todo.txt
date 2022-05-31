@@ -1,32 +1,4 @@
-Fence & Fence Gates (JSONs in place)
-------
-chiseled sandstones (color set)
-cut sandstones (color set)
-cobbled basalt
-basalt
-smooth basalt
-glowstone
-end stone
-dripstone
-cracked polished blackstone brick
-raw gold
-raw copper
-raw iron
-purpur block
-coal block
-polished basalt
-bone block
-chiseled_polished_blackstone
-dried kelp block
-----------
-Language entries
-tag files
-register
-ensure coal fence/gate burns in furnaces
-adjust dried kelp model
-inspect cut sandstones, chiseled sandstones, & other 2 textured fence/gate
--- tune as needed
-ensure glowstone emits light
+Manually Adjust dried kelp fence & fence Gate
 
 =======================
 To Adjust

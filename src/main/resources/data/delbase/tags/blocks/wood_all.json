@@ -14,6 +14,8 @@
     "#delbase:fences/wooden_fences",
     "#delbase:fences/stripped_wooden_fences",
     "#delbase:fences/wooden_fence_gates",
-    "#delbase:fences/stripped_wooden_fence_gates"
+    "#delbase:fences/stripped_wooden_fence_gates",
+    "#delbase:fences/misc_woodlike_fences",
+    "#delbase:fences/misc_woodlike_fence_gates"
   ]
 }

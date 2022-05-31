@@ -2,6 +2,6 @@
 "parent": "delbase:block/template/fence_gate_wall",
 "textures": {
 "texture": "delbase:block/lime_sand_stone_top",
-"postside": "delbase:block/undefined"
+"postside": "delbase:block/lime_cut_sand_stone"
 }
 }

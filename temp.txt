@@ -1,7 +1,0 @@
-"delbase:"
-node c:\node\fences
-postside
-
-
-node c:\node\fences sand_stone 0 0 1 1 0 sandstone_top
-node c:\node\fences sand_stone 0 1 1 2 0 sandstone_top sandstone_top

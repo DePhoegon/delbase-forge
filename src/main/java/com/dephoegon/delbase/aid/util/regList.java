@@ -4,13 +4,10 @@ import com.dephoegon.delbase.block.axis.axiCutSandStones;
 import com.dephoegon.delbase.block.fence.*;
 import com.dephoegon.delbase.block.general.*;
 import com.dephoegon.delbase.block.gravity.gravColorSands;
-import com.dephoegon.delbase.block.miscBlock.slabMisc;
-import com.dephoegon.delbase.block.miscBlock.stairMisc;
-import com.dephoegon.delbase.block.miscBlock.wallMisc;
+import com.dephoegon.delbase.block.miscBlock.*;
 import com.dephoegon.delbase.block.slab.*;
 import com.dephoegon.delbase.block.stair.*;
 import com.dephoegon.delbase.block.wall.*;
-import com.dephoegon.delbase.block.miscBlock.overrideHook;
 import com.dephoegon.delbase.item.shiftingDyes;
 
 public class regList {
@@ -80,6 +77,11 @@ public class regList {
         sandFences.register();
         concreteFences.register();
         terracottaFences.register();
+        smoothSandStoneFences.register();
+        sandStoneFences.register();
+        fenceMisc.register();
+        cutSandStoneFences.register();
+        chiseledSandStoneFences.register();
 
         //Special block
         ashBlocks.register();

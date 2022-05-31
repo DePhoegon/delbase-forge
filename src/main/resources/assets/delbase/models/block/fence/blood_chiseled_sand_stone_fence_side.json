@@ -2,6 +2,6 @@
 "parent": "delbase:block/template/fence_side",
 "textures": {
 "texture": "delbase:block/blood_sand_stone_top",
-"postside": "delbase:block/undefined"
+"postside": "delbase:block/blood_chiseled_sand_stone"
 }
 }

@@ -34,12 +34,12 @@ Custom Template Jsons
 ~~ manually assigned quartz(s) to built in template for fence side
 == JSONs in place for all block variants now
 ~~ adjustments to be made on a few ones.
-== use of built in templates for single textured fences/gates
-== Completed verions by type
+== use of built-in templates for single textured fences/gates
+== Completed versions by type
 ~~ Wood & Log
 ~~ Stripped Wood & Stripped Logs
 ~~ quartz
-~~
+~~ all planned fences/gates
 
 - Asset Block model folder structure
 
@@ -102,6 +102,8 @@ Custom Template Jsons
 =chiseled_polished_blackstone_stair
 ==- fixed inside wall of stair to smooth blackstone
 = many typo in fence JSONs
+= fixed long standing missing language entries & typo
+= adjusted fence side for dual textures to better align the looks of it.
 
 -Texture work
 =[Wall] top of wall side/tall side

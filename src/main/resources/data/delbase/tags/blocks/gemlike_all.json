@@ -8,6 +8,8 @@
     "#delbase:stairs/stair_misc_gemlike",
     "#delbase:walls/wall_misc_gemlike",
     "#delbase:fences/quartz_fences",
-    "#delbase:fences/quartz_fence_gates"
+    "#delbase:fences/quartz_fence_gates",
+    "#delbase:fences/misc_gemlike_fences",
+    "#delbase:fences/misc_gemlike_fence_gates"
   ]
 }

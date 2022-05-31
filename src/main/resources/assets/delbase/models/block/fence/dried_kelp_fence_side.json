@@ -2,6 +2,6 @@
 "parent": "delbase:block/template/fence_side",
 "textures": {
 "texture": "minecraft:block/dried_kelp_top",
-"postside": "minecraft:block/undefined"
+"postside": "minecraft:block/dried_kelp_side"
 }
 }
