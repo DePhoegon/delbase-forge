@@ -1,6 +1,7 @@
 package com.dephoegon.delbase.aid.util;
 
 import com.dephoegon.delbase.block.axis.axiCutSandStones;
+import com.dephoegon.delbase.block.entity.blockEntities;
 import com.dephoegon.delbase.block.fence.*;
 import com.dephoegon.delbase.block.general.*;
 import com.dephoegon.delbase.block.gravity.gravColorSands;
@@ -8,6 +9,7 @@ import com.dephoegon.delbase.block.miscBlock.*;
 import com.dephoegon.delbase.block.slab.*;
 import com.dephoegon.delbase.block.stair.*;
 import com.dephoegon.delbase.block.wall.*;
+import com.dephoegon.delbase.item.blockCutterPlans;
 import com.dephoegon.delbase.item.shiftingDyes;
 
 public class regList {
@@ -17,6 +19,7 @@ public class regList {
 
         //Items
         shiftingDyes.register();
+        blockCutterPlans.register();
 
         //Standard Blocks
         genChiseledSandStones.register();
@@ -85,9 +88,11 @@ public class regList {
 
         //Special block
         ashBlocks.register();
+        machineBlocks.register();
+        blockEntities.register();
 
         //Overrides
-        overrideHook.register();
+        //overrideHook.register();
 
         //Special
     }

@@ -8,16 +8,14 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
-
 import static com.dephoegon.delbase.delbase.DELBASE_ITEMS;
 import static com.dephoegon.delbase.delbase.Mod_ID;
 
 public class shiftingDyes {
     private static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, Mod_ID);
-
     public static final RegistryObject<Item> CLEANSE_SHIFT_DYE = ITEMS.register("cleanse_shift_dye",
             () -> new blockDye(DyeColor.WHITE, new Item.Properties().stacksTo(64).tab(DELBASE_ITEMS),
-                    "tooltip.delbase.info.shift.more","tooltip.delbase.color.shifter",""));
+                    "tooltip.delbase.info.shift.more","tooltip.delbase.color.suction",""));
     public static final RegistryObject<Item> RED_SHIFT_DYE = ITEMS.register("red_shift_dye",
             () -> new blockDye(DyeColor.RED, new Item.Properties().stacksTo(64).tab(DELBASE_ITEMS)
                     ,"tooltip.delbase.info.shift.more","tooltip.delbase.color.shifter",""));
@@ -69,7 +67,6 @@ public class shiftingDyes {
     public static final RegistryObject<Item> BLACK_SHIFT_DYE = ITEMS.register("black_shift_dye",
             () -> new blockDye(DyeColor.BLACK, new Item.Properties().stacksTo(64).tab(DELBASE_ITEMS),
                     "tooltip.delbase.info.shift.more","tooltip.delbase.color.shifter",""));
-
 
     public static void register() {
         IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();

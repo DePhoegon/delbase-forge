@@ -3,14 +3,13 @@ package com.dephoegon.delbase.aid.event;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.PipeBlock;
 import net.minecraft.world.level.block.SlabBlock;
 import net.minecraft.world.level.block.StairBlock;
 import net.minecraft.world.level.block.WallBlock;
 import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.level.block.state.properties.Half;
-import net.minecraft.world.level.block.state.properties.SlabType;
-import net.minecraft.world.level.block.state.properties.StairsShape;
-import net.minecraft.world.level.block.state.properties.WallSide;
+import net.minecraft.world.level.block.state.properties.*;
+import org.jetbrains.annotations.NotNull;
 
 import static net.minecraft.world.level.block.RotatedPillarBlock.AXIS;
 import static net.minecraft.world.level.block.SlabBlock.*;
@@ -18,7 +17,7 @@ import static net.minecraft.world.level.block.StairBlock.*;
 import static net.minecraft.world.level.block.WallBlock.*;
 
 public class blockReplacer {
-    public static void wallPlacement(Level world, BlockPos blockPos, BlockState defaultBlockState) {
+    public static void wallPlacement(@NotNull Level world, BlockPos blockPos, @NotNull BlockState defaultBlockState) {
         WallSide east = world.getBlockState(blockPos).getValue(EAST_WALL);
         WallSide west = world.getBlockState(blockPos).getValue(WEST_WALL);
         WallSide north = world.getBlockState(blockPos).getValue(NORTH_WALL);
@@ -26,9 +25,9 @@ public class blockReplacer {
         boolean up = world.getBlockState(blockPos).getValue(UP);
         boolean waterLogged = world.getBlockState(blockPos).getValue(WallBlock.WATERLOGGED);
 
-        world.setBlock(blockPos,defaultBlockState.setValue(WallBlock.WATERLOGGED, waterLogged).setValue(WallBlock.UP, up).setValue(SOUTH_WALL, south).setValue(NORTH_WALL, north).setValue(WEST_WALL, west).setValue(EAST_WALL, east),1);
+        world.setBlockAndUpdate(blockPos,defaultBlockState.setValue(WallBlock.WATERLOGGED, waterLogged).setValue(WallBlock.UP, up).setValue(SOUTH_WALL, south).setValue(NORTH_WALL, north).setValue(WEST_WALL, west).setValue(EAST_WALL, east));
     }
-    public static void stairPlacement(Level world, BlockPos blockPos, BlockState defaultBlockState) {
+    public static void stairPlacement(@NotNull Level world, BlockPos blockPos, @NotNull BlockState defaultBlockState) {
         Direction facing = world.getBlockState(blockPos).getValue(FACING);
         Half half = world.getBlockState(blockPos).getValue(HALF);
         StairsShape shape = world.getBlockState(blockPos).getValue(SHAPE);
@@ -36,7 +35,7 @@ public class blockReplacer {
 
         world.setBlockAndUpdate(blockPos, defaultBlockState.setValue(FACING, facing).setValue(HALF, half).setValue(StairBlock.WATERLOGGED, waterlogged).setValue(SHAPE, shape));
     }
-    public static void slabPlacement(Level world, BlockPos blockPos, BlockState defaultBlockState) {
+    public static void slabPlacement(@NotNull Level world, BlockPos blockPos, @NotNull BlockState defaultBlockState) {
         SlabType type = world.getBlockState(blockPos).getValue(TYPE);
         Boolean waterlogged = world.getBlockState(blockPos).getValue(SlabBlock.WATERLOGGED);
 
@@ -47,5 +46,22 @@ public class blockReplacer {
             Direction.Axis axis = world.getBlockState(blockPos).getValue(AXIS);
             world.setBlockAndUpdate(blockPos, defaultBlockState.setValue(AXIS, axis));
         }
+    }
+    public static void fencePlacement(@NotNull Level world, BlockPos blockPos, @NotNull BlockState defaultBlockState) {
+        Boolean NORTH = world.getBlockState(blockPos).getValue(PipeBlock.NORTH);
+        Boolean SOUTH = world.getBlockState(blockPos).getValue(PipeBlock.SOUTH);
+        Boolean EAST = world.getBlockState(blockPos).getValue(PipeBlock.EAST);
+        Boolean WEST = world.getBlockState(blockPos).getValue(PipeBlock.WEST);
+        Boolean WATERLOGGED = world.getBlockState(blockPos).getValue(BlockStateProperties.WATERLOGGED);
+
+        world.setBlockAndUpdate(blockPos, defaultBlockState.setValue(PipeBlock.WEST, WEST).setValue(PipeBlock.EAST, EAST).setValue(PipeBlock.SOUTH, SOUTH).setValue(PipeBlock.NORTH, NORTH).setValue(BlockStateProperties.WATERLOGGED, WATERLOGGED));
+    }
+    public static void fenceGatePlacement(@NotNull Level world, BlockPos blockPos, @NotNull BlockState defaultBlockState) {
+        Direction FACING = world.getBlockState(blockPos).getValue(BlockStateProperties.HORIZONTAL_FACING);
+        Boolean OPEN = world.getBlockState(blockPos).getValue(BlockStateProperties.OPEN);
+        Boolean POWERED = world.getBlockState(blockPos).getValue(BlockStateProperties.POWERED);
+        Boolean IN_WALL = world.getBlockState(blockPos).getValue(BlockStateProperties.IN_WALL);
+
+        world.setBlockAndUpdate(blockPos, defaultBlockState.setValue(BlockStateProperties.HORIZONTAL_FACING, FACING).setValue(BlockStateProperties.OPEN, OPEN).setValue(BlockStateProperties.POWERED, POWERED).setValue(BlockStateProperties.IN_WALL, IN_WALL));
     }
 }

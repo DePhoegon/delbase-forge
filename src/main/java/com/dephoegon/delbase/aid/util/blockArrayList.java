@@ -23,6 +23,8 @@ public abstract class blockArrayList {
     private static ArrayList<Object> wall_list = new ArrayList<>();
     private static ArrayList<Object> axis_list = new ArrayList<>();
     private static ArrayList<Object> fall_hold = new ArrayList<>();
+    private static ArrayList<Object> concretePowder_list = new ArrayList<>();
+    private static ArrayList<Object> sand_list = new ArrayList<>();
 
     // Blocks for holding up falling blocks, outside custom classes
     private static void setFall_hold() {
@@ -68,6 +70,27 @@ public abstract class blockArrayList {
     }
     public static ArrayList<Object> getTerracotta_list() { return terracotta_list; }
 
+    private static void setConcretePowder_list(){
+        ArrayList<Object> concretePowder_set = new ArrayList<>();
+        concretePowder_set.add(RED_CONCRETE_POWDER.defaultBlockState());
+        concretePowder_set.add(WHITE_CONCRETE_POWDER.defaultBlockState());
+        concretePowder_set.add(ORANGE_CONCRETE_POWDER.defaultBlockState());
+        concretePowder_set.add(MAGENTA_CONCRETE_POWDER.defaultBlockState());
+        concretePowder_set.add(LIGHT_BLUE_CONCRETE_POWDER.defaultBlockState());
+        concretePowder_set.add(YELLOW_CONCRETE_POWDER.defaultBlockState());
+        concretePowder_set.add(LIME_CONCRETE_POWDER.defaultBlockState());
+        concretePowder_set.add(PINK_CONCRETE_POWDER.defaultBlockState());
+        concretePowder_set.add(GRAY_CONCRETE_POWDER.defaultBlockState());
+        concretePowder_set.add(LIGHT_GRAY_CONCRETE_POWDER.defaultBlockState());
+        concretePowder_set.add(CYAN_CONCRETE_POWDER.defaultBlockState());
+        concretePowder_set.add(PURPLE_CONCRETE_POWDER.defaultBlockState());
+        concretePowder_set.add(BLUE_CONCRETE_POWDER.defaultBlockState());
+        concretePowder_set.add(GREEN_CONCRETE_POWDER.defaultBlockState());
+        concretePowder_set.add(BROWN_CONCRETE_POWDER.defaultBlockState());
+        concretePowder_set.add(BLACK_CONCRETE_POWDER.defaultBlockState());
+        concretePowder_list = concretePowder_set;
+    }
+    public static ArrayList<Object> getConcretePowder_list() { return concretePowder_list; }
     private static void setConcrete_list() {
         ArrayList<Object> concrete_set = new ArrayList<>();
         concrete_set.add(RED_CONCRETE.defaultBlockState());
@@ -137,13 +160,22 @@ public abstract class blockArrayList {
     public static ArrayList<Object> getGeneral_list() { return general_list; }
 
     private static void setGravity_list() {
+        setSand_list();
+        setConcretePowder_list();
         ArrayList<Object> gravity_set = new ArrayList<>();
-        gravity_set.add(SAND.defaultBlockState());
-        gravity_set.add(RED_SAND.defaultBlockState());
+        gravity_set.addAll(sand_list);
+        gravity_set.addAll(concretePowder_list);
         gravity_list = gravity_set;
     }
     public static ArrayList<Object> getGravity_list() { return gravity_list; }
 
+    private static void setSand_list() {
+        ArrayList<Object> sand_set = new ArrayList<>();
+        sand_set.add(SAND.defaultBlockState());
+        sand_set.add(RED_SAND.defaultBlockState());
+        sand_list = sand_set;
+    }
+    public static ArrayList<Object> getSand_list() { return sand_list; }
     private static void setWall_list() {
         ArrayList<Object> wall_set = new ArrayList<>();
         wall_set.add(SANDSTONE_WALL.defaultBlockState());

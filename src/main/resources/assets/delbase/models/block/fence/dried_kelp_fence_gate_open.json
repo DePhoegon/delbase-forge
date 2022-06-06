@@ -1,7 +1,7 @@
 {
-"parent": "delbase:block/template/fence_gate_open",
+"parent": "delbase:block/template/fence_gate_open_kelp",
 "textures": {
-"texture": "minecraft:block/dried_kelp_top",
-"postside": "minecraft:block/dried_kelp_side"
+"texture": "delbase:block/dried_kelp_gate",
+"postside": "delbase:block/dried_kelp_noband"
 }
 }

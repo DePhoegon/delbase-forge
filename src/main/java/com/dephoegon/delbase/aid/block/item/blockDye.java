@@ -36,7 +36,7 @@ public class blockDye extends DyeItem {
     @Override
     public void appendHoverText(@NotNull ItemStack stack, @Nullable Level level, @NotNull List<Component> toolTip, @NotNull TooltipFlag flag) {
         super.appendHoverText(stack, level, toolTip, flag);
-        if(!kb.HShift() && !kb.HCtrl() && tip0 != null) toolTip.add(new TranslatableComponent(tip0)); //if neither pressed, show tip0 (if not empty)
+        if(!(kb.HShift()) && !(kb.HCtrl()) && tip0 != null) toolTip.add(new TranslatableComponent(tip0)); //if neither pressed, show tip0 (if not empty)
         if(kb.HCtrl() && tip2 != null) toolTip.add(new TranslatableComponent(tip2)); //if ctrl, show tip2 (if not empty), do first
         if(kb.HShift() && tip1 != null) //noinspection GrazieInspection
             toolTip.add(new TranslatableComponent(tip1)); //if shift, show tip1 (if not empty)
@@ -47,18 +47,38 @@ public class blockDye extends DyeItem {
     public @NotNull InteractionResult useOn(@NotNull UseOnContext context) {
         Level world = context.getLevel();
         BlockPos blockpos = context.getClickedPos();
-        BlockState defaultBlockState = world.getBlockState(blockpos).getBlock().defaultBlockState();
+        Block block = world.getBlockState(blockpos).getBlock();
+        BlockState defaultBlockState = block.defaultBlockState();
         Player player = context.getPlayer();
         assert player != null;
         Item dye_hand = player.getItemInHand(context.getHand()).getItem();
-        Block block = world.getBlockState(blockpos).getBlock();
-
-        if (block instanceof axisBlock || getAxis_list().contains(defaultBlockState)) { return axis_select(world, blockpos, defaultBlockState, block, player, dye_hand); }
-        if (block instanceof slabBlock  || getSlab_list().contains(defaultBlockState)) { return slab_select(world, blockpos, defaultBlockState, block, player, dye_hand); }
-        if (block instanceof genBlock || getGeneral_list().contains(defaultBlockState)) { return gen_select(world, blockpos, defaultBlockState, block, player, dye_hand); }
-        if (block instanceof gravBlock || getGravity_list().contains(defaultBlockState)) { return grav_select(world, blockpos, defaultBlockState, block, player, dye_hand); }
-        if (block instanceof stairBlock || getStair_list().contains(defaultBlockState)) { return stair_select(world, blockpos, defaultBlockState, block, player, dye_hand); }
-        if (block instanceof wallBlock || getWall_list().contains(defaultBlockState)) { return wall_select(world, blockpos, defaultBlockState, block, player, dye_hand); }
+        boolean m_hand_dye = dye_hand.asItem() == player.getMainHandItem().getItem();
+        if (m_hand_dye) {
+            if (block instanceof axisBlock || getAxis_list().contains(defaultBlockState)) {
+                return axis_select(world, blockpos, defaultBlockState, block, player, dye_hand);
+            }
+            if (block instanceof slabBlock || getSlab_list().contains(defaultBlockState)) {
+                return slab_select(world, blockpos, defaultBlockState, block, player, dye_hand);
+            }
+            if (block instanceof genBlock || getGeneral_list().contains(defaultBlockState)) {
+                return gen_select(world, blockpos, defaultBlockState, block, player, dye_hand);
+            }
+            if (block instanceof gravBlock || getGravity_list().contains(defaultBlockState)) {
+                return grav_select(world, blockpos, defaultBlockState, block, player, dye_hand);
+            }
+            if (block instanceof stairBlock || getStair_list().contains(defaultBlockState)) {
+                return stair_select(world, blockpos, defaultBlockState, block, player, dye_hand);
+            }
+            if (block instanceof wallBlock || getWall_list().contains(defaultBlockState)) {
+                return wall_select(world, blockpos, defaultBlockState, block, player, dye_hand);
+            }
+            if (block instanceof fenceBlock) {
+                return fence_select(world, blockpos, defaultBlockState, block, player, dye_hand);
+            }
+            if (block instanceof fenceGateBlock) {
+                return fenceGate_select(world, blockpos, defaultBlockState, block, player, dye_hand);
+            }
+        }
         return InteractionResult.FAIL;
     }
 }

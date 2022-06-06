@@ -1,4 +1,4 @@
-This Mod is in flux, It will be a soft decration Mod, that will focus on resource recovery.
+This Mod is in flux, It will be a soft decoration Mod, that will focus on resource recovery.
 
 Color shifting has not been finalized yet (method)
 
@@ -15,9 +15,9 @@ Double-Checked, Checklist
 ---
 Tested & verified
 ==========
-Custom Template Jsons
+Custom Template JSONs
 - Stairs
-== allows Insides to be different than the outsides (including the top)
+== allows Insides to be different from the outsides (including the top)
 
 - Walls
 == Allows the walls to have separate textures between the side & top, (walls)
@@ -113,14 +113,14 @@ Custom Template Jsons
 ==- Centered the dried kelp bands
 ====- Wall Posts
 ====- Dried_kelp_Blocks
-====- Stairs, Uvlock = false
+====- Stairs, uvlock = false
 = Basalt Stairs
 == split top into separate cobbled basalt stair
 = Color Sands
 ==- Swapped to use concrete powders.
 ====- reworking planned
 ====- aligning custom texture to better match normal minecraft.
-======- more practice needed, concrete power texture as stand ins
+======- more practice needed, concrete power texture as stand-ins
 = [Stairs/Block/wall_post/slab]
 ==- Texture centering for 16x16 textures, with a 'center band' at x px 8, y px 8
 ===- using kelp name, allows wider/larger pixels in game with minimal impact
@@ -146,8 +146,8 @@ all Stones
 all wood
 ash
 "Below in Minecraft namespace"
-axe minable
-pickaxe minable
+axe mine-able
+pickaxe mine-able
 fences
 walls
 
@@ -170,6 +170,12 @@ Inside Texture For Stairs
 - logs
 - quartz versions
 - polished blackstone (for chiseled blackstone)
+Dried Kelp Fence & Fence Gate
+- JSON adjusted for fence gates
+- Fence gate Unique texture to allow alignment of 'doors'
+- fence post JSON adjusted
+- Share No band texture with walls for pieces of the fences/gates
+
 
 
 
@@ -201,8 +207,8 @@ MISC
 -kelp_block
 -raw gold/copper/iron
 -dripstone
--endstone
--boneblock
+-end stone
+-bone block
 
 Stairs [By type]
 ==============
@@ -217,14 +223,14 @@ MISC
 -kelp_block
 -raw gold/copper/iron
 -dripstone
--endstone
--boneblock
+-end stone
+-bone block
 chiseled sandstone
 cut sandstone
 concrete
 sands
 sandstones
-smooth sandstones
+smooth sandstone
 terracotta
 quartz
 
@@ -247,8 +253,8 @@ MISC
 -kelp_block
 -raw gold/copper/iron
 -dripstone
--endstone
--boneblock
+-end stone
+-bone block
 
 Slabs [By type]
 =================
@@ -257,7 +263,7 @@ concrete
 cut sandstone / energy versions
 quartz
 sands / energy versions
-sandstone / energy verions
+sandstone / energy versions
 smooth sandstone / energy versions
 terracotta
 woods
@@ -269,8 +275,8 @@ MISC
 -kelp_block
 -raw gold/copper/iron
 -dripstone
--endstone
--boneblock
+-end stone
+-bone block
 
 Fences [By type]
 ===============
@@ -289,11 +295,8 @@ Full Blocks [By Type]
 
 Overrides [By Type] { To enable being burnt & replace by ash version }
 ====================
-Vanilla Wood Blocks
-Vanilla Log Blocks
-Vanilla Planks
-Vanilla Plank slabs
-Vanilla Plank Stairs
+- Removed, in favor of using Crafting Recipes to get ash logs/blocks.
+== Custom ones will still replace themselves with ash versions
 
 Showcases
 ============

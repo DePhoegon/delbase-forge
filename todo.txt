@@ -1,28 +1,23 @@
-Manually Adjust dried kelp fence & fence Gate
-
 =======================
 To Adjust
 
-Override Wood Fences to burn into ash  version
-
-Setup color swap for fence sets as they get put in
-- terracotta
-- sand
-- sandstone
-- cut sandstone
-- smooth sandstone
-- chiseled sandstone
-- concrete
----------------
+Recipes to get ashed blocks
+- fences
+- slabs
+- logs
+- stairs
+- walls
+- fence gate
+====  Easy to use Tags to simplify recipe list
 
 ==================================================
 
 Followup steps (after fences)
 - triple check all the blocks
 - Crafting recipes
-== get JEI/NEI intergration if possible
+== get JEI/NEI integration if possible
 - turn own dyes into 'small piles' (x8) to use on blocks in world
-- use tags to do crafting reciepes  to allow use of normal dyes to turn 8 of a set into 8 of one color
+- use tags to do crafting recipes  to allow use of normal dyes to turn 8 of a set into 8 of one color
 - 'consider' custom machine to do colors [ not looking favorable]
 - 'consider' custom machine to take apart armor/items to recover resources
 - 'consider' nether touches.

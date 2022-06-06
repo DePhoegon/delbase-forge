@@ -23,9 +23,9 @@ public class wallSmoothSandStones {
     private static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, Mod_ID);
     private static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, Mod_ID);
 
-    public static final RegistryObject<WallBlock> OVERRIDE_SMOOTH_SAND_STONE_WALL = register("smooth_sand_stone_wall",
+    public static final RegistryObject<WallBlock> SMOOTH_SAND_STONE_WALL = register("smooth_sand_stone_wall",
             () -> new smoothSandStoneWall(BlockBehaviour.Properties.copy(SMOOTH_SANDSTONE).sound(SoundType.STONE),"","",""));
-    public static final RegistryObject<WallBlock> OVERRIDE_RED_SMOOTH_SAND_STONE_WALL = register("red_smooth_sand_stone_wall",
+    public static final RegistryObject<WallBlock> RED_SMOOTH_SAND_STONE_WALL = register("red_smooth_sand_stone_wall",
             () -> new smoothSandStoneWall(BlockBehaviour.Properties.copy(SMOOTH_SANDSTONE).sound(SoundType.STONE),"","",""));
     public static final RegistryObject<WallBlock> BLOOD_SMOOTH_SAND_STONE_WALL = register("blood_smooth_sand_stone_wall",
             () -> new smoothSandStoneWall(BlockBehaviour.Properties.copy(SMOOTH_SANDSTONE).sound(SoundType.STONE),"","",""));
