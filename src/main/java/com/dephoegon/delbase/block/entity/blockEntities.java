@@ -2,17 +2,15 @@ package com.dephoegon.delbase.block.entity;
 
 import com.dephoegon.delbase.block.entity.blocks.blockCuttingStation;
 import com.dephoegon.delbase.block.general.machineBlocks;
-import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
-import org.lwjgl.system.CallbackI;
 
 import static com.dephoegon.delbase.delbase.Mod_ID;
-import static net.minecraft.world.level.block.entity.BlockEntityType.*;
+import static net.minecraft.world.level.block.entity.BlockEntityType.Builder;
 
 public class blockEntities {
     public static final DeferredRegister<BlockEntityType<?>> BLOCK_ENTITIES =

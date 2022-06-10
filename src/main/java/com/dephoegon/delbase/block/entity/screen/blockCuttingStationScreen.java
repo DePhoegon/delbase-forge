@@ -1,66 +1,42 @@
 package com.dephoegon.delbase.block.entity.screen;
-import com.dephoegon.delbase.block.entity.blocks.blockCuttingStation;
-import com.dephoegon.delbase.block.general.machineBlocks;
-import net.minecraft.network.FriendlyByteBuf;
+
+import com.mojang.blaze3d.systems.RenderSystem;
+import com.mojang.blaze3d.vertex.PoseStack;
+import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
+import net.minecraft.client.renderer.GameRenderer;
+import net.minecraft.network.chat.Component;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.player.Inventory;
-import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.AbstractContainerMenu;
-import net.minecraft.world.inventory.MenuType;
-import net.minecraft.world.inventory.Slot;
-import net.minecraft.world.level.Level;
-import net.minecraft.world.level.block.entity.BlockEntity;
-import net.minecraftforge.items.CapabilityItemHandler;
-import net.minecraftforge.items.SlotItemHandler;
-import org.jetbrains.annotations.Nullable;
+import org.jetbrains.annotations.NotNull;
 
-import static com.dephoegon.delbase.block.general.machineBlocks.*;
+import static com.dephoegon.delbase.delbase.Mod_ID;
 
-public class blockCuttingStationScreen extends AbstractContainerMenu {
-    private final blockCuttingStation blockEntity;
-    private final Level level;
-    public blockCuttingStationScreen(int pContainerId, Inventory inv, FriendlyByteBuf extraData) {
-        this(pContainerId, inv, inv.player.level.getBlockEntity(extraData.readBlockPos()));
+public class blockCuttingStationScreen extends AbstractContainerScreen<blockCuttingStationMenu> {
+    private static final ResourceLocation TEXTURE =
+            new ResourceLocation(Mod_ID, "textures/gui/gem_cutting_station_gui.png");
+
+    public blockCuttingStationScreen(blockCuttingStationMenu pMenu, Inventory pPlayerInventory, Component pTitle) {
+        super(pMenu, pPlayerInventory, pTitle);
     }
-    public blockCuttingStationScreen(int pContainerId, Inventory inv, BlockEntity entity) {
-        super(BLOCK_CUTTING_STATION.get(), pContainerId);
-        checkContainerSize(inv, 3);
-        blockEntity = ((blockCuttingStation) entity);
-        this.level = inv.player.level;
-
-        addPlayerInventory(inv);
-        addPlayerHotbar(inv);
-
-        this.blockEntity.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY).ifPresent(handler -> {
-            this.addSlot(new SlotItemHandler(handler,0, 57, 18));
-            this.addSlot(new SlotItemHandler(handler,1, 103, 18));
-            this.addSlot(new SlotItemHandler(handler, 2, 80, 60));
-
-        });
-    }
-    private static final int HOTBAR_SLOT_COUNT = 9;
-    private static final int PLAYER_ROW_COUNT =3;
-    private static final int PLAYER_COLUMN_COUNT =HOTBAR_SLOT_COUNT;
-    private static final int PLAYER_SLOT_COUNT = PLAYER_ROW_COUNT*PLAYER_COLUMN_COUNT;
-    private static final int VANILLA_SLOT_COUNT = PLAYER_SLOT_COUNT+HOTBAR_SLOT_COUNT;
-    private static final int VANILLA_FIRST_SLOT_INDEX = 0;
-    private static final int TE_INVENTORY_FIRST_SLOT_INDEX = VANILLA_FIRST_SLOT_INDEX + VANILLA_SLOT_COUNT;
-
-    private static final int TE_INVENTORY_SLOT_COUNT = 3;
 
     @Override
-    public boolean stillValid(Player pPlayer) {
-        return false;
-    }
-    private void addPlayerInventory(Inventory playerInventory) {
-        for (int i = 0; i < 3; ++i) {
-            for (int l = 0; l < 9; ++l) {
-                this.addSlot(new Slot(playerInventory, l + i * 9 + 9, 8 + l * 18, 86 + i * 18));
-            }
+    protected void renderBg(@NotNull PoseStack pPoseStack, float pPartialTick, int pMouseX, int pMouseY) {
+        RenderSystem.setShader(GameRenderer::getPositionTexShader);
+        RenderSystem.setShaderColor(1.0F,1.0F,1.0F,1.0F);
+        RenderSystem.setShaderTexture(0, TEXTURE);
+        int x = (width - imageWidth) / 2;
+        int y = (height - imageHeight) / 2;
+
+        this.blit(pPoseStack, x, y, 0, 0, imageWidth, imageHeight);
+        if (menu.isCrafting()) {
+            blit(pPoseStack, x+102, y+41, 176, 0,8, menu.getScaledProgress());
         }
     }
-    private void addPlayerHotbar(Inventory playerInventory) {
-        for (int i =0; i<9;++i) {
-            this.addSlot(new Slot(playerInventory, i, 8 + i * 18, 144));
-        }
+    @Override
+    public void render(@NotNull PoseStack pPoseStack, int mouseX, int mouseY, float delta) {
+        renderBackground(pPoseStack);
+        super.render(pPoseStack, mouseX, mouseY, delta);
+        renderTooltip(pPoseStack, mouseX, mouseY);
     }
 }

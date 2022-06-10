@@ -1,0 +1,14 @@
+{
+"type": "delbase:block_cutting",
+"ingredients": [
+{
+"item": "delbase:stair_plans"
+},
+{
+"item": "delbase:light_blue_solid_sand"
+}
+],
+"output": {
+"item": "delbase:light_blue_sand_stair"
+}
+}
