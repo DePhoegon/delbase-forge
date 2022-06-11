@@ -33,6 +33,9 @@ import java.util.Optional;
 import static com.dephoegon.delbase.item.blockCutterPlans.*;
 
 public class blockCuttingStation extends BlockEntity implements MenuProvider {
+    public static final int outputSlot = 0;
+    public static final int inputSlot = 2;
+    public static final int planSlot = 1;
     public static final int blockCuttingStationSlotCount = 3;
     private final ItemStackHandler itemHandler = new ItemStackHandler(blockCuttingStationSlotCount) {
         @Override
@@ -89,6 +92,7 @@ public class blockCuttingStation extends BlockEntity implements MenuProvider {
             return lazyItemHandler.cast();
         }
         return super.getCapability(cap, side);
+
     }
     @Override
     public void onLoad() {
@@ -145,7 +149,7 @@ public class blockCuttingStation extends BlockEntity implements MenuProvider {
                 .getRecipeFor(blockCuttingStationRecipes.Type.INSTANCE, inventory, level);
         if (match.isPresent()){
             Item planSlotItem;
-            if (entity.itemHandler.getStackInSlot(1).isEmpty()) { return false; } else { planSlotItem = entity.itemHandler.getStackInSlot(1).getItem(); }
+            if (entity.itemHandler.getStackInSlot(entity.planSlot).isEmpty()) { return false; } else { planSlotItem = entity.itemHandler.getStackInSlot(entity.planSlot).getItem(); }
             int count = 0;
             ItemStack resultItem = match.get().getResultItem();
             if (resultItem.getItem() instanceof BlockItem tOutput) {
@@ -166,7 +170,7 @@ public class blockCuttingStation extends BlockEntity implements MenuProvider {
                     return false;
                 }
             }
-            return canInsertAmountIntoOutputSlot(inventory, count) && canInsertItemIntoOutputSlot(inventory, resultItem);
+            return canInsertAmountIntoOutputSlot(inventory, count, outputSlot) && canInsertItemIntoOutputSlot(inventory, resultItem, outputSlot);
         } else return false;
     }
     // hasRecipe for checking for if an item is in a slot or not.
@@ -184,22 +188,22 @@ public class blockCuttingStation extends BlockEntity implements MenuProvider {
 
         if (match.isPresent()) {
             int count = 1;
-            entity.itemHandler.extractItem(0,1, false);
+            entity.itemHandler.extractItem(inputSlot, 1, false);
             if (match.get().getResultItem().getItem() instanceof BlockItem tOutput) {
                 if (tOutput.getBlock() instanceof SlabBlock) { count = 2; }
             }
-            entity.itemHandler.setStackInSlot(2, new ItemStack(match.get().getResultItem().getItem(),
-                    entity.itemHandler.getStackInSlot(2).getCount() + count));
+            entity.itemHandler.setStackInSlot(outputSlot, new ItemStack(match.get().getResultItem().getItem(),
+                    entity.itemHandler.getStackInSlot(outputSlot).getCount() + count));
             entity.resetProgress();
         }
     }
     private void resetProgress() {
         this.progress = 0;
     }
-    private static boolean canInsertItemIntoOutputSlot(SimpleContainer inventory, ItemStack output) {
-        return inventory.getItem(2).getItem() == output.getItem() || inventory.getItem(2).isEmpty();
+    private static boolean canInsertItemIntoOutputSlot(SimpleContainer inventory, ItemStack output, int outSlot) {
+        return inventory.getItem(outSlot).getItem() == output.getItem() || inventory.getItem(outSlot).isEmpty();
     }
-    private static boolean canInsertAmountIntoOutputSlot(SimpleContainer inventory, int variableOut) {
-        return inventory.getItem(2).getMaxStackSize() > inventory.getItem(2).getCount()+variableOut;
+    private static boolean canInsertAmountIntoOutputSlot(SimpleContainer inventory, int variableOut, int outSlot) {
+        return inventory.getItem(outSlot).getMaxStackSize() > inventory.getItem(outSlot).getCount()+variableOut;
     }
 }

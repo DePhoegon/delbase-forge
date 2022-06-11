@@ -14,12 +14,10 @@ import java.util.ArrayList;
 import static com.dephoegon.delbase.item.blockCutterPlans.*;
 
 public class planSlots extends SlotItemHandler {
-    private int slotIndex;
     private ArrayList<Item> planArray = new ArrayList<>();
 
     public planSlots(IItemHandler itemHandler, int index, int xPosition, int yPosition) {
         super(itemHandler, index, xPosition, yPosition);
-        this.slotIndex = index;
     }
 
     private static ArrayList<Item> setPlanArray(){

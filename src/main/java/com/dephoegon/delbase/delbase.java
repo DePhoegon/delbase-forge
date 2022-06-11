@@ -45,14 +45,10 @@ public class delbase
         regList.listOrder();
         // Register the setup method for modloading
         // eventBus.addListener(this::setup);
-        eventBus.addListener(this::clientSetup);
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
     }
-    private void clientSetup(final FMLCommonSetupEvent event) {
-        ItemBlockRenderTypes.setRenderLayer(machineBlocks.BLOCK_CUTTING_STATION.get(), RenderType.translucent());
-        MenuScreens.register(menuTypes.BLOCK_CUTTING_STATION_MENU.get(), blockCuttingStationScreen::new);
-    }
+    // ClientSetup In the aid/event/eventBusEvent
     private void setup(final FMLCommonSetupEvent event)
     {
         // some preinit code

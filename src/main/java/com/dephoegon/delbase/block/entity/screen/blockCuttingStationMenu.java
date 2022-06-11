@@ -1,10 +1,10 @@
 package com.dephoegon.delbase.block.entity.screen;
+
 import com.dephoegon.delbase.aid.slots.itemSlot;
 import com.dephoegon.delbase.aid.slots.planSlots;
 import com.dephoegon.delbase.aid.slots.resultSlots;
 import com.dephoegon.delbase.block.entity.blocks.blockCuttingStation;
 import net.minecraft.network.FriendlyByteBuf;
-import net.minecraft.world.SimpleContainer;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.*;
@@ -12,12 +12,10 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraftforge.items.CapabilityItemHandler;
-import net.minecraftforge.items.SlotItemHandler;
 import org.jetbrains.annotations.NotNull;
-import org.jetbrains.annotations.PropertyKey;
 
-import static com.dephoegon.delbase.block.entity.blocks.blockCuttingStation.blockCuttingStationSlotCount;
-import static com.dephoegon.delbase.block.general.machineBlocks.*;
+import static com.dephoegon.delbase.block.entity.blocks.blockCuttingStation.*;
+import static com.dephoegon.delbase.block.general.machineBlocks.BLOCK_CUTTING_STATION;
 
 public class blockCuttingStationMenu extends AbstractContainerMenu {
     private final blockCuttingStation blockEntity;
@@ -38,9 +36,9 @@ public class blockCuttingStationMenu extends AbstractContainerMenu {
         addPlayerHotbar(inv);
 
         this.blockEntity.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY).ifPresent(handler -> {
-            this.addSlot(new itemSlot(handler,0, 57, 18));
-            this.addSlot(new planSlots(handler,1, 103, 18));
-            this.addSlot(new resultSlots(handler, 2, 80, 60));
+            this.addSlot(new itemSlot(handler, inputSlot, 57, 18));
+            this.addSlot(new planSlots(handler, planSlot, 103, 18));
+            this.addSlot(new resultSlots(handler, outputSlot, 80, 60));
 
         });
         addDataSlots(data);
@@ -63,7 +61,6 @@ public class blockCuttingStationMenu extends AbstractContainerMenu {
     private static final int VANILLA_SLOT_COUNT = PLAYER_SLOT_COUNT+HOTBAR_SLOT_COUNT;
     private static final int VANILLA_FIRST_SLOT_INDEX = 0;
     private static final int TE_INVENTORY_FIRST_SLOT_INDEX = VANILLA_FIRST_SLOT_INDEX + VANILLA_SLOT_COUNT;
-
     private static final int TE_INVENTORY_SLOT_COUNT = blockCuttingStationSlotCount;
 
     @Override
@@ -97,7 +94,7 @@ public class blockCuttingStationMenu extends AbstractContainerMenu {
     }
 
     @Override
-    public boolean stillValid(Player pPlayer) {
+    public boolean stillValid(@NotNull Player pPlayer) {
         return stillValid(ContainerLevelAccess.create(level, blockEntity.getBlockPos()),
                 pPlayer, BLOCK_CUTTING_STATION.get());
     }

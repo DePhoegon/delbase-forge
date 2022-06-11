@@ -1,5 +1,6 @@
 package com.dephoegon.delbase.aid.recipe;
 
+import com.dephoegon.delbase.block.entity.blocks.blockCuttingStation;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import net.minecraft.core.NonNullList;
@@ -13,10 +14,14 @@ import net.minecraft.world.level.Level;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
+import static com.dephoegon.delbase.block.entity.blocks.blockCuttingStation.inputSlot;
+import static com.dephoegon.delbase.block.entity.blocks.blockCuttingStation.planSlot;
 import static com.dephoegon.delbase.delbase.Mod_ID;
 import static net.minecraft.core.NonNullList.withSize;
 
 public class blockCuttingStationRecipes implements Recipe<SimpleContainer> {
+    private static final int jsonIngredientItem = 1;
+    private static final int jsonPlanItem = 0;
     private final ResourceLocation id;
     private final ItemStack output;
     private final NonNullList<Ingredient> recipeItems;
@@ -29,7 +34,7 @@ public class blockCuttingStationRecipes implements Recipe<SimpleContainer> {
     @Override
     public boolean matches(SimpleContainer pContainer, Level pLevel) {
         if (recipeItems == null) { return false; } else {
-            return (recipeItems.get(1).test(pContainer.getItem(0)) && recipeItems.get(0).test(pContainer.getItem(1)));
+            return (recipeItems.get(jsonIngredientItem).test(pContainer.getItem(inputSlot)) && recipeItems.get(jsonPlanItem).test(pContainer.getItem(planSlot)));
         }
     }
 
