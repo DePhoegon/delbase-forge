@@ -24,7 +24,7 @@ public class eventBusEvents {
         Registry.register(Registry.RECIPE_TYPE, blockCuttingStationRecipes.Type.ID, blockCuttingStationRecipes.Type.INSTANCE);
     }
     @SubscribeEvent
-    private void clientSetup(final FMLCommonSetupEvent event) {
+    public void clientSetup(final FMLCommonSetupEvent event) {
         ItemBlockRenderTypes.setRenderLayer(machineBlocks.BLOCK_CUTTING_STATION.get(), RenderType.translucent());
         MenuScreens.register(menuTypes.BLOCK_CUTTING_STATION_MENU.get(), blockCuttingStationScreen::new);
     }
