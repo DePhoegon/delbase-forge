@@ -28,3 +28,12 @@ Followup steps (after fences)
 == 'consider' swapping out blocks for another for colors (ideas like full logs/wood blocks)
 
 -work on in game book discovery of mechanics
+
+===========================
+
+Recipes for blocks in crafting tables.
+Double check all recipes
+Armor ripping apart recipes
+-pattern for taking armor apart
+touch up colors on the block cutter.
+
