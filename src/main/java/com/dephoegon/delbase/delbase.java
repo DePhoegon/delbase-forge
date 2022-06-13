@@ -22,7 +22,6 @@ import org.apache.logging.log4j.Logger;
 import org.jetbrains.annotations.NotNull;
 
 import static com.dephoegon.delbase.delbase.Mod_ID;
-import static net.minecraft.client.gui.screens.MenuScreens.register;
 
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod(Mod_ID)

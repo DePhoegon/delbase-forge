@@ -19,24 +19,16 @@ build
 
 # other
 eclipse
-
-# World Saves -worldsaves
 run/config
 run/crash-reports
 run/defaultconfigs
 run/logs
 run/mods
-run/resourcepacks
+run/saves
 run/*.log
-*.lock
 user*.json
 *.db
-????????-????-????-*.*
-
-# trimming what's archived
-src/test
-src/generated
-
+Thumbs.db
 
 # Files from Forge MDK
 forge*changelog.txt
