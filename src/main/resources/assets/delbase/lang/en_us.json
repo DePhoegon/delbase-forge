@@ -372,6 +372,9 @@
   "block.delbase.cracked_polished_blackstone_brick_slab": "Cracked Polished Blackstone Brick Slab",
   "block.delbase.chiseled_polished_blackstone_slab": "Chiseled Polished Blackstone Slab",
   "block.delbase.dripstone_slab": "Dripstone Slab",
+  "block.delbase.netherrack_slab": "Netherrack Slab",
+  "block.delbase.magma_block_slab": "Magma Block Slab",
+  "block.delbase.shroomlight_slab": "Shroomlight Slab",
 
   "block.delbase.sand_stair": "Sand Stair",
   "block.delbase.red_sand_stair": "Red Sand Stair",
@@ -542,6 +545,9 @@
   "block.delbase.cracked_polished_blackstone_brick_stair": "Cracked Polished Blackstone Brick Stair",
   "block.delbase.chiseled_polished_blackstone_stair": "Chiseled Polished Blackstone Stair",
   "block.delbase.dripstone_stair": "Dripstone Stair",
+  "block.delbase.netherrack_stair": "Netherrack Stair",
+  "block.delbase.magma_block_stair": "Magma Block Stair",
+  "block.delbase.shroomlight_stair": "Shroomlight Stair",
 
   "block.delbase.blood_cut_sand_stone": "Dark Red Cut Sandstone",
   "block.delbase.white_cut_sand_stone": "White Cut Sandstone",
@@ -733,6 +739,9 @@
   "block.delbase.chiseled_polished_blackstone_wall": "Chiseled Polished Blackstone Wall",
   "block.delbase.dripstone_wall": "Dripstone Wall",
   "block.delbase.purpur_block_wall": "PurPur Block Wall",
+  "block.delbase.netherrack_wall": "Netherrack Wall",
+  "block.delbase.magma_block_wall": "Magma Block Wall",
+  "block.delbase.shroomlight_wall": "Shroomlight Wall",
 
   "block.delbase.acacia_wood_fence": "Acacia Wood Fence",
   "block.delbase.acacia_log_fence": "Acacia Log Fence",
@@ -1086,6 +1095,12 @@
   "block.delbase.bone_block_fence_gate": "Bone Block Fence Gate",
   "block.delbase.dried_kelp_fence": "Dried Kelp Fence",
   "block.delbase.dried_kelp_fence_gate": "Dried Kelp Fence Gate",
+  "block.delbase.netherrack_fence": "Netherrack Fence",
+  "block.delbase.netherrack_fence_gate": "Netherrack Fence Gate",
+  "block.delbase.magma_block_fence": "Magma Block Fence",
+  "block.delbase.magma_block_fence_gate": "Magma Block Fence Gate",
+  "block.delbase.shroomlight_fence": "Shroomlight Fence",
+  "block.delbase.shroomlight_fence_gate": "Shroomlight Fence Gate",
 
   "block.delbase.ash_slab": "Ash Slab",
   "block.delbase.ash_stair": "Ash Stair",

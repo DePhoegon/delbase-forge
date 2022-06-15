@@ -10,6 +10,8 @@
     "delbase:chiseled_polished_blackstone_wall",
     "delbase:purpur_block_wall",
     "delbase:dripstone_wall",
-    "delbase:cobbled_basalt_wall"
+    "delbase:cobbled_basalt_wall",
+    "delbase:netherrack_wall",
+    "delbase:magma_block_wall"
   ]
 }

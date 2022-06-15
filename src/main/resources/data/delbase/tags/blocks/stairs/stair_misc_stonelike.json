@@ -8,6 +8,8 @@
     "delbase:smooth_basalt_stair",
     "delbase:cracked_polished_blackstone_brick_stair",
     "delbase:chiseled_polished_blackstone_stair",
-    "delbase:dripstone_stair"
+    "delbase:dripstone_stair",
+    "delbase:netherrack_stair",
+    "delbase:magma_block_stair"
   ]
 }

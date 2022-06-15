@@ -68,6 +68,15 @@ public class slabMisc {
     public static final RegistryObject<SlabBlock> DRIPSTONE_SLAB = register("dripstone_slab",
             ()-> new slabBlock(BlockBehaviour.Properties.copy(DRIPSTONE_BLOCK).sound(SoundType.STONE)
                     ,"","","", false));
+    public static final RegistryObject<SlabBlock> NETHERRACK_SLAB = register("netherrack_slab",
+            ()-> new slabBlock(BlockBehaviour.Properties.copy(NETHERRACK).sound(SoundType.NETHERRACK)
+                    ,"","","", false));
+    public static final RegistryObject<SlabBlock> SHROOMLIGHT_SLAB = register("shroomlight_slab",
+            ()-> new slabBlock(BlockBehaviour.Properties.copy(SHROOMLIGHT).sound(SoundType.SHROOMLIGHT).lightLevel((blockstate) -> 15)
+                    ,"","","", false));
+    public static final RegistryObject<SlabBlock> MAGMA_BLOCK_SLAB = register("magma_block_slab",
+            ()-> new slabBlock(BlockBehaviour.Properties.copy(MAGMA_BLOCK).sound(SoundType.MOSS).lightLevel((blockstate) -> 3)
+                    ,"","","", false));
 
     public static void register() {
         IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();

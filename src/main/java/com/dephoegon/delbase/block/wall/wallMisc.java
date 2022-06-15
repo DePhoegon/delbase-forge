@@ -74,6 +74,15 @@ public class wallMisc {
     public static final RegistryObject<WallBlock> PURPUR_BLOCK_WALL = register("purpur_block_wall",
             () -> new wallBlock(BlockBehaviour.Properties.copy(PURPUR_BLOCK).sound(SoundType.STONE),
                     "","","",false));
+    public static final RegistryObject<WallBlock> NETHERRACK_WALL = register("netherrack_wall",
+            () -> new wallBlock(BlockBehaviour.Properties.copy(NETHERRACK).sound(SoundType.NETHERRACK),
+                    "","","",false));
+    public static final RegistryObject<WallBlock> SHROOMLIGHT_WALL = register("shroomlight_wall",
+            () -> new wallBlock(BlockBehaviour.Properties.copy(SHROOMLIGHT).sound(SoundType.SHROOMLIGHT).lightLevel((blockstate) -> 15),
+                    "","","",false));
+    public static final RegistryObject<WallBlock> MAGMA_BLOCK_WALL = register("magma_block_wall",
+            () -> new wallBlock(BlockBehaviour.Properties.copy(MAGMA_BLOCK).sound(SoundType.MOSS).lightLevel((blockstate) -> 3),
+                    "","","",false));
 
     public static void register() {
         IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();

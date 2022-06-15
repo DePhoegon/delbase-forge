@@ -1,6 +1,5 @@
 package com.dephoegon.delbase.aid.slots;
 
-import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.items.IItemHandler;
@@ -13,10 +12,10 @@ public class itemSlot extends SlotItemHandler {
     public itemSlot(IItemHandler itemHandler, int index, int xPosition, int yPosition) {
         super(itemHandler, index, xPosition, yPosition);
     }
-    private ArrayList<Item> plansList;
+
     @Override
     public boolean mayPlace(@NotNull ItemStack itemStack) {
-        plansList = planSlots.getPlansArray(plansList);
+        ArrayList<Item> plansList = planSlots.getPlansArray();
         return !plansList.contains(itemStack.getItem());
     }
 }

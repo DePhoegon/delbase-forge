@@ -10,6 +10,8 @@
     "delbase:chiseled_polished_blackstone_fence_gate",
     "delbase:polished_basalt_fence_gate",
     "delbase:bone_block_fence_gate",
-    "delbase:purpur_block_fence_gate"
+    "delbase:purpur_block_fence_gate",
+    "delbase:netherrack_fence_gate",
+    "delbase:magma_block_fence_gate"
   ]
 }

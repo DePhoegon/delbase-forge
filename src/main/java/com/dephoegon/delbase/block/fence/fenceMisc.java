@@ -123,6 +123,25 @@ public class fenceMisc {
     public static final RegistryObject<FenceGateBlock> DRIED_KELP_FENCE_GATE = register("dried_kelp_fence_gate",
             () -> new fenceGateBlock(BlockBehaviour.Properties.copy(DRIED_KELP_BLOCK).sound(SoundType.GRASS),
                     "","","", false));
+    public static final RegistryObject<FenceBlock> NETHERRACK_FENCE = register("netherrack_fence",
+            () -> new fenceBlock(BlockBehaviour.Properties.copy(NETHERRACK).sound(SoundType.NETHERRACK),
+                    "","","", false));
+    public static final RegistryObject<FenceGateBlock> NETHERRACK_FENCE_GATE = register("netherrack_fence_gate",
+            () -> new fenceGateBlock(BlockBehaviour.Properties.copy(NETHERRACK).sound(SoundType.NETHERRACK),
+                    "","","", false));
+    public static final RegistryObject<FenceBlock> SHROOMLIGHT_FENCE = register("shroomlight_fence",
+            () -> new fenceBlock(BlockBehaviour.Properties.copy(SHROOMLIGHT).sound(SoundType.SHROOMLIGHT).lightLevel((blockState) -> 15),
+                    "","","", false));
+    public static final RegistryObject<FenceGateBlock> SHROOMLIGHT_FENCE_GATE = register("shroomlight_fence_gate",
+            () -> new fenceGateBlock(BlockBehaviour.Properties.copy(SHROOMLIGHT).sound(SoundType.SHROOMLIGHT).lightLevel((blockState) -> 15),
+                    "","","", false));
+    public static final RegistryObject<FenceBlock> MAGMA_BLOCK_FENCE = register("magma_block_fence",
+            () -> new fenceBlock(BlockBehaviour.Properties.copy(MAGMA_BLOCK).sound(SoundType.MOSS).lightLevel((blockState) -> 3),
+                    "","","", false));
+    public static final RegistryObject<FenceGateBlock> MAGMA_BLOCK_FENCE_GATE = register("magma_block_fence_gate",
+            () -> new fenceGateBlock(BlockBehaviour.Properties.copy(MAGMA_BLOCK).sound(SoundType.MOSS).lightLevel((blockState) -> 3),
+                    "","","", false));
+
 
     public static void register() {
         IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();

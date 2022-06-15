@@ -71,6 +71,15 @@ public class stairMisc {
     public static final RegistryObject<StairBlock> DRIPSTONE_STAIR = register("dripstone_stair",
             ()-> new stairBlock(DRIPSTONE_BLOCK::defaultBlockState, BlockBehaviour.Properties.copy(DRIPSTONE_BLOCK).sound(SoundType.STONE)
                     ,"","","", false));
+    public static final RegistryObject<StairBlock> NETHERRACK_STAIR = register("netherrack_stair",
+            ()-> new stairBlock(NETHERRACK::defaultBlockState, BlockBehaviour.Properties.copy(NETHERRACK).sound(SoundType.NETHERRACK)
+                    ,"","","", false));
+    public static final RegistryObject<StairBlock> SHROOMLIGHT_STAIR = register("shroomlight_stair",
+            ()-> new stairBlock(SHROOMLIGHT::defaultBlockState, BlockBehaviour.Properties.copy(SHROOMLIGHT).sound(SoundType.SHROOMLIGHT).lightLevel((blockstate) -> 15)
+                    ,"","","", false));
+    public static final RegistryObject<StairBlock> MAGMA_BLOCK_STAIR = register("magma_block_stair",
+            ()-> new stairBlock(MAGMA_BLOCK::defaultBlockState, BlockBehaviour.Properties.copy(MAGMA_BLOCK).sound(SoundType.MOSS).lightLevel((blockstate) -> 3)
+                    ,"","","", false));
 
     public static void register() {
         IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();

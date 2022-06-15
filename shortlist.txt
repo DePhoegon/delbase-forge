@@ -1,0 +1,26 @@
+Verify Blocks & Items
+-Blockstate
+-Models
+-Tags
+-loot_tables
+-crafting Recipes
+== block cutter
+== camp fire
+== Crafting table
+== Furnace
+== Stone Cutter
+
+Touchup textures
+-Block cutter
+-look for out of place textures to touch up
+
+NEI/JEI integration
+
+InGame Book
+
+Achievements
+
+
+
+
+Build Showcases

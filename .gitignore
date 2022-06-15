@@ -25,7 +25,6 @@ run/defaultconfigs
 run/logs
 run/mods
 run/saves
-run/saves/SuperFlat Dev-World
 run/*.log
 user*.json
 *.db
