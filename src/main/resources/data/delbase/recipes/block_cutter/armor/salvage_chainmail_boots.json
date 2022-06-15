@@ -1,0 +1,14 @@
+{
+  "type": "delbase:block_cutting",
+  "ingredients": [
+    {
+      "item": "delbase:armor_compound"
+    },
+    {
+      "item": "minecraft:chainmail_boots"
+    }
+  ],
+  "output": {
+    "item": "minecraft:chain"
+  }
+}

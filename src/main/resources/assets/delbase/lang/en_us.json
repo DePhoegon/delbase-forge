@@ -26,6 +26,7 @@
   "item.delbase.stair_plans": "Stair Making Plans",
   "item.delbase.fence_plans": "Fence Making Plans",
   "item.delbase.fence_gate_plans": "Fence Gate Making Plans",
+  "item.delbase.armor_compound": "Armors & Tools Dissolver",
 
 
   "block.delbase.blood_chiseled_sand_stone": "Dark Red Chiseled Sandstone",
@@ -1095,6 +1096,8 @@
   "block.delbase.ash_fence_gate": "Ash Fence Gate",
 
   "block.delbase.block_cutting_station": "Block Processing Station",
+
+  "block.delbase.hardened_oak_planks": "Hardened Oak Planks",
 
   "itemGroup.dephoegon_blocks": "DePhoegons' Blocks",
   "itemGroup.dephoegon_items": "DePhoegons' Items",

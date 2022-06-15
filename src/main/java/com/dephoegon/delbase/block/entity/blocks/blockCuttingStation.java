@@ -13,9 +13,7 @@ import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.inventory.ContainerData;
-import net.minecraft.world.item.BlockItem;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.*;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.entity.BlockEntity;
@@ -30,7 +28,11 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.Optional;
 
+import static com.dephoegon.delbase.aid.recipe.TierRandomDropAid.*;
+import static com.dephoegon.delbase.aid.recipe.countAid.armorScrapAid;
+import static com.dephoegon.delbase.aid.recipe.countAid.bonusScrapAid;
 import static com.dephoegon.delbase.item.blockCutterPlans.*;
+import static net.minecraft.world.item.Items.*;
 
 public class blockCuttingStation extends BlockEntity implements MenuProvider {
     public static final int outputSlot = 0;
@@ -53,18 +55,18 @@ public class blockCuttingStation extends BlockEntity implements MenuProvider {
         this.data = new ContainerData() {
             @Override
             public int get(int index) {
-                switch (index) {
-                    case 0: return blockCuttingStation.this.progress;
-                    case 1: return blockCuttingStation.this.maxProgress;
-                    default: return 0;
-                }
+                return switch (index) {
+                    case 0 -> blockCuttingStation.this.progress;
+                    case 1 -> blockCuttingStation.this.maxProgress;
+                    default -> 0;
+                };
             }
 
             @Override
             public void set(int pIndex, int pValue) {
                 switch (pIndex) {
-                    case 0: blockCuttingStation.this.progress = pValue; break;
-                    case 1: blockCuttingStation.this.maxProgress = pValue; break;
+                    case 0 -> blockCuttingStation.this.progress = pValue;
+                    case 1 -> blockCuttingStation.this.maxProgress = pValue;
                 }
             }
 
@@ -85,6 +87,7 @@ public class blockCuttingStation extends BlockEntity implements MenuProvider {
         return new blockCuttingStationMenu(pContainerId, pInventory,this, this.data);
     }
 
+    @SuppressWarnings("NullableProblems")
     @Nullable
     @Override
     public <T> LazyOptional<T> getCapability(@NotNull Capability<T> cap, Direction side) {
@@ -99,7 +102,6 @@ public class blockCuttingStation extends BlockEntity implements MenuProvider {
         super.onLoad();
         lazyItemHandler = LazyOptional.of(() -> itemHandler);
     }
-
     @Override
     public void invalidateCaps() {
         super.invalidateCaps();
@@ -138,7 +140,7 @@ public class blockCuttingStation extends BlockEntity implements MenuProvider {
             setChanged(pLevel, pPos, pState);
         }
     }
-    private static boolean hasRecipe(blockCuttingStation entity) {
+    private static boolean hasRecipe(@NotNull blockCuttingStation entity) {
         Level level = entity.level;
         SimpleContainer inventory = new SimpleContainer(entity.itemHandler.getSlots());
         for (int i =0; i < entity.itemHandler.getSlots(); i++) {
@@ -149,9 +151,10 @@ public class blockCuttingStation extends BlockEntity implements MenuProvider {
                 .getRecipeFor(blockCuttingStationRecipes.Type.INSTANCE, inventory, level);
         if (match.isPresent()){
             Item planSlotItem;
-            if (entity.itemHandler.getStackInSlot(entity.planSlot).isEmpty()) { return false; } else { planSlotItem = entity.itemHandler.getStackInSlot(entity.planSlot).getItem(); }
+            if (entity.itemHandler.getStackInSlot(planSlot).isEmpty()) { return false; } else { planSlotItem = entity.itemHandler.getStackInSlot(planSlot).getItem(); }
             int count = 0;
             ItemStack resultItem = match.get().getResultItem();
+            Item inputItem = entity.itemHandler.getStackInSlot(inputSlot).getItem();
             if (resultItem.getItem() instanceof BlockItem tOutput) {
                 if (tOutput.getBlock() instanceof SlabBlock) {
                     count = 1;
@@ -169,14 +172,18 @@ public class blockCuttingStation extends BlockEntity implements MenuProvider {
                 if (tOutput.getBlock() instanceof FenceGateBlock && planSlotItem != FENCE_GATE_PLANS.get().asItem()) {
                     return false;
                 }
-            }
-            return canInsertAmountIntoOutputSlot(inventory, count, outputSlot) && canInsertItemIntoOutputSlot(inventory, resultItem, outputSlot);
+            } // Just because I like to enforce plan usage.
+            if (inputItem instanceof ArmorItem counter) { count = armorScrapAid(counter)-1; }
+            if (inputItem instanceof HorseArmorItem) { count = 4; }
+            // Counting Aids
+            return canInsertAmountIntoOutputSlot(inventory, count) && canInsertItemIntoOutputSlot(inventory, resultItem);
         } else return false;
     }
     // hasRecipe for checking for if an item is in a slot or not.
 
-    private static void craftItem(blockCuttingStation entity) {
+    private static void craftItem(@NotNull blockCuttingStation entity) {
         Level level = entity.level;
+        BlockPos worldPosition = entity.worldPosition;
         SimpleContainer inventory = new SimpleContainer(entity.itemHandler.getSlots());
         for (int i = 0; i < entity.itemHandler.getSlots(); i++) {
             inventory.setItem(i, entity.itemHandler.getStackInSlot(i));
@@ -187,23 +194,81 @@ public class blockCuttingStation extends BlockEntity implements MenuProvider {
                 .getRecipeFor(blockCuttingStationRecipes.Type.INSTANCE, inventory, level);
 
         if (match.isPresent()) {
+            String keyString = "none";
+            boolean skipOutputSlot = false;
             int count = 1;
+            if (entity.itemHandler.getStackInSlot(planSlot).getItem() == ARMOR_COMPOUND.get().asItem()) {
+                boolean skipCompoundEat = false;
+                if (entity.itemHandler.getStackInSlot(inputSlot).getItem() instanceof ArmorItem recycle) {
+                    count = armorScrapAid(recycle);
+                    if (recycle.getMaterial() == ArmorMaterials.NETHERITE) {
+                        int bonusCount = bonusScrapAid(recycle);
+                        SimpleContainer bonus = new SimpleContainer(bonusCount);
+                        for (int i = 0; i < bonusCount; i++) {
+                            bonus.setItem(i, DIAMOND.getDefaultInstance());
+                        }
+                        Containers.dropContents(level, worldPosition, bonus);
+                    }
+                }
+                if (entity.itemHandler.getStackInSlot(inputSlot).getItem() instanceof HorseArmorItem) { count = 5; }
+                if (entity.itemHandler.getStackInSlot(inputSlot).getItem() instanceof TieredItem tieredItem) {
+                    if (tieredItem.getTier() == Tiers.STONE) {
+                        skipOutputSlot = true;
+                        skipCompoundEat = true;
+                        keyString = "stone";
+                    }
+                    if (tieredItem.getTier() == Tiers.WOOD) {
+                        skipOutputSlot = true;
+                        skipCompoundEat = true;
+                        keyString = "wood";
+                    }
+                    if (tieredItem.getTier() == Tiers.NETHERITE && !(entity.itemHandler.getStackInSlot(inputSlot).getItem() instanceof ArmorItem)) {
+                        skipOutputSlot = true;
+                        skipCompoundEat = false;
+                        keyString = "netherite";
+                    }
+                    //Special Behaviors for the Tiers of items
+                }
+                if (!(skipCompoundEat)){
+                    entity.itemHandler.extractItem(planSlot, 1, false);
+                }
+            }
             entity.itemHandler.extractItem(inputSlot, 1, false);
             if (match.get().getResultItem().getItem() instanceof BlockItem tOutput) {
                 if (tOutput.getBlock() instanceof SlabBlock) { count = 2; }
             }
-            entity.itemHandler.setStackInSlot(outputSlot, new ItemStack(match.get().getResultItem().getItem(),
-                    entity.itemHandler.getStackInSlot(outputSlot).getCount() + count));
+            if (skipOutputSlot) {
+                int returnSize = 2;
+                SimpleContainer stone = null;
+                if (keyString.equals("stone")) {
+                    stone = stoneContainer(returnSize);
+                    //stone confetti
+                }
+                if (keyString.equals("wood")){
+                    stone = woodContainer(returnSize);
+                    //wooden confetti
+                }
+                if (keyString.equals("netherite")) {
+                    stone = netheriteToolsBonus();
+                    entity.itemHandler.setStackInSlot(outputSlot, new ItemStack(match.get().getResultItem().getItem(),
+                            entity.itemHandler.getStackInSlot(outputSlot).getCount() + count));
+                    //put into the slot, as Netherite is a high tier. diamond still allowed pop out like confetti.
+                }
+                Containers.dropContents(level, worldPosition, stone);
+            } else {
+                entity.itemHandler.setStackInSlot(outputSlot, new ItemStack(match.get().getResultItem().getItem(),
+                        entity.itemHandler.getStackInSlot(outputSlot).getCount() + count));
+            }
             entity.resetProgress();
         }
     }
     private void resetProgress() {
         this.progress = 0;
     }
-    private static boolean canInsertItemIntoOutputSlot(SimpleContainer inventory, ItemStack output, int outSlot) {
-        return inventory.getItem(outSlot).getItem() == output.getItem() || inventory.getItem(outSlot).isEmpty();
+    private static boolean canInsertItemIntoOutputSlot(@NotNull SimpleContainer inventory, @NotNull ItemStack output) {
+        return inventory.getItem(blockCuttingStation.outputSlot).getItem() == output.getItem() || inventory.getItem(blockCuttingStation.outputSlot).isEmpty();
     }
-    private static boolean canInsertAmountIntoOutputSlot(SimpleContainer inventory, int variableOut, int outSlot) {
-        return inventory.getItem(outSlot).getMaxStackSize() > inventory.getItem(outSlot).getCount()+variableOut;
+    private static boolean canInsertAmountIntoOutputSlot(@NotNull SimpleContainer inventory, int variableOut) {
+        return inventory.getItem(blockCuttingStation.outputSlot).getMaxStackSize() > inventory.getItem(blockCuttingStation.outputSlot).getCount()+variableOut;
     }
 }

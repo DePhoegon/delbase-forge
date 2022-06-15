@@ -3,14 +3,13 @@ package com.dephoegon.delbase.aid.util;
 import com.dephoegon.delbase.aid.block.colorshift.grav.solidSandBlock;
 import com.dephoegon.delbase.aid.block.stock.energySlab;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.state.BlockState;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
 
-import static com.dephoegon.delbase.block.miscBlock.slabMisc.GLOWSTONE_SLAB;
-import static com.dephoegon.delbase.block.miscBlock.stairMisc.GLOWSTONE_STAIR;
-import static com.dephoegon.delbase.block.miscBlock.wallMisc.GLOWSTONE_WALL;
+import static com.dephoegon.delbase.block.slab.slabMisc.GLOWSTONE_SLAB;
+import static com.dephoegon.delbase.block.stair.stairMisc.GLOWSTONE_STAIR;
+import static com.dephoegon.delbase.block.wall.wallMisc.GLOWSTONE_WALL;
 import static net.minecraft.world.level.block.Blocks.*;
 
 public abstract class blockArrayList {

@@ -7,7 +7,6 @@ import com.dephoegon.delbase.block.entity.screen.menuTypes;
 import com.dephoegon.delbase.block.fence.*;
 import com.dephoegon.delbase.block.general.*;
 import com.dephoegon.delbase.block.gravity.gravColorSands;
-import com.dephoegon.delbase.block.miscBlock.*;
 import com.dephoegon.delbase.block.slab.*;
 import com.dephoegon.delbase.block.stair.*;
 import com.dephoegon.delbase.block.wall.*;
@@ -99,5 +98,6 @@ public class regList {
         //Special
         menuTypes.register();
         modRecipes.register();
+        miscSpecialCases.register();
     }
 }

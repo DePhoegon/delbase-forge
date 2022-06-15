@@ -1,0 +1,14 @@
+{
+  "type": "delbase:block_cutting",
+  "ingredients": [
+    {
+      "item": "delbase:armor_compound"
+    },
+    {
+      "item": "minecraft:netherite_hoe"
+    }
+  ],
+  "output": {
+    "item": "minecraft:netherite_ingot"
+  }
+}

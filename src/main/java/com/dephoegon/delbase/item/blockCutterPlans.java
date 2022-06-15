@@ -24,6 +24,8 @@ public class blockCutterPlans {
             () -> new Item(new Item.Properties().tab(DELBASE_ITEMS).stacksTo(1)));
     public static final RegistryObject<Item> STAIR_PLANS = ITEMS.register("stair_plans",
             () -> new Item(new Item.Properties().tab(DELBASE_ITEMS).stacksTo(1)));
+    public static final RegistryObject<Item> ARMOR_COMPOUND = ITEMS.register("armor_compound",
+            () -> new Item(new Item.Properties().tab(DELBASE_ITEMS).stacksTo(64)));
 
     public static void register() {
         IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
