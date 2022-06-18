@@ -1,7 +1,8 @@
 Verify Blocks & Items
--Blockstate
--Models
--Tags
+-Blockstate =
+-Models =
+-Tags =
+
 -loot_tables
 -crafting Recipes
 == block cutter

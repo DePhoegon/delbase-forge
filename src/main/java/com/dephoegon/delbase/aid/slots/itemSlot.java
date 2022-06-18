@@ -15,7 +15,7 @@ public class itemSlot extends SlotItemHandler {
 
     @Override
     public boolean mayPlace(@NotNull ItemStack itemStack) {
-        ArrayList<Item> plansList = planSlots.getPlansArray();
+        ArrayList<Item> plansList = planSlots.getFullPlanSlotArray();
         return !plansList.contains(itemStack.getItem());
     }
 }

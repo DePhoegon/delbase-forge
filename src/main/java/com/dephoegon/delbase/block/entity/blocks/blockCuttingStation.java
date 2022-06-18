@@ -39,9 +39,11 @@ public class blockCuttingStation extends BlockEntity implements MenuProvider {
     public static final int inputSlot = 2;
     public static final int planSlot = 1;
     public static final int blockCuttingStationSlotCount = 3;
+    public static ItemStackHandler iHandler = null;
     private final ItemStackHandler itemHandler = new ItemStackHandler(blockCuttingStationSlotCount) {
         @Override
         protected void onContentsChanged(int slot) {
+            iHandler = itemHandler;
             setChanged();
         }
     };

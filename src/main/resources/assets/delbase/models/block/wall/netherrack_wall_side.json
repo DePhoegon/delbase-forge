@@ -2,6 +2,6 @@
   "parent": "delbase:block/template/wall_side",
   "textures": {
     "wall": "minecraft:block/netherrack",
-    "top": "delbase:block/netherrack"
+    "top": "minecraft:block/netherrack"
   }
 }

@@ -2,6 +2,6 @@
   "parent": "delbase:block/template/wall_side",
   "textures": {
     "wall": "minecraft:block/shroomlight",
-    "top": "delbase:block/shroomlight"
+    "top": "minecraft:block/shroomlight"
   }
 }

@@ -4,6 +4,7 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.items.IItemHandler;
 import net.minecraftforge.items.SlotItemHandler;
+import org.jetbrains.annotations.Contract;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
@@ -16,24 +17,29 @@ public class planSlots extends SlotItemHandler {
         super(itemHandler, index, xPosition, yPosition);
     }
 
-    private static ArrayList<Item> setPlanArray(){
+    private static @NotNull ArrayList<Item> setPlansOnlyArray(){
         ArrayList<Item> tempArray = new ArrayList<>();
         tempArray.add(WALL_PLANS.get().asItem());
         tempArray.add(FENCE_PLANS.get().asItem());
         tempArray.add(FENCE_GATE_PLANS.get().asItem());
         tempArray.add(SLAB_PLANS.get().asItem());
         tempArray.add(STAIR_PLANS.get().asItem());
-        tempArray.add(ARMOR_COMPOUND.get().asItem());
         return tempArray;
     }
 
-    public static ArrayList<Item> getPlansArray() {
-        return setPlanArray();
+    @Contract("_ -> param1")
+    private static @NotNull ArrayList<Item> setFullArray(@NotNull ArrayList<Item> list) {
+        list.add(ARMOR_COMPOUND.get().asItem());
+        return list;
+    }
+    public static @NotNull ArrayList<Item> getPlanOnlyArray() { return setPlansOnlyArray(); }
+    public static @NotNull ArrayList<Item> getFullPlanSlotArray() {
+        return setFullArray(setPlansOnlyArray());
     }
 
     @Override
     public boolean mayPlace(@NotNull ItemStack itemStack) {
-        ArrayList<Item> planArray = getPlansArray();
+        ArrayList<Item> planArray = getFullPlanSlotArray();
         return planArray.contains(itemStack.getItem());
     }
     @Override
