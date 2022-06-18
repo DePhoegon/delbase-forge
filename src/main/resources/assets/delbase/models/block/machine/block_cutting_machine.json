@@ -7,6 +7,19 @@
 	},
 	"elements": [
 		{
+			"from": [1.5, 14, 2.75],
+			"to": [2, 14.75, 4.25],
+			"rotation": {"angle": 22.5, "axis": "y", "origin": [13, 14, 7]},
+			"faces": {
+				"north": {"uv": [5.75, 12, 6, 12.25], "texture": "#0"},
+				"east": {"uv": [12, 5.75, 12.25, 6], "texture": "#0"},
+				"south": {"uv": [5.5, 12, 5.75, 12.25], "texture": "#0"},
+				"west": {"uv": [12, 5.5, 12.25, 5.75], "texture": "#0"},
+				"up": {"uv": [6.25, 12.25, 6, 12], "rotation": 180, "texture": "#0"},
+				"down": {"uv": [12.25, 6, 12, 6.25], "rotation": 180, "texture": "#0"}
+			}
+		},
+		{
 			"from": [13, 0, 13],
 			"to": [14, 12, 14],
 			"rotation": {"angle": 0, "axis": "y", "origin": [13, 14, 7]},
@@ -889,19 +902,47 @@
 				"up": {"uv": [11.75, 1.75, 11.25, 1.5], "rotation": 180, "texture": "#0"},
 				"down": {"uv": [2.25, 11.25, 1.75, 11.5], "rotation": 180, "texture": "#0"}
 			}
+		}
+	],
+	"display": {
+		"thirdperson_righthand": {
+			"rotation": [9, -14, 9],
+			"translation": [4.25, -0.75, -2],
+			"scale": [0.69, 0.69, 0.69]
 		},
+		"thirdperson_lefthand": {
+			"rotation": [-1, -18, 0],
+			"translation": [4.5, 0, -2],
+			"scale": [0.69, 0.69, 0.69]
+		},
+		"firstperson_righthand": {
+			"rotation": [9, 0, 0],
+			"translation": [2.5, 0.5, 1],
+			"scale": [0.7, 0.6, 0.4]
+		},
+		"firstperson_lefthand": {
+			"rotation": [3, -1, 0],
+			"translation": [3.75, 0, 0.75],
+			"scale": [0.7, 0.6, 0.4]
+		},
+		"ground": {
+			"scale": [0.8, 0.8, 0.8]
+		},
+		"gui": {
+			"rotation": [23, 173, -4],
+			"scale": [0.7, 0.7, 0.7]
+		},
+		"fixed": {
+			"rotation": [-17, 5, 5],
+			"translation": [0, 2.75, 2.75]
+		}
+	},
+	"groups": [
 		{
-			"from": [1.5, 14, 2.75],
-			"to": [2, 14.75, 4.25],
-			"rotation": {"angle": 22.5, "axis": "y", "origin": [13, 14, 7]},
-			"faces": {
-				"north": {"uv": [5.75, 12, 6, 12.25], "texture": "#0"},
-				"east": {"uv": [12, 5.75, 12.25, 6], "texture": "#0"},
-				"south": {"uv": [5.5, 12, 5.75, 12.25], "texture": "#0"},
-				"west": {"uv": [12, 5.5, 12.25, 5.75], "texture": "#0"},
-				"up": {"uv": [6.25, 12.25, 6, 12], "rotation": 180, "texture": "#0"},
-				"down": {"uv": [12.25, 6, 12, 6.25], "rotation": 180, "texture": "#0"}
-			}
+			"name": "VoxelShapes",
+			"origin": [13, 14, 7],
+			"color": 0,
+			"children": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68]
 		}
 	]
 }
