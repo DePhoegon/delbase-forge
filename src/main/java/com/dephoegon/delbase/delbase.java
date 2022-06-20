@@ -1,5 +1,7 @@
 package com.dephoegon.delbase;
 
+import com.dephoegon.delbase.aid.config.clientConfig;
+import com.dephoegon.delbase.aid.config.commonConfig;
 import com.dephoegon.delbase.aid.util.regList;
 import com.dephoegon.delbase.block.entity.screen.blockCuttingStationScreen;
 import com.dephoegon.delbase.block.entity.screen.menuTypes;
@@ -14,7 +16,9 @@ import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
+import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.apache.logging.log4j.LogManager;
@@ -48,6 +52,8 @@ public class delbase
         eventBus.addListener(this::clientSetup);
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
+        ModLoadingContext.get().registerConfig(ModConfig.Type.CLIENT, clientConfig.SPEC, "delbase-client.toml");
+        ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, commonConfig.SPEC, "delbase-common.toml");
     }
     @OnlyIn(Dist.CLIENT)
     // ClientSetup In the aid/event/eventBusEvent

@@ -1,5 +1,6 @@
 package com.dephoegon.delbase.aid.util;
 
+import com.dephoegon.delbase.aid.config.commonConfig;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.level.BlockGetter;
@@ -14,7 +15,7 @@ import static net.minecraft.world.level.block.state.properties.BlockStatePropert
 
 public class burnChance {
     private static boolean ashReplaceRNG() {
-        return randomNum(8) < 3;
+        return randomNum(commonConfig.BURN_CHANCE_NUMBER_CAP.get()) > commonConfig.BURN_CHANCE_NUMBER.get();
     } //used to control % odds for replacing blocks/spawning fire
     private static boolean threshHold(int cap, int thresh) { return randomNum(cap) > thresh; }
     public static void rngBurn(@NotNull BlockGetter world, @NotNull BlockState burningBlock, @NotNull BlockState ashBlock, BlockPos pos, int burnThreshHold, int burnCap){

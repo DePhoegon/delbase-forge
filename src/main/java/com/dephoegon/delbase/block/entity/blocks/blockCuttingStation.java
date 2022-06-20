@@ -1,5 +1,6 @@
 package com.dephoegon.delbase.block.entity.blocks;
 
+import com.dephoegon.delbase.aid.config.commonConfig;
 import com.dephoegon.delbase.aid.recipe.blockCuttingStationRecipes;
 import com.dephoegon.delbase.block.entity.blockEntities;
 import com.dephoegon.delbase.block.entity.screen.blockCuttingStationMenu;
@@ -51,7 +52,7 @@ public class blockCuttingStation extends BlockEntity implements MenuProvider {
 
     protected final ContainerData data;
     private int progress = 0;
-    private int maxProgress = 72;
+    private int maxProgress = commonConfig.BLOCK_CUTTING_STATION_CRAFT_TIME.get();
     public blockCuttingStation(BlockPos pWorldPosition, BlockState pBlockState) {
         super(blockEntities.BLOCK_CUTTING_STATION_BLOCK_ENTITY.get(), pWorldPosition, pBlockState);
         this.data = new ContainerData() {
