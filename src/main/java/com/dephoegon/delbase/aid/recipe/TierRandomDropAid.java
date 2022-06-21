@@ -1,5 +1,6 @@
 package com.dephoegon.delbase.aid.recipe;
 
+import com.dephoegon.delbase.aid.config.commonConfig;
 import net.minecraft.world.SimpleContainer;
 import org.jetbrains.annotations.NotNull;
 
@@ -38,11 +39,25 @@ public class TierRandomDropAid {
         }
         return stone;
     }
-    public static @NotNull SimpleContainer netheriteToolsBonus() {
-        SimpleContainer stone = new SimpleContainer(2);
-        stone.setItem(0, DIAMOND.getDefaultInstance());
-        int RNGs = (int) Math.floor(Math.random()*4);
-        if (RNGs > 2) { stone.setItem(1, STICK.getDefaultInstance()); }
+    public static @NotNull SimpleContainer netheriteToolsBonus(int diamond) {
+        int bonusSize = commonConfig.NETHERRITE_BONUS_ROLLS.get();
+        SimpleContainer stone = new SimpleContainer(bonusSize+diamond);
+        for (int i = 0; i < diamond; i++) {
+            stone.setItem(i, DIAMOND.getDefaultInstance());
+        }
+        for (int i = 0; i < bonusSize; i++) {
+            int RNGs = (int) Math.floor(Math.random()*4);
+            if (RNGs > 2) { stone.setItem(i+diamond, STICK.getDefaultInstance()); }
+        }
+        return stone;
+    }
+    public static @NotNull SimpleContainer ToolsBonus() {
+        int bonusSize = commonConfig.NETHERRITE_BONUS_ROLLS.get();
+        SimpleContainer stone = new SimpleContainer(bonusSize);
+        for (int i = 0; i < bonusSize; i++) {
+            int RNGs = (int) Math.floor(Math.random()*4);
+            if (RNGs > 2) { stone.setItem(i, STICK.getDefaultInstance()); }
+        }
         return stone;
     }
 }

@@ -197,14 +197,19 @@ public class blockCuttingStation extends BlockEntity implements MenuProvider {
                 .getRecipeFor(blockCuttingStationRecipes.Type.INSTANCE, inventory, level);
 
         if (match.isPresent()) {
+            int nether = 0;
+            ItemStack resultItem = match.get().getResultItem();
+            Item inputItem = entity.itemHandler.getStackInSlot(inputSlot).getItem();
             String keyString = "none";
             boolean skipOutputSlot = false;
             int count = 1;
             if (entity.itemHandler.getStackInSlot(planSlot).getItem() == ARMOR_COMPOUND.get().asItem()) {
+                Item le_item = entity.itemHandler.getStackInSlot(inputSlot).getItem();
                 boolean skipCompoundEat = false;
-                if (entity.itemHandler.getStackInSlot(inputSlot).getItem() instanceof ArmorItem recycle) {
+                if (le_item instanceof ArmorItem recycle) {
                     count = armorScrapAid(recycle);
                     if (recycle.getMaterial() == ArmorMaterials.NETHERITE) {
+                        count = 1;
                         int bonusCount = bonusScrapAid(recycle);
                         SimpleContainer bonus = new SimpleContainer(bonusCount);
                         for (int i = 0; i < bonusCount; i++) {
@@ -213,23 +218,32 @@ public class blockCuttingStation extends BlockEntity implements MenuProvider {
                         Containers.dropContents(level, worldPosition, bonus);
                     }
                 }
-                if (entity.itemHandler.getStackInSlot(inputSlot).getItem() instanceof HorseArmorItem) { count = 5; }
-                if (entity.itemHandler.getStackInSlot(inputSlot).getItem() instanceof TieredItem tieredItem) {
-                    if (tieredItem.getTier() == Tiers.STONE) {
-                        skipOutputSlot = true;
-                        skipCompoundEat = true;
-                        keyString = "stone";
-                    }
-                    if (tieredItem.getTier() == Tiers.WOOD) {
-                        skipOutputSlot = true;
-                        skipCompoundEat = true;
-                        keyString = "wood";
-                    }
-                    if (tieredItem.getTier() == Tiers.NETHERITE && !(entity.itemHandler.getStackInSlot(inputSlot).getItem() instanceof ArmorItem)) {
-                        skipOutputSlot = true;
-                        skipCompoundEat = false;
-                        keyString = "netherite";
-                    }
+                if (le_item instanceof HorseArmorItem) { count = 5; }
+                if (le_item instanceof TieredItem tieredItem) {
+                        if (tieredItem.getTier() == Tiers.STONE) {
+                            skipOutputSlot = true;
+                            skipCompoundEat = true;
+                            keyString = "stone";
+                        }
+                        if (tieredItem.getTier() == Tiers.WOOD) {
+                            skipOutputSlot = true;
+                            skipCompoundEat = true;
+                            keyString = "wood";
+                        }
+                        if (tieredItem.getTier() == Tiers.NETHERITE) {
+                            skipOutputSlot = true;
+                            keyString = "netherite";
+                            if (le_item instanceof SwordItem) { count = commonConfig.NETHERRITE_SWORD_BONUS.get(); }
+                            if (le_item instanceof AxeItem) { count = commonConfig.NETHERRITE_AXE_BONUS.get(); }
+                            if (le_item instanceof PickaxeItem) { count = commonConfig.NETHERRITE_PICKAXE_BONUS.get(); }
+                        }
+                        if (keyString.equals("none")) {
+                            skipOutputSlot = true;
+                            keyString = "tools";
+                            if (le_item instanceof SwordItem) { count = commonConfig.IRON_PLUS_SWORD.get(); }
+                            if (le_item instanceof AxeItem) { count = commonConfig.IRON_PLUS_AXE.get(); }
+                            if (le_item instanceof PickaxeItem) { count = commonConfig.IRON_PLUS_PICKAXE.get(); }
+                        }
                     //Special Behaviors for the Tiers of items
                 }
                 if (!(skipCompoundEat)){
@@ -244,18 +258,26 @@ public class blockCuttingStation extends BlockEntity implements MenuProvider {
                 int returnSize = 2;
                 SimpleContainer stone = null;
                 if (keyString.equals("stone")) {
+                    returnSize = commonConfig.STONE_SALVAGE_ROLLS.get();
                     stone = stoneContainer(returnSize);
                     //stone confetti
                 }
                 if (keyString.equals("wood")){
+                    returnSize = commonConfig.WOOD_SALVAGE_ROLLS.get();
                     stone = woodContainer(returnSize);
                     //wooden confetti
                 }
                 if (keyString.equals("netherite")) {
-                    stone = netheriteToolsBonus();
+                    stone = netheriteToolsBonus(count);
+                    entity.itemHandler.setStackInSlot(outputSlot, new ItemStack(match.get().getResultItem().getItem(),
+                            entity.itemHandler.getStackInSlot(outputSlot).getCount() + 1));
+                    //put into the slot, as Netherite is a high tier. diamond(s) still allowed pop out like confetti.
+                }
+                if (keyString.equals("tools")) {
+                    stone = ToolsBonus();
                     entity.itemHandler.setStackInSlot(outputSlot, new ItemStack(match.get().getResultItem().getItem(),
                             entity.itemHandler.getStackInSlot(outputSlot).getCount() + count));
-                    //put into the slot, as Netherite is a high tier. diamond still allowed pop out like confetti.
+                    //pops sticks like confetti, puts the output item
                 }
                 Containers.dropContents(level, worldPosition, stone);
             } else {
