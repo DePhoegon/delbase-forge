@@ -9,6 +9,7 @@
     }
   ],
   "output": {
-    "item": "minecraft:acacia_stairs"
+    "item": "minecraft:acacia_stairs",
+    "count": 1
   }
 }

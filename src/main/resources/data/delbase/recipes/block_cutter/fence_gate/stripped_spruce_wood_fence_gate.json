@@ -9,6 +9,7 @@
 }
 ],
 "output": {
-"item": "delbase:stripped_spruce_wood_fence_gate"
+"item": "delbase:stripped_spruce_wood_fence_gate",
+  "count": 1
 }
 }

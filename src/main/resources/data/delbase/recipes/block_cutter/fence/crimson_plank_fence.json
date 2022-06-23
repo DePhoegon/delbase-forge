@@ -9,6 +9,7 @@
     }
   ],
   "output": {
-    "item": "minecraft:crimson_fence"
+    "item": "minecraft:crimson_fence",
+    "count": 1
   }
 }

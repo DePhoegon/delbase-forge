@@ -9,6 +9,7 @@
 }
 ],
 "output": {
-"item": "delbase:raw_copper_wall"
+"item": "delbase:raw_copper_wall",
+  "count": 1
 }
 }

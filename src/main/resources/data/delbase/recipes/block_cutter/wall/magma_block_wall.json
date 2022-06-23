@@ -9,6 +9,7 @@
 }
 ],
 "output": {
-"item": "delbase:magma_block_wall"
+"item": "delbase:magma_block_wall",
+  "count": 1
 }
 }

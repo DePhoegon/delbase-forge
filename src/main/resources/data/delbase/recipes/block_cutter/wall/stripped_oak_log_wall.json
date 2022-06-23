@@ -9,6 +9,7 @@
 }
 ],
 "output": {
-"item": "delbase:stripped_oak_log_wall"
+"item": "delbase:stripped_oak_log_wall",
+  "count": 1
 }
 }

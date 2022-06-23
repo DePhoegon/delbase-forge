@@ -16,6 +16,7 @@ public class blockEntities {
     public static final DeferredRegister<BlockEntityType<?>> BLOCK_ENTITIES =
             DeferredRegister.create(ForgeRegistries.BLOCK_ENTITIES, Mod_ID);
 
+    @SuppressWarnings("ConstantConditions")
     public static final RegistryObject<BlockEntityType<blockCuttingStation>> BLOCK_CUTTING_STATION_BLOCK_ENTITY =
             BLOCK_ENTITIES.register("block_cutting_station_block_entity", () ->
                     Builder.of(blockCuttingStation::new, machineBlocks.BLOCK_CUTTING_STATION.get()).build(null));

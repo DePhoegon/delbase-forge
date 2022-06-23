@@ -9,6 +9,7 @@
 }
 ],
 "output": {
-"item": "delbase:glowstone_stair"
+"item": "delbase:glowstone_stair",
+  "count": 1
 }
 }

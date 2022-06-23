@@ -9,6 +9,7 @@
 }
 ],
 "output": {
-"item": "delbase:spruce_wood_wall"
+"item": "delbase:spruce_wood_wall",
+  "count": 1
 }
 }

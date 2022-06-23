@@ -9,6 +9,7 @@
     }
   ],
   "output": {
-    "item": "minecraft:polished_diorite_slab"
+    "item": "minecraft:polished_diorite_slab",
+    "count": 2
   }
 }

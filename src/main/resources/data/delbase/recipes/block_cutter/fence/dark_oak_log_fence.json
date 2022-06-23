@@ -9,6 +9,7 @@
 }
 ],
 "output": {
-"item": "delbase:dark_oak_log_fence"
+"item": "delbase:dark_oak_log_fence",
+  "count": 1
 }
 }

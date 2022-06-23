@@ -9,6 +9,7 @@
 }
 ],
 "output": {
-"item": "minecraft:purpur_stairs"
+"item": "minecraft:purpur_stairs",
+  "count": 1
 }
 }

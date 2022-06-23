@@ -9,6 +9,7 @@
 }
 ],
 "output": {
-"item": "delbase:lime_sand_stone_slab"
+"item": "delbase:lime_sand_stone_slab",
+  "count": 2
 }
 }

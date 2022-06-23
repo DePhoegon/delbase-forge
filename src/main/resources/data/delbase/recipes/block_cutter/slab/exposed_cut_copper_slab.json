@@ -9,6 +9,7 @@
     }
   ],
   "output": {
-    "item": "minecraft:exposed_cut_copper_slab"
+    "item": "minecraft:exposed_cut_copper_slab",
+    "count": 2
   }
 }

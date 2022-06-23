@@ -9,6 +9,7 @@
 }
 ],
 "output": {
-"item": "delbase:black_sand_wall"
+"item": "delbase:black_sand_wall",
+  "count": 1
 }
 }

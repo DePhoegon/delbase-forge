@@ -9,6 +9,7 @@
 }
 ],
 "output": {
-"item": "delbase:bone_block_wall"
+"item": "delbase:bone_block_wall",
+  "count": 1
 }
 }

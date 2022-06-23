@@ -9,6 +9,7 @@
     }
   ],
   "output": {
-    "item": "minecraft:polished_deepslate_wall"
+    "item": "minecraft:polished_deepslate_wall",
+    "count": 1
   }
 }

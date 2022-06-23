@@ -9,6 +9,7 @@
 }
 ],
 "output": {
-"item": "delbase:magenta_sand_wall"
+"item": "delbase:magenta_sand_wall",
+  "count": 1
 }
 }

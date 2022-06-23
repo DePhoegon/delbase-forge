@@ -9,6 +9,7 @@
     }
   ],
   "output": {
-    "item": "minecraft:jungle_fence_gate"
+    "item": "minecraft:jungle_fence_gate",
+    "count": 1
   }
 }

@@ -9,6 +9,7 @@
 }
 ],
 "output": {
-"item": "delbase:raw_gold_fence"
+"item": "delbase:raw_gold_fence",
+  "count": 1
 }
 }

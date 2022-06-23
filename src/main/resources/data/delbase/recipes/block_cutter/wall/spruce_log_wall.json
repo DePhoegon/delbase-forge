@@ -9,6 +9,7 @@
 }
 ],
 "output": {
-"item": "delbase:spruce_log_wall"
+"item": "delbase:spruce_log_wall",
+  "count": 1
 }
 }

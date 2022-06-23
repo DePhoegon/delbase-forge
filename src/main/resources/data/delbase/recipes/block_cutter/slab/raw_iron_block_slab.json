@@ -9,6 +9,7 @@
 }
 ],
 "output": {
-"item": "delbase:raw_iron_slab"
+"item": "delbase:raw_iron_slab",
+  "count": 2
 }
 }

@@ -9,6 +9,7 @@
     }
   ],
   "output": {
-    "item": "minecraft:polished_blackstone_wall"
+    "item": "minecraft:polished_blackstone_wall",
+    "count": 1
   }
 }

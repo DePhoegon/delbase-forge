@@ -9,6 +9,7 @@
 }
 ],
 "output": {
-"item": "delbase:dripstone_slab"
+"item": "delbase:dripstone_slab",
+  "count": 2
 }
 }

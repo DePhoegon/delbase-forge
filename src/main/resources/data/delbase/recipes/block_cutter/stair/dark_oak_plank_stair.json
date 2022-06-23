@@ -9,6 +9,7 @@
     }
   ],
   "output": {
-    "item": "minecraft:dark_oak_stairs"
+    "item": "minecraft:dark_oak_stairs",
+    "count": 1
   }
 }

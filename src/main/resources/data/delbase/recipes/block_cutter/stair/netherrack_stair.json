@@ -9,6 +9,7 @@
 }
 ],
 "output": {
-"item": "delbase:netherrack_stair"
+"item": "delbase:netherrack_stair",
+  "count": 1
 }
 }

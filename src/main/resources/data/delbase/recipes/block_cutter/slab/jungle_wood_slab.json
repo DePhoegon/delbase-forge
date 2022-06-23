@@ -9,6 +9,7 @@
 }
 ],
 "output": {
-"item": "delbase:jungle_wood_slab"
+"item": "delbase:jungle_wood_slab",
+  "count": 2
 }
 }

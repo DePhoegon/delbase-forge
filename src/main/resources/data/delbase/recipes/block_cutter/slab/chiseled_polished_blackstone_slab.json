@@ -9,6 +9,7 @@
 }
 ],
 "output": {
-"item": "delbase:chiseled_polished_blackstone_slab"
+"item": "delbase:chiseled_polished_blackstone_slab",
+  "count": 2
 }
 }

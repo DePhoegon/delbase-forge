@@ -9,6 +9,7 @@
 }
 ],
 "output": {
-"item": "delbase:quartz_brick_slab"
+"item": "delbase:quartz_brick_slab",
+  "count": 2
 }
 }

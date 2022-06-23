@@ -1,8 +1,6 @@
 package com.dephoegon.delbase.block.fence;
 import com.dephoegon.delbase.aid.block.colorshift.fence.concreteFence;
 import com.dephoegon.delbase.aid.block.colorshift.fence.concreteFenceGate;
-import com.dephoegon.delbase.aid.block.colorshift.fence.sandFence;
-import com.dephoegon.delbase.aid.block.colorshift.fence.sandFenceGate;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;

@@ -9,6 +9,7 @@
 }
 ],
 "output": {
-"item": "delbase:shroomlight_slab"
+"item": "delbase:shroomlight_slab",
+  "count": 2
 }
 }

@@ -9,6 +9,7 @@
 }
 ],
 "output": {
-"item": "delbase:yellow_concrete_wall"
+"item": "delbase:yellow_concrete_wall",
+  "count": 1
 }
 }

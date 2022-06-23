@@ -9,6 +9,7 @@
 }
 ],
 "output": {
-"item": "delbase:shroomlight_fence"
+"item": "delbase:shroomlight_fence",
+  "count": 1
 }
 }

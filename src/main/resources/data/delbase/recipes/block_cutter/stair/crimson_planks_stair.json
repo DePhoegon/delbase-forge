@@ -9,6 +9,7 @@
     }
   ],
   "output": {
-    "item": "minecraft:crimson_stairs"
+    "item": "minecraft:crimson_stairs",
+    "count": 1
   }
 }

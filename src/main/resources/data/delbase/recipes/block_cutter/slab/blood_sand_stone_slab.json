@@ -9,6 +9,7 @@
 }
 ],
 "output": {
-"item": "delbase:blood_sand_stone_slab"
+"item": "delbase:blood_sand_stone_slab",
+  "count": 2
 }
 }

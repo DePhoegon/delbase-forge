@@ -9,6 +9,7 @@
 }
 ],
 "output": {
-"item": "delbase:dried_kelp_fence"
+"item": "delbase:dried_kelp_fence",
+  "count": 1
 }
 }

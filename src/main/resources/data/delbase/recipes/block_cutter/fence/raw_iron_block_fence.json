@@ -9,6 +9,7 @@
 }
 ],
 "output": {
-"item": "delbase:raw_iron_fence"
+"item": "delbase:raw_iron_fence",
+  "count": 1
 }
 }

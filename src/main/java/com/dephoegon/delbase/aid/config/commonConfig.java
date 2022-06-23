@@ -1,6 +1,5 @@
 package com.dephoegon.delbase.aid.config;
 import net.minecraftforge.common.ForgeConfigSpec;
-import net.minecraftforge.common.ForgeConfigSpec.ConfigValue;
 
 public class commonConfig {
     public static final ForgeConfigSpec.Builder BUILDER = new ForgeConfigSpec.Builder();
@@ -16,13 +15,6 @@ public class commonConfig {
     public static final ForgeConfigSpec.ConfigValue<Integer> NETHERRITE_HELMET_DIAMOND_BONUS;
     public static final ForgeConfigSpec.ConfigValue<Integer> NETHERRITE_LEGGINGS_DIAMOND_BONUS;
     public static final ForgeConfigSpec.ConfigValue<Integer> NETHERRITE_BOOTS_DIAMOND_BONUS;
-    public static final ForgeConfigSpec.ConfigValue<Integer> ARMOR_HELMET_MATERIAL_RETURN;
-    public static final ForgeConfigSpec.ConfigValue<Integer> ARMOR_CHEST_MATERIAL_RETURN;
-    public static final ForgeConfigSpec.ConfigValue<Integer> ARMOR_LEGGINGS_MATERIAL_RETURN;
-    public static final ForgeConfigSpec.ConfigValue<Integer> ARMOR_BOOTS_MATERIAL_RETURN;
-    public static final ForgeConfigSpec.ConfigValue<Integer> IRON_PLUS_AXE;
-    public static final ForgeConfigSpec.ConfigValue<Integer> IRON_PLUS_SWORD;
-    public static final ForgeConfigSpec.ConfigValue<Integer> IRON_PLUS_PICKAXE;
     public static final ForgeConfigSpec.ConfigValue<Integer> NETHERRITE_SWORD_BONUS;
     public static final ForgeConfigSpec.ConfigValue<Integer> NETHERRITE_AXE_BONUS;
     public static final ForgeConfigSpec.ConfigValue<Integer> NETHERRITE_PICKAXE_BONUS;
@@ -39,26 +31,17 @@ public class commonConfig {
                 .defineInRange("Wood Rolls", 2, 1, 4);
         STONE_SALVAGE_ROLLS = BUILDER.comment("Number of Rolls of drops of Stone Tier Tools")
                 .defineInRange("Stone Rolls", 2, 1, 4);
-        NETHERRITE_BONUS_ROLLS = BUILDER.comment("Bonus Amounts of sticks (1-3) with tools.")
+        NETHERRITE_BONUS_ROLLS = BUILDER.comment("Bonus Amounts of sticks (1-4) with tools.")
                 .defineInRange("Tools Stick rolls", 2, 1, 4);
         NETHERRITE_BOOTS_DIAMOND_BONUS = BUILDER.comment("Number of Diamond Returned with The singular Netherrite Ingot")
                 .defineInRange("Netherrite Boots Bonus",1, 1, 4);
         NETHERRITE_CHEST_DIAMOND_BONUS = BUILDER.defineInRange("Netherrite Chestplate Bonus",1, 1, 8);
         NETHERRITE_LEGGINGS_DIAMOND_BONUS = BUILDER.defineInRange("Netherrite Leggings Bonus", 1, 1,7);
         NETHERRITE_HELMET_DIAMOND_BONUS = BUILDER.defineInRange("Netherrite Helmet Bonus", 1, 1, 5);
-        ARMOR_HELMET_MATERIAL_RETURN = BUILDER.comment("THe amount of Ingots/diamond returned for the armor")
-                .defineInRange("Helmet return", 3, 1, 5);
-        ARMOR_CHEST_MATERIAL_RETURN = BUILDER.defineInRange("ChestPlate Return", 5, 1, 8);
-        ARMOR_LEGGINGS_MATERIAL_RETURN = BUILDER.defineInRange("Leggings Return", 4, 1, 7);
-        ARMOR_BOOTS_MATERIAL_RETURN = BUILDER.defineInRange("Boots Return", 2, 1, 4);
-        IRON_PLUS_SWORD = BUILDER.comment("Tools Bonuses, leather, iron, gold, diamond")
-                .defineInRange("Sword Return", 1, 1, 2);
-        IRON_PLUS_AXE = BUILDER.defineInRange("Axe Return", 1, 1, 3);
-        IRON_PLUS_PICKAXE = BUILDER.defineInRange("Pickaxe Return", 1, 1, 3);
-        NETHERRITE_SWORD_BONUS = BUILDER.comment("Tool Bonuses for netherrite")
+        NETHERRITE_SWORD_BONUS = BUILDER.comment("Tool Bonuses for netherrite. Shovel is set to 1")
                 .defineInRange("Nether Sword Bonus",1,1,2);
         NETHERRITE_AXE_BONUS = BUILDER.defineInRange("Nether Axe Bonus", 1, 1, 3);
-        NETHERRITE_PICKAXE_BONUS = BUILDER.defineInRange("Nether Pickaxe", 1,1,3);
+        NETHERRITE_PICKAXE_BONUS = BUILDER.defineInRange("Nether Pickaxe Bonus", 1,1,3);
 
 
         // Client&Server Side Configs

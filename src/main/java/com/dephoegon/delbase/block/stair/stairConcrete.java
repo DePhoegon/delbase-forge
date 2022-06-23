@@ -18,7 +18,6 @@ import java.util.function.Supplier;
 import static com.dephoegon.delbase.delbase.BASE_BLOCK;
 import static com.dephoegon.delbase.delbase.Mod_ID;
 import static net.minecraft.world.level.block.Blocks.*;
-import static net.minecraft.world.level.block.Blocks.BLACK_CONCRETE;
 
 public class stairConcrete {
     private static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, Mod_ID);

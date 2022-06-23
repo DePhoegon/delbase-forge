@@ -9,6 +9,7 @@
 }
 ],
 "output": {
-"item": "minecraft:sandstone_wall"
+"item": "minecraft:sandstone_wall",
+  "count": 1
 }
 }

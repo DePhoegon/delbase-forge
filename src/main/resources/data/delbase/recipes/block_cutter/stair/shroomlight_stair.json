@@ -9,6 +9,7 @@
 }
 ],
 "output": {
-"item": "delbase:shroomlight_stair"
+"item": "delbase:shroomlight_stair",
+  "count": 1
 }
 }

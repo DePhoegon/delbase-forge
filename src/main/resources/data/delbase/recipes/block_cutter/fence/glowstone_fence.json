@@ -9,6 +9,7 @@
 }
 ],
 "output": {
-"item": "delbase:glowstone_fence"
+"item": "delbase:glowstone_fence",
+  "count": 1
 }
 }

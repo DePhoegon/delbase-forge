@@ -9,6 +9,7 @@
 }
 ],
 "output": {
-"item": "delbase:magma_block_slab"
+"item": "delbase:magma_block_slab",
+  "count": 2
 }
 }

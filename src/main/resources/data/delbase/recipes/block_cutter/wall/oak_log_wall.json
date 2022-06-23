@@ -9,6 +9,7 @@
 }
 ],
 "output": {
-"item": "delbase:oak_log_wall"
+"item": "delbase:oak_log_wall",
+  "count": 1
 }
 }

@@ -9,6 +9,7 @@
     }
   ],
   "output": {
-    "item": "minecraft:mossy_cobblestone_slab"
+    "item": "minecraft:mossy_cobblestone_slab",
+    "count": 2
   }
 }

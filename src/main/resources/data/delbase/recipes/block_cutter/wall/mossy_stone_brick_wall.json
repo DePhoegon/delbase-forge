@@ -9,6 +9,7 @@
     }
   ],
   "output": {
-    "item": "minecraft:mossy_stone_brick_wall"
+    "item": "minecraft:mossy_stone_brick_wall",
+    "count": 1
   }
 }

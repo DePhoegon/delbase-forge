@@ -9,6 +9,7 @@
     }
   ],
   "output": {
-    "item": "minecraft:nether_brick_fence"
+    "item": "minecraft:nether_brick_fence",
+    "count": 1
   }
 }

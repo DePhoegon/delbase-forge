@@ -9,6 +9,7 @@
     }
   ],
   "output": {
-    "item": "minecraft:polished_deepslate_slab"
+    "item": "minecraft:polished_deepslate_slab",
+    "count": 2
   }
 }

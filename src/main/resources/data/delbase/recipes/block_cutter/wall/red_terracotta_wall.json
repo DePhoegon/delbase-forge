@@ -9,6 +9,7 @@
 }
 ],
 "output": {
-"item": "delbase:red_terracotta_wall"
+"item": "delbase:red_terracotta_wall",
+  "count": 1
 }
 }

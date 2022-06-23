@@ -9,6 +9,7 @@
 }
 ],
 "output": {
-"item": "delbase:dripstone_stair"
+"item": "delbase:dripstone_stair",
+  "count": 1
 }
 }

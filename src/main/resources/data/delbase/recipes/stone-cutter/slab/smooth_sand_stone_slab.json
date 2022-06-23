@@ -3,6 +3,6 @@
   "ingredient": {
     "item": "minecraft:smooth_sandstone"
   },
-  "result": "delbase:smooth_sand_stone_slab",
+  "result": "minecraft:smooth_sandstone_slab",
   "count": 2
 }

@@ -11,8 +11,6 @@ import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.item.Item;
 import org.jetbrains.annotations.NotNull;
 
-import java.util.ArrayList;
-
 import static com.dephoegon.delbase.aid.slots.planSlots.getFullPlanSlotArray;
 import static com.dephoegon.delbase.aid.slots.planSlots.getPlanOnlyArray;
 import static com.dephoegon.delbase.block.entity.blocks.blockCuttingStation.planSlot;

@@ -10,6 +10,8 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.*;
 import org.jetbrains.annotations.NotNull;
 
+import java.util.Random;
+
 import static net.minecraft.world.level.block.StairBlock.SHAPE;
 import static net.minecraft.world.level.block.state.properties.BlockStateProperties.*;
 
@@ -19,7 +21,7 @@ public class burnChance {
     } //used to control % odds for replacing blocks/spawning fire
     private static boolean threshHold(int cap, int thresh) { return randomNum(cap) > thresh; }
     public static void rngBurn(@NotNull BlockGetter world, @NotNull BlockState burningBlock, @NotNull BlockState ashBlock, BlockPos pos, int burnThreshHold, int burnCap){
-        // Double Comparison is used to avoid drastic failure.  (they should always match, but if for some reason it manages to pull the wrong blockstate, it won't break the game.
+        // Double Comparison is used to avoid drastic failure.  They should always match, but if for some reason it manages to pull the wrong blockstate, it won't break the game.
         boolean genBlock;
         boolean waterlogged = false;
         if (burningBlock.getBlock() instanceof WallBlock && ashBlock.getBlock() instanceof WallBlock) {
@@ -97,5 +99,8 @@ public class burnChance {
             } // chance to replace block with supplied ashBlock.
         }
     }
-    private static int randomNum(int max){ return (int) (Math.random()*(max- 1 +1)+ 1); }
+    private static int randomNum(int max){
+        Random random = new Random();
+        return random.nextInt(max)+1;
+    }
 }

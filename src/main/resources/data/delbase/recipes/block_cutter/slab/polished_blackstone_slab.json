@@ -9,6 +9,7 @@
     }
   ],
   "output": {
-    "item": "minecraft:polished_blackstone_slab"
+    "item": "minecraft:polished_blackstone_slab",
+    "count": 2
   }
 }

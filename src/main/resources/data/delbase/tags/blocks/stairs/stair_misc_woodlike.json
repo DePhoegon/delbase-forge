@@ -2,7 +2,6 @@
   "replace": false,
   "values": [
     "delbase:dried_kelp_stair",
-    "delbase:coal_block_stair",
     "delbase:shroomlight_stair"
   ]
 }

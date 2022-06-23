@@ -9,6 +9,7 @@
 }
 ],
 "output": {
-"item": "delbase:raw_copper_slab"
+"item": "delbase:raw_copper_slab",
+  "count": 2
 }
 }

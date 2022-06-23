@@ -9,6 +9,7 @@
 }
 ],
 "output": {
-"item": "delbase:magma_block_stair"
+"item": "delbase:magma_block_stair",
+  "count": 1
 }
 }

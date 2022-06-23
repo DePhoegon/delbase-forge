@@ -1,6 +1,5 @@
 package com.dephoegon.delbase.aid.recipe;
 
-import com.dephoegon.delbase.block.entity.blocks.blockCuttingStation;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import net.minecraft.core.NonNullList;
@@ -32,14 +31,17 @@ public class blockCuttingStationRecipes implements Recipe<SimpleContainer> {
         this.recipeItems = recipeItems;
     }
     @Override
-    public boolean matches(SimpleContainer pContainer, Level pLevel) {
+    public boolean matches(@NotNull SimpleContainer pContainer, @NotNull Level pLevel) {
         if (recipeItems == null) { return false; } else {
             return (recipeItems.get(jsonIngredientItem).test(pContainer.getItem(inputSlot)) && recipeItems.get(jsonPlanItem).test(pContainer.getItem(planSlot)));
         }
     }
-
     @Override
-    public ItemStack assemble(SimpleContainer pContainer) {
+    public boolean isSpecial() {
+        return true;
+    }
+    @Override
+    public @NotNull ItemStack assemble(@NotNull SimpleContainer pContainer) {
         return output;
     }
 
@@ -49,22 +51,22 @@ public class blockCuttingStationRecipes implements Recipe<SimpleContainer> {
     }
 
     @Override
-    public ItemStack getResultItem() {
+    public @NotNull ItemStack getResultItem() {
         return output.copy();
     }
 
     @Override
-    public ResourceLocation getId() {
+    public @NotNull ResourceLocation getId() {
         return id;
     }
 
     @Override
-    public RecipeSerializer<?> getSerializer() {
+    public @NotNull RecipeSerializer<?> getSerializer() {
         return Serializer.INSTANCE;
     }
 
     @Override
-    public RecipeType<?> getType() {
+    public @NotNull RecipeType<?> getType() {
         return Type.INSTANCE;
     }
 
@@ -73,7 +75,6 @@ public class blockCuttingStationRecipes implements Recipe<SimpleContainer> {
         public static final Type INSTANCE = new Type();
         public static final String ID = "block_cutting";
     }
-
     public static class Serializer implements RecipeSerializer<blockCuttingStationRecipes> {
         public static final Serializer INSTANCE = new Serializer();
         public static final ResourceLocation ID = new ResourceLocation(Mod_ID, Type.ID);
@@ -92,16 +93,14 @@ public class blockCuttingStationRecipes implements Recipe<SimpleContainer> {
             } else return new blockCuttingStationRecipes(id, output, null);
         }
         @Override
-        public blockCuttingStationRecipes fromNetwork(@NotNull ResourceLocation id, FriendlyByteBuf buf) {
+        public blockCuttingStationRecipes fromNetwork(@NotNull ResourceLocation id, @NotNull FriendlyByteBuf buf) {
             NonNullList<Ingredient> inputs = withSize(buf.readInt(), Ingredient.EMPTY);
-            for (int i =0; i < inputs.size(); ++i) {
-                inputs.set(i, Ingredient.fromNetwork(buf));
-            }
+            inputs.replaceAll(ignored -> Ingredient.fromNetwork(buf));
             ItemStack output = buf.readItem();
             return new blockCuttingStationRecipes(id, output, inputs);
         }
         @Override
-        public void toNetwork(FriendlyByteBuf buf, blockCuttingStationRecipes recipe) {
+        public void toNetwork(@NotNull FriendlyByteBuf buf, @NotNull blockCuttingStationRecipes recipe) {
             buf.writeInt(recipe.getIngredients().size());
             for (Ingredient ing : recipe.getIngredients()) {
                 ing.toNetwork(buf);
@@ -120,10 +119,14 @@ public class blockCuttingStationRecipes implements Recipe<SimpleContainer> {
         public Class<RecipeSerializer<?>> getRegistryType() {
             return Serializer.castClass(RecipeSerializer.class);
         }
+        @SuppressWarnings("SameParameterValue")
         private static <G> Class<G> castClass(Class<?> cls) {
+            //noinspection unchecked
             return (Class<G>)cls;
         }
     }
-
-
+    @Override
+    public @NotNull NonNullList<Ingredient> getIngredients() {
+        return recipeItems;
+    }
 }

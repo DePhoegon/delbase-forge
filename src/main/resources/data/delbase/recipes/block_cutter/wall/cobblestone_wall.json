@@ -9,6 +9,7 @@
     }
   ],
   "output": {
-    "item": "minecraft:cobblestone_wall"
+    "item": "minecraft:cobblestone_wall",
+    "count": 1
   }
 }

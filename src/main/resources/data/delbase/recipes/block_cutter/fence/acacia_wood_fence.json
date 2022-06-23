@@ -9,6 +9,7 @@
 }
 ],
 "output": {
-"item": "delbase:acacia_wood_fence"
+"item": "delbase:acacia_wood_fence",
+  "count": 1
 }
 }

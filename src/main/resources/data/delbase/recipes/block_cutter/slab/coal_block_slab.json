@@ -9,6 +9,7 @@
 }
 ],
 "output": {
-"item": "delbase:coal_block_slab"
+"item": "delbase:coal_block_slab",
+  "count": 2
 }
 }

@@ -9,6 +9,7 @@
 }
 ],
 "output": {
-"item": "delbase:quartz_brick_stair"
+"item": "delbase:quartz_brick_stair",
+  "count": 1
 }
 }

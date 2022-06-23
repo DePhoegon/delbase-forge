@@ -9,6 +9,7 @@
 }
 ],
 "output": {
-"item": "delbase:terracotta_fence"
+"item": "delbase:terracotta_fence",
+  "count": 1
 }
 }

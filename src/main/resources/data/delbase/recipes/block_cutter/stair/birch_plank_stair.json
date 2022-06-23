@@ -9,6 +9,7 @@
     }
   ],
   "output": {
-    "item": "minecraft:birch_stairs"
+    "item": "minecraft:birch_stairs",
+    "count": 1
   }
 }

@@ -9,6 +9,7 @@
 }
 ],
 "output": {
-"item": "delbase:raw_iron_wall"
+"item": "delbase:raw_iron_wall",
+  "count": 1
 }
 }

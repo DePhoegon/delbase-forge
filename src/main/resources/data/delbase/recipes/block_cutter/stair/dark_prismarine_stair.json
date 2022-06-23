@@ -9,6 +9,7 @@
     }
   ],
   "output": {
-    "item": "minecraft:dark_prismarine_stairs"
+    "item": "minecraft:dark_prismarine_stairs",
+    "count": 1
   }
 }

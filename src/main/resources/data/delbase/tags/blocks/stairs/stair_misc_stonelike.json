@@ -10,6 +10,7 @@
     "delbase:chiseled_polished_blackstone_stair",
     "delbase:dripstone_stair",
     "delbase:netherrack_stair",
-    "delbase:magma_block_stair"
+    "delbase:magma_block_stair",
+    "delbase:coal_block_stair"
   ]
 }

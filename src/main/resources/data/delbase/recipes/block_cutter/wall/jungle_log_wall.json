@@ -9,6 +9,7 @@
 }
 ],
 "output": {
-"item": "delbase:jungle_log_wall"
+"item": "delbase:jungle_log_wall",
+  "count": 1
 }
 }

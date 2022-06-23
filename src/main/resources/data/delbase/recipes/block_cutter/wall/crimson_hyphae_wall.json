@@ -9,6 +9,7 @@
 }
 ],
 "output": {
-"item": "delbase:crimson_hyphae_wall"
+"item": "delbase:crimson_hyphae_wall",
+  "count": 1
 }
 }

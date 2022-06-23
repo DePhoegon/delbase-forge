@@ -9,6 +9,7 @@
 }
 ],
 "output": {
-"item": "delbase:black_concrete_slab"
+"item": "delbase:black_concrete_slab",
+  "count": 2
 }
 }

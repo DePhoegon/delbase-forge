@@ -9,6 +9,7 @@
 }
 ],
 "output": {
-"item": "minecraft:smooth_sandstone_slab"
+"item": "minecraft:smooth_sandstone_slab",
+  "count": 2
 }
 }

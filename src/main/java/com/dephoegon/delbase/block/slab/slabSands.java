@@ -24,41 +24,41 @@ public class slabSands {
     private static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, Mod_ID);
 
     public static final RegistryObject<SlabBlock> OVERRIDE_SAND_SLAB = register("sand_slab",
-            () -> new sandSlab(BlockBehaviour.Properties.copy(SAND).sound(SoundType.STONE),"","",""));
+            () -> new sandSlab(BlockBehaviour.Properties.copy(SAND).sound(SoundType.SAND),"","",""));
     public static final RegistryObject<SlabBlock> OVERRIDE_RED_SAND_SLAB = register("red_sand_slab",
-            () -> new sandSlab(BlockBehaviour.Properties.copy(SAND).sound(SoundType.STONE),"","",""));
+            () -> new sandSlab(BlockBehaviour.Properties.copy(SAND).sound(SoundType.SAND),"","",""));
     public static final RegistryObject<SlabBlock> BLOOD_SAND_SLAB = register("blood_sand_slab",
-            () -> new sandSlab(BlockBehaviour.Properties.copy(SAND).sound(SoundType.STONE),"","",""));
+            () -> new sandSlab(BlockBehaviour.Properties.copy(SAND).sound(SoundType.SAND),"","",""));
     public static final RegistryObject<SlabBlock> WHITE_SAND_SLAB = register("white_sand_slab",
-            () -> new sandSlab(BlockBehaviour.Properties.copy(SAND).sound(SoundType.STONE),"","",""));
+            () -> new sandSlab(BlockBehaviour.Properties.copy(SAND).sound(SoundType.SAND),"","",""));
     public static final RegistryObject<SlabBlock> ORANGE_SAND_SLAB = register("orange_sand_slab",
-            () -> new sandSlab(BlockBehaviour.Properties.copy(SAND).sound(SoundType.STONE),"","",""));
+            () -> new sandSlab(BlockBehaviour.Properties.copy(SAND).sound(SoundType.SAND),"","",""));
     public static final RegistryObject<SlabBlock> MAGENTA_SAND_SLAB = register("magenta_sand_slab",
-            () -> new sandSlab(BlockBehaviour.Properties.copy(SAND).sound(SoundType.STONE),"","",""));
+            () -> new sandSlab(BlockBehaviour.Properties.copy(SAND).sound(SoundType.SAND),"","",""));
     public static final RegistryObject<SlabBlock> LIGHT_BLUE_SAND_SLAB = register("light_blue_sand_slab",
-            () -> new sandSlab(BlockBehaviour.Properties.copy(SAND).sound(SoundType.STONE),"","",""));
+            () -> new sandSlab(BlockBehaviour.Properties.copy(SAND).sound(SoundType.SAND),"","",""));
     public static final RegistryObject<SlabBlock> YELLOW_SAND_SLAB = register("yellow_sand_slab",
-            () -> new sandSlab(BlockBehaviour.Properties.copy(SAND).sound(SoundType.STONE),"","",""));
+            () -> new sandSlab(BlockBehaviour.Properties.copy(SAND).sound(SoundType.SAND),"","",""));
     public static final RegistryObject<SlabBlock> LIME_SAND_SLAB = register("lime_sand_slab",
-            () -> new sandSlab(BlockBehaviour.Properties.copy(SAND).sound(SoundType.STONE),"","",""));
+            () -> new sandSlab(BlockBehaviour.Properties.copy(SAND).sound(SoundType.SAND),"","",""));
     public static final RegistryObject<SlabBlock> PINK_SAND_SLAB = register("pink_sand_slab",
-            () -> new sandSlab(BlockBehaviour.Properties.copy(SAND).sound(SoundType.STONE),"","",""));
+            () -> new sandSlab(BlockBehaviour.Properties.copy(SAND).sound(SoundType.SAND),"","",""));
     public static final RegistryObject<SlabBlock> GRAY_SAND_SLAB = register("gray_sand_slab",
-            () -> new sandSlab(BlockBehaviour.Properties.copy(SAND).sound(SoundType.STONE),"","",""));
+            () -> new sandSlab(BlockBehaviour.Properties.copy(SAND).sound(SoundType.SAND),"","",""));
     public static final RegistryObject<SlabBlock> LIGHT_GRAY_SAND_SLAB = register("light_gray_sand_slab",
-            () -> new sandSlab(BlockBehaviour.Properties.copy(SAND).sound(SoundType.STONE),"","",""));
+            () -> new sandSlab(BlockBehaviour.Properties.copy(SAND).sound(SoundType.SAND),"","",""));
     public static final RegistryObject<SlabBlock> CYAN_SAND_SLAB = register("cyan_sand_slab",
-            () -> new sandSlab(BlockBehaviour.Properties.copy(SAND).sound(SoundType.STONE),"","",""));
+            () -> new sandSlab(BlockBehaviour.Properties.copy(SAND).sound(SoundType.SAND),"","",""));
     public static final RegistryObject<SlabBlock> PURPLE_SAND_SLAB = register("purple_sand_slab",
-            () -> new sandSlab(BlockBehaviour.Properties.copy(SAND).sound(SoundType.STONE),"","",""));
+            () -> new sandSlab(BlockBehaviour.Properties.copy(SAND).sound(SoundType.SAND),"","",""));
     public static final RegistryObject<SlabBlock> BLUE_SAND_SLAB = register("blue_sand_slab",
-            () -> new sandSlab(BlockBehaviour.Properties.copy(SAND).sound(SoundType.STONE),"","",""));
+            () -> new sandSlab(BlockBehaviour.Properties.copy(SAND).sound(SoundType.SAND),"","",""));
     public static final RegistryObject<SlabBlock> GREEN_SAND_SLAB = register("green_sand_slab",
-            () -> new sandSlab(BlockBehaviour.Properties.copy(SAND).sound(SoundType.STONE),"","",""));
+            () -> new sandSlab(BlockBehaviour.Properties.copy(SAND).sound(SoundType.SAND),"","",""));
     public static final RegistryObject<SlabBlock> BROWN_SAND_SLAB = register("brown_sand_slab",
-            () -> new sandSlab(BlockBehaviour.Properties.copy(SAND).sound(SoundType.STONE),"","",""));
+            () -> new sandSlab(BlockBehaviour.Properties.copy(SAND).sound(SoundType.SAND),"","",""));
     public static final RegistryObject<SlabBlock> BLACK_SAND_SLAB = register("black_sand_slab",
-            () -> new sandSlab(BlockBehaviour.Properties.copy(SAND).sound(SoundType.STONE),"","",""));
+            () -> new sandSlab(BlockBehaviour.Properties.copy(SAND).sound(SoundType.SAND),"","",""));
 
     public static void register() {
         IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();

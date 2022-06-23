@@ -9,6 +9,7 @@
 }
 ],
 "output": {
-"item": "delbase:warped_hyphae_wall"
+"item": "delbase:warped_hyphae_wall",
+  "count": 1
 }
 }

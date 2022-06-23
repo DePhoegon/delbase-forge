@@ -9,6 +9,7 @@
 }
 ],
 "output": {
-"item": "delbase:yellow_terracotta_stair"
+"item": "delbase:yellow_terracotta_stair",
+  "count": 1
 }
 }

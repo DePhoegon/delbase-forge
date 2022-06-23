@@ -9,6 +9,7 @@
 }
 ],
 "output": {
-"item": "delbase:coal_block_wall"
+"item": "delbase:coal_block_wall",
+  "count": 1
 }
 }

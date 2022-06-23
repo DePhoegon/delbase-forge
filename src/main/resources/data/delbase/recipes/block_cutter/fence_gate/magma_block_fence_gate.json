@@ -9,6 +9,7 @@
 }
 ],
 "output": {
-"item": "delbase:magma_block_fence_gate"
+"item": "delbase:magma_block_fence_gate",
+  "count": 1
 }
 }

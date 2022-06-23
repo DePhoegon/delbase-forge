@@ -9,6 +9,7 @@
     }
   ],
   "output": {
-    "item": "minecraft:granite_stairs"
+    "item": "minecraft:granite_stairs",
+    "count": 1
   }
 }

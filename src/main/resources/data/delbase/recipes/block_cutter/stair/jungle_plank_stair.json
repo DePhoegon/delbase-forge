@@ -9,6 +9,7 @@
     }
   ],
   "output": {
-    "item": "minecraft:jungle_stairs"
+    "item": "minecraft:jungle_stairs",
+    "count": 1
   }
 }

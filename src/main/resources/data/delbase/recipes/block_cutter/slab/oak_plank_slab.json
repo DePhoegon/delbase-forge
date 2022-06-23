@@ -9,6 +9,7 @@
     }
   ],
   "output": {
-    "item": "minecraft:oak_slab"
+    "item": "minecraft:oak_slab",
+    "count": 2
   }
 }

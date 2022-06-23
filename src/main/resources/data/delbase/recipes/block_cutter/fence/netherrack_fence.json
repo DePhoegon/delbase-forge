@@ -9,6 +9,7 @@
 }
 ],
 "output": {
-"item": "delbase:netherrack_fence"
+"item": "delbase:netherrack_fence",
+  "count": 1
 }
 }

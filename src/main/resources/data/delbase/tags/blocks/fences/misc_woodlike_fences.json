@@ -1,7 +1,6 @@
 {
   "replace": false,
   "values": [
-    "delbase:coal_block_fence",
     "delbase:dried_kelp_fence",
     "delbase:shroomlight_fence"
   ]

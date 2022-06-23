@@ -4,14 +4,16 @@ import com.dephoegon.delbase.aid.config.commonConfig;
 import net.minecraft.world.SimpleContainer;
 import org.jetbrains.annotations.NotNull;
 
+import java.util.Random;
+
 import static net.minecraft.world.item.Items.*;
-import static net.minecraft.world.item.Items.COBBLESTONE;
 
 public class TierRandomDropAid {
     public static @NotNull SimpleContainer stoneContainer(int size) {
         SimpleContainer stone = new SimpleContainer(size);
         for (int i = 0; i < size; i++) {
-            int RNGs = (int) Math.floor(Math.random() * 4);
+            Random random = new Random();
+            int RNGs = random.nextInt(5);
             switch (RNGs) {
                 case 0 -> stone.setItem(i, STICK.getDefaultInstance());
                 case 2 -> stone.setItem(i, BLACKSTONE.getDefaultInstance());
@@ -24,7 +26,8 @@ public class TierRandomDropAid {
     public static @NotNull SimpleContainer woodContainer(int size) {
         SimpleContainer stone = new SimpleContainer(size);
         for (int i = 0; i < size; i++) {
-            int RNGs = (int) Math.floor(Math.random()*10);
+            Random random = new Random();
+            int RNGs = random.nextInt(11);
             switch (RNGs) {
                 case 0 -> stone.setItem(i, STICK.getDefaultInstance());
                 case 1 -> stone.setItem(i, ACACIA_PLANKS.getDefaultInstance());
@@ -46,7 +49,8 @@ public class TierRandomDropAid {
             stone.setItem(i, DIAMOND.getDefaultInstance());
         }
         for (int i = 0; i < bonusSize; i++) {
-            int RNGs = (int) Math.floor(Math.random()*4);
+            Random random = new Random();
+            int RNGs = random.nextInt(5);
             if (RNGs > 2) { stone.setItem(i+diamond, STICK.getDefaultInstance()); }
         }
         return stone;
@@ -55,7 +59,8 @@ public class TierRandomDropAid {
         int bonusSize = commonConfig.NETHERRITE_BONUS_ROLLS.get();
         SimpleContainer stone = new SimpleContainer(bonusSize);
         for (int i = 0; i < bonusSize; i++) {
-            int RNGs = (int) Math.floor(Math.random()*4);
+            Random random = new Random();
+            int RNGs = random.nextInt(5);
             if (RNGs > 2) { stone.setItem(i, STICK.getDefaultInstance()); }
         }
         return stone;

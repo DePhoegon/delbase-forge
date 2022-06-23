@@ -9,6 +9,7 @@
     }
   ],
   "output": {
-    "item": "minecraft:warped_slab"
+    "item": "minecraft:warped_slab",
+    "count": 2
   }
 }

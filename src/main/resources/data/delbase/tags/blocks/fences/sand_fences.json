@@ -2,6 +2,7 @@
   "replace": false,
   "values": [
     "delbase:sand_fence",
+    "delbase:lime_sand_fence",
     "delbase:red_sand_fence",
     "delbase:blood_sand_fence",
     "delbase:white_sand_fence",

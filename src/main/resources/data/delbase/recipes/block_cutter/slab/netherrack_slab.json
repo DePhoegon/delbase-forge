@@ -9,6 +9,7 @@
 }
 ],
 "output": {
-"item": "delbase:netherrack_slab"
+"item": "delbase:netherrack_slab",
+  "count": 2
 }
 }

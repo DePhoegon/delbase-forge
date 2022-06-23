@@ -64,8 +64,9 @@ public class blockCuttingStationMenu extends AbstractContainerMenu {
     private static final int TE_INVENTORY_SLOT_COUNT = blockCuttingStationSlotCount;
 
     @Override
-    public ItemStack quickMoveStack(@NotNull Player playerIn, int index) {
+    public @NotNull ItemStack quickMoveStack(@NotNull Player playerIn, int index) {
         Slot sourceSlot = slots.get(index);
+        //noinspection ConstantConditions
         if (sourceSlot == null || !sourceSlot.hasItem()) {
             return ItemStack.EMPTY;
         }
@@ -81,7 +82,7 @@ public class blockCuttingStationMenu extends AbstractContainerMenu {
                 return ItemStack.EMPTY;
             }
         } else {
-            System.out.println("Delbase (Blockcuttingscreen) - Invalid SlotIndex: "+index);
+            System.out.println("Delbase (BlockCuttingScreen) - Invalid SlotIndex: "+index);
             return ItemStack.EMPTY;
         }
         if (sourceStack.getCount() == 0) {

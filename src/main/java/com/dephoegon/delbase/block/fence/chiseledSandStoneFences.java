@@ -1,8 +1,6 @@
 package com.dephoegon.delbase.block.fence;
 import com.dephoegon.delbase.aid.block.colorshift.fence.chiseledSandStoneFence;
 import com.dephoegon.delbase.aid.block.colorshift.fence.chiseledSandStoneFenceGate;
-import com.dephoegon.delbase.aid.block.colorshift.fence.chiseledSandStoneFence;
-import com.dephoegon.delbase.aid.block.colorshift.fence.chiseledSandStoneFenceGate;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;

@@ -9,6 +9,7 @@
 }
 ],
 "output": {
-"item": "delbase:brown_sand_stone_fence"
+"item": "delbase:brown_sand_stone_fence",
+  "count": 1
 }
 }

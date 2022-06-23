@@ -9,6 +9,7 @@
 }
 ],
 "output": {
-"item": "delbase:stripped_birch_wood_fence"
+"item": "delbase:stripped_birch_wood_fence",
+  "count": 1
 }
 }

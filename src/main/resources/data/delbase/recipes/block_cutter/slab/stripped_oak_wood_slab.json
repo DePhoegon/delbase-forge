@@ -9,6 +9,7 @@
 }
 ],
 "output": {
-"item": "delbase:stripped_oak_wood_slab"
+"item": "delbase:stripped_oak_wood_slab",
+  "count": 2
 }
 }

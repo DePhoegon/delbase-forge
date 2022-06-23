@@ -9,6 +9,7 @@
     }
   ],
   "output": {
-    "item": "minecraft:warped_stairs"
+    "item": "minecraft:warped_stairs",
+    "count": 1
   }
 }

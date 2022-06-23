@@ -9,6 +9,7 @@
     }
   ],
   "output": {
-    "item": "minecraft:deepslate_tile_stairs"
+    "item": "minecraft:deepslate_tile_stairs",
+    "count": 1
   }
 }

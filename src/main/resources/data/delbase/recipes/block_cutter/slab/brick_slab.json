@@ -9,6 +9,7 @@
     }
   ],
   "output": {
-    "item": "minecraft:brick_slab"
+    "item": "minecraft:brick_slab",
+    "count": 2
   }
 }

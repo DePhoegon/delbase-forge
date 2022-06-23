@@ -9,6 +9,7 @@
 }
 ],
 "output": {
-"item": "delbase:yellow_concrete_fence_gate"
+"item": "delbase:yellow_concrete_fence_gate",
+  "count": 1
 }
 }

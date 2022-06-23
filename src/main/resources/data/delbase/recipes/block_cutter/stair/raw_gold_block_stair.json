@@ -9,6 +9,7 @@
 }
 ],
 "output": {
-"item": "delbase:raw_gold_stair"
+"item": "delbase:raw_gold_stair",
+  "count": 1
 }
 }

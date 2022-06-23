@@ -9,7 +9,9 @@ import net.minecraft.core.Direction;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.TextComponent;
-import net.minecraft.world.*;
+import net.minecraft.world.Containers;
+import net.minecraft.world.MenuProvider;
+import net.minecraft.world.SimpleContainer;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.AbstractContainerMenu;
@@ -30,10 +32,9 @@ import org.jetbrains.annotations.Nullable;
 import java.util.Optional;
 
 import static com.dephoegon.delbase.aid.recipe.TierRandomDropAid.*;
-import static com.dephoegon.delbase.aid.recipe.countAid.armorScrapAid;
-import static com.dephoegon.delbase.aid.recipe.countAid.bonusScrapAid;
+import static com.dephoegon.delbase.aid.recipe.countAid.netheriteDiamondBonus;
 import static com.dephoegon.delbase.item.blockCutterPlans.*;
-import static net.minecraft.world.item.Items.*;
+import static net.minecraft.world.item.Items.DIAMOND;
 
 public class blockCuttingStation extends BlockEntity implements MenuProvider {
     public static final int outputSlot = 0;
@@ -55,6 +56,7 @@ public class blockCuttingStation extends BlockEntity implements MenuProvider {
     private int maxProgress = commonConfig.BLOCK_CUTTING_STATION_CRAFT_TIME.get();
     public blockCuttingStation(BlockPos pWorldPosition, BlockState pBlockState) {
         super(blockEntities.BLOCK_CUTTING_STATION_BLOCK_ENTITY.get(), pWorldPosition, pBlockState);
+        // Crafting Progress Container
         this.data = new ContainerData() {
             @Override
             public int get(int index) {
@@ -80,9 +82,7 @@ public class blockCuttingStation extends BlockEntity implements MenuProvider {
         };
     }
     @Override
-    public @NotNull Component getDisplayName() {
-        return new TextComponent("Block Cutting Station");
-    }
+    public @NotNull Component getDisplayName() { return new TextComponent("Block Cutting Station"); }
 
     @Nullable
     @Override
@@ -94,11 +94,8 @@ public class blockCuttingStation extends BlockEntity implements MenuProvider {
     @Nullable
     @Override
     public <T> LazyOptional<T> getCapability(@NotNull Capability<T> cap, Direction side) {
-        if (cap == CapabilityItemHandler.ITEM_HANDLER_CAPABILITY) {
-            return lazyItemHandler.cast();
-        }
+        if (cap == CapabilityItemHandler.ITEM_HANDLER_CAPABILITY) { return lazyItemHandler.cast(); }
         return super.getCapability(cap, side);
-
     }
     @Override
     public void onLoad() {
@@ -111,7 +108,7 @@ public class blockCuttingStation extends BlockEntity implements MenuProvider {
         lazyItemHandler.invalidate();
     }
     @Override
-    protected void saveAdditional(CompoundTag tag) {
+    protected void saveAdditional(@NotNull CompoundTag tag) {
         tag.put("inventory", itemHandler.serializeNBT());
         tag.putInt("block_cutting_station.progress", progress);
         super.saveAdditional(tag);
@@ -125,9 +122,7 @@ public class blockCuttingStation extends BlockEntity implements MenuProvider {
 
     public void drops(){
         SimpleContainer inventory = new SimpleContainer(itemHandler.getSlots());
-        for (int i =0; i < itemHandler.getSlots(); i++) {
-            inventory.setItem(i, itemHandler.getStackInSlot(i));
-        }
+        for (int i =0; i < itemHandler.getSlots(); i++) { inventory.setItem(i, itemHandler.getStackInSlot(i)); }
         assert this.level != null;
         Containers.dropContents(this.level, this.worldPosition, inventory);
     }
@@ -135,9 +130,7 @@ public class blockCuttingStation extends BlockEntity implements MenuProvider {
         if(hasRecipe(pBlockEntity)) {
             pBlockEntity.progress++;
             setChanged(pLevel, pPos, pState);
-            if(pBlockEntity.progress > pBlockEntity.maxProgress) {
-                craftItem(pBlockEntity);
-            }
+            if(pBlockEntity.progress > pBlockEntity.maxProgress) { craftItem(pBlockEntity); }
         } else {
             pBlockEntity.resetProgress();
             setChanged(pLevel, pPos, pState);
@@ -146,18 +139,15 @@ public class blockCuttingStation extends BlockEntity implements MenuProvider {
     private static boolean hasRecipe(@NotNull blockCuttingStation entity) {
         Level level = entity.level;
         SimpleContainer inventory = new SimpleContainer(entity.itemHandler.getSlots());
-        for (int i =0; i < entity.itemHandler.getSlots(); i++) {
-            inventory.setItem(i, entity.itemHandler.getStackInSlot(i));
-        }
+        for (int i =0; i < entity.itemHandler.getSlots(); i++) { inventory.setItem(i, entity.itemHandler.getStackInSlot(i)); }
         assert level != null;
         Optional<blockCuttingStationRecipes> match = level.getRecipeManager()
                 .getRecipeFor(blockCuttingStationRecipes.Type.INSTANCE, inventory, level);
         if (match.isPresent()){
             Item planSlotItem;
             if (entity.itemHandler.getStackInSlot(planSlot).isEmpty()) { return false; } else { planSlotItem = entity.itemHandler.getStackInSlot(planSlot).getItem(); }
-            int count = 0;
             ItemStack resultItem = match.get().getResultItem();
-            Item inputItem = entity.itemHandler.getStackInSlot(inputSlot).getItem();
+            int count = resultItem.getCount();
             if (resultItem.getItem() instanceof BlockItem tOutput) {
                 if (tOutput.getBlock() instanceof SlabBlock) {
                     count = 1;
@@ -175,9 +165,7 @@ public class blockCuttingStation extends BlockEntity implements MenuProvider {
                 if (tOutput.getBlock() instanceof FenceGateBlock && planSlotItem != FENCE_GATE_PLANS.get().asItem()) {
                     return false;
                 }
-            } // Just because I like to enforce plan usage.
-            if (inputItem instanceof ArmorItem counter) { count = armorScrapAid(counter)-1; }
-            if (inputItem instanceof HorseArmorItem) { count = 4; }
+            } // Just because I like to enforce plan usage, & possibly avoid any overlooked items.
             // Counting Aids
             return canInsertAmountIntoOutputSlot(inventory, count) && canInsertItemIntoOutputSlot(inventory, resultItem);
         } else return false;
@@ -188,29 +176,24 @@ public class blockCuttingStation extends BlockEntity implements MenuProvider {
         Level level = entity.level;
         BlockPos worldPosition = entity.worldPosition;
         SimpleContainer inventory = new SimpleContainer(entity.itemHandler.getSlots());
-        for (int i = 0; i < entity.itemHandler.getSlots(); i++) {
-            inventory.setItem(i, entity.itemHandler.getStackInSlot(i));
-        }
+        for (int i = 0; i < entity.itemHandler.getSlots(); i++) { inventory.setItem(i, entity.itemHandler.getStackInSlot(i)); }
 
         assert level != null;
         Optional<blockCuttingStationRecipes> match = level.getRecipeManager()
                 .getRecipeFor(blockCuttingStationRecipes.Type.INSTANCE, inventory, level);
 
         if (match.isPresent()) {
-            int nether = 0;
-            ItemStack resultItem = match.get().getResultItem();
-            Item inputItem = entity.itemHandler.getStackInSlot(inputSlot).getItem();
+            Item resultItem = match.get().getResultItem().getItem();
             String keyString = "none";
             boolean skipOutputSlot = false;
-            int count = 1;
+            int count = match.get().getResultItem().getCount();
             if (entity.itemHandler.getStackInSlot(planSlot).getItem() == ARMOR_COMPOUND.get().asItem()) {
                 Item le_item = entity.itemHandler.getStackInSlot(inputSlot).getItem();
                 boolean skipCompoundEat = false;
                 if (le_item instanceof ArmorItem recycle) {
-                    count = armorScrapAid(recycle);
                     if (recycle.getMaterial() == ArmorMaterials.NETHERITE) {
                         count = 1;
-                        int bonusCount = bonusScrapAid(recycle);
+                        int bonusCount = netheriteDiamondBonus(recycle);
                         SimpleContainer bonus = new SimpleContainer(bonusCount);
                         for (int i = 0; i < bonusCount; i++) {
                             bonus.setItem(i, DIAMOND.getDefaultInstance());
@@ -218,44 +201,44 @@ public class blockCuttingStation extends BlockEntity implements MenuProvider {
                         Containers.dropContents(level, worldPosition, bonus);
                     }
                 }
-                if (le_item instanceof HorseArmorItem) { count = 5; }
                 if (le_item instanceof TieredItem tieredItem) {
-                        if (tieredItem.getTier() == Tiers.STONE) {
-                            skipOutputSlot = true;
-                            skipCompoundEat = true;
-                            keyString = "stone";
+                    if (tieredItem.getTier() == Tiers.STONE) {
+                        skipOutputSlot = true;
+                        skipCompoundEat = true;
+                        keyString = "stone";
+                    }
+                    if (tieredItem.getTier() == Tiers.WOOD) {
+                        skipOutputSlot = true;
+                        skipCompoundEat = true;
+                        keyString = "wood";
+                    }
+                    if (tieredItem.getTier() == Tiers.NETHERITE) {
+                        skipOutputSlot = true;
+                        keyString = "netherite";
+                        if (le_item instanceof SwordItem) {
+                            count = commonConfig.NETHERRITE_SWORD_BONUS.get();
                         }
-                        if (tieredItem.getTier() == Tiers.WOOD) {
-                            skipOutputSlot = true;
-                            skipCompoundEat = true;
-                            keyString = "wood";
+                        if (le_item instanceof AxeItem) {
+                            count = commonConfig.NETHERRITE_AXE_BONUS.get();
                         }
-                        if (tieredItem.getTier() == Tiers.NETHERITE) {
-                            skipOutputSlot = true;
-                            keyString = "netherite";
-                            if (le_item instanceof SwordItem) { count = commonConfig.NETHERRITE_SWORD_BONUS.get(); }
-                            if (le_item instanceof AxeItem) { count = commonConfig.NETHERRITE_AXE_BONUS.get(); }
-                            if (le_item instanceof PickaxeItem) { count = commonConfig.NETHERRITE_PICKAXE_BONUS.get(); }
+                        if (le_item instanceof PickaxeItem) {
+                            count = commonConfig.NETHERRITE_PICKAXE_BONUS.get();
                         }
-                        if (keyString.equals("none")) {
-                            skipOutputSlot = true;
-                            keyString = "tools";
-                            if (le_item instanceof SwordItem) { count = commonConfig.IRON_PLUS_SWORD.get(); }
-                            if (le_item instanceof AxeItem) { count = commonConfig.IRON_PLUS_AXE.get(); }
-                            if (le_item instanceof PickaxeItem) { count = commonConfig.IRON_PLUS_PICKAXE.get(); }
+                        if (le_item instanceof HoeItem) {
+                            count = 1;
                         }
-                    //Special Behaviors for the Tiers of items
+                    }
+                    if ((le_item instanceof SwordItem || le_item instanceof AxeItem || le_item instanceof PickaxeItem || le_item instanceof HoeItem) && keyString.equals("none")) {
+                        skipOutputSlot = true;
+                        keyString = "tools";
+                        //Special Behaviors for the Tiers of items
+                    }
                 }
-                if (!(skipCompoundEat)){
-                    entity.itemHandler.extractItem(planSlot, 1, false);
-                }
+                if (!(skipCompoundEat)){ entity.itemHandler.extractItem(planSlot, 1, false); }
             }
             entity.itemHandler.extractItem(inputSlot, 1, false);
-            if (match.get().getResultItem().getItem() instanceof BlockItem tOutput) {
-                if (tOutput.getBlock() instanceof SlabBlock) { count = 2; }
-            }
             if (skipOutputSlot) {
-                int returnSize = 2;
+                int returnSize;
                 SimpleContainer stone = null;
                 if (keyString.equals("stone")) {
                     returnSize = commonConfig.STONE_SALVAGE_ROLLS.get();
@@ -269,19 +252,19 @@ public class blockCuttingStation extends BlockEntity implements MenuProvider {
                 }
                 if (keyString.equals("netherite")) {
                     stone = netheriteToolsBonus(count);
-                    entity.itemHandler.setStackInSlot(outputSlot, new ItemStack(match.get().getResultItem().getItem(),
+                    entity.itemHandler.setStackInSlot(outputSlot, new ItemStack(resultItem,
                             entity.itemHandler.getStackInSlot(outputSlot).getCount() + 1));
                     //put into the slot, as Netherite is a high tier. diamond(s) still allowed pop out like confetti.
                 }
                 if (keyString.equals("tools")) {
                     stone = ToolsBonus();
-                    entity.itemHandler.setStackInSlot(outputSlot, new ItemStack(match.get().getResultItem().getItem(),
+                    entity.itemHandler.setStackInSlot(outputSlot, new ItemStack(resultItem,
                             entity.itemHandler.getStackInSlot(outputSlot).getCount() + count));
                     //pops sticks like confetti, puts the output item
                 }
                 Containers.dropContents(level, worldPosition, stone);
             } else {
-                entity.itemHandler.setStackInSlot(outputSlot, new ItemStack(match.get().getResultItem().getItem(),
+                entity.itemHandler.setStackInSlot(outputSlot, new ItemStack(resultItem,
                         entity.itemHandler.getStackInSlot(outputSlot).getCount() + count));
             }
             entity.resetProgress();
@@ -294,6 +277,6 @@ public class blockCuttingStation extends BlockEntity implements MenuProvider {
         return inventory.getItem(blockCuttingStation.outputSlot).getItem() == output.getItem() || inventory.getItem(blockCuttingStation.outputSlot).isEmpty();
     }
     private static boolean canInsertAmountIntoOutputSlot(@NotNull SimpleContainer inventory, int variableOut) {
-        return inventory.getItem(blockCuttingStation.outputSlot).getMaxStackSize() > inventory.getItem(blockCuttingStation.outputSlot).getCount()+variableOut;
+        return inventory.getItem(blockCuttingStation.outputSlot).getMaxStackSize() >= inventory.getItem(blockCuttingStation.outputSlot).getCount()+variableOut;
     }
 }

@@ -9,6 +9,7 @@
     }
   ],
   "output": {
-    "item": "minecraft:diorite_wall"
+    "item": "minecraft:diorite_wall",
+    "count": 1
   }
 }

@@ -9,6 +9,7 @@
     }
   ],
   "output": {
-    "item": "minecraft:spruce_slab"
+    "item": "minecraft:spruce_slab",
+    "count": 2
   }
 }

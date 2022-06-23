@@ -9,6 +9,7 @@
     }
   ],
   "output": {
-    "item": "minecraft:acacia_slab"
+    "item": "minecraft:acacia_slab",
+    "count": 2
   }
 }

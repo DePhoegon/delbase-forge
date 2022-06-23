@@ -9,6 +9,7 @@
     }
   ],
   "output": {
-    "item": "minecraft:mossy_cobblestone_stairs"
+    "item": "minecraft:mossy_cobblestone_stairs",
+    "count": 1
   }
 }

@@ -9,6 +9,7 @@
 }
 ],
 "output": {
-"item": "delbase:chiseled_quartz_block_fence_gate"
+"item": "delbase:chiseled_quartz_block_fence_gate",
+  "count": 1
 }
 }

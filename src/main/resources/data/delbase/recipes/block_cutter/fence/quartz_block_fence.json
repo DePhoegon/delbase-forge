@@ -9,6 +9,7 @@
 }
 ],
 "output": {
-"item": "delbase:quartz_block_fence"
+"item": "delbase:quartz_block_fence",
+  "count": 1
 }
 }

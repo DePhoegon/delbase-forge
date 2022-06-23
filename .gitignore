@@ -19,18 +19,19 @@ build
 
 # other
 eclipse
-run/config
-run/crash-reports
-run/defaultconfigs
-run/logs
-run/mods
-run/saves
+run/config/
+run/crash-reports/
+run/defaultconfigs/
+run/logs/
+run/mods/
+/run/saves/
 run/*.log
 user*.json
 *.db
 Thumbs.db
-src/generated
-src/test
+src/generated/
+src/test/
 
 # Files from Forge MDK
 forge*changelog.txt
+

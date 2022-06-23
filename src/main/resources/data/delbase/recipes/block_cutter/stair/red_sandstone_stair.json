@@ -9,6 +9,7 @@
 }
 ],
 "output": {
-"item": "minecraft:red_sandstone_stairs"
+"item": "minecraft:red_sandstone_stairs",
+  "count": 1
 }
 }

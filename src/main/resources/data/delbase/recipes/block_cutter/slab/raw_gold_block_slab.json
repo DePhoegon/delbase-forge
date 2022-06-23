@@ -9,6 +9,7 @@
 }
 ],
 "output": {
-"item": "delbase:raw_gold_slab"
+"item": "delbase:raw_gold_slab",
+  "count": 2
 }
 }

@@ -9,6 +9,7 @@
     }
   ],
   "output": {
-    "item": "minecraft:prismarine_slab"
+    "item": "minecraft:prismarine_slab",
+    "count": 2
   }
 }

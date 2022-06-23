@@ -9,6 +9,7 @@
     }
   ],
   "output": {
-    "item": "minecraft:spruce_fence"
+    "item": "minecraft:spruce_fence",
+    "count": 1
   }
 }

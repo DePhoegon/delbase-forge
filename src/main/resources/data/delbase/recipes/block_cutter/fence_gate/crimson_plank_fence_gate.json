@@ -9,6 +9,7 @@
     }
   ],
   "output": {
-    "item": "minecraft:crimson_fence_gate"
+    "item": "minecraft:crimson_fence_gate",
+    "count": 1
   }
 }

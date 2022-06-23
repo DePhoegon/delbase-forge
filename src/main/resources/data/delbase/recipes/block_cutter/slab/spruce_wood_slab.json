@@ -9,6 +9,7 @@
 }
 ],
 "output": {
-"item": "delbase:spruce_wood_slab"
+"item": "delbase:spruce_wood_slab",
+  "count": 2
 }
 }

@@ -9,6 +9,7 @@
 }
 ],
 "output": {
-"item": "delbase:birch_wood_slab"
+"item": "delbase:birch_wood_slab",
+  "count": 2
 }
 }

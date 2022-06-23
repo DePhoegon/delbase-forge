@@ -9,6 +9,7 @@
     }
   ],
   "output": {
-    "item": "minecraft:polished_deepslate_stairs"
+    "item": "minecraft:polished_deepslate_stairs",
+    "count": 1
   }
 }

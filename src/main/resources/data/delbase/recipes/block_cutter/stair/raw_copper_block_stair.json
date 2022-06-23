@@ -9,6 +9,7 @@
 }
 ],
 "output": {
-"item": "delbase:raw_copper_stair"
+"item": "delbase:raw_copper_stair",
+  "count": 1
 }
 }

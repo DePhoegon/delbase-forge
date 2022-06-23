@@ -9,6 +9,7 @@
 }
 ],
 "output": {
-"item": "delbase:purpur_block_wall"
+"item": "delbase:purpur_block_wall",
+  "count": 1
 }
 }

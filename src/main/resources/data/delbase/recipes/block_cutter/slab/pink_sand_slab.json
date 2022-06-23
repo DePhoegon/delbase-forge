@@ -9,6 +9,7 @@
 }
 ],
 "output": {
-"item": "delbase:pink_sand_slab"
+"item": "delbase:pink_sand_slab",
+  "count": 2
 }
 }

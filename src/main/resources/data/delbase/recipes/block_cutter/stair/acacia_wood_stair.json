@@ -9,6 +9,7 @@
 }
 ],
 "output": {
-"item": "delbase:acacia_wood_stair"
+"item": "delbase:acacia_wood_stair",
+  "count": 1
 }
 }

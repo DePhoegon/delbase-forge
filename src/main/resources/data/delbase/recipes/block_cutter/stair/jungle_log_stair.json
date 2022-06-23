@@ -9,6 +9,7 @@
 }
 ],
 "output": {
-"item": "delbase:jungle_log_stair"
+"item": "delbase:jungle_log_stair",
+  "count": 1
 }
 }

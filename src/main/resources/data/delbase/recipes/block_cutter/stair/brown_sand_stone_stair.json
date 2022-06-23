@@ -9,6 +9,7 @@
 }
 ],
 "output": {
-"item": "delbase:brown_sand_stone_stair"
+"item": "delbase:brown_sand_stone_stair",
+  "count": 1
 }
 }

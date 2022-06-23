@@ -9,6 +9,7 @@
 }
 ],
 "output": {
-"item": "delbase:coal_block_stair"
+"item": "delbase:coal_block_stair",
+  "count": 1
 }
 }

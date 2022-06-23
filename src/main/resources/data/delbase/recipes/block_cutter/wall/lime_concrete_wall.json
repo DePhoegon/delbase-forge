@@ -9,6 +9,7 @@
 }
 ],
 "output": {
-"item": "delbase:lime_concrete_wall"
+"item": "delbase:lime_concrete_wall",
+  "count": 1
 }
 }

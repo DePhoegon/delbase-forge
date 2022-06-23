@@ -9,6 +9,7 @@
 }
 ],
 "output": {
-"item": "delbase:cut_sand_stone_wall"
+"item": "delbase:cut_sand_stone_wall",
+  "count": 1
 }
 }

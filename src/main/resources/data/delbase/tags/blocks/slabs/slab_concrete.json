@@ -2,6 +2,7 @@
   "replace": false,
   "values": [
     "delbase:red_concrete_slab",
+    "delbase:gray_concrete_slab",
     "delbase:white_concrete_slab",
     "delbase:orange_concrete_slab",
     "delbase:magenta_concrete_slab",

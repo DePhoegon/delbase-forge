@@ -9,6 +9,7 @@
 }
 ],
 "output": {
-"item": "delbase:red_terracotta_slab"
+"item": "delbase:red_terracotta_slab",
+  "count": 2
 }
 }

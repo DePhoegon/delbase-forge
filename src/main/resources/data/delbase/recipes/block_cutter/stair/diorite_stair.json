@@ -9,6 +9,7 @@
     }
   ],
   "output": {
-    "item": "minecraft:diorite_stairs"
+    "item": "minecraft:diorite_stairs",
+    "count": 1
   }
 }

@@ -9,6 +9,7 @@
     }
   ],
   "output": {
-    "item": "minecraft:acacia_fence"
+    "item": "minecraft:acacia_fence",
+    "count": 1
   }
 }

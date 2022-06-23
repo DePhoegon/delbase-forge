@@ -9,6 +9,7 @@
 }
 ],
 "output": {
-"item": "delbase:raw_gold_wall"
+"item": "delbase:raw_gold_wall",
+  "count": 1
 }
 }
