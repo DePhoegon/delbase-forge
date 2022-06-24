@@ -1,8 +1,0 @@
-{ 
-  "type": "minecraft:stonecutting", 
-  "ingredient": { 
-    "item": "delbase:lime_cut_sand_stone" 
-  }, 
-  "result": "delbase:lime_cut_sand_stone_slab", 
-  "count": 2 
-} 

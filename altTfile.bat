@@ -18,19 +18,3 @@
 :: call node c:\node\delbaseRecipe  1
 
 :: used for spot calls while building the primary list
-call node c:\node\delbaseRecipe blood_cut_sand_stone 1
-call node c:\node\delbaseRecipe white_cut_sand_stone 1
-call node c:\node\delbaseRecipe orange_cut_sand_stone 1
-call node c:\node\delbaseRecipe magenta_cut_sand_stone 1
-call node c:\node\delbaseRecipe light_blue_cut_sand_stone 1
-call node c:\node\delbaseRecipe yellow_cut_sand_stone 1
-call node c:\node\delbaseRecipe lime_cut_sand_stone 1
-call node c:\node\delbaseRecipe pink_cut_sand_stone 1
-call node c:\node\delbaseRecipe gray_cut_sand_stone 1
-call node c:\node\delbaseRecipe light_gray_cut_sand_stone 1
-call node c:\node\delbaseRecipe cyan_cut_sand_stone 1
-call node c:\node\delbaseRecipe purple_cut_sand_stone 1
-call node c:\node\delbaseRecipe blue_cut_sand_stone 1
-call node c:\node\delbaseRecipe green_cut_sand_stone 1
-call node c:\node\delbaseRecipe brown_cut_sand_stone 1
-call node c:\node\delbaseRecipe black_cut_sand_stone 1

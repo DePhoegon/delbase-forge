@@ -1,8 +1,0 @@
-{ 
-  "type": "minecraft:stonecutting", 
-  "ingredient": { 
-    "item": "delbase:pink_sand_stone" 
-  }, 
-  "result": "delbase:pink_smooth_sand_stone", 
-  "count": 1 
-} 

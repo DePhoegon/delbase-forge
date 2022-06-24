@@ -3,7 +3,7 @@ Verify Blocks & Items
 -Models =
 -Tags =
 
--loot_tables
+-loot_tables =
 -crafting Recipes
 == block cutter
 == camp fire
