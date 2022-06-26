@@ -1,8 +1,0 @@
-{ 
-  "type": "minecraft:stonecutting", 
-  "ingredient": { 
-    "item": "delbase:purple_chiseled_sand_stone" 
-  }, 
-  "result": "delbase:purple_chiseled_sand_stone_stair", 
-  "count": 1 
-} 
