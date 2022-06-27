@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#W#",
+    "#W#"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:stick"
+    },
+    "W": {
+      "item": "delbase:magenta_chiseled_sand_stone"
+    }
+  },
+  "result": {
+    "item": "delbase:magenta_chiseled_sand_stone_fence_gate"
+  }
+}
