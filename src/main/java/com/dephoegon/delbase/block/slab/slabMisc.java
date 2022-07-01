@@ -42,7 +42,7 @@ public class slabMisc {
             ()-> new slabBlock(BlockBehaviour.Properties.copy(BASALT).sound(SoundType.STONE)
                     ,"","","", false));
     public static final RegistryObject<SlabBlock> POLISHED_BASALT_SLAB = register("polished_basalt_slab",
-            ()-> new slabBlock(BlockBehaviour.Properties.copy(POLISHED_BLACKSTONE).sound(SoundType.STONE)
+            ()-> new slabBlock(BlockBehaviour.Properties.copy(POLISHED_BASALT).sound(SoundType.STONE)
                     ,"","","", false));
     public static final RegistryObject<SlabBlock> SMOOTH_BASALT_SLAB = register("smooth_basalt_slab",
             ()-> new slabBlock(BlockBehaviour.Properties.copy(SMOOTH_BASALT).sound(SoundType.STONE)

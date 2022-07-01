@@ -1,15 +1,15 @@
 {
-"type": "delbase:block_cutting",
-"ingredients": [
-{
-"item": "delbase:fence_plans"
-},
-{
-"item": "minecraft:basalt"
-}
-],
-"output": {
-"item": "delbase:basalt_fence",
-  "count": 1
-}
+  "type": "delbase:block_cutting",
+  "ingredients": [
+    {
+      "item": "delbase:fence_plans"
+    },
+    {
+      "item": "delbase:cobbled_basalt_fence"
+    }
+  ],
+  "output": {
+    "item": "delbase:basalt_fence",
+    "count": 1
+  }
 }
