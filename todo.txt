@@ -1,14 +1,11 @@
 =======================
-To Adjust
+vial dye recipes
+plans recipe
+energetic slabs
+concrete stone cutter recipes
 
-Recipes to get ashed blocks
-- fences
-- slabs
-- logs
-- stairs
-- walls
-- fence gate
-====  Easy to use Tags to simplify recipe list
+sandstone / red sandstone
+fence / fencegate recipe
 
 ==================================================
 
