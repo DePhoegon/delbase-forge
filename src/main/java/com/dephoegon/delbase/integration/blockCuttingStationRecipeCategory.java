@@ -27,7 +27,7 @@ import static net.minecraft.world.item.Items.*;
 @SuppressWarnings("removal")
 public class blockCuttingStationRecipeCategory implements IRecipeCategory<blockCuttingStationRecipes> {
     public final static ResourceLocation UID = new ResourceLocation(Mod_ID, "block_cutting");
-    public final static ResourceLocation TEXTURE = new ResourceLocation(Mod_ID, "textures/gui/block_cutting_station_gui_empty.png");
+    public final static ResourceLocation TEXTURE = new ResourceLocation(Mod_ID, "textures/gui/block_cutting_station_gui_jei.png");
 
     private final IDrawable background;
     private final IDrawable icon;
@@ -108,7 +108,7 @@ public class blockCuttingStationRecipeCategory implements IRecipeCategory<blockC
                     ));
                 } else {
                     builder.addSlot(RecipeIngredientRole.OUTPUT, 80, 60)
-                            .addItemStack(itemStack).setSlotName("Default Config amount");
+                            .addItemStack(itemStack);
                 }
 
             } else {
