@@ -1,7 +1,6 @@
 =======================
 vial dye recipes
 plans recipe
-energetic slabs
 concrete stone cutter recipes
 
 sandstone / red sandstone
