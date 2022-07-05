@@ -33,6 +33,7 @@ import java.util.Optional;
 
 import static com.dephoegon.delbase.aid.recipe.TierRandomDropAid.*;
 import static com.dephoegon.delbase.aid.recipe.countAid.netheriteDiamondBonus;
+import static com.dephoegon.delbase.aid.slots.planSlots.getFullPlanSlotArray;
 import static com.dephoegon.delbase.item.blockCutterPlans.*;
 import static net.minecraft.world.item.Items.DIAMOND;
 
@@ -75,6 +76,8 @@ public class blockCuttingStation extends BlockEntity implements MenuProvider {
     };
     private final ItemStackHandler outputHandle = new ItemStackHandler(1){
         @Override
+        public boolean isItemValid(int slot, @NotNull ItemStack stack) { return false; }
+        @Override
         protected void onContentsChanged(int slot) {
             if (outputHandle.getStackInSlot(slot) != itemHandler.getStackInSlot(outputSlot)) {
                 itemHandler.setStackInSlot(outputSlot, outputHandle.getStackInSlot(slot));
@@ -82,6 +85,9 @@ public class blockCuttingStation extends BlockEntity implements MenuProvider {
         }
     };
     private final ItemStackHandler planHandle = new ItemStackHandler(1){
+        public boolean isItemValid(int slot, @NotNull ItemStack stack) {
+            return getFullPlanSlotArray().contains(stack.getItem().asItem());
+        }
         @Override
         protected void onContentsChanged(int slot) {
             if (planHandle.getStackInSlot(slot) != itemHandler.getStackInSlot(planSlot)) {
