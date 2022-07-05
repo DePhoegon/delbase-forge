@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " # ",
+    "NDN",
+    " N "
+  ],
+  "key": {
+    "D": {
+      "item": "minecraft:black_dye"
+    },
+    "N": {
+      "item": "minecraft:iron_nugget"
+    },
+    "#": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "delbase:black_shift_dye",
+    "count": 8
+  }
+}

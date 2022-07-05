@@ -1,0 +1,25 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "type": "minecraft:crafting_shaped",
+      "pattern": [
+        "###",
+        "#D#",
+        "###"
+      ],
+      "key": {
+        "D": {
+          "item": "minecraft:light_gray_dye"
+        },
+        "#": {
+          "tag": "delbase:grouped/shifting_dyes"
+        }
+      },
+      "result": {
+        "item": "delbase:light_gray_shift_dye",
+        "count": 8
+      }
+    }
+  ]
+}

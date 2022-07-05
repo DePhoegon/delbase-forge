@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " # ",
+    "NDN",
+    " N "
+  ],
+  "key": {
+    "D": {
+      "item": "minecraft:green_dye"
+    },
+    "N": {
+      "item": "minecraft:iron_nugget"
+    },
+    "#": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "delbase:green_shift_dye",
+    "count": 8
+  }
+}

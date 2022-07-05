@@ -1,21 +1,12 @@
 =======================
-vial dye recipes
-plans recipe
-concrete stone cutter recipes
-
-sandstone / red sandstone
-fence / fencegate recipe
 
 ==================================================
 
 Followup steps (after fences)
 - triple check all the blocks
 - Crafting recipes
-== get JEI/NEI integration if possible
-- turn own dyes into 'small piles' (x8) to use on blocks in world
-- use tags to do crafting recipes  to allow use of normal dyes to turn 8 of a set into 8 of one color
+
 - 'consider' custom machine to do colors [ not looking favorable]
-- 'consider' custom machine to take apart armor/items to recover resources
 - 'consider' nether touches.
 - 'consider' obsidian for variants
 - 'consider' item to take the color out of blocks
@@ -29,7 +20,5 @@ Followup steps (after fences)
 
 Recipes for blocks in crafting tables.
 Double check all recipes
-Armor ripping apart recipes
--pattern for taking armor apart
 touch up colors on the block cutter.
 
