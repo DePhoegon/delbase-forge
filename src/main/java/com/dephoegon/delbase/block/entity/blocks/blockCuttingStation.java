@@ -37,19 +37,61 @@ import static com.dephoegon.delbase.item.blockCutterPlans.*;
 import static net.minecraft.world.item.Items.DIAMOND;
 
 public class blockCuttingStation extends BlockEntity implements MenuProvider {
-    public static final int outputSlot = 0;
-    public static final int inputSlot = 2;
-    public static final int planSlot = 1;
+    public static final int outputSlot = 1;
+    public static final int inputSlot = 0;
+    public static final int planSlot = 2;
     public static final int blockCuttingStationSlotCount = 3;
     public static ItemStackHandler iHandler = null;
     private final ItemStackHandler itemHandler = new ItemStackHandler(blockCuttingStationSlotCount) {
         @Override
         protected void onContentsChanged(int slot) {
+            if (slot == inputSlot) {
+                if(inputHandle.getStackInSlot(0) != itemHandler.getStackInSlot(inputSlot)) {
+                    inputHandle.setStackInSlot(0, itemHandler.getStackInSlot(inputSlot));
+                }
+            }
+            if (slot == outputSlot) {
+                if (outputHandle.getStackInSlot(0) != itemHandler.getStackInSlot(outputSlot)) {
+                    outputHandle.setStackInSlot(0, itemHandler.getStackInSlot(outputSlot));
+                }
+            }
+            if (slot == planSlot) {
+                if (planHandle.getStackInSlot(0) != itemHandler.getStackInSlot(planSlot)) {
+                    planHandle.setStackInSlot(0, itemHandler.getStackInSlot(planSlot));
+                }
+            }
             iHandler = itemHandler;
             setChanged();
         }
     };
-    private LazyOptional<IItemHandler> lazyItemHandler = LazyOptional.empty();
+    private final LazyOptional<IItemHandler> lazyItemHandler = LazyOptional.of(() -> itemHandler);
+    private final ItemStackHandler inputHandle = new ItemStackHandler(1) {
+        @Override
+        protected void onContentsChanged(int slot) {
+            if (inputHandle.getStackInSlot(slot) != itemHandler.getStackInSlot(inputSlot)) {
+                itemHandler.setStackInSlot(inputSlot, inputHandle.getStackInSlot(slot));
+            }
+        }
+    };
+    private final ItemStackHandler outputHandle = new ItemStackHandler(1){
+        @Override
+        protected void onContentsChanged(int slot) {
+            if (outputHandle.getStackInSlot(slot) != itemHandler.getStackInSlot(outputSlot)) {
+                itemHandler.setStackInSlot(outputSlot, outputHandle.getStackInSlot(slot));
+            }
+        }
+    };
+    private final ItemStackHandler planHandle = new ItemStackHandler(1){
+        @Override
+        protected void onContentsChanged(int slot) {
+            if (planHandle.getStackInSlot(slot) != itemHandler.getStackInSlot(planSlot)) {
+                itemHandler.setStackInSlot(planSlot, planHandle.getStackInSlot(slot));
+            }
+        }
+    };
+    private final LazyOptional<IItemHandler> lazyInput = LazyOptional.of(() -> inputHandle);
+    private final LazyOptional<IItemHandler> lazyOutput = LazyOptional.of(() -> outputHandle);
+    private final LazyOptional<IItemHandler> lazyPlan = LazyOptional.of(() -> planHandle);
 
     protected final ContainerData data;
     private int progress = 0;
@@ -94,13 +136,25 @@ public class blockCuttingStation extends BlockEntity implements MenuProvider {
     @Nullable
     @Override
     public <T> LazyOptional<T> getCapability(@NotNull Capability<T> cap, Direction side) {
-        if (cap == CapabilityItemHandler.ITEM_HANDLER_CAPABILITY) { return lazyItemHandler.cast(); }
+        if (cap == CapabilityItemHandler.ITEM_HANDLER_CAPABILITY) {
+            if (side == Direction.UP) {
+                return lazyInput.cast();
+            }
+            if (side == Direction.DOWN) {
+                return lazyOutput.cast();
+            }
+            if (side == Direction.SOUTH || side == Direction.EAST || side == Direction.WEST || side == Direction.NORTH) {
+                return lazyPlan.cast();
+            }
+            if (side == null || level != null && level.getBlockState(getBlockPos()).getBlock() != getBlockState().getBlock()) {
+                return lazyItemHandler.cast();
+            }
+        }
         return super.getCapability(cap, side);
     }
     @Override
     public void onLoad() {
         super.onLoad();
-        lazyItemHandler = LazyOptional.of(() -> itemHandler);
     }
     @Override
     public void invalidateCaps() {

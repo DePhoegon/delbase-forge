@@ -37,6 +37,7 @@ public class cuttingStationBlock extends horizontalFacingBlocksBaseEntities {
         super(properties, normToolTip, shiftToolTip, ctrlToolTip, false);
     }
 
+    @SuppressWarnings("deprecation")
     @Override
     public @NotNull VoxelShape getShape(@NotNull BlockState pState, @NotNull BlockGetter pLevel, @NotNull BlockPos pPos, @NotNull CollisionContext pContext) {
         Direction direction = pState.getValue(FACING);
@@ -155,6 +156,7 @@ public class cuttingStationBlock extends horizontalFacingBlocksBaseEntities {
                 blockCuttingStation::tick);
     }
     // Below in use, because Hoppers are a painful experience & I can't figure out how to set restrictions on them.
+    /*
     public boolean isSignalSource(BlockState pState) {
         return true;
     }
@@ -162,4 +164,6 @@ public class cuttingStationBlock extends horizontalFacingBlocksBaseEntities {
         return 1;
     }
     // 1 used to lock adjacent hoppers, without being otherwise of any use outside glowing a redstone lamp under it.
+
+     */
 }

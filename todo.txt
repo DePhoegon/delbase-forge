@@ -20,5 +20,4 @@ Followup steps (after fences)
 
 Recipes for blocks in crafting tables.
 Double check all recipes
-touch up colors on the block cutter.
 
