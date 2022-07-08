@@ -1,14 +1,10 @@
-Build Example set for showcase.
-{x} Acacia fountain sub-set
+stone cutter needed
 
-=================
+-basalts (all - all types)
+-cracked polished blackstone bricks (all types)
+-chiseled polished blackstone (all types)
+-netherrack (all types)
 
-Verify recipes
-
-Verify concepts on how to get them
-
-Verify Texture fitting
-
-================
-
-Get color changing method nailed down
+==========
+Double check for any missing extra blocks.
+-Check netherbrick fencegates
