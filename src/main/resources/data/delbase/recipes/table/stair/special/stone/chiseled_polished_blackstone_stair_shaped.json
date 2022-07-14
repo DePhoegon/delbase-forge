@@ -7,11 +7,11 @@
   ],
   "key": {
     "#": {
-      "item": "minecraft:chiseld_polished_blackstone"
+      "item": "minecraft:chiseled_polished_blackstone"
     }
   },
   "result": {
-    "item": "delbase:chiseld_polished_blackstone_stair",
+    "item": "delbase:chiseled_polished_blackstone_stair",
     "count": 4
   }
 }

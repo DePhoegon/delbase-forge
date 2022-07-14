@@ -2,8 +2,8 @@
   "replace": false,
   "values": [
     "delbase:glowstone_stair",
-    "delbase:raw_gold_stair",
-    "delbase:raw_copper_stair",
-    "delbase:raw_iron_stair"
+    "delbase:chiseled_quartz_stair",
+    "delbase:quartz_brick_stair",
+    "delbase:quartz_pillar_stair"
   ]
 }

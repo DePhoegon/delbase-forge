@@ -1,23 +1,10 @@
-=======================
+=====================
+Get Guide Book done
+- have it given to players on joining.
+- have a recipe for it.
 
-==================================================
+Get Jar Made
 
-Followup steps (after fences)
-- triple check all the blocks
-- Crafting recipes
-
-- 'consider' custom machine to do colors [ not looking favorable]
-- 'consider' nether touches.
-- 'consider' obsidian for variants
-- 'consider' item to take the color out of blocks
-== 'consider' destroying block in exchange for some color/blocks
-== 'consider' blocks that would be useful with this.
-== 'consider' swapping out blocks for another for colors (ideas like full logs/wood blocks)
-
--work on in game book discovery of mechanics
-
-===========================
-
-Recipes for blocks in crafting tables.
-Double check all recipes
+Get setup for Support Mod of this & Intended Modpack inclusions.
+-chococraft
 

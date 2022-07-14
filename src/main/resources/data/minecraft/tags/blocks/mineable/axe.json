@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "#delbase:wood_all"
+    "#delbase:groupings/woods",
+    "#delbase:groupings/ashed"
   ]
 }

@@ -1,6 +1,8 @@
 {
   "replace": false,
   "values": [
+    "delbase:red_netherbrick_fence_gate",
+    "delbase:netherbrick_fence_gate",
     "delbase:cobbled_basalt_fence_gate",
     "delbase:basalt_fence_gate",
     "delbase:smooth_basalt_fence_gate",

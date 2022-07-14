@@ -1,10 +1,23 @@
-stone cutter needed
+7-14
+====
+Use JEI to checke recipes of items
+-Table recipes
+-Block Cutter recipes
+-Stone Cutter recipes
+-Campfire Recipes
+-furnance recipes
 
--basalts (all - all types)
--cracked polished blackstone bricks (all types)
--chiseled polished blackstone (all types)
--netherrack (all types)
+Setup Verification Test
+=========
+place & break each block with tools to verify drops & tool selection.
+-only 1 of each base type will be needed
 
-==========
-Double check for any missing extra blocks.
--Check netherbrick fencegates
+Likely to Skip
+=========
+Obsidian Variants -Back Burner
+
+Further Nether Touches -Other Nether blocks do not fit in, in the same way grass does not fit in to mod variants
+
+Color Swap Wood -Makes No sense
+Destroy blocks for dyes -Does not fit in with mod Idea
+Machine to swap colors of blocks -Makes No sense with current mod setup.

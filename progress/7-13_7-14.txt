@@ -1,0 +1,22 @@
+Adjusted Block Tags for better sorting.
+Fixed loot_table issue.
+added last of Base block variants
+Finished on the Recipes
+Corrected/added Which tools & tool level for mining of said blocks
+Fixed wrongly dated Progress txt
+Cleard out 'ShortList'
+
+Updated Mod Info
+-mods.toml
+-build.gradle
+=added { Patchouli }
+=added Variable for version
+
+Added Blocks
+Red Nether brick fence & fence gate
+Nether Brick fence gate
+
+Verified
+- Custom Dyes used on blocks
+== also work as typical dyes themselves as stand-ins for normal work.
+

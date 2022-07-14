@@ -15,7 +15,7 @@ plugins {
 }
 apply plugin: 'net.minecraftforge.gradle'
 
-version = '0.5.0-1.18.2'
+version = 0.9
 group = 'com.dephoegon.delbase' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = 'delbase'
 
@@ -154,19 +154,26 @@ repositories {
         name = "ModMaven"
         url = "https://modmaven.dev"
     }
+    maven {
+        url 'https://maven.blamejared.com'
+    }
 }
 
 dependencies {
     // Specify the version of Minecraft to use. If this is any group other than 'net.minecraft', it is assumed
     // that the dep is a ForgeGradle 'patcher' dependency, and its patches will be applied.
     // The userdev artifact is a special name and will get all sorts of transformations applied to it.
-    minecraft 'net.minecraftforge:forge:1.18.2-40.1.51'
+    minecraft 'net.minecraftforge:forge:1.18.2-40.1.60'
 
     // Real mod deobf dependency examples - these get remapped to your current mappings
     // compile against the JEI API but do not include it at runtime
     compileOnly fg.deobf("mezz.jei:jei-${mc_version}:${jei_version}:api")
     // at runtime, use the full JEI jar
     runtimeOnly fg.deobf("mezz.jei:jei-${mc_version}:${jei_version}")
+
+    // Guidebook
+    compileOnly fg.deobf("vazkii.patchouli:Patchouli:${mc_version}-${patchouli_ver}:api")
+    runtimeOnly fg.deobf("vazkii.patchouli:Patchouli:${mc_version}-${patchouli_ver}")
 
     // Examples using mod jars from ./libs
     // implementation fg.deobf("blank:coolmod-${mc_version}:${coolmod_version}")

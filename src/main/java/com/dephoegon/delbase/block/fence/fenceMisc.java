@@ -141,6 +141,15 @@ public class fenceMisc {
     public static final RegistryObject<FenceGateBlock> MAGMA_BLOCK_FENCE_GATE = register("magma_block_fence_gate",
             () -> new fenceGateBlock(BlockBehaviour.Properties.copy(MAGMA_BLOCK).sound(SoundType.MOSS).lightLevel((blockState) -> 3),
                     "","","", false));
+    public static final RegistryObject<FenceGateBlock> NETHER_BRICK_FENCE_GATE = register("netherbrick_fence_gate",
+            () -> new fenceGateBlock(BlockBehaviour.Properties.copy(NETHER_BRICKS).sound(SoundType.NETHER_BRICKS),
+                    "","","", false));
+    public static final RegistryObject<FenceBlock> RED_NETHER_BRICK_FENCE = register("red_netherbrick_fence",
+            () -> new fenceBlock(BlockBehaviour.Properties.copy(RED_NETHER_BRICKS).sound(SoundType.NETHER_BRICKS),
+                    "","","", false));
+    public static final RegistryObject<FenceGateBlock> RED_NETHER_BRICK_FENCE_GATE = register("red_netherbrick_fence_gate",
+            () -> new fenceGateBlock(BlockBehaviour.Properties.copy(RED_NETHER_BRICKS).sound(SoundType.NETHER_BRICKS),
+                    "","","", false));
 
 
     public static void register() {

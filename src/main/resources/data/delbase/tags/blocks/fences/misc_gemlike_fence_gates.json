@@ -2,8 +2,10 @@
   "replace": false,
   "values": [
     "delbase:glowstone_fence_gate",
-    "delbase:raw_gold_fence_gate",
-    "delbase:raw_copper_fence_gate",
-    "delbase:raw_iron_fence_gate"
+    "delbase:quartz_bricks_fence_gate",
+    "delbase:quartz_block_fence_gate",
+    "delbase:smooth_quartz_fence_gate",
+    "delbase:chiseled_quartz_block_fence_gate",
+    "delbase:quartz_pillar_fence_gate"
   ]
 }

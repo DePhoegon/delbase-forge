@@ -1,7 +1,8 @@
 {
   "replace": false,
   "values": [
-    "#delbase:stone_all",
-    "#delbase:gemlike_all"
+    "#delbase:groupings/stones",
+    "#delbase:groupings/metals",
+    "#delbase:groupings/gemlikes"
   ]
 }

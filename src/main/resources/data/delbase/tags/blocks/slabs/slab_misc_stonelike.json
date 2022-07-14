@@ -2,6 +2,8 @@
   "replace": false,
   "values": [
     "delbase:end_stone_slab",
+    "delbase:netherrack_slab",
+    "delbase:magma_block_slab",
     "delbase:bone_block_slab",
     "delbase:basalt_slab",
     "delbase:polished_basalt_slab",

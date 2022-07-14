@@ -1101,6 +1101,9 @@
   "block.delbase.magma_block_fence_gate": "Magma Block Fence Gate",
   "block.delbase.shroomlight_fence": "Shroomlight Fence",
   "block.delbase.shroomlight_fence_gate": "Shroomlight Fence Gate",
+  "block.delbase.red_netherbrick_fence": "Red Nether Bricks Fence",
+  "block.delbase.red_netherbrick_fence_gate": "Red Nether Bricks Fence Gate",
+  "block.delbase.netherbrick_fence_gate": "Nether Bricks Fence Gate",
 
   "block.delbase.ash_slab": "Ash Slab",
   "block.delbase.ash_stair": "Ash Stair",

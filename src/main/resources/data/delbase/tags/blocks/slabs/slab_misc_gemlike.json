@@ -1,9 +1,9 @@
 {
   "replace": false,
   "values": [
-    "delbase:raw_iron_slab",
-    "delbase:raw_copper_slab",
-    "delbase:raw_gold_slab",
-    "delbase:glowstone_slab"
+    "delbase:glowstone_slab",
+    "delbase:chiseled_quartz_slab",
+    "delbase:quartz_brick_slab",
+    "delbase:quartz_pillar_slab"
   ]
 }
