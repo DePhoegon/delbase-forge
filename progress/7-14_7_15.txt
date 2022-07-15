@@ -1,0 +1,17 @@
+Recipes
+===============
+sand from cobblestone (using armor compound) - added
+colored sands(energetic sands) from sands + dyes - added
+armor_compound recipe - added
+energetic sand slabs - recipe name fixed
+sand stone slab - recipe name fixed
+-chiseled
+-cut
+-smooth
+-regulars
+
+Tags
+==========
+sands item tag - added
+raw foods tag - added
+dyes tag - added

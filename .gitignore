@@ -35,3 +35,4 @@ src/test/
 # Files from Forge MDK
 forge*changelog.txt
 
+/run/patchouli_data.json

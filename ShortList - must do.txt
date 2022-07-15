@@ -1,11 +1,26 @@
 7-14
 ====
-Use JEI to checke recipes of items
--Table recipes
--Block Cutter recipes
--Stone Cutter recipes
--Campfire Recipes
--furnance recipes
+- FIX -
+recipes (missing)
++ armor_compound
++ energetic Sands (all whole versions)
+- sand slab / red sand slab [only block cutter recipes exist]
+- orange concrete slab [stone cutter missing]
+- end stone slab [stone cutter missing]
+- dripstone slab [stone cutter missing]
+- sand / red sand stair [only block cutter exists]
+- orange concrete stair [stone cutter missing]
+- end stone stair [missing stone cutter]
+- dripstone stair [missing stone cutter]
+- sand / red sand wall [only block cutter exists]
+- orange concrete wall [missing stone cutter]
+- end stone wall [missing stone cutter]
+- dripstone wall [missing stone cutter]
+
+errors (recipes)
+- solid sand [2 campfire recipes]
+- red solid and [2 campfire recipes]
+
 
 Setup Verification Test
 =========
