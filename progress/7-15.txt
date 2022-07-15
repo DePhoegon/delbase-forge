@@ -1,0 +1,58 @@
+Recipes
+=============
+Slabs
+~~~~~
+-sand [crafting table/ stone_cutter]
+-red_sand [crafting table/ stone_cutter]
+-orange concrete [stone_cutter]
+-end_stone [stone_cutter]
+-dripstone [stone_cutter]
+
+Stairs
+~~~~~~~~~
+-orange concrete [stone_cutter]
+-end_stone [stone_cutter]
+-dripstone [stone_cutter]
+-sand [crafting table/ stone_cutter]
+-red_sand [crafting table/ stone_cutter]
+
+Walls
+~~~~~~~~~~
+-orange concrete [stone_cutter]
+-end_stone [stone_cutter]
+-dripstone [stone_cutter]
+-sand [crafting table/ stone_cutter]
+-red_sand [crafting table/ stone_cutter]
+
+
+Name Conflicts Addressed
+====================
+Concrete Slabs [stone_cutter]
+Concrete Stairs [stone_cutter]
+Concrete Walls [stone_cutter]
+
+Redundant/Unneeded Files
+================
+Removed duplicates
+-Solid_sand [campfire]
+-Red_solid_sand [campfire]
+
+Odd Fixes
+============
+Pachouli lines added to build.gradle (data, server, gametestserver)
+Refactored Client setup - Allowing MP server use
+Fixed overlooked cut_lock in color swap logic - cause client crash - attempting to apply Direction.Axis to a block that doesn't support it
+--  This is reliant on assuming that base versions & red versions are base Minecraft (example, cut_sandstone & cut_red_sandstone, not directional.. while the modded cut blocks are)
+Fixing Sandstone class extending genBlock instead of Block directly
+
+Tags
+~~~~~
+Yellow terracotta - [slab / stair] missing
+
+Loot Table
+~~~~~~~~~
+Terracotta
+- Light Blue - missing
+- Lime - missing
+- Magenta - Wrong color dropped / wrong Item
+- Yellow - Wrong color dropped / wrong Item

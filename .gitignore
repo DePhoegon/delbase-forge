@@ -24,9 +24,16 @@ run/crash-reports/
 run/defaultconfigs/
 run/logs/
 run/mods/
-/run/saves/
+run/saves/
+run/world/
+run/patchouli_books/
+run/resourcepacks/
 run/*.log
+run/*.json
+run/*.dat
 user*.json
+*.properties
+
 *.db
 Thumbs.db
 src/generated/
@@ -36,3 +43,5 @@ src/test/
 forge*changelog.txt
 
 /run/patchouli_data.json
+run/banned-ips.json
+run/banned-players.json

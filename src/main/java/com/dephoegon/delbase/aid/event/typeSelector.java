@@ -6,7 +6,7 @@ import com.dephoegon.delbase.aid.block.alt.concreteWall;
 import com.dephoegon.delbase.aid.block.colorshift.axis.cutSandStone;
 import com.dephoegon.delbase.aid.block.colorshift.fence.*;
 import com.dephoegon.delbase.aid.block.colorshift.gen.chiseledSandStone;
-import com.dephoegon.delbase.aid.block.colorshift.gen.sandStone;
+import com.dephoegon.delbase.aid.block.colorshift.gen.normSandStone;
 import com.dephoegon.delbase.aid.block.colorshift.gen.smoothSandStone;
 import com.dephoegon.delbase.aid.block.colorshift.grav.sandBlock;
 import com.dephoegon.delbase.aid.block.colorshift.grav.solidSandBlock;
@@ -122,7 +122,7 @@ public class typeSelector {
         if (block instanceof chiseledSandStone || state == CHISELED_SANDSTONE.defaultBlockState() || state == CHISELED_RED_SANDSTONE.defaultBlockState()) {
             return ColorLogic(world, blockPos, state, CHISELED_SANDSTONE.defaultBlockState(), CHISELED_RED_SANDSTONE.defaultBlockState(), BLOOD_CHISELED_SAND_STONE.get().defaultBlockState(), WHITE_CHISELED_SAND_STONE.get().defaultBlockState(), ORANGE_CHISELED_SAND_STONE.get().defaultBlockState(), MAGENTA_CHISELED_SAND_STONE.get().defaultBlockState(), LIGHT_BLUE_CHISELED_SAND_STONE.get().defaultBlockState(), YELLOW_CHISELED_SAND_STONE.get().defaultBlockState(), LIME_CHISELED_SAND_STONE.get().defaultBlockState(), PINK_CHISELED_SAND_STONE.get().defaultBlockState(), GRAY_CHISELED_SAND_STONE.get().defaultBlockState(), LIGHT_GRAY_CHISELED_SAND_STONE.get().defaultBlockState(), CYAN_CHISELED_SAND_STONE.get().defaultBlockState(), PURPLE_CHISELED_SAND_STONE.get().defaultBlockState(), BLUE_CHISELED_SAND_STONE.get().defaultBlockState(), GREEN_CHISELED_SAND_STONE.get().defaultBlockState(), BROWN_CHISELED_SAND_STONE.get().defaultBlockState(), BLACK_CHISELED_SAND_STONE.get().defaultBlockState(), blockIndex, inHand, playerEntity);
         }
-        if (block instanceof sandStone || state == SANDSTONE.defaultBlockState() || state == RED_SANDSTONE.defaultBlockState()) {
+        if (block instanceof normSandStone || state == SANDSTONE.defaultBlockState() || state == RED_SANDSTONE.defaultBlockState()) {
             return ColorLogic(world, blockPos, state, SANDSTONE.defaultBlockState(), RED_SANDSTONE.defaultBlockState(), BLOOD_SAND_STONE.get().defaultBlockState(), WHITE_SAND_STONE.get().defaultBlockState(), ORANGE_SAND_STONE.get().defaultBlockState(), MAGENTA_SAND_STONE.get().defaultBlockState(), LIGHT_BLUE_SAND_STONE.get().defaultBlockState(), YELLOW_SAND_STONE.get().defaultBlockState(), LIME_SAND_STONE.get().defaultBlockState(), PINK_SAND_STONE.get().defaultBlockState(), GRAY_SAND_STONE.get().defaultBlockState(), LIGHT_GRAY_SAND_STONE.get().defaultBlockState(), CYAN_SAND_STONE.get().defaultBlockState(), PURPLE_SAND_STONE.get().defaultBlockState(), BLUE_SAND_STONE.get().defaultBlockState(), GREEN_SAND_STONE.get().defaultBlockState(), BROWN_SAND_STONE.get().defaultBlockState(), BLACK_SAND_STONE.get().defaultBlockState(), blockIndex, inHand, playerEntity);
         }
         if (block instanceof smoothSandStone || state == SMOOTH_SANDSTONE.defaultBlockState() || state == SMOOTH_RED_SANDSTONE.defaultBlockState()) {

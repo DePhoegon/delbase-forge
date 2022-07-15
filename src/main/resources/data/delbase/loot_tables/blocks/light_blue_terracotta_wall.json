@@ -7,7 +7,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "delbase:yellow_terracotta_wall"
+          "name": "delbase:light_blue_terracotta_wall"
         }
       ],
       "conditions": [

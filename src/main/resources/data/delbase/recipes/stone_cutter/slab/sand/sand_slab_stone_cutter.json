@@ -1,8 +1,8 @@
 {
   "type": "minecraft:stonecutting",
   "ingredient": {
-    "item": "minecraft:netherrack"
+    "item": "delbase:solid_sand"
   },
-  "result": "delbase:netherrack_slab",
+  "result": "delbase:sand_slab",
   "count": 2
 }

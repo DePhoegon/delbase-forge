@@ -1,8 +1,8 @@
 {
   "type": "minecraft:stonecutting",
   "ingredient": {
-    "item": "minecraft:netherrack"
+    "item": "minecraft:dripstone"
   },
-  "result": "delbase:netherrack_slab",
+  "result": "delbase:dripstone_slab",
   "count": 2
 }

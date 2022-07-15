@@ -16,6 +16,7 @@ import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
+import net.minecraftforge.fml.DistExecutor;
 import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.config.ModConfig;
@@ -48,18 +49,11 @@ public class delbase
     public delbase() {
         IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
         regList.listOrder();
-        // Register the setup method for modloading
-        eventBus.addListener(this::clientSetup);
+
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
         ModLoadingContext.get().registerConfig(ModConfig.Type.CLIENT, clientConfig.SPEC, "delbase-client.toml");
         ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, commonConfig.SPEC, "delbase-common.toml");
-    }
-    @OnlyIn(Dist.CLIENT)
-    // ClientSetup In the aid/event/eventBusEvent
-    private void clientSetup(final FMLCommonSetupEvent event) {
-        ItemBlockRenderTypes.setRenderLayer(machineBlocks.BLOCK_CUTTING_STATION.get(), RenderType.translucent());
-        MenuScreens.register(menuTypes.BLOCK_CUTTING_STATION_MENU.get(), blockCuttingStationScreen::new);
     }
     private void setup(final FMLCommonSetupEvent event)
     {

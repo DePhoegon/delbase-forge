@@ -73,6 +73,8 @@ minecraft {
 
         server {
             workingDirectory project.file('run')
+            property 'mixin.env.remapRefMap', 'true'
+            property 'mixin.env.refMapRemappingFile', "${projectDir}/build/createSrgToMcp/output.srg"
 
             property 'forge.logging.markers', 'REGISTRIES'
 
@@ -93,6 +95,8 @@ minecraft {
         // The gametest system is also enabled by default for other run configs under the /test command.
         gameTestServer {
             workingDirectory project.file('run')
+            property 'mixin.env.remapRefMap', 'true'
+            property 'mixin.env.refMapRemappingFile', "${projectDir}/build/createSrgToMcp/output.srg"
 
             // Recommended logging data for a userdev environment
             // The markers can be added/remove as needed separated by commas.
@@ -118,6 +122,8 @@ minecraft {
 
         data {
             workingDirectory project.file('run')
+            property 'mixin.env.remapRefMap', 'true'
+            property 'mixin.env.refMapRemappingFile', "${projectDir}/build/createSrgToMcp/output.srg"
 
             property 'forge.logging.markers', 'REGISTRIES'
 

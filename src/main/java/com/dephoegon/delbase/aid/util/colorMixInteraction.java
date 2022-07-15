@@ -108,6 +108,7 @@ public class colorMixInteraction {
                 place_me = RedBaseDefaultBlock;
                 playerEntity.addItem(new ItemStack(RED_SHIFT_DYE.get().asItem()));
                 place = true;
+                lock_cut = true;
             }
             if (place && place_me == null) {
                 place_me = RedBaseDefaultBlock;
