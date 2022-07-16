@@ -1,0 +1,9 @@
+Recipes [AGAIN]
+================
+Sands
+-Wrong namespace for all but sand / red_sand
+
+minecraft:dripstone_block
+- 3 calls of 'minecraft:dripstone' instead of 'minecraft:dripstone_block'
+
+updated vendername

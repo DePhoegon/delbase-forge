@@ -29,6 +29,7 @@ run/world/
 run/patchouli_books/
 run/resourcepacks/
 run/*.log
+run/*.txt
 run/*.json
 run/*.dat
 user*.json

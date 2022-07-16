@@ -14,7 +14,7 @@
     }
   },
   "result": {
-    "item": "minecraft:light_gray_sand",
+    "item": "delbase:light_gray_sand",
     "count": 8
   }
 }
