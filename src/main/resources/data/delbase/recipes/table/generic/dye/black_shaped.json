@@ -1,19 +1,16 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    " # ",
-    "NDN",
-    " N "
+    "###",
+    "#D#",
+    "###"
   ],
   "key": {
     "D": {
       "item": "minecraft:black_dye"
     },
-    "N": {
-      "item": "minecraft:iron_nugget"
-    },
     "#": {
-      "item": "minecraft:stick"
+      "tag": "delbase:grouped/shifting_dyes"
     }
   },
   "result": {

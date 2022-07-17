@@ -1,0 +1,13 @@
+{
+  "name": "Energy Dusts",
+  "icon": "minecraft:name_tag",
+  "category": "delbase:tags",
+  "pages": [
+    {
+      "title": "Energetic Dusts tag",
+      "type": "patchouli:text",
+      "anchor": "energy_dust",
+      "text": "-Redstone Dust$(br)-GlowStone Dust"
+    }
+  ]
+}

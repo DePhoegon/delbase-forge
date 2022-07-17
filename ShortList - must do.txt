@@ -15,3 +15,12 @@ Further Nether Touches -Other Nether blocks do not fit in, in the same way grass
 Color Swap Wood -Makes No sense
 Destroy blocks for dyes -Does not fit in with mod Idea
 Machine to swap colors of blocks -Makes No sense with current mod setup.
+
+
+====================
+Guide book item
+
+"item": "patchouli:guide_book",
+"nbt": {
+    "patchouli:book": "delbase:reclaim"
+}

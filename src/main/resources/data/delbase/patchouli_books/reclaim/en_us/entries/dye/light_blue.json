@@ -1,0 +1,11 @@
+{
+  "name": "Light Blue Dye",
+  "icon": "delbase:light_blue_shift_dye",
+  "category": "delbase:dye_category",
+  "pages": [
+    {
+      "type": "patchouli:crafting",
+      "recipe": "delbase:table/generic/dye/light_blue_shaped"
+    }
+  ]
+}

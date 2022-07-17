@@ -1,0 +1,11 @@
+{
+  "name": "Orange Dye",
+  "icon": "delbase:orange_shift_dye",
+  "category": "delbase:dye_category",
+  "pages": [
+    {
+      "type": "patchouli:crafting",
+      "recipe": "delbase:table/generic/dye/orange_shaped"
+    }
+  ]
+}

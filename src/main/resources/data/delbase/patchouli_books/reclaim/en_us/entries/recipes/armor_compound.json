@@ -1,0 +1,13 @@
+{
+  "name": "Armor Compound",
+  "icon": "delbase:armor_compound",
+  "category": "delbase:recipes",
+  "pages": [
+    {
+      "title": "Armor Compound",
+      "type": "patchouli:crafting",
+      "recipe": "delbase:table/generic/armor_compound_shapeless",
+      "text": "-$(l:tag/energy_dust#energy_dust)Energy Dust$(/l)$(br)-$(l:tag/raw_food#raw_food)Raw Foods$(/l)$(br)-$(l:tag/dye#dye)Dyes$(/l)"
+    }
+  ]
+}

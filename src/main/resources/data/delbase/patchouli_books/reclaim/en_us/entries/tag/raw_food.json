@@ -1,0 +1,18 @@
+{
+  "name": "Raw Foods",
+  "icon": "minecraft:name_tag",
+  "category": "delbase:tags",
+  "pages": [
+    {
+      "title": "Raw Food tag",
+      "type": "patchouli:text",
+      "anchor": "raw_food",
+      "text": "-Potato$(br)-Poisonous Potato$(br)-Baked Potato$(br)-Carrot$(br)-Beetroot$(br)-Wheat$(br)-Red/Brown Mushrooms$(br)-Cod$(br)-Salmon$(br)-PufferFish$"
+    },
+    {
+      "title": "Raw Food tag",
+      "type": "patchouli:text",
+      "text": "-Chicken$(br)-Rotten Flesh$(br)-Spider Eye$(br)-Rabbit$(br)-Mutton$(br)-Chorus Fruit$(br)-Glow Berries$(br)-Honey Bottle$(br)-Dried Kelp"
+    }
+  ]
+}

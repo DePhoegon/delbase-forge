@@ -7,3 +7,27 @@ minecraft:dripstone_block
 - 3 calls of 'minecraft:dripstone' instead of 'minecraft:dripstone_block'
 
 updated vendername
+
+Removed direct crafting of colored shift dyes
+-only Cleanse dye is craftable directly
+
+
+Patchouli Guide Book
+===========
+Started Reclaim Book
+-Containing Dye Recipes (all 17)
+-Contains Armor Compound
+-Contains Plans Recipes (all 5)
+-Contains Tag Section
+~Has Dye Tags
+~Has Energy Dust Tags
+~Has Raw Foods Tags
+
+Logic Structure setup.
+
+Still not complete yet
+
+Language File
+=============
+Updated base shift dye name.
+-Empty Shift Dye -> Cleanse Shift Dye

@@ -1,0 +1,15 @@
+{
+  "name": "Slabs Crafting",
+  "icon": "delbase:slab_plans",
+  "category": "delbase:recipes",
+  "pages": [
+    {
+      "type": "patchouli:crafting",
+      "recipe": "delbase:table/generic/slab_plan_shaped"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(item)Paper$()s and an Energy Dust will create a reusable plan.$(br)$(br)$(l:tag/energy_dust#energy_dust)Energy Dust$(/l)$(br)-Either one can be used."
+    }
+  ]
+}
