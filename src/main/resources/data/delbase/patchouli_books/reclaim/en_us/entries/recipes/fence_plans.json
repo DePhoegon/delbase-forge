@@ -6,7 +6,7 @@
     {
       "type": "patchouli:crafting",
       "recipe": "delbase:table/generic/fence_plan_shaped",
-      "text": "Will only make Fences.$(br)-Fence Gates need a seperate plan"
+      "text": "Will only make Fences.$(br)-Fence Gates need a seperate plan$(br2)1 Block per Fence"
     },
     {
       "type": "patchouli:text",

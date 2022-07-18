@@ -5,7 +5,8 @@
   "pages": [
     {
       "type": "patchouli:crafting",
-      "recipe": "delbase:table/generic/stair_plan_shaped"
+      "recipe": "delbase:table/generic/stair_plan_shaped",
+      "text": "$(br)1 Block per Stair"
     },
     {
       "type": "patchouli:text",
