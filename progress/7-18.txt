@@ -1,0 +1,23 @@
+Gravity fall range extended (to -194)
+
+Added granting book on first tick advancements
+Added loot_table for advancement, with NBT to give the book with correct tags
+
+updated .gitignore include in the exclusion more files.
+
+Patchouli Book addressed
+-added 'Getting Started'
+-Added color here
+-added 'needed'
+-added 'shapes_here'
+-inserted book recipe
+-added block cutter recipe
+
+addressed
+-armor compound recipe book
+~fixed spotlight section
+-addressed fence gate recipe
+~fixed , error
+-addressed fence recipe
+~fixed , error
+-Renamed categories names to list them sections in an intended order

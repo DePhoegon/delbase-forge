@@ -32,6 +32,7 @@ run/*.log
 run/*.txt
 run/*.json
 run/*.dat
+run/*.txt
 user*.json
 *.properties
 

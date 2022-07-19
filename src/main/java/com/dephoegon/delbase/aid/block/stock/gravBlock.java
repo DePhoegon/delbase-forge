@@ -44,7 +44,7 @@ public class gravBlock extends SandBlock {
     }
     @Override
     public void tick(@Nonnull BlockState state, @Nonnull ServerLevel worldIn, @Nonnull BlockPos pos, @Nonnull Random rand) {
-        if (gravity(worldIn, pos) && pos.getY() >= -64) {
+        if (gravity(worldIn, pos) && pos.getY() >= -164) {
             FallingBlockEntity fallingblockentity = FallingBlockEntity.fall(worldIn, pos, state);
             this.falling(fallingblockentity);
             worldIn.addFreshEntity(fallingblockentity);
