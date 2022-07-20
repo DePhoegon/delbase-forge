@@ -6,6 +6,11 @@
     {
       "type": "patchouli:crafting",
       "recipe": "delbase:table/generic/dye/purple_shaped"
+    },
+    {
+      "title": "Purple",
+      "type": "patchouli:image",
+      "images": [ "delbase:textures/screens/purple.png" ]
     }
   ]
 }

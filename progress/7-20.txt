@@ -1,0 +1,11 @@
+Patchouli Book
+-added pictures for 'colored dyes'
+-fixed the following pictures
+=shapes
+=sands
+=floats
+=sandstone
+=campfire
+-added shapes image to the shapes_here
+
+-added mod logo picture

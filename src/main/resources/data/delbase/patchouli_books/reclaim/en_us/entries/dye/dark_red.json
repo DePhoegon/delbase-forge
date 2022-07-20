@@ -6,6 +6,11 @@
     {
       "type": "patchouli:crafting",
       "recipe": "delbase:table/generic/dye/dark_red_shaped"
+    },
+    {
+      "title": "Dark Red",
+      "type": "patchouli:image",
+      "images": [ "delbase:textures/screens/dark_red.png" ]
     }
   ]
 }

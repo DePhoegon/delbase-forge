@@ -6,6 +6,11 @@
     {
       "type": "patchouli:crafting",
       "recipe": "delbase:table/generic/dye/brown_shaped"
+    },
+    {
+      "title": "Brown",
+      "type": "patchouli:image",
+      "images": [ "delbase:textures/screens/brown.png" ]
     }
   ]
 }

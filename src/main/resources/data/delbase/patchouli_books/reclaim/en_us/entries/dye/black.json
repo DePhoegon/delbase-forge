@@ -6,6 +6,11 @@
     {
       "type": "patchouli:crafting",
       "recipe": "delbase:table/generic/dye/black_shaped"
+    },
+    {
+      "title": "Black",
+      "type": "patchouli:image",
+      "images": [ "delbase:textures/screens/black.png" ]
     }
   ]
 }

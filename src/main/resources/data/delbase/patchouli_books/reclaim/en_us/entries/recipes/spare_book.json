@@ -1,6 +1,6 @@
 {
   "name": "Spare Book",
-  "icon": "minecraft:book",
+  "icon": "patchouli:guide_book{\"patchouli:book\": \"delbase:reclaim\"}",
   "category": "delbase:recipes",
   "pages": [
     {

@@ -6,6 +6,11 @@
     {
       "type": "patchouli:crafting",
       "recipe": "delbase:table/generic/dye/light_blue_shaped"
+    },
+    {
+      "title": "Light Blue",
+      "type": "patchouli:image",
+      "images": [ "delbase:textures/screens/light_blue.png" ]
     }
   ]
 }

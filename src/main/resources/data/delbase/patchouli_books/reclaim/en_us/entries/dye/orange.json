@@ -6,6 +6,11 @@
     {
       "type": "patchouli:crafting",
       "recipe": "delbase:table/generic/dye/orange_shaped"
+    },
+    {
+      "title": "Orange",
+      "type": "patchouli:image",
+      "images": [ "delbase:textures/screens/orange.png" ]
     }
   ]
 }

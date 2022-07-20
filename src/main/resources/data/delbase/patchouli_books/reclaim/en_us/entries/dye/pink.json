@@ -6,6 +6,11 @@
     {
       "type": "patchouli:crafting",
       "recipe": "delbase:table/generic/dye/pink_shaped"
+    },
+    {
+      "title": "Pink",
+      "type": "patchouli:image",
+      "images": [ "delbase:textures/screens/pink.png" ]
     }
   ]
 }

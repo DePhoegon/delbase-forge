@@ -6,6 +6,11 @@
     {
       "type": "patchouli:crafting",
       "recipe": "delbase:table/generic/dye/white_shaped"
+    },
+    {
+      "title": "White",
+      "type": "patchouli:image",
+      "images": [ "delbase:textures/screens/white.png" ]
     }
   ]
 }
