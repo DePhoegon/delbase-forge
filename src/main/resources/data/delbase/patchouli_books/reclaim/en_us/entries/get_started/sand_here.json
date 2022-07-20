@@ -7,12 +7,12 @@
       "title": "How?",
       "type": "patchouli:spotlight",
       "item": "minecraft:sand",
-      "text": "Sand can be held in place by one of two methods.$(br2)1. By using an 'Energetic Slab' above it, upto 6 sandblocks below it.$(br)2. by Turning it into solidified Sand in a camp fire"
+      "text": "Sand can be held in place by one of two methods.$(br2)1. By using an 'Energetic Slab' above it, upto 6 sand blocks below it.$(br)2. by Turning it into solidified Sand in a camp fire"
     },
     {
       "title": "It Floats",
       "type": "patchouli:image",
-      "image": ""
+      "images": ["delbase:textures/screens/floats.png"]
     },
     {
       "title": "Energetic Sand",
@@ -34,7 +34,7 @@
     {
       "title": "Sand Hardening",
       "type": "patchouli:image",
-      "image": ""
+      "images": ["delbase:textures/screens/campfire.png"]
     }
   ]
 }

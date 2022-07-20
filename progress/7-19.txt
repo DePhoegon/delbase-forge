@@ -1,0 +1,7 @@
+Patchouli Book
+=================
+Screenshots
+-failed edited screenshots (rework ahead)
+-functional book
+
+used corrected image pages
