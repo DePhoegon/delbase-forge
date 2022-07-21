@@ -7,12 +7,11 @@
       "title": "Raw Food tag",
       "type": "patchouli:text",
       "anchor": "raw_food",
-      "text": "-Potato$(br)-Poisonous Potato$(br)-Baked Potato$(br)-Carrot$(br)-Beetroot$(br)-Wheat$(br)-Red/Brown Mushrooms$(br)-Cod$(br)-Salmon$(br)-PufferFish$"
+      "text": "Raw Food is any of the following.$(br)=Only 1 of the following is used per 'Raw Food' $(br)-Potato$(br)-Poisonous Potato$(br)-Baked Potato$(br)-Carrot$(br)-Beetroot$(br)-Wheat$(br)-Red/Brown Mushrooms$(br)-Cod"
     },
     {
       "title": "Raw Food tag",
       "type": "patchouli:text",
-      "text": "-Chicken$(br)-Rotten Flesh$(br)-Spider Eye$(br)-Rabbit$(br)-Mutton$(br)-Chorus Fruit$(br)-Glow Berries$(br)-Honey Bottle$(br)-Dried Kelp"
-    }
+      "text": "-Salmon$(br)-PufferFish$(br)-Chicken$(br)-Rotten Flesh$(br)-Spider Eye$(br)-Rabbit$(br)-Mutton$(br)-Chorus Fruit$(br)-Glow Berries$(br)-Honey Bottle$(br)-Dried Kelp"    }
   ]
 }

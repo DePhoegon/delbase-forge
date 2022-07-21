@@ -1,0 +1,2 @@
+Removed -energy dust from armor compound recipe
+Addressed language that could cause confusion about recipes within the guide book
