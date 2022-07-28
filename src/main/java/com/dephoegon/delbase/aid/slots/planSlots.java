@@ -17,6 +17,9 @@ public class planSlots extends SlotItemHandler {
         super(itemHandler, index, xPosition, yPosition);
     }
 
+    public boolean isItemValid(int slot, @NotNull ItemStack stack) {
+        return getFullPlanSlotArray().contains(stack.getItem().asItem());
+    }
     private static @NotNull ArrayList<Item> setPlansOnlyArray(){
         ArrayList<Item> tempArray = new ArrayList<>();
         tempArray.add(WALL_PLANS.get().asItem());
