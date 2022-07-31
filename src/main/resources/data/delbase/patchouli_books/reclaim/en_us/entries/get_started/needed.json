@@ -13,7 +13,7 @@
       "title": "Material Reclaiming",
       "type": "patchouli:spotlight",
       "item": "delbase:armor_compound",
-      "text": "Useful for breaking down tools & armor into components$(br2)-1 $(l:tag/raw_food)Raw Food$(/l)$(br)-1 $(l:tag/dye)Dye$(/l)$(br)-1 $(l:tag/energy_dust)Energy Dust$(/l)$(br)- 1 $(l:tag/sands)Sand$(/l) Block$(br2)Recipe $(l:recipes/armor_compound)Here$(/l)"
+      "text": "Useful for breaking down tools & armor into components$(br2)-1 $(l:tag/raw_food)Raw Food$(/l)$(br)-1 $(l:tag/dye)Dye$(/l)$(br)- 1 $(l:tag/sands)Sand$(/l) Block$(br2)Recipe $(l:recipes/armor_compound)Here$(/l)"
     },
     {
       "title": "Dye Staring point",
