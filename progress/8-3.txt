@@ -1,0 +1,4 @@
+Bridge Compatability
+- All DefaultBlockStates Can be Null
+== really only useful for small selections
+== Added BaseBlock Nullability to allow limited colored options without a cleanse block
