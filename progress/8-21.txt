@@ -1,0 +1,2 @@
+Reworked fuel sources for wood products. (excluded nether wooded ones)
+Enabled Stripping with an axe in world for blocks.

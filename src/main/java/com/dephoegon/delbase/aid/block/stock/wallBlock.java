@@ -7,9 +7,15 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
+import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.BlockGetter;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.SlabBlock;
 import net.minecraft.world.level.block.WallBlock;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.state.properties.SlabType;
+import net.minecraft.world.level.block.state.properties.WallSide;
+import net.minecraftforge.common.ToolAction;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
@@ -17,18 +23,21 @@ import java.util.List;
 
 import static com.dephoegon.delbase.aid.util.burnChance.rngBurn;
 import static com.dephoegon.delbase.block.general.ashBlocks.ASH_WALL;
+import static net.minecraftforge.common.ToolActions.AXE_STRIP;
 
 public class wallBlock extends WallBlock {
     private final String tip0;
     private final String tip1;
     private final String tip2;
     private final boolean flame;
-    public wallBlock(Properties properties, String normToolTip, String shiftToolTip, String ctrlToolTip, boolean flames) {
+    private final BlockState stripped;
+    public wallBlock(Properties properties, String normToolTip, String shiftToolTip, String ctrlToolTip, boolean flames, BlockState strippedState) {
         super(properties);
         if(normToolTip.equals("")) { tip0 = null; } else { tip0 = normToolTip; }
         if(shiftToolTip.equals("")) { tip1 = null; } else { tip1 = shiftToolTip; }
         if(ctrlToolTip.equals("")) { tip2 = null; } else { tip2 = ctrlToolTip; }
         flame = flames;
+        stripped = strippedState;
     }
     @Override
     public void appendHoverText(@NotNull ItemStack stack, @Nullable BlockGetter worldIn, @NotNull List<Component> toolTip, @NotNull TooltipFlag flag) {
@@ -45,5 +54,22 @@ public class wallBlock extends WallBlock {
             rngBurn(world, state, ASH_WALL.get().defaultBlockState(), pos, 40, 60);
         }
         return false;
+    }
+    @Nullable
+    @Override
+    public BlockState getToolModifiedState(BlockState state, @NotNull UseOnContext context, ToolAction toolAction, boolean simulate) {
+        Level world = context.getLevel();
+        BlockPos blockPos = context.getClickedPos();
+        boolean safeCheck;
+        if (stripped != null) { safeCheck = stripped.getBlock() instanceof WallBlock; } else { safeCheck = false; }
+        if (AXE_STRIP == toolAction && context.getItemInHand().canPerformAction(AXE_STRIP) && safeCheck) {
+            WallSide east = world.getBlockState(blockPos).getValue(EAST_WALL);
+            WallSide west = world.getBlockState(blockPos).getValue(WEST_WALL);
+            WallSide north = world.getBlockState(blockPos).getValue(NORTH_WALL);
+            WallSide south = world.getBlockState(blockPos).getValue(SOUTH_WALL);
+            boolean up = world.getBlockState(blockPos).getValue(UP);
+            boolean waterLogged = world.getBlockState(blockPos).getValue(WallBlock.WATERLOGGED);
+            return stripped.setValue(EAST_WALL, east).setValue(WATERLOGGED, waterLogged).setValue(UP, up).setValue(WEST_WALL, west).setValue(NORTH_WALL, north).setValue(SOUTH_WALL, south);
+        } else { return null; }
     }
 }

@@ -3,6 +3,6 @@ import com.dephoegon.delbase.aid.block.stock.fenceGateBlock;
 
 public class cutSandStoneFenceGate extends fenceGateBlock {
     public cutSandStoneFenceGate(Properties properties, String normToolTip, String shiftToolTip, String ctrlToolTip) {
-        super(properties, normToolTip, shiftToolTip, ctrlToolTip, false);
+        super(properties, normToolTip, shiftToolTip, ctrlToolTip, false, null);
     }
 }
