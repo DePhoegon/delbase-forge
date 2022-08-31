@@ -84,29 +84,29 @@ public class overrideHook {
     public static final RegistryObject<Block> OVERRIDE_BIRCH_PLANKS = register("birch_planks",
             ()-> new genBlock(BlockBehaviour.Properties.copy(BIRCH_PLANKS).sound(SoundType.WOOD),"","","", true));
     public static final RegistryObject<SlabBlock> OVERRIDE_SPRUCE_SLAB = register("spruce_slab",
-            ()-> new slabBlock(BlockBehaviour.Properties.copy(SPRUCE_SLAB).sound(SoundType.WOOD),"","","", true, null));
+            ()-> new slabBlock(BlockBehaviour.Properties.copy(SPRUCE_SLAB).sound(SoundType.WOOD),"","","", true));
     public static final RegistryObject<SlabBlock> OVERRIDE_OAK_SLAB = register("oak_slab",
-            ()-> new slabBlock(BlockBehaviour.Properties.copy(OAK_SLAB).sound(SoundType.WOOD),"","","", true, null));
+            ()-> new slabBlock(BlockBehaviour.Properties.copy(OAK_SLAB).sound(SoundType.WOOD),"","","", true));
     public static final RegistryObject<SlabBlock> OVERRIDE_DARK_OAK_SLAB = register("dark_oak_slab",
-            ()-> new slabBlock(BlockBehaviour.Properties.copy(DARK_OAK_SLAB).sound(SoundType.WOOD),"","","", true, null));
+            ()-> new slabBlock(BlockBehaviour.Properties.copy(DARK_OAK_SLAB).sound(SoundType.WOOD),"","","", true));
     public static final RegistryObject<SlabBlock> OVERRIDE_ACACIA_SLAB = register("acacia_slab",
-            ()-> new slabBlock(BlockBehaviour.Properties.copy(ACACIA_SLAB).sound(SoundType.WOOD),"","","", true, null));
+            ()-> new slabBlock(BlockBehaviour.Properties.copy(ACACIA_SLAB).sound(SoundType.WOOD),"","","", true));
     public static final RegistryObject<SlabBlock> OVERRIDE_JUNGLE_SLAB = register("jungle_slab",
-            ()-> new slabBlock(BlockBehaviour.Properties.copy(JUNGLE_SLAB).sound(SoundType.WOOD),"","","", true, null));
+            ()-> new slabBlock(BlockBehaviour.Properties.copy(JUNGLE_SLAB).sound(SoundType.WOOD),"","","", true));
     public static final RegistryObject<SlabBlock> OVERRIDE_BIRCH_SLAB = register("birch_slab",
-            ()-> new slabBlock(BlockBehaviour.Properties.copy(BIRCH_SLAB).sound(SoundType.WOOD),"","","", true, null));
+            ()-> new slabBlock(BlockBehaviour.Properties.copy(BIRCH_SLAB).sound(SoundType.WOOD),"","","", true));
     public static final RegistryObject<StairBlock> OVERRIDE_SPRUCE_STAIRS = register("spruce_stairs",
-            ()-> new stairBlock(SPRUCE_STAIRS::defaultBlockState, BlockBehaviour.Properties.copy(SPRUCE_STAIRS).sound(SoundType.WOOD),"","","", true, null));
+            ()-> new stairBlock(SPRUCE_STAIRS::defaultBlockState, BlockBehaviour.Properties.copy(SPRUCE_STAIRS).sound(SoundType.WOOD),"","","", true));
     public static final RegistryObject<StairBlock> OVERRIDE_OAK_STAIRS = register("oak_stairs",
-            ()-> new stairBlock(OAK_STAIRS::defaultBlockState, BlockBehaviour.Properties.copy(OAK_STAIRS).sound(SoundType.WOOD),"","","", true, null));
+            ()-> new stairBlock(OAK_STAIRS::defaultBlockState, BlockBehaviour.Properties.copy(OAK_STAIRS).sound(SoundType.WOOD),"","","", true));
     public static final RegistryObject<StairBlock> OVERRIDE_DARK_OAK_STAIRS = register("dark_oak_stairs",
-            ()-> new stairBlock(DARK_OAK_STAIRS::defaultBlockState, BlockBehaviour.Properties.copy(DARK_OAK_STAIRS).sound(SoundType.WOOD),"","","", true, null));
+            ()-> new stairBlock(DARK_OAK_STAIRS::defaultBlockState, BlockBehaviour.Properties.copy(DARK_OAK_STAIRS).sound(SoundType.WOOD),"","","", true));
     public static final RegistryObject<StairBlock> OVERRIDE_ACACIA_STAIRS = register("acacia_stairs",
-            ()-> new stairBlock(ACACIA_STAIRS::defaultBlockState, BlockBehaviour.Properties.copy(ACACIA_STAIRS).sound(SoundType.WOOD),"","","", true, null));
+            ()-> new stairBlock(ACACIA_STAIRS::defaultBlockState, BlockBehaviour.Properties.copy(ACACIA_STAIRS).sound(SoundType.WOOD),"","","", true));
     public static final RegistryObject<StairBlock> OVERRIDE_JUNGLE_STAIRS = register("jungle_stairs",
-            ()-> new stairBlock(JUNGLE_STAIRS::defaultBlockState, BlockBehaviour.Properties.copy(JUNGLE_STAIRS).sound(SoundType.WOOD),"","","", true, null));
+            ()-> new stairBlock(JUNGLE_STAIRS::defaultBlockState, BlockBehaviour.Properties.copy(JUNGLE_STAIRS).sound(SoundType.WOOD),"","","", true));
     public static final RegistryObject<StairBlock> OVERRIDE_BIRCH_STAIRS = register("birch_stairs",
-            ()-> new stairBlock(BIRCH_STAIRS::defaultBlockState, BlockBehaviour.Properties.copy(BIRCH_STAIRS).sound(SoundType.WOOD),"","","", true, null));
+            ()-> new stairBlock(BIRCH_STAIRS::defaultBlockState, BlockBehaviour.Properties.copy(BIRCH_STAIRS).sound(SoundType.WOOD),"","","", true));
 
     public static void register() {
         IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();

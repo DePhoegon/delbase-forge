@@ -4,6 +4,6 @@ import com.dephoegon.delbase.aid.block.stock.wallBlock;
 
 public class smoothSandStoneWall extends wallBlock {
     public smoothSandStoneWall(Properties properties, String normToolTip, String shiftToolTip, String ctrlToolTip) {
-        super(properties, normToolTip, shiftToolTip, ctrlToolTip, false, null);
+        super(properties, normToolTip, shiftToolTip, ctrlToolTip, false);
     }
 }

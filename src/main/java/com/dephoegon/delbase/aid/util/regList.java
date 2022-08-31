@@ -43,7 +43,6 @@ public class regList {
         slabSmoothSandStonesEnergy.register();
         slabQuartz.register();
         slabConcrete.register();
-        slabStrippedWood.register();
         slabWood.register();
         slabTerracotta.register();
         slabMisc.register();
@@ -57,7 +56,6 @@ public class regList {
         stairSandStones.register();
         stairQuartz.register();
         stairConcrete.register();
-        stairStrippedWood.register();
         stairWood.register();
         stairTerracotta.register();
         stairMisc.register();
@@ -73,13 +71,11 @@ public class regList {
         wallSmoothSandStones.register();
         wallQuartz.register();
         wallConcrete.register();
-        wallStrippedWood.register();
         wallWood.register();
         wallTerracotta.register();
         wallMisc.register();
 
         //Fences
-        strippedWoodenFences.register();
         woodenFences.register();
         quartzFences.register();
         sandFences.register();
