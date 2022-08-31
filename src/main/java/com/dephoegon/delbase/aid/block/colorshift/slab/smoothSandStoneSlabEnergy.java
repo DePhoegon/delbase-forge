@@ -4,6 +4,6 @@ import com.dephoegon.delbase.aid.block.stock.energySlab;
 
 public class smoothSandStoneSlabEnergy extends energySlab {
     public smoothSandStoneSlabEnergy(Properties properties, String normToolTip, String shiftToolTip, String ctrlToolTip) {
-        super(properties, normToolTip, shiftToolTip, ctrlToolTip, false);
+        super(properties, normToolTip, shiftToolTip, ctrlToolTip, false, null);
     }
 }

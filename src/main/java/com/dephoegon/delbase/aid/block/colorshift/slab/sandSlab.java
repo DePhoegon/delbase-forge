@@ -14,7 +14,7 @@ import org.jetbrains.annotations.NotNull;
 
 public class sandSlab extends slabBlock {
     public sandSlab(Properties properties, String normToolTip, String shiftToolTip, String ctrlToolTip) {
-        super(properties, normToolTip, shiftToolTip, ctrlToolTip, false);
+        super(properties, normToolTip, shiftToolTip, ctrlToolTip, false, null);
     }
     @Override
     public boolean canSustainPlant(BlockState state, @NotNull BlockGetter world, BlockPos pos, @NotNull Direction facing, net.minecraftforge.common.IPlantable plantable) {

@@ -26,25 +26,25 @@ public class ashBlocks {
 
     public static final RegistryObject<SlabBlock> ASH_SLAB = register("ash_slab",
             () -> new slabBlock(BlockBehaviour.Properties.copy(OAK_PLANKS).sound(SoundType.WOOD),
-                    "","","",false),8000);
+                    "","","",false, null),8000);
     public static final RegistryObject<StairBlock> ASH_STAIR = register("ash_stair",
             ()-> new stairBlock(OAK_STAIRS::defaultBlockState, BlockBehaviour.Properties.copy(OAK_STAIRS).sound(SoundType.WOOD),
-                    "","","", false),12000);
+                    "","","", false, null),12000);
     public static final RegistryObject<RotatedPillarBlock> ASH_LOG = register("ash_log",
             ()-> new axisBlock(BlockBehaviour.Properties.copy(OAK_LOG).sound(SoundType.WOOD),
                     "","","",false),16000);
     public static final RegistryObject<WallBlock> ASH_WALL = register("ash_wall",
             ()-> new wallBlock(BlockBehaviour.Properties.copy(OAK_FENCE).sound(SoundType.WOOD),
-                    "","","", false),10000);
+                    "","","", false, null),10000);
     public static final RegistryObject<Block> ASH_BLOCK = register("ash_block",
             ()-> new genBlock(BlockBehaviour.Properties.copy(OAK_PLANKS).sound(SoundType.WOOD),
                     "","","", false),16000);
     public static final RegistryObject<FenceBlock> ASH_FENCE = register("ash_fence",
             () -> new fenceBlock(BlockBehaviour.Properties.copy(OAK_FENCE).sound(SoundType.WOOD),
-                    "","","", false), 5000);
+                    "","","", false, null), 5000);
     public static final RegistryObject<FenceGateBlock> ASH_FENCE_GATE = register("ash_fence_gate",
             () -> new fenceGateBlock(BlockBehaviour.Properties.copy(OAK_FENCE_GATE).sound(SoundType.WOOD),
-                    "","","", false), 5000);
+                    "","","", false, null), 5000);
     public static void register() {
         IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
         BLOCKS.register(eventBus);
