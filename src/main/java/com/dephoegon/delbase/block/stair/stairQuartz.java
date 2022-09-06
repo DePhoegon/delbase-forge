@@ -30,8 +30,7 @@ public class stairQuartz {
     public static final RegistryObject<StairBlock> QUARTZ_PILLAR_STAIR = register("quartz_pillar_stair",
             () -> new quartzStair(QUARTZ_PILLAR::defaultBlockState, BlockBehaviour.Properties.copy(QUARTZ_PILLAR).sound(SoundType.STONE),"","",""));
 
-    public static void register() {
-        IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
+    public static void register(IEventBus eventBus) {
         BLOCKS.register(eventBus);
         ITEMS.register(eventBus);
     }

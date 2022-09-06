@@ -21,8 +21,7 @@ public class blockEntities {
             BLOCK_ENTITIES.register("block_cutting_station_block_entity", () ->
                     Builder.of(blockCuttingStation::new, machineBlocks.BLOCK_CUTTING_STATION.get()).build(null));
 
-    public static void register() {
-        IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
+    public static void register(IEventBus eventBus) {
         BLOCK_ENTITIES.register(eventBus);
     }
 }

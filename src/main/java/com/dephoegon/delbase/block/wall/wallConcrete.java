@@ -57,8 +57,7 @@ public class wallConcrete {
             () -> new concreteWall(BlockBehaviour.Properties.copy(BLACK_CONCRETE).sound(SoundType.STONE),"","",""));
 
 
-    public static void register() {
-        IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
+    public static void register(IEventBus eventBus) {
         BLOCKS.register(eventBus);
         ITEMS.register(eventBus);
     }

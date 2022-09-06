@@ -76,8 +76,7 @@ public class stairWood {
             () -> new woodStair(SPRUCE_WOOD::defaultBlockState, BlockBehaviour.Properties.copy(SPRUCE_WOOD).sound(SoundType.WOOD)
                     , "","","", false, STRIPPED_CRIMSON_STEM_STAIR.get().defaultBlockState()));
 
-    public static void register() {
-        IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
+    public static void register(IEventBus eventBus) {
         BLOCKS.register(eventBus);
         ITEMS.register(eventBus);
     }

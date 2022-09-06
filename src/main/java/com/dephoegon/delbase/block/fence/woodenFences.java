@@ -124,8 +124,7 @@ public class woodenFences {
             () -> new fenceGateBlock(BlockBehaviour.Properties.copy(OAK_FENCE_GATE).sound(SoundType.WOOD),
                     "","","", false, STRIPPED_WARPED_STEM_FENCE_GATE.get().defaultBlockState()));
 
-    public static void register() {
-        IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
+    public static void register(IEventBus eventBus) {
         BLOCKS.register(eventBus);
         ITEMS.register(eventBus);
     }

@@ -68,8 +68,7 @@ public class shiftingDyes {
             () -> new blockDye(DyeColor.BLACK, new Item.Properties().stacksTo(64).tab(DELBASE_ITEMS),
                     "tooltip.delbase.info.shift.more","tooltip.delbase.color.shifter",""));
 
-    public static void register() {
-        IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
+    public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
     }
 }

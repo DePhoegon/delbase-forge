@@ -55,8 +55,7 @@ public class genChiseledSandStones {
     public static final RegistryObject<Block> BLACK_CHISELED_SAND_STONE = register("black_chiseled_sand_stone",
             () -> new chiseledSandStone(BlockBehaviour.Properties.copy(CHISELED_SANDSTONE).sound(SoundType.STONE),"","",""));
 
-    public static void register() {
-        IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
+    public static void register(IEventBus eventBus) {
         BLOCKS.register(eventBus);
         ITEMS.register(eventBus);
     }

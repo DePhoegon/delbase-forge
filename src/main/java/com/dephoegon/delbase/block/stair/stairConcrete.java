@@ -56,8 +56,7 @@ public class stairConcrete {
     public static final RegistryObject<StairBlock> BLACK_CONCRETE_STAIR = register("black_concrete_stair",
             () -> new concreteStair(BLACK_CONCRETE::defaultBlockState, BlockBehaviour.Properties.copy(BLACK_CONCRETE).sound(SoundType.STONE),"","",""));
     
-    public static void register() {
-        IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
+    public static void register(IEventBus eventBus) {
         BLOCKS.register(eventBus);
         ITEMS.register(eventBus);
     }

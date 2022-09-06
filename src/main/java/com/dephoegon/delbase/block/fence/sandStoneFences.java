@@ -133,8 +133,7 @@ public class sandStoneFences {
             () -> new sandStoneFenceGate(BlockBehaviour.Properties.copy(BLOOD_SAND_STONE.get()),
                     "","",""));
 
-    public static void register() {
-        IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
+    public static void register(IEventBus eventBus) {
         BLOCKS.register(eventBus);
         ITEMS.register(eventBus);
     }

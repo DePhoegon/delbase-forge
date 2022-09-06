@@ -34,8 +34,7 @@ public class wallQuartz {
     public static final RegistryObject<WallBlock> QUARTZ_PILLAR_WALL = register("quartz_pillar_wall",
             () -> new quartzWall(BlockBehaviour.Properties.copy(QUARTZ_PILLAR).sound(SoundType.STONE),"","",""));
 
-    public static void register() {
-        IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
+    public static void register(IEventBus eventBus) {
         BLOCKS.register(eventBus);
         ITEMS.register(eventBus);
     }

@@ -60,8 +60,7 @@ public class slabSandsEnergy {
     public static final RegistryObject<SlabBlock> BLACK_SAND_SLAB_ENERGY = register("black_sand_slab_energy",
             () -> new sandSlabEnergy(BlockBehaviour.Properties.copy(SAND).sound(SoundType.SAND).lightLevel((blockState)-> 5),"","",""));
 
-    public static void register() {
-        IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
+    public static void register(IEventBus eventBus) {
         BLOCKS.register(eventBus);
         ITEMS.register(eventBus);
     }

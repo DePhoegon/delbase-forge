@@ -54,8 +54,7 @@ public class quartzFences {
             () -> new quartzGateBlock(BlockBehaviour.Properties.copy(QUARTZ_PILLAR),
                     "","",""));
 
-    public static void register() {
-        IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
+    public static void register(IEventBus eventBus) {
         BLOCKS.register(eventBus);
         ITEMS.register(eventBus);
     }

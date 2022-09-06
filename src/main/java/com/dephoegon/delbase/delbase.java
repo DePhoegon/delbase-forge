@@ -1,22 +1,11 @@
 package com.dephoegon.delbase;
-
-import com.dephoegon.delbase.aid.config.clientConfig;
 import com.dephoegon.delbase.aid.config.commonConfig;
 import com.dephoegon.delbase.aid.util.regList;
-import com.dephoegon.delbase.block.entity.screen.blockCuttingStationScreen;
-import com.dephoegon.delbase.block.entity.screen.menuTypes;
-import com.dephoegon.delbase.block.general.machineBlocks;
-import net.minecraft.client.gui.screens.MenuScreens;
-import net.minecraft.client.renderer.ItemBlockRenderTypes;
-import net.minecraft.client.renderer.RenderType;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
-import net.minecraftforge.fml.DistExecutor;
 import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.config.ModConfig;
@@ -48,19 +37,10 @@ public class delbase
     };
     public delbase() {
         IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
-        regList.listOrder();
+        regList.listOrder(eventBus);
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
-        ModLoadingContext.get().registerConfig(ModConfig.Type.CLIENT, clientConfig.SPEC, "delbase-client.toml");
         ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, commonConfig.SPEC, "delbase-common.toml");
-    }
-    private void setup(final FMLCommonSetupEvent event)
-    {
-        // some preinit code
-        /*
-        LOGGER.info("HELLO FROM PREINIT");
-        LOGGER.info("DIRT BLOCK >> {}", Blocks.DIRT.getRegistryName());
-         */
     }
 }

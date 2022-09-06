@@ -60,8 +60,7 @@ public class wallStrippedWood {
     public static final RegistryObject<WallBlock> STRIPPED_BIRCH_LOG_WALL = register("stripped_birch_log_wall",
             () -> new woodWall(BlockBehaviour.Properties.copy(BIRCH_WOOD).sound(SoundType.WOOD),"","","", true, null), 5001);
 
-    public static void register() {
-        IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
+    public static void register(IEventBus eventBus) {
         BLOCKS.register(eventBus);
         ITEMS.register(eventBus);
     }

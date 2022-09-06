@@ -45,8 +45,7 @@ public class ashBlocks {
     public static final RegistryObject<FenceGateBlock> ASH_FENCE_GATE = register("ash_fence_gate",
             () -> new fenceGateBlock(BlockBehaviour.Properties.copy(OAK_FENCE_GATE).sound(SoundType.WOOD),
                     "","","", false, null), 5000);
-    public static void register() {
-        IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
+    public static void register(IEventBus eventBus) {
         BLOCKS.register(eventBus);
         ITEMS.register(eventBus);
     }

@@ -30,8 +30,7 @@ public class slabQuartz {
     public static final RegistryObject<SlabBlock> QUARTZ_PILLAR_SLAB = register("quartz_pillar_slab",
             () -> new quartzSlab(BlockBehaviour.Properties.copy(QUARTZ_PILLAR).sound(SoundType.STONE),"","",""));
 
-    public static void register() {
-        IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
+    public static void register(IEventBus eventBus) {
         BLOCKS.register(eventBus);
         ITEMS.register(eventBus);
     }

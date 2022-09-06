@@ -102,8 +102,7 @@ public class gravColorSands {
             () -> new solidSandBlock(0x000000, BlockBehaviour.Properties.copy(SAND).sound(SoundType.SAND),"tooltip.delbase.info.more","tooltip.delbase.sand.solid.info","tooltip.delbase.sand.solid.flavor"));
 
 
-    public static void register() {
-        IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
+    public static void register(IEventBus eventBus) {
         BLOCKS.register(eventBus);
         ITEMS.register(eventBus);
         OVERRIDE_BLOCK.register(eventBus);

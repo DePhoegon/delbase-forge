@@ -56,8 +56,7 @@ public class axiCutSandStones {
     public static final RegistryObject<RotatedPillarBlock> BLACK_CUT_SAND_STONE = register("black_cut_sand_stone",
             () -> new cutSandStone(BlockBehaviour.Properties.copy(CUT_SANDSTONE).sound(SoundType.STONE),"","",""));
 
-    public static void register() {
-        IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
+    public static void register(IEventBus eventBus) {
         BLOCKS.register(eventBus);
         ITEMS.register(eventBus);
     }

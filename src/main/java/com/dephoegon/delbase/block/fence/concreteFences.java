@@ -120,8 +120,7 @@ public class concreteFences {
             () -> new concreteFenceGate(BlockBehaviour.Properties.copy(BLACK_CONCRETE),
                     "","",""));
 
-    public static void register() {
-        IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
+    public static void register(IEventBus eventBus) {
         BLOCKS.register(eventBus);
         ITEMS.register(eventBus);
     }

@@ -12,96 +12,94 @@ import com.dephoegon.delbase.block.stair.*;
 import com.dephoegon.delbase.block.wall.*;
 import com.dephoegon.delbase.item.blockCutterPlans;
 import com.dephoegon.delbase.item.shiftingDyes;
+import net.minecraftforge.eventbus.api.IEventBus;
 
 public class regList {
-    public static void listOrder() {
+    public static void listOrder(IEventBus eventBus) {
         //aid
         blockArrayList.setBlockArrays();
 
         //Items
-        shiftingDyes.register();
-        blockCutterPlans.register();
+        shiftingDyes.register(eventBus);
+        blockCutterPlans.register(eventBus);
 
         //Standard Blocks
-        genChiseledSandStones.register();
-        genSandStones.register();
-        genSmoothSandStones.register();
+        genChiseledSandStones.register(eventBus);
+        genSandStones.register(eventBus);
+        genSmoothSandStones.register(eventBus);
 
         //Gravity Blocks
-        gravColorSands.register();
+        gravColorSands.register(eventBus);
 
         //Slabs
-        slabChiseledSandStones.register();
-        slabChiseledSandStonesEnergy.register();
-        slabCutSandStones.register();
-        slabCutSandStonesEnergy.register();
-        slabSands.register();
-        slabSandsEnergy.register();
-        slabSandStones.register();
-        slabSandStonesEnergy.register();
-        slabSmoothSandStones.register();
-        slabSmoothSandStonesEnergy.register();
-        slabQuartz.register();
-        slabConcrete.register();
-        slabStrippedWood.register();
-        slabWood.register();
-        slabTerracotta.register();
-        slabMisc.register();
+        slabChiseledSandStones.register(eventBus);
+        slabChiseledSandStonesEnergy.register(eventBus);
+        slabCutSandStones.register(eventBus);
+        slabCutSandStonesEnergy.register(eventBus);
+        slabSands.register(eventBus);
+        slabSandsEnergy.register(eventBus);
+        slabSandStones.register(eventBus);
+        slabSandStonesEnergy.register(eventBus);
+        slabSmoothSandStones.register(eventBus);
+        slabSmoothSandStonesEnergy.register(eventBus);
+        slabQuartz.register(eventBus);
+        slabConcrete.register(eventBus);
+        slabStrippedWood.register(eventBus);
+        slabWood.register(eventBus);
+        slabTerracotta.register(eventBus);
+        slabMisc.register(eventBus);
 
 
         //Stairs
-        stairSands.register();
-        stairSmoothSandStones.register();
-        stairChiseledSandStones.register();
-        stairCutSandStones.register();
-        stairSandStones.register();
-        stairQuartz.register();
-        stairConcrete.register();
-        stairStrippedWood.register();
-        stairWood.register();
-        stairTerracotta.register();
-        stairMisc.register();
+        stairSands.register(eventBus);
+        stairSmoothSandStones.register(eventBus);
+        stairChiseledSandStones.register(eventBus);
+        stairCutSandStones.register(eventBus);
+        stairSandStones.register(eventBus);
+        stairQuartz.register(eventBus);
+        stairConcrete.register(eventBus);
+        stairStrippedWood.register(eventBus);
+        stairWood.register(eventBus);
+        stairTerracotta.register(eventBus);
+        stairMisc.register(eventBus);
 
         //Pillars
-        axiCutSandStones.register();
+        axiCutSandStones.register(eventBus);
 
         //Walls
-        wallChiseledSandStones.register();
-        wallCutSandStones.register();
-        wallSands.register();
-        wallSandStone.register();
-        wallSmoothSandStones.register();
-        wallQuartz.register();
-        wallConcrete.register();
-        wallStrippedWood.register();
-        wallWood.register();
-        wallTerracotta.register();
-        wallMisc.register();
+        wallChiseledSandStones.register(eventBus);
+        wallCutSandStones.register(eventBus);
+        wallSands.register(eventBus);
+        wallSandStone.register(eventBus);
+        wallSmoothSandStones.register(eventBus);
+        wallQuartz.register(eventBus);
+        wallConcrete.register(eventBus);
+        wallStrippedWood.register(eventBus);
+        wallWood.register(eventBus);
+        wallTerracotta.register(eventBus);
+        wallMisc.register(eventBus);
 
         //Fences
-        strippedWoodenFences.register();
-        woodenFences.register();
-        quartzFences.register();
-        sandFences.register();
-        concreteFences.register();
-        terracottaFences.register();
-        smoothSandStoneFences.register();
-        sandStoneFences.register();
-        fenceMisc.register();
-        cutSandStoneFences.register();
-        chiseledSandStoneFences.register();
+        strippedWoodenFences.register(eventBus);
+        woodenFences.register(eventBus);
+        quartzFences.register(eventBus);
+        sandFences.register(eventBus);
+        concreteFences.register(eventBus);
+        terracottaFences.register(eventBus);
+        smoothSandStoneFences.register(eventBus);
+        sandStoneFences.register(eventBus);
+        fenceMisc.register(eventBus);
+        cutSandStoneFences.register(eventBus);
+        chiseledSandStoneFences.register(eventBus);
 
         //Special block
-        ashBlocks.register();
-        machineBlocks.register();
-        blockEntities.register();
-
-        //Overrides
-        //overrideHook.register();
+        ashBlocks.register(eventBus);
+        machineBlocks.register(eventBus);
+        blockEntities.register(eventBus);
 
         //Special
-        menuTypes.register();
-        modRecipes.register();
-        miscSpecialCases.register();
+        menuTypes.register(eventBus);
+        modRecipes.register(eventBus);
+        miscSpecialCases.register(eventBus);
     }
 }

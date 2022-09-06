@@ -16,8 +16,7 @@ public class modRecipes {
     public static final RegistryObject<RecipeSerializer<blockCuttingStationRecipes>> BLOCK_CUTTING_SERIALIZER =
             SERIALIZERS.register(blockCuttingStationRecipes.Type.ID, () -> blockCuttingStationRecipes.Serializer.INSTANCE);
 
-    public static void register() {
-        IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
+    public static void register(IEventBus eventBus) {
         SERIALIZERS.register(eventBus);
     }
 }

@@ -155,15 +155,4 @@ public class cuttingStationBlock extends horizontalFacingBlocksBaseEntities {
         return createTickerHelper(pBlockEntityType, blockEntities.BLOCK_CUTTING_STATION_BLOCK_ENTITY.get(),
                 blockCuttingStation::tick);
     }
-    // Below in use, because Hoppers are a painful experience & I can't figure out how to set restrictions on them.
-    /*
-    public boolean isSignalSource(BlockState pState) {
-        return true;
-    }
-    public int getSignal(BlockState pBlockState, BlockGetter pBlockAccess, BlockPos pPos, Direction pSide) {
-        return 1;
-    }
-    // 1 used to lock adjacent hoppers, without being otherwise of any use outside glowing a redstone lamp under it.
-
-     */
 }

@@ -80,7 +80,6 @@ public class horizontalFacingBlocksBaseEntities extends BaseEntityBlock {
         return false;
     }
 
-
     @Override
     public RenderShape getRenderShape(BlockState pState) {
         return RenderShape.MODEL;

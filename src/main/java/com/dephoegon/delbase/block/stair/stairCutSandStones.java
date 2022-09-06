@@ -57,8 +57,7 @@ public class stairCutSandStones {
     public static final RegistryObject<StairBlock> BLACK_CUT_SAND_STONE_STAIR = register("black_cut_sand_stone_stair",
             () -> new cutSandStoneStair("","",""));
     
-    public static void register() {
-        IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
+    public static void register(IEventBus eventBus) {
         BLOCKS.register(eventBus);
         ITEMS.register(eventBus);
     }

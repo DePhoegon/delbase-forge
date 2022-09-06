@@ -60,8 +60,7 @@ public class wallSands {
     public static final RegistryObject<WallBlock> BLACK_SAND_WALL = register("black_sand_wall",
             () -> new sandWall(BlockBehaviour.Properties.copy(SAND).sound(SoundType.SAND),"","",""));
 
-    public static void register() {
-        IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
+    public static void register(IEventBus eventBus) {
         BLOCKS.register(eventBus);
         ITEMS.register(eventBus);
     }

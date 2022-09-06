@@ -44,7 +44,6 @@ public abstract class blockArrayList {
                     getFall_hold().contains(block.defaultBlockState());
     }
 
-
     // Color swapping matching list
     private static void setTerracotta_list() {
         ArrayList<Object> terracotta_set = new ArrayList<>();

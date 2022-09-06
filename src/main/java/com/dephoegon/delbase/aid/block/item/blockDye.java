@@ -41,7 +41,6 @@ public class blockDye extends DyeItem {
             toolTip.add(new TranslatableComponent(tip1)); //if shift, show tip1 (if not empty)
     }
 
-
     @Override
     public @NotNull InteractionResult useOn(@NotNull UseOnContext context) {
         Level world = context.getLevel();
