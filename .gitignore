@@ -19,30 +19,26 @@ build
 
 # other
 eclipse
-run/config/
-run/crash-reports/
-run/defaultconfigs/
-run/logs/
-run/mods/
-run/saves/
+run/config
+run/defaultconfigs
 run/world/
-run/patchouli_books/
-run/resourcepacks/
-run/*.log
-run/*.txt
+run/logs
+run/mods
+run/patchouli_books
+run/resourcepacks
+run/saves
+run/options.txt
 run/*.json
-run/*.dat
-run/*.txt
-user*.json
-*.properties
+run/crash-reports
+run/servers.*
+
+# Files from Forge MDK
+forge*changelog.txt
 
 *.db
 Thumbs.db
 src/generated/
 src/test/
-
-# Files from Forge MDK
-forge*changelog.txt
 
 /run/patchouli_data.json
 run/banned-ips.json

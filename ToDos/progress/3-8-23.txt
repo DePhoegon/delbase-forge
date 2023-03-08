@@ -1,0 +1,9 @@
+Long Time needed Adjustments
+---
+Cutting Station
+- GUI fixed to not affect other ones that happen to be doing things atm.
+
+Bringing into alignment - Dependencies wise
+- Chocobo mod
+
+Prep-work for updating version.

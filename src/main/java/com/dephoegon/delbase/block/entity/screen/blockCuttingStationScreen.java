@@ -13,7 +13,6 @@ import org.jetbrains.annotations.NotNull;
 
 import static com.dephoegon.delbase.aid.slots.planSlots.getFullPlanSlotArray;
 import static com.dephoegon.delbase.aid.slots.planSlots.getPlanOnlyArray;
-import static com.dephoegon.delbase.block.entity.blocks.blockCuttingStation.planSlot;
 import static com.dephoegon.delbase.delbase.Mod_ID;
 import static com.dephoegon.delbase.item.blockCutterPlans.*;
 
@@ -40,7 +39,8 @@ public class blockCuttingStationScreen extends AbstractContainerScreen<blockCutt
     protected void renderBg(@NotNull PoseStack pPoseStack, float pPartialTick, int pMouseX, int pMouseY) {
         RenderSystem.setShader(GameRenderer::getPositionTexShader);
         RenderSystem.setShaderColor(1.0F,1.0F,1.0F,1.0F);
-        Item item = blockCuttingStation.iHandler.getStackInSlot(planSlot).getItem();
+        //Item item = blockCuttingStation.iHandler.getStackInSlot(planSlot).getItem();
+        Item item = blockCuttingStation.getPlanSlotItem();
         if (getFullPlanSlotArray().contains(item)) {
             // Contains one of the valid items
             if (getPlanOnlyArray().contains(item)) {

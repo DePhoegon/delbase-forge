@@ -5,11 +5,11 @@
       "item": "delbase:armor_compound"
     },
     {
-      "item": "minecraft:gravel"
+      "item": "minecraft:cobblestone"
     }
   ],
   "output": {
-    "item": "minecraft:sand",
+    "item": "minecraft:gravel",
     "count": 2
   }
 }

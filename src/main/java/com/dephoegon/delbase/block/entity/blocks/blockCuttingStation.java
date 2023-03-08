@@ -42,6 +42,14 @@ public class blockCuttingStation extends BlockEntity implements MenuProvider {
     public static final int inputSlot = 0;
     public static final int planSlot = 2;
     public static final int blockCuttingStationSlotCount = 3;
+    private static final ItemStackHandler blockPlans = new ItemStackHandler(1) {
+        public boolean isItemValid(int slot, @NotNull ItemStack stack) {
+            return false;
+        }
+        protected void onContentsChanged(int slot) {
+            return;
+        }
+    };
     public static ItemStackHandler iHandler = null;
     private final ItemStackHandler itemHandler = new ItemStackHandler(blockCuttingStationSlotCount) {
         @Override
@@ -59,6 +67,7 @@ public class blockCuttingStation extends BlockEntity implements MenuProvider {
             if (slot == planSlot) {
                 if (planHandle.getStackInSlot(0) != itemHandler.getStackInSlot(planSlot)) {
                     planHandle.setStackInSlot(0, itemHandler.getStackInSlot(planSlot));
+                    blockPlans.setStackInSlot(0, itemHandler.getStackInSlot(planSlot));
                 }
             }
             iHandler = itemHandler;
@@ -92,6 +101,7 @@ public class blockCuttingStation extends BlockEntity implements MenuProvider {
         protected void onContentsChanged(int slot) {
             if (planHandle.getStackInSlot(slot) != itemHandler.getStackInSlot(planSlot)) {
                 itemHandler.setStackInSlot(planSlot, planHandle.getStackInSlot(slot));
+                blockPlans.setStackInSlot(slot, planHandle.getStackInSlot(slot));
             }
         }
     };
@@ -131,7 +141,7 @@ public class blockCuttingStation extends BlockEntity implements MenuProvider {
     }
     @Override
     public @NotNull Component getDisplayName() { return new TextComponent("Block Cutting Station"); }
-
+    public static @NotNull Item getPlanSlotItem() { return blockPlans.getStackInSlot(0).getItem(); }
     @Nullable
     @Override
     public AbstractContainerMenu createMenu(int pContainerId, @NotNull Inventory pInventory, @NotNull Player pPlayer) {
@@ -177,6 +187,7 @@ public class blockCuttingStation extends BlockEntity implements MenuProvider {
     public void load(@NotNull CompoundTag nbt) {
         super.load(nbt);
         itemHandler.deserializeNBT(nbt.getCompound("inventory"));
+        blockPlans.setStackInSlot(0, itemHandler.getStackInSlot(planSlot));
         progress = nbt.getInt("block_cutting_station.progress");
     }
 

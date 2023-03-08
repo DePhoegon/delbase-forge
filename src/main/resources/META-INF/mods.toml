@@ -1,10 +1,10 @@
 modLoader="javafml"
-loaderVersion="[39,)"
+loaderVersion="[40,)"
 license="MIT"
 [[mods]]
 modId="delbase"
 version="${file.jarVersion}"
-displayName="DePhoegons' Base Blocks"
+displayName="DePhoegons' Base"
 logoFile="dephoegonlogo.png"
 credits="Lack of Sanity, Myself, Trial & Error, Family, and My friend(s) for listening to insanity."
 authors="DePhoegon"
@@ -16,12 +16,12 @@ The resource reclaimation aspects are designed around non-modded armors. Support
 [[dependencies.delbase]]
     modId="forge"
     mandatory=true
-    versionRange="[39,)"
+    versionRange="[40,)"
     ordering="NONE"
     side="BOTH"
 [[dependencies.delbase]]
     modId="minecraft"
     mandatory=true
-    versionRange="[1.18.2,1.19)"
+    versionRange="[1.18.2,1.18.3)"
     ordering="NONE"
     side="BOTH"
