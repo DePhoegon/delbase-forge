@@ -3,21 +3,18 @@ package com.dephoegon.delbase.block.gravity;
 import com.dephoegon.delbase.aid.block.colorshift.grav.sandBlock;
 import com.dephoegon.delbase.aid.block.colorshift.grav.solidSandBlock;
 import net.minecraft.world.item.BlockItem;
-import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.SandBlock;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraftforge.eventbus.api.IEventBus;
-import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
 import java.util.function.Supplier;
 
-import static com.dephoegon.delbase.delbase.BASE_BLOCK;
 import static com.dephoegon.delbase.delbase.Mod_ID;
 import static net.minecraft.world.level.block.Blocks.SAND;
 
@@ -111,13 +108,13 @@ public class gravColorSands {
     private static <T extends Block> RegistryObject<T> register(String name, Supplier<T> block) {
         RegistryObject<T> exit = BLOCKS.register(name, block);
         ITEMS.register(name, () -> new BlockItem(exit.get(),
-                new Item.Properties().stacksTo(64).tab(BASE_BLOCK)));
+                new Item.Properties().stacksTo(64)));
         return exit;
     }
     private static <T extends Block> RegistryObject<T> overrideRegister(String name, Supplier<T> block) {
         RegistryObject<T> exit = OVERRIDE_BLOCK.register(name, block);
         OVERRIDE_ITEM.register(name, () -> new BlockItem(exit.get(),
-                new Item.Properties().stacksTo(64).tab(CreativeModeTab.TAB_BUILDING_BLOCKS)));
+                new Item.Properties().stacksTo(64)));
         return exit;
     }
 }

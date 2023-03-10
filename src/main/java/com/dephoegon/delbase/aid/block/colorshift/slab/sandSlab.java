@@ -17,7 +17,7 @@ public class sandSlab extends slabBlock {
         super(properties, normToolTip, shiftToolTip, ctrlToolTip, false, null);
     }
     @Override
-    public boolean canSustainPlant(BlockState state, @NotNull BlockGetter world, BlockPos pos, @NotNull Direction facing, net.minecraftforge.common.IPlantable plantable) {
+    public boolean canSustainPlant(@NotNull BlockState state, @NotNull BlockGetter world, @NotNull BlockPos pos, @NotNull Direction facing, net.minecraftforge.common.@NotNull IPlantable plantable) {
         BlockState plant = plantable.getPlant(world, pos.relative(facing));
         SlabType s_type = state.getValue(TYPE);
         boolean w_logged = state.getValue(SlabBlock.WATERLOGGED);

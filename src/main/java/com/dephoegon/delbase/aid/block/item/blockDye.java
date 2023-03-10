@@ -4,7 +4,6 @@ import com.dephoegon.delbase.aid.block.stock.*;
 import com.dephoegon.delbase.aid.util.kb;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
-import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.*;
@@ -35,10 +34,10 @@ public class blockDye extends DyeItem {
     @Override
     public void appendHoverText(@NotNull ItemStack stack, @Nullable Level level, @NotNull List<Component> toolTip, @NotNull TooltipFlag flag) {
         super.appendHoverText(stack, level, toolTip, flag);
-        if(!(kb.HShift()) && !(kb.HCtrl()) && tip0 != null) toolTip.add(new TranslatableComponent(tip0)); //if neither pressed, show tip0 (if not empty)
-        if(kb.HCtrl() && tip2 != null) toolTip.add(new TranslatableComponent(tip2)); //if ctrl, show tip2 (if not empty), do first
+        if(!(kb.HShift()) && !(kb.HCtrl()) && tip0 != null) toolTip.add(Component.translatable(tip0)); //if neither pressed, show tip0 (if not empty)
+        if(kb.HCtrl() && tip2 != null) toolTip.add(Component.translatable(tip2)); //if ctrl, show tip2 (if not empty), do first
         if(kb.HShift() && tip1 != null) //noinspection GrazieInspection
-            toolTip.add(new TranslatableComponent(tip1)); //if shift, show tip1 (if not empty)
+            toolTip.add(Component.translatable(tip1)); //if shift, show tip1 (if not empty)
     }
 
     @Override

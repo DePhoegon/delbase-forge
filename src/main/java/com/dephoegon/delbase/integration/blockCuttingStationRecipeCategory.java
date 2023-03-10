@@ -7,9 +7,9 @@ import mezz.jei.api.gui.drawable.IDrawable;
 import mezz.jei.api.helpers.IGuiHelper;
 import mezz.jei.api.recipe.IFocusGroup;
 import mezz.jei.api.recipe.RecipeIngredientRole;
+import mezz.jei.api.recipe.RecipeType;
 import mezz.jei.api.recipe.category.IRecipeCategory;
 import net.minecraft.network.chat.Component;
-import net.minecraft.network.chat.TextComponent;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.ArmorMaterials;
@@ -17,7 +17,6 @@ import net.minecraft.world.item.ItemStack;
 import org.jetbrains.annotations.NotNull;
 
 import javax.annotation.Nonnull;
-
 import java.util.List;
 
 import static com.dephoegon.delbase.block.general.machineBlocks.BLOCK_CUTTING_STATION;
@@ -32,36 +31,14 @@ public class blockCuttingStationRecipeCategory implements IRecipeCategory<blockC
     private final IDrawable background;
     private final IDrawable icon;
 
-    public blockCuttingStationRecipeCategory(IGuiHelper helper) {
+    public blockCuttingStationRecipeCategory(@NotNull IGuiHelper helper) {
         this.background = helper.createDrawable(TEXTURE, 0,0, 176, 85);
-        this.icon = helper.createDrawableIngredient(VanillaTypes.ITEM, new ItemStack(BLOCK_CUTTING_STATION.get()));
+        this.icon = helper.createDrawableIngredient(VanillaTypes.ITEM_STACK, new ItemStack(BLOCK_CUTTING_STATION.get()));
     }
-
-    @Override
-    public @NotNull Component getTitle() {
-        return new TextComponent("Block Cutting Station");
-    }
-
-    @Override
-    public @NotNull IDrawable getBackground() {
-        return this.background;
-    }
-
-    @Override
-    public @NotNull IDrawable getIcon() {
-        return this.icon;
-    }
-
-    @Override
-    public @NotNull ResourceLocation getUid() {
-        return UID;
-    }
-
-    @Override
-    public @NotNull Class<? extends blockCuttingStationRecipes> getRecipeClass() {
-        return blockCuttingStationRecipes.class;
-    }
-    @Override
+    public RecipeType<blockCuttingStationRecipes> getRecipeType() { return jeiDelbaseModPlugin.BLOCK_CUTTING_STATION_RECIPE; }
+    public @NotNull Component getTitle() { return Component.literal("Block Cutting Station"); }
+    public @NotNull IDrawable getBackground() { return this.background; }
+    public @NotNull IDrawable getIcon() { return this.icon; }
     public void setRecipe(@Nonnull IRecipeLayoutBuilder builder, @Nonnull blockCuttingStationRecipes recipe, @Nonnull IFocusGroup focusGroup) {
         ItemStack itemStack = recipe.getResultItem();
         builder.addSlot(RecipeIngredientRole.INPUT, 57, 18).addIngredients(recipe.getIngredients().get(1));
@@ -110,7 +87,6 @@ public class blockCuttingStationRecipeCategory implements IRecipeCategory<blockC
                     builder.addSlot(RecipeIngredientRole.OUTPUT, 80, 60)
                             .addItemStack(itemStack);
                 }
-
             } else {
                 builder.addSlot(RecipeIngredientRole.OUTPUT, 80, 60)
                         .addItemStack(itemStack);

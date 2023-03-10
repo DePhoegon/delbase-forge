@@ -2,3 +2,5 @@
 Revisit Blocks, Logic, balance, Textures, Recipes, The whole shabang.
 
 Address the Guidebook layout
+
+Add 1.19.3 block variants

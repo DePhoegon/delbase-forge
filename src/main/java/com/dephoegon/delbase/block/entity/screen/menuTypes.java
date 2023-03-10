@@ -4,7 +4,6 @@ import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.inventory.MenuType;
 import net.minecraftforge.common.extensions.IForgeMenuType;
 import net.minecraftforge.eventbus.api.IEventBus;
-import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.network.IContainerFactory;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -14,7 +13,7 @@ import static com.dephoegon.delbase.delbase.Mod_ID;
 
 public class menuTypes {
     public static final DeferredRegister<MenuType<?>> MENUS =
-            DeferredRegister.create(ForgeRegistries.CONTAINERS, Mod_ID);
+            DeferredRegister.create(ForgeRegistries.MENU_TYPES, Mod_ID);
 
     public static final RegistryObject<MenuType<blockCuttingStationMenu>> BLOCK_CUTTING_STATION_MENU =
             registerMenuType(blockCuttingStationMenu::new, "block_cutting_station_menu");

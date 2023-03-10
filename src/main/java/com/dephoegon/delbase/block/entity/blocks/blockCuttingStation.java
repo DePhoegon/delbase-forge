@@ -8,7 +8,6 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
-import net.minecraft.network.chat.TextComponent;
 import net.minecraft.world.Containers;
 import net.minecraft.world.MenuProvider;
 import net.minecraft.world.SimpleContainer;
@@ -46,9 +45,7 @@ public class blockCuttingStation extends BlockEntity implements MenuProvider {
         public boolean isItemValid(int slot, @NotNull ItemStack stack) {
             return false;
         }
-        protected void onContentsChanged(int slot) {
-            return;
-        }
+        protected void onContentsChanged(int slot) {  }
     };
     public static ItemStackHandler iHandler = null;
     private final ItemStackHandler itemHandler = new ItemStackHandler(blockCuttingStationSlotCount) {
@@ -140,7 +137,7 @@ public class blockCuttingStation extends BlockEntity implements MenuProvider {
         };
     }
     @Override
-    public @NotNull Component getDisplayName() { return new TextComponent("Block Cutting Station"); }
+    public @NotNull Component getDisplayName() { return Component.literal("Block Cutting Station"); }
     public static @NotNull Item getPlanSlotItem() { return blockPlans.getStackInSlot(0).getItem(); }
     @Nullable
     @Override

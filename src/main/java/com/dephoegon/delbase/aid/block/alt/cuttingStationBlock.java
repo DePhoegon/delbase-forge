@@ -137,7 +137,7 @@ public class cuttingStationBlock extends horizontalFacingBlocksBaseEntities {
         if(!pLevel.isClientSide()) {
             BlockEntity entity = pLevel.getBlockEntity(pPos);
             if(entity instanceof blockCuttingStation) {
-                NetworkHooks.openGui(((ServerPlayer) pPlayer), (blockCuttingStation)entity, pPos);
+                NetworkHooks.openScreen(((ServerPlayer) pPlayer), (blockCuttingStation)entity, pPos);
             } else {
                 throw new IllegalStateException("Delbase Container Provider is Missing - Block Cutting Station");
             }
