@@ -1,0 +1,6 @@
+Bug Fixes
+----------
+Wood Fence/Fence Gate
+- Registration fixes
+stripped wooden fence gate block tag file
+-added missing Crimson blocks
