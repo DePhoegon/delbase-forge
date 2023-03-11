@@ -57,6 +57,10 @@ public class wallWood {
             () -> new woodWall(BlockBehaviour.Properties.copy(BIRCH_WOOD).sound(SoundType.WOOD),"","","", true, STRIPPED_BIRCH_WOOD_WALL.get().defaultBlockState()), 5001);
     public static final RegistryObject<WallBlock> BIRCH_LOG_WALL = register("birch_log_wall",
             () -> new woodWall(BlockBehaviour.Properties.copy(BIRCH_WOOD).sound(SoundType.WOOD),"","","", true, STRIPPED_BIRCH_LOG_WALL.get().defaultBlockState()), 5001);
+    public static final RegistryObject<WallBlock> MANGROVE_WOOD_WALL = register("mangrove_wood_wall",
+            () -> new woodWall(BlockBehaviour.Properties.copy(MANGROVE_WOOD).sound(SoundType.WOOD),"","","", true, STRIPPED_MANGROVE_WOOD_WALL.get().defaultBlockState()), 5001);
+    public static final RegistryObject<WallBlock> MANGROVE_LOG_WALL = register("mangrove_log_wall",
+            () -> new woodWall(BlockBehaviour.Properties.copy(MANGROVE_WOOD).sound(SoundType.WOOD),"","","", true, STRIPPED_MANGROVE_LOG_WALL.get().defaultBlockState()), 5001);
 
     public static void register(IEventBus eventBus) {
         BLOCKS.register(eventBus);

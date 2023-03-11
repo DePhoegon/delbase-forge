@@ -29,10 +29,10 @@ public class delbaseCreativeTabs {
     public static void registerCreativeModeTabs(CreativeModeTabEvent.@NotNull Register event){
         DELBASE_BLOCK = event.registerCreativeModeTab(new ResourceLocation(Mod_ID, "dephoegon_blocks"),
                 builder -> builder.icon(() -> new ItemStack(Items.REDSTONE_BLOCK))
-                        .title(Component.translatable("creativemodetab.dephoegon_blocks")));
+                        .title(Component.translatable("itemGroup.dephoegon_blocks")));
         DELBASE_ITEM = event.registerCreativeModeTab(new ResourceLocation(Mod_ID, "dephoegon_items"),
                 builder -> builder.icon(() -> new ItemStack(Items.RED_DYE))
-                        .title(Component.translatable("creativemodetab.dephoegon_items")));
+                        .title(Component.translatable("itemGroup.dephoegon_items")));
     }
 
     public static @NotNull ArrayList<RegistryObject<Item>> getDelItemList() {
@@ -42,6 +42,11 @@ public class delbaseCreativeTabs {
         return out;
     }
 
+    public static @NotNull ArrayList<RegistryObject<? extends ItemLike>> getDelNaturalBlockList() {
+        ArrayList<RegistryObject<? extends ItemLike>> out = new ArrayList<>();
+        out.addAll(setSands());
+        return out;
+    }
     public static @NotNull ArrayList<RegistryObject<? extends ItemLike>> getDelBlockList() {
         ArrayList<RegistryObject<? extends ItemLike>> out = new ArrayList<>();
         out.addAll(setAxisCutSandStone());
@@ -61,7 +66,6 @@ public class delbaseCreativeTabs {
         out.addAll(setSandStones());
         out.addAll(setSmoothSandStones());
         out.add(HARDENED_OAK_PLANKS);
-        out.addAll(setSands());
         out.addAll(setChiseledSandStoneSlabs());
         out.addAll(setChiseledSandStoneEnergySlabs());
         out.addAll(setConcreteSlabs());
@@ -120,6 +124,7 @@ public class delbaseCreativeTabs {
     public static @NotNull ArrayList<RegistryObject<? extends ItemLike>> getDelFullBlockList() {
         ArrayList<RegistryObject<? extends ItemLike>> out = new ArrayList<>();
         out.addAll(getDelBlockList());
+        out.addAll(getDelNaturalBlockList());
         out.addAll(getDelFunctionalBlockList());
         out.add(BLOCK_CUTTING_STATION);
         return out;

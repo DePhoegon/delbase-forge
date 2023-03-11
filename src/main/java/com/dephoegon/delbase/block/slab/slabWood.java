@@ -57,6 +57,10 @@ public class slabWood {
             () -> new woodSlab(BlockBehaviour.Properties.copy(BIRCH_WOOD).sound(SoundType.WOOD),"","","",true, STRIPPED_BIRCH_WOOD_SLAB.get().defaultBlockState()), 3001);
     public static final RegistryObject<SlabBlock> BIRCH_LOG_SLAB = register("birch_log_slab",
             () -> new woodSlab(BlockBehaviour.Properties.copy(BIRCH_WOOD).sound(SoundType.WOOD),"","","",true, STRIPPED_BIRCH_LOG_SLAB.get().defaultBlockState()), 3001);
+    public static final RegistryObject<SlabBlock> MANGROVE_WOOD_SLAB = register("mangrove_wood_slab",
+            () -> new woodSlab(BlockBehaviour.Properties.copy(MANGROVE_WOOD).sound(SoundType.WOOD), "","","", true, STRIPPED_MANGROVE_WOOD_SLAB.get().defaultBlockState()), 3001);
+    public static final RegistryObject<SlabBlock> MANGROVE_LOG_SLAB = register("mangrove_log_slab",
+            () -> new woodSlab(BlockBehaviour.Properties.copy(MANGROVE_WOOD).sound(SoundType.WOOD), "","","", true, STRIPPED_MANGROVE_LOG_SLAB.get().defaultBlockState()), 3001);
 
     public static void register(IEventBus eventBus) {
         BLOCKS.register(eventBus);

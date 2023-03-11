@@ -1,0 +1,35 @@
+New Blocks
+----------------
+Mangrove
+- Wood / Logs / Stripped Wood / Stripped Logs
+-- Stairs, Fences, Fence Gates, Walls, Slabs
+---- Added to CreativeTab ArraysList
+====All JSON files
+----Recipes
+----Blockstates
+----Model Files
+------Blocks
+------Items
+----Loot Tables
+- Textures
+-- inside (including stripped)
+-- Wall top (including stripped)
+- Tag Files
+-- Added blocks to the right tabs
+
+Patchouli Re-added
+
+
+
+Fixed Bugs
+-----------
+Added Spruce Log Stairs to the CreativeTabArraysList
+Fixed Creative Tabs Name
+Corrected Load Orders
+Corrected Fences & Fence Gates Registration Properties
+Sorted CreativeModeTabs
+Achievement Awarded
+- Gives patchouli book on first load for player
+Added overlooked to tags
+- stripped wooden fence (stripped Crimsons)
+

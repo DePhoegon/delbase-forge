@@ -10,7 +10,7 @@ const { resolve } = require('path');
 const pathing = require('path');
 const myArgs = process.argv.slice(2);
 
-var baseDrive = 'D:/';
+var baseDrive = 'G:/';
 var baseFolder = baseDrive+'MC_JSONS';
 var customModID = 'delbase';
 var vanillaModID= 'minecraft';

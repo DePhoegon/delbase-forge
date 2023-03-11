@@ -467,6 +467,8 @@ public class creativeTabsArrayLists {
         out.add(STRIPPED_SPRUCE_LOG_FENCE);
         out.add(STRIPPED_WARPED_HYPHAE_FENCE);
         out.add(STRIPPED_WARPED_STEM_FENCE);
+        out.add(STRIPPED_MANGROVE_LOG_FENCE);
+        out.add(STRIPPED_MANGROVE_WOOD_FENCE);
         return out;
     }
     public static @NotNull ArrayList<RegistryObject<FenceGateBlock>> setStrippedWoodenFenceGates() {
@@ -486,6 +488,8 @@ public class creativeTabsArrayLists {
         out.add(STRIPPED_SPRUCE_LOG_FENCE_GATE);
         out.add(STRIPPED_WARPED_HYPHAE_FENCE_GATE);
         out.add(STRIPPED_WARPED_STEM_FENCE_GATE);
+        out.add(STRIPPED_MANGROVE_WOOD_FENCE_GATE);
+        out.add(STRIPPED_MANGROVE_LOG_FENCE_GATE);
         return out;
     }
     public static @NotNull ArrayList<RegistryObject<FenceBlock>> setTerracottaFences() {
@@ -548,6 +552,8 @@ public class creativeTabsArrayLists {
         out.add(SPRUCE_LOG_FENCE);
         out.add(WARPED_HYPHAE_FENCE);
         out.add(WARPED_STEM_FENCE);
+        out.add(MANGROVE_WOOD_FENCE);
+        out.add(MANGROVE_LOG_FENCE);
         return out;
     }
     public static @NotNull ArrayList<RegistryObject<FenceGateBlock>> setWoodenFenceGates() {
@@ -568,6 +574,8 @@ public class creativeTabsArrayLists {
         out.add(SPRUCE_LOG_FENCE_GATE);
         out.add(WARPED_HYPHAE_FENCE_GATE);
         out.add(WARPED_STEM_FENCE_GATE);
+        out.add(MANGROVE_WOOD_FENCE_GATE);
+        out.add(MANGROVE_LOG_FENCE_GATE);
         return out;
     }
     public static @NotNull ArrayList<RegistryObject<? extends ItemLike>> setAshBlocks() {
@@ -947,6 +955,8 @@ public class creativeTabsArrayLists {
         out.add(STRIPPED_JUNGLE_LOG_SLAB);
         out.add(STRIPPED_BIRCH_WOOD_SLAB);
         out.add(STRIPPED_BIRCH_LOG_SLAB);
+        out.add(STRIPPED_MANGROVE_WOOD_SLAB);
+        out.add(STRIPPED_MANGROVE_LOG_SLAB);
         return out;
     }
     public static @NotNull ArrayList<RegistryObject<SlabBlock>> setTerracottaSlabs() {
@@ -987,6 +997,8 @@ public class creativeTabsArrayLists {
         out.add(JUNGLE_LOG_SLAB);
         out.add(BIRCH_WOOD_SLAB);
         out.add(BIRCH_LOG_SLAB);
+        out.add(MANGROVE_WOOD_SLAB);
+        out.add(MANGROVE_LOG_SLAB);
         return out;
     }
     public static @NotNull ArrayList<RegistryObject<StairBlock>> setChiseledSandStoneStairs() {
@@ -1160,6 +1172,8 @@ public class creativeTabsArrayLists {
         out.add(STRIPPED_BIRCH_LOG_STAIR);
         out.add(STRIPPED_WARPED_STEM_STAIR);
         out.add(STRIPPED_CRIMSON_STEM_STAIR);
+        out.add(STRIPPED_MANGROVE_WOOD_STAIR); // Mangrove Stair
+        out.add(STRIPPED_MANGROVE_LOG_STAIR); // Mangrove Stair
         return out;
     }
     public static @NotNull ArrayList<RegistryObject<StairBlock>> setTerracottaStairs() {
@@ -1193,6 +1207,7 @@ public class creativeTabsArrayLists {
         out.add(BIRCH_WOOD_STAIR);
         out.add(WARPED_HYPHAE_STAIR);
         out.add(CRIMSON_HYPHAE_STAIR);
+        out.add(SPRUCE_LOG_STAIR);
         out.add(ACACIA_LOG_STAIR);
         out.add(OAK_LOG_STAIR);
         out.add(DARK_OAK_LOG_STAIR);
@@ -1200,6 +1215,8 @@ public class creativeTabsArrayLists {
         out.add(BIRCH_LOG_STAIR);
         out.add(WARPED_STEM_STAIR);
         out.add(CRIMSON_STEM_STAIR);
+        out.add(MANGROVE_WOOD_STAIR); // Mangrove Stair
+        out.add(MANGROVE_LOG_STAIR); // Mangrove Stair
         return out;
     }
     public static @NotNull ArrayList<RegistryObject<WallBlock>> setChiseledSandStoneWalls() {
@@ -1381,6 +1398,8 @@ public class creativeTabsArrayLists {
         out.add(STRIPPED_JUNGLE_LOG_WALL);
         out.add(STRIPPED_BIRCH_WOOD_WALL);
         out.add(STRIPPED_BIRCH_LOG_WALL);
+        out.add(STRIPPED_MANGROVE_WOOD_WALL);
+        out.add(STRIPPED_MANGROVE_LOG_WALL);
         return out;
     }
     public static @NotNull ArrayList<RegistryObject<WallBlock>> setTerracottaWalls() {
@@ -1422,6 +1441,8 @@ public class creativeTabsArrayLists {
         out.add(JUNGLE_LOG_WALL);
         out.add(BIRCH_WOOD_WALL);
         out.add(BIRCH_LOG_WALL);
+        out.add(MANGROVE_WOOD_WALL);
+        out.add(MANGROVE_LOG_WALL);
         return out;
     }
 }

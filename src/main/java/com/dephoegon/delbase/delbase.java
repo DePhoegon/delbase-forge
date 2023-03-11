@@ -26,21 +26,15 @@ public class delbase
     private static final Logger LOGGER = LogManager.getLogger();
 
     private void addCreative(CreativeModeTabEvent.@NotNull BuildContents event) {
-        if(event.getTab() == DELBASE_ITEM) {
-            getDelItemList().forEach(event::accept);
-        }
-        if(event.getTab() == DELBASE_BLOCK) {
-            getDelFullBlockList().forEach(event::accept);
-        }
-        if(event.getTab() == CreativeModeTabs.BUILDING_BLOCKS) {
-            getDelBlockList().forEach(event::accept);
-        }
-        if(event.getTab() == CreativeModeTabs.FUNCTIONAL_BLOCKS) {
-            getDelFunctionalBlockList().forEach(event::accept);
-        }
+        if(event.getTab() == DELBASE_ITEM || event.getTab() == CreativeModeTabs.INGREDIENTS) { getDelItemList().forEach(event::accept); }
+        if(event.getTab() == DELBASE_BLOCK) { getDelFullBlockList().forEach(event::accept); }
+        if(event.getTab() == CreativeModeTabs.BUILDING_BLOCKS) { getDelBlockList().forEach(event::accept); }
+        if(event.getTab() == CreativeModeTabs.FUNCTIONAL_BLOCKS) { getDelFunctionalBlockList().forEach(event::accept); }
+        if(event.getTab() == CreativeModeTabs.NATURAL_BLOCKS) { getDelNaturalBlockList().forEach(event::accept); }
     }
     public delbase() {
         IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
+        regList.firstList(eventBus);
         regList.listOrder(eventBus);
 
         // Register ourselves for server and other game events we are interested in

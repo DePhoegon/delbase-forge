@@ -15,10 +15,22 @@ import com.dephoegon.delbase.item.shiftingDyes;
 import net.minecraftforge.eventbus.api.IEventBus;
 
 public class regList {
-    public static void listOrder(IEventBus eventBus) {
+    public static void firstList(IEventBus eventBus) {
         //aid
         blockArrayList.setBlockArrays();
 
+        //Special block
+        ashBlocks.register(eventBus);
+        machineBlocks.register(eventBus);
+        blockEntities.register(eventBus);
+
+        // Stripped Wood, called for in non-stripped versions
+        slabStrippedWood.register(eventBus);
+        stairStrippedWood.register(eventBus);
+        wallStrippedWood.register(eventBus);
+        strippedWoodenFences.register(eventBus);
+    }
+    public static void listOrder(IEventBus eventBus) {
         //Items
         shiftingDyes.register(eventBus);
         blockCutterPlans.register(eventBus);
@@ -44,11 +56,9 @@ public class regList {
         slabSmoothSandStonesEnergy.register(eventBus);
         slabQuartz.register(eventBus);
         slabConcrete.register(eventBus);
-        slabStrippedWood.register(eventBus);
         slabWood.register(eventBus);
         slabTerracotta.register(eventBus);
         slabMisc.register(eventBus);
-
 
         //Stairs
         stairSands.register(eventBus);
@@ -58,7 +68,6 @@ public class regList {
         stairSandStones.register(eventBus);
         stairQuartz.register(eventBus);
         stairConcrete.register(eventBus);
-        stairStrippedWood.register(eventBus);
         stairWood.register(eventBus);
         stairTerracotta.register(eventBus);
         stairMisc.register(eventBus);
@@ -74,13 +83,11 @@ public class regList {
         wallSmoothSandStones.register(eventBus);
         wallQuartz.register(eventBus);
         wallConcrete.register(eventBus);
-        wallStrippedWood.register(eventBus);
         wallWood.register(eventBus);
         wallTerracotta.register(eventBus);
         wallMisc.register(eventBus);
 
         //Fences
-        strippedWoodenFences.register(eventBus);
         woodenFences.register(eventBus);
         quartzFences.register(eventBus);
         sandFences.register(eventBus);
@@ -91,11 +98,6 @@ public class regList {
         fenceMisc.register(eventBus);
         cutSandStoneFences.register(eventBus);
         chiseledSandStoneFences.register(eventBus);
-
-        //Special block
-        ashBlocks.register(eventBus);
-        machineBlocks.register(eventBus);
-        blockEntities.register(eventBus);
 
         //Special
         menuTypes.register(eventBus);

@@ -25,37 +25,41 @@ public class wallStrippedWood {
     private static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, Mod_ID);
 
     public static final RegistryObject<WallBlock> STRIPPED_SPRUCE_WOOD_WALL = register("stripped_spruce_wood_wall",
-            () -> new woodWall(BlockBehaviour.Properties.copy(SPRUCE_WOOD).sound(SoundType.WOOD),"","","", true, null), 5001);
+            () -> new woodWall(BlockBehaviour.Properties.copy(STRIPPED_SPRUCE_WOOD).sound(SoundType.WOOD),"","","", true, null), 5001);
     public static final RegistryObject<WallBlock> STRIPPED_SPRUCE_LOG_WALL = register("stripped_spruce_log_wall",
-            () -> new woodWall(BlockBehaviour.Properties.copy(SPRUCE_WOOD).sound(SoundType.WOOD),"","","", true, null), 5001);
+            () -> new woodWall(BlockBehaviour.Properties.copy(STRIPPED_SPRUCE_WOOD).sound(SoundType.WOOD),"","","", true, null), 5001);
     public static final RegistryObject<WallBlock> STRIPPED_OAK_WOOD_WALL = register("stripped_oak_wood_wall",
-            () -> new woodWall(BlockBehaviour.Properties.copy(OAK_WOOD).sound(SoundType.WOOD),"","","", true, null), 5001);
+            () -> new woodWall(BlockBehaviour.Properties.copy(STRIPPED_OAK_WOOD).sound(SoundType.WOOD),"","","", true, null), 5001);
     public static final RegistryObject<WallBlock> STRIPPED_OAK_LOG_WALL = register("stripped_oak_log_wall",
-            () -> new woodWall(BlockBehaviour.Properties.copy(OAK_WOOD).sound(SoundType.WOOD),"","","", true, null), 5001);
+            () -> new woodWall(BlockBehaviour.Properties.copy(STRIPPED_OAK_WOOD).sound(SoundType.WOOD),"","","", true, null), 5001);
     public static final RegistryObject<WallBlock> STRIPPED_WARPED_HYPHAE_WALL = register("stripped_warped_hyphae_wall",
-            () -> new woodWall(BlockBehaviour.Properties.copy(WARPED_HYPHAE).sound(SoundType.WOOD),"","","", false, null));
+            () -> new woodWall(BlockBehaviour.Properties.copy(STRIPPED_WARPED_HYPHAE).sound(SoundType.WOOD),"","","", false, null));
     public static final RegistryObject<WallBlock> STRIPPED_WARPED_STEM_WALL = register("stripped_warped_stem_wall",
-            () -> new woodWall(BlockBehaviour.Properties.copy(WARPED_HYPHAE).sound(SoundType.WOOD),"","","", false, null));
+            () -> new woodWall(BlockBehaviour.Properties.copy(STRIPPED_WARPED_HYPHAE).sound(SoundType.WOOD),"","","", false, null));
     public static final RegistryObject<WallBlock> STRIPPED_CRIMSON_HYPHAE_WALL = register("stripped_crimson_hyphae_wall",
-            () -> new woodWall(BlockBehaviour.Properties.copy(CRIMSON_HYPHAE).sound(SoundType.WOOD),"","","", false, null));
+            () -> new woodWall(BlockBehaviour.Properties.copy(STRIPPED_CRIMSON_HYPHAE).sound(SoundType.WOOD),"","","", false, null));
     public static final RegistryObject<WallBlock> STRIPPED_CRIMSON_STEM_WALL = register("stripped_crimson_stem_wall",
-            () -> new woodWall(BlockBehaviour.Properties.copy(CRIMSON_HYPHAE).sound(SoundType.WOOD),"","","", false, null));
+            () -> new woodWall(BlockBehaviour.Properties.copy(STRIPPED_CRIMSON_HYPHAE).sound(SoundType.WOOD),"","","", false, null));
     public static final RegistryObject<WallBlock> STRIPPED_DARK_OAK_WOOD_WALL = register("stripped_dark_oak_wood_wall",
-            () -> new woodWall(BlockBehaviour.Properties.copy(DARK_OAK_WOOD).sound(SoundType.WOOD),"","","", true, null), 5001);
+            () -> new woodWall(BlockBehaviour.Properties.copy(STRIPPED_DARK_OAK_WOOD).sound(SoundType.WOOD),"","","", true, null), 5001);
     public static final RegistryObject<WallBlock> STRIPPED_DARK_OAK_LOG_WALL = register("stripped_dark_oak_log_wall",
-            () -> new woodWall(BlockBehaviour.Properties.copy(DARK_OAK_WOOD).sound(SoundType.WOOD),"","","", true, null), 5001);
+            () -> new woodWall(BlockBehaviour.Properties.copy(STRIPPED_DARK_OAK_WOOD).sound(SoundType.WOOD),"","","", true, null), 5001);
     public static final RegistryObject<WallBlock> STRIPPED_ACACIA_WOOD_WALL = register("stripped_acacia_wood_wall",
-            () -> new woodWall(BlockBehaviour.Properties.copy(ACACIA_WOOD).sound(SoundType.WOOD),"","","", true, null), 5001);
+            () -> new woodWall(BlockBehaviour.Properties.copy(STRIPPED_ACACIA_WOOD).sound(SoundType.WOOD),"","","", true, null), 5001);
     public static final RegistryObject<WallBlock> STRIPPED_ACACIA_LOG_WALL = register("stripped_acacia_log_wall",
-            () -> new woodWall(BlockBehaviour.Properties.copy(ACACIA_WOOD).sound(SoundType.WOOD),"","","", true, null), 5001);
+            () -> new woodWall(BlockBehaviour.Properties.copy(STRIPPED_ACACIA_WOOD).sound(SoundType.WOOD),"","","", true, null), 5001);
     public static final RegistryObject<WallBlock> STRIPPED_JUNGLE_WOOD_WALL = register("stripped_jungle_wood_wall",
-            () -> new woodWall(BlockBehaviour.Properties.copy(JUNGLE_WOOD).sound(SoundType.WOOD),"","","", true, null), 5001);
+            () -> new woodWall(BlockBehaviour.Properties.copy(STRIPPED_JUNGLE_WOOD).sound(SoundType.WOOD),"","","", true, null), 5001);
     public static final RegistryObject<WallBlock> STRIPPED_JUNGLE_LOG_WALL = register("stripped_jungle_log_wall",
-            () -> new woodWall(BlockBehaviour.Properties.copy(JUNGLE_WOOD).sound(SoundType.WOOD),"","","", true, null), 5001);
+            () -> new woodWall(BlockBehaviour.Properties.copy(STRIPPED_JUNGLE_WOOD).sound(SoundType.WOOD),"","","", true, null), 5001);
     public static final RegistryObject<WallBlock> STRIPPED_BIRCH_WOOD_WALL = register("stripped_birch_wood_wall",
-            () -> new woodWall(BlockBehaviour.Properties.copy(BIRCH_WOOD).sound(SoundType.WOOD),"","","", true, null), 5001);
+            () -> new woodWall(BlockBehaviour.Properties.copy(STRIPPED_BIRCH_WOOD).sound(SoundType.WOOD),"","","", true, null), 5001);
     public static final RegistryObject<WallBlock> STRIPPED_BIRCH_LOG_WALL = register("stripped_birch_log_wall",
-            () -> new woodWall(BlockBehaviour.Properties.copy(BIRCH_WOOD).sound(SoundType.WOOD),"","","", true, null), 5001);
+            () -> new woodWall(BlockBehaviour.Properties.copy(STRIPPED_BIRCH_WOOD).sound(SoundType.WOOD),"","","", true, null), 5001);
+    public static final RegistryObject<WallBlock> STRIPPED_MANGROVE_WOOD_WALL = register("stripped_mangrove_wood_wall",
+            () -> new woodWall(BlockBehaviour.Properties.copy(MANGROVE_WOOD).sound(SoundType.WOOD),"","","", true, null), 5001);
+    public static final RegistryObject<WallBlock> STRIPPED_MANGROVE_LOG_WALL = register("stripped_mangrove_log_wall",
+            () -> new woodWall(BlockBehaviour.Properties.copy(MANGROVE_WOOD).sound(SoundType.WOOD),"","","", true, null), 5001);
 
     public static void register(IEventBus eventBus) {
         BLOCKS.register(eventBus);
