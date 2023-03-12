@@ -1,0 +1,8 @@
+Back-ported
+---------
+Walls
+-Stone
+Fences / Fence Gates
+-Stone / cobblestone / deepslate /cobbled deepslate / polished deepslate / deepslate tile
+
+SoundType Adjustments on Fence / Fence gates

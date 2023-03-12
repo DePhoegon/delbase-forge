@@ -24,55 +24,55 @@ public class stairTerracotta {
     private static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, Mod_ID);
 
     public static final RegistryObject<StairBlock> WHITE_TERRACOTTA_STAIR = register("white_terracotta_stair",
-            ()-> new terracottaStair(WHITE_TERRACOTTA::defaultBlockState, BlockBehaviour.Properties.copy(WHITE_TERRACOTTA).sound(SoundType.STONE),
+            ()-> new terracottaStair(WHITE_TERRACOTTA::defaultBlockState, BlockBehaviour.Properties.copy(WHITE_TERRACOTTA).sound(SoundType.CALCITE),
                     "","",""));
     public static final RegistryObject<StairBlock> ORANGE_TERRACOTTA_STAIR = register("orange_terracotta_stair",
-            ()-> new terracottaStair(ORANGE_TERRACOTTA::defaultBlockState, BlockBehaviour.Properties.copy(ORANGE_TERRACOTTA).sound(SoundType.STONE),
+            ()-> new terracottaStair(ORANGE_TERRACOTTA::defaultBlockState, BlockBehaviour.Properties.copy(ORANGE_TERRACOTTA).sound(SoundType.CALCITE),
                     "","",""));
     public static final RegistryObject<StairBlock> MAGENTA_TERRACOTTA_STAIR = register("magenta_terracotta_stair",
-            ()-> new terracottaStair(MAGENTA_TERRACOTTA::defaultBlockState, BlockBehaviour.Properties.copy(MAGENTA_TERRACOTTA).sound(SoundType.STONE),
+            ()-> new terracottaStair(MAGENTA_TERRACOTTA::defaultBlockState, BlockBehaviour.Properties.copy(MAGENTA_TERRACOTTA).sound(SoundType.CALCITE),
                     "","",""));
     public static final RegistryObject<StairBlock> LIGHT_BLUE_TERRACOTTA_STAIR = register("light_blue_terracotta_stair",
-            ()-> new terracottaStair(LIGHT_BLUE_TERRACOTTA::defaultBlockState, BlockBehaviour.Properties.copy(LIGHT_BLUE_TERRACOTTA).sound(SoundType.STONE),
+            ()-> new terracottaStair(LIGHT_BLUE_TERRACOTTA::defaultBlockState, BlockBehaviour.Properties.copy(LIGHT_BLUE_TERRACOTTA).sound(SoundType.CALCITE),
                     "","",""));
     public static final RegistryObject<StairBlock> YELLOW_TERRACOTTA_STAIR = register("yellow_terracotta_stair",
-            ()-> new terracottaStair(YELLOW_TERRACOTTA::defaultBlockState, BlockBehaviour.Properties.copy(YELLOW_TERRACOTTA).sound(SoundType.STONE),
+            ()-> new terracottaStair(YELLOW_TERRACOTTA::defaultBlockState, BlockBehaviour.Properties.copy(YELLOW_TERRACOTTA).sound(SoundType.CALCITE),
                     "","",""));
     public static final RegistryObject<StairBlock> LIME_TERRACOTTA_STAIR = register("lime_terracotta_stair",
-            ()-> new terracottaStair(LIME_TERRACOTTA::defaultBlockState, BlockBehaviour.Properties.copy(LIME_TERRACOTTA).sound(SoundType.STONE),
+            ()-> new terracottaStair(LIME_TERRACOTTA::defaultBlockState, BlockBehaviour.Properties.copy(LIME_TERRACOTTA).sound(SoundType.CALCITE),
                     "","",""));
     public static final RegistryObject<StairBlock> PINK_TERRACOTTA_STAIR = register("pink_terracotta_stair",
-            ()-> new terracottaStair(PINK_TERRACOTTA::defaultBlockState, BlockBehaviour.Properties.copy(PINK_TERRACOTTA).sound(SoundType.STONE),
+            ()-> new terracottaStair(PINK_TERRACOTTA::defaultBlockState, BlockBehaviour.Properties.copy(PINK_TERRACOTTA).sound(SoundType.CALCITE),
                     "","",""));
     public static final RegistryObject<StairBlock> GRAY_TERRACOTTA_STAIR = register("gray_terracotta_stair",
-            ()-> new terracottaStair(GRAY_TERRACOTTA::defaultBlockState, BlockBehaviour.Properties.copy(GRAY_TERRACOTTA).sound(SoundType.STONE),
+            ()-> new terracottaStair(GRAY_TERRACOTTA::defaultBlockState, BlockBehaviour.Properties.copy(GRAY_TERRACOTTA).sound(SoundType.CALCITE),
                     "","",""));
     public static final RegistryObject<StairBlock> LIGHT_GRAY_TERRACOTTA_STAIR = register("light_gray_terracotta_stair",
-            ()-> new terracottaStair(LIGHT_GRAY_TERRACOTTA::defaultBlockState, BlockBehaviour.Properties.copy(LIGHT_GRAY_TERRACOTTA).sound(SoundType.STONE),
+            ()-> new terracottaStair(LIGHT_GRAY_TERRACOTTA::defaultBlockState, BlockBehaviour.Properties.copy(LIGHT_GRAY_TERRACOTTA).sound(SoundType.CALCITE),
                     "","",""));
     public static final RegistryObject<StairBlock> CYAN_TERRACOTTA_STAIR = register("cyan_terracotta_stair",
-            ()-> new terracottaStair(CYAN_TERRACOTTA::defaultBlockState, BlockBehaviour.Properties.copy(CYAN_TERRACOTTA).sound(SoundType.STONE),
+            ()-> new terracottaStair(CYAN_TERRACOTTA::defaultBlockState, BlockBehaviour.Properties.copy(CYAN_TERRACOTTA).sound(SoundType.CALCITE),
                     "","",""));
     public static final RegistryObject<StairBlock> PURPLE_TERRACOTTA_STAIR = register("purple_terracotta_stair",
-            ()-> new terracottaStair(PURPLE_TERRACOTTA::defaultBlockState, BlockBehaviour.Properties.copy(PURPLE_TERRACOTTA).sound(SoundType.STONE),
+            ()-> new terracottaStair(PURPLE_TERRACOTTA::defaultBlockState, BlockBehaviour.Properties.copy(PURPLE_TERRACOTTA).sound(SoundType.CALCITE),
                     "","",""));
     public static final RegistryObject<StairBlock> BLUE_TERRACOTTA_STAIR = register("blue_terracotta_stair",
-            ()-> new terracottaStair(BLUE_TERRACOTTA::defaultBlockState, BlockBehaviour.Properties.copy(BLUE_TERRACOTTA).sound(SoundType.STONE),
+            ()-> new terracottaStair(BLUE_TERRACOTTA::defaultBlockState, BlockBehaviour.Properties.copy(BLUE_TERRACOTTA).sound(SoundType.CALCITE),
                     "","",""));
     public static final RegistryObject<StairBlock> BROWN_TERRACOTTA_STAIR = register("brown_terracotta_stair",
-            ()-> new terracottaStair(BROWN_TERRACOTTA::defaultBlockState, BlockBehaviour.Properties.copy(BROWN_TERRACOTTA).sound(SoundType.STONE),
+            ()-> new terracottaStair(BROWN_TERRACOTTA::defaultBlockState, BlockBehaviour.Properties.copy(BROWN_TERRACOTTA).sound(SoundType.CALCITE),
                     "","",""));
     public static final RegistryObject<StairBlock> GREEN_TERRACOTTA_STAIR = register("green_terracotta_stair",
-            ()-> new terracottaStair(GREEN_TERRACOTTA::defaultBlockState, BlockBehaviour.Properties.copy(GREEN_TERRACOTTA).sound(SoundType.STONE),
+            ()-> new terracottaStair(GREEN_TERRACOTTA::defaultBlockState, BlockBehaviour.Properties.copy(GREEN_TERRACOTTA).sound(SoundType.CALCITE),
                     "","",""));
     public static final RegistryObject<StairBlock> RED_TERRACOTTA_STAIR = register("red_terracotta_stair",
-            ()-> new terracottaStair(RED_TERRACOTTA::defaultBlockState, BlockBehaviour.Properties.copy(RED_TERRACOTTA).sound(SoundType.STONE),
+            ()-> new terracottaStair(RED_TERRACOTTA::defaultBlockState, BlockBehaviour.Properties.copy(RED_TERRACOTTA).sound(SoundType.CALCITE),
                     "","",""));
     public static final RegistryObject<StairBlock> BLACK_TERRACOTTA_STAIR = register("black_terracotta_stair",
-            ()-> new terracottaStair(BLACK_TERRACOTTA::defaultBlockState, BlockBehaviour.Properties.copy(BLACK_TERRACOTTA).sound(SoundType.STONE),
+            ()-> new terracottaStair(BLACK_TERRACOTTA::defaultBlockState, BlockBehaviour.Properties.copy(BLACK_TERRACOTTA).sound(SoundType.CALCITE),
                     "","",""));
     public static final RegistryObject<StairBlock> TERRACOTTA_STAIR = register("terracotta_stair",
-            ()-> new terracottaStair(TERRACOTTA::defaultBlockState, BlockBehaviour.Properties.copy(TERRACOTTA).sound(SoundType.STONE),
+            ()-> new terracottaStair(TERRACOTTA::defaultBlockState, BlockBehaviour.Properties.copy(TERRACOTTA).sound(SoundType.CALCITE),
                     "","",""));
 
     public static void register(IEventBus eventBus) {

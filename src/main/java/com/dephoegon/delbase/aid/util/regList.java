@@ -74,6 +74,7 @@ public class regList {
         wallSmoothSandStones.register(eventBus);
         wallQuartz.register(eventBus);
         wallConcrete.register(eventBus);
+        wallStone.register(eventBus);
         wallStrippedWood.register(eventBus);
         wallWood.register(eventBus);
         wallTerracotta.register(eventBus);
@@ -87,6 +88,7 @@ public class regList {
         concreteFences.register(eventBus);
         terracottaFences.register(eventBus);
         smoothSandStoneFences.register(eventBus);
+        stoneFences.register(eventBus);
         sandStoneFences.register(eventBus);
         fenceMisc.register(eventBus);
         cutSandStoneFences.register(eventBus);

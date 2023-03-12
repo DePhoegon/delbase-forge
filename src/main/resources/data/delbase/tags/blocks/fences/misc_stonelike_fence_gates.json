@@ -15,6 +15,13 @@
     "delbase:purpur_block_fence_gate",
     "delbase:netherrack_fence_gate",
     "delbase:magma_block_fence_gate",
-    "delbase:coal_block_fence_gate"
+    "delbase:coal_block_fence_gate",
+    "delbase:stone_fence_gate",
+    "delbase:cobblestone_fence_gate",
+    "delbase:deepslate_fence_gate",
+    "delbase:cobbled_deepslate_fence_gate",
+    "delbase:deepslate_tile_fence_gate",
+    "delbase:polished_deepslate_fence_gate",
+    "delbase:deepslate_brick_fence_gate"
   ]
 }
