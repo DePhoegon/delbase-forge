@@ -13,6 +13,7 @@
     "delbase:cobbled_basalt_wall",
     "delbase:netherrack_wall",
     "delbase:magma_block_wall",
-    "delbase:coal_block_wall"
+    "delbase:coal_block_wall",
+    "delbase:stone_wall"
   ]
 }

@@ -3,4 +3,28 @@ Revisit Blocks, Logic, balance, Textures, Recipes, The whole shabang.
 
 Address the Guidebook layout
 
+Create colored section (creative tabs)
+-use color swap able blocks
+
+
 Add 1.19.3 block variants
+=All (Slabs/fences/fence gates/walls/stairs)
+-sculk - natural [1]
+-mud [1]
+-muddy roots [2]
+-frog lights (all 3) - functional / natural [2]
+- mangrove roots [2]
+
+slabs/walls/stairs
+-deep slate [2]
+-packed mud [1]
+
+Fence / Fence Gates
+- bricks [1]
+
+Recipes
+--------
+StoneCutter for recent stone likes
+
+Backport stone_cutter recipes for stone likes (stone, cobblestone, deepslate(S))
+Backport tags used (if any, exclude 1.19.3 blocks)

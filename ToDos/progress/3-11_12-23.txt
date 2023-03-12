@@ -1,0 +1,38 @@
+Added Blocks (full) -{ blockstate/models/tags/recipes/textures/arraylist/loot tables }
+- Stone
+-- Wall --
+
+- Cobblestone / Deepslate / Cobbled Deepslate / polished deepslate / deepslate bricks / mud bricks / packed mud
+-- Fence / Fence Gate --
+
+Adjustments
+--------
+Fence / fence gates
+- SoundType Tweaking
+Mangrove fence gate model files moved
+
+Removed
+----------
+Hardened oak planks
+Excess Test model files left with texture old texture tests.
+
+
+Recipes
+--------
+Conversions added between cobblestone & stone
+Conversions added between cobbled deepslate & deepslate
+Conversions added between packed mud & mud bricks
+
+Corrections
+------------
+Fixed nameplace issues around mangrove items
+
+BackPorting
+------------
+-> 1.18.2
+Walls
+-Stone
+Fences / Fence Gates
+-Stone / cobblestone / deepslate /cobbled deepslate / polished deepslate / deepslate tile
+
+SoundType Adjustments on Fence / Fence gates

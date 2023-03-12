@@ -17,7 +17,6 @@ import java.util.ArrayList;
 
 import static com.dephoegon.delbase.aid.util.creativeTabsArrayLists.*;
 import static com.dephoegon.delbase.block.general.machineBlocks.BLOCK_CUTTING_STATION;
-import static com.dephoegon.delbase.block.general.miscSpecialCases.HARDENED_OAK_PLANKS;
 import static com.dephoegon.delbase.delbase.Mod_ID;
 
 @Mod.EventBusSubscriber(modid = Mod_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
@@ -59,13 +58,13 @@ public class delbaseCreativeTabs {
         out.addAll(setSandStoneFences());
         out.addAll(setSmoothSandStoneFences());
         out.addAll(setStrippedWoodenFences());
+        out.addAll(setStoneFences());
         out.addAll(setTerracottaFences());
         out.addAll(setWoodenFences());
         out.addAll(setAshBlocks());
         out.addAll(setChiseledSandStones());
         out.addAll(setSandStones());
         out.addAll(setSmoothSandStones());
-        out.add(HARDENED_OAK_PLANKS);
         out.addAll(setChiseledSandStoneSlabs());
         out.addAll(setChiseledSandStoneEnergySlabs());
         out.addAll(setConcreteSlabs());
@@ -101,6 +100,7 @@ public class delbaseCreativeTabs {
         out.addAll(setSandWalls());
         out.addAll(setSandStoneWalls());
         out.addAll(setSmoothSandStoneWalls());
+        out.addAll(setStoneWalls());
         out.addAll(setStrippedWoodWalls());
         out.addAll(setTerracottaWalls());
         out.addAll(setWoodWalls());
@@ -116,6 +116,7 @@ public class delbaseCreativeTabs {
         out.addAll(setSandFenceGates());
         out.addAll(setSandStoneFenceGates());
         out.addAll(setSmoothSandStoneFenceGates());
+        out.addAll(setStoneFenceGate());
         out.addAll(setStrippedWoodenFenceGates());
         out.addAll(setTerracottaFenceGates());
         out.addAll(setWoodenFenceGates());

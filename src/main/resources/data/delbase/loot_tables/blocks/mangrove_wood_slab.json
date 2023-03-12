@@ -13,7 +13,7 @@
 "conditions": [
 {
 "condition": "minecraft:block_state_property",
-"block": "minecraft:mangrove_wood_slab",
+"block": "delbase:mangrove_wood_slab",
 "properties": {
 "type": "double"
 }
@@ -26,7 +26,7 @@
 "function": "minecraft:explosion_decay"
 }
 ],
-"name": "minecraft:mangrove_wood_slab"
+"name": "delbase:mangrove_wood_slab"
 }
 ]
 }

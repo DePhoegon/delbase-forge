@@ -14,6 +14,15 @@
     "delbase:purpur_block_fence",
     "delbase:netherrack_fence",
     "delbase:magma_block_fence",
-    "delbase:coal_block_fence"
+    "delbase:coal_block_fence",
+    "delbase:stone_fence",
+    "delbase:cobblestone_fence",
+    "delbase:deepslate_fence",
+    "delbase:cobbled_deepslate_fence",
+    "delbase:deepslate_tile_fence",
+    "delbase:polished_deepslate_fence",
+    "delbase:deepslate_brick_fence",
+    "delbase:mud_brick_fence",
+    "delbase:packed_mud_fence"
   ]
 }

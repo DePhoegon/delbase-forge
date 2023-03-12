@@ -7,7 +7,7 @@
 "entries": [
 {
 "type": "minecraft:item",
-"name": "minecraft:mangrove_log_wall"
+"name": "delbase:mangrove_log_wall"
 }
 ],
 "conditions": [

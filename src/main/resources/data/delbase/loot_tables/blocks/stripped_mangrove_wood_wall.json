@@ -7,7 +7,7 @@
 "entries": [
 {
 "type": "minecraft:item",
-"name": "minecraft:stripped_mangrove_wood_wall"
+"name": "delbase:stripped_mangrove_wood_wall"
 }
 ],
 "conditions": [

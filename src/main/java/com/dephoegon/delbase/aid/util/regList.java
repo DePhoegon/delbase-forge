@@ -86,6 +86,7 @@ public class regList {
         wallWood.register(eventBus);
         wallTerracotta.register(eventBus);
         wallMisc.register(eventBus);
+        wallStones.register(eventBus);
 
         //Fences
         woodenFences.register(eventBus);
@@ -98,6 +99,7 @@ public class regList {
         fenceMisc.register(eventBus);
         cutSandStoneFences.register(eventBus);
         chiseledSandStoneFences.register(eventBus);
+        stoneFences.register(eventBus);
 
         //Special
         menuTypes.register(eventBus);

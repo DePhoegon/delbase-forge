@@ -33,22 +33,22 @@ public class fenceMisc {
             () -> new fenceGateBlock(BlockBehaviour.Properties.copy(GLOWSTONE).sound(SoundType.GLASS).lightLevel((blockState) -> 15),
                     "","","", false, null));
     public static final RegistryObject<FenceBlock> COBBLED_BASALT_FENCE = register("cobbled_basalt_fence",
-            () -> new fenceBlock(BlockBehaviour.Properties.copy(BASALT).sound(SoundType.STONE),
+            () -> new fenceBlock(BlockBehaviour.Properties.copy(BASALT).sound(SoundType.BASALT),
                     "","","", false, null));
     public static final RegistryObject<FenceGateBlock> COBBLED_BASALT_FENCE_GATE = register("cobbled_basalt_fence_gate",
-            () -> new fenceGateBlock(BlockBehaviour.Properties.copy(BASALT).sound(SoundType.STONE),
+            () -> new fenceGateBlock(BlockBehaviour.Properties.copy(BASALT).sound(SoundType.BASALT),
                     "","","", false, null));
     public static final RegistryObject<FenceBlock> BASALT_FENCE = register("basalt_fence",
-            () -> new fenceBlock(BlockBehaviour.Properties.copy(BASALT).sound(SoundType.STONE),
+            () -> new fenceBlock(BlockBehaviour.Properties.copy(BASALT).sound(SoundType.BASALT),
                     "","","", false, null));
     public static final RegistryObject<FenceGateBlock> BASALT_FENCE_GATE = register("basalt_fence_gate",
-            () -> new fenceGateBlock(BlockBehaviour.Properties.copy(BASALT).sound(SoundType.STONE),
+            () -> new fenceGateBlock(BlockBehaviour.Properties.copy(BASALT).sound(SoundType.BASALT),
                     "","","", false, null));
     public static final RegistryObject<FenceBlock> SMOOTH_BASALT_FENCE = register("smooth_basalt_fence",
-            () -> new fenceBlock(BlockBehaviour.Properties.copy(SMOOTH_BASALT).sound(SoundType.STONE),
+            () -> new fenceBlock(BlockBehaviour.Properties.copy(SMOOTH_BASALT).sound(SoundType.BASALT),
                     "","","", false, null));
     public static final RegistryObject<FenceGateBlock> SMOOTH_BASALT_FENCE_GATE = register("smooth_basalt_fence_gate",
-            () -> new fenceGateBlock(BlockBehaviour.Properties.copy(SMOOTH_BASALT).sound(SoundType.STONE),
+            () -> new fenceGateBlock(BlockBehaviour.Properties.copy(SMOOTH_BASALT).sound(SoundType.BASALT),
                     "","","", false, null));
     public static final RegistryObject<FenceBlock> END_STONE_FENCE = register("end_stone_fence",
             () -> new fenceBlock(BlockBehaviour.Properties.copy(END_STONE).sound(SoundType.STONE),
@@ -57,10 +57,10 @@ public class fenceMisc {
             () -> new fenceGateBlock(BlockBehaviour.Properties.copy(END_STONE).sound(SoundType.STONE),
                     "","","", false, null));
     public static final RegistryObject<FenceBlock> DRIPSTONE_FENCE = register("dripstone_fence",
-            () -> new fenceBlock(BlockBehaviour.Properties.copy(DRIPSTONE_BLOCK).sound(SoundType.STONE),
+            () -> new fenceBlock(BlockBehaviour.Properties.copy(DRIPSTONE_BLOCK).sound(SoundType.DRIPSTONE_BLOCK),
                     "","","", false, null));
     public static final RegistryObject<FenceGateBlock> DRIPSTONE_FENCE_GATE = register("dripstone_fence_gate",
-            () -> new fenceGateBlock(BlockBehaviour.Properties.copy(DRIPSTONE_BLOCK).sound(SoundType.STONE),
+            () -> new fenceGateBlock(BlockBehaviour.Properties.copy(DRIPSTONE_BLOCK).sound(SoundType.DRIPSTONE_BLOCK),
                     "","","", false, null));
     public static final RegistryObject<FenceBlock> CRACKED_POLISHED_BLACKSTONE_BRICK_FENCE = register("cracked_polished_blackstone_brick_fence",
             () -> new fenceBlock(BlockBehaviour.Properties.copy(CRACKED_POLISHED_BLACKSTONE_BRICKS).sound(SoundType.STONE),
@@ -105,10 +105,10 @@ public class fenceMisc {
             () -> new fenceGateBlock(BlockBehaviour.Properties.copy(CHISELED_POLISHED_BLACKSTONE).sound(SoundType.STONE),
                     "","","", false, null));
     public static final RegistryObject<FenceBlock> POLISHED_BASALT_FENCE = register("polished_basalt_fence",
-            () -> new fenceBlock(BlockBehaviour.Properties.copy(POLISHED_BASALT).sound(SoundType.STONE),
+            () -> new fenceBlock(BlockBehaviour.Properties.copy(POLISHED_BASALT).sound(SoundType.BASALT),
                     "","","", false, null));
     public static final RegistryObject<FenceGateBlock> POLISHED_BASALT_FENCE_GATE = register("polished_basalt_fence_gate",
-            () -> new fenceGateBlock(BlockBehaviour.Properties.copy(POLISHED_BASALT).sound(SoundType.STONE),
+            () -> new fenceGateBlock(BlockBehaviour.Properties.copy(POLISHED_BASALT).sound(SoundType.BASALT),
                     "","","", false, null));
     public static final RegistryObject<FenceBlock> BONE_BLOCK_FENCE = register("bone_block_fence",
             () -> new fenceBlock(BlockBehaviour.Properties.copy(BONE_BLOCK).sound(SoundType.BONE_BLOCK),

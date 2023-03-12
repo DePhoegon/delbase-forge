@@ -7,7 +7,7 @@
 "entries": [
 {
 "type": "minecraft:item",
-"name": "minecraft:mangrove_wood_fence"
+"name": "delbase:mangrove_wood_fence"
 }
 ],
 "conditions": [

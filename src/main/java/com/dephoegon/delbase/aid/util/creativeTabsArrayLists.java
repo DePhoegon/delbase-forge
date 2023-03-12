@@ -17,6 +17,7 @@ import static com.dephoegon.delbase.block.fence.quartzFences.*;
 import static com.dephoegon.delbase.block.fence.sandFences.*;
 import static com.dephoegon.delbase.block.fence.sandStoneFences.*;
 import static com.dephoegon.delbase.block.fence.smoothSandStoneFences.*;
+import static com.dephoegon.delbase.block.fence.stoneFences.*;
 import static com.dephoegon.delbase.block.fence.strippedWoodenFences.*;
 import static com.dephoegon.delbase.block.fence.terracottaFences.*;
 import static com.dephoegon.delbase.block.fence.woodenFences.*;
@@ -60,6 +61,7 @@ import static com.dephoegon.delbase.block.wall.wallQuartz.*;
 import static com.dephoegon.delbase.block.wall.wallSandStone.*;
 import static com.dephoegon.delbase.block.wall.wallSands.*;
 import static com.dephoegon.delbase.block.wall.wallSmoothSandStones.*;
+import static com.dephoegon.delbase.block.wall.wallStones.STONE_WALL;
 import static com.dephoegon.delbase.block.wall.wallStrippedWood.*;
 import static com.dephoegon.delbase.block.wall.wallTerracotta.*;
 import static com.dephoegon.delbase.block.wall.wallWood.*;
@@ -448,6 +450,32 @@ public class creativeTabsArrayLists {
         out.add(BLACK_SMOOTH_SAND_STONE_FENCE_GATE);
         out.add(SMOOTH_SAND_STONE_FENCE_GATE);
         out.add(BLOOD_SMOOTH_SAND_STONE_FENCE_GATE);
+        return out;
+    }
+    public static @NotNull ArrayList<RegistryObject<FenceGateBlock>> setStoneFenceGate() {
+        ArrayList<RegistryObject<FenceGateBlock>> out = new ArrayList<>();
+        out.add(STONE_FENCE_GATE);
+        out.add(COBBLESTONE_FENCE_GATE);
+        out.add(DEEPSLATE_FENCE_GATE);
+        out.add(COBBLED_DEEPSLATE_FENCE_GATE);
+        out.add(DEEPSLATE_TILE_FENCE_GATE);
+        out.add(POLISHED_DEEPSLATE_FENCE_GATE);
+        out.add(DEEPSLATE_BRICK_FENCE_GATE);
+        out.add(MUD_BRICK_FENCE_GATE);
+        out.add(PACKED_MUD_FENCE_GATE);
+        return out;
+    }
+    public static @NotNull ArrayList<RegistryObject<FenceBlock>> setStoneFences() {
+        ArrayList<RegistryObject<FenceBlock>> out = new ArrayList<>();
+        out.add(STONE_FENCE);
+        out.add(COBBLESTONE_FENCE);
+        out.add(DEEPSLATE_FENCE);
+        out.add(COBBLED_DEEPSLATE_FENCE);
+        out.add(DEEPSLATE_TILE_FENCE);
+        out.add(POLISHED_DEEPSLATE_FENCE);
+        out.add(DEEPSLATE_BRICK_FENCE);
+        out.add(MUD_BRICK_FENCE);
+        out.add(PACKED_MUD_FENCE);
         return out;
     }
     public static @NotNull ArrayList<RegistryObject<FenceBlock>> setStrippedWoodenFences() {
@@ -1378,6 +1406,11 @@ public class creativeTabsArrayLists {
         out.add(GREEN_SMOOTH_SAND_STONE_WALL);
         out.add(BROWN_SMOOTH_SAND_STONE_WALL);
         out.add(BLACK_SMOOTH_SAND_STONE_WALL);
+        return out;
+    }
+    public static @NotNull ArrayList<RegistryObject<WallBlock>> setStoneWalls() {
+        ArrayList<RegistryObject<WallBlock>> out = new ArrayList<>();
+        out.add(STONE_WALL);
         return out;
     }
     public static @NotNull ArrayList<RegistryObject<WallBlock>> setStrippedWoodWalls() {
