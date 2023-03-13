@@ -57,6 +57,7 @@ public class regList {
         slabQuartz.register(eventBus);
         slabConcrete.register(eventBus);
         slabWood.register(eventBus);
+        slabStones.register(eventBus);
         slabTerracotta.register(eventBus);
         slabMisc.register(eventBus);
 
@@ -69,6 +70,7 @@ public class regList {
         stairQuartz.register(eventBus);
         stairConcrete.register(eventBus);
         stairWood.register(eventBus);
+        stairStones.register(eventBus);
         stairTerracotta.register(eventBus);
         stairMisc.register(eventBus);
 

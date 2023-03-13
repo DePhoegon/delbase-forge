@@ -75,6 +75,30 @@ public class slabMisc {
     public static final RegistryObject<SlabBlock> MAGMA_BLOCK_SLAB = register("magma_block_slab",
             ()-> new slabBlock(BlockBehaviour.Properties.copy(MAGMA_BLOCK).sound(SoundType.MOSS).lightLevel((blockstate) -> 3)
                     ,"","","", false, null));
+    public static final RegistryObject<SlabBlock> PACKED_MUD_SLAB = register("packed_mud_slab",
+            ()-> new slabBlock(BlockBehaviour.Properties.copy(PACKED_MUD).sound(SoundType.PACKED_MUD)
+                    ,"","","", false, null));
+    public static final RegistryObject<SlabBlock> SCULK_SLAB = register("sculk_slab",
+            ()-> new slabBlock(BlockBehaviour.Properties.copy(SCULK).sound(SoundType.SCULK)
+                    ,"","","", false, null));
+    public static final RegistryObject<SlabBlock> MUD_SLAB = register("mud_slab",
+            ()-> new slabBlock(BlockBehaviour.Properties.copy(MUD).sound(SoundType.MUD)
+                    ,"","","", false, null));
+    public static final RegistryObject<SlabBlock> MUDDY_MANGROVE_ROOT_SLAB = register("muddy_mangrove_root_slab",
+            ()-> new slabBlock(BlockBehaviour.Properties.copy(MUDDY_MANGROVE_ROOTS).sound(SoundType.MUDDY_MANGROVE_ROOTS)
+                    ,"","","", false, null));
+    public static final RegistryObject<SlabBlock> MANGROVE_ROOT_SLAB = register("mangrove_root_slab",
+            ()-> new slabBlock(BlockBehaviour.Properties.copy(MANGROVE_ROOTS).sound(SoundType.MANGROVE_ROOTS)
+                    ,"","","", false, null));
+    public static final RegistryObject<SlabBlock> OCHRE_FROGLIGHT_SLAB = register("ochre_froglight_slab",
+            ()-> new slabBlock(BlockBehaviour.Properties.copy(OCHRE_FROGLIGHT).sound(SoundType.FROGLIGHT).lightLevel((blockstate) -> 15)
+                    ,"","","", false, null));
+    public static final RegistryObject<SlabBlock> VERDANT_FROGLIGHT_SLAB = register("verdant_froglight_slab",
+            ()-> new slabBlock(BlockBehaviour.Properties.copy(VERDANT_FROGLIGHT).sound(SoundType.FROGLIGHT).lightLevel((blockstate) -> 15)
+                    ,"","","", false, null));
+    public static final RegistryObject<SlabBlock> PEARLESCENT_FROGLIGHT_SLAB = register("pearlescent_froglight_slab",
+            ()-> new slabBlock(BlockBehaviour.Properties.copy(PEARLESCENT_FROGLIGHT).sound(SoundType.FROGLIGHT).lightLevel((blockstate) -> 15)
+                    ,"","","", false, null));
 
     public static void register(IEventBus eventBus) {
         BLOCKS.register(eventBus);

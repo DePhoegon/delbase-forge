@@ -17,6 +17,7 @@ import java.util.ArrayList;
 
 import static com.dephoegon.delbase.aid.util.creativeTabsArrayLists.*;
 import static com.dephoegon.delbase.block.general.machineBlocks.BLOCK_CUTTING_STATION;
+import static com.dephoegon.delbase.block.general.miscSpecialCases.HARDENED_OAK_PLANKS;
 import static com.dephoegon.delbase.delbase.Mod_ID;
 
 @Mod.EventBusSubscriber(modid = Mod_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
@@ -65,6 +66,7 @@ public class delbaseCreativeTabs {
         out.addAll(setChiseledSandStones());
         out.addAll(setSandStones());
         out.addAll(setSmoothSandStones());
+        out.add(HARDENED_OAK_PLANKS);
         out.addAll(setChiseledSandStoneSlabs());
         out.addAll(setChiseledSandStoneEnergySlabs());
         out.addAll(setConcreteSlabs());
@@ -78,6 +80,7 @@ public class delbaseCreativeTabs {
         out.addAll(setSandStoneEnergySlabs());
         out.addAll(setSmoothSandStoneSlabs());
         out.addAll(setSmoothSandStoneEnergySlabs());
+        out.addAll(setStonesSlabs());
         out.addAll(setStrippedWoodSlabs());
         out.addAll(setTerracottaSlabs());
         out.addAll(setWoodSlabs());
@@ -89,6 +92,7 @@ public class delbaseCreativeTabs {
         out.addAll(setSandStairs());
         out.addAll(setSandStoneStairs());
         out.addAll(setSmoothSandStoneStairs());
+        out.addAll(setStoneStairs());
         out.addAll(setStrippedWoodStairs());
         out.addAll(setTerracottaStairs());
         out.addAll(setWoodStairs());

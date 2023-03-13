@@ -11,6 +11,8 @@
     "delbase:dripstone_stair",
     "delbase:netherrack_stair",
     "delbase:magma_block_stair",
-    "delbase:coal_block_stair"
+    "delbase:coal_block_stair",
+    "delbase:deepslate_stair",
+    "delbase:packed_mud_stair"
   ]
 }

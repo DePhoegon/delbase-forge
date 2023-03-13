@@ -15,16 +15,17 @@ Add 1.19.3 block variants
 -frog lights (all 3) - functional / natural [2]
 - mangrove roots [2]
 
-slabs/walls/stairs
--deep slate [2]
--packed mud [1]
+- partially finished
+= Blockstates
+= fence models
+= fence gate models
 
-Fence / Fence Gates
-- bricks [1]
-
-Recipes
---------
-StoneCutter for recent stone likes
-
-Backport stone_cutter recipes for stone likes (stone, cobblestone, deepslate(S))
-Backport tags used (if any, exclude 1.19.3 blocks)
+- ToDo
+= slab models
+= stair models
+= wall models
+= Item models
+= Loot tables
+= recipes
+= tags
+= Put Names on en_us language file.

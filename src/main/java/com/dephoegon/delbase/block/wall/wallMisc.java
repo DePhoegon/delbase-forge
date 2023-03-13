@@ -81,6 +81,30 @@ public class wallMisc {
     public static final RegistryObject<WallBlock> MAGMA_BLOCK_WALL = register("magma_block_wall",
             () -> new wallBlock(BlockBehaviour.Properties.copy(MAGMA_BLOCK).sound(SoundType.MOSS).lightLevel((blockstate) -> 3),
                     "","","",false, null));
+    public static final RegistryObject<WallBlock> PACKED_MUD_WALL = register("packed_mud_wall",
+            () -> new wallBlock(BlockBehaviour.Properties.copy(PACKED_MUD).sound(SoundType.PACKED_MUD),
+                    "","","",false, null));
+    public static final RegistryObject<WallBlock> SCULK_WALL = register("sculk_wall",
+            () -> new wallBlock(BlockBehaviour.Properties.copy(SCULK).sound(SoundType.SCULK),
+                    "","","",false, null));
+    public static final RegistryObject<WallBlock> MUD_WALL = register("mud_wall",
+            () -> new wallBlock(BlockBehaviour.Properties.copy(MUD).sound(SoundType.MUD),
+                    "","","",false, null));
+    public static final RegistryObject<WallBlock> MUDDY_MANGROVE_ROOT_WALL = register("mangrove_root_wall",
+            () -> new wallBlock(BlockBehaviour.Properties.copy(MUDDY_MANGROVE_ROOTS).sound(SoundType.MUDDY_MANGROVE_ROOTS),
+                    "","","",false, null));
+    public static final RegistryObject<WallBlock> MANGROVE_ROOT_WALL = register("mangrove_root_wall",
+            () -> new wallBlock(BlockBehaviour.Properties.copy(MANGROVE_ROOTS).sound(SoundType.MANGROVE_ROOTS),
+                    "","","",false, null));
+    public static final RegistryObject<WallBlock> OCHRE_FROGLIGHT_WALL = register("ochre_froglight_wall",
+            () -> new wallBlock(BlockBehaviour.Properties.copy(OCHRE_FROGLIGHT).sound(SoundType.FROGLIGHT).lightLevel((blockstate) -> 15),
+                    "","","",false, null));
+    public static final RegistryObject<WallBlock> VERDANT_FROGLIGHT_WALL = register("verdant_froglight_wall",
+            () -> new wallBlock(BlockBehaviour.Properties.copy(VERDANT_FROGLIGHT).sound(SoundType.FROGLIGHT).lightLevel((blockstate) -> 15),
+                    "","","",false, null));
+    public static final RegistryObject<WallBlock> PEARLESCENT_FROGLIGHT_WALL = register("pearlescent_froglight_wall",
+            () -> new wallBlock(BlockBehaviour.Properties.copy(PEARLESCENT_FROGLIGHT).sound(SoundType.FROGLIGHT).lightLevel((blockstate) -> 15),
+                    "","","",false, null));
 
     public static void register(IEventBus eventBus) {
         BLOCKS.register(eventBus);

@@ -78,6 +78,30 @@ public class stairMisc {
     public static final RegistryObject<StairBlock> MAGMA_BLOCK_STAIR = register("magma_block_stair",
             ()-> new stairBlock(MAGMA_BLOCK::defaultBlockState, BlockBehaviour.Properties.copy(MAGMA_BLOCK).sound(SoundType.MOSS).lightLevel((blockstate) -> 3)
                     ,"","","", false, null));
+    public static final RegistryObject<StairBlock> PACKED_MUD_STAIR = register("packed_mud_stair",
+            ()-> new stairBlock(PACKED_MUD::defaultBlockState, BlockBehaviour.Properties.copy(PACKED_MUD).sound(SoundType.PACKED_MUD)
+                    ,"","","", false, null));
+    public static final RegistryObject<StairBlock> SCULK_STAIR = register("sculk_stair",
+            ()-> new stairBlock(SCULK::defaultBlockState, BlockBehaviour.Properties.copy(SCULK).sound(SoundType.SCULK)
+                    ,"","","", false, null));
+    public static final RegistryObject<StairBlock> MUD_STAIR = register("mud_stair",
+            ()-> new stairBlock(MUD::defaultBlockState, BlockBehaviour.Properties.copy(MUD).sound(SoundType.MUD)
+                    ,"","","", false, null));
+    public static final RegistryObject<StairBlock> MUDDY_MANGROVE_ROOT_STAIR = register("muddy_mangrove_root_stair",
+            ()-> new stairBlock(MUDDY_MANGROVE_ROOTS::defaultBlockState, BlockBehaviour.Properties.copy(MUDDY_MANGROVE_ROOTS).sound(SoundType.MUDDY_MANGROVE_ROOTS)
+                    ,"","","", false, null));
+    public static final RegistryObject<StairBlock> MANGROVE_ROOT_STAIR = register("mangrove_root_stair",
+            ()-> new stairBlock(MANGROVE_ROOTS::defaultBlockState, BlockBehaviour.Properties.copy(MANGROVE_ROOTS).sound(SoundType.MANGROVE_ROOTS)
+                    ,"","","", false, null));
+    public static final RegistryObject<StairBlock> OCHRE_FROGLIGHT_STAIR = register("ochre_froglight_stair",
+            ()-> new stairBlock(OCHRE_FROGLIGHT::defaultBlockState, BlockBehaviour.Properties.copy(OCHRE_FROGLIGHT).sound(SoundType.FROGLIGHT).lightLevel((blockstate) -> 15)
+                    ,"","","", false, null));
+    public static final RegistryObject<StairBlock> VERDANT_FROGLIGHT_STAIR = register("verdant_froglight_stair",
+            ()-> new stairBlock(VERDANT_FROGLIGHT::defaultBlockState, BlockBehaviour.Properties.copy(VERDANT_FROGLIGHT).sound(SoundType.FROGLIGHT).lightLevel((blockstate) -> 15)
+                    ,"","","", false, null));
+    public static final RegistryObject<StairBlock> PEARLESCENT_FROGLIGHT_STAIR = register("pearlescent_froglight_stair",
+            ()-> new stairBlock(PEARLESCENT_FROGLIGHT::defaultBlockState, BlockBehaviour.Properties.copy(PEARLESCENT_FROGLIGHT).sound(SoundType.FROGLIGHT).lightLevel((blockstate) -> 15)
+                    ,"","","", false, null));
 
     public static void register(IEventBus eventBus) {
         BLOCKS.register(eventBus);

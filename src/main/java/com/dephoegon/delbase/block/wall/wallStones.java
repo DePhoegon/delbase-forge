@@ -15,6 +15,7 @@ import net.minecraftforge.registries.RegistryObject;
 import java.util.function.Supplier;
 
 import static com.dephoegon.delbase.delbase.Mod_ID;
+import static net.minecraft.world.level.block.Blocks.DEEPSLATE;
 import static net.minecraft.world.level.block.Blocks.STONE;
 
 public class wallStones {
@@ -23,6 +24,9 @@ public class wallStones {
 
     public static final RegistryObject<WallBlock> STONE_WALL = register("stone_wall",
             () -> new wallBlock(BlockBehaviour.Properties.copy(STONE).sound(SoundType.STONE),
+                    "","","", false, null));
+    public static final RegistryObject<WallBlock> DEEPSLATE_WALL = register("deepslate_wall",
+            () -> new wallBlock(BlockBehaviour.Properties.copy(DEEPSLATE).sound(SoundType.DEEPSLATE),
                     "","","", false, null));
 
     public static void register(IEventBus eventBus) {

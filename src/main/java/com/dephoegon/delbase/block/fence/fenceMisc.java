@@ -149,6 +149,48 @@ public class fenceMisc {
     public static final RegistryObject<FenceGateBlock> RED_NETHER_BRICK_FENCE_GATE = register("red_netherbrick_fence_gate",
             () -> new fenceGateBlock(BlockBehaviour.Properties.copy(RED_NETHER_BRICKS).sound(SoundType.NETHER_BRICKS),
                     "","","", false, null));
+    public static final RegistryObject<FenceBlock> SCULK_FENCE = register("sculk_fence",
+            () -> new fenceBlock(BlockBehaviour.Properties.copy(SCULK).sound(SoundType.SCULK),
+                    "","","", false, null));
+    public static final RegistryObject<FenceGateBlock> SCULK_FENCE_GATE = register("sculk_fence_gate",
+            () -> new fenceGateBlock(BlockBehaviour.Properties.copy(SCULK).sound(SoundType.SCULK),
+                    "","","", false, null));
+    public static final RegistryObject<FenceBlock> MUD_FENCE = register("mud_fence",
+            () -> new fenceBlock(BlockBehaviour.Properties.copy(MUD).sound(SoundType.MUD),
+                    "","","", false, null));
+    public static final RegistryObject<FenceGateBlock> MUD_FENCE_GATE = register("mud_fence_gate",
+            () -> new fenceGateBlock(BlockBehaviour.Properties.copy(MUD).sound(SoundType.MUD),
+                    "","","", false, null));
+    public static final RegistryObject<FenceBlock> MUDDY_MANGROVE_ROOT_FENCE = register("muddy_mangrove_root_fence",
+            () -> new fenceBlock(BlockBehaviour.Properties.copy(MUDDY_MANGROVE_ROOTS).sound(SoundType.MUDDY_MANGROVE_ROOTS),
+                    "","","", false, null));
+    public static final RegistryObject<FenceGateBlock> MUDDY_MANGROVE_ROOT_FENCE_GATE = register("muddy_mangrove_root_fence_gate",
+            () -> new fenceGateBlock(BlockBehaviour.Properties.copy(MUDDY_MANGROVE_ROOTS).sound(SoundType.MUDDY_MANGROVE_ROOTS),
+                    "","","", false, null));
+    public static final RegistryObject<FenceBlock> MANGROVE_ROOT_FENCE = register("mangrove_root_fence",
+            () -> new fenceBlock(BlockBehaviour.Properties.copy(MANGROVE_ROOTS).sound(SoundType.MANGROVE_ROOTS),
+                    "","","", false, null));
+    public static final RegistryObject<FenceGateBlock> MANGROVE_ROOT_FENCE_GATE = register("mangrove_root_fence_gate",
+            () -> new fenceGateBlock(BlockBehaviour.Properties.copy(MANGROVE_ROOTS).sound(SoundType.MANGROVE_ROOTS),
+                    "","","", false, null));
+    public static final RegistryObject<FenceBlock> OCHRE_FROGLIGHT_FENCE = register("ochre_froglight_fence",
+            () -> new fenceBlock(BlockBehaviour.Properties.copy(OCHRE_FROGLIGHT).sound(SoundType.FROGLIGHT).lightLevel((blockState) -> 15),
+                    "","","", false, null));
+    public static final RegistryObject<FenceGateBlock> OCHRE_FROGLIGHT_FENCE_GATE = register("ochre_froglight_fence_gate",
+            () -> new fenceGateBlock(BlockBehaviour.Properties.copy(OCHRE_FROGLIGHT).sound(SoundType.FROGLIGHT).lightLevel((blockState) -> 15),
+                    "","","", false, null));
+    public static final RegistryObject<FenceBlock> VERDANT_FROGLIGHT_FENCE = register("verdant_froglight_fence",
+            () -> new fenceBlock(BlockBehaviour.Properties.copy(VERDANT_FROGLIGHT).sound(SoundType.FROGLIGHT).lightLevel((blockState) -> 15),
+                    "","","", false, null));
+    public static final RegistryObject<FenceGateBlock> VERDANT_FROGLIGHT_FENCE_GATE = register("verdant_froglight_fence_gate",
+            () -> new fenceGateBlock(BlockBehaviour.Properties.copy(VERDANT_FROGLIGHT).sound(SoundType.FROGLIGHT).lightLevel((blockState) -> 15),
+                    "","","", false, null));
+    public static final RegistryObject<FenceBlock> PEARLESCENT_FROGLIGHT_FENCE = register("pearlescent_froglight_fence",
+            () -> new fenceBlock(BlockBehaviour.Properties.copy(PEARLESCENT_FROGLIGHT).sound(SoundType.FROGLIGHT).lightLevel((blockState) -> 15),
+                    "","","", false, null));
+    public static final RegistryObject<FenceGateBlock> PEARLESCENT_FROGLIGHT_FENCE_GATE = register("pearlescent_froglight_fence_gate",
+            () -> new fenceGateBlock(BlockBehaviour.Properties.copy(PEARLESCENT_FROGLIGHT).sound(SoundType.FROGLIGHT).lightLevel((blockState) -> 15),
+                    "","","", false, null));
 
 
     public static void register(IEventBus eventBus) {

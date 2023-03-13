@@ -39,6 +39,7 @@ import static com.dephoegon.delbase.block.slab.slabSands.*;
 import static com.dephoegon.delbase.block.slab.slabSandsEnergy.*;
 import static com.dephoegon.delbase.block.slab.slabSmoothSandStones.*;
 import static com.dephoegon.delbase.block.slab.slabSmoothSandStonesEnergy.*;
+import static com.dephoegon.delbase.block.slab.slabStones.DEEPSLATE_SLAB;
 import static com.dephoegon.delbase.block.slab.slabStrippedWood.*;
 import static com.dephoegon.delbase.block.slab.slabTerracotta.*;
 import static com.dephoegon.delbase.block.slab.slabWood.*;
@@ -50,6 +51,7 @@ import static com.dephoegon.delbase.block.stair.stairQuartz.*;
 import static com.dephoegon.delbase.block.stair.stairSandStones.*;
 import static com.dephoegon.delbase.block.stair.stairSands.*;
 import static com.dephoegon.delbase.block.stair.stairSmoothSandStones.*;
+import static com.dephoegon.delbase.block.stair.stairStones.DEEPSLATE_STAIR;
 import static com.dephoegon.delbase.block.stair.stairStrippedWood.*;
 import static com.dephoegon.delbase.block.stair.stairTerracotta.*;
 import static com.dephoegon.delbase.block.stair.stairWood.*;
@@ -61,6 +63,7 @@ import static com.dephoegon.delbase.block.wall.wallQuartz.*;
 import static com.dephoegon.delbase.block.wall.wallSandStone.*;
 import static com.dephoegon.delbase.block.wall.wallSands.*;
 import static com.dephoegon.delbase.block.wall.wallSmoothSandStones.*;
+import static com.dephoegon.delbase.block.wall.wallStones.DEEPSLATE_WALL;
 import static com.dephoegon.delbase.block.wall.wallStones.STONE_WALL;
 import static com.dephoegon.delbase.block.wall.wallStrippedWood.*;
 import static com.dephoegon.delbase.block.wall.wallTerracotta.*;
@@ -272,6 +275,13 @@ public class creativeTabsArrayLists {
         out.add(MAGMA_BLOCK_FENCE);
         out.add(RED_NETHER_BRICK_FENCE);
         out.add(ASH_FENCE); // added into Misc for classification
+        out.add(SCULK_FENCE);
+        out.add(MUD_FENCE);
+        out.add(MUDDY_MANGROVE_ROOT_FENCE);
+        out.add(MANGROVE_ROOT_FENCE);
+        out.add(OCHRE_FROGLIGHT_FENCE);
+        out.add(VERDANT_FROGLIGHT_FENCE);
+        out.add(PEARLESCENT_FROGLIGHT_FENCE);
         return out;
     }
     public static @NotNull ArrayList<RegistryObject<FenceGateBlock>> setFenceGateMisc() {
@@ -298,6 +308,13 @@ public class creativeTabsArrayLists {
         out.add(NETHER_BRICK_FENCE_GATE);
         out.add(RED_NETHER_BRICK_FENCE_GATE);
         out.add(ASH_FENCE_GATE); // added into Misc for classification
+        out.add(SCULK_FENCE_GATE);
+        out.add(MUD_FENCE_GATE);
+        out.add(MUDDY_MANGROVE_ROOT_FENCE_GATE);
+        out.add(MANGROVE_ROOT_FENCE_GATE);
+        out.add(OCHRE_FROGLIGHT_FENCE_GATE);
+        out.add(VERDANT_FROGLIGHT_FENCE_GATE);
+        out.add(PEARLESCENT_FROGLIGHT_FENCE_GATE);
         return out;
     }
     public static @NotNull ArrayList<RegistryObject<FenceBlock>> setQuartzFences() {
@@ -463,6 +480,7 @@ public class creativeTabsArrayLists {
         out.add(DEEPSLATE_BRICK_FENCE_GATE);
         out.add(MUD_BRICK_FENCE_GATE);
         out.add(PACKED_MUD_FENCE_GATE);
+        out.add(BRICK_FENCE_GATE);
         return out;
     }
     public static @NotNull ArrayList<RegistryObject<FenceBlock>> setStoneFences() {
@@ -476,6 +494,7 @@ public class creativeTabsArrayLists {
         out.add(DEEPSLATE_BRICK_FENCE);
         out.add(MUD_BRICK_FENCE);
         out.add(PACKED_MUD_FENCE);
+        out.add(BRICK_FENCE);
         return out;
     }
     public static @NotNull ArrayList<RegistryObject<FenceBlock>> setStrippedWoodenFences() {
@@ -836,6 +855,14 @@ public class creativeTabsArrayLists {
         out.add(NETHERRACK_SLAB);
         out.add(SHROOMLIGHT_SLAB);
         out.add(MAGMA_BLOCK_SLAB);
+        out.add(PACKED_MUD_SLAB);
+        out.add(SCULK_SLAB);
+        out.add(MUD_SLAB);
+        out.add(MUDDY_MANGROVE_ROOT_SLAB);
+        out.add(MANGROVE_ROOT_SLAB);
+        out.add(OCHRE_FROGLIGHT_SLAB);
+        out.add(VERDANT_FROGLIGHT_SLAB);
+        out.add(PEARLESCENT_FROGLIGHT_SLAB);
         return out;
     }
     public static @NotNull ArrayList<RegistryObject<SlabBlock>> setQuartzSlabs() {
@@ -963,6 +990,11 @@ public class creativeTabsArrayLists {
         out.add(GREEN_SMOOTH_SAND_STONE_SLAB_ENERGY);
         out.add(BROWN_SMOOTH_SAND_STONE_SLAB_ENERGY);
         out.add(BLACK_SMOOTH_SAND_STONE_SLAB_ENERGY);
+        return out;
+    }
+    public static @NotNull ArrayList<RegistryObject<SlabBlock>> setStonesSlabs() {
+        ArrayList<RegistryObject<SlabBlock>> out = new ArrayList<>();
+        out.add(DEEPSLATE_SLAB);
         return out;
     }
     public static @NotNull ArrayList<RegistryObject<SlabBlock>> setStrippedWoodSlabs() {
@@ -1107,10 +1139,19 @@ public class creativeTabsArrayLists {
         out.add(RAW_IRON_STAIR);
         out.add(COAL_BLOCK_STAIR);
         out.add(CRACKED_POLISHED_BLACKSTONE_BRICK_STAIR);
+        out.add(CHISELED_POLISHED_BLACKSTONE_STAIR);
         out.add(DRIPSTONE_STAIR);
         out.add(NETHERRACK_STAIR);
         out.add(SHROOMLIGHT_STAIR);
         out.add(MAGMA_BLOCK_STAIR);
+        out.add(PACKED_MUD_STAIR);
+        out.add(SCULK_STAIR);
+        out.add(MUD_STAIR);
+        out.add(MUDDY_MANGROVE_ROOT_STAIR);
+        out.add(MANGROVE_ROOT_STAIR);
+        out.add(OCHRE_FROGLIGHT_STAIR);
+        out.add(VERDANT_FROGLIGHT_STAIR);
+        out.add(PEARLESCENT_FROGLIGHT_STAIR);
         return out;
     }
     public static @NotNull ArrayList<RegistryObject<StairBlock>> setQuartzStairs() {
@@ -1180,6 +1221,11 @@ public class creativeTabsArrayLists {
         out.add(GREEN_SMOOTH_SAND_STONE_STAIR);
         out.add(BROWN_SMOOTH_SAND_STONE_STAIR);
         out.add(BLACK_SMOOTH_SAND_STONE_STAIR);
+        return out;
+    }
+    public static @NotNull ArrayList<RegistryObject<StairBlock>> setStoneStairs() {
+        ArrayList<RegistryObject<StairBlock>> out = new ArrayList<>();
+        out.add(DEEPSLATE_STAIR);
         return out;
     }
     public static @NotNull ArrayList<RegistryObject<StairBlock>> setStrippedWoodStairs() {
@@ -1332,6 +1378,14 @@ public class creativeTabsArrayLists {
         out.add(NETHERRACK_WALL);
         out.add(SHROOMLIGHT_WALL);
         out.add(MAGMA_BLOCK_WALL);
+        out.add(PACKED_MUD_WALL);
+        out.add(SCULK_WALL);
+        out.add(MUD_WALL);
+        out.add(MUDDY_MANGROVE_ROOT_WALL);
+        out.add(MANGROVE_ROOT_WALL);
+        out.add(OCHRE_FROGLIGHT_WALL);
+        out.add(VERDANT_FROGLIGHT_WALL);
+        out.add(PEARLESCENT_FROGLIGHT_WALL);
         return out;
     }
     public static @NotNull ArrayList<RegistryObject<WallBlock>> setQuartzWalls() {
@@ -1411,6 +1465,7 @@ public class creativeTabsArrayLists {
     public static @NotNull ArrayList<RegistryObject<WallBlock>> setStoneWalls() {
         ArrayList<RegistryObject<WallBlock>> out = new ArrayList<>();
         out.add(STONE_WALL);
+        out.add(DEEPSLATE_WALL);
         return out;
     }
     public static @NotNull ArrayList<RegistryObject<WallBlock>> setStrippedWoodWalls() {
