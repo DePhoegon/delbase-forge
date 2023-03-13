@@ -77,6 +77,9 @@ public class slabMisc {
     public static final RegistryObject<SlabBlock> MAGMA_BLOCK_SLAB = register("magma_block_slab",
             ()-> new slabBlock(BlockBehaviour.Properties.copy(MAGMA_BLOCK).sound(SoundType.MOSS).lightLevel((blockstate) -> 3)
                     ,"","","", false, null));
+    public static final RegistryObject<SlabBlock> DEEPSLATE_SLAB = register("deepslate_slab",
+            () -> new slabBlock(BlockBehaviour.Properties.copy(DEEPSLATE).sound(SoundType.DEEPSLATE)
+                    ,"","","",false, null));
 
     public static void register(IEventBus eventBus) {
         BLOCKS.register(eventBus);

@@ -80,6 +80,9 @@ public class stairMisc {
     public static final RegistryObject<StairBlock> MAGMA_BLOCK_STAIR = register("magma_block_stair",
             ()-> new stairBlock(MAGMA_BLOCK::defaultBlockState, BlockBehaviour.Properties.copy(MAGMA_BLOCK).sound(SoundType.MOSS).lightLevel((blockstate) -> 3)
                     ,"","","", false, null));
+    public static final RegistryObject<StairBlock> DEEPSLATE_STAIR = register("deepslate_stair",
+            () -> new stairBlock(DEEPSLATE::defaultBlockState, BlockBehaviour.Properties.copy(DEEPSLATE).sound(SoundType.DEEPSLATE),
+                    "","","",false, null));
 
     public static void register(IEventBus eventBus) {
         BLOCKS.register(eventBus);

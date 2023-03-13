@@ -22,6 +22,7 @@
     "delbase:cobbled_deepslate_fence_gate",
     "delbase:deepslate_tile_fence_gate",
     "delbase:polished_deepslate_fence_gate",
-    "delbase:deepslate_brick_fence_gate"
+    "delbase:deepslate_brick_fence_gate",
+    "delbase:brick_fence_gate"
   ]
 }

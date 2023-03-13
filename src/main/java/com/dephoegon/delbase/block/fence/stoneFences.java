@@ -67,6 +67,12 @@ public class stoneFences {
     public static final RegistryObject<FenceGateBlock> DEEPSLATE_BRICK_FENCE_GATE = register("deepslate_brick_fence_gate",
             () -> new fenceGateBlock(BlockBehaviour.Properties.copy(DEEPSLATE_BRICKS).sound(SoundType.DEEPSLATE_BRICKS),
                     "","","", false, null));
+    public static final RegistryObject<FenceBlock> BRICK_FENCE = register("brick_fence",
+            () -> new fenceBlock(BlockBehaviour.Properties.copy(BRICKS).sound(SoundType.NETHER_BRICKS),
+                    "","","", false, null));
+    public static final RegistryObject<FenceGateBlock> BRICK_FENCE_GATE = register("brick_fence_gate",
+            () -> new fenceGateBlock(BlockBehaviour.Properties.copy(BRICKS).sound(SoundType.NETHER_BRICKS),
+                    "","","", false, null));
 
     public static void register(IEventBus eventBus) {
         BLOCKS.register(eventBus);
