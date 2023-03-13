@@ -1128,6 +1128,13 @@
   "block.delbase.ash_fence": "Ash Fence",
   "block.delbase.ash_fence_gate": "Ash Fence Gate",
 
+  "_comment": "The Forgotten Names on Back-porting",
+  "block.delbase.deepslate_slab": "Deepslate Slab",
+  "block.delbase.deepslate_stair": "Deepslate Stairs",
+  "block.delbase.deepslate_wall": "Deepslate Wall",
+  "block.delbase.brick_fence": "Brick Fence",
+  "block.delbase.brick_fence_gate": "Brick Fence Gate",
+
   "block.delbase.block_cutting_station": "Block Processing Station",
 
   "block.delbase.hardened_oak_planks": "Hardened Oak Planks",

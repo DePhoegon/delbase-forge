@@ -1,0 +1,7 @@
+Delisted & deleted 1.3.5
+Fixed Missing names
+Added recipes for hardened oak planks
+Added recipes for petrified slabs
+Added Missing loot table
+
+version 1.3.6 launched
