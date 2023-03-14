@@ -8,24 +8,7 @@ Create colored section (creative tabs)
 
 
 Add 1.19.3 block variants
-=All (Slabs/fences/fence gates/walls/stairs)
--sculk - natural [1]
--mud [1]
--muddy roots [2]
--frog lights (all 3) - functional / natural [2]
-- mangrove roots [2]
-
-- partially finished
-= Blockstates
-= fence models
-= fence gate models
 
 - ToDo
-= slab models
-= stair models
-= wall models
-= Item models
-= Loot tables
 = recipes
-= tags
 = Put Names on en_us language file.

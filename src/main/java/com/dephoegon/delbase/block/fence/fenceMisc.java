@@ -2,14 +2,12 @@ package com.dephoegon.delbase.block.fence;
 
 import com.dephoegon.delbase.aid.block.stock.fenceBlock;
 import com.dephoegon.delbase.aid.block.stock.fenceGateBlock;
+import com.dephoegon.delbase.aid.block.stock.genBlock;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.RecipeType;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.FenceBlock;
-import net.minecraft.world.level.block.FenceGateBlock;
-import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -168,10 +166,10 @@ public class fenceMisc {
             () -> new fenceGateBlock(BlockBehaviour.Properties.copy(MUDDY_MANGROVE_ROOTS).sound(SoundType.MUDDY_MANGROVE_ROOTS),
                     "","","", false, null));
     public static final RegistryObject<FenceBlock> MANGROVE_ROOT_FENCE = register("mangrove_root_fence",
-            () -> new fenceBlock(BlockBehaviour.Properties.copy(MANGROVE_ROOTS).sound(SoundType.MANGROVE_ROOTS),
+            () -> new fenceBlock(BlockBehaviour.Properties.copy(MANGROVE_ROOTS).sound(SoundType.MANGROVE_ROOTS).noOcclusion().isSuffocating(genBlock::never).isViewBlocking(genBlock::never).noOcclusion(),
                     "","","", false, null));
     public static final RegistryObject<FenceGateBlock> MANGROVE_ROOT_FENCE_GATE = register("mangrove_root_fence_gate",
-            () -> new fenceGateBlock(BlockBehaviour.Properties.copy(MANGROVE_ROOTS).sound(SoundType.MANGROVE_ROOTS),
+            () -> new fenceGateBlock(BlockBehaviour.Properties.copy(MANGROVE_ROOTS).sound(SoundType.MANGROVE_ROOTS).noOcclusion().isSuffocating(genBlock::never).isViewBlocking(genBlock::never).noOcclusion(),
                     "","","", false, null));
     public static final RegistryObject<FenceBlock> OCHRE_FROGLIGHT_FENCE = register("ochre_froglight_fence",
             () -> new fenceBlock(BlockBehaviour.Properties.copy(OCHRE_FROGLIGHT).sound(SoundType.FROGLIGHT).lightLevel((blockState) -> 15),

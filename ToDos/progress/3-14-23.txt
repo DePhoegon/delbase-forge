@@ -1,0 +1,14 @@
+Block Registrations
+=All (Slabs/fences/fence gates/walls/stairs)
+-sculk - natural [1]
+-mud [1]
+-muddy roots [2]
+-frog lights (all 3) - functional / natural [2]
+- mangrove roots [2]
+
+Block Models
+-listed above
+
+Rendering Corrected for Transparent blocks
+
+Tag files corrected

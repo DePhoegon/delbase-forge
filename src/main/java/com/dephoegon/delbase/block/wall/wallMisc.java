@@ -1,5 +1,6 @@
 package com.dephoegon.delbase.block.wall;
 
+import com.dephoegon.delbase.aid.block.stock.genBlock;
 import com.dephoegon.delbase.aid.block.stock.wallBlock;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
@@ -90,11 +91,11 @@ public class wallMisc {
     public static final RegistryObject<WallBlock> MUD_WALL = register("mud_wall",
             () -> new wallBlock(BlockBehaviour.Properties.copy(MUD).sound(SoundType.MUD),
                     "","","",false, null));
-    public static final RegistryObject<WallBlock> MUDDY_MANGROVE_ROOT_WALL = register("mangrove_root_wall",
+    public static final RegistryObject<WallBlock> MUDDY_MANGROVE_ROOT_WALL = register("muddy_mangrove_root_wall",
             () -> new wallBlock(BlockBehaviour.Properties.copy(MUDDY_MANGROVE_ROOTS).sound(SoundType.MUDDY_MANGROVE_ROOTS),
                     "","","",false, null));
     public static final RegistryObject<WallBlock> MANGROVE_ROOT_WALL = register("mangrove_root_wall",
-            () -> new wallBlock(BlockBehaviour.Properties.copy(MANGROVE_ROOTS).sound(SoundType.MANGROVE_ROOTS),
+            () -> new wallBlock(BlockBehaviour.Properties.copy(MANGROVE_ROOTS).sound(SoundType.MANGROVE_ROOTS).noOcclusion().isSuffocating(genBlock::never).isViewBlocking(genBlock::never).noOcclusion(),
                     "","","",false, null));
     public static final RegistryObject<WallBlock> OCHRE_FROGLIGHT_WALL = register("ochre_froglight_wall",
             () -> new wallBlock(BlockBehaviour.Properties.copy(OCHRE_FROGLIGHT).sound(SoundType.FROGLIGHT).lightLevel((blockstate) -> 15),

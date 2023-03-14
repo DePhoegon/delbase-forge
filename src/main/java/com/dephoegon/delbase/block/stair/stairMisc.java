@@ -1,5 +1,6 @@
 package com.dephoegon.delbase.block.stair;
 
+import com.dephoegon.delbase.aid.block.stock.genBlock;
 import com.dephoegon.delbase.aid.block.stock.stairBlock;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
@@ -91,7 +92,7 @@ public class stairMisc {
             ()-> new stairBlock(MUDDY_MANGROVE_ROOTS::defaultBlockState, BlockBehaviour.Properties.copy(MUDDY_MANGROVE_ROOTS).sound(SoundType.MUDDY_MANGROVE_ROOTS)
                     ,"","","", false, null));
     public static final RegistryObject<StairBlock> MANGROVE_ROOT_STAIR = register("mangrove_root_stair",
-            ()-> new stairBlock(MANGROVE_ROOTS::defaultBlockState, BlockBehaviour.Properties.copy(MANGROVE_ROOTS).sound(SoundType.MANGROVE_ROOTS)
+            ()-> new stairBlock(MANGROVE_ROOTS::defaultBlockState, BlockBehaviour.Properties.copy(MANGROVE_ROOTS).sound(SoundType.MANGROVE_ROOTS).noOcclusion().isSuffocating(genBlock::never).isViewBlocking(genBlock::never).noOcclusion()
                     ,"","","", false, null));
     public static final RegistryObject<StairBlock> OCHRE_FROGLIGHT_STAIR = register("ochre_froglight_stair",
             ()-> new stairBlock(OCHRE_FROGLIGHT::defaultBlockState, BlockBehaviour.Properties.copy(OCHRE_FROGLIGHT).sound(SoundType.FROGLIGHT).lightLevel((blockstate) -> 15)

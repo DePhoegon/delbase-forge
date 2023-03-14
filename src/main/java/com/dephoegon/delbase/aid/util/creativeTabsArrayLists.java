@@ -25,6 +25,7 @@ import static com.dephoegon.delbase.block.general.ashBlocks.*;
 import static com.dephoegon.delbase.block.general.genChiseledSandStones.*;
 import static com.dephoegon.delbase.block.general.genSandStones.*;
 import static com.dephoegon.delbase.block.general.genSmoothSandStones.*;
+import static com.dephoegon.delbase.block.general.machineBlocks.BLOCK_CUTTING_STATION;
 import static com.dephoegon.delbase.block.gravity.gravColorSands.*;
 import static com.dephoegon.delbase.block.slab.slabChiseledSandStones.*;
 import static com.dephoegon.delbase.block.slab.slabChiseledSandStonesEnergy.*;
@@ -1531,6 +1532,16 @@ public class creativeTabsArrayLists {
         out.add(BIRCH_LOG_WALL);
         out.add(MANGROVE_WOOD_WALL);
         out.add(MANGROVE_LOG_WALL);
+        return out;
+    }
+    public static @NotNull ArrayList<RegistryObject<? extends Block>> getTranslucentBlocks() {
+        ArrayList<RegistryObject<? extends Block>> out = new ArrayList<>();
+        out.add(MANGROVE_ROOT_WALL);
+        out.add(MANGROVE_ROOT_FENCE_GATE);
+        out.add(MANGROVE_ROOT_FENCE);
+        out.add(MANGROVE_ROOT_STAIR);
+        out.add(MANGROVE_ROOT_SLAB);
+        out.add(BLOCK_CUTTING_STATION);
         return out;
     }
 }

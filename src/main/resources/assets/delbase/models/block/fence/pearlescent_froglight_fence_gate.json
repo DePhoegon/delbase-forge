@@ -2,6 +2,6 @@
   "parent": "delbase:block/template/fence_gate",
   "textures": {
     "texture": "minecraft:block/pearlescent_froglight_top",
-    "postside": "minecraft:block/pearlescent_froglight"
+    "postside": "minecraft:block/pearlescent_froglight_side"
   }
 }

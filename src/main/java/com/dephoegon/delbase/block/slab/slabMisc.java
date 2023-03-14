@@ -1,5 +1,6 @@
 package com.dephoegon.delbase.block.slab;
 
+import com.dephoegon.delbase.aid.block.stock.genBlock;
 import com.dephoegon.delbase.aid.block.stock.slabBlock;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
@@ -88,7 +89,7 @@ public class slabMisc {
             ()-> new slabBlock(BlockBehaviour.Properties.copy(MUDDY_MANGROVE_ROOTS).sound(SoundType.MUDDY_MANGROVE_ROOTS)
                     ,"","","", false, null));
     public static final RegistryObject<SlabBlock> MANGROVE_ROOT_SLAB = register("mangrove_root_slab",
-            ()-> new slabBlock(BlockBehaviour.Properties.copy(MANGROVE_ROOTS).sound(SoundType.MANGROVE_ROOTS)
+            ()-> new slabBlock(BlockBehaviour.Properties.copy(MANGROVE_ROOTS).sound(SoundType.MANGROVE_ROOTS).noOcclusion().isSuffocating(genBlock::never).isViewBlocking(genBlock::never).noOcclusion()
                     ,"","","", false, null));
     public static final RegistryObject<SlabBlock> OCHRE_FROGLIGHT_SLAB = register("ochre_froglight_slab",
             ()-> new slabBlock(BlockBehaviour.Properties.copy(OCHRE_FROGLIGHT).sound(SoundType.FROGLIGHT).lightLevel((blockstate) -> 15)
