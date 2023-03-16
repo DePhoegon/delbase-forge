@@ -5,6 +5,7 @@
     "#delbase:fences/misc_woodlike_fences",
     "#delbase:slabs/slab_misc_woodlike",
     "#delbase:stairs/stair_misc_woodlike",
-    "#delbase:walls/wall_misc_woodlike"
+    "#delbase:walls/wall_misc_woodlike",
+    "#delbase:hedges/hedge_misc_woodlike"
   ]
 }

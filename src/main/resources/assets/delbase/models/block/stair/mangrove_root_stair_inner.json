@@ -1,10 +1,8 @@
 {
-  "parent": "delbase:block/template/inner_stairs_column",
+  "parent": "delbase:block/template/inner_stairs_root",
   "textures": {
     "bottom": "minecraft:block/mangrove_roots_top",
     "top": "minecraft:block/mangrove_roots_top",
-    "side": "minecraft:block/mangrove_roots_side",
-    "inside": "minecraft:block/mangrove_roots_side",
-    "inside_base": "minecraft:block/mangrove_roots_top"
+    "side": "minecraft:block/mangrove_roots_side"
   }
 }

@@ -1,0 +1,13 @@
+Model Files
+--------
+Templates
+- Stairs / Slabs / Walls / Fences / Fence Gates
+= Roots & Leaves
+~~~ Near identical, except leaves need a tint index of 0
+
+Finished Mangrove roots
+
+Added all 9 leave hedges
+
+Worked out the Biomes Coloring thing for leaves
+- Applicable to future plans of making a dimension.

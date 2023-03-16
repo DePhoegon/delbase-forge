@@ -12,3 +12,4 @@ Add 1.19.3 block variants
 - ToDo
 = recipes
 = Put Names on en_us language file.
+= Backport 8 of the 9 leaves to 1.18.2  (excluding the mangrove one of course)

@@ -89,6 +89,7 @@ public class regList {
         wallTerracotta.register(eventBus);
         wallMisc.register(eventBus);
         wallStones.register(eventBus);
+        hedgeLeaves.register(eventBus);
 
         //Fences
         woodenFences.register(eventBus);

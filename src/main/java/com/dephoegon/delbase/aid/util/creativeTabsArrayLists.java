@@ -56,6 +56,7 @@ import static com.dephoegon.delbase.block.stair.stairStones.DEEPSLATE_STAIR;
 import static com.dephoegon.delbase.block.stair.stairStrippedWood.*;
 import static com.dephoegon.delbase.block.stair.stairTerracotta.*;
 import static com.dephoegon.delbase.block.stair.stairWood.*;
+import static com.dephoegon.delbase.block.wall.hedgeLeaves.*;
 import static com.dephoegon.delbase.block.wall.wallChiseledSandStones.*;
 import static com.dephoegon.delbase.block.wall.wallConcrete.*;
 import static com.dephoegon.delbase.block.wall.wallCutSandStones.*;
@@ -1294,6 +1295,23 @@ public class creativeTabsArrayLists {
         out.add(MANGROVE_LOG_STAIR); // Mangrove Stair
         return out;
     }
+    public static @NotNull ArrayList<RegistryObject<WallBlock>> setDefaultColorHedgeLeaves() {
+        ArrayList<RegistryObject<WallBlock>> out = new ArrayList<>();
+        out.add(OAK_HEDGE);
+        out.add(JUNGLE_HEDGE);
+        out.add(ACACIA_HEDGE);
+        out.add(DARK_OAK_HEDGE);
+        out.add(MANGROVE_HEDGE);
+        out.add(AZALEA_HEDGE);
+        out.add(FLOWERING_AZALEA_HEDGE);
+        return out;
+    }
+    public static @NotNull ArrayList<RegistryObject<WallBlock>> setOffColorHedge() {
+        ArrayList<RegistryObject<WallBlock>> out = new ArrayList<>();
+        out.add(SPRUCE_HEDGE);
+        out.add(BIRCH_HEDGE);
+        return out;
+    }
     public static @NotNull ArrayList<RegistryObject<WallBlock>> setChiseledSandStoneWalls() {
         ArrayList<RegistryObject<WallBlock>> out = new ArrayList<>();
         out.add(OVERRIDE_CHISELED_SAND_STONE_WALL);
@@ -1535,13 +1553,19 @@ public class creativeTabsArrayLists {
         return out;
     }
     public static @NotNull ArrayList<RegistryObject<? extends Block>> getTranslucentBlocks() {
-        ArrayList<RegistryObject<? extends Block>> out = new ArrayList<>();
+        ArrayList<RegistryObject<? extends Block>> out = new ArrayList<>(getAllLeaves());
         out.add(MANGROVE_ROOT_WALL);
         out.add(MANGROVE_ROOT_FENCE_GATE);
         out.add(MANGROVE_ROOT_FENCE);
         out.add(MANGROVE_ROOT_STAIR);
         out.add(MANGROVE_ROOT_SLAB);
         out.add(BLOCK_CUTTING_STATION);
+        return out;
+    }
+    public static @NotNull ArrayList<RegistryObject<? extends Block>> getAllLeaves() {
+        ArrayList<RegistryObject<? extends Block>> out = new ArrayList<>(setDefaultColorHedgeLeaves());
+        out.add(SPRUCE_HEDGE);
+        out.add(BIRCH_HEDGE);
         return out;
     }
 }
