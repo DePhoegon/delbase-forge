@@ -34,9 +34,20 @@
       "text": "Check JEI for the full range of fence gates$(br)-Quartz$(br)-Woods$(br)-Sands/Sandstones$(br)-Concretes$(br)-Terracotta"
     },
     {
+      "title": "Hedges",
+      "type": "patchouli:spotlight",
+      "item": "delbase:oak_hedge",
+      "text": "Check JEI for the full range of hedges$(br)-Leafy Things"
+    },
+    {
       "title": "Shapes",
       "type": "patchouli:image",
       "images": [ "delbase:textures/screens/shapes.png" ]
+    },
+    {
+      "title": "Hedges",
+      "type": "patchouli:image",
+      "images": [ "delbase:textures/screens/hedges.png" ]
     }
   ]
 }

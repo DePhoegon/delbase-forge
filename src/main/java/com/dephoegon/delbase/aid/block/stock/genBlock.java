@@ -47,7 +47,5 @@ public class genBlock extends Block {
         }
         return false;
     }
-    public static boolean never(BlockState p_50806_, BlockGetter p_50807_, BlockPos p_50808_) {
-        return false;
-    }
+    public static boolean never(BlockState p_50806_, BlockGetter p_50807_, BlockPos p_50808_) { return false; }
 }
