@@ -1135,6 +1135,15 @@
   "block.delbase.brick_fence": "Brick Fence",
   "block.delbase.brick_fence_gate": "Brick Fence Gate",
 
+  "block.delbase.oak_hedge": "Oak Hedge",
+  "block.delbase.jungle_hedge": "Jungle Hedge",
+  "block.delbase.acacia_hedge": "Acacia Hedge",
+  "block.delbase.dark_oak_hedge": "Dark Oak Hedge",
+  "block.delbase.azalea_hedge": "Azalea Hedge",
+  "block.delbase.flowering_azalea_hedge": "Flowering Azalea Hedge",
+  "block.delbase.spruce_hedge": "Spruce Hedge",
+  "block.delbase.birch_hedge": "Birch Hedge",
+
   "block.delbase.block_cutting_station": "Block Processing Station",
 
   "block.delbase.hardened_oak_planks": "Hardened Oak Planks",
