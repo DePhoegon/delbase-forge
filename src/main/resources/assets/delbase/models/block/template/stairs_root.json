@@ -1,4 +1,6 @@
-{   "parent": "block/block",
+{
+  "render_type": "translucent",
+  "parent": "block/block",
   "display": {
     "gui": {
       "rotation": [ 30, 135, 0 ],

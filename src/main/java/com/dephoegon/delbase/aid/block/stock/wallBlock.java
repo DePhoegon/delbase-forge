@@ -36,7 +36,6 @@ public class wallBlock extends WallBlock {
         flame = flames;
         stripped = strippedState;
     }
-    @Override
     public void appendHoverText(@NotNull ItemStack stack, @Nullable BlockGetter worldIn, @NotNull List<Component> toolTip, @NotNull TooltipFlag flag) {
         super.appendHoverText(stack, worldIn, toolTip, flag);
         if(!kb.HShift() && !kb.HCtrl() && tip0 != null) toolTip.add(Component.translatable(tip0)); //if neither pressed, show tip0 (if not empty)
@@ -44,7 +43,6 @@ public class wallBlock extends WallBlock {
         if(kb.HShift() && tip1 != null) //noinspection GrazieInspection
             toolTip.add(Component.translatable(tip1)); //if shift, show tip1 (if not empty)
     }
-    @Override
     public boolean isFlammable(BlockState state, BlockGetter world, BlockPos pos, Direction face)
     {
         if (flame && !state.getValue(WATERLOGGED)) {
@@ -52,8 +50,6 @@ public class wallBlock extends WallBlock {
         }
         return false;
     }
-    @Nullable
-    @Override
     public BlockState getToolModifiedState(BlockState state, @NotNull UseOnContext context, ToolAction toolAction, boolean simulate) {
         Level world = context.getLevel();
         BlockPos blockPos = context.getClickedPos();
