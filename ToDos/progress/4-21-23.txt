@@ -1,0 +1,10 @@
+Fixed Fences
+-Added Bamboo fence & fence gate recipe to the block cutter
+-Added Wooden Fences to the wooden Fences tag file
+-- Wooden Fences will now connect
+~~ Plank fences (built in ones)
+~~ Wood fences
+~~ Log Fences
+~~ Stripped Wood Fences
+~~ Stripped Log Fences
+~~ Woodlike fences
