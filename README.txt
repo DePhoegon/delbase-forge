@@ -1,6 +1,23 @@
 DePhoegons' Reclaim  (Read Me, Refactoring)
 =========================
 
+Official Stuff
+---------
+Download - https://legacy.curseforge.com/minecraft/mc-mods/dephoegons-reclaim
+Download - https://www.curseforge.com/minecraft/mc-mods/dephoegons-reclaim
+GitHub - https://github.com/DePhoegon/delbase
+Author - DePhoegon
+Latest Version
+-1.19.3 = 1.4.2
+-1.18.2 = 1.4.2
+Companion Mod
+- DePhoegons' Chocobos
+-- GitHub - https://github.com/DePhoegon/chococraft-delbase_patch
+-- Download - https://legacy.curseforge.com/minecraft/mc-mods/dephoegons-chocobos
+-- Download - https://www.curseforge.com/minecraft/mc-mods/dephoegons-chocobos
+-- Author - DePhoegon
+
+
 This is a Decoration & Resource reclaiming based mod.
 
 Slabs, Stairs, Walls, Fences, & Fence Gates
