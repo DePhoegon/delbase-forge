@@ -119,7 +119,7 @@ public class cuttingStationBlock extends horizontalFacingBlocksBaseEntities {
 
     @Override
     public RenderShape getRenderShape(BlockState pState) {
-        return RenderShape.MODEL;
+        return super.getRenderShape(pState);
     }
     @Override
     public void onRemove(@NotNull BlockState pState, Level pLevel, BlockPos pPos, @NotNull BlockState pNewState, boolean pIsMoving) {

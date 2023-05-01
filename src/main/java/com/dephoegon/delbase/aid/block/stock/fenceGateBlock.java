@@ -4,7 +4,6 @@ import com.dephoegon.delbase.aid.util.kb;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.network.chat.Component;
-import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.context.UseOnContext;
@@ -30,7 +29,7 @@ public class fenceGateBlock extends FenceGateBlock {
     private final boolean flame;
     private final BlockState stripped;
     public fenceGateBlock(Properties properties, String normToolTip, String shiftToolTip, String ctrlToolTip, boolean flames, BlockState strippedState) {
-        super(properties, SoundEvents.FENCE_GATE_CLOSE, SoundEvents.FENCE_GATE_OPEN);
+        super(properties);
         if(normToolTip.equals("")) { tip0 = null; } else { tip0 = normToolTip; }
         if(shiftToolTip.equals("")) { tip1 = null; } else { tip1 = shiftToolTip; }
         if(ctrlToolTip.equals("")) { tip2 = null; } else { tip2 = ctrlToolTip; }

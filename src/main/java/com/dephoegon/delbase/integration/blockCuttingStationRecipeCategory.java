@@ -35,7 +35,7 @@ public class blockCuttingStationRecipeCategory implements IRecipeCategory<blockC
         this.background = helper.createDrawable(TEXTURE, 0,0, 176, 85);
         this.icon = helper.createDrawableIngredient(VanillaTypes.ITEM_STACK, new ItemStack(BLOCK_CUTTING_STATION.get()));
     }
-    public RecipeType<blockCuttingStationRecipes> getRecipeType() { return jeiDelbaseModPlugin.BLOCK_CUTTING_STATION_RECIPE; }
+    public @NotNull RecipeType<blockCuttingStationRecipes> getRecipeType() { return jeiDelbaseModPlugin.BLOCK_CUTTING_STATION_RECIPE; }
     public @NotNull Component getTitle() { return Component.literal("Block Cutting Station"); }
     public @NotNull IDrawable getBackground() { return this.background; }
     public @NotNull IDrawable getIcon() { return this.icon; }

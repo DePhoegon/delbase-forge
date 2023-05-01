@@ -1,0 +1,12 @@
+1.19.3 backport to 1.19.2
+-- removed creative tab usage of 1.19.3
+-- added old creative tab method back in
+-- Updated dependencies
+-- Updated mods.toml
+-- moved block cutter to items
+-- fixed fence gate backplate
+
+Updating 1.18.2 & 1.19.3 to match tab changes, or any blocks
+
+--- Untested Changes past minimal need t to get to run in 1.19.2
+-- Tested running only with removed mandatory things & updated dependence & mods.toml

@@ -15,6 +15,7 @@ import net.minecraftforge.registries.RegistryObject;
 
 import java.util.function.Supplier;
 
+import static com.dephoegon.delbase.delbase.BASE_BLOCK;
 import static com.dephoegon.delbase.delbase.Mod_ID;
 import static net.minecraft.world.level.block.Blocks.SAND;
 
@@ -108,13 +109,13 @@ public class gravColorSands {
     private static <T extends Block> RegistryObject<T> register(String name, Supplier<T> block) {
         RegistryObject<T> exit = BLOCKS.register(name, block);
         ITEMS.register(name, () -> new BlockItem(exit.get(),
-                new Item.Properties().stacksTo(64)));
+                new Item.Properties().stacksTo(64).tab(BASE_BLOCK)));
         return exit;
     }
     private static <T extends Block> RegistryObject<T> overrideRegister(String name, Supplier<T> block) {
         RegistryObject<T> exit = OVERRIDE_BLOCK.register(name, block);
         OVERRIDE_ITEM.register(name, () -> new BlockItem(exit.get(),
-                new Item.Properties().stacksTo(64)));
+                new Item.Properties().stacksTo(64).tab(BASE_BLOCK)));
         return exit;
     }
 }
