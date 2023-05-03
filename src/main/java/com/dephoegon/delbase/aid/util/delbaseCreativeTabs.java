@@ -35,8 +35,9 @@ public class delbaseCreativeTabs {
                         .title(Component.translatable("itemGroup.dephoegon_items")));
     }
 
-    public static @NotNull ArrayList<RegistryObject<Item>> getDelItemList() {
-        ArrayList<RegistryObject<Item>> out = new ArrayList<>();
+    public static @NotNull ArrayList<RegistryObject<? extends ItemLike>> getDelItemList() {
+        ArrayList<RegistryObject<? extends ItemLike>> out = new ArrayList<>();
+        out.add(BLOCK_CUTTING_STATION);
         out.addAll(setBlockCutterPlansList());
         out.addAll(setShiftingDyesList());
         return out;
@@ -133,7 +134,6 @@ public class delbaseCreativeTabs {
         out.addAll(getDelBlockList());
         out.addAll(getDelNaturalBlockList());
         out.addAll(getDelFunctionalBlockList());
-        out.add(BLOCK_CUTTING_STATION);
         return out;
     }
 }

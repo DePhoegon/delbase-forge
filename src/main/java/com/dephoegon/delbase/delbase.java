@@ -1,6 +1,7 @@
 package com.dephoegon.delbase;
 
 import com.dephoegon.delbase.aid.config.commonConfig;
+import com.dephoegon.delbase.aid.event.eventBusEvents;
 import com.dephoegon.delbase.aid.util.regList;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.common.MinecraftForge;
@@ -36,6 +37,8 @@ public class delbase
         IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
         regList.firstList(eventBus);
         regList.listOrder(eventBus);
+
+        MinecraftForge.EVENT_BUS.addListener(eventBusEvents::onServerStartAddCompostItems);
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
