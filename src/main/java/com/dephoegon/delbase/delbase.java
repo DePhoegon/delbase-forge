@@ -1,5 +1,7 @@
 package com.dephoegon.delbase;
+
 import com.dephoegon.delbase.aid.config.commonConfig;
+import com.dephoegon.delbase.aid.event.eventBusEvents;
 import com.dephoegon.delbase.aid.util.regList;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
@@ -9,7 +11,6 @@ import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.config.ModConfig;
-import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -38,6 +39,7 @@ public class delbase
     public delbase() {
         IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
         regList.listOrder(eventBus);
+        MinecraftForge.EVENT_BUS.addListener(eventBusEvents::onServerStartAddCompostItems);
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);

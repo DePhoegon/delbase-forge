@@ -1,14 +1,12 @@
 package com.dephoegon.delbase.aid.event;
 
 import com.dephoegon.delbase.aid.recipe.blockCuttingStationRecipes;
+import com.dephoegon.delbase.aid.util.composable;
 import com.dephoegon.delbase.block.entity.screen.blockCuttingStationScreen;
 import com.dephoegon.delbase.block.entity.screen.menuTypes;
-import com.dephoegon.delbase.block.general.machineBlocks;
 import net.minecraft.client.color.block.BlockColor;
 import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.renderer.BiomeColors;
-import net.minecraft.client.renderer.ItemBlockRenderTypes;
-import net.minecraft.client.renderer.RenderType;
 import net.minecraft.core.Registry;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.crafting.RecipeSerializer;
@@ -16,6 +14,7 @@ import net.minecraft.world.level.FoliageColor;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.client.event.ColorHandlerEvent;
 import net.minecraftforge.event.RegistryEvent;
+import net.minecraftforge.event.server.ServerStartedEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
@@ -54,4 +53,5 @@ public class eventBusEvents {
         getAllLeaves().forEach((block) -> event.getItemColors().register((stack, color) -> event.getBlockColors().getColor(((BlockItem) stack.getItem()).getBlock().defaultBlockState(), null, null, color),
                 block.get()));
     }
+    public static void onServerStartAddCompostItems(ServerStartedEvent ignoredEvent) { composable.addToList(); }
 }
