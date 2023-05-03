@@ -1,8 +1,8 @@
 {
   "parent": "delbase:block/template/block_root",
   "textures": {
-    "bottom": "minecraft:block/mangrove_log",
-    "top": "minecraft:block/mangrove_log",
-    "side": "minecraft:block/mangrove_log"
+    "bottom": "minecraft:block/mangrove_roots_top",
+    "top": "minecraft:block/mangrove_roots_top",
+    "side": "minecraft:block/mangrove_roots_side"
   }
 }
