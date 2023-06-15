@@ -395,39 +395,34 @@ public class colorMixInteraction {
         }
         if (place) {
             switch (DefaultBlockIndex) {
-                case 1:
+                case 1 ->
                     //walls
-                    blockReplacer.wallPlacement(world, blockPos, place_me);
-                    break;
-                case 2:
+                        blockReplacer.wallPlacement(world, blockPos, place_me);
+                case 2 ->
                     //Stairs
-                    blockReplacer.stairPlacement(world, blockPos, place_me);
-                    break;
-                case 3:
+                        blockReplacer.stairPlacement(world, blockPos, place_me);
+                case 3 ->
                     //Slabs
-                    blockReplacer.slabPlacement(world, blockPos, place_me);
-                    break;
-                case 4:
+                        blockReplacer.slabPlacement(world, blockPos, place_me);
+                case 4 ->
                     //Axis, lock_cut used to mix 'non-axis' default blocks with axis blocks in the set (cut_sandstone // cut_red_sandstone) as example
                     //Is triggered only one base block & red block, (dumb method) possible to rework stack to allow cutLocking on any... but no reason to atm
-                    blockReplacer.axisPlacement(world, blockPos, place_me, lock_cut);
-                    break;
-                case 5:
+                        blockReplacer.axisPlacement(world, blockPos, place_me, lock_cut);
+                case 5 ->
                     //DefaultBocks with no special placements
-                    blockReplacer.axisPlacement(world, blockPos, place_me, true);
-                    //AxisPlacement set to do default states on which suits default blocks
-                    break;
-                case 6:
+                        blockReplacer.axisPlacement(world, blockPos, place_me, true);
+
+                //AxisPlacement set to do default states on which suits default blocks
+                case 6 ->
                     //Fence Blocks
-                    blockReplacer.fencePlacement(world, blockPos, place_me);
-                    break;
-                case 7:
+                        blockReplacer.fencePlacement(world, blockPos, place_me);
+                case 7 ->
                     //Fence Gate Blocks
-                    blockReplacer.fenceGatePlacement(world, blockPos, place_me);
-                    break;
-                default:
+                        blockReplacer.fenceGatePlacement(world, blockPos, place_me);
+                default -> {
                     //catch all, return fail
                     return InteractionResult.FAIL;
+                }
             }
             playerEntity.getMainHandItem().setCount(playerEntity.getMainHandItem().getCount()-1);
             return InteractionResult.SUCCESS;

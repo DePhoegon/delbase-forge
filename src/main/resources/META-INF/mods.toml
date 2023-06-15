@@ -1,27 +1,23 @@
 modLoader="javafml"
-loaderVersion="[40,)"
-license="MIT"
+loaderVersion="${loader_version_range}"
+license="${mod_license}"
 [[mods]]
-modId="delbase"
-version="${file.jarVersion}"
-displayName="DePhoegons' Base"
+modId="${mod_id}"
+version="${project.delbase_ver}"
+displayName="${mod_name}"
 logoFile="dephoegonlogo.png"
 credits="Lack of Sanity, Myself, Trial & Error, Family, and My friend(s) for listening to insanity."
-authors="DePhoegon"
-description='''
-This is a decoration & resource reclaimation mod.
-The astehtic of the pack is meant to be in-line the base game visuals.
-The resource reclaimation aspects are designed around non-modded armors. Support/patch mods will be needed to extend to modded items/materials.
-'''
-[[dependencies.delbase]]
+authors="${mod_authors}"
+description='''${mod_description}'''
+[[dependencies.${mod_id}]]
     modId="forge"
     mandatory=true
-    versionRange="[44,)"
+    versionRange="${forge_version_range}"
     ordering="NONE"
     side="BOTH"
-[[dependencies.delbase]]
+[[dependencies.${mod_id}]]
     modId="minecraft"
     mandatory=true
-    versionRange="[1.19.3,1.19.4)"
+    versionRange="${minecraft_version_range}"
     ordering="NONE"
     side="BOTH"

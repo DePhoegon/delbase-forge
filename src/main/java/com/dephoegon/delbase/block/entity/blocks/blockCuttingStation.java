@@ -22,7 +22,6 @@ import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraftforge.common.capabilities.Capability;
 import net.minecraftforge.common.util.LazyOptional;
-import net.minecraftforge.items.CapabilityItemHandler;
 import net.minecraftforge.items.IItemHandler;
 import net.minecraftforge.items.ItemStackHandler;
 import org.jetbrains.annotations.NotNull;
@@ -32,9 +31,10 @@ import java.util.Optional;
 
 import static com.dephoegon.delbase.aid.recipe.TierRandomDropAid.*;
 import static com.dephoegon.delbase.aid.recipe.countAid.netheriteDiamondBonus;
-import static com.dephoegon.delbase.aid.slots.planSlots.getFullPlanSlotArray;
+import static com.dephoegon.delbase.aid.slots.planSlots.isPlansSlotItem;
 import static com.dephoegon.delbase.item.blockCutterPlans.*;
 import static net.minecraft.world.item.Items.DIAMOND;
+import static net.minecraftforge.common.capabilities.ForgeCapabilities.ITEM_HANDLER;
 
 public class blockCuttingStation extends BlockEntity implements MenuProvider {
     public static final int outputSlot = 1;
@@ -92,7 +92,7 @@ public class blockCuttingStation extends BlockEntity implements MenuProvider {
     };
     private final ItemStackHandler planHandle = new ItemStackHandler(1){
         public boolean isItemValid(int slot, @NotNull ItemStack stack) {
-            return getFullPlanSlotArray().contains(stack.getItem().asItem());
+            return isPlansSlotItem(stack.getItem().asItem());
         }
         @Override
         protected void onContentsChanged(int slot) {
@@ -149,7 +149,8 @@ public class blockCuttingStation extends BlockEntity implements MenuProvider {
     @Nullable
     @Override
     public <T> LazyOptional<T> getCapability(@NotNull Capability<T> cap, Direction side) {
-        if (cap == CapabilityItemHandler.ITEM_HANDLER_CAPABILITY) {
+
+        if (cap == ITEM_HANDLER) {
             if (side == Direction.UP) {
                 return lazyInput.cast();
             }

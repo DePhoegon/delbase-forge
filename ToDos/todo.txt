@@ -1,2 +1,31 @@
-WOOOH
--- Maintenance mode
+After creative tab Ingredients
+Sort Creative Tab menus
+- Put after Ingredients
+-- Stack them next to each other
+Double check 'Block Cutting Station Recipes' new methods.
+Check Blocks models & types in game
+Look for new wood/blocks to bring into the block gambit
+Test Mechanics out.
+- Stripping wood things
+- Burning wood things
+- Leaves coloration
+Add in more leaves blocks
+- slabs, fences, fence gates, & stairs.
+re-Consider balance of material acquisition in this version (different from prior versions)
+
+Consider interactions with new mobs
+ Update Readme to include 1.20 version when published.
+
+ line up extensive testing.
+
+
+ Wait for Patchouli to release for 1.20 to re-enable patchouli stuff.
+
+
+Chocobo Mod
+-------
+- Look into having a dyeing station for the armors.
+- Update claw weapons to break cobwebs in a silk touch way
+- (On top of porting)
+- incomplete list
+- Consider interactions with new mobs

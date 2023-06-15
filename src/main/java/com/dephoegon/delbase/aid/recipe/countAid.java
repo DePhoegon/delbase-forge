@@ -12,10 +12,10 @@ public class countAid {
     private static final int nether_boot = commonConfig.NETHERRITE_BOOTS_DIAMOND_BONUS.get();
     public static int netheriteDiamondBonus(@NotNull ArmorItem recycle) {
         int count = 1;
-            if (recycle.getSlot() == EquipmentSlot.CHEST) { count = nether_chest; }
-            if (recycle.getSlot() == EquipmentSlot.FEET) { count = nether_boot; }
-            if (recycle.getSlot() == EquipmentSlot.HEAD) { count = nether_helmet; }
-            if (recycle.getSlot() == EquipmentSlot.LEGS) { count = nether_legs; }
+            if (recycle.getEquipmentSlot() == EquipmentSlot.CHEST) { count = nether_chest; }
+            if (recycle.getEquipmentSlot() == EquipmentSlot.FEET) { count = nether_boot; }
+            if (recycle.getEquipmentSlot() == EquipmentSlot.HEAD) { count = nether_helmet; }
+            if (recycle.getEquipmentSlot() == EquipmentSlot.LEGS) { count = nether_legs; }
         return count;
     }
 }

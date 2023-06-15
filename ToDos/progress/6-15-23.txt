@@ -1,0 +1,7 @@
+Initial Port to 1.20
+- Aligned Gradlew stuff.
+- functional Port
+-- Loads into game, and does loads as expected.
+
+-Addressed most function changes.
+-Touched up logic the slots of the machine block

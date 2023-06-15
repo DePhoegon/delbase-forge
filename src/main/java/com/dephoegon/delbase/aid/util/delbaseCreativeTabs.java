@@ -1,15 +1,13 @@
 package com.dephoegon.delbase.aid.util;
 
+import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.CreativeModeTab;
-import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.ItemLike;
-import net.minecraftforge.event.CreativeModeTabEvent;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.RegistryObject;
 import org.jetbrains.annotations.NotNull;
 
@@ -22,18 +20,15 @@ import static com.dephoegon.delbase.delbase.Mod_ID;
 
 @Mod.EventBusSubscriber(modid = Mod_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
 public class delbaseCreativeTabs {
-    public static CreativeModeTab DELBASE_BLOCK;
-    public static CreativeModeTab DELBASE_ITEM;
-
-    @SubscribeEvent
-    public static void registerCreativeModeTabs(CreativeModeTabEvent.@NotNull Register event){
-        DELBASE_BLOCK = event.registerCreativeModeTab(new ResourceLocation(Mod_ID, "dephoegon_blocks"),
-                builder -> builder.icon(() -> new ItemStack(Items.REDSTONE_BLOCK))
-                        .title(Component.translatable("itemGroup.dephoegon_blocks")));
-        DELBASE_ITEM = event.registerCreativeModeTab(new ResourceLocation(Mod_ID, "dephoegon_items"),
-                builder -> builder.icon(() -> new ItemStack(Items.RED_DYE))
-                        .title(Component.translatable("itemGroup.dephoegon_items")));
-    }
+    public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, Mod_ID);
+    public static final RegistryObject<CreativeModeTab> DELBASE_BLOCK = CREATIVE_MODE_TABS.register("dephoegon_blocks", () -> CreativeModeTab.builder()
+            .icon(() -> new ItemStack(Items.REDSTONE_BLOCK))
+            .title(Component.translatable("itemGroup.dephoegon_blocks"))
+            .build());
+    public static final RegistryObject<CreativeModeTab> DELBASE_ITEM = CREATIVE_MODE_TABS.register("dephoegon_items", () -> CreativeModeTab.builder()
+            .icon(() -> new ItemStack(Items.RED_DYE))
+            .title(Component.translatable("itemGroup.dephoegon_items"))
+            .build());
 
     public static @NotNull ArrayList<RegistryObject<? extends ItemLike>> getDelItemList() {
         ArrayList<RegistryObject<? extends ItemLike>> out = new ArrayList<>();
@@ -44,8 +39,7 @@ public class delbaseCreativeTabs {
     }
 
     public static @NotNull ArrayList<RegistryObject<? extends ItemLike>> getDelNaturalBlockList() {
-        ArrayList<RegistryObject<? extends ItemLike>> out = new ArrayList<>();
-        out.addAll(setSands());
+        ArrayList<RegistryObject<? extends ItemLike>> out = new ArrayList<>(setSands());
         return out;
     }
     public static @NotNull ArrayList<RegistryObject<? extends ItemLike>> getDelBlockList() {

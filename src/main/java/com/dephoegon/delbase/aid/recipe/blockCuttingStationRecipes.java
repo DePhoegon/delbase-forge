@@ -3,6 +3,7 @@ package com.dephoegon.delbase.aid.recipe;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import net.minecraft.core.NonNullList;
+import net.minecraft.core.RegistryAccess;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.GsonHelper;
@@ -34,10 +35,18 @@ public class blockCuttingStationRecipes implements Recipe<SimpleContainer> {
             return (recipeItems.get(jsonIngredientItem).test(pContainer.getItem(inputSlot)) && recipeItems.get(jsonPlanItem).test(pContainer.getItem(planSlot)));
         }
     }
+
+    @Override
+    public ItemStack assemble(@NotNull SimpleContainer p_44001_, @NotNull RegistryAccess p_267165_) { return null; }
+
     public @NotNull NonNullList<Ingredient> getIngredients() { return recipeItems; }
     public boolean isSpecial() { return true; }
     public @NotNull ItemStack assemble(@NotNull SimpleContainer pContainer) { return output; }
     public boolean canCraftInDimensions(int pWidth, int pHeight) { return true; }
+
+    @Override
+    public @NotNull ItemStack getResultItem(@NotNull RegistryAccess p_267052_) { return this.output; }
+
     public @NotNull ItemStack getResultItem() { return output.copy(); }
     public @NotNull ResourceLocation getId() { return id; }
     public @NotNull RecipeSerializer<?> getSerializer() { return Serializer.INSTANCE; }

@@ -17,9 +17,6 @@ public class planSlots extends SlotItemHandler {
         super(itemHandler, index, xPosition, yPosition);
     }
 
-    public boolean isItemValid(int slot, @NotNull ItemStack stack) {
-        return getFullPlanSlotArray().contains(stack.getItem().asItem());
-    }
     private static @NotNull ArrayList<Item> setPlansOnlyArray(){
         ArrayList<Item> tempArray = new ArrayList<>();
         tempArray.add(WALL_PLANS.get().asItem());
@@ -35,15 +32,15 @@ public class planSlots extends SlotItemHandler {
         list.add(ARMOR_COMPOUND.get().asItem());
         return list;
     }
-    public static @NotNull ArrayList<Item> getPlanOnlyArray() { return setPlansOnlyArray(); }
     public static @NotNull ArrayList<Item> getFullPlanSlotArray() {
         return setFullArray(setPlansOnlyArray());
     }
-
+    public static boolean isPlansSlotItem(Item item) {
+        return getFullPlanSlotArray().contains(item);
+    }
     @Override
     public boolean mayPlace(@NotNull ItemStack itemStack) {
-        ArrayList<Item> planArray = getFullPlanSlotArray();
-        return planArray.contains(itemStack.getItem());
+        return isPlansSlotItem(itemStack.getItem());
     }
     @Override
     public int getMaxStackSize() {
