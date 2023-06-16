@@ -16,10 +16,7 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import org.jetbrains.annotations.NotNull;
 
-import static com.dephoegon.delbase.aid.util.creativeTabsArrayLists.getColoredLeaves;
-import static com.dephoegon.delbase.aid.util.creativeTabsArrayLists.setDefaultColorHedgeLeaves;
-import static com.dephoegon.delbase.block.wall.hedgeLeaves.BIRCH_HEDGE;
-import static com.dephoegon.delbase.block.wall.hedgeLeaves.SPRUCE_HEDGE;
+import static com.dephoegon.delbase.aid.util.creativeTabsArrayLists.*;
 import static com.dephoegon.delbase.delbase.Mod_ID;
 
 @Mod.EventBusSubscriber(modid = Mod_ID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
@@ -34,14 +31,14 @@ public class eventBusEvents {
 
     @SubscribeEvent
     public static void registerBlockColors(RegisterColorHandlersEvent.@NotNull Block event) {
-        setDefaultColorHedgeLeaves().forEach((block) -> event.register(DEFAULT_LEAVES, block.get()));
-        event.register(SPRUCE_LEAVES, SPRUCE_HEDGE.get());
-        event.register(BIRCH_LEAVES, BIRCH_HEDGE.get());
+        DefaultColoredLeaves().forEach((block) -> event.register(DEFAULT_LEAVES, block.get()));
+        BirchColoredLeaves().forEach((block) -> event.register(BIRCH_LEAVES, block.get()));
+        SpruceColoredLeaves().forEach((block) -> event.register(SPRUCE_LEAVES, block.get()));
     }
 
     @SubscribeEvent
     public static void registerItemColors(RegisterColorHandlersEvent.Item event) {
-        getColoredLeaves().forEach((block) -> event.register((stack, color) -> event.getBlockColors().getColor(((BlockItem) stack.getItem()).getBlock().defaultBlockState(), null, null, color),
+        ColoredLeaves().forEach((block) -> event.register((stack, color) -> event.getBlockColors().getColor(((BlockItem) stack.getItem()).getBlock().defaultBlockState(), null, null, color),
                 block.get()));
     }
     public static void onServerStartAddCompostItems(ServerStartedEvent ignoredEvent) { composable.addToList(); }

@@ -8,6 +8,7 @@
     "delbase:mangrove_root_fence_gate",
     "delbase:ochre_froglight_fence_gate",
     "delbase:verdant_froglight_fence_gate",
-    "delbase:pearlescent_froglight_fence_gate"
+    "delbase:pearlescent_froglight_fence_gate",
+    "#delbase:leaves_fence_gates"
   ]
 }

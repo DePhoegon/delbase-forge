@@ -1201,6 +1201,16 @@
   "block.delbase.flowering_azalea_hedge": "Flowering Azalea Hedge",
   "block.delbase.spruce_hedge": "Spruce Hedge",
   "block.delbase.birch_hedge": "Birch Hedge",
+  "block.delbase.oak_leaf_stair": "Oak Leafy Steps",
+  "block.delbase.jungle_leaf_stair": "Jungle Leafy Steps",
+  "block.delbase.acacia_leaf_stair": "Acacia Leafy Steps",
+  "block.delbase.dark_oak_leaf_stair": "Dark Oak Leafy Steps",
+  "block.delbase.mangrove_leaf_stair": "Mangrove Leafy Steps",
+  "block.delbase.cherry_leaf_stair": "Cherry Leafy Steps",
+  "block.delbase.azalea_leaf_stair": "Azalea Leafy Steps",
+  "block.delbase.flowering_azalea_leaf_stair": "Flowering Azalea Leafy Steps",
+  "block.delbase.spruce_leaf_stair": "Spruce Leafy Steps",
+  "block.delbase.birch_leaf_stair": "Birch Leafy Steps",
 
   "block.delbase.block_cutting_station": "Block Processing Station",
 

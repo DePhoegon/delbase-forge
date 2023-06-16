@@ -30,6 +30,7 @@ leaves
 -spruce
 -birch
 -acacia
+-jungle
 -dark oak
 -mangrove
 -azalea

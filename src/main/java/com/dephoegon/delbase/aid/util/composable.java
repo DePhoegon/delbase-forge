@@ -4,7 +4,7 @@ import net.minecraft.world.item.Items;
 import net.minecraft.world.level.ItemLike;
 import org.jetbrains.annotations.NotNull;
 
-import static com.dephoegon.delbase.block.wall.hedgeLeaves.*;
+import static com.dephoegon.delbase.aid.util.creativeTabsArrayLists.getAllLeaves;
 import static net.minecraft.world.level.block.ComposterBlock.COMPOSTABLES;
 
 public class composable {
@@ -15,16 +15,7 @@ public class composable {
         float f2 = 0.65F;
         float f3 = 0.85F;
         float f4 = 1.0F;
-        add(f, OAK_HEDGE.get());
-        add(f, SPRUCE_HEDGE.get());
-        add(f, BIRCH_HEDGE.get());
-        add(f, JUNGLE_HEDGE.get());
-        add(f, ACACIA_HEDGE.get());
-        add(f, DARK_OAK_HEDGE.get());
-        add(f, MANGROVE_HEDGE.get());
-        add(f, CHERRY_HEDGE.get());
-        add(f, AZALEA_HEDGE.get());
-        add(f, FLOWERING_AZALEA_HEDGE.get());
+        getAllLeaves().forEach((block) -> add(f, block.get()));
         add(f2, Items.ROTTEN_FLESH);
         add(f2, Items.SPIDER_EYE);
         add(f3, Items.COD);

@@ -8,6 +8,7 @@
     "delbase:mangrove_root_slab",
     "delbase:ochre_froglight_slab",
     "delbase:verdant_froglight_slab",
-    "delbase:pearlescent_froglight_slab"
+    "delbase:pearlescent_froglight_slab",
+    "#delbase:slabs/slab_leaves"
   ]
 }

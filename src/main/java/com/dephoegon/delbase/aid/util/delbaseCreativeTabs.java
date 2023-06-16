@@ -89,8 +89,7 @@ public class delbaseCreativeTabs {
         out.addAll(setStrippedWoodStairs());
         out.addAll(setTerracottaStairs());
         out.addAll(setWoodStairs());
-        out.addAll(getColoredLeaves());
-        out.addAll(getAltLeaves());
+        out.addAll(getAllLeaves());
         out.addAll(setChiseledSandStoneWalls());
         out.addAll(setConcreteWalls());
         out.addAll(setCutSandStoneWalls());

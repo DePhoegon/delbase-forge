@@ -1,0 +1,35 @@
+Updated Tags
+-Added support for future leaves to be added easily
+-included new wood types
+
+Leaf Stairs Added (in full)
+- Untested fully
+- Register / Blockstate / model files / loot table / tags / recipes
+
+Compostable logic Restructure
+- array foreach used for leaf blocks
+
+Leaves Color event logic Restructure
+- Use of array for each
+-- default color
+-- spruce color
+-- birch color
+
+CreativeTabs Array Logic restructure
+- put leaves in one location
+- seperated leaves with no colorcode (cherry) into their own
+- kept blocks of the same type in their own array
+- private use of internal leaf arrays
+-- Organization
+- Public use for
+-- default color leaves
+-- spruce color leaves
+-- birch color leaves
+-- all Leaves
+- Cleaned unused function (around transparency)
+- Setup easy way for leaves to be registered, sent for color coding, put in the compost bin, put in the creative tabs menu with minimal editing to arrays in a single java class
+
+registration for leaves collapsed into one line
+
+Changed oversite on cherry hedge
+- Changed sound to Cherry leaves (built in)

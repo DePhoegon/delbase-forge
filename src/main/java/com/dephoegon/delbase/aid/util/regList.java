@@ -66,6 +66,7 @@ public class regList {
         stairSmoothSandStones.register(eventBus);
         stairChiseledSandStones.register(eventBus);
         stairCutSandStones.register(eventBus);
+        stairLeaves.register(eventBus);
         stairSandStones.register(eventBus);
         stairQuartz.register(eventBus);
         stairConcrete.register(eventBus);

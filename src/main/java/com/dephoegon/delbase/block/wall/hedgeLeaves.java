@@ -44,7 +44,7 @@ public class hedgeLeaves {
             () -> new wallBlock(BlockBehaviour.Properties.copy(MANGROVE_LEAVES).sound(SoundType.GRASS).noOcclusion().isSuffocating(genBlock::never).isViewBlocking(genBlock::never).noOcclusion(),
                     "","","",true, null));
     public static final RegistryObject<WallBlock> CHERRY_HEDGE = register("cherry_hedge",
-            () -> new wallBlock(BlockBehaviour.Properties.copy(CHERRY_LEAVES).sound(SoundType.GRASS).noOcclusion().isSuffocating(genBlock::never).isViewBlocking(genBlock::never).noOcclusion(),
+            () -> new wallBlock(BlockBehaviour.Properties.copy(CHERRY_LEAVES).sound(SoundType.CHERRY_LEAVES).noOcclusion().isSuffocating(genBlock::never).isViewBlocking(genBlock::never).noOcclusion(),
                     "","","",true, null));
     public static final RegistryObject<WallBlock> AZALEA_HEDGE = register("azalea_hedge",
             () -> new wallBlock(BlockBehaviour.Properties.copy(AZALEA_LEAVES).sound(SoundType.GRASS).noOcclusion().isSuffocating(genBlock::never).isViewBlocking(genBlock::never).noOcclusion(),
