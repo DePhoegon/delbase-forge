@@ -22,6 +22,7 @@ public class composable {
         add(f, ACACIA_HEDGE.get());
         add(f, DARK_OAK_HEDGE.get());
         add(f, MANGROVE_HEDGE.get());
+        add(f, CHERRY_HEDGE.get());
         add(f, AZALEA_HEDGE.get());
         add(f, FLOWERING_AZALEA_HEDGE.get());
         add(f2, Items.ROTTEN_FLESH);

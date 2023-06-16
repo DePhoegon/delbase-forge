@@ -12,15 +12,74 @@ Obsidian Variants -Back Burner
 
 Further Nether Touches -Other Nether blocks do not fit in, in the same way grass does not fit in to mod variants
 
-Color Swap Wood -Makes No sense
 Destroy blocks for dyes -Does not fit in with mod Idea
 Machine to swap colors of blocks -Makes No sense with current mod setup.
 
+=====================
+Stairs/Walls/fences/fence gates/slabs
 
-====================
-Guide book item
+cherry_wood
+stripped_cherry_wood
+cherry_log
+stripped_cherry_log
 
-"item": "patchouli:guide_book",
-"nbt": {
-    "patchouli:book": "delbase:reclaim"
-}
+stairs/fences/fence gates/slabs
+leaves
+= Slab -> Slice
+-oak
+-spruce
+-birch
+-acacia
+-dark oak
+-mangrove
+-azalea
+-flowering azalea
+-cherry
+-- set all blocks from cherry_leaves in altleaves (does not use the same method for coloration)
+
+walls
+
+bamboo
+-Posts
+-- Bamboo_block / Stripped_bamboo_bloc
+-sides
+-- rotated 90' (wood)
+--- bamboo_block/stripped_bamboo_block
+-- normal (log)
+--- bamboo_mosaic / bamboo planks
+
+bamboo_wall -> (Wood)
+bamboo_plank_wall -> (log)
+bamboo_mosaic_wall -> (log)
+
+Recipes
+----
+bamboo mosaic - Stairs / Slabs
+bamboo planks - Stairs / Slabs
+
+Special overrides
+fence
+
+[bamboo fence]
+bamboo_block -> 3
+stripped_bamboo_block -> 3
+bamboo_mosaic -> 1
+
+fence gates
+
+[bamboo fence gate]
+bamboo_block -> 2
+stripped_bamboo_block -> 2
+bamboo_mosaic -> 1
+
+Tag Files
+-----
+Add
+- cherry_log
+- stripped_cherry_log
+- cherry_wood
+- stripped_cherry_wood
+- bamboo_block
+- stripped_bamboo_block
+- bamboo_plank
+- bamboo_mosaic

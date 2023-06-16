@@ -1553,7 +1553,7 @@ public class creativeTabsArrayLists {
         return out;
     }
     public static @NotNull ArrayList<RegistryObject<? extends Block>> getTranslucentBlocks() {
-        ArrayList<RegistryObject<? extends Block>> out = new ArrayList<>(getAllLeaves());
+        ArrayList<RegistryObject<? extends Block>> out = new ArrayList<>(getColoredLeaves());
         out.add(MANGROVE_ROOT_WALL);
         out.add(MANGROVE_ROOT_FENCE_GATE);
         out.add(MANGROVE_ROOT_FENCE);
@@ -1562,10 +1562,15 @@ public class creativeTabsArrayLists {
         out.add(BLOCK_CUTTING_STATION);
         return out;
     }
-    public static @NotNull ArrayList<RegistryObject<? extends Block>> getAllLeaves() {
+    public static @NotNull ArrayList<RegistryObject<? extends Block>> getColoredLeaves() {
         ArrayList<RegistryObject<? extends Block>> out = new ArrayList<>(setDefaultColorHedgeLeaves());
         out.add(SPRUCE_HEDGE);
         out.add(BIRCH_HEDGE);
+        return out;
+    }
+    public static @NotNull ArrayList<RegistryObject<? extends Block>> getAltLeaves() {
+        ArrayList<RegistryObject<? extends Block>> out = new ArrayList<>();
+        out.add(CHERRY_HEDGE);
         return out;
     }
 }

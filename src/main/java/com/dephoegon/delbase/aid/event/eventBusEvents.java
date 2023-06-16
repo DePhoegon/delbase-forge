@@ -16,7 +16,7 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import org.jetbrains.annotations.NotNull;
 
-import static com.dephoegon.delbase.aid.util.creativeTabsArrayLists.getAllLeaves;
+import static com.dephoegon.delbase.aid.util.creativeTabsArrayLists.getColoredLeaves;
 import static com.dephoegon.delbase.aid.util.creativeTabsArrayLists.setDefaultColorHedgeLeaves;
 import static com.dephoegon.delbase.block.wall.hedgeLeaves.BIRCH_HEDGE;
 import static com.dephoegon.delbase.block.wall.hedgeLeaves.SPRUCE_HEDGE;
@@ -41,7 +41,7 @@ public class eventBusEvents {
 
     @SubscribeEvent
     public static void registerItemColors(RegisterColorHandlersEvent.Item event) {
-        getAllLeaves().forEach((block) -> event.register((stack, color) -> event.getBlockColors().getColor(((BlockItem) stack.getItem()).getBlock().defaultBlockState(), null, null, color),
+        getColoredLeaves().forEach((block) -> event.register((stack, color) -> event.getBlockColors().getColor(((BlockItem) stack.getItem()).getBlock().defaultBlockState(), null, null, color),
                 block.get()));
     }
     public static void onServerStartAddCompostItems(ServerStartedEvent ignoredEvent) { composable.addToList(); }

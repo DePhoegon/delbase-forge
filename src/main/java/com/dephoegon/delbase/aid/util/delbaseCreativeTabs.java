@@ -4,9 +4,7 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Items;
 import net.minecraft.world.level.ItemLike;
-import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.RegistryObject;
 import org.jetbrains.annotations.NotNull;
@@ -17,16 +15,16 @@ import static com.dephoegon.delbase.aid.util.creativeTabsArrayLists.*;
 import static com.dephoegon.delbase.block.general.machineBlocks.BLOCK_CUTTING_STATION;
 import static com.dephoegon.delbase.block.general.miscSpecialCases.HARDENED_OAK_PLANKS;
 import static com.dephoegon.delbase.delbase.Mod_ID;
+import static com.dephoegon.delbase.item.blockCutterPlans.WALL_PLANS;
 
-@Mod.EventBusSubscriber(modid = Mod_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
 public class delbaseCreativeTabs {
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, Mod_ID);
     public static final RegistryObject<CreativeModeTab> DELBASE_BLOCK = CREATIVE_MODE_TABS.register("dephoegon_blocks", () -> CreativeModeTab.builder()
-            .icon(() -> new ItemStack(Items.REDSTONE_BLOCK))
+            .icon(() -> new ItemStack(BLOCK_CUTTING_STATION.get()))
             .title(Component.translatable("itemGroup.dephoegon_blocks"))
             .build());
     public static final RegistryObject<CreativeModeTab> DELBASE_ITEM = CREATIVE_MODE_TABS.register("dephoegon_items", () -> CreativeModeTab.builder()
-            .icon(() -> new ItemStack(Items.RED_DYE))
+            .icon(() -> new ItemStack(WALL_PLANS.get()))
             .title(Component.translatable("itemGroup.dephoegon_items"))
             .build());
 
@@ -91,8 +89,8 @@ public class delbaseCreativeTabs {
         out.addAll(setStrippedWoodStairs());
         out.addAll(setTerracottaStairs());
         out.addAll(setWoodStairs());
-        out.addAll(getAllLeaves());
-        out.addAll(setOffColorHedge());
+        out.addAll(getColoredLeaves());
+        out.addAll(getAltLeaves());
         out.addAll(setChiseledSandStoneWalls());
         out.addAll(setConcreteWalls());
         out.addAll(setCutSandStoneWalls());

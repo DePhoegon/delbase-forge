@@ -1,8 +1,10 @@
+Double check 'Block Cutting Station Recipes' new methods.
+---------
 After creative tab Ingredients
 Sort Creative Tab menus
 - Put after Ingredients
 -- Stack them next to each other
-Double check 'Block Cutting Station Recipes' new methods.
+
 Check Blocks models & types in game
 Look for new wood/blocks to bring into the block gambit
 Test Mechanics out.
@@ -18,9 +20,13 @@ Consider interactions with new mobs
 
  line up extensive testing.
 
-
  Wait for Patchouli to release for 1.20 to re-enable patchouli stuff.
 
+Backporting
+---------
+18.2, 19.2, 19.3
+existing (to the version) leaf variant created
+-slabs/fence/fencegate/stairs
 
 Chocobo Mod
 -------
