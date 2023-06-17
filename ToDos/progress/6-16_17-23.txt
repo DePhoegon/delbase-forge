@@ -1,0 +1,29 @@
+Finished Leafy Things
+
+Adjusted Double slab Leaves model file
+
+Fixed
+-Block Colors
+-- Mangrove leafy things
+---- Item color fixes as well
+-- Azalea & flowering Azaleas
+--- They are not biome colored
+
+Corrected registration of leafy things
+- added
+-- noOcclusion
+-- isSuffocating(false)
+-- viewblocking(false)
+- changed sound types
+-- azalea_leaves (for azalea leafy)
+-- flowering azalea leaves (for flowering azalea leafy)
+-- Cherry_leaves (for cherry leafy)
+
+Tags
+- Fixed Typo in woodlike for fence gates
+- added registered blocks to the right tag files
+
+Change/Overrides
+-Leaves (in game)
+-- Used block_leaves custom model
+--- parent file (double slab of the same leaf type)

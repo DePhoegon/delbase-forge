@@ -8,6 +8,7 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.WallBlock;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.material.MapColor;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -41,16 +42,16 @@ public class hedgeLeaves {
             () -> new wallBlock(BlockBehaviour.Properties.copy(DARK_OAK_LEAVES).sound(SoundType.GRASS).noOcclusion().isSuffocating(genBlock::never).isViewBlocking(genBlock::never).noOcclusion(),
                     "","","",true, null));
     public static final RegistryObject<WallBlock> MANGROVE_HEDGE = register("mangrove_hedge",
-            () -> new wallBlock(BlockBehaviour.Properties.copy(MANGROVE_LEAVES).sound(SoundType.GRASS).noOcclusion().isSuffocating(genBlock::never).isViewBlocking(genBlock::never).noOcclusion(),
+            () -> new wallBlock(BlockBehaviour.Properties.copy(MANGROVE_LEAVES).sound(SoundType.GRASS).mapColor(MapColor.PLANT).noOcclusion().isSuffocating(genBlock::never).isViewBlocking(genBlock::never).noOcclusion(),
                     "","","",true, null));
     public static final RegistryObject<WallBlock> CHERRY_HEDGE = register("cherry_hedge",
             () -> new wallBlock(BlockBehaviour.Properties.copy(CHERRY_LEAVES).sound(SoundType.CHERRY_LEAVES).noOcclusion().isSuffocating(genBlock::never).isViewBlocking(genBlock::never).noOcclusion(),
                     "","","",true, null));
     public static final RegistryObject<WallBlock> AZALEA_HEDGE = register("azalea_hedge",
-            () -> new wallBlock(BlockBehaviour.Properties.copy(AZALEA_LEAVES).sound(SoundType.GRASS).noOcclusion().isSuffocating(genBlock::never).isViewBlocking(genBlock::never).noOcclusion(),
+            () -> new wallBlock(BlockBehaviour.Properties.copy(AZALEA_LEAVES).sound(SoundType.AZALEA_LEAVES).mapColor(MapColor.PLANT).noOcclusion().isSuffocating(genBlock::never).isViewBlocking(genBlock::never).noOcclusion(),
                     "","","",true, null));
     public static final RegistryObject<WallBlock> FLOWERING_AZALEA_HEDGE = register("flowering_azalea_hedge",
-            () -> new wallBlock(BlockBehaviour.Properties.copy(FLOWERING_AZALEA_LEAVES).sound(SoundType.GRASS).noOcclusion().isSuffocating(genBlock::never).isViewBlocking(genBlock::never).noOcclusion(),
+            () -> new wallBlock(BlockBehaviour.Properties.copy(FLOWERING_AZALEA_LEAVES).mapColor(MapColor.PLANT).sound(SoundType.FLOWERING_AZALEA).noOcclusion().isSuffocating(genBlock::never).isViewBlocking(genBlock::never).noOcclusion(),
                     "","","",true, null));
 
     public static void register(IEventBus eventBus) {

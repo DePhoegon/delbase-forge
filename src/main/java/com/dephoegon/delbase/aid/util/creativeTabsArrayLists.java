@@ -13,6 +13,7 @@ import static com.dephoegon.delbase.block.fence.chiseledSandStoneFences.*;
 import static com.dephoegon.delbase.block.fence.concreteFences.*;
 import static com.dephoegon.delbase.block.fence.cutSandStoneFences.*;
 import static com.dephoegon.delbase.block.fence.fenceMisc.*;
+import static com.dephoegon.delbase.block.fence.leafFences.*;
 import static com.dephoegon.delbase.block.fence.quartzFences.*;
 import static com.dephoegon.delbase.block.fence.sandFences.*;
 import static com.dephoegon.delbase.block.fence.sandStoneFences.*;
@@ -43,6 +44,7 @@ import static com.dephoegon.delbase.block.slab.slabStones.DEEPSLATE_SLAB;
 import static com.dephoegon.delbase.block.slab.slabStrippedWood.*;
 import static com.dephoegon.delbase.block.slab.slabTerracotta.*;
 import static com.dephoegon.delbase.block.slab.slabWood.*;
+import static com.dephoegon.delbase.block.slab.slabLeaves.*;
 import static com.dephoegon.delbase.block.stair.stairChiseledSandStones.*;
 import static com.dephoegon.delbase.block.stair.stairConcrete.*;
 import static com.dephoegon.delbase.block.stair.stairCutSandStones.*;
@@ -1539,18 +1541,46 @@ public class creativeTabsArrayLists {
         ArrayList<RegistryObject<? extends Block>> out = new ArrayList<>();
         out.add(CHERRY_HEDGE);
         out.add(CHERRY_LEAF_STAIR);
+        out.add(CHERRY_LEAF_SLAB);
+        out.add(CHERRY_LEAF_FENCE);
+        out.add(CHERRY_LEAF_FENCE_GATE);
+        out.add(AZALEA_HEDGE);
+        out.add(FLOWERING_AZALEA_HEDGE);
+        out.add(AZALEA_LEAF_STAIR);
+        out.add(FLOWERING_AZALEA_LEAF_STAIR);
+        out.add(AZALEA_LEAF_SLAB);
+        out.add(FLOWERING_AZALEA_LEAF_SLAB);
+        out.add(AZALEA_LEAF_FENCE);
+        out.add(FLOWERING_AZALEA_LEAF_FENCE);
+        out.add(AZALEA_LEAF_FENCE_GATE);
+        out.add(FLOWERING_AZALEA_LEAF_FENCE_GATE);
         return out;
     }
     public static @NotNull ArrayList<RegistryObject<? extends Block>> BirchColoredLeaves() {
         ArrayList<RegistryObject<? extends Block>> out = new ArrayList<>();
         out.add(BIRCH_HEDGE);
         out.add(BIRCH_LEAF_STAIR);
+        out.add(BIRCH_LEAF_SLAB);
+        out.add(BIRCH_LEAF_FENCE);
+        out.add(BIRCH_LEAF_FENCE_GATE);
         return out;
     }
     public static @NotNull ArrayList<RegistryObject<? extends Block>> SpruceColoredLeaves() {
         ArrayList<RegistryObject<? extends Block>> out = new ArrayList<>();
         out.add(SPRUCE_HEDGE);
         out.add(SPRUCE_LEAF_STAIR);
+        out.add(SPRUCE_LEAF_SLAB);
+        out.add(SPRUCE_LEAF_FENCE);
+        out.add(SPRUCE_LEAF_FENCE_GATE);
+        return out;
+    }
+    public static @NotNull ArrayList<RegistryObject<? extends Block>> MangroveColoredLeaves() {
+        ArrayList<RegistryObject<? extends Block>> out = new ArrayList<>();
+        out.add(MANGROVE_HEDGE);
+        out.add(MANGROVE_LEAF_STAIR);
+        out.add(MANGROVE_LEAF_SLAB);
+        out.add(MANGROVE_LEAF_FENCE);
+        out.add(MANGROVE_LEAF_FENCE_GATE);
         return out;
     }
     private static @NotNull ArrayList<RegistryObject<WallBlock>> DefaultColorHedgeLeaves() {
@@ -1559,9 +1589,6 @@ public class creativeTabsArrayLists {
         out.add(JUNGLE_HEDGE);
         out.add(ACACIA_HEDGE);
         out.add(DARK_OAK_HEDGE);
-        out.add(MANGROVE_HEDGE);
-        out.add(AZALEA_HEDGE);
-        out.add(FLOWERING_AZALEA_HEDGE);
         return out;
     }
     private static @NotNull ArrayList<RegistryObject<StairBlock>> DefaultColorStairLeaves() {
@@ -1570,9 +1597,30 @@ public class creativeTabsArrayLists {
         out.add(JUNGLE_LEAF_STAIR);
         out.add(ACACIA_LEAF_STAIR);
         out.add(DARK_OAK_LEAF_STAIR);
-        out.add(MANGROVE_LEAF_STAIR);
-        out.add(AZALEA_LEAF_STAIR);
-        out.add(FLOWERING_AZALEA_LEAF_STAIR);
+        return out;
+    }
+    private static @NotNull ArrayList<RegistryObject<SlabBlock>> DefaultColorSlabLeaves() {
+        ArrayList<RegistryObject<SlabBlock>> out = new ArrayList<>();
+        out.add(OAK_LEAF_SLAB);
+        out.add(JUNGLE_LEAF_SLAB);
+        out.add(ACACIA_LEAF_SLAB);
+        out.add(DARK_OAK_LEAF_SLAB);
+        return out;
+    }
+    private static @NotNull ArrayList<RegistryObject<FenceBlock>> DefaultColorFenceLeaves() {
+        ArrayList<RegistryObject<FenceBlock>> out = new ArrayList<>();
+        out.add(OAK_LEAF_FENCE);
+        out.add(JUNGLE_LEAF_FENCE);
+        out.add(ACACIA_LEAF_FENCE);
+        out.add(DARK_OAK_LEAF_FENCE);
+        return out;
+    }
+    private static @NotNull ArrayList<RegistryObject<FenceGateBlock>> DefaultColorFenceGateLeaves() {
+        ArrayList<RegistryObject<FenceGateBlock>> out = new ArrayList<>();
+        out.add(OAK_LEAF_FENCE_GATE);
+        out.add(JUNGLE_LEAF_FENCE_GATE);
+        out.add(ACACIA_LEAF_FENCE_GATE);
+        out.add(DARK_OAK_LEAF_FENCE_GATE);
         return out;
     }
 
@@ -1580,6 +1628,9 @@ public class creativeTabsArrayLists {
         ArrayList<RegistryObject<? extends Block>> out = new ArrayList<>();
         out.addAll(DefaultColorHedgeLeaves());
         out.addAll(DefaultColorStairLeaves());
+        out.addAll(DefaultColorSlabLeaves());
+        out.addAll(DefaultColorFenceLeaves());
+        out.addAll(DefaultColorFenceGateLeaves());
         return out;
     }
     public static @NotNull ArrayList<RegistryObject<? extends Block>> ColoredLeaves() {
@@ -1592,6 +1643,7 @@ public class creativeTabsArrayLists {
     public static @NotNull ArrayList<RegistryObject<? extends Block>> getAllLeaves() {
         ArrayList<RegistryObject<? extends Block>> out = new ArrayList<>();
         out.addAll(ColoredLeaves());
+        out.addAll(MangroveColoredLeaves());
         out.addAll(NonColoredLeaves());
         return out;
     }

@@ -60,6 +60,7 @@ public class regList {
         slabStones.register(eventBus);
         slabTerracotta.register(eventBus);
         slabMisc.register(eventBus);
+        slabLeaves.register(eventBus);
 
         //Stairs
         stairSands.register(eventBus);
@@ -101,6 +102,7 @@ public class regList {
         smoothSandStoneFences.register(eventBus);
         sandStoneFences.register(eventBus);
         fenceMisc.register(eventBus);
+        leafFences.register(eventBus);
         cutSandStoneFences.register(eventBus);
         chiseledSandStoneFences.register(eventBus);
         stoneFences.register(eventBus);

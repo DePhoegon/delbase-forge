@@ -34,12 +34,12 @@ public class eventBusEvents {
         DefaultColoredLeaves().forEach((block) -> event.register(DEFAULT_LEAVES, block.get()));
         BirchColoredLeaves().forEach((block) -> event.register(BIRCH_LEAVES, block.get()));
         SpruceColoredLeaves().forEach((block) -> event.register(SPRUCE_LEAVES, block.get()));
+        MangroveColoredLeaves().forEach((block) -> event.register(DEFAULT_LEAVES, block.get()));
     }
-
     @SubscribeEvent
-    public static void registerItemColors(RegisterColorHandlersEvent.Item event) {
-        ColoredLeaves().forEach((block) -> event.register((stack, color) -> event.getBlockColors().getColor(((BlockItem) stack.getItem()).getBlock().defaultBlockState(), null, null, color),
-                block.get()));
+    public static void registerItemColors(RegisterColorHandlersEvent.@NotNull Item event) {
+        ColoredLeaves().forEach((block) -> event.register((stack, color) -> event.getBlockColors().getColor(((BlockItem) stack.getItem()).getBlock().defaultBlockState(), null, null, color), block.get()));
+        MangroveColoredLeaves().forEach((block) -> event.register((itemColor, itemLike) -> FoliageColor.getMangroveColor(), block.get().asItem()));
     }
     public static void onServerStartAddCompostItems(ServerStartedEvent ignoredEvent) { composable.addToList(); }
 }
