@@ -1,6 +1,7 @@
 package com.dephoegon.delbase.block.wall;
 
 import com.dephoegon.delbase.aid.block.alt.woodWall;
+import com.dephoegon.delbase.aid.block.stock.wallBlock;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
@@ -60,6 +61,19 @@ public class wallStrippedWood {
             () -> new woodWall(BlockBehaviour.Properties.copy(MANGROVE_WOOD).sound(SoundType.WOOD),"","","", true, null), 5001);
     public static final RegistryObject<WallBlock> STRIPPED_MANGROVE_LOG_WALL = register("stripped_mangrove_log_wall",
             () -> new woodWall(BlockBehaviour.Properties.copy(MANGROVE_WOOD).sound(SoundType.WOOD),"","","", true, null), 5001);
+    public static final RegistryObject<WallBlock> STRIPPED_BAMBOO_WALL = register("stripped_bamboo_wall",
+            () -> new wallBlock(BlockBehaviour.Properties.copy(BAMBOO_PLANKS).sound(SoundType.BAMBOO_WOOD),
+                    "","","",true, null));
+    public static final RegistryObject<WallBlock> STRIPPED_BAMBOO_PLANK_WALL = register("stripped_bamboo_plank_wall",
+            () -> new wallBlock(BlockBehaviour.Properties.copy(BAMBOO_PLANKS).sound(SoundType.BAMBOO_WOOD),
+                    "","","",true, null));
+    public static final RegistryObject<WallBlock> STRIPPED_BAMBOO_MOSAIC_WALL = register("stripped_bamboo_mosaic_wall",
+            () -> new wallBlock(BlockBehaviour.Properties.copy(BAMBOO_PLANKS).sound(SoundType.BAMBOO_WOOD),
+                    "","","",true, null));
+    public static final RegistryObject<WallBlock> STRIPPED_CHERRY_WOOD_WALL = register("stripped_cherry_wood_wall",
+            () -> new woodWall(BlockBehaviour.Properties.copy(CHERRY_WOOD).sound(SoundType.CHERRY_WOOD),"","","", true, null), 5001);
+    public static final RegistryObject<WallBlock> STRIPPED_CHERRY_LOG_WALL = register("stripped_cherry_log_wall",
+            () -> new woodWall(BlockBehaviour.Properties.copy(CHERRY_WOOD).sound(SoundType.CHERRY_WOOD),"","","", true, null), 5001);
 
     public static void register(IEventBus eventBus) {
         BLOCKS.register(eventBus);

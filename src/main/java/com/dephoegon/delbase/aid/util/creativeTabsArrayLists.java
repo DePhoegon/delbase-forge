@@ -32,6 +32,7 @@ import static com.dephoegon.delbase.block.slab.slabChiseledSandStonesEnergy.*;
 import static com.dephoegon.delbase.block.slab.slabConcrete.*;
 import static com.dephoegon.delbase.block.slab.slabCutSandStones.*;
 import static com.dephoegon.delbase.block.slab.slabCutSandStonesEnergy.*;
+import static com.dephoegon.delbase.block.slab.slabLeaves.*;
 import static com.dephoegon.delbase.block.slab.slabMisc.*;
 import static com.dephoegon.delbase.block.slab.slabQuartz.*;
 import static com.dephoegon.delbase.block.slab.slabSandStones.*;
@@ -44,7 +45,6 @@ import static com.dephoegon.delbase.block.slab.slabStones.DEEPSLATE_SLAB;
 import static com.dephoegon.delbase.block.slab.slabStrippedWood.*;
 import static com.dephoegon.delbase.block.slab.slabTerracotta.*;
 import static com.dephoegon.delbase.block.slab.slabWood.*;
-import static com.dephoegon.delbase.block.slab.slabLeaves.*;
 import static com.dephoegon.delbase.block.stair.stairChiseledSandStones.*;
 import static com.dephoegon.delbase.block.stair.stairConcrete.*;
 import static com.dephoegon.delbase.block.stair.stairCutSandStones.*;
@@ -1492,6 +1492,11 @@ public class creativeTabsArrayLists {
         out.add(STRIPPED_BIRCH_LOG_WALL);
         out.add(STRIPPED_MANGROVE_WOOD_WALL);
         out.add(STRIPPED_MANGROVE_LOG_WALL);
+        out.add(STRIPPED_BAMBOO_WALL);
+        out.add(STRIPPED_BAMBOO_PLANK_WALL);
+        out.add(STRIPPED_BAMBOO_MOSAIC_WALL);
+        out.add(STRIPPED_CHERRY_LOG_WALL);
+        out.add(STRIPPED_CHERRY_WOOD_WALL);
         return out;
     }
     public static @NotNull ArrayList<RegistryObject<WallBlock>> setTerracottaWalls() {
@@ -1535,6 +1540,11 @@ public class creativeTabsArrayLists {
         out.add(BIRCH_LOG_WALL);
         out.add(MANGROVE_WOOD_WALL);
         out.add(MANGROVE_LOG_WALL);
+        out.add(BAMBOO_WALL);
+        out.add(BAMBOO_PLANK_WALL);
+        out.add(BAMBOO_MOSAIC_WALL);
+        out.add(CHERRY_WOOD_WALL);
+        out.add(CHERRY_LOG_WALL);
         return out;
     }
     private static @NotNull ArrayList<RegistryObject<? extends Block>> NonColoredLeaves() {

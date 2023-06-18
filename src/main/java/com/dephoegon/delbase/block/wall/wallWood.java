@@ -1,6 +1,7 @@
 package com.dephoegon.delbase.block.wall;
 
 import com.dephoegon.delbase.aid.block.alt.woodWall;
+import com.dephoegon.delbase.aid.block.stock.wallBlock;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
@@ -61,6 +62,19 @@ public class wallWood {
             () -> new woodWall(BlockBehaviour.Properties.copy(MANGROVE_WOOD).sound(SoundType.WOOD),"","","", true, STRIPPED_MANGROVE_WOOD_WALL.get().defaultBlockState()), 5001);
     public static final RegistryObject<WallBlock> MANGROVE_LOG_WALL = register("mangrove_log_wall",
             () -> new woodWall(BlockBehaviour.Properties.copy(MANGROVE_WOOD).sound(SoundType.WOOD),"","","", true, STRIPPED_MANGROVE_LOG_WALL.get().defaultBlockState()), 5001);
+    public static final RegistryObject<WallBlock> BAMBOO_WALL = register("bamboo_wall",
+            () -> new wallBlock(BlockBehaviour.Properties.copy(BAMBOO_PLANKS).sound(SoundType.BAMBOO_WOOD),
+                    "","","",true, STRIPPED_BAMBOO_WALL.get().defaultBlockState()), 5001);
+    public static final RegistryObject<WallBlock> BAMBOO_PLANK_WALL = register("bamboo_plank_wall",
+            () -> new wallBlock(BlockBehaviour.Properties.copy(BAMBOO_PLANKS).sound(SoundType.BAMBOO_WOOD),
+                    "","","",true, STRIPPED_BAMBOO_PLANK_WALL.get().defaultBlockState()), 5001);
+    public static final RegistryObject<WallBlock> BAMBOO_MOSAIC_WALL = register("bamboo_mosaic_wall",
+            () -> new wallBlock(BlockBehaviour.Properties.copy(BAMBOO_PLANKS).sound(SoundType.BAMBOO_WOOD),
+                    "","","",true, STRIPPED_BAMBOO_MOSAIC_WALL.get().defaultBlockState()), 5001);
+    public static final RegistryObject<WallBlock> CHERRY_WOOD_WALL = register("cherry_wood_wall",
+            () -> new woodWall(BlockBehaviour.Properties.copy(CHERRY_WOOD).sound(SoundType.WOOD),"","","", true, STRIPPED_CHERRY_WOOD_WALL.get().defaultBlockState()), 5001);
+    public static final RegistryObject<WallBlock> CHERRY_LOG_WALL = register("cherry_log_wall",
+            () -> new woodWall(BlockBehaviour.Properties.copy(CHERRY_WOOD).sound(SoundType.WOOD),"","","", true, STRIPPED_CHERRY_LOG_WALL.get().defaultBlockState()), 5001);
 
     public static void register(IEventBus eventBus) {
         BLOCKS.register(eventBus);

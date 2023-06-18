@@ -1,0 +1,29 @@
+Added blocks
+=Walls
+== bamboo block
+== bamboo plank
+== bamboo mosaic
+== Stripped bamboo block
+== stripped bamboo plank
+== stripped bamboo mosaic
+== cherry wood
+== cherry log
+== stripped cherry wood
+== stripped cherry log
+
+= Textures
+== Wall Tops
+-- Cherry wood
+-- Cherry log (covers stripped version also)
+-- stripped Cherry wood
+== Stairs Inside
+-- cherry log inside
+
+= Stripping of bamboo & cherry walls
+
+Tag files updated
+Recipes added
+
+Updated base model twist files
+
+Fixed acacia wood wall side model file
