@@ -61,6 +61,12 @@ public class slabWood {
             () -> new woodSlab(BlockBehaviour.Properties.copy(MANGROVE_WOOD).sound(SoundType.WOOD), "","","", true, STRIPPED_MANGROVE_WOOD_SLAB.get().defaultBlockState()), 3001);
     public static final RegistryObject<SlabBlock> MANGROVE_LOG_SLAB = register("mangrove_log_slab",
             () -> new woodSlab(BlockBehaviour.Properties.copy(MANGROVE_WOOD).sound(SoundType.WOOD), "","","", true, STRIPPED_MANGROVE_LOG_SLAB.get().defaultBlockState()), 3001);
+    public static final RegistryObject<SlabBlock> CHERRY_WOOD_SLAB = register("cherry_wood_slab",
+            () -> new woodSlab(BlockBehaviour.Properties.copy(CHERRY_WOOD).sound(SoundType.CHERRY_WOOD), "","","", true, STRIPPED_CHERRY_WOOD_SLAB.get().defaultBlockState()), 3001);
+    public static final RegistryObject<SlabBlock> CHERRY_LOG_SLAB = register("cherry_log_slab",
+            () -> new woodSlab(BlockBehaviour.Properties.copy(CHERRY_WOOD).sound(SoundType.CHERRY_WOOD), "","","", true, STRIPPED_CHERRY_LOG_SLAB.get().defaultBlockState()), 3001);
+    public static final RegistryObject<SlabBlock> BAMBOO_BLOCK_SLAB = register("bamboo_block_slab",
+            () -> new woodSlab(BlockBehaviour.Properties.copy(BAMBOO_PLANKS).sound(SoundType.BAMBOO_WOOD), "","","", true, STRIPPED_BAMBOO_BLOCK_SLAB.get().defaultBlockState()), 3001);
 
     public static void register(IEventBus eventBus) {
         BLOCKS.register(eventBus);

@@ -16,14 +16,9 @@ Destroy blocks for dyes -Does not fit in with mod Idea
 Machine to swap colors of blocks -Makes No sense with current mod setup.
 
 =====================
-Stairs/fences/fence gates/slabs
+fences/fence gates
 
 cherry_wood
 stripped_cherry_wood
 cherry_log
 stripped_cherry_log
-
-stairs
-
-bamboo block
-stripped bamboo block

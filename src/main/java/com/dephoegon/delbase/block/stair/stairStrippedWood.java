@@ -78,6 +78,15 @@ public class stairStrippedWood {
     public static final RegistryObject<StairBlock> STRIPPED_MANGROVE_LOG_STAIR = register("stripped_mangrove_log_stair",
             () -> new woodStair(MANGROVE_WOOD::defaultBlockState, BlockBehaviour.Properties.copy(MANGROVE_WOOD).sound(SoundType.WOOD)
                     , "","","", true, null), 5001);
+    public static final RegistryObject<StairBlock> STRIPPED_CHERRY_WOOD_STAIR = register("stripped_cherry_wood_stair",
+            () -> new woodStair(CHERRY_WOOD::defaultBlockState, BlockBehaviour.Properties.copy(CHERRY_WOOD).sound(SoundType.CHERRY_WOOD)
+                    , "","","", true, null), 5001);
+    public static final RegistryObject<StairBlock> STRIPPED_CHERRY_LOG_STAIR = register("stripped_cherry_log_stair",
+            () -> new woodStair(CHERRY_WOOD::defaultBlockState, BlockBehaviour.Properties.copy(CHERRY_WOOD).sound(SoundType.CHERRY_WOOD)
+                    , "","","", true, null), 5001);
+    public static final RegistryObject<StairBlock> STRIPPED_BAMBOO_BLOCK_STAIR = register("stripped_bamboo_block_stair",
+            () -> new woodStair(BAMBOO_PLANKS::defaultBlockState, BlockBehaviour.Properties.copy(BAMBOO_PLANKS).sound(SoundType.BAMBOO_WOOD)
+                    , "","","", true, null), 5001);
 
     public static void register(IEventBus eventBus) {
         BLOCKS.register(eventBus);

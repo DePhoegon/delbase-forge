@@ -57,9 +57,15 @@ public class slabStrippedWood {
     public static final RegistryObject<SlabBlock> STRIPPED_BIRCH_LOG_SLAB = register("stripped_birch_log_slab",
             () -> new woodSlab(BlockBehaviour.Properties.copy(STRIPPED_BIRCH_WOOD).sound(SoundType.WOOD),"","","",true, null), 3001);
     public static final RegistryObject<SlabBlock> STRIPPED_MANGROVE_WOOD_SLAB = register("stripped_mangrove_wood_slab",
-            () -> new woodSlab(BlockBehaviour.Properties.copy(MANGROVE_WOOD).sound(SoundType.WOOD), "","","", true, null), 3001);
+            () -> new woodSlab(BlockBehaviour.Properties.copy(STRIPPED_BIRCH_WOOD).sound(SoundType.WOOD), "","","", true, null), 3001);
     public static final RegistryObject<SlabBlock> STRIPPED_MANGROVE_LOG_SLAB = register("stripped_mangrove_log_slab",
-            () -> new woodSlab(BlockBehaviour.Properties.copy(MANGROVE_WOOD).sound(SoundType.WOOD), "","","", true, null), 3001);
+            () -> new woodSlab(BlockBehaviour.Properties.copy(STRIPPED_BIRCH_WOOD).sound(SoundType.WOOD), "","","", true, null), 3001);
+    public static final RegistryObject<SlabBlock> STRIPPED_CHERRY_WOOD_SLAB = register("stripped_cherry_wood_slab",
+            () -> new woodSlab(BlockBehaviour.Properties.copy(STRIPPED_CHERRY_WOOD).sound(SoundType.CHERRY_WOOD), "","","", true, null), 3001);
+    public static final RegistryObject<SlabBlock> STRIPPED_CHERRY_LOG_SLAB = register("stripped_cherry_log_slab",
+            () -> new woodSlab(BlockBehaviour.Properties.copy(STRIPPED_CHERRY_WOOD).sound(SoundType.CHERRY_WOOD), "","","", true, null), 3001);
+    public static final RegistryObject<SlabBlock> STRIPPED_BAMBOO_BLOCK_SLAB = register("stripped_bamboo_block_slab",
+            () -> new woodSlab(BlockBehaviour.Properties.copy(BAMBOO_PLANKS).sound(SoundType.BAMBOO_WOOD), "","","", true, null), 3001);
 
     public static void register(IEventBus eventBus) {
         BLOCKS.register(eventBus);

@@ -1021,6 +1021,9 @@ public class creativeTabsArrayLists {
         out.add(STRIPPED_BIRCH_LOG_SLAB);
         out.add(STRIPPED_MANGROVE_WOOD_SLAB);
         out.add(STRIPPED_MANGROVE_LOG_SLAB);
+        out.add(STRIPPED_CHERRY_WOOD_SLAB);
+        out.add(STRIPPED_CHERRY_LOG_SLAB);
+        out.add(STRIPPED_BAMBOO_BLOCK_SLAB);
         return out;
     }
     public static @NotNull ArrayList<RegistryObject<SlabBlock>> setTerracottaSlabs() {
@@ -1063,6 +1066,9 @@ public class creativeTabsArrayLists {
         out.add(BIRCH_LOG_SLAB);
         out.add(MANGROVE_WOOD_SLAB);
         out.add(MANGROVE_LOG_SLAB);
+        out.add(CHERRY_WOOD_SLAB);
+        out.add(CHERRY_LOG_SLAB);
+        out.add(BAMBOO_BLOCK_SLAB);
         return out;
     }
     public static @NotNull ArrayList<RegistryObject<StairBlock>> setChiseledSandStoneStairs() {
@@ -1252,6 +1258,9 @@ public class creativeTabsArrayLists {
         out.add(STRIPPED_CRIMSON_STEM_STAIR);
         out.add(STRIPPED_MANGROVE_WOOD_STAIR); // Mangrove Stair
         out.add(STRIPPED_MANGROVE_LOG_STAIR); // Mangrove Stair
+        out.add(STRIPPED_CHERRY_WOOD_STAIR);
+        out.add(STRIPPED_CHERRY_LOG_STAIR);
+        out.add(STRIPPED_BAMBOO_BLOCK_STAIR);
         return out;
     }
     public static @NotNull ArrayList<RegistryObject<StairBlock>> setTerracottaStairs() {
@@ -1295,6 +1304,9 @@ public class creativeTabsArrayLists {
         out.add(CRIMSON_STEM_STAIR);
         out.add(MANGROVE_WOOD_STAIR); // Mangrove Stair
         out.add(MANGROVE_LOG_STAIR); // Mangrove Stair
+        out.add(CHERRY_WOOD_STAIR);
+        out.add(CHEERY_LOG_STAIR);
+        out.add(BAMBOO_BLOCK_STAIR);
         return out;
     }
     public static @NotNull ArrayList<RegistryObject<WallBlock>> setChiseledSandStoneWalls() {
