@@ -134,6 +134,18 @@ public class woodenFences {
     public static final RegistryObject<FenceGateBlock> MANGROVE_LOG_FENCE_GATE = register("mangrove_log_fence_gate",
             () -> new fenceGateBlock(BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_RED).strength(2.0F, 3.0F).sound(SoundType.WOOD),
                     "","","", true, STRIPPED_MANGROVE_LOG_FENCE_GATE.get().defaultBlockState()), 1000);
+    public static final RegistryObject<FenceBlock> CHERRY_WOOD_FENCE = register("cherry_wood_fence",
+            () -> new fenceBlock(BlockBehaviour.Properties.of().mapColor(MapColor.TERRACOTTA_GRAY).strength(2.0F, 3.0F).sound(SoundType.WOOD),
+                    "","","", true, STRIPPED_CHERRY_WOOD_FENCE.get().defaultBlockState()), 1000);
+    public static final RegistryObject<FenceGateBlock> CHERRY_WOOD_FENCE_GATE = register("cherry_wood_fence_gate",
+            () -> new fenceGateBlock(BlockBehaviour.Properties.of().mapColor(MapColor.TERRACOTTA_GRAY).strength(2.0F, 3.0F).sound(SoundType.WOOD),
+                    "","","", true, STRIPPED_CHERRY_WOOD_FENCE_GATE.get().defaultBlockState()), 1000);
+    public static final RegistryObject<FenceBlock> CHERRY_LOG_FENCE = register("cherry_log_fence",
+            () -> new fenceBlock(BlockBehaviour.Properties.of().mapColor(MapColor.TERRACOTTA_GRAY).strength(2.0F, 3.0F).sound(SoundType.WOOD),
+                    "","","", true, STRIPPED_CHERRY_LOG_FENCE.get().defaultBlockState()), 1000);
+    public static final RegistryObject<FenceGateBlock> CHERRY_LOG_FENCE_GATE = register("cherry_log_fence_gate",
+            () -> new fenceGateBlock(BlockBehaviour.Properties.of().mapColor(MapColor.TERRACOTTA_GRAY).strength(2.0F, 3.0F).sound(SoundType.WOOD),
+                    "","","", true, STRIPPED_CHERRY_LOG_FENCE_GATE.get().defaultBlockState()), 1000);
 
     public static void register(IEventBus eventBus) {
         BLOCKS.register(eventBus);

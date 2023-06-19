@@ -14,11 +14,3 @@ Further Nether Touches -Other Nether blocks do not fit in, in the same way grass
 
 Destroy blocks for dyes -Does not fit in with mod Idea
 Machine to swap colors of blocks -Makes No sense with current mod setup.
-
-=====================
-fences/fence gates
-
-cherry_wood
-stripped_cherry_wood
-cherry_log
-stripped_cherry_log

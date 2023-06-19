@@ -124,16 +124,28 @@ public class strippedWoodenFences {
                     "","","", false, null));
     public static final RegistryObject<FenceBlock> STRIPPED_MANGROVE_WOOD_FENCE = register("stripped_mangrove_wood_fence",
             () -> new fenceBlock(BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_RED).strength(2.0F, 3.0F).sound(SoundType.WOOD),
-                    "","","", true, null));
+                    "","","", true, null), 1000);
     public static final RegistryObject<FenceGateBlock> STRIPPED_MANGROVE_WOOD_FENCE_GATE = register("stripped_mangrove_wood_fence_gate",
             () -> new fenceGateBlock(BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_RED).strength(2.0F, 3.0F).sound(SoundType.WOOD),
-                    "","","", true, null));
+                    "","","", true, null), 1000);
     public static final RegistryObject<FenceBlock> STRIPPED_MANGROVE_LOG_FENCE = register("stripped_mangrove_log_fence",
             () -> new fenceBlock(BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_RED).strength(2.0F, 3.0F).sound(SoundType.WOOD),
-                    "","","", true, null));
+                    "","","", true, null), 1000);
     public static final RegistryObject<FenceGateBlock> STRIPPED_MANGROVE_LOG_FENCE_GATE = register("stripped_mangrove_log_fence_gate",
             () -> new fenceGateBlock(BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_RED).strength(2.0F, 3.0F).sound(SoundType.WOOD),
-                    "","","", true, null));
+                    "","","", true, null), 1000);
+    public static final RegistryObject<FenceBlock> STRIPPED_CHERRY_WOOD_FENCE = register("stripped_cherry_wood_fence",
+            () -> new fenceBlock(BlockBehaviour.Properties.of().mapColor(MapColor.TERRACOTTA_GRAY).strength(2.0F, 3.0F).sound(SoundType.CHERRY_WOOD),
+                    "","","", true, null), 1000);
+    public static final RegistryObject<FenceGateBlock> STRIPPED_CHERRY_WOOD_FENCE_GATE = register("stripped_cherry_wood_fence_gate",
+            () -> new fenceGateBlock(BlockBehaviour.Properties.of().mapColor(MapColor.TERRACOTTA_GRAY).strength(2.0F, 3.0F).sound(SoundType.CHERRY_WOOD),
+                    "","","", true, null), 1000);
+    public static final RegistryObject<FenceBlock> STRIPPED_CHERRY_LOG_FENCE = register("stripped_cherry_log_fence",
+            () -> new fenceBlock(BlockBehaviour.Properties.of().mapColor(MapColor.TERRACOTTA_GRAY).strength(2.0F, 3.0F).sound(SoundType.CHERRY_WOOD),
+                    "","","", true, null), 1000);
+    public static final RegistryObject<FenceGateBlock> STRIPPED_CHERRY_LOG_FENCE_GATE = register("stripped_cherry_log_fence_gate",
+            () -> new fenceGateBlock(BlockBehaviour.Properties.of().mapColor(MapColor.TERRACOTTA_GRAY).strength(2.0F, 3.0F).sound(SoundType.CHERRY_WOOD),
+                    "","","", true, null), 1000);
 
 
     public static void register(IEventBus eventBus) {

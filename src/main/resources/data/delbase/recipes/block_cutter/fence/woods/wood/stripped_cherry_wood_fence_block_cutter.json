@@ -5,11 +5,11 @@
       "item": "delbase:fence_plans"
     },
     {
-      "item": "minecraft:bamboo_planks"
+      "item": "minecraft:stripped_cherry_wood"
     }
   ],
   "output": {
-    "item": "minecraft:bamboo_fence",
+    "item": "delbase:stripped_cherry_wood_fence",
     "count": 1
   }
 }

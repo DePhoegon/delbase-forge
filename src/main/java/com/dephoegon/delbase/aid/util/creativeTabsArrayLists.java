@@ -520,6 +520,8 @@ public class creativeTabsArrayLists {
         out.add(STRIPPED_WARPED_STEM_FENCE);
         out.add(STRIPPED_MANGROVE_LOG_FENCE);
         out.add(STRIPPED_MANGROVE_WOOD_FENCE);
+        out.add(STRIPPED_CHERRY_LOG_FENCE);
+        out.add(STRIPPED_CHERRY_WOOD_FENCE);
         return out;
     }
     public static @NotNull ArrayList<RegistryObject<FenceGateBlock>> setStrippedWoodenFenceGates() {
@@ -541,6 +543,8 @@ public class creativeTabsArrayLists {
         out.add(STRIPPED_WARPED_STEM_FENCE_GATE);
         out.add(STRIPPED_MANGROVE_WOOD_FENCE_GATE);
         out.add(STRIPPED_MANGROVE_LOG_FENCE_GATE);
+        out.add(STRIPPED_CHERRY_WOOD_FENCE_GATE);
+        out.add(STRIPPED_CHERRY_LOG_FENCE_GATE);
         return out;
     }
     public static @NotNull ArrayList<RegistryObject<FenceBlock>> setTerracottaFences() {
@@ -605,6 +609,8 @@ public class creativeTabsArrayLists {
         out.add(WARPED_STEM_FENCE);
         out.add(MANGROVE_WOOD_FENCE);
         out.add(MANGROVE_LOG_FENCE);
+        out.add(CHERRY_WOOD_FENCE);
+        out.add(CHERRY_LOG_FENCE);
         return out;
     }
     public static @NotNull ArrayList<RegistryObject<FenceGateBlock>> setWoodenFenceGates() {
@@ -627,6 +633,8 @@ public class creativeTabsArrayLists {
         out.add(WARPED_STEM_FENCE_GATE);
         out.add(MANGROVE_WOOD_FENCE_GATE);
         out.add(MANGROVE_LOG_FENCE_GATE);
+        out.add(CHERRY_WOOD_FENCE_GATE);
+        out.add(CHERRY_LOG_FENCE_GATE);
         return out;
     }
     public static @NotNull ArrayList<RegistryObject<? extends ItemLike>> setAshBlocks() {

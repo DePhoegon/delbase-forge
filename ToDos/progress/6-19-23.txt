@@ -1,0 +1,33 @@
+Fences / Fence Gates
+- Cherry wood
+- Cherry log
+- Stripped Cherry wood
+- Stripped Cherry log
+
+Burn Time Fixes
+- stripped cherry log ( fence / fence gate )
+- stripped cherry wood ( fence / fence gate )
+- stripped bamboo wall
+- stripped bamboo plank wall
+- stripped bamboo mosaic wall
+- stripped mangrove wood ( fence / fence gate )
+- stripped mangrove log ( fence / fence gate )
+
+Recipe Fixes
+- Table
+-- Missing
+= Fence / Fence Gate
+== cherry log
+== cherry wood
+== stripped cherry log
+== stripped cherry wood
+-- Adjusted count
+== reduce count to 1 (bamboo mosaic to bamboo fence gate)
+== reduce count to 3 (bamboo mosaic to bamboo fence)
+-- Vanilla Recipe Override
+== Bamboo fence / Bamboo fence gate
+==- stick changed to bamboo
+
+Language file
+- English
+-- Added missing entries
