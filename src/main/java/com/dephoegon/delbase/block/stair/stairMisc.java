@@ -2,6 +2,7 @@ package com.dephoegon.delbase.block.stair;
 
 import com.dephoegon.delbase.aid.block.stock.stairBlock;
 import net.minecraft.world.item.BlockItem;
+import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.RecipeType;
@@ -10,7 +11,6 @@ import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.StairBlock;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraftforge.eventbus.api.IEventBus;
-import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
@@ -80,9 +80,6 @@ public class stairMisc {
     public static final RegistryObject<StairBlock> MAGMA_BLOCK_STAIR = register("magma_block_stair",
             ()-> new stairBlock(MAGMA_BLOCK::defaultBlockState, BlockBehaviour.Properties.copy(MAGMA_BLOCK).sound(SoundType.MOSS).lightLevel((blockstate) -> 3)
                     ,"","","", false, null));
-    public static final RegistryObject<StairBlock> DEEPSLATE_STAIR = register("deepslate_stair",
-            () -> new stairBlock(DEEPSLATE::defaultBlockState, BlockBehaviour.Properties.copy(DEEPSLATE).sound(SoundType.DEEPSLATE),
-                    "","","",false, null));
 
     public static void register(IEventBus eventBus) {
         BLOCKS.register(eventBus);

@@ -2,6 +2,7 @@
   "replace": false,
   "values": [
     "delbase:dried_kelp_wall",
-    "delbase:shroomlight_wall"
+    "delbase:shroomlight_wall",
+    "#delbase:hedges/hedge_misc_woodlike"
   ]
 }

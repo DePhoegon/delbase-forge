@@ -1,7 +1,9 @@
 package com.dephoegon.delbase.block.fence;
+
 import com.dephoegon.delbase.aid.block.stock.fenceBlock;
 import com.dephoegon.delbase.aid.block.stock.fenceGateBlock;
 import net.minecraft.world.item.BlockItem;
+import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.RecipeType;
@@ -13,7 +15,6 @@ import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.Material;
 import net.minecraft.world.level.material.MaterialColor;
 import net.minecraftforge.eventbus.api.IEventBus;
-import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
@@ -24,7 +25,6 @@ import java.util.function.Supplier;
 import static com.dephoegon.delbase.block.fence.strippedWoodenFences.*;
 import static com.dephoegon.delbase.delbase.BASE_BLOCK;
 import static com.dephoegon.delbase.delbase.Mod_ID;
-import static net.minecraft.world.level.block.Blocks.*;
 
 public class woodenFences {
     private static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, Mod_ID);

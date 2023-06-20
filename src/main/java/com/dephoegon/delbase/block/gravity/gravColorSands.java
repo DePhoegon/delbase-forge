@@ -10,7 +10,6 @@ import net.minecraft.world.level.block.SandBlock;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraftforge.eventbus.api.IEventBus;
-import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
@@ -117,7 +116,7 @@ public class gravColorSands {
     private static <T extends Block> RegistryObject<T> overrideRegister(String name, Supplier<T> block) {
         RegistryObject<T> exit = OVERRIDE_BLOCK.register(name, block);
         OVERRIDE_ITEM.register(name, () -> new BlockItem(exit.get(),
-                new Item.Properties().stacksTo(64).tab(CreativeModeTab.TAB_BUILDING_BLOCKS)));
+                new Item.Properties().stacksTo(64).tab(BASE_BLOCK)));
         return exit;
     }
 }

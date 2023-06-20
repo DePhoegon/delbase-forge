@@ -2,13 +2,13 @@ package com.dephoegon.delbase.block.slab;
 
 import com.dephoegon.delbase.aid.block.colorshift.slab.terracottaSlab;
 import net.minecraft.world.item.BlockItem;
+import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.SlabBlock;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraftforge.eventbus.api.IEventBus;
-import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
@@ -22,7 +22,7 @@ import static net.minecraft.world.level.block.Blocks.*;
 public class slabTerracotta {
     private static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, Mod_ID);
     private static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, Mod_ID);
-
+    
     public static final RegistryObject<SlabBlock> WHITE_TERRACOTTA_SLAB = register("white_terracotta_slab",
             ()-> new terracottaSlab(BlockBehaviour.Properties.copy(WHITE_TERRACOTTA).sound(SoundType.CALCITE),"","",""));
     public static final RegistryObject<SlabBlock> ORANGE_TERRACOTTA_SLAB = register("orange_terracotta_slab",

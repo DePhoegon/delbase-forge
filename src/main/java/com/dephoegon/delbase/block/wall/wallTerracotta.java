@@ -8,7 +8,6 @@ import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.WallBlock;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraftforge.eventbus.api.IEventBus;
-import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
@@ -25,7 +24,7 @@ public class wallTerracotta {
 
     public static final RegistryObject<WallBlock> WHITE_TERRACOTTA_WALL = register("white_terracotta_wall",
             () -> new terracottaWall(BlockBehaviour.Properties.copy(WHITE_TERRACOTTA).sound(SoundType.CALCITE)
-                    ,"","",""));
+            ,"","",""));
     public static final RegistryObject<WallBlock> ORANGE_TERRACOTTA_WALL = register("orange_terracotta_wall",
             () -> new terracottaWall(BlockBehaviour.Properties.copy(ORANGE_TERRACOTTA).sound(SoundType.CALCITE)
                     ,"","",""));

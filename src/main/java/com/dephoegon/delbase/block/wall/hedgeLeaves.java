@@ -3,6 +3,7 @@ package com.dephoegon.delbase.block.wall;
 import com.dephoegon.delbase.aid.block.stock.genBlock;
 import com.dephoegon.delbase.aid.block.stock.wallBlock;
 import net.minecraft.world.item.BlockItem;
+import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.SoundType;
@@ -20,7 +21,6 @@ import static com.dephoegon.delbase.delbase.Mod_ID;
 import static net.minecraft.world.level.block.Blocks.*;
 
 public class hedgeLeaves {
-
     private static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, Mod_ID);
     private static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, Mod_ID);
 
@@ -48,6 +48,7 @@ public class hedgeLeaves {
     public static final RegistryObject<WallBlock> FLOWERING_AZALEA_HEDGE = register("flowering_azalea_hedge",
             () -> new wallBlock(BlockBehaviour.Properties.copy(FLOWERING_AZALEA_LEAVES).sound(SoundType.GRASS).noOcclusion().isSuffocating(genBlock::never).isViewBlocking(genBlock::never).noOcclusion(),
                     "","","",true, null));
+
     public static void register(IEventBus eventBus) {
         BLOCKS.register(eventBus);
         ITEMS.register(eventBus);

@@ -2,6 +2,7 @@ package com.dephoegon.delbase.block.slab;
 
 import com.dephoegon.delbase.aid.block.stock.slabBlock;
 import net.minecraft.world.item.BlockItem;
+import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.RecipeType;
@@ -10,7 +11,6 @@ import net.minecraft.world.level.block.SlabBlock;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraftforge.eventbus.api.IEventBus;
-import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
@@ -77,9 +77,6 @@ public class slabMisc {
     public static final RegistryObject<SlabBlock> MAGMA_BLOCK_SLAB = register("magma_block_slab",
             ()-> new slabBlock(BlockBehaviour.Properties.copy(MAGMA_BLOCK).sound(SoundType.MOSS).lightLevel((blockstate) -> 3)
                     ,"","","", false, null));
-    public static final RegistryObject<SlabBlock> DEEPSLATE_SLAB = register("deepslate_slab",
-            () -> new slabBlock(BlockBehaviour.Properties.copy(DEEPSLATE).sound(SoundType.DEEPSLATE)
-                    ,"","","",false, null));
 
     public static void register(IEventBus eventBus) {
         BLOCKS.register(eventBus);

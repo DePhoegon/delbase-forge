@@ -1,4 +1,5 @@
 package com.dephoegon.delbase.block.fence;
+
 import com.dephoegon.delbase.aid.block.alt.quartzFence;
 import com.dephoegon.delbase.aid.block.alt.quartzGateBlock;
 import net.minecraft.world.item.BlockItem;
@@ -8,7 +9,6 @@ import net.minecraft.world.level.block.FenceBlock;
 import net.minecraft.world.level.block.FenceGateBlock;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraftforge.eventbus.api.IEventBus;
-import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;

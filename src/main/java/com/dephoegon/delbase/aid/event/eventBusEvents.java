@@ -19,9 +19,7 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 
-import static com.dephoegon.delbase.aid.items.visualAid.*;
-import static com.dephoegon.delbase.block.wall.hedgeLeaves.BIRCH_HEDGE;
-import static com.dephoegon.delbase.block.wall.hedgeLeaves.SPRUCE_HEDGE;
+import static com.dephoegon.delbase.aid.util.arrayListsTransparencyColoration.*;
 import static com.dephoegon.delbase.delbase.Mod_ID;
 import static net.minecraft.client.renderer.ItemBlockRenderTypes.setRenderLayer;
 import static net.minecraft.client.renderer.RenderType.translucent;
@@ -43,14 +41,14 @@ public class eventBusEvents {
 
     @SubscribeEvent
     public static void registerBlockColors(ColorHandlerEvent.Block event) {
-        setDefaultColorHedgeLeaves().forEach((block) -> event.getBlockColors().register(DEFAULT_LEAVES, block.get()));
-        event.getBlockColors().register(SPRUCE_LEAVES, SPRUCE_HEDGE.get());
-        event.getBlockColors().register(BIRCH_LEAVES, BIRCH_HEDGE.get());
+        getDefaultColorLeaves().forEach((block) -> event.getBlockColors().register(DEFAULT_LEAVES, block.get()));
+        setSpruceLeaves().forEach((block) -> event.getBlockColors().register(SPRUCE_LEAVES, block.get()));
+        setBirchHedge().forEach((block) -> event.getBlockColors().register(BIRCH_LEAVES, block.get()));
     }
 
     @SubscribeEvent
     public static void registerItemColors(ColorHandlerEvent.Item event) {
-        getAllLeaves().forEach((block) -> event.getItemColors().register((stack, color) -> event.getBlockColors().getColor(((BlockItem) stack.getItem()).getBlock().defaultBlockState(), null, null, color),
+        ColoredLeaves().forEach((block) -> event.getItemColors().register((stack, color) -> event.getBlockColors().getColor(((BlockItem) stack.getItem()).getBlock().defaultBlockState(), null, null, color),
                 block.get()));
     }
     public static void onServerStartAddCompostItems(ServerStartedEvent ignoredEvent) { composable.addToList(); }

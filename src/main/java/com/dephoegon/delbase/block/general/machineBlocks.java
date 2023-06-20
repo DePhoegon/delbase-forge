@@ -2,6 +2,7 @@ package com.dephoegon.delbase.block.general;
 
 import com.dephoegon.delbase.aid.block.alt.cuttingStationBlock;
 import net.minecraft.world.item.BlockItem;
+import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
@@ -28,10 +29,11 @@ public class machineBlocks {
         BLOCKS.register(eventBus);
         ITEMS.register(eventBus);
     }
+    @SuppressWarnings("SameParameterValue")
     private static <T extends Block> RegistryObject<T> register(String name, Supplier<T> block) {
         RegistryObject<T> exit = BLOCKS.register(name, block);
         ITEMS.register(name, () -> new BlockItem(exit.get(),
-                new Item.Properties().stacksTo(1).tab(DELBASE_ITEMS)));
+                new Item.Properties().stacksTo(1).tab(DELBASE_ITEMS).tab(CreativeModeTab.TAB_TOOLS)));
         return exit;
     }
 }

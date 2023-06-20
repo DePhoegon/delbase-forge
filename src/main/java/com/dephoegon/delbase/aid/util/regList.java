@@ -48,7 +48,8 @@ public class regList {
         slabWood.register(eventBus);
         slabTerracotta.register(eventBus);
         slabMisc.register(eventBus);
-
+        slabLeaves.register(eventBus);
+        slabStones.register(eventBus);
 
         //Stairs
         stairSands.register(eventBus);
@@ -62,6 +63,8 @@ public class regList {
         stairWood.register(eventBus);
         stairTerracotta.register(eventBus);
         stairMisc.register(eventBus);
+        stairLeaves.register(eventBus);
+        stairStones.register(eventBus);
 
         //Pillars
         axiCutSandStones.register(eventBus);
@@ -96,6 +99,7 @@ public class regList {
         fenceMisc.register(eventBus);
         cutSandStoneFences.register(eventBus);
         chiseledSandStoneFences.register(eventBus);
+        leafFences.register(eventBus);
 
         //Special block
         ashBlocks.register(eventBus);
