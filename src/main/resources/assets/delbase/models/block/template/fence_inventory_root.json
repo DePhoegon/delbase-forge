@@ -1,6 +1,6 @@
 {
   "parent": "block/block",
-  "render_type": "translucent",
+  "render_type": "cutout",
   "display": {
     "gui": {
       "rotation": [ 30, 135, 0 ],
