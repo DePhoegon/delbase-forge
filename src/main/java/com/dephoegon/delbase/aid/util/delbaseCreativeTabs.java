@@ -3,7 +3,6 @@ package com.dephoegon.delbase.aid.util;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.CreativeModeTab;
-import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.ItemLike;
@@ -98,7 +97,6 @@ public class delbaseCreativeTabs {
         out.addAll(setTerracottaStairs());
         out.addAll(setWoodStairs());
         out.addAll(getAllLeaves());
-        out.addAll(setOffColorHedge());
         out.addAll(setChiseledSandStoneWalls());
         out.addAll(setConcreteWalls());
         out.addAll(setCutSandStoneWalls());

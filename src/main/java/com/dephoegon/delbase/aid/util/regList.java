@@ -60,12 +60,14 @@ public class regList {
         slabStones.register(eventBus);
         slabTerracotta.register(eventBus);
         slabMisc.register(eventBus);
+        slabLeaves.register(eventBus);
 
         //Stairs
         stairSands.register(eventBus);
         stairSmoothSandStones.register(eventBus);
         stairChiseledSandStones.register(eventBus);
         stairCutSandStones.register(eventBus);
+        stairLeaves.register(eventBus);
         stairSandStones.register(eventBus);
         stairQuartz.register(eventBus);
         stairConcrete.register(eventBus);
@@ -100,6 +102,7 @@ public class regList {
         smoothSandStoneFences.register(eventBus);
         sandStoneFences.register(eventBus);
         fenceMisc.register(eventBus);
+        leafFences.register(eventBus);
         cutSandStoneFences.register(eventBus);
         chiseledSandStoneFences.register(eventBus);
         stoneFences.register(eventBus);
