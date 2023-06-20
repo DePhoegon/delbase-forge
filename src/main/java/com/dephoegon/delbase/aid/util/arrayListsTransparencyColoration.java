@@ -111,7 +111,7 @@ public class arrayListsTransparencyColoration {
         out.addAll(setNonColoredLeaves());
         return out;
     }
-    public static @NotNull ArrayList<RegistryObject<? extends Block>> getTranslucentBlocks() {
+    public static @NotNull ArrayList<RegistryObject<? extends Block>> getCutoutBlocks() {
         ArrayList<RegistryObject<? extends Block>> out = new ArrayList<>(getAllLeaves());
         out.add(BLOCK_CUTTING_STATION);
         return out;

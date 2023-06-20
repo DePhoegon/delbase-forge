@@ -22,7 +22,7 @@ import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import static com.dephoegon.delbase.aid.util.arrayListsTransparencyColoration.*;
 import static com.dephoegon.delbase.delbase.Mod_ID;
 import static net.minecraft.client.renderer.ItemBlockRenderTypes.setRenderLayer;
-import static net.minecraft.client.renderer.RenderType.translucent;
+import static net.minecraft.client.renderer.RenderType.cutout;
 
 @Mod.EventBusSubscriber(modid = Mod_ID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 public class eventBusEvents {
@@ -32,7 +32,7 @@ public class eventBusEvents {
     }
     @SubscribeEvent
     public static void clientSetup(final FMLCommonSetupEvent event) {
-        getTranslucentBlocks().forEach((block)-> setRenderLayer(block.get(), translucent()));
+        getCutoutBlocks().forEach((block)-> setRenderLayer(block.get(), cutout()));
         MenuScreens.register(menuTypes.BLOCK_CUTTING_STATION_MENU.get(), blockCuttingStationScreen::new);
     }
     public static final BlockColor DEFAULT_LEAVES = (state, reader, pos, color) -> reader != null && pos != null ? BiomeColors.getAverageFoliageColor(reader, pos) : FoliageColor.getDefaultColor();
