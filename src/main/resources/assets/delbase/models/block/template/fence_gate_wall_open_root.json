@@ -1,6 +1,6 @@
 {
   "ambientocclusion": false,
-  "render_type": "translucent",
+  "render_type": "cutout",
   "textures": {
     "particle": "#postside"
   },
