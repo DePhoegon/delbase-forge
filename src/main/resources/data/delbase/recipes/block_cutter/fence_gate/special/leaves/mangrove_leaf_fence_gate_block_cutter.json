@@ -5,11 +5,11 @@
       "item": "delbase:fence_gate_plans"
     },
     {
-      "item": "minecraft:bamboo_planks"
+      "item": "minecraft:mangrove_leaves"
     }
   ],
   "output": {
-    "item": "minecraft:bamboo_fence_gate",
+    "item": "delbase:mangrove_leaf_fence_gate",
     "count": 1
   }
 }

@@ -3,6 +3,7 @@ package com.dephoegon.delbase.block.wall;
 import com.dephoegon.delbase.aid.block.stock.genBlock;
 import com.dephoegon.delbase.aid.block.stock.wallBlock;
 import net.minecraft.world.item.BlockItem;
+import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.RecipeType;
@@ -115,7 +116,7 @@ public class wallMisc {
     private static <T extends Block> RegistryObject<T> register(String name, Supplier<T> block, int burn) {
         RegistryObject<T> exit = BLOCKS.register(name, block);
         ITEMS.register(name, () -> new BlockItem(exit.get(),
-                new Item.Properties().stacksTo(64).tab(BASE_BLOCK)){
+                new Item.Properties().stacksTo(64).tab(BASE_BLOCK).tab(CreativeModeTab.TAB_DECORATIONS)){
             public int getBurnTime(ItemStack stack, @Nullable RecipeType<?> recipeType) {
                 return burn;
             }
@@ -125,7 +126,7 @@ public class wallMisc {
     private static <T extends Block> RegistryObject<T> register(String name, Supplier<T> block) {
         RegistryObject<T> exit = BLOCKS.register(name, block);
         ITEMS.register(name, () -> new BlockItem(exit.get(),
-                new Item.Properties().stacksTo(64).tab(BASE_BLOCK)));
+                new Item.Properties().stacksTo(64).tab(BASE_BLOCK).tab(CreativeModeTab.TAB_DECORATIONS)));
         return exit;
     }
 }

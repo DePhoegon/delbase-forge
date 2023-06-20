@@ -2,14 +2,14 @@
   "type": "delbase:block_cutting",
   "ingredients": [
     {
-      "item": "delbase:fence_plans"
+      "item": "delbase:stair_plans"
     },
     {
-      "item": "minecraft:bamboo_planks"
+      "item": "minecraft:acacia_leaves"
     }
   ],
   "output": {
-    "item": "minecraft:bamboo_fence",
+    "item": "delbase:acacia_leaf_stair",
     "count": 1
   }
 }

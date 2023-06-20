@@ -3,6 +3,7 @@ package com.dephoegon.delbase.block.gravity;
 import com.dephoegon.delbase.aid.block.colorshift.grav.sandBlock;
 import com.dephoegon.delbase.aid.block.colorshift.grav.solidSandBlock;
 import net.minecraft.world.item.BlockItem;
+import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.SandBlock;
@@ -115,7 +116,7 @@ public class gravColorSands {
     private static <T extends Block> RegistryObject<T> overrideRegister(String name, Supplier<T> block) {
         RegistryObject<T> exit = OVERRIDE_BLOCK.register(name, block);
         OVERRIDE_ITEM.register(name, () -> new BlockItem(exit.get(),
-                new Item.Properties().stacksTo(64).tab(BASE_BLOCK)));
+                new Item.Properties().stacksTo(64).tab(BASE_BLOCK).tab(CreativeModeTab.TAB_BUILDING_BLOCKS)));
         return exit;
     }
 }

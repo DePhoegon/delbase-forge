@@ -2,6 +2,7 @@ package com.dephoegon.delbase.block.general;
 
 import com.dephoegon.delbase.aid.block.colorshift.gen.chiseledSandStone;
 import net.minecraft.world.item.BlockItem;
+import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.SoundType;
@@ -61,7 +62,7 @@ public class genChiseledSandStones {
     private static <T extends Block> RegistryObject<T> register(String name, Supplier<T> block) {
         RegistryObject<T> exit = BLOCKS.register(name, block);
         ITEMS.register(name, () -> new BlockItem(exit.get(),
-                new Item.Properties().stacksTo(64).tab(BASE_BLOCK)));
+                new Item.Properties().stacksTo(64).tab(BASE_BLOCK).tab(CreativeModeTab.TAB_BUILDING_BLOCKS)));
         return exit;
     }
 }
