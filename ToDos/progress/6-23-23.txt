@@ -1,0 +1,2 @@
+Fixed Block Color issues
+-crashing servers by somehow having the variables called too soon.
