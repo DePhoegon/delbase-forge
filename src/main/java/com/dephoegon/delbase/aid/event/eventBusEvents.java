@@ -27,12 +27,11 @@ public class eventBusEvents {
     public static void clientSetup(final FMLCommonSetupEvent event) {
         MenuScreens.register(menuTypes.BLOCK_CUTTING_STATION_MENU.get(), blockCuttingStationScreen::new);
     }
-    public static final BlockColor DEFAULT_LEAVES = (state, reader, pos, color) -> reader != null && pos != null ? BiomeColors.getAverageFoliageColor(reader, pos) : FoliageColor.getDefaultColor();
-    public static final BlockColor BIRCH_LEAVES = (state, reader, pos, color) -> FoliageColor.getBirchColor();
-    public static final BlockColor SPRUCE_LEAVES = (state, reader, pos, color) -> FoliageColor.getEvergreenColor();
-
     @SubscribeEvent
     public static void registerBlockColors(RegisterColorHandlersEvent.@NotNull Block event) {
+        BlockColor DEFAULT_LEAVES = (state, reader, pos, color) -> reader != null && pos != null ? BiomeColors.getAverageFoliageColor(reader, pos) : FoliageColor.getDefaultColor();
+        BlockColor BIRCH_LEAVES = (state, reader, pos, color) -> FoliageColor.getBirchColor();
+        BlockColor SPRUCE_LEAVES = (state, reader, pos, color) -> FoliageColor.getEvergreenColor();
         getDefaultColorLeaves().forEach((block) -> event.register(DEFAULT_LEAVES, block.get()));
         setSpruceLeaves().forEach((block) -> event.register(SPRUCE_LEAVES, block.get()));
         setBirchHedge().forEach((block) -> event.register(BIRCH_LEAVES, block.get()));
