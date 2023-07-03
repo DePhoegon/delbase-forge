@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "item": "minecraft:cut_red_sandstone"
+      "item": "minecraft:cut_red_sandstone_slab"
     },
     {
       "tag": "delbase:energy_dust"

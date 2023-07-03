@@ -88,7 +88,7 @@ public class stairStrippedWood {
     private static <T extends Block> RegistryObject<T> register(String name, Supplier<T> block, int burn) {
         RegistryObject<T> exit = BLOCKS.register(name, block);
         ITEMS.register(name, () -> new BlockItem(exit.get(),
-                new Item.Properties().stacksTo(64).tab(BASE_BLOCK).tab(CreativeModeTab.TAB_DECORATIONS)){
+                new Item.Properties().stacksTo(64).tab(BASE_BLOCK)){
             public int getBurnTime(ItemStack stack, @Nullable RecipeType<?> recipeType) {
                 return burn;
             }
@@ -98,7 +98,7 @@ public class stairStrippedWood {
     private static <T extends Block> RegistryObject<T> register(String name, Supplier<T> block) {
         RegistryObject<T> exit = BLOCKS.register(name, block);
         ITEMS.register(name, () -> new BlockItem(exit.get(),
-                new Item.Properties().stacksTo(64).tab(BASE_BLOCK).tab(CreativeModeTab.TAB_DECORATIONS)));
+                new Item.Properties().stacksTo(64).tab(BASE_BLOCK)));
         return exit;
     }
 }

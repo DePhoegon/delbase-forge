@@ -14,17 +14,17 @@ public class blockCutterPlans {
     private static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, Mod_ID);
 
     public static final RegistryObject<Item> WALL_PLANS = ITEMS.register("wall_plans",
-            () -> new Item(new Item.Properties().stacksTo(1).tab(DELBASE_ITEMS).tab(CreativeModeTab.TAB_MATERIALS)));
+            () -> new Item(new Item.Properties().stacksTo(1).tab(DELBASE_ITEMS)));
     public static final RegistryObject<Item> SLAB_PLANS = ITEMS.register("slab_plans",
-            () -> new Item(new Item.Properties().stacksTo(1).tab(DELBASE_ITEMS).tab(CreativeModeTab.TAB_MATERIALS)));
+            () -> new Item(new Item.Properties().stacksTo(1).tab(DELBASE_ITEMS)));
     public static final RegistryObject<Item> FENCE_PLANS = ITEMS.register("fence_plans",
-            () -> new Item(new Item.Properties().stacksTo(1).tab(DELBASE_ITEMS).tab(CreativeModeTab.TAB_MATERIALS)));
+            () -> new Item(new Item.Properties().stacksTo(1).tab(DELBASE_ITEMS)));
     public static final RegistryObject<Item> FENCE_GATE_PLANS = ITEMS.register("fence_gate_plans",
-            () -> new Item(new Item.Properties().stacksTo(1).tab(DELBASE_ITEMS).tab(CreativeModeTab.TAB_MATERIALS)));
+            () -> new Item(new Item.Properties().stacksTo(1).tab(DELBASE_ITEMS)));
     public static final RegistryObject<Item> STAIR_PLANS = ITEMS.register("stair_plans",
-            () -> new Item(new Item.Properties().stacksTo(1).tab(DELBASE_ITEMS).tab(CreativeModeTab.TAB_MATERIALS)));
+            () -> new Item(new Item.Properties().stacksTo(1).tab(DELBASE_ITEMS)));
     public static final RegistryObject<Item> ARMOR_COMPOUND = ITEMS.register("armor_compound",
-            () -> new Item(new Item.Properties().stacksTo(64).tab(DELBASE_ITEMS).tab(CreativeModeTab.TAB_MATERIALS)));
+            () -> new Item(new Item.Properties().stacksTo(64).tab(DELBASE_ITEMS)));
 
     public static void register(IEventBus eventBus) { ITEMS.register(eventBus); }
 }
