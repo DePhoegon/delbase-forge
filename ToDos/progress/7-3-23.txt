@@ -1,0 +1,5 @@
+Fixed Tag
+- item -- basalts
+
+Fixed Recipes
+- Energetic Cut Sandstone slab & Energetic red cut sandstone slab
