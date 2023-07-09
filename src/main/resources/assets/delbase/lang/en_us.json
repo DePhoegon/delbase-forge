@@ -1191,5 +1191,9 @@
   "tooltip.delbase.sand.hold.flavor": "§7§oForever Attracted towards the Infused Energy.",
   "tooltip.delbase.sand.hold.info": "§7§oWill not fall if under an Energetic Slabs",
   "tooltip.delbase.sand.solid.flavor": "§7§oIs attracted to itself, to the exclusion of gravity.",
-  "tooltip.delbase.sand.solid.info": "§7§oDoes not fall"
+  "tooltip.delbase.sand.solid.info": "§7§oDoes not fall",
+
+  "tooltip.key.category": "Delbase Tooltip Hotkeys",
+  "tooltip.key.shift": "Show First Tooltip",
+  "tooltip.key.ctrl": "Show Second Tooltip"
 }

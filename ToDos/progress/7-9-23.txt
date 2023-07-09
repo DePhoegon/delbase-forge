@@ -1,0 +1,5 @@
+Added
+- Keybindings
+
+Not put to a new version yet
+- Waiting for another change/fix to be done.
