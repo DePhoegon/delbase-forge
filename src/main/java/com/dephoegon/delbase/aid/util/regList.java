@@ -13,9 +13,10 @@ import com.dephoegon.delbase.block.wall.*;
 import com.dephoegon.delbase.item.blockCutterPlans;
 import com.dephoegon.delbase.item.shiftingDyes;
 import net.minecraftforge.eventbus.api.IEventBus;
+import org.jetbrains.annotations.NotNull;
 
 public class regList {
-    public static void firstList(IEventBus eventBus) {
+    public static void firstList(@NotNull IEventBus eventBus) {
         //aid
         blockArrayList.setBlockArrays();
 
