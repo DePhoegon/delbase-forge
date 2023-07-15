@@ -3,28 +3,33 @@ package com.dephoegon.delbase.aid.util;
 import com.mojang.blaze3d.platform.InputConstants;
 import net.minecraft.client.KeyMapping;
 import net.minecraft.client.Minecraft;
-import net.minecraftforge.client.ClientRegistry;
-import org.jetbrains.annotations.NotNull;
 import org.lwjgl.glfw.GLFW;
 
+import static com.dephoegon.delbase.aid.event.KeyBindManager.tooltipCtrl;
+import static com.dephoegon.delbase.aid.event.KeyBindManager.tooltipShift;
 import static com.mojang.blaze3d.platform.InputConstants.isKeyDown;
 
 public class kb {
-    private kb() { }
-    private static boolean RShift() { return isKeyDown(Minecraft.getInstance().getWindow().getWindow(), GLFW.GLFW_KEY_RIGHT_SHIFT); }
-    private static boolean RCtrl() { return isKeyDown(Minecraft.getInstance().getWindow().getWindow(), GLFW.GLFW_KEY_RIGHT_CONTROL); }
-    public static boolean HShift() { return tooltipShift.isDefault() ? tooltipShift.isDown() || RShift() : tooltipShift.isDown(); }
-    public static boolean HCtrl() { return tooltipCtrl.isDefault() ? tooltipCtrl.isDown() || RCtrl() : tooltipCtrl.isDown(); }
-    public static KeyMapping tooltipShift;
-    public static KeyMapping tooltipCtrl;
-    public static void mapKeys() {
-        tooltipShift = registerKey("tooltip.key.shift", InputConstants.KEY_LSHIFT);
-        tooltipCtrl = registerKey("tooltip.key.ctrl", InputConstants.KEY_LCONTROL);
-    }
+    private static boolean LShift() { return isKB_KeyBindDown(tooltipShift); }
+    private static boolean RShift() { return keyCheck(GLFW.GLFW_KEY_RIGHT_SHIFT); }
+    private static boolean LCtrl() { return isKB_KeyBindDown(tooltipCtrl); }
+    private static boolean RCtrl() { return keyCheck(GLFW.GLFW_KEY_RIGHT_CONTROL); }
+    public static boolean HShift() { return isKeyBindDefault(tooltipShift) ? LShift() || RShift() : LShift(); }
+    public static boolean HCtrl() { return isKeyBindDefault(tooltipCtrl) ? LCtrl() || RCtrl() : LCtrl(); }
 
-    private static @NotNull KeyMapping registerKey(String name, int keyCode) {
-        final var key = new KeyMapping(name, keyCode, "tooltip.key.category");
-        ClientRegistry.registerKeyBinding(key);
-        return key;
+    public static boolean isKB_KeyBindDown(KeyMapping mapping) {
+        if (mapping == null) { return false; }
+        InputConstants.Key key = mapping.getKey();
+        int Keycode = key.getValue();
+        return keyCheck(key.getType(), Keycode);
+    }
+    private static boolean keyCheck (int Keycode) { return keyCheck(InputConstants.Type.KEYSYM, Keycode); }
+    public static boolean keyCheck(InputConstants.Type type, int Keycode) {
+        if (type != InputConstants.Type.KEYSYM) { return false; }
+        return isKeyDown(Minecraft.getInstance().getWindow().getWindow(), Keycode);
+    }
+    public static boolean isKeyBindDefault(KeyMapping mapping) {
+        if (mapping != null) { return mapping.isDefault(); }
+        return false;
     }
 }

@@ -20,7 +20,6 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 
 import static com.dephoegon.delbase.aid.util.arrayListsTransparencyColoration.*;
-import static com.dephoegon.delbase.aid.util.kb.mapKeys;
 import static com.dephoegon.delbase.delbase.Mod_ID;
 import static net.minecraft.client.renderer.ItemBlockRenderTypes.setRenderLayer;
 import static net.minecraft.client.renderer.RenderType.cutout;
@@ -35,7 +34,7 @@ public class eventBusEvents {
     public static void clientSetup(final FMLCommonSetupEvent event) {
         getCutoutBlocks().forEach((block)-> setRenderLayer(block.get(), cutout()));
         MenuScreens.register(menuTypes.BLOCK_CUTTING_STATION_MENU.get(), blockCuttingStationScreen::new);
-        mapKeys();
+        KeyBindManager.mapKeys();
     }
 
 

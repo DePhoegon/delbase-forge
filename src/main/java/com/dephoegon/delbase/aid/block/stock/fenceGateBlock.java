@@ -41,10 +41,9 @@ public class fenceGateBlock extends FenceGateBlock {
     @Override
     public void appendHoverText(@NotNull ItemStack stack, @Nullable BlockGetter worldIn, @NotNull List<Component> toolTip, @NotNull TooltipFlag flag) {
         super.appendHoverText(stack, worldIn, toolTip, flag);
-        if(!kb.HShift() && !kb.HCtrl() && tip0 != null) toolTip.add(new TranslatableComponent(tip0)); //if neither pressed, show tip0 (if not empty)
-        if(kb.HCtrl() && tip2 != null) toolTip.add(new TranslatableComponent(tip2)); //if ctrl, show tip2 (if not empty), do first
-        if(kb.HShift() && tip1 != null) //noinspection GrazieInspection
-            toolTip.add(new TranslatableComponent(tip1)); //if shift, show tip1 (if not empty)
+        if(!kb.HShift() && !kb.HCtrl() && tip0 != null) { toolTip.add(new TranslatableComponent(tip0)); }//if neither pressed, show tip0 (if not empty)
+        if(kb.HCtrl() && tip2 != null) { toolTip.add(new TranslatableComponent(tip2)); }//if ctrl, show tip2 (if not empty), do first
+        if(kb.HShift() && tip1 != null) { toolTip.add(new TranslatableComponent(tip1)); } //if shift, show tip1 (if not empty)
     }
     @Override
     public boolean isFlammable(BlockState state, BlockGetter world, BlockPos pos, Direction face)

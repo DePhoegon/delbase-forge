@@ -1,0 +1,6 @@
+Fixed
+- Keybindings
+-- Loads & works now
+
+Not Released yet
+- Waiting for another bigger changes
