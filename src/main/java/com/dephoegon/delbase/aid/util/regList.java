@@ -1,5 +1,6 @@
 package com.dephoegon.delbase.aid.util;
 
+import com.dephoegon.delbase.aid.event.eventBusEvents;
 import com.dephoegon.delbase.aid.recipe.modRecipes;
 import com.dephoegon.delbase.block.axis.axiCutSandStones;
 import com.dephoegon.delbase.block.entity.blockEntities;
@@ -12,10 +13,13 @@ import com.dephoegon.delbase.block.stair.*;
 import com.dephoegon.delbase.block.wall.*;
 import com.dephoegon.delbase.item.blockCutterPlans;
 import com.dephoegon.delbase.item.shiftingDyes;
+import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.eventbus.api.IEventBus;
+import net.minecraftforge.fml.DistExecutor;
+import org.jetbrains.annotations.NotNull;
 
 public class regList {
-    public static void firstList(IEventBus eventBus) {
+    public static void firstList(@NotNull IEventBus eventBus) {
         //aid
         blockArrayList.setBlockArrays();
 

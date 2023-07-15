@@ -1243,7 +1243,7 @@
   "itemGroup.dephoegon_blocks": "DePhoegons' Blocks",
   "itemGroup.dephoegon_items": "DePhoegons' Items",
 
-  "tooltip.delbase.info.more": "§7§oHold Shift for More Details & Control for Flavor Text",
+  "tooltip.delbase.info.more": "§7§oDefault Keys\nShift for More Details \nControl for Flavor Text",
   "tooltip.delbase.info.control.more": "§7§oHold Control for Flavor Text",
   "tooltip.delbase.info.shift.more": "§7§oHold Shift for More Details",
   "tooltip.delbase.color.shifter": "§7§oUse on Colorful Blocks to change its' color",
@@ -1251,5 +1251,9 @@
   "tooltip.delbase.sand.hold.flavor": "§7§oForever Attracted towards the Infused Energy.",
   "tooltip.delbase.sand.hold.info": "§7§oWill not fall if under an Energetic Slabs",
   "tooltip.delbase.sand.solid.flavor": "§7§oIs attracted to itself, to the exclusion of gravity.",
-  "tooltip.delbase.sand.solid.info": "§7§oDoes not fall"
+  "tooltip.delbase.sand.solid.info": "§7§oDoes not fall",
+
+  "tooltip.key.category": "Delbase Tooltip Hotkeys (Supports KeyBoard Keys Only)",
+  "tooltip.key.shift": "Show First Tooltip",
+  "tooltip.key.ctrl": "Show Second Tooltip"
 }

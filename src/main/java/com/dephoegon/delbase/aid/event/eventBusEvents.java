@@ -17,8 +17,6 @@ import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import org.jetbrains.annotations.NotNull;
 
 import static com.dephoegon.delbase.aid.util.creativeTabsArrayLists.*;
-import static com.dephoegon.delbase.block.wall.hedgeLeaves.BIRCH_HEDGE;
-import static com.dephoegon.delbase.block.wall.hedgeLeaves.SPRUCE_HEDGE;
 import static com.dephoegon.delbase.delbase.Mod_ID;
 
 @Mod.EventBusSubscriber(modid = Mod_ID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
