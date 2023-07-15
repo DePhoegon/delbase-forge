@@ -35,12 +35,11 @@ public class gravBlock extends SandBlock {
     }
     public void appendHoverText(@NotNull ItemStack stack, @Nullable BlockGetter worldIn, @NotNull List<Component> toolTip, @NotNull TooltipFlag flag) {
         super.appendHoverText(stack, worldIn, toolTip, flag);
-        if(!(kb.HShift()) && !(kb.HCtrl()) && tip0 != null) toolTip.add(Component.translatable(tip0)); //if neither pressed, show tip0 (if not empty)
-        if(kb.HCtrl() && tip2 != null) toolTip.add(Component.translatable(tip2)); //if ctrl, show tip2 (if not empty), do first
-        if(kb.HShift() && tip1 != null) //noinspection GrazieInspection
-            toolTip.add(Component.translatable(tip1)); //if shift, show tip1 (if not empty)
+        if(!(kb.HShift()) && !(kb.HCtrl()) && tip0 != null) { toolTip.add(Component.translatable(tip0)); } //if neither pressed, show tip0 (if not empty)
+        if(kb.HCtrl() && tip2 != null) { toolTip.add(Component.translatable(tip2)); } //if ctrl, show tip2 (if not empty), do first
+        if(kb.HShift() && tip1 != null) { toolTip.add(Component.translatable(tip1)); } //if shift, show tip1 (if not empty)
     }
-    public void tick(BlockState state, ServerLevel worldIn, BlockPos pos, RandomSource pRandom) {
+    public void tick(@NotNull BlockState state, @NotNull ServerLevel worldIn, @NotNull BlockPos pos, @NotNull RandomSource pRandom) {
         if (gravity(worldIn, pos) && pos.getY() >= -164) {
             FallingBlockEntity fallingblockentity = FallingBlockEntity.fall(worldIn, pos, state);
             this.falling(fallingblockentity);
