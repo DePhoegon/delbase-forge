@@ -5,19 +5,26 @@ Official Stuff
 ---------
 Download - https://legacy.curseforge.com/minecraft/mc-mods/dephoegons-reclaim
 Download - https://www.curseforge.com/minecraft/mc-mods/dephoegons-reclaim
+Download - Monrinth Link Placeholder
 GitHub - https://github.com/DePhoegon/delbase
 Author - DePhoegon
 Latest Version
--1.19.3 = 1.4.3
--1.19.2 = 1.4.3
--1.18.2 = 1.4.3
+-1.20 / 1.20.1 = 1.4.9
+-1.19.3 = 1.4.9
+-1.19.2 = 1.4.9
+-1.18.2 = 1.4.9
 Companion Mod
 - DePhoegons' Chocobos
 -- GitHub - https://github.com/DePhoegon/chococraft-delbase_patch
 -- Download - https://legacy.curseforge.com/minecraft/mc-mods/dephoegons-chocobos
 -- Download - https://www.curseforge.com/minecraft/mc-mods/dephoegons-chocobos
+-- Download - Monrith Link Placeholder
 -- Author - DePhoegon
-
+-- Latest Version
+---- 1.20 / 1.20.1 = 3.3.4
+---- 1.19.3 = 3.3.4
+---- 1.19.2 = 3.3.4
+---- 1.18.2 = 3.3.4
 
 This is a Decoration & Resource reclaiming based mod.
 
@@ -52,6 +59,8 @@ Dried Kep has gotten Alot of attention & effectively has a centered band.
 MC Warnings
 --------
 Yes, the Sand & Red Sand warnings are because of an intentional act to include them in the same class as the mod sands, while also allowing the game to generate with it as normal.
+1.19.2 / 1.19.3 - Experimental feature warnings
+-- Item Tooltip usage
 
 revisit Fixes
 -------
