@@ -1,4 +1,7 @@
-DePhoegons' Reclaim  (Read Me, Refactoring)
+Only Uploaded to Curseforge / Modrinth 
+- https://modrinth.com/user/DePhoegon
+- https://legacy.curseforge.com/members/kpdragon/projects
+
 =========================
 
 Official Stuff
