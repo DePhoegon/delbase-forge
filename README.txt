@@ -9,7 +9,7 @@ Official Stuff
 Download - https://legacy.curseforge.com/minecraft/mc-mods/dephoegons-reclaim
 Download - https://www.curseforge.com/minecraft/mc-mods/dephoegons-reclaim
 Download - Monrinth Link Placeholder
-GitHub - https://github.com/DePhoegon/delbase
+GitHub - https://github.com/DePhoegon/delbase-forge
 Author - DePhoegon
 Latest Version
 -1.20 / 1.20.1 = 1.4.9
@@ -18,7 +18,7 @@ Latest Version
 -1.18.2 = 1.4.9
 Companion Mod
 - DePhoegons' Chocobos
--- GitHub - https://github.com/DePhoegon/chococraft-delbase_patch
+-- GitHub - https://github.com/DePhoegon/delchoco
 -- Download - https://legacy.curseforge.com/minecraft/mc-mods/dephoegons-chocobos
 -- Download - https://www.curseforge.com/minecraft/mc-mods/dephoegons-chocobos
 -- Download - Monrith Link Placeholder
