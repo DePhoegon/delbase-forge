@@ -8,6 +8,6 @@ import static net.minecraft.world.level.block.Blocks.SANDSTONE;
 
 public class sandStoneStair extends stairBlock {
     public sandStoneStair(String normToolTip, String shiftToolTip, String ctrlToolTip) {
-        super(SANDSTONE::defaultBlockState, BlockBehaviour.Properties.copy(SANDSTONE).sound(SoundType.STONE), normToolTip, shiftToolTip, ctrlToolTip, false, null);
+        super(SANDSTONE::defaultBlockState, BlockBehaviour.Properties.copy(SANDSTONE).sound(SoundType.STONE), normToolTip, shiftToolTip, ctrlToolTip, false, 0 ,0, null);
     }
 }

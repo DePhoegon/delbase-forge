@@ -31,13 +31,17 @@ public class stairBlock extends StairBlock {
     private final String tip1;
     private final String tip2;
     private final boolean flame;
+    private final int spread;
+    private final int flammability;
     private final BlockState stripped;
-    public stairBlock(Supplier<BlockState> state, Properties properties, String normToolTip, String shiftToolTip, String ctrlToolTip, boolean flames, BlockState strippedState) {
+    public stairBlock(Supplier<BlockState> state, Properties properties, String normToolTip, String shiftToolTip, String ctrlToolTip, boolean flames, int fireChance, int fireSpread, BlockState strippedState) {
         super(state, properties);
         if(normToolTip.isEmpty()) { tip0 = null; } else { tip0 = normToolTip; }
         if(shiftToolTip.isEmpty()) { tip1 = null; } else { tip1 = shiftToolTip; }
         if(ctrlToolTip.isEmpty()) { tip2 = null; } else { tip2 = ctrlToolTip; }
         flame = flames;
+        spread = fireSpread;
+        flammability = fireChance;
         stripped = strippedState;
     }
     @Override
@@ -55,6 +59,17 @@ public class stairBlock extends StairBlock {
             return state.getValue(StairBlock.HALF) == Half.TOP;
         }
         return false;
+    }
+    @Override
+    public int getFlammability(BlockState state, BlockGetter world, BlockPos pos, Direction face) {
+        if (flame) { return flammability; }
+        return 0;
+    }
+
+    @Override
+    public int getFireSpreadSpeed(BlockState state, BlockGetter world, BlockPos pos, Direction face) {
+        if (flame) { return spread; }
+        return 0;
     }
 
     @Nullable

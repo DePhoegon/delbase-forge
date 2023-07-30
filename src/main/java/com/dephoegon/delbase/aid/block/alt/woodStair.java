@@ -7,6 +7,6 @@ import java.util.function.Supplier;
 
 public class woodStair extends stairBlock {
     public woodStair(Supplier<BlockState> state, Properties properties, String normToolTip, String shiftToolTip, String ctrlToolTip, boolean flame, BlockState strippedState) {
-        super(state, properties, normToolTip, shiftToolTip, ctrlToolTip, flame, strippedState);
+        super(state, properties, normToolTip, shiftToolTip, ctrlToolTip, flame, 5, 20, strippedState);
     }
 }

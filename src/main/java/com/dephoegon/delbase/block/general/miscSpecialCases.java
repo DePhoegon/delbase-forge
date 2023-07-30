@@ -2,7 +2,6 @@ package com.dephoegon.delbase.block.general;
 
 import com.dephoegon.delbase.aid.block.stock.genBlock;
 import net.minecraft.world.item.BlockItem;
-import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.SoundType;
@@ -24,7 +23,7 @@ public class miscSpecialCases {
 
     public static final RegistryObject<Block> HARDENED_OAK_PLANKS = register("hardened_oak_planks",
             () -> new genBlock(BlockBehaviour.Properties.copy(STONE).sound(SoundType.STONE),
-                    "","","",false));
+                    "","","",false,0,0));
 
     public static void register(IEventBus eventBus) {
         BLOCKS.register(eventBus);

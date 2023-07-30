@@ -28,13 +28,17 @@ public class slabBlock extends SlabBlock {
     private final String tip1;
     private final String tip2;
     private final boolean flame;
+    private final int spread;
+    private final int flammability;
     private final BlockState stripped;
-    public slabBlock(Properties properties, @NotNull String normToolTip, String shiftToolTip, String ctrlToolTip, boolean flames, BlockState strippedState) {
+    public slabBlock(Properties properties, @NotNull String normToolTip, String shiftToolTip, String ctrlToolTip, boolean flames, int fireSpread, int fireChance, BlockState strippedState) {
         super(properties);
         if(normToolTip.isEmpty()) { tip0 = null; } else { tip0 = normToolTip; }
         if(shiftToolTip.isEmpty()) { tip1 = null; } else { tip1 = shiftToolTip; }
         if(ctrlToolTip.isEmpty()) { tip2 = null; } else { tip2 = ctrlToolTip; }
         flame = flames;
+        spread = fireSpread;
+        flammability = fireChance;
         stripped = strippedState;
     }
     @Override
@@ -51,6 +55,17 @@ public class slabBlock extends SlabBlock {
             return state.getValue(SlabBlock.TYPE) != SlabType.BOTTOM;
         }
         return false;
+    }
+    @Override
+    public int getFlammability(BlockState state, BlockGetter world, BlockPos pos, Direction face) {
+        if (flame) { return flammability; }
+        return 0;
+    }
+
+    @Override
+    public int getFireSpreadSpeed(BlockState state, BlockGetter world, BlockPos pos, Direction face) {
+        if (flame) { return spread; }
+        return 0;
     }
     @Nullable
     @Override

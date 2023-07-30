@@ -25,25 +25,25 @@ public class ashBlocks {
 
     public static final RegistryObject<SlabBlock> ASH_SLAB = register("ash_slab",
             () -> new slabBlock(BlockBehaviour.Properties.copy(OAK_PLANKS).sound(SoundType.WOOD),
-                    "","","",false, null),8000);
+                    "","","",false,0,0, null),8000);
     public static final RegistryObject<StairBlock> ASH_STAIR = register("ash_stair",
             ()-> new stairBlock(OAK_STAIRS::defaultBlockState, BlockBehaviour.Properties.copy(OAK_STAIRS).sound(SoundType.WOOD),
-                    "","","", false, null),12000);
+                    "","","", false, 0 ,0, null),12000);
     public static final RegistryObject<RotatedPillarBlock> ASH_LOG = register("ash_log",
             ()-> new axisBlock(BlockBehaviour.Properties.copy(OAK_LOG).sound(SoundType.WOOD),
-                    "","","",false),16000);
+                    "","","",false, 0 ,0),16000);
     public static final RegistryObject<WallBlock> ASH_WALL = register("ash_wall",
             ()-> new wallBlock(BlockBehaviour.Properties.copy(OAK_FENCE).sound(SoundType.WOOD),
-                    "","","", false, null),10000);
+                    "","","", false, 0, 0, null),10000);
     public static final RegistryObject<Block> ASH_BLOCK = register("ash_block",
             ()-> new genBlock(BlockBehaviour.Properties.copy(OAK_PLANKS).sound(SoundType.WOOD),
-                    "","","", false),16000);
+                    "","","", false,0,0),16000);
     public static final RegistryObject<FenceBlock> ASH_FENCE = register("ash_fence",
             () -> new fenceBlock(BlockBehaviour.Properties.copy(OAK_FENCE).sound(SoundType.WOOD),
-                    "","","", false, null), 5000);
+                    "","","", false,0,0, null), 5000);
     public static final RegistryObject<FenceGateBlock> ASH_FENCE_GATE = register("ash_fence_gate",
             () -> new fenceGateBlock(BlockBehaviour.Properties.copy(OAK_FENCE_GATE).sound(SoundType.WOOD),
-                    "","","", false, null), 5000);
+                    "","","", false,0,0, null), 5000);
     public static void register(IEventBus eventBus) {
         BLOCKS.register(eventBus);
         ITEMS.register(eventBus);

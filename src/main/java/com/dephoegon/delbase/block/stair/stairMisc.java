@@ -28,58 +28,58 @@ public class stairMisc {
 
     public static final RegistryObject<StairBlock> END_STONE_STAIR = register("end_stone_stair",
             ()-> new stairBlock(END_STONE::defaultBlockState, BlockBehaviour.Properties.copy(END_STONE).sound(SoundType.STONE)
-                    ,"","","", false, null));
+                    ,"","","", false, 0, 0, null));
     public static final RegistryObject<StairBlock> BONE_BLOCK_STAIR = register("bone_block_stair",
             ()-> new stairBlock(BONE_BLOCK::defaultBlockState, BlockBehaviour.Properties.copy(BONE_BLOCK).sound(SoundType.BONE_BLOCK)
-                    ,"","","", false, null));
+                    ,"","","", false, 0, 0, null));
     public static final RegistryObject<StairBlock> DRIED_KELP_STAIR = register("dried_kelp_stair",
             ()-> new leafStair(DRIED_KELP_BLOCK::defaultBlockState, BlockBehaviour.Properties.copy(DRIED_KELP_BLOCK).sound(SoundType.GRASS)
                     ,"","","", true, null),4001);
     public static final RegistryObject<StairBlock> GLOWSTONE_STAIR = register("glowstone_stair",
             ()-> new stairBlock(GLOWSTONE::defaultBlockState, BlockBehaviour.Properties.copy(GLOWSTONE).sound(SoundType.GLASS).lightLevel((blockState)-> 15)
-                    ,"","","", false, null));
+                    ,"","","", false, 0, 0, null));
     public static final RegistryObject<StairBlock> BASALT_STAIR = register("basalt_stair",
             ()-> new stairBlock(BASALT::defaultBlockState, BlockBehaviour.Properties.copy(BASALT).sound(SoundType.STONE)
-                    ,"","","", false, null));
+                    ,"","","", false, 0, 0, null));
     public static final RegistryObject<StairBlock> POLISHED_BASALT_STAIR = register("polished_basalt_stair",
             ()-> new stairBlock(POLISHED_BASALT::defaultBlockState, BlockBehaviour.Properties.copy(POLISHED_BASALT).sound(SoundType.STONE)
-                    ,"","","", false, null));
+                    ,"","","", false, 0, 0, null));
     public static final RegistryObject<StairBlock> SMOOTH_BASALT_STAIR = register("smooth_basalt_stair",
             ()-> new stairBlock(SMOOTH_BASALT::defaultBlockState, BlockBehaviour.Properties.copy(SMOOTH_BASALT).sound(SoundType.STONE)
-                    ,"","","", false, null));
+                    ,"","","", false, 0, 0, null));
     public static final RegistryObject<StairBlock> COBBLED_BASALT_STAIR = register("cobbled_basalt_stair",
             ()-> new stairBlock(BASALT::defaultBlockState, BlockBehaviour.Properties.copy(BASALT).sound(SoundType.STONE)
-                    ,"","","", false, null));
+                    ,"","","", false, 0, 0, null));
     public static final RegistryObject<StairBlock> RAW_GOLD_STAIR = register("raw_gold_stair",
             ()-> new stairBlock(RAW_GOLD_BLOCK::defaultBlockState, BlockBehaviour.Properties.copy(RAW_GOLD_BLOCK).sound(SoundType.METAL)
-                    ,"","","", false, null));
+                    ,"","","", false, 0, 0, null));
     public static final RegistryObject<StairBlock> RAW_COPPER_STAIR = register("raw_copper_stair",
             ()-> new stairBlock(RAW_COPPER_BLOCK::defaultBlockState, BlockBehaviour.Properties.copy(RAW_COPPER_BLOCK).sound(SoundType.METAL)
-                    ,"","","", false, null));
+                    ,"","","", false, 0, 0, null));
     public static final RegistryObject<StairBlock> RAW_IRON_STAIR = register("raw_iron_stair",
             ()-> new stairBlock(RAW_IRON_BLOCK::defaultBlockState, BlockBehaviour.Properties.copy(RAW_IRON_BLOCK).sound(SoundType.METAL)
-                    ,"","","", false, null));
+                    ,"","","", false, 0, 0, null));
     public static final RegistryObject<StairBlock> COAL_BLOCK_STAIR = register("coal_block_stair",
             ()-> new stairBlock(COAL_BLOCK::defaultBlockState, BlockBehaviour.Properties.copy(COAL_BLOCK).sound(SoundType.WOOD)
-                    ,"","","", true, null),16000);
+                    ,"","","", true, 10, 20, null),16000);
     public static final RegistryObject<StairBlock> CRACKED_POLISHED_BLACKSTONE_BRICK_STAIR = register("cracked_polished_blackstone_brick_stair",
             ()-> new stairBlock(CRACKED_POLISHED_BLACKSTONE_BRICKS::defaultBlockState, BlockBehaviour.Properties.copy(CRACKED_POLISHED_BLACKSTONE_BRICKS).sound(SoundType.STONE)
-                    ,"","","", false, null));
+                    ,"","","", false, 0, 0, null));
     public static final RegistryObject<StairBlock> CHISELED_POLISHED_BLACKSTONE_STAIR = register("chiseled_polished_blackstone_stair",
             ()-> new stairBlock(CHISELED_POLISHED_BLACKSTONE::defaultBlockState, BlockBehaviour.Properties.copy(CHISELED_POLISHED_BLACKSTONE).sound(SoundType.STONE)
-                    ,"","","", false, null));
+                    ,"","","", false, 0, 0, null));
     public static final RegistryObject<StairBlock> DRIPSTONE_STAIR = register("dripstone_stair",
             ()-> new stairBlock(DRIPSTONE_BLOCK::defaultBlockState, BlockBehaviour.Properties.copy(DRIPSTONE_BLOCK).sound(SoundType.STONE)
-                    ,"","","", false, null));
+                    ,"","","", false, 0, 0, null));
     public static final RegistryObject<StairBlock> NETHERRACK_STAIR = register("netherrack_stair",
             ()-> new stairBlock(NETHERRACK::defaultBlockState, BlockBehaviour.Properties.copy(NETHERRACK).sound(SoundType.NETHERRACK)
-                    ,"","","", false, null));
+                    ,"","","", false, 0, 0, null));
     public static final RegistryObject<StairBlock> SHROOMLIGHT_STAIR = register("shroomlight_stair",
             ()-> new stairBlock(SHROOMLIGHT::defaultBlockState, BlockBehaviour.Properties.copy(SHROOMLIGHT).sound(SoundType.SHROOMLIGHT).lightLevel((blockstate) -> 15)
-                    ,"","","", false, null));
+                    ,"","","", false, 0, 0, null));
     public static final RegistryObject<StairBlock> MAGMA_BLOCK_STAIR = register("magma_block_stair",
             ()-> new stairBlock(MAGMA_BLOCK::defaultBlockState, BlockBehaviour.Properties.copy(MAGMA_BLOCK).sound(SoundType.MOSS).lightLevel((blockstate) -> 3)
-                    ,"","","", false, null));
+                    ,"","","", false, 0, 0, null));
 
     public static void register(IEventBus eventBus) {
         BLOCKS.register(eventBus);

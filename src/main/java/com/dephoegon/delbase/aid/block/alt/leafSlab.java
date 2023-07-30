@@ -6,6 +6,6 @@ import org.jetbrains.annotations.NotNull;
 
 public class leafSlab extends slabBlock {
     public leafSlab(Properties properties, @NotNull String normToolTip, String shiftToolTip, String ctrlToolTip, boolean flames, BlockState strippedState) {
-        super(properties, normToolTip, shiftToolTip, ctrlToolTip, flames, strippedState);
+        super(properties, normToolTip, shiftToolTip, ctrlToolTip, flames,30,60, strippedState);
     }
 }

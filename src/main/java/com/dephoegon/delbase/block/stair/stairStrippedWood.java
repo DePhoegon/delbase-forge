@@ -1,7 +1,6 @@
 package com.dephoegon.delbase.block.stair;
 
 import com.dephoegon.delbase.aid.block.alt.woodStair;
-import com.dephoegon.delbase.aid.block.stock.stairBlock;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
@@ -69,10 +68,10 @@ public class stairStrippedWood {
             () -> new woodStair(STRIPPED_BIRCH_WOOD::defaultBlockState, BlockBehaviour.Properties.copy(STRIPPED_BIRCH_WOOD).sound(SoundType.WOOD)
                     , "","","", true, null), 5001);
     public static final RegistryObject<StairBlock> STRIPPED_WARPED_STEM_STAIR = register("stripped_warped_stem_stair",
-            () -> new stairBlock(STRIPPED_WARPED_HYPHAE::defaultBlockState, BlockBehaviour.Properties.copy(STRIPPED_WARPED_HYPHAE).sound(SoundType.WOOD)
+            () -> new woodStair(STRIPPED_WARPED_HYPHAE::defaultBlockState, BlockBehaviour.Properties.copy(STRIPPED_WARPED_HYPHAE).sound(SoundType.WOOD)
                     , "","","", false, null));
     public static final RegistryObject<StairBlock> STRIPPED_CRIMSON_STEM_STAIR = register("stripped_crimson_stem_stair",
-            () -> new stairBlock(STRIPPED_CRIMSON_HYPHAE::defaultBlockState, BlockBehaviour.Properties.copy(STRIPPED_CRIMSON_HYPHAE).sound(SoundType.WOOD)
+            () -> new woodStair(STRIPPED_CRIMSON_HYPHAE::defaultBlockState, BlockBehaviour.Properties.copy(STRIPPED_CRIMSON_HYPHAE).sound(SoundType.WOOD)
                     , "","","", false, null));
 
     public static void register(IEventBus eventBus) {

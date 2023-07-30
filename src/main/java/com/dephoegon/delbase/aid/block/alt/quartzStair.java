@@ -7,6 +7,6 @@ import java.util.function.Supplier;
 
 public class quartzStair extends stairBlock {
     public quartzStair(Supplier<BlockState> state, Properties properties, String normToolTip, String shiftToolTip, String ctrlToolTip) {
-        super(state, properties, normToolTip, shiftToolTip, ctrlToolTip, false, null);
+        super(state, properties, normToolTip, shiftToolTip, ctrlToolTip, false, 0 ,0, null);
     }
 }

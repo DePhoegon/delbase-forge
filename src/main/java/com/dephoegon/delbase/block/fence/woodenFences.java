@@ -2,8 +2,6 @@ package com.dephoegon.delbase.block.fence;
 
 import com.dephoegon.delbase.aid.block.alt.woodFence;
 import com.dephoegon.delbase.aid.block.alt.woodFenceGate;
-import com.dephoegon.delbase.aid.block.stock.fenceBlock;
-import com.dephoegon.delbase.aid.block.stock.fenceGateBlock;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
@@ -55,16 +53,16 @@ public class woodenFences {
             () -> new woodFenceGate(BlockBehaviour.Properties.of(Material.WOOD, MaterialColor.SAND).strength(2.0F, 3.0F).sound(SoundType.WOOD),
                     "","","", true, STRIPPED_BIRCH_LOG_FENCE_GATE.get().defaultBlockState()), 1000);
     public static final RegistryObject<FenceBlock> CRIMSON_HYPHAE_FENCE = register("crimson_hyphae_fence",
-            () -> new fenceBlock(BlockBehaviour.Properties.of(Material.WOOD, MaterialColor.CRIMSON_HYPHAE).strength(2.0F, 3.0F).sound(SoundType.WOOD),
+            () -> new woodFence(BlockBehaviour.Properties.of(Material.WOOD, MaterialColor.CRIMSON_HYPHAE).strength(2.0F, 3.0F).sound(SoundType.WOOD),
                     "","","", false, STRIPPED_CRIMSON_HYPHAE_FENCE.get().defaultBlockState()));
     public static final RegistryObject<FenceGateBlock> CRIMSON_HYPHAE_FENCE_GATE = register("crimson_hyphae_fence_gate",
-            () -> new fenceGateBlock(BlockBehaviour.Properties.of(Material.WOOD, MaterialColor.CRIMSON_HYPHAE).strength(2.0F, 3.0F).sound(SoundType.WOOD),
+            () -> new woodFenceGate(BlockBehaviour.Properties.of(Material.WOOD, MaterialColor.CRIMSON_HYPHAE).strength(2.0F, 3.0F).sound(SoundType.WOOD),
                     "","","", false, STRIPPED_CRIMSON_HYPHAE_FENCE_GATE.get().defaultBlockState()));
     public static final RegistryObject<FenceBlock> CRIMSON_STEM_FENCE = register("crimson_stem_fence",
-            () -> new fenceBlock(BlockBehaviour.Properties.of(Material.WOOD, MaterialColor.CRIMSON_HYPHAE).strength(2.0F, 3.0F).sound(SoundType.WOOD),
+            () -> new woodFence(BlockBehaviour.Properties.of(Material.WOOD, MaterialColor.CRIMSON_HYPHAE).strength(2.0F, 3.0F).sound(SoundType.WOOD),
                     "","","", false, STRIPPED_CRIMSON_STEM_FENCE.get().defaultBlockState()));
     public static final RegistryObject<FenceGateBlock> CRIMSON_STEM_FENCE_GATE = register("crimson_stem_fence_gate",
-            () -> new fenceGateBlock(BlockBehaviour.Properties.of(Material.WOOD, MaterialColor.CRIMSON_HYPHAE).strength(2.0F, 3.0F).sound(SoundType.WOOD),
+            () -> new woodFenceGate(BlockBehaviour.Properties.of(Material.WOOD, MaterialColor.CRIMSON_HYPHAE).strength(2.0F, 3.0F).sound(SoundType.WOOD),
                     "","","", false, STRIPPED_CRIMSON_STEM_FENCE_GATE.get().defaultBlockState()));
     public static final RegistryObject<FenceBlock> DARK_OAK_WOOD_FENCE = register("dark_oak_wood_fence",
             () -> new woodFence(BlockBehaviour.Properties.of(Material.WOOD, MaterialColor.COLOR_BROWN).strength(2.0F, 3.0F).sound(SoundType.WOOD),
@@ -115,16 +113,16 @@ public class woodenFences {
             () -> new woodFenceGate(BlockBehaviour.Properties.of(Material.WOOD, MaterialColor.PODZOL).strength(2.0F, 3.0F).sound(SoundType.WOOD),
                     "","","", true, STRIPPED_SPRUCE_LOG_FENCE_GATE.get().defaultBlockState()), 1000);
     public static final RegistryObject<FenceBlock> WARPED_HYPHAE_FENCE = register("warped_hyphae_fence",
-            () -> new fenceBlock(BlockBehaviour.Properties.of(Material.WOOD, MaterialColor.WARPED_HYPHAE).strength(2.0F, 3.0F).sound(SoundType.WOOD),
+            () -> new woodFence(BlockBehaviour.Properties.of(Material.WOOD, MaterialColor.WARPED_HYPHAE).strength(2.0F, 3.0F).sound(SoundType.WOOD),
                     "","","", false, STRIPPED_WARPED_HYPHAE_FENCE.get().defaultBlockState()));
     public static final RegistryObject<FenceGateBlock> WARPED_HYPHAE_FENCE_GATE = register("warped_hyphae_fence_gate",
-            () -> new fenceGateBlock(BlockBehaviour.Properties.of(Material.WOOD, MaterialColor.WARPED_HYPHAE).strength(2.0F, 3.0F).sound(SoundType.WOOD),
+            () -> new woodFenceGate(BlockBehaviour.Properties.of(Material.WOOD, MaterialColor.WARPED_HYPHAE).strength(2.0F, 3.0F).sound(SoundType.WOOD),
                     "","","", false, STRIPPED_WARPED_HYPHAE_FENCE_GATE.get().defaultBlockState()));
     public static final RegistryObject<FenceBlock> WARPED_STEM_FENCE = register("warped_stem_fence",
-            () -> new fenceBlock(BlockBehaviour.Properties.of(Material.WOOD, MaterialColor.WARPED_HYPHAE).strength(2.0F, 3.0F).sound(SoundType.WOOD),
+            () -> new woodFence(BlockBehaviour.Properties.of(Material.WOOD, MaterialColor.WARPED_HYPHAE).strength(2.0F, 3.0F).sound(SoundType.WOOD),
                     "","","", false, STRIPPED_WARPED_STEM_FENCE.get().defaultBlockState()));
     public static final RegistryObject<FenceGateBlock> WARPED_STEM_FENCE_GATE = register("warped_stem_fence_gate",
-            () -> new fenceGateBlock(BlockBehaviour.Properties.of(Material.WOOD, MaterialColor.WARPED_HYPHAE).strength(2.0F, 3.0F).sound(SoundType.WOOD),
+            () -> new woodFenceGate(BlockBehaviour.Properties.of(Material.WOOD, MaterialColor.WARPED_HYPHAE).strength(2.0F, 3.0F).sound(SoundType.WOOD),
                     "","","", false, STRIPPED_WARPED_STEM_FENCE_GATE.get().defaultBlockState()));
 
     public static void register(IEventBus eventBus) {

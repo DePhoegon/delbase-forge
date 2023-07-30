@@ -2,7 +2,6 @@ package com.dephoegon.delbase.block.stair;
 
 import com.dephoegon.delbase.aid.block.stock.stairBlock;
 import net.minecraft.world.item.BlockItem;
-import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.SoundType;
@@ -25,7 +24,7 @@ public class stairStones {
 
     public static final RegistryObject<StairBlock> DEEPSLATE_STAIR = register("deepslate_stair",
             () -> new stairBlock(DEEPSLATE::defaultBlockState, BlockBehaviour.Properties.copy(DEEPSLATE).sound(SoundType.DEEPSLATE),
-                    "","","",false, null));
+                    "","","",false, 0 ,0, null));
 
     public static void register(IEventBus eventBus) {
         BLOCKS.register(eventBus);
