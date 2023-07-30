@@ -1,8 +1,8 @@
 package com.dephoegon.delbase.block.stair;
 
+import com.dephoegon.delbase.aid.block.alt.leafStair;
 import com.dephoegon.delbase.aid.block.stock.stairBlock;
 import net.minecraft.world.item.BlockItem;
-import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.RecipeType;
@@ -33,7 +33,7 @@ public class stairMisc {
             ()-> new stairBlock(BONE_BLOCK::defaultBlockState, BlockBehaviour.Properties.copy(BONE_BLOCK).sound(SoundType.BONE_BLOCK)
                     ,"","","", false, null));
     public static final RegistryObject<StairBlock> DRIED_KELP_STAIR = register("dried_kelp_stair",
-            ()-> new stairBlock(DRIED_KELP_BLOCK::defaultBlockState, BlockBehaviour.Properties.copy(DRIED_KELP_BLOCK).sound(SoundType.GRASS)
+            ()-> new leafStair(DRIED_KELP_BLOCK::defaultBlockState, BlockBehaviour.Properties.copy(DRIED_KELP_BLOCK).sound(SoundType.GRASS)
                     ,"","","", true, null),4001);
     public static final RegistryObject<StairBlock> GLOWSTONE_STAIR = register("glowstone_stair",
             ()-> new stairBlock(GLOWSTONE::defaultBlockState, BlockBehaviour.Properties.copy(GLOWSTONE).sound(SoundType.GLASS).lightLevel((blockState)-> 15)

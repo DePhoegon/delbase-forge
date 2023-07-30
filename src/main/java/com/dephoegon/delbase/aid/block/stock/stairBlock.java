@@ -1,7 +1,6 @@
 package com.dephoegon.delbase.aid.block.stock;
 
 import com.dephoegon.delbase.aid.util.kb;
-import com.dephoegon.delbase.delbase;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.network.chat.Component;
@@ -11,12 +10,9 @@ import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.level.block.SlabBlock;
 import net.minecraft.world.level.block.StairBlock;
-import net.minecraft.world.level.block.WallBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.Half;
-import net.minecraft.world.level.block.state.properties.SlabType;
 import net.minecraft.world.level.block.state.properties.StairsShape;
 import net.minecraftforge.common.ToolAction;
 import org.jetbrains.annotations.NotNull;
@@ -26,6 +22,7 @@ import java.util.List;
 import java.util.function.Supplier;
 
 import static com.dephoegon.delbase.aid.util.burnChance.rngBurn;
+import static com.dephoegon.delbase.block.general.ashBlocks.ASH_LOG;
 import static com.dephoegon.delbase.block.general.ashBlocks.ASH_STAIR;
 import static net.minecraftforge.common.ToolActions.AXE_STRIP;
 
@@ -37,9 +34,9 @@ public class stairBlock extends StairBlock {
     private final BlockState stripped;
     public stairBlock(Supplier<BlockState> state, Properties properties, String normToolTip, String shiftToolTip, String ctrlToolTip, boolean flames, BlockState strippedState) {
         super(state, properties);
-        if(normToolTip.equals("")) { tip0 = null; } else { tip0 = normToolTip; }
-        if(shiftToolTip.equals("")) { tip1 = null; } else { tip1 = shiftToolTip; }
-        if(ctrlToolTip.equals("")) { tip2 = null; } else { tip2 = ctrlToolTip; }
+        if(normToolTip.isEmpty()) { tip0 = null; } else { tip0 = normToolTip; }
+        if(shiftToolTip.isEmpty()) { tip1 = null; } else { tip1 = shiftToolTip; }
+        if(ctrlToolTip.isEmpty()) { tip2 = null; } else { tip2 = ctrlToolTip; }
         flame = flames;
         stripped = strippedState;
     }
@@ -53,7 +50,7 @@ public class stairBlock extends StairBlock {
     @Override
     public boolean isFlammable(BlockState state, BlockGetter world, BlockPos pos, Direction face)
     {
-        if (flame && !state.getValue(WATERLOGGED)) {
+        if (flame && !state.getValue(WATERLOGGED) && state.getBlock().defaultBlockState() != ASH_LOG.get().defaultBlockState()) {
             rngBurn(world, state, ASH_STAIR.get().defaultBlockState(), pos, 40 ,60);
             return state.getValue(StairBlock.HALF) == Half.TOP;
         }

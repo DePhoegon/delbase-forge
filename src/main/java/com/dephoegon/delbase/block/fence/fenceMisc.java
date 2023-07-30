@@ -1,5 +1,7 @@
 package com.dephoegon.delbase.block.fence;
 
+import com.dephoegon.delbase.aid.block.alt.leafFence;
+import com.dephoegon.delbase.aid.block.alt.leafFenceGate;
 import com.dephoegon.delbase.aid.block.stock.fenceBlock;
 import com.dephoegon.delbase.aid.block.stock.fenceGateBlock;
 import net.minecraft.world.item.BlockItem;
@@ -118,10 +120,10 @@ public class fenceMisc {
             () -> new fenceGateBlock(BlockBehaviour.Properties.copy(BONE_BLOCK).sound(SoundType.BONE_BLOCK),
                     "","","", false, null));
     public static final RegistryObject<FenceBlock> DRIED_KELP_FENCE = register("dried_kelp_fence",
-            () -> new fenceBlock(BlockBehaviour.Properties.copy(DRIED_KELP_BLOCK).sound(SoundType.GRASS),
+            () -> new leafFence(BlockBehaviour.Properties.copy(DRIED_KELP_BLOCK).sound(SoundType.GRASS),
                     "","","", false, null));
     public static final RegistryObject<FenceGateBlock> DRIED_KELP_FENCE_GATE = register("dried_kelp_fence_gate",
-            () -> new fenceGateBlock(BlockBehaviour.Properties.copy(DRIED_KELP_BLOCK).sound(SoundType.GRASS),
+            () -> new leafFenceGate(BlockBehaviour.Properties.copy(DRIED_KELP_BLOCK).sound(SoundType.GRASS),
                     "","","", false, null));
     public static final RegistryObject<FenceBlock> NETHERRACK_FENCE = register("netherrack_fence",
             () -> new fenceBlock(BlockBehaviour.Properties.copy(NETHERRACK).sound(SoundType.NETHERRACK),

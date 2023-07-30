@@ -1,8 +1,8 @@
 package com.dephoegon.delbase.block.wall;
 
+import com.dephoegon.delbase.aid.block.alt.leafWall;
 import com.dephoegon.delbase.aid.block.stock.wallBlock;
 import net.minecraft.world.item.BlockItem;
-import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.RecipeType;
@@ -33,7 +33,7 @@ public class wallMisc {
             () -> new wallBlock(BlockBehaviour.Properties.copy(BONE_BLOCK).sound(SoundType.BONE_BLOCK),
                     "","","",false, null));
     public static final RegistryObject<WallBlock> DRIED_KELP_WALL = register("dried_kelp_wall",
-            () -> new wallBlock(BlockBehaviour.Properties.copy(DRIED_KELP_BLOCK).sound(SoundType.GRASS),
+            () -> new leafWall(BlockBehaviour.Properties.copy(DRIED_KELP_BLOCK).sound(SoundType.GRASS),
                     "","","",true, null),4001);
     public static final RegistryObject<WallBlock> GLOWSTONE_WALL = register("glowstone_wall",
             () -> new wallBlock(BlockBehaviour.Properties.copy(GLOWSTONE).sound(SoundType.GLASS).lightLevel((blockState)-> 15),

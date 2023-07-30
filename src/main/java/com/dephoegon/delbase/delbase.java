@@ -41,6 +41,7 @@ public class delbase
         regList.listOrder(eventBus);
         MinecraftForge.EVENT_BUS.addListener(eventBusEvents::onServerStartAddCompostItems);
 
+
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
         ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, commonConfig.SPEC, "delbase-common.toml");

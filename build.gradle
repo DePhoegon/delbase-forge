@@ -31,7 +31,7 @@ minecraft {
     // mappings channel: 'official', version: '1.18.2'
     mappings channel: project.map_type, version: project.map_type_version
 
-    // accessTransformer = file('src/main/resources/META-INF/accesstransformer.cfg') // Currently, this location cannot be changed from the default.
+    //accessTransformer = file('src/main/resources/META-INF/accesstransformer.cfg') // Currently, this location cannot be changed from the default.
 
     // These can be tweaked, removed, or duplicated as needed.
     runs {

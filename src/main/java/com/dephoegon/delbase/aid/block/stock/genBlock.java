@@ -25,9 +25,9 @@ public class genBlock extends Block {
     private final boolean flame;
     public genBlock(Properties properties, String normToolTip, String shiftToolTip, String ctrlToolTip, boolean flames) {
         super(properties);
-        if(normToolTip.equals("")) { tip0 = null; } else { tip0 = normToolTip; }
-        if(shiftToolTip.equals("")) { tip1 = null; } else { tip1 = shiftToolTip; }
-        if(ctrlToolTip.equals("")) { tip2 = null; } else { tip2 = ctrlToolTip; }
+        if(normToolTip.isEmpty()) { tip0 = null; } else { tip0 = normToolTip; }
+        if(shiftToolTip.isEmpty()) { tip1 = null; } else { tip1 = shiftToolTip; }
+        if(ctrlToolTip.isEmpty()) { tip2 = null; } else { tip2 = ctrlToolTip; }
         flame = flames;
     }
 
@@ -41,7 +41,7 @@ public class genBlock extends Block {
     @Override
     public boolean isFlammable(BlockState state, BlockGetter world, BlockPos pos, Direction face)
     {
-        if (flame) {
+        if (flame && state.getBlock().defaultBlockState() != ASH_BLOCK.get().defaultBlockState()) {
             rngBurn(world, state, ASH_BLOCK.get().defaultBlockState(), pos, 40, 60);
             return true;
         }

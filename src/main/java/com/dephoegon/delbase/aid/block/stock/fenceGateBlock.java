@@ -1,4 +1,5 @@
 package com.dephoegon.delbase.aid.block.stock;
+
 import com.dephoegon.delbase.aid.util.kb;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -10,10 +11,8 @@ import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.FenceGateBlock;
-import net.minecraft.world.level.block.SlabBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
-import net.minecraft.world.level.block.state.properties.SlabType;
 import net.minecraftforge.common.ToolAction;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
@@ -32,9 +31,9 @@ public class fenceGateBlock extends FenceGateBlock {
     private final BlockState stripped;
     public fenceGateBlock(Properties properties, String normToolTip, String shiftToolTip, String ctrlToolTip, boolean flames, BlockState strippedState) {
         super(properties);
-        if(normToolTip.equals("")) { tip0 = null; } else { tip0 = normToolTip; }
-        if(shiftToolTip.equals("")) { tip1 = null; } else { tip1 = shiftToolTip; }
-        if(ctrlToolTip.equals("")) { tip2 = null; } else { tip2 = ctrlToolTip; }
+        if(normToolTip.isEmpty()) { tip0 = null; } else { tip0 = normToolTip; }
+        if(shiftToolTip.isEmpty()) { tip1 = null; } else { tip1 = shiftToolTip; }
+        if(ctrlToolTip.isEmpty()) { tip2 = null; } else { tip2 = ctrlToolTip; }
         flame = flames;
         stripped = strippedState;
     }
@@ -48,8 +47,9 @@ public class fenceGateBlock extends FenceGateBlock {
     @Override
     public boolean isFlammable(BlockState state, BlockGetter world, BlockPos pos, Direction face)
     {
-        if (flame) {
+        if (flame && state.getBlock().defaultBlockState() != ASH_FENCE_GATE.get().defaultBlockState()) {
             rngBurn(world, state, ASH_FENCE_GATE.get().defaultBlockState(), pos, 40, 60);
+            return true;
         }
         return false;
     }

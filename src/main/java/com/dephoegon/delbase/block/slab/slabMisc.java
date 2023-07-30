@@ -1,8 +1,8 @@
 package com.dephoegon.delbase.block.slab;
 
+import com.dephoegon.delbase.aid.block.alt.leafSlab;
 import com.dephoegon.delbase.aid.block.stock.slabBlock;
 import net.minecraft.world.item.BlockItem;
-import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.RecipeType;
@@ -33,7 +33,7 @@ public class slabMisc {
             ()-> new slabBlock(BlockBehaviour.Properties.copy(BONE_BLOCK).sound(SoundType.BONE_BLOCK)
                     ,"","","", false, null));
     public static final RegistryObject<SlabBlock> DRIED_KELP_SLAB = register("dried_kelp_slab",
-            ()-> new slabBlock(BlockBehaviour.Properties.copy(DRIED_KELP_BLOCK).sound(SoundType.GRASS)
+            ()-> new leafSlab(BlockBehaviour.Properties.copy(DRIED_KELP_BLOCK).sound(SoundType.GRASS)
                     ,"","","", true, null),4001);
     public static final RegistryObject<SlabBlock> GLOWSTONE_SLAB = register("glowstone_slab",
             ()-> new slabBlock(BlockBehaviour.Properties.copy(GLOWSTONE).sound(SoundType.GLASS).lightLevel((blockState)-> 15)

@@ -10,10 +10,8 @@ import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.level.block.SlabBlock;
 import net.minecraft.world.level.block.WallBlock;
 import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.level.block.state.properties.SlabType;
 import net.minecraft.world.level.block.state.properties.WallSide;
 import net.minecraftforge.common.ToolAction;
 import org.jetbrains.annotations.NotNull;
@@ -33,9 +31,9 @@ public class wallBlock extends WallBlock {
     private final BlockState stripped;
     public wallBlock(Properties properties, String normToolTip, String shiftToolTip, String ctrlToolTip, boolean flames, BlockState strippedState) {
         super(properties);
-        if(normToolTip.equals("")) { tip0 = null; } else { tip0 = normToolTip; }
-        if(shiftToolTip.equals("")) { tip1 = null; } else { tip1 = shiftToolTip; }
-        if(ctrlToolTip.equals("")) { tip2 = null; } else { tip2 = ctrlToolTip; }
+        if(normToolTip.isEmpty()) { tip0 = null; } else { tip0 = normToolTip; }
+        if(shiftToolTip.isEmpty()) { tip1 = null; } else { tip1 = shiftToolTip; }
+        if(ctrlToolTip.isEmpty()) { tip2 = null; } else { tip2 = ctrlToolTip; }
         flame = flames;
         stripped = strippedState;
     }
@@ -49,8 +47,9 @@ public class wallBlock extends WallBlock {
     @Override
     public boolean isFlammable(BlockState state, BlockGetter world, BlockPos pos, Direction face)
     {
-        if (flame && !state.getValue(WATERLOGGED)) {
+        if (flame && !state.getValue(WATERLOGGED) && state.getBlock().defaultBlockState() != ASH_WALL.get().defaultBlockState()) {
             rngBurn(world, state, ASH_WALL.get().defaultBlockState(), pos, 40, 60);
+            return true;
         }
         return false;
     }

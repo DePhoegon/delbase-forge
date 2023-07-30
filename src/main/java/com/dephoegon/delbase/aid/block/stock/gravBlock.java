@@ -10,7 +10,8 @@ import net.minecraft.world.entity.item.FallingBlockEntity;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.level.BlockGetter;
-import net.minecraft.world.level.block.*;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.SandBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import org.jetbrains.annotations.NotNull;
 
@@ -29,9 +30,9 @@ public class gravBlock extends SandBlock {
     private final boolean fall;
     public gravBlock(int dustColorIn, Properties properties, String normToolTip, String shiftToolTip, String ctrlToolTip, boolean falls) {
         super(dustColorIn, properties);
-        if (normToolTip.equals("")) { tip0 = null; } else { tip0 = normToolTip; }
-        if (shiftToolTip.equals("")) { tip1 = null; } else { tip1 = shiftToolTip; }
-        if (ctrlToolTip.equals("")) { tip2 = null; } else { tip2 = ctrlToolTip; }
+        if (normToolTip.isEmpty()) { tip0 = null; } else { tip0 = normToolTip; }
+        if (shiftToolTip.isEmpty()) { tip1 = null; } else { tip1 = shiftToolTip; }
+        if (ctrlToolTip.isEmpty()) { tip2 = null; } else { tip2 = ctrlToolTip; }
         fall = falls;
     }
     @Override

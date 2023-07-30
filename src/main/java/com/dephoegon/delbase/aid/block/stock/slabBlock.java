@@ -5,27 +5,20 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.TranslatableComponent;
-import net.minecraft.world.item.AxeItem;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Items;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.SlabBlock;
-import net.minecraft.world.level.block.StairBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.SlabType;
 import net.minecraftforge.common.ToolAction;
-import net.minecraftforge.common.ToolActions;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
 
-import static com.dephoegon.delbase.aid.event.blockReplacer.slabPlacement;
 import static com.dephoegon.delbase.aid.util.burnChance.rngBurn;
 import static com.dephoegon.delbase.block.general.ashBlocks.ASH_SLAB;
 import static net.minecraftforge.common.ToolActions.AXE_STRIP;
@@ -38,9 +31,9 @@ public class slabBlock extends SlabBlock {
     private final BlockState stripped;
     public slabBlock(Properties properties, @NotNull String normToolTip, String shiftToolTip, String ctrlToolTip, boolean flames, BlockState strippedState) {
         super(properties);
-        if(normToolTip.equals("")) { tip0 = null; } else { tip0 = normToolTip; }
-        if(shiftToolTip.equals("")) { tip1 = null; } else { tip1 = shiftToolTip; }
-        if(ctrlToolTip.equals("")) { tip2 = null; } else { tip2 = ctrlToolTip; }
+        if(normToolTip.isEmpty()) { tip0 = null; } else { tip0 = normToolTip; }
+        if(shiftToolTip.isEmpty()) { tip1 = null; } else { tip1 = shiftToolTip; }
+        if(ctrlToolTip.isEmpty()) { tip2 = null; } else { tip2 = ctrlToolTip; }
         flame = flames;
         stripped = strippedState;
     }
@@ -53,7 +46,7 @@ public class slabBlock extends SlabBlock {
     }
     public boolean isFlammable(BlockState state, BlockGetter world, BlockPos pos, Direction face)
     {
-        if (flame && !state.getValue(WATERLOGGED)) {
+        if (flame && !state.getValue(WATERLOGGED) && state.getBlock().defaultBlockState() != ASH_SLAB.get().defaultBlockState()) {
             rngBurn(world, state, ASH_SLAB.get().defaultBlockState(), pos, 40, 60);
             return state.getValue(SlabBlock.TYPE) != SlabType.BOTTOM;
         }
