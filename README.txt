@@ -16,6 +16,7 @@ Companion Mod
 -- Download - https://legacy.curseforge.com/minecraft/mc-mods/dephoegons-chocobos
 -- Download - https://www.curseforge.com/minecraft/mc-mods/dephoegons-chocobos
 -- Author - DePhoegon
+-- Artist - AtticusJay (Credits.md)
 
 This is a Decoration & Resource reclaiming based mod.
 

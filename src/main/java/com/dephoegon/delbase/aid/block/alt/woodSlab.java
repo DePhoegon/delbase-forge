@@ -7,4 +7,7 @@ public class woodSlab extends slabBlock {
     public woodSlab(Properties properties, String normToolTip, String shiftToolTip, String ctrlToolTip, boolean flame, BlockState strippedState) {
         super(properties, normToolTip, shiftToolTip, ctrlToolTip, flame, 5, 20, strippedState);
     }
+    public woodSlab(Properties properties, boolean flame, BlockState strippedState) {
+        super(properties, "", "", "", flame, 5, 20, strippedState);
+    }
 }

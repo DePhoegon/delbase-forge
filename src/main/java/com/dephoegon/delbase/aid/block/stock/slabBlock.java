@@ -41,6 +41,16 @@ public class slabBlock extends SlabBlock {
         flammability = fireChance;
         stripped = strippedState;
     }
+    public slabBlock(Properties properties, boolean flames, int fireSpread, int fireChance, BlockState strippedState) {
+        super(properties);
+        tip0 = null;
+        tip1 = null;
+        tip2 = null;
+        flame = flames;
+        spread = fireSpread;
+        flammability = fireChance;
+        stripped = strippedState;
+    }
     @Override
     public void appendHoverText(@NotNull ItemStack stack, @Nullable BlockGetter worldIn, @NotNull List<Component> toolTip, @NotNull TooltipFlag flag) {
         super.appendHoverText(stack, worldIn, toolTip, flag);

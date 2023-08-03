@@ -32,6 +32,13 @@ public class blockDye extends DyeItem {
         if(ctrlToolTip.equals("")) { tip2 = null; } else { tip2 = ctrlToolTip; }
     }
 
+    public blockDye(DyeColor dyeColor, Properties properties) {
+        super(dyeColor, properties);
+        tip0 = null;
+        tip1 = null;
+        tip2 = null;
+    }
+
     @Override
     public void appendHoverText(@NotNull ItemStack stack, @Nullable Level level, @NotNull List<Component> toolTip, @NotNull TooltipFlag flag) {
         super.appendHoverText(stack, level, toolTip, flag);

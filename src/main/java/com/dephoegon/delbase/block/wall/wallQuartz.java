@@ -23,15 +23,15 @@ public class wallQuartz {
     private static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, Mod_ID);
 
     public static final RegistryObject<WallBlock> QUARTZ_WALL = register("quartz_wall",
-            () -> new quartzWall(BlockBehaviour.Properties.copy(QUARTZ_BLOCK).sound(SoundType.STONE),"","",""));
+            () -> new quartzWall(BlockBehaviour.Properties.copy(QUARTZ_BLOCK).sound(SoundType.STONE)));
     public static final RegistryObject<WallBlock> SMOOTH_QUARTZ_WALL = register("smooth_quartz_wall",
-            () -> new quartzWall(BlockBehaviour.Properties.copy(SMOOTH_QUARTZ).sound(SoundType.STONE),"","",""));
+            () -> new quartzWall(BlockBehaviour.Properties.copy(SMOOTH_QUARTZ).sound(SoundType.STONE)));
     public static final RegistryObject<WallBlock> CHISELED_QUARTZ_WALL = register("chiseled_quartz_wall",
-            () -> new quartzWall(BlockBehaviour.Properties.copy(CHISELED_QUARTZ_BLOCK).sound(SoundType.STONE),"","",""));
+            () -> new quartzWall(BlockBehaviour.Properties.copy(CHISELED_QUARTZ_BLOCK).sound(SoundType.STONE)));
     public static final RegistryObject<WallBlock> QUARTZ_BRICK_WALL = register("quartz_brick_wall",
-            () -> new quartzWall(BlockBehaviour.Properties.copy(QUARTZ_BRICKS).sound(SoundType.STONE),"","",""));
+            () -> new quartzWall(BlockBehaviour.Properties.copy(QUARTZ_BRICKS).sound(SoundType.STONE)));
     public static final RegistryObject<WallBlock> QUARTZ_PILLAR_WALL = register("quartz_pillar_wall",
-            () -> new quartzWall(BlockBehaviour.Properties.copy(QUARTZ_PILLAR).sound(SoundType.STONE),"","",""));
+            () -> new quartzWall(BlockBehaviour.Properties.copy(QUARTZ_PILLAR).sound(SoundType.STONE)));
 
     public static void register(IEventBus eventBus) {
         BLOCKS.register(eventBus);

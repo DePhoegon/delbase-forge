@@ -38,6 +38,7 @@ public class delbase
     };
     public delbase() {
         IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
+        regList.RegisterFirst(eventBus);
         regList.listOrder(eventBus);
         MinecraftForge.EVENT_BUS.addListener(eventBusEvents::onServerStartAddCompostItems);
 

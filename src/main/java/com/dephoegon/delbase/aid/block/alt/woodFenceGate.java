@@ -7,4 +7,7 @@ public class woodFenceGate extends fenceGateBlock {
     public woodFenceGate(Properties properties, String normToolTip, String shiftToolTip, String ctrlToolTip, boolean flames, BlockState strippedState) {
         super(properties, normToolTip, shiftToolTip, ctrlToolTip, flames, 5, 20, strippedState);
     }
+    public woodFenceGate(Properties properties, boolean flames, BlockState strippedState) {
+        super(properties, "", "", "", flames, 5, 20, strippedState);
+    }
 }

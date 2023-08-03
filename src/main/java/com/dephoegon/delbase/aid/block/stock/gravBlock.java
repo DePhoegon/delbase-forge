@@ -35,6 +35,13 @@ public class gravBlock extends SandBlock {
         if (ctrlToolTip.isEmpty()) { tip2 = null; } else { tip2 = ctrlToolTip; }
         fall = falls;
     }
+    public gravBlock(int dustColorIn, Properties properties, boolean falls) {
+        super(dustColorIn, properties);
+        tip0 = null;
+        tip1 = null;
+        tip2 = null;
+        fall = falls;
+    }
     @Override
     public void appendHoverText(@NotNull ItemStack stack, @Nullable BlockGetter worldIn, @NotNull List<Component> toolTip, @NotNull TooltipFlag flag) {
         super.appendHoverText(stack, worldIn, toolTip, flag);

@@ -34,6 +34,15 @@ public class axisBlock extends RotatedPillarBlock {
         spread = fireSpread;
         flammability = fireChance;
     }
+    public axisBlock(Properties properties, boolean flames, int fireChance, int fireSpread) {
+        super(properties);
+        tip0 = null;
+        tip1 = null;
+        tip2 = null;
+        flame = flames;
+        spread = fireSpread;
+        flammability = fireChance;
+    }
 
     @Override
     public void appendHoverText(@NotNull ItemStack stack, @Nullable BlockGetter worldIn, @NotNull List<Component> toolTip, @NotNull TooltipFlag flag) {

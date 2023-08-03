@@ -16,7 +16,7 @@ import org.jetbrains.annotations.Nullable;
 import java.util.List;
 
 import static com.dephoegon.delbase.aid.util.burnChance.rngBurn;
-import static com.dephoegon.delbase.block.general.ashBlocks.ASH_BLOCK;
+import static com.dephoegon.delbase.block.general.miscSpecialCases.ASH_BLOCK;
 
 public class genBlock extends Block {
     private final String tip0;
@@ -30,6 +30,15 @@ public class genBlock extends Block {
         if(normToolTip.isEmpty()) { tip0 = null; } else { tip0 = normToolTip; }
         if(shiftToolTip.isEmpty()) { tip1 = null; } else { tip1 = shiftToolTip; }
         if(ctrlToolTip.isEmpty()) { tip2 = null; } else { tip2 = ctrlToolTip; }
+        flame = flames;
+        spread = fireSpread;
+        flammability = fireChance;
+    }
+    public genBlock(Properties properties, boolean flames, int fireChance, int fireSpread) {
+        super(properties);
+        tip0 = null;
+        tip1 = null;
+        tip2 = null;
         flame = flames;
         spread = fireSpread;
         flammability = fireChance;

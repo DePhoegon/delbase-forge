@@ -5,4 +5,7 @@ public class chiseledSandStoneFence extends fenceBlock {
     public chiseledSandStoneFence(Properties properties, String normToolTip, String shiftToolTip, String ctrlToolTip) {
         super(properties, normToolTip, shiftToolTip, ctrlToolTip, false, 0, 0, null);
     }
+    public chiseledSandStoneFence(Properties properties) {
+        super(properties, "", "", "", false, 0, 0, null);
+    }
 }

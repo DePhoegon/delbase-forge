@@ -2,7 +2,6 @@ package com.dephoegon.delbase.block.stair;
 
 import com.dephoegon.delbase.aid.block.colorshift.stair.sandStair;
 import net.minecraft.world.item.BlockItem;
-import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.StairBlock;
@@ -13,49 +12,52 @@ import net.minecraftforge.registries.RegistryObject;
 
 import java.util.function.Supplier;
 
+import static com.dephoegon.delbase.block.gravity.gravColorSands.*;
 import static com.dephoegon.delbase.delbase.BASE_BLOCK;
 import static com.dephoegon.delbase.delbase.Mod_ID;
+import static net.minecraft.world.level.block.Blocks.RED_SAND;
+import static net.minecraft.world.level.block.Blocks.SAND;
 
 public class stairSands {
     private static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, Mod_ID);
     private static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, Mod_ID);
 
     public static final RegistryObject<StairBlock> SAND_STAIR = register("sand_stair",
-            ()-> new sandStair("","",""));
+            ()-> new sandStair(SAND));
     public static final RegistryObject<StairBlock> RED_SAND_STAIR = register("red_sand_stair",
-            ()-> new sandStair("","",""));
+            ()-> new sandStair(RED_SAND));
     public static final RegistryObject<StairBlock> BLOOD_SAND_STAIR = register("blood_sand_stair",
-            ()-> new sandStair("","",""));
+            ()-> new sandStair(BLOOD_SAND.get()));
     public static final RegistryObject<StairBlock> WHITE_SAND_STAIR = register("white_sand_stair",
-            ()-> new sandStair("","",""));
+            ()-> new sandStair(WHITE_SAND.get()));
     public static final RegistryObject<StairBlock> ORANGE_SAND_STAIR = register("orange_sand_stair",
-            ()-> new sandStair("","",""));
+            ()-> new sandStair(ORANGE_SAND.get()));
     public static final RegistryObject<StairBlock> MAGENTA_SAND_STAIR = register("magenta_sand_stair",
-            ()-> new sandStair("","",""));
+            ()-> new sandStair(MAGENTA_SAND.get()));
     public static final RegistryObject<StairBlock> LIGHT_BLUE_SAND_STAIR = register("light_blue_sand_stair",
-            ()-> new sandStair("","",""));
+            ()-> new sandStair(LIGHT_BLUE_SAND.get()));
     public static final RegistryObject<StairBlock> YELLOW_SAND_STAIR = register("yellow_sand_stair",
-            ()-> new sandStair("","",""));
+            ()-> new sandStair(YELLOW_SAND.get()));
     public static final RegistryObject<StairBlock> LIME_SAND_STAIR = register("lime_sand_stair",
-            ()-> new sandStair("","",""));
+            ()-> new sandStair(LIME_SAND.get()));
     public static final RegistryObject<StairBlock> PINK_SAND_STAIR = register("pink_sand_stair",
-            ()-> new sandStair("","",""));
+            ()-> new sandStair(PINK_SAND.get()));
     public static final RegistryObject<StairBlock> GREEN_SAND_STAIR = register("green_sand_stair",
-            ()-> new sandStair("","",""));
+            ()-> new sandStair(GREEN_SAND.get()));
     public static final RegistryObject<StairBlock> GRAY_SAND_STAIR = register("gray_sand_stair",
-            ()-> new sandStair("","",""));
+            ()-> new sandStair(GRAY_SAND.get()));
     public static final RegistryObject<StairBlock> LIGHT_GRAY_SAND_STAIR = register("light_gray_sand_stair",
-            ()-> new sandStair("","",""));
+            ()-> new sandStair(LIGHT_GRAY_SAND.get()));
     public static final RegistryObject<StairBlock> CYAN_SAND_STAIR = register("cyan_sand_stair",
-            ()-> new sandStair("","",""));
+            ()-> new sandStair(CYAN_SAND.get()));
     public static final RegistryObject<StairBlock> PURPLE_SAND_STAIR = register("purple_sand_stair",
-            ()-> new sandStair("","",""));
+            ()-> new sandStair(PURPLE_SAND.get()));
     public static final RegistryObject<StairBlock> BLUE_SAND_STAIR = register("blue_sand_stair",
-            ()-> new sandStair("","",""));
+            ()-> new sandStair(BLUE_SAND.get()));
     public static final RegistryObject<StairBlock> BROWN_SAND_STAIR = register("brown_sand_stair",
-            ()-> new sandStair("","",""));
+            ()-> new sandStair(BROWN_SAND.get()));
     public static final RegistryObject<StairBlock> BLACK_SAND_STAIR = register("black_sand_stair",
-            ()-> new sandStair("","",""));
+            ()-> new sandStair(BLACK_SAND.get()));
 
     public static void register(IEventBus eventBus) {
         BLOCKS.register(eventBus);

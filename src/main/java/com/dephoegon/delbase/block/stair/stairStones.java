@@ -23,8 +23,7 @@ public class stairStones {
     private static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, Mod_ID);
 
     public static final RegistryObject<StairBlock> DEEPSLATE_STAIR = register("deepslate_stair",
-            () -> new stairBlock(DEEPSLATE::defaultBlockState, BlockBehaviour.Properties.copy(DEEPSLATE).sound(SoundType.DEEPSLATE),
-                    "","","",false, 0 ,0, null));
+            () -> new stairBlock(DEEPSLATE, BlockBehaviour.Properties.copy(DEEPSLATE).sound(SoundType.DEEPSLATE),false, 0, 0, null));
 
     public static void register(IEventBus eventBus) {
         BLOCKS.register(eventBus);

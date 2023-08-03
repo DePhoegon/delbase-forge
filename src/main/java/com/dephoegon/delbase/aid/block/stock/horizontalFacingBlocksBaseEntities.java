@@ -29,7 +29,7 @@ import org.jetbrains.annotations.Nullable;
 import java.util.List;
 
 import static com.dephoegon.delbase.aid.util.burnChance.rngBurn;
-import static com.dephoegon.delbase.block.general.ashBlocks.ASH_BLOCK;
+import static com.dephoegon.delbase.block.general.miscSpecialCases.ASH_BLOCK;
 
 public class horizontalFacingBlocksBaseEntities extends BaseEntityBlock {
     public static final DirectionProperty FACING = BlockStateProperties.HORIZONTAL_FACING;

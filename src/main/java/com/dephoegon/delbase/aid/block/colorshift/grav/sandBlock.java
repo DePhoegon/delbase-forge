@@ -14,6 +14,9 @@ public class sandBlock extends gravBlock {
     public sandBlock(int dustColorIn, Properties properties, String normToolTip, String shiftToolTip, String ctrlToolTip, boolean falls) {
         super(dustColorIn, properties, normToolTip, shiftToolTip, ctrlToolTip, falls);
     }
+    public sandBlock(int dustColorIn, Properties properties, boolean falls) {
+        super(dustColorIn, properties, "", "", "", falls);
+    }
     @Override
     public boolean canSustainPlant(@NotNull BlockState state, @NotNull BlockGetter world, BlockPos pos, @NotNull Direction facing, net.minecraftforge.common.IPlantable plantable) {
         BlockState plant = plantable.getPlant(world, pos.relative(facing));
