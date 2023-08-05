@@ -27,13 +27,27 @@ public class slabBlock extends SlabBlock {
     private final String tip1;
     private final String tip2;
     private final boolean flame;
+    private final int spread;
+    private final int flammability;
     private final BlockState stripped;
-    public slabBlock(Properties properties, @NotNull String normToolTip, String shiftToolTip, String ctrlToolTip, boolean flames, BlockState strippedState) {
+    public slabBlock(Properties properties, @NotNull String normToolTip, String shiftToolTip, String ctrlToolTip, boolean flames, int fireChance, int fireSpread, BlockState strippedState) {
         super(properties);
-        if(normToolTip.equals("")) { tip0 = null; } else { tip0 = normToolTip; }
-        if(shiftToolTip.equals("")) { tip1 = null; } else { tip1 = shiftToolTip; }
-        if(ctrlToolTip.equals("")) { tip2 = null; } else { tip2 = ctrlToolTip; }
+        if(normToolTip.isEmpty()) { tip0 = null; } else { tip0 = normToolTip; }
+        if(shiftToolTip.isEmpty()) { tip1 = null; } else { tip1 = shiftToolTip; }
+        if(ctrlToolTip.isEmpty()) { tip2 = null; } else { tip2 = ctrlToolTip; }
         flame = flames;
+        spread = fireSpread;
+        flammability = fireChance;
+        stripped = strippedState;
+    }
+    public slabBlock(Properties properties, boolean flames, int fireChance, int fireSpread, BlockState strippedState) {
+        super(properties);
+        tip0 = null;
+        tip1 = null;
+        tip2 = null;
+        flame = flames;
+        spread = fireSpread;
+        flammability = fireChance;
         stripped = strippedState;
     }
     @Override
@@ -43,16 +57,22 @@ public class slabBlock extends SlabBlock {
         if(kb.HCtrl() && tip2 != null) { toolTip.add(Component.translatable(tip2)); } //if ctrl, show tip2 (if not empty), do first
         if(kb.HShift() && tip1 != null) { toolTip.add(Component.translatable(tip1)); } //if shift, show tip1 (if not empty)
     }
-    public boolean isFlammable(BlockState state, BlockGetter world, BlockPos pos, Direction face)
-    {
+    public boolean isFlammable(BlockState state, BlockGetter world, BlockPos pos, Direction face) {
         if (flame && !state.getValue(WATERLOGGED)) {
             rngBurn(world, state, ASH_SLAB.get().defaultBlockState(), pos, 40, 60);
             return state.getValue(SlabBlock.TYPE) != SlabType.BOTTOM;
         }
         return false;
     }
+    public int getFlammability(BlockState state, BlockGetter world, BlockPos pos, Direction face) {
+        if (flame) { return flammability; }
+        return 0;
+    }
+    public int getFireSpreadSpeed(BlockState state, BlockGetter world, BlockPos pos, Direction face) {
+        if (flame) { return spread; }
+        return 0;
+    }
     @Nullable
-    @Override
     public BlockState getToolModifiedState(BlockState state, @NotNull UseOnContext context, ToolAction toolAction, boolean simulate) {
         Level world = context.getLevel();
         BlockPos blockPos = context.getClickedPos();

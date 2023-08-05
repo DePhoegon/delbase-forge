@@ -6,17 +6,10 @@ import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
 
-import static com.dephoegon.delbase.block.fence.fenceMisc.MANGROVE_ROOT_FENCE;
-import static com.dephoegon.delbase.block.fence.fenceMisc.MANGROVE_ROOT_FENCE_GATE;
 import static com.dephoegon.delbase.block.fence.leafFences.*;
-import static com.dephoegon.delbase.block.fence.leafFences.DARK_OAK_LEAF_FENCE_GATE;
-import static com.dephoegon.delbase.block.general.machineBlocks.BLOCK_CUTTING_STATION;
 import static com.dephoegon.delbase.block.slab.slabLeaves.*;
-import static com.dephoegon.delbase.block.slab.slabMisc.MANGROVE_ROOT_SLAB;
 import static com.dephoegon.delbase.block.stair.stairLeaves.*;
-import static com.dephoegon.delbase.block.stair.stairMisc.MANGROVE_ROOT_STAIR;
 import static com.dephoegon.delbase.block.wall.hedgeLeaves.*;
-import static com.dephoegon.delbase.block.wall.wallMisc.MANGROVE_ROOT_WALL;
 
 public class creativeTabsArrayLists {
     public static @NotNull ArrayList<RegistryObject<? extends Block>> setNonColoredLeaves() {

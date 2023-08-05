@@ -2,7 +2,6 @@ package com.dephoegon.delbase.block.slab;
 
 import com.dephoegon.delbase.aid.block.stock.slabBlock;
 import net.minecraft.world.item.BlockItem;
-import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.SlabBlock;
@@ -24,7 +23,7 @@ public class slabStones {
     private static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, Mod_ID);
 
     public static final RegistryObject<SlabBlock> DEEPSLATE_SLAB = register("deepslate_slab",
-            () -> new slabBlock(BlockBehaviour.Properties.copy(DEEPSLATE).sound(SoundType.DEEPSLATE),"","","",false, null));
+            () -> new slabBlock(BlockBehaviour.Properties.copy(DEEPSLATE).sound(SoundType.DEEPSLATE),false, 0, 0, null));
 
     public static void register(IEventBus eventBus) {
         BLOCKS.register(eventBus);

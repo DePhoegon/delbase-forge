@@ -9,6 +9,7 @@ import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.StairBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.Half;
@@ -18,7 +19,6 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
-import java.util.function.Supplier;
 
 import static com.dephoegon.delbase.aid.util.burnChance.rngBurn;
 import static com.dephoegon.delbase.block.general.ashBlocks.ASH_STAIR;
@@ -29,13 +29,27 @@ public class stairBlock extends StairBlock {
     private final String tip1;
     private final String tip2;
     private final boolean flame;
+    private final int spread;
+    private final int flammability;
     private final BlockState stripped;
-    public stairBlock(Supplier<BlockState> state, Properties properties, String normToolTip, String shiftToolTip, String ctrlToolTip, boolean flames, BlockState strippedState) {
-        super(state, properties);
-        if(normToolTip.equals("")) { tip0 = null; } else { tip0 = normToolTip; }
-        if(shiftToolTip.equals("")) { tip1 = null; } else { tip1 = shiftToolTip; }
-        if(ctrlToolTip.equals("")) { tip2 = null; } else { tip2 = ctrlToolTip; }
+    public stairBlock(@NotNull Block block, Properties properties, @NotNull String normToolTip, String shiftToolTip, String ctrlToolTip, boolean flames, int fireChance, int fireSpread, BlockState strippedState) {
+        super(block::defaultBlockState, properties);
+        if(normToolTip.isEmpty()) { tip0 = null; } else { tip0 = normToolTip; }
+        if(shiftToolTip.isEmpty()) { tip1 = null; } else { tip1 = shiftToolTip; }
+        if(ctrlToolTip.isEmpty()) { tip2 = null; } else { tip2 = ctrlToolTip; }
         flame = flames;
+        spread = fireSpread;
+        flammability = fireChance;
+        stripped = strippedState;
+    }
+    public stairBlock(@NotNull Block block, Properties properties, boolean flames, int fireChance, int fireSpread, BlockState strippedState) {
+        super(block::defaultBlockState, properties);
+        tip0 = null;
+        tip1 = null;
+        tip2 = null;
+        flame = flames;
+        spread = fireSpread;
+        flammability = fireChance;
         stripped = strippedState;
     }
     @Override
@@ -45,18 +59,22 @@ public class stairBlock extends StairBlock {
         if(kb.HCtrl() && tip2 != null) { toolTip.add(Component.translatable(tip2)); } //if ctrl, show tip2 (if not empty), do first
         if(kb.HShift() && tip1 != null) { toolTip.add(Component.translatable(tip1)); } //if shift, show tip1 (if not empty)
     }
-    @Override
-    public boolean isFlammable(BlockState state, BlockGetter world, BlockPos pos, Direction face)
-    {
+    public boolean isFlammable(BlockState state, BlockGetter world, BlockPos pos, Direction face) {
         if (flame && !state.getValue(WATERLOGGED)) {
             rngBurn(world, state, ASH_STAIR.get().defaultBlockState(), pos, 40 ,60);
             return state.getValue(StairBlock.HALF) == Half.TOP;
         }
         return false;
     }
-
+    public int getFlammability(BlockState state, BlockGetter world, BlockPos pos, Direction face) {
+        if (flame) { return flammability; }
+        return 0;
+    }
+    public int getFireSpreadSpeed(BlockState state, BlockGetter world, BlockPos pos, Direction face) {
+        if (flame) { return spread; }
+        return 0;
+    }
     @Nullable
-    @Override
     public BlockState getToolModifiedState(BlockState state, @NotNull UseOnContext context, ToolAction toolAction, boolean simulate) {
         Level world = context.getLevel();
         BlockPos blockPos = context.getClickedPos();

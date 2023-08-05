@@ -34,7 +34,7 @@ import java.util.stream.Stream;
 public class cuttingStationBlock extends horizontalFacingBlocksBaseEntities {
     public static final DirectionProperty FACING = BlockStateProperties.HORIZONTAL_FACING;
     public cuttingStationBlock(Properties properties, String normToolTip, String shiftToolTip, String ctrlToolTip) {
-        super(properties, normToolTip, shiftToolTip, ctrlToolTip, false);
+        super(properties, normToolTip, shiftToolTip, ctrlToolTip, false, 0, 0);
     }
 
     @SuppressWarnings("deprecation")
@@ -118,7 +118,7 @@ public class cuttingStationBlock extends horizontalFacingBlocksBaseEntities {
     ).reduce((v1, v2) -> Shapes.join(v1, v2, BooleanOp.OR)).get();
 
     @Override
-    public RenderShape getRenderShape(BlockState pState) {
+    public @NotNull RenderShape getRenderShape(@NotNull BlockState pState) {
         return super.getRenderShape(pState);
     }
     @Override
@@ -132,8 +132,8 @@ public class cuttingStationBlock extends horizontalFacingBlocksBaseEntities {
         super.onRemove(pState, pLevel, pPos, pNewState, pIsMoving);
     }
     @Override
-    public InteractionResult use(BlockState pState, @NotNull Level pLevel, BlockPos pPos,
-                                 Player pPlayer, InteractionHand pHand, BlockHitResult pHit) {
+    public @NotNull InteractionResult use(@NotNull BlockState pState, @NotNull Level pLevel, @NotNull BlockPos pPos,
+                                          @NotNull Player pPlayer, @NotNull InteractionHand pHand, @NotNull BlockHitResult pHit) {
         if(!pLevel.isClientSide()) {
             BlockEntity entity = pLevel.getBlockEntity(pPos);
             if(entity instanceof blockCuttingStation) {
@@ -146,7 +146,7 @@ public class cuttingStationBlock extends horizontalFacingBlocksBaseEntities {
     }
     @Nullable
     @Override
-    public BlockEntity newBlockEntity(BlockPos pPos, BlockState pState) {
+    public BlockEntity newBlockEntity(@NotNull BlockPos pPos, @NotNull BlockState pState) {
         return new blockCuttingStation(pPos, pState);
     }
     @Nullable

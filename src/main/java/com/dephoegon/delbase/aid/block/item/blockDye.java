@@ -26,9 +26,16 @@ public class blockDye extends DyeItem {
 
     public blockDye(DyeColor dyeColor, Properties properties, String normToolTip, String shiftToolTip, String ctrlToolTip) {
         super(dyeColor, properties);
-        if(normToolTip.equals("")) { tip0 = null; } else { tip0 = normToolTip; }
-        if(shiftToolTip.equals("")) { tip1 = null; } else { tip1 = shiftToolTip; }
-        if(ctrlToolTip.equals("")) { tip2 = null; } else { tip2 = ctrlToolTip; }
+        if(normToolTip.isEmpty()) { tip0 = null; } else { tip0 = normToolTip; }
+        if(shiftToolTip.isEmpty()) { tip1 = null; } else { tip1 = shiftToolTip; }
+        if(ctrlToolTip.isEmpty()) { tip2 = null; } else { tip2 = ctrlToolTip; }
+    }
+
+    public blockDye(DyeColor dyeColor, Properties properties) {
+        super(dyeColor, properties);
+        tip0 = null;
+        tip1 = null;
+        tip2 = null;
     }
 
     @Override

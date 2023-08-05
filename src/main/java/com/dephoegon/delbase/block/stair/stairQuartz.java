@@ -2,7 +2,6 @@ package com.dephoegon.delbase.block.stair;
 
 import com.dephoegon.delbase.aid.block.alt.quartzStair;
 import net.minecraft.world.item.BlockItem;
-import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.SoundType;
@@ -24,11 +23,11 @@ public class stairQuartz {
     private static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, Mod_ID);
 
     public static final RegistryObject<StairBlock> CHISELED_QUARTZ_STAIR = register("chiseled_quartz_stair",
-            () -> new quartzStair(CHISELED_QUARTZ_BLOCK::defaultBlockState, BlockBehaviour.Properties.copy(CHISELED_QUARTZ_BLOCK).sound(SoundType.STONE),"","",""));
+            () -> new quartzStair(CHISELED_QUARTZ_BLOCK, BlockBehaviour.Properties.copy(CHISELED_QUARTZ_BLOCK).sound(SoundType.STONE)));
     public static final RegistryObject<StairBlock> QUARTZ_BRICK_STAIR = register("quartz_brick_stair",
-            () -> new quartzStair(QUARTZ_BRICKS::defaultBlockState, BlockBehaviour.Properties.copy(QUARTZ_BRICKS).sound(SoundType.STONE),"","",""));
+            () -> new quartzStair(QUARTZ_BRICKS, BlockBehaviour.Properties.copy(QUARTZ_BRICKS).sound(SoundType.STONE)));
     public static final RegistryObject<StairBlock> QUARTZ_PILLAR_STAIR = register("quartz_pillar_stair",
-            () -> new quartzStair(QUARTZ_PILLAR::defaultBlockState, BlockBehaviour.Properties.copy(QUARTZ_PILLAR).sound(SoundType.STONE),"","",""));
+            () -> new quartzStair(QUARTZ_PILLAR, BlockBehaviour.Properties.copy(QUARTZ_PILLAR).sound(SoundType.STONE)));
 
     public static void register(IEventBus eventBus) {
         BLOCKS.register(eventBus);
