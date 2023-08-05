@@ -24,6 +24,7 @@ public class regList {
         // Sandstones
         genSandStones.register(eventBus);
         // Stripped Woods
+        strippedWoodenFences.register(eventBus);
         slabStrippedWood.register(eventBus);
         stairStrippedWood.register(eventBus);
         wallStrippedWood.register(eventBus);
@@ -39,7 +40,7 @@ public class regList {
         genChiseledSandStones.register(eventBus);
         genSmoothSandStones.register(eventBus);
 
-        //Gravity Blocks
+        //Solid Sands
         solidSands.register(eventBus);
 
         //Slabs
@@ -95,7 +96,6 @@ public class regList {
         hedgeLeaves.register(eventBus);
 
         //Fences
-        strippedWoodenFences.register(eventBus);
         woodenFences.register(eventBus);
         quartzFences.register(eventBus);
         sandFences.register(eventBus);
