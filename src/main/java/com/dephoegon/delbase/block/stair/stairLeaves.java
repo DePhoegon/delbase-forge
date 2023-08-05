@@ -22,23 +22,23 @@ public class stairLeaves {
     private static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, Mod_ID);
 
     public static final RegistryObject<StairBlock> OAK_LEAF_STAIR = register("oak_leaf_stair",
-            ()-> new leafStair(OAK_LEAVES, SoundType.GRASS, true, null));
+            ()-> new leafStair(OAK_PLANKS, OAK_LEAVES, SoundType.GRASS, true, null));
     public static final RegistryObject<StairBlock> SPRUCE_LEAF_STAIR = register("spruce_leaf_stair",
-            ()-> new leafStair(SPRUCE_LEAVES, SoundType.GRASS, true, null));
+            ()-> new leafStair(SPRUCE_PLANKS, SPRUCE_LEAVES, SoundType.GRASS, true, null));
     public static final RegistryObject<StairBlock> JUNGLE_LEAF_STAIR = register("jungle_leaf_stair",
-            ()-> new leafStair(JUNGLE_LEAVES, SoundType.GRASS, true, null));
+            ()-> new leafStair(JUNGLE_PLANKS, JUNGLE_LEAVES, SoundType.GRASS, true, null));
     public static final RegistryObject<StairBlock> BIRCH_LEAF_STAIR = register("birch_leaf_stair",
-            ()-> new leafStair(BIRCH_LEAVES, SoundType.GRASS, true, null));
+            ()-> new leafStair(BIRCH_PLANKS, BIRCH_LEAVES, SoundType.GRASS, true, null));
     public static final RegistryObject<StairBlock> ACACIA_LEAF_STAIR = register("acacia_leaf_stair",
-            ()-> new leafStair(ACACIA_LEAVES, SoundType.GRASS, true, null));
+            ()-> new leafStair(ACACIA_PLANKS, ACACIA_LEAVES, SoundType.GRASS, true, null));
     public static final RegistryObject<StairBlock> DARK_OAK_LEAF_STAIR = register("dark_oak_leaf_stair",
-            ()-> new leafStair(DARK_OAK_LEAVES, SoundType.GRASS, true, null));
+            ()-> new leafStair(DARK_OAK_PLANKS, DARK_OAK_LEAVES, SoundType.GRASS, true, null));
     public static final RegistryObject<StairBlock> MANGROVE_LEAF_STAIR = register("mangrove_leaf_stair",
-            ()-> new leafStair(MANGROVE_LEAVES, SoundType.GRASS, true, null));
+            ()-> new leafStair(MANGROVE_PLANKS, MANGROVE_LEAVES, SoundType.GRASS, true, null));
     public static final RegistryObject<StairBlock> AZALEA_LEAF_STAIR = register("azalea_leaf_stair",
-            ()-> new leafStair(AZALEA_LEAVES, SoundType.AZALEA_LEAVES, true, null));
+            ()-> new leafStair(OAK_PLANKS, AZALEA_LEAVES, SoundType.AZALEA_LEAVES, true, null));
     public static final RegistryObject<StairBlock> FLOWERING_AZALEA_LEAF_STAIR = register("flowering_azalea_leaf_stair",
-            ()-> new leafStair(FLOWERING_AZALEA_LEAVES, SoundType.FLOWERING_AZALEA, true, null));
+            ()-> new leafStair(OAK_PLANKS, FLOWERING_AZALEA_LEAVES, SoundType.FLOWERING_AZALEA, true, null));
 
     public static void register(IEventBus eventBus) {
         BLOCKS.register(eventBus);

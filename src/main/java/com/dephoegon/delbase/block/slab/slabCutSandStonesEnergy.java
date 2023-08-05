@@ -22,9 +22,9 @@ public class slabCutSandStonesEnergy {
     private static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, Mod_ID);
     private static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, Mod_ID);
 
-    public static final RegistryObject<SlabBlock> OVERRIDE_CUT_SAND_STONE_SLAB_ENERGY = register("cut_sand_stone_slab_energy_energy",
+    public static final RegistryObject<SlabBlock> OVERRIDE_CUT_SAND_STONE_SLAB_ENERGY = register("cut_sand_stone_slab_energy",
             () -> new cutSandStoneSlabEnergy(SANDSTONE));
-    public static final RegistryObject<SlabBlock> OVERRIDE_RED_CUT_SAND_STONE_SLAB_ENERGY = register("red_cut_sand_stone_slab_energy_energy",
+    public static final RegistryObject<SlabBlock> OVERRIDE_RED_CUT_SAND_STONE_SLAB_ENERGY = register("red_cut_sand_stone_slab_energy",
             () -> new cutSandStoneSlabEnergy(RED_SANDSTONE));
     public static final RegistryObject<SlabBlock> BLOOD_CUT_SAND_STONE_SLAB_ENERGY = register("blood_cut_sand_stone_slab_energy",
             () -> new cutSandStoneSlabEnergy(BLOOD_SAND_STONE.get()));

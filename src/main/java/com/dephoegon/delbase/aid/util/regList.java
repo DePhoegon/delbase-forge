@@ -21,22 +21,20 @@ public class regList {
         //aid
         blockArrayList.setBlockArrays();
 
-        //Special block
-        ashBlocks.register(eventBus);
-        machineBlocks.register(eventBus);
-        blockEntities.register(eventBus);
+        //Gravity Blocks
+        gravColorSands.register(eventBus);
+
+        // Sandstones
+        genSandStones.register(eventBus);
 
         // Stripped Wood, called for in non-stripped versions
         slabStrippedWood.register(eventBus);
         stairStrippedWood.register(eventBus);
         wallStrippedWood.register(eventBus);
         strippedWoodenFences.register(eventBus);
-        // Sandstones
-        genSandStones.register(eventBus);
+
         // Special
         miscSpecialCases.register(eventBus);
-        //Gravity Blocks
-        gravColorSands.register(eventBus);
     }
     public static void listOrder(IEventBus eventBus) {
         //Items
@@ -113,6 +111,11 @@ public class regList {
         chiseledSandStoneFences.register(eventBus);
         stoneFences.register(eventBus);
         leafFences.register(eventBus);
+
+        //Special block
+        blockEntities.register(eventBus);
+        machineBlocks.register(eventBus);
+        ashBlocks.register(eventBus);
 
         //Special
         menuTypes.register(eventBus);

@@ -31,7 +31,7 @@ public class stairMisc {
     public static final RegistryObject<StairBlock> BONE_BLOCK_STAIR = register("bone_block_stair",
             ()-> new stairBlock(BONE_BLOCK, BlockBehaviour.Properties.copy(BONE_BLOCK).sound(SoundType.BONE_BLOCK), false, 0, 0, null));
     public static final RegistryObject<StairBlock> DRIED_KELP_STAIR = register("dried_kelp_stair",
-            ()-> new leafStair(DRIED_KELP_BLOCK, SoundType.GRASS, true, null),4001);
+            ()-> new leafStair(DRIED_KELP_BLOCK, DRIED_KELP_BLOCK, SoundType.GRASS, true, null),4001);
     public static final RegistryObject<StairBlock> GLOWSTONE_STAIR = register("glowstone_stair",
             ()-> new stairBlock(GLOWSTONE, BlockBehaviour.Properties.copy(GLOWSTONE).sound(SoundType.GLASS).lightLevel((blockState)-> 15), false, 0, 0, null));
     public static final RegistryObject<StairBlock> BASALT_STAIR = register("basalt_stair",
@@ -69,9 +69,9 @@ public class stairMisc {
     public static final RegistryObject<StairBlock> MUD_STAIR = register("mud_stair",
             ()-> new stairBlock(MUD, BlockBehaviour.Properties.copy(MUD).sound(SoundType.MUD), false, 0, 0, null));
     public static final RegistryObject<StairBlock> MUDDY_MANGROVE_ROOT_STAIR = register("muddy_mangrove_root_stair",
-            ()-> new leafStair(MUDDY_MANGROVE_ROOTS, SoundType.MUDDY_MANGROVE_ROOTS, false, null));
+            ()-> new leafStair(MANGROVE_PLANKS, MUDDY_MANGROVE_ROOTS, SoundType.MUDDY_MANGROVE_ROOTS, false, null));
     public static final RegistryObject<StairBlock> MANGROVE_ROOT_STAIR = register("mangrove_root_stair",
-            ()-> new leafStair(MANGROVE_ROOTS, SoundType.MANGROVE_ROOTS, true, null));
+            ()-> new leafStair(MANGROVE_PLANKS, MANGROVE_ROOTS, SoundType.MANGROVE_ROOTS, true, null));
     public static final RegistryObject<StairBlock> OCHRE_FROGLIGHT_STAIR = register("ochre_froglight_stair",
             ()-> new stairBlock(OCHRE_FROGLIGHT, BlockBehaviour.Properties.copy(OCHRE_FROGLIGHT).sound(SoundType.FROGLIGHT).lightLevel((blockstate) -> 15), false, 0, 0, null));
     public static final RegistryObject<StairBlock> VERDANT_FROGLIGHT_STAIR = register("verdant_froglight_stair",

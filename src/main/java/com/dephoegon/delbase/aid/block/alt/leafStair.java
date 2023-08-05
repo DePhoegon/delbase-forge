@@ -9,10 +9,10 @@ import net.minecraft.world.level.block.state.BlockState;
 import org.jetbrains.annotations.NotNull;
 
 public class leafStair extends stairBlock {
-    public leafStair(@NotNull Block block, SoundType type, @NotNull String normToolTip, String shiftToolTip, String ctrlToolTip, boolean flames, BlockState strippedState) {
-        super(block, BlockBehaviour.Properties.copy(block).sound(type).noOcclusion().isSuffocating(genBlock::never).isViewBlocking(genBlock::never).noOcclusion(), normToolTip, shiftToolTip, ctrlToolTip, flames, 30, 60, strippedState);
+    public leafStair(Block nonLeaf, @NotNull Block block, SoundType type, @NotNull String normToolTip, String shiftToolTip, String ctrlToolTip, boolean flames, BlockState strippedState) {
+        super(nonLeaf, BlockBehaviour.Properties.copy(block).sound(type).noOcclusion().isSuffocating(genBlock::never).isViewBlocking(genBlock::never).noOcclusion(), normToolTip, shiftToolTip, ctrlToolTip, flames, 30, 60, strippedState);
     }
-    public leafStair(@NotNull Block block, SoundType type, boolean flames, BlockState strippedState) {
-        super(block, BlockBehaviour.Properties.copy(block).sound(type).noOcclusion().isSuffocating(genBlock::never).isViewBlocking(genBlock::never).noOcclusion(), "", "", "", flames, 30, 60, strippedState);
+    public leafStair(Block nonLeaf, @NotNull Block block, SoundType type, boolean flames, BlockState strippedState) {
+        super(nonLeaf, BlockBehaviour.Properties.copy(block).sound(type).noOcclusion().isSuffocating(genBlock::never).isViewBlocking(genBlock::never).noOcclusion(), "", "", "", flames, 30, 60, strippedState);
     }
 }
