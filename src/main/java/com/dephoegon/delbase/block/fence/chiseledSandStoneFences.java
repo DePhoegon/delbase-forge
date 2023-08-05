@@ -7,7 +7,6 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.FenceBlock;
 import net.minecraft.world.level.block.FenceGateBlock;
-import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -25,113 +24,77 @@ public class chiseledSandStoneFences {
     private static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, Mod_ID);
 
     public static final RegistryObject<FenceBlock> WHITE_CHISELED_SAND_STONE_FENCE = register("white_chiseled_sand_stone_fence",
-            () -> new chiseledSandStoneFence(BlockBehaviour.Properties.copy(WHITE_CHISELED_SAND_STONE.get()),
-                    "","",""));
+            () -> new chiseledSandStoneFence(WHITE_CHISELED_SAND_STONE.get()));
     public static final RegistryObject<FenceGateBlock> WHITE_CHISELED_SAND_STONE_FENCE_GATE = register("white_chiseled_sand_stone_fence_gate",
-            () -> new chiseledSandStoneFenceGate(BlockBehaviour.Properties.copy(WHITE_CHISELED_SAND_STONE.get()),
-                    "","",""));
+            () -> new chiseledSandStoneFenceGate(WHITE_CHISELED_SAND_STONE.get()));
     public static final RegistryObject<FenceBlock> ORANGE_CHISELED_SAND_STONE_FENCE = register("orange_chiseled_sand_stone_fence",
-            () -> new chiseledSandStoneFence(BlockBehaviour.Properties.copy(ORANGE_CHISELED_SAND_STONE.get()),
-                    "","",""));
+            () -> new chiseledSandStoneFence(ORANGE_CHISELED_SAND_STONE.get()));
     public static final RegistryObject<FenceGateBlock> ORANGE_CHISELED_SAND_STONE_FENCE_GATE = register("orange_chiseled_sand_stone_fence_gate",
-            () -> new chiseledSandStoneFenceGate(BlockBehaviour.Properties.copy(ORANGE_CHISELED_SAND_STONE.get()),
-                    "","",""));
+            () -> new chiseledSandStoneFenceGate(ORANGE_CHISELED_SAND_STONE.get()));
     public static final RegistryObject<FenceBlock> MAGENTA_CHISELED_SAND_STONE_FENCE = register("magenta_chiseled_sand_stone_fence",
-            () -> new chiseledSandStoneFence(BlockBehaviour.Properties.copy(MAGENTA_CHISELED_SAND_STONE.get()),
-                    "","",""));
+            () -> new chiseledSandStoneFence(MAGENTA_CHISELED_SAND_STONE.get()));
     public static final RegistryObject<FenceGateBlock> MAGENTA_CHISELED_SAND_STONE_FENCE_GATE = register("magenta_chiseled_sand_stone_fence_gate",
-            () -> new chiseledSandStoneFenceGate(BlockBehaviour.Properties.copy(MAGENTA_CHISELED_SAND_STONE.get()),
-                    "","",""));
+            () -> new chiseledSandStoneFenceGate(MAGENTA_CHISELED_SAND_STONE.get()));
     public static final RegistryObject<FenceBlock> LIGHT_BLUE_CHISELED_SAND_STONE_FENCE = register("light_blue_chiseled_sand_stone_fence",
-            () -> new chiseledSandStoneFence(BlockBehaviour.Properties.copy(LIGHT_BLUE_CHISELED_SAND_STONE.get()),
-                    "","",""));
+            () -> new chiseledSandStoneFence(LIGHT_BLUE_CHISELED_SAND_STONE.get()));
     public static final RegistryObject<FenceGateBlock> LIGHT_BLUE_CHISELED_SAND_STONE_FENCE_GATE = register("light_blue_chiseled_sand_stone_fence_gate",
-            () -> new chiseledSandStoneFenceGate(BlockBehaviour.Properties.copy(LIGHT_BLUE_CHISELED_SAND_STONE.get()),
-                    "","",""));
+            () -> new chiseledSandStoneFenceGate(LIGHT_BLUE_CHISELED_SAND_STONE.get()));
     public static final RegistryObject<FenceBlock> YELLOW_CHISELED_SAND_STONE_FENCE = register("yellow_chiseled_sand_stone_fence",
-            () -> new chiseledSandStoneFence(BlockBehaviour.Properties.copy(YELLOW_CHISELED_SAND_STONE.get()),
-                    "","",""));
+            () -> new chiseledSandStoneFence(YELLOW_CHISELED_SAND_STONE.get()));
     public static final RegistryObject<FenceGateBlock> YELLOW_CHISELED_SAND_STONE_FENCE_GATE = register("yellow_chiseled_sand_stone_fence_gate",
-            () -> new chiseledSandStoneFenceGate(BlockBehaviour.Properties.copy(YELLOW_CHISELED_SAND_STONE.get()),
-                    "","",""));
+            () -> new chiseledSandStoneFenceGate(YELLOW_CHISELED_SAND_STONE.get()));
     public static final RegistryObject<FenceBlock> LIME_CHISELED_SAND_STONE_FENCE = register("lime_chiseled_sand_stone_fence",
-            () -> new chiseledSandStoneFence(BlockBehaviour.Properties.copy(LIME_CHISELED_SAND_STONE.get()),
-                    "","",""));
+            () -> new chiseledSandStoneFence(LIME_CHISELED_SAND_STONE.get()));
     public static final RegistryObject<FenceGateBlock> LIME_CHISELED_SAND_STONE_FENCE_GATE = register("lime_chiseled_sand_stone_fence_gate",
-            () -> new chiseledSandStoneFenceGate(BlockBehaviour.Properties.copy(LIME_CHISELED_SAND_STONE.get()),
-                    "","",""));
+            () -> new chiseledSandStoneFenceGate(LIME_CHISELED_SAND_STONE.get()));
     public static final RegistryObject<FenceBlock> PINK_CHISELED_SAND_STONE_FENCE = register("pink_chiseled_sand_stone_fence",
-            () -> new chiseledSandStoneFence(BlockBehaviour.Properties.copy(PINK_CHISELED_SAND_STONE.get()),
-                    "","",""));
+            () -> new chiseledSandStoneFence(PINK_CHISELED_SAND_STONE.get()));
     public static final RegistryObject<FenceGateBlock> PINK_CHISELED_SAND_STONE_FENCE_GATE = register("pink_chiseled_sand_stone_fence_gate",
-            () -> new chiseledSandStoneFenceGate(BlockBehaviour.Properties.copy(PINK_CHISELED_SAND_STONE.get()),
-                    "","",""));
+            () -> new chiseledSandStoneFenceGate(PINK_CHISELED_SAND_STONE.get()));
     public static final RegistryObject<FenceBlock> GRAY_CHISELED_SAND_STONE_FENCE = register("gray_chiseled_sand_stone_fence",
-            () -> new chiseledSandStoneFence(BlockBehaviour.Properties.copy(GRAY_CHISELED_SAND_STONE.get()),
-                    "","",""));
+            () -> new chiseledSandStoneFence(GRAY_CHISELED_SAND_STONE.get()));
     public static final RegistryObject<FenceGateBlock> GRAY_CHISELED_SAND_STONE_FENCE_GATE = register("gray_chiseled_sand_stone_fence_gate",
-            () -> new chiseledSandStoneFenceGate(BlockBehaviour.Properties.copy(GRAY_CHISELED_SAND_STONE.get()),
-                    "","",""));
+            () -> new chiseledSandStoneFenceGate(GRAY_CHISELED_SAND_STONE.get()));
     public static final RegistryObject<FenceBlock> LIGHT_GRAY_CHISELED_SAND_STONE_FENCE = register("light_gray_chiseled_sand_stone_fence",
-            () -> new chiseledSandStoneFence(BlockBehaviour.Properties.copy(LIGHT_GRAY_CHISELED_SAND_STONE.get()),
-                    "","",""));
+            () -> new chiseledSandStoneFence(LIGHT_GRAY_CHISELED_SAND_STONE.get()));
     public static final RegistryObject<FenceGateBlock> LIGHT_GRAY_CHISELED_SAND_STONE_FENCE_GATE = register("light_gray_chiseled_sand_stone_fence_gate",
-            () -> new chiseledSandStoneFenceGate(BlockBehaviour.Properties.copy(LIGHT_GRAY_CHISELED_SAND_STONE.get()),
-                    "","",""));
+            () -> new chiseledSandStoneFenceGate(LIGHT_GRAY_CHISELED_SAND_STONE.get()));
     public static final RegistryObject<FenceBlock> CYAN_CHISELED_SAND_STONE_FENCE = register("cyan_chiseled_sand_stone_fence",
-            () -> new chiseledSandStoneFence(BlockBehaviour.Properties.copy(CYAN_CHISELED_SAND_STONE.get()),
-                    "","",""));
+            () -> new chiseledSandStoneFence(CYAN_CHISELED_SAND_STONE.get()));
     public static final RegistryObject<FenceGateBlock> CYAN_CHISELED_SAND_STONE_FENCE_GATE = register("cyan_chiseled_sand_stone_fence_gate",
-            () -> new chiseledSandStoneFenceGate(BlockBehaviour.Properties.copy(CYAN_CHISELED_SAND_STONE.get()),
-                    "","",""));
+            () -> new chiseledSandStoneFenceGate(CYAN_CHISELED_SAND_STONE.get()));
     public static final RegistryObject<FenceBlock> PURPLE_CHISELED_SAND_STONE_FENCE = register("purple_chiseled_sand_stone_fence",
-            () -> new chiseledSandStoneFence(BlockBehaviour.Properties.copy(PURPLE_CHISELED_SAND_STONE.get()),
-                    "","",""));
+            () -> new chiseledSandStoneFence(PURPLE_CHISELED_SAND_STONE.get()));
     public static final RegistryObject<FenceGateBlock> PURPLE_CHISELED_SAND_STONE_FENCE_GATE = register("purple_chiseled_sand_stone_fence_gate",
-            () -> new chiseledSandStoneFenceGate(BlockBehaviour.Properties.copy(PURPLE_CHISELED_SAND_STONE.get()),
-                    "","",""));
+            () -> new chiseledSandStoneFenceGate(PURPLE_CHISELED_SAND_STONE.get()));
     public static final RegistryObject<FenceBlock> BLUE_CHISELED_SAND_STONE_FENCE = register("blue_chiseled_sand_stone_fence",
-            () -> new chiseledSandStoneFence(BlockBehaviour.Properties.copy(BLUE_CHISELED_SAND_STONE.get()),
-                    "","",""));
+            () -> new chiseledSandStoneFence(BLUE_CHISELED_SAND_STONE.get()));
     public static final RegistryObject<FenceGateBlock> BLUE_CHISELED_SAND_STONE_FENCE_GATE = register("blue_chiseled_sand_stone_fence_gate",
-            () -> new chiseledSandStoneFenceGate(BlockBehaviour.Properties.copy(BLUE_CHISELED_SAND_STONE.get()),
-                    "","",""));
+            () -> new chiseledSandStoneFenceGate(BLUE_CHISELED_SAND_STONE.get()));
     public static final RegistryObject<FenceBlock> BROWN_CHISELED_SAND_STONE_FENCE = register("brown_chiseled_sand_stone_fence",
-            () -> new chiseledSandStoneFence(BlockBehaviour.Properties.copy(BROWN_CHISELED_SAND_STONE.get()),
-                    "","",""));
+            () -> new chiseledSandStoneFence(BROWN_CHISELED_SAND_STONE.get()));
     public static final RegistryObject<FenceGateBlock> BROWN_CHISELED_SAND_STONE_FENCE_GATE = register("brown_chiseled_sand_stone_fence_gate",
-            () -> new chiseledSandStoneFenceGate(BlockBehaviour.Properties.copy(BROWN_CHISELED_SAND_STONE.get()),
-                    "","",""));
+            () -> new chiseledSandStoneFenceGate(BROWN_CHISELED_SAND_STONE.get()));
     public static final RegistryObject<FenceBlock> GREEN_CHISELED_SAND_STONE_FENCE = register("green_chiseled_sand_stone_fence",
-            () -> new chiseledSandStoneFence(BlockBehaviour.Properties.copy(GREEN_CHISELED_SAND_STONE.get()),
-                    "","",""));
+            () -> new chiseledSandStoneFence(GREEN_CHISELED_SAND_STONE.get()));
     public static final RegistryObject<FenceGateBlock> GREEN_CHISELED_SAND_STONE_FENCE_GATE = register("green_chiseled_sand_stone_fence_gate",
-            () -> new chiseledSandStoneFenceGate(BlockBehaviour.Properties.copy(GREEN_CHISELED_SAND_STONE.get()),
-                    "","",""));
+            () -> new chiseledSandStoneFenceGate(GREEN_CHISELED_SAND_STONE.get()));
     public static final RegistryObject<FenceBlock> RED_CHISELED_SAND_STONE_FENCE = register("red_chiseled_sand_stone_fence",
-            () -> new chiseledSandStoneFence(BlockBehaviour.Properties.copy(RED_SANDSTONE),
-                    "","",""));
+            () -> new chiseledSandStoneFence(RED_SANDSTONE));
     public static final RegistryObject<FenceGateBlock> RED_CHISELED_SAND_STONE_FENCE_GATE = register("red_chiseled_sand_stone_fence_gate",
-            () -> new chiseledSandStoneFenceGate(BlockBehaviour.Properties.copy(RED_SANDSTONE),
-                    "","",""));
+            () -> new chiseledSandStoneFenceGate(RED_SANDSTONE));
     public static final RegistryObject<FenceBlock> BLACK_CHISELED_SAND_STONE_FENCE = register("black_chiseled_sand_stone_fence",
-            () -> new chiseledSandStoneFence(BlockBehaviour.Properties.copy(BLACK_CHISELED_SAND_STONE.get()),
-                    "","",""));
+            () -> new chiseledSandStoneFence(BLACK_CHISELED_SAND_STONE.get()));
     public static final RegistryObject<FenceGateBlock> BLACK_CHISELED_SAND_STONE_FENCE_GATE = register("black_chiseled_sand_stone_fence_gate",
-            () -> new chiseledSandStoneFenceGate(BlockBehaviour.Properties.copy(BLACK_CHISELED_SAND_STONE.get()),
-                    "","",""));
+            () -> new chiseledSandStoneFenceGate(BLACK_CHISELED_SAND_STONE.get()));
     public static final RegistryObject<FenceBlock> CHISELED_SAND_STONE_FENCE = register("chiseled_sand_stone_fence",
-            () -> new chiseledSandStoneFence(BlockBehaviour.Properties.copy(CHISELED_SANDSTONE),
-                    "","",""));
+            () -> new chiseledSandStoneFence(CHISELED_SANDSTONE));
     public static final RegistryObject<FenceGateBlock> CHISELED_SAND_STONE_FENCE_GATE = register("chiseled_sand_stone_fence_gate",
-            () -> new chiseledSandStoneFenceGate(BlockBehaviour.Properties.copy(CHISELED_SANDSTONE),
-                    "","",""));
+            () -> new chiseledSandStoneFenceGate(CHISELED_SANDSTONE));
     public static final RegistryObject<FenceBlock> BLOOD_CHISELED_SAND_STONE_FENCE = register("blood_chiseled_sand_stone_fence",
-            () -> new chiseledSandStoneFence(BlockBehaviour.Properties.copy(BLOOD_CHISELED_SAND_STONE.get()),
-                    "","",""));
+            () -> new chiseledSandStoneFence(BLOOD_CHISELED_SAND_STONE.get()));
     public static final RegistryObject<FenceGateBlock> BLOOD_CHISELED_SAND_STONE_FENCE_GATE = register("blood_chiseled_sand_stone_fence_gate",
-            () -> new chiseledSandStoneFenceGate(BlockBehaviour.Properties.copy(BLOOD_CHISELED_SAND_STONE.get()),
-                    "","",""));
+            () -> new chiseledSandStoneFenceGate(BLOOD_CHISELED_SAND_STONE.get()));
 
     public static void register(IEventBus eventBus) {
         BLOCKS.register(eventBus);

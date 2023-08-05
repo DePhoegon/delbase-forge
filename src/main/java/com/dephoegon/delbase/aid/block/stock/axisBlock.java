@@ -22,12 +22,25 @@ public class axisBlock extends RotatedPillarBlock {
     private final String tip1;
     private final String tip2;
     private final boolean flame;
-    public axisBlock(Properties properties, String normToolTip, String shiftToolTip, String ctrlToolTip, boolean flames) {
+    private final int spread;
+    private final int flammability;
+    public axisBlock(Properties properties, String normToolTip, String shiftToolTip, String ctrlToolTip, boolean flames, int fireChance, int fireSpread) {
         super(properties);
-        if(normToolTip.equals("")) { tip0 = null; } else { tip0 = normToolTip; }
-        if(shiftToolTip.equals("")) { tip1 = null; } else { tip1 = shiftToolTip; }
-        if(ctrlToolTip.equals("")) { tip2 = null; } else { tip2 = ctrlToolTip; }
+        if(normToolTip.isEmpty()) { tip0 = null; } else { tip0 = normToolTip; }
+        if(shiftToolTip.isEmpty()) { tip1 = null; } else { tip1 = shiftToolTip; }
+        if(ctrlToolTip.isEmpty()) { tip2 = null; } else { tip2 = ctrlToolTip; }
         flame = flames;
+        spread = fireSpread;
+        flammability = fireChance;
+    }
+    public axisBlock(Properties properties, boolean flames, int fireChance, int fireSpread) {
+        super(properties);
+        tip0 = null;
+        tip1 = null;
+        tip2 = null;
+        flame = flames;
+        spread = fireSpread;
+        flammability = fireChance;
     }
 
     @Override
@@ -45,5 +58,16 @@ public class axisBlock extends RotatedPillarBlock {
             return true;
         }
         return false;
+    }
+    @Override
+    public int getFlammability(BlockState state, BlockGetter world, BlockPos pos, Direction face) {
+        if (flame) { return flammability; }
+        return 0;
+    }
+
+    @Override
+    public int getFireSpreadSpeed(BlockState state, BlockGetter world, BlockPos pos, Direction face) {
+        if (flame) { return spread; }
+        return 0;
     }
 }

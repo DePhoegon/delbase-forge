@@ -7,6 +7,7 @@ import com.dephoegon.delbase.block.entity.screen.menuTypes;
 import com.dephoegon.delbase.block.fence.*;
 import com.dephoegon.delbase.block.general.*;
 import com.dephoegon.delbase.block.gravity.gravColorSands;
+import com.dephoegon.delbase.block.gravity.solidSandColors;
 import com.dephoegon.delbase.block.slab.*;
 import com.dephoegon.delbase.block.stair.*;
 import com.dephoegon.delbase.block.wall.*;
@@ -19,17 +20,17 @@ public class regList {
     public static void firstList(@NotNull IEventBus eventBus) {
         //aid
         blockArrayList.setBlockArrays();
-
-        //Special block
-        ashBlocks.register(eventBus);
-        machineBlocks.register(eventBus);
-        blockEntities.register(eventBus);
-
+        // Sand
+        gravColorSands.register(eventBus);
+        // Sandstones
+        genSandStones.register(eventBus);
         // Stripped Wood, called for in non-stripped versions
         slabStrippedWood.register(eventBus);
         stairStrippedWood.register(eventBus);
         wallStrippedWood.register(eventBus);
         strippedWoodenFences.register(eventBus);
+        //Special block
+        miscSpecialCases.register(eventBus);
     }
     public static void listOrder(IEventBus eventBus) {
         //Items
@@ -38,11 +39,10 @@ public class regList {
 
         //Standard Blocks
         genChiseledSandStones.register(eventBus);
-        genSandStones.register(eventBus);
         genSmoothSandStones.register(eventBus);
 
         //Gravity Blocks
-        gravColorSands.register(eventBus);
+        solidSandColors.register(eventBus);
 
         //Slabs
         slabChiseledSandStones.register(eventBus);
@@ -108,9 +108,13 @@ public class regList {
         chiseledSandStoneFences.register(eventBus);
         stoneFences.register(eventBus);
 
+        //Special Blocks
+        ashBlocks.register(eventBus);
+        machineBlocks.register(eventBus);
+        blockEntities.register(eventBus);
+
         //Special
         menuTypes.register(eventBus);
         modRecipes.register(eventBus);
-        miscSpecialCases.register(eventBus);
     }
 }

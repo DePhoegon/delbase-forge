@@ -15,34 +15,25 @@ import net.minecraftforge.registries.RegistryObject;
 import javax.annotation.Nullable;
 import java.util.function.Supplier;
 
+import static com.dephoegon.delbase.block.general.miscSpecialCases.ASH_BLOCK;
 import static com.dephoegon.delbase.delbase.Mod_ID;
-import static net.minecraft.world.level.block.Blocks.*;
 
 public class ashBlocks {
     private static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, Mod_ID);
     private static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, Mod_ID);
 
     public static final RegistryObject<SlabBlock> ASH_SLAB = register("ash_slab",
-            () -> new slabBlock(BlockBehaviour.Properties.copy(OAK_PLANKS).sound(SoundType.WOOD),
-                    "","","",false, null),8000);
+            () -> new slabBlock(BlockBehaviour.Properties.copy(ASH_BLOCK.get()),false, 0, 0, null),8000);
     public static final RegistryObject<StairBlock> ASH_STAIR = register("ash_stair",
-            ()-> new stairBlock(OAK_STAIRS::defaultBlockState, BlockBehaviour.Properties.copy(OAK_STAIRS).sound(SoundType.WOOD),
-                    "","","", false, null),12000);
+            ()-> new stairBlock(ASH_BLOCK.get(), BlockBehaviour.Properties.copy(ASH_BLOCK.get()), false, 0, 0, null),12000);
     public static final RegistryObject<RotatedPillarBlock> ASH_LOG = register("ash_log",
-            ()-> new axisBlock(BlockBehaviour.Properties.copy(OAK_LOG).sound(SoundType.WOOD),
-                    "","","",false),16000);
+            ()-> new axisBlock(BlockBehaviour.Properties.copy(ASH_BLOCK.get()), false, 0, 0),16000);
     public static final RegistryObject<WallBlock> ASH_WALL = register("ash_wall",
-            ()-> new wallBlock(BlockBehaviour.Properties.copy(OAK_FENCE).sound(SoundType.WOOD),
-                    "","","", false, null),10000);
-    public static final RegistryObject<Block> ASH_BLOCK = register("ash_block",
-            ()-> new genBlock(BlockBehaviour.Properties.copy(OAK_PLANKS).sound(SoundType.WOOD),
-                    "","","", false),16000);
+            ()-> new wallBlock(BlockBehaviour.Properties.copy(ASH_BLOCK.get()), false, 0, 0, null),10000);
     public static final RegistryObject<FenceBlock> ASH_FENCE = register("ash_fence",
-            () -> new fenceBlock(BlockBehaviour.Properties.copy(OAK_FENCE).sound(SoundType.WOOD),
-                    "","","", false, null), 5000);
+            () -> new fenceBlock(BlockBehaviour.Properties.copy(ASH_BLOCK.get()), false, 0, 0, null), 5000);
     public static final RegistryObject<FenceGateBlock> ASH_FENCE_GATE = register("ash_fence_gate",
-            () -> new fenceGateBlock(BlockBehaviour.Properties.copy(OAK_FENCE_GATE).sound(SoundType.WOOD),
-                    "","","", false, null), 5000);
+            () -> new fenceGateBlock(BlockBehaviour.Properties.copy(ASH_BLOCK.get()), false, 0, 0, null), 5000);
     public static void register(IEventBus eventBus) {
         BLOCKS.register(eventBus);
         ITEMS.register(eventBus);
