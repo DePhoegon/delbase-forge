@@ -35,9 +35,9 @@ public class stairBlock extends StairBlock {
     private final BlockState stripped;
     public stairBlock(Block block, Properties properties, String normToolTip, String shiftToolTip, String ctrlToolTip, boolean flames, int fireChance, int fireSpread, BlockState strippedState) {
         super(block::defaultBlockState, properties);
-        if(normToolTip.equals("")) { tip0 = null; } else { tip0 = normToolTip; }
-        if(shiftToolTip.equals("")) { tip1 = null; } else { tip1 = shiftToolTip; }
-        if(ctrlToolTip.equals("")) { tip2 = null; } else { tip2 = ctrlToolTip; }
+        if(normToolTip.isEmpty()) { tip0 = null; } else { tip0 = normToolTip; }
+        if(shiftToolTip.isEmpty()) { tip1 = null; } else { tip1 = shiftToolTip; }
+        if(ctrlToolTip.isEmpty()) { tip2 = null; } else { tip2 = ctrlToolTip; }
         flame = flames;
         spread = fireSpread;
         flammability = fireChance;
