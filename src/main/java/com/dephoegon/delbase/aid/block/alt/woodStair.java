@@ -1,12 +1,16 @@
 package com.dephoegon.delbase.aid.block.alt;
 
 import com.dephoegon.delbase.aid.block.stock.stairBlock;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 
-import java.util.function.Supplier;
-
 public class woodStair extends stairBlock {
-    public woodStair(Supplier<BlockState> state, Properties properties, String normToolTip, String shiftToolTip, String ctrlToolTip, boolean flame, BlockState strippedState) {
-        super(state, properties, normToolTip, shiftToolTip, ctrlToolTip, flame, strippedState);
+    public woodStair(Block block, SoundType type, String normToolTip, String shiftToolTip, String ctrlToolTip, boolean flame, BlockState strippedState) {
+        super(block, BlockBehaviour.Properties.copy(block).sound(type), normToolTip, shiftToolTip, ctrlToolTip, flame, 5, 20, strippedState);
+    }
+    public woodStair(Block block, SoundType type, boolean flame, BlockState strippedState) {
+        super(block, BlockBehaviour.Properties.copy(block).sound(type), "", "", "", flame, 5, 20, strippedState);
     }
 }

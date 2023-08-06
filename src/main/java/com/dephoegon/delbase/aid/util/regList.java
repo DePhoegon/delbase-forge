@@ -7,6 +7,7 @@ import com.dephoegon.delbase.block.entity.screen.menuTypes;
 import com.dephoegon.delbase.block.fence.*;
 import com.dephoegon.delbase.block.general.*;
 import com.dephoegon.delbase.block.gravity.gravColorSands;
+import com.dephoegon.delbase.block.gravity.solidSandColors;
 import com.dephoegon.delbase.block.slab.*;
 import com.dephoegon.delbase.block.stair.*;
 import com.dephoegon.delbase.block.wall.*;
@@ -18,12 +19,12 @@ public class regList {
     public static void firstList(IEventBus eventBus) {
         //aid
         blockArrayList.setBlockArrays();
-
         //Special block
-        ashBlocks.register(eventBus);
-        machineBlocks.register(eventBus);
-        blockEntities.register(eventBus);
-
+        miscSpecialCases.register(eventBus);
+        // Sand
+        gravColorSands.register(eventBus);
+        // SandStone
+        genSandStones.register(eventBus);
         // Stripped Wood, called for in non-stripped versions
         slabStrippedWood.register(eventBus);
         stairStrippedWood.register(eventBus);
@@ -35,13 +36,15 @@ public class regList {
         shiftingDyes.register(eventBus);
         blockCutterPlans.register(eventBus);
 
+        //Pillars
+        axiCutSandStones.register(eventBus);
+
         //Standard Blocks
         genChiseledSandStones.register(eventBus);
-        genSandStones.register(eventBus);
         genSmoothSandStones.register(eventBus);
 
         //Gravity Blocks
-        gravColorSands.register(eventBus);
+        solidSandColors.register(eventBus);
 
         //Slabs
         slabChiseledSandStones.register(eventBus);
@@ -76,9 +79,6 @@ public class regList {
         stairTerracotta.register(eventBus);
         stairMisc.register(eventBus);
 
-        //Pillars
-        axiCutSandStones.register(eventBus);
-
         //Walls
         wallChiseledSandStones.register(eventBus);
         wallCutSandStones.register(eventBus);
@@ -107,9 +107,13 @@ public class regList {
         chiseledSandStoneFences.register(eventBus);
         stoneFences.register(eventBus);
 
+        // Specials
+        ashBlocks.register(eventBus);
+        machineBlocks.register(eventBus);
+        blockEntities.register(eventBus);
+
         //Special
         menuTypes.register(eventBus);
         modRecipes.register(eventBus);
-        miscSpecialCases.register(eventBus);
     }
 }

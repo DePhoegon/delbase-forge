@@ -5,8 +5,6 @@ import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.SlabBlock;
-import net.minecraft.world.level.block.SoundType;
-import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -22,38 +20,37 @@ public class slabConcrete {
     private static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, Mod_ID);
 
     public static final RegistryObject<SlabBlock> RED_CONCRETE_SLAB = register("red_concrete_slab",
-            () -> new concreteSlab(BlockBehaviour.Properties.copy(RED_CONCRETE).sound(SoundType.STONE),"","",""));
+            () -> new concreteSlab(RED_CONCRETE));
     public static final RegistryObject<SlabBlock> WHITE_CONCRETE_SLAB = register("white_concrete_slab",
-            () -> new concreteSlab(BlockBehaviour.Properties.copy(WHITE_CONCRETE).sound(SoundType.STONE),"","",""));
+            () -> new concreteSlab(WHITE_CONCRETE));
     public static final RegistryObject<SlabBlock> ORANGE_CONCRETE_SLAB = register("orange_concrete_slab",
-            () -> new concreteSlab(BlockBehaviour.Properties.copy(ORANGE_CONCRETE).sound(SoundType.STONE),"","",""));
+            () -> new concreteSlab(ORANGE_CONCRETE));
     public static final RegistryObject<SlabBlock> MAGENTA_CONCRETE_SLAB = register("magenta_concrete_slab",
-            () -> new concreteSlab(BlockBehaviour.Properties.copy(MAGENTA_CONCRETE).sound(SoundType.STONE),"","",""));
+            () -> new concreteSlab(MAGENTA_CONCRETE));
     public static final RegistryObject<SlabBlock> LIGHT_BLUE_CONCRETE_SLAB = register("light_blue_concrete_slab",
-            () -> new concreteSlab(BlockBehaviour.Properties.copy(LIGHT_BLUE_CONCRETE).sound(SoundType.STONE),"","",""));
+            () -> new concreteSlab(LIGHT_BLUE_CONCRETE));
     public static final RegistryObject<SlabBlock> YELLOW_CONCRETE_SLAB = register("yellow_concrete_slab",
-            () -> new concreteSlab(BlockBehaviour.Properties.copy(YELLOW_CONCRETE).sound(SoundType.STONE),"","",""));
+            () -> new concreteSlab(YELLOW_CONCRETE));
     public static final RegistryObject<SlabBlock> LIME_CONCRETE_SLAB = register("lime_concrete_slab",
-            () -> new concreteSlab(BlockBehaviour.Properties.copy(LIME_CONCRETE).sound(SoundType.STONE),"","",""));
+            () -> new concreteSlab(LIME_CONCRETE));
     public static final RegistryObject<SlabBlock> PINK_CONCRETE_SLAB = register("pink_concrete_slab",
-            () -> new concreteSlab(BlockBehaviour.Properties.copy(PINK_CONCRETE).sound(SoundType.STONE),"","",""));
+            () -> new concreteSlab(PINK_CONCRETE));
     public static final RegistryObject<SlabBlock> GRAY_CONCRETE_SLAB = register("gray_concrete_slab",
-            () -> new concreteSlab(BlockBehaviour.Properties.copy(GRAY_CONCRETE).sound(SoundType.STONE),"","",""));
+            () -> new concreteSlab(GRAY_CONCRETE));
     public static final RegistryObject<SlabBlock> LIGHT_GRAY_CONCRETE_SLAB = register("light_gray_concrete_slab",
-            () -> new concreteSlab(BlockBehaviour.Properties.copy(LIGHT_GRAY_CONCRETE).sound(SoundType.STONE),"","",""));
+            () -> new concreteSlab(LIGHT_GRAY_CONCRETE));
     public static final RegistryObject<SlabBlock> CYAN_CONCRETE_SLAB = register("cyan_concrete_slab",
-            () -> new concreteSlab(BlockBehaviour.Properties.copy(CYAN_CONCRETE).sound(SoundType.STONE),"","",""));
+            () -> new concreteSlab(CYAN_CONCRETE));
     public static final RegistryObject<SlabBlock> PURPLE_CONCRETE_SLAB = register("purple_concrete_slab",
-            () -> new concreteSlab(BlockBehaviour.Properties.copy(PURPLE_CONCRETE).sound(SoundType.STONE),"","",""));
+            () -> new concreteSlab(PURPLE_CONCRETE));
     public static final RegistryObject<SlabBlock> BLUE_CONCRETE_SLAB = register("blue_concrete_slab",
-            () -> new concreteSlab(BlockBehaviour.Properties.copy(BLUE_CONCRETE).sound(SoundType.STONE),"","",""));
+            () -> new concreteSlab(BLUE_CONCRETE));
     public static final RegistryObject<SlabBlock> GREEN_CONCRETE_SLAB = register("green_concrete_slab",
-            () -> new concreteSlab(BlockBehaviour.Properties.copy(GREEN_CONCRETE).sound(SoundType.STONE),"","",""));
+            () -> new concreteSlab(GREEN_CONCRETE));
     public static final RegistryObject<SlabBlock> BROWN_CONCRETE_SLAB = register("brown_concrete_slab",
-            () -> new concreteSlab(BlockBehaviour.Properties.copy(BROWN_CONCRETE).sound(SoundType.STONE),"","",""));
+            () -> new concreteSlab(BROWN_CONCRETE));
     public static final RegistryObject<SlabBlock> BLACK_CONCRETE_SLAB = register("black_concrete_slab",
-            () -> new concreteSlab(BlockBehaviour.Properties.copy(BLACK_CONCRETE).sound(SoundType.STONE),"","",""));
-    
+            () -> new concreteSlab(BLACK_CONCRETE));
 
     public static void register(IEventBus eventBus) {
         BLOCKS.register(eventBus);

@@ -8,7 +8,7 @@
       "faces": {
         "down":  { "texture": "#top", "cullface": "down" },
         "up":    { "texture": "#top" },
-        "north": { "texture": "#wall", "cullface": "north", "rotation": 270},
+        "north": { "texture": "#wall", "cullface": "north"},
         "west":  {"uv": [ 2, 8, 16, 16 ], "texture": "#wall", "rotation":  270},
         "east":  {"uv": [ 2, 0, 16, 7 ], "texture": "#wall", "rotation":  270}
       },

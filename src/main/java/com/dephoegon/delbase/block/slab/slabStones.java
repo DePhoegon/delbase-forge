@@ -22,7 +22,7 @@ public class slabStones {
     private static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, Mod_ID);
 
     public static final RegistryObject<SlabBlock> DEEPSLATE_SLAB = register("deepslate_slab",
-            () -> new slabBlock(BlockBehaviour.Properties.copy(DEEPSLATE).sound(SoundType.DEEPSLATE),"","","",false, null));
+            () -> new slabBlock(BlockBehaviour.Properties.copy(DEEPSLATE).sound(SoundType.DEEPSLATE), "", "", "", false, 0, 0, null));
 
     public static void register(IEventBus eventBus) {
         BLOCKS.register(eventBus);

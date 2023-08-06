@@ -3,6 +3,8 @@ package com.dephoegon.delbase.block.general;
 import com.dephoegon.delbase.aid.block.stock.genBlock;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.crafting.RecipeType;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
@@ -11,9 +13,11 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
+import javax.annotation.Nullable;
 import java.util.function.Supplier;
 
 import static com.dephoegon.delbase.delbase.Mod_ID;
+import static net.minecraft.world.level.block.Blocks.OAK_PLANKS;
 import static net.minecraft.world.level.block.Blocks.STONE;
 
 public class miscSpecialCases {
@@ -22,7 +26,10 @@ public class miscSpecialCases {
 
     public static final RegistryObject<Block> HARDENED_OAK_PLANKS = register("hardened_oak_planks",
             () -> new genBlock(BlockBehaviour.Properties.copy(STONE).sound(SoundType.STONE),
-                    "","","",false));
+                     "", "", "", false, 0, 0));
+    public static final RegistryObject<Block> ASH_BLOCK = register("ash_block",
+            ()-> new genBlock(BlockBehaviour.Properties.copy(OAK_PLANKS).sound(SoundType.WOOD),
+                    "","","", false, 0, 0),16000);
 
     public static void register(IEventBus eventBus) {
         BLOCKS.register(eventBus);
@@ -32,6 +39,15 @@ public class miscSpecialCases {
         RegistryObject<T> exit = BLOCKS.register(name, block);
         ITEMS.register(name, () -> new BlockItem(exit.get(),
                 new Item.Properties().stacksTo(64)));
+        return exit;
+    }private static <T extends Block> RegistryObject<T> register(String name, Supplier<T> block, int burn) {
+        RegistryObject<T> exit = BLOCKS.register(name, block);
+        ITEMS.register(name, () -> new BlockItem(exit.get(),
+                new Item.Properties().stacksTo(64)){
+            public int getBurnTime(ItemStack stack, @Nullable RecipeType<?> recipeType) {
+                return burn;
+            }
+        });
         return exit;
     }
 }

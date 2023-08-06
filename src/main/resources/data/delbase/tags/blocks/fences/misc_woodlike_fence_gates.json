@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
+    "delbase:ash_fence_gate",
     "delbase:dried_kelp_fence_gate",
     "delbase:shroomlight_fence_gate",
     "delbase:mud_fence_gate",

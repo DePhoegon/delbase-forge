@@ -1,9 +1,14 @@
 package com.dephoegon.delbase.aid.block.colorshift.gen;
 
 import com.dephoegon.delbase.aid.block.stock.genBlock;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.state.BlockBehaviour;
 
 public class smoothSandStone extends genBlock {
-    public smoothSandStone(Properties properties, String normToolTip, String shiftToolTip, String ctrlToolTip) {
-        super(properties, normToolTip, shiftToolTip, ctrlToolTip, false);
+    public smoothSandStone(Block block, String normToolTip, String shiftToolTip, String ctrlToolTip) {
+        super(BlockBehaviour.Properties.copy(block), normToolTip, shiftToolTip, ctrlToolTip, false, 0 ,0);
+    }
+    public smoothSandStone(Block block) {
+        super(BlockBehaviour.Properties.copy(block), "", "", "", false, 0 ,0);
     }
 }

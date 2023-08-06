@@ -23,35 +23,25 @@ public class quartzFences {
     private static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, Mod_ID);
 
     public static final RegistryObject<FenceBlock> QUARTZ_BRICKS_FENCE = register("quartz_bricks_fence",
-            () -> new quartzFence(BlockBehaviour.Properties.copy(QUARTZ_BRICKS),
-                    "","",""));
+            () -> new quartzFence(BlockBehaviour.Properties.copy(QUARTZ_BRICKS)));
     public static final RegistryObject<FenceGateBlock> QUARTZ_BRICKS_FENCE_GATE = register("quartz_bricks_fence_gate",
-            () -> new quartzGateBlock(BlockBehaviour.Properties.copy(QUARTZ_BRICKS),
-                    "","",""));
+            () -> new quartzGateBlock(BlockBehaviour.Properties.copy(QUARTZ_BRICKS)));
     public static final RegistryObject<FenceBlock> QUARTZ_BLOCK_FENCE = register("quartz_block_fence",
-            () -> new quartzFence(BlockBehaviour.Properties.copy(QUARTZ_BLOCK),
-                    "","",""));
+            () -> new quartzFence(BlockBehaviour.Properties.copy(QUARTZ_BLOCK)));
     public static final RegistryObject<FenceGateBlock> QUARTZ_BLOCK_FENCE_GATE = register("quartz_block_fence_gate",
-            () -> new quartzGateBlock(BlockBehaviour.Properties.copy(QUARTZ_BLOCK),
-                    "","",""));
+            () -> new quartzGateBlock(BlockBehaviour.Properties.copy(QUARTZ_BLOCK)));
     public static final RegistryObject<FenceBlock> SMOOTH_QUARTZ_FENCE = register("smooth_quartz_fence",
-            () -> new quartzFence(BlockBehaviour.Properties.copy(SMOOTH_QUARTZ),
-                    "","",""));
+            () -> new quartzFence(BlockBehaviour.Properties.copy(SMOOTH_QUARTZ)));
     public static final RegistryObject<FenceGateBlock> SMOOTH_QUARTZ_FENCE_GATE = register("smooth_quartz_fence_gate",
-            () -> new quartzGateBlock(BlockBehaviour.Properties.copy(SMOOTH_QUARTZ),
-                    "","",""));
+            () -> new quartzGateBlock(BlockBehaviour.Properties.copy(SMOOTH_QUARTZ)));
     public static final RegistryObject<FenceBlock> CHISELED_QUARTZ_BLOCK_FENCE = register("chiseled_quartz_block_fence",
-            () -> new quartzFence(BlockBehaviour.Properties.copy(CHISELED_QUARTZ_BLOCK),
-                    "","",""));
+            () -> new quartzFence(BlockBehaviour.Properties.copy(CHISELED_QUARTZ_BLOCK)));
     public static final RegistryObject<FenceGateBlock> CHISELED_QUARTZ_BLOCK_FENCE_GATE = register("chiseled_quartz_block_fence_gate",
-            () -> new quartzGateBlock(BlockBehaviour.Properties.copy(CHISELED_QUARTZ_BLOCK),
-                    "","",""));
+            () -> new quartzGateBlock(BlockBehaviour.Properties.copy(CHISELED_QUARTZ_BLOCK)));
     public static final RegistryObject<FenceBlock> QUARTZ_PILLAR_FENCE = register("quartz_pillar_fence",
-            () -> new quartzFence(BlockBehaviour.Properties.copy(QUARTZ_PILLAR),
-                    "","",""));
+            () -> new quartzFence(BlockBehaviour.Properties.copy(QUARTZ_PILLAR)));
     public static final RegistryObject<FenceGateBlock> QUARTZ_PILLAR_FENCE_GATE = register("quartz_pillar_fence_gate",
-            () -> new quartzGateBlock(BlockBehaviour.Properties.copy(QUARTZ_PILLAR),
-                    "","",""));
+            () -> new quartzGateBlock(BlockBehaviour.Properties.copy(QUARTZ_PILLAR)));
 
     public static void register(IEventBus eventBus) {
         BLOCKS.register(eventBus);

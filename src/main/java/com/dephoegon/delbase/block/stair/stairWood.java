@@ -8,7 +8,6 @@ import net.minecraft.world.item.crafting.RecipeType;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.StairBlock;
-import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -26,68 +25,47 @@ public class stairWood {
     private static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, Mod_ID);
 
     public static final RegistryObject<StairBlock> SPRUCE_WOOD_STAIR = register("spruce_wood_stair",
-            () -> new woodStair(SPRUCE_WOOD::defaultBlockState, BlockBehaviour.Properties.copy(SPRUCE_WOOD).sound(SoundType.WOOD)
-                    , "","","", true, STRIPPED_SPRUCE_WOOD_STAIR.get().defaultBlockState()), 5001);
+            () -> new woodStair(SPRUCE_WOOD, SoundType.WOOD, true, STRIPPED_SPRUCE_WOOD_STAIR.get().defaultBlockState()), 5001);
     public static final RegistryObject<StairBlock> ACACIA_WOOD_STAIR = register("acacia_wood_stair",
-            () -> new woodStair(ACACIA_WOOD::defaultBlockState, BlockBehaviour.Properties.copy(ACACIA_WOOD).sound(SoundType.WOOD)
-                    , "","","", true, STRIPPED_ACACIA_WOOD_STAIR.get().defaultBlockState()), 5001);
+            () -> new woodStair(ACACIA_WOOD, SoundType.WOOD, true, STRIPPED_ACACIA_WOOD_STAIR.get().defaultBlockState()), 5001);
     public static final RegistryObject<StairBlock> OAK_WOOD_STAIR = register("oak_wood_stair",
-            () -> new woodStair(OAK_WOOD::defaultBlockState, BlockBehaviour.Properties.copy(OAK_WOOD).sound(SoundType.WOOD)
-                    , "","","", true, STRIPPED_OAK_WOOD_STAIR.get().defaultBlockState()), 5001);
+            () -> new woodStair(OAK_WOOD, SoundType.WOOD, true, STRIPPED_OAK_WOOD_STAIR.get().defaultBlockState()), 5001);
     public static final RegistryObject<StairBlock> DARK_OAK_WOOD_STAIR = register("dark_oak_wood_stair",
-            () -> new woodStair(DARK_OAK_WOOD::defaultBlockState, BlockBehaviour.Properties.copy(DARK_OAK_WOOD).sound(SoundType.WOOD)
-                    , "","","", true, STRIPPED_DARK_OAK_WOOD_STAIR.get().defaultBlockState()), 5001);
+            () -> new woodStair(DARK_OAK_WOOD, SoundType.WOOD, true, STRIPPED_DARK_OAK_WOOD_STAIR.get().defaultBlockState()), 5001);
     public static final RegistryObject<StairBlock> JUNGLE_WOOD_STAIR = register("jungle_wood_stair",
-            () -> new woodStair(JUNGLE_WOOD::defaultBlockState, BlockBehaviour.Properties.copy(JUNGLE_WOOD).sound(SoundType.WOOD)
-                    , "","","", true, STRIPPED_JUNGLE_WOOD_STAIR.get().defaultBlockState()), 5001);
+            () -> new woodStair(JUNGLE_WOOD, SoundType.WOOD, true, STRIPPED_JUNGLE_WOOD_STAIR.get().defaultBlockState()), 5001);
     public static final RegistryObject<StairBlock> BIRCH_WOOD_STAIR = register("birch_wood_stair",
-            () -> new woodStair(BIRCH_WOOD::defaultBlockState, BlockBehaviour.Properties.copy(BIRCH_WOOD).sound(SoundType.WOOD)
-                    , "","","", true, STRIPPED_BIRCH_WOOD_STAIR.get().defaultBlockState()), 5001);
+            () -> new woodStair(BIRCH_WOOD, SoundType.WOOD, true, STRIPPED_BIRCH_WOOD_STAIR.get().defaultBlockState()), 5001);
     public static final RegistryObject<StairBlock> WARPED_HYPHAE_STAIR = register("warped_hyphae_stair",
-            () -> new woodStair(WARPED_HYPHAE::defaultBlockState, BlockBehaviour.Properties.copy(WARPED_HYPHAE).sound(SoundType.WOOD)
-                    , "","","", false, STRIPPED_WARPED_HYPHAE_STAIR.get().defaultBlockState()));
+            () -> new woodStair(WARPED_HYPHAE, SoundType.WOOD, false, STRIPPED_WARPED_HYPHAE_STAIR.get().defaultBlockState()));
     public static final RegistryObject<StairBlock> CRIMSON_HYPHAE_STAIR = register("crimson_hyphae_stair",
-            () -> new woodStair(CRIMSON_HYPHAE::defaultBlockState, BlockBehaviour.Properties.copy(CRIMSON_HYPHAE).sound(SoundType.WOOD)
-                    , "","","", false, STRIPPED_CRIMSON_HYPHAE_STAIR.get().defaultBlockState()));
+            () -> new woodStair(CRIMSON_HYPHAE, SoundType.WOOD, false, STRIPPED_CRIMSON_HYPHAE_STAIR.get().defaultBlockState()));
     public static final RegistryObject<StairBlock> SPRUCE_LOG_STAIR = register("spruce_log_stair",
-            () -> new woodStair(SPRUCE_WOOD::defaultBlockState, BlockBehaviour.Properties.copy(SPRUCE_WOOD).sound(SoundType.WOOD)
-                    , "","","", true, STRIPPED_SPRUCE_LOG_STAIR.get().defaultBlockState()), 5001);
+            () -> new woodStair(SPRUCE_WOOD, SoundType.WOOD, true, STRIPPED_SPRUCE_LOG_STAIR.get().defaultBlockState()), 5001);
     public static final RegistryObject<StairBlock> ACACIA_LOG_STAIR = register("acacia_log_stair",
-            () -> new woodStair(ACACIA_WOOD::defaultBlockState, BlockBehaviour.Properties.copy(ACACIA_WOOD).sound(SoundType.WOOD)
-                    , "","","", true, STRIPPED_ACACIA_LOG_STAIR.get().defaultBlockState()), 5001);
+            () -> new woodStair(ACACIA_WOOD, SoundType.WOOD, true, STRIPPED_ACACIA_LOG_STAIR.get().defaultBlockState()), 5001);
     public static final RegistryObject<StairBlock> OAK_LOG_STAIR = register("oak_log_stair",
-            () -> new woodStair(OAK_WOOD::defaultBlockState, BlockBehaviour.Properties.copy(OAK_WOOD).sound(SoundType.WOOD)
-                    , "","","", true, STRIPPED_OAK_LOG_STAIR.get().defaultBlockState()), 5001);
+            () -> new woodStair(OAK_WOOD, SoundType.WOOD, true, STRIPPED_OAK_LOG_STAIR.get().defaultBlockState()), 5001);
     public static final RegistryObject<StairBlock> DARK_OAK_LOG_STAIR = register("dark_oak_log_stair",
-            () -> new woodStair(DARK_OAK_WOOD::defaultBlockState, BlockBehaviour.Properties.copy(DARK_OAK_WOOD).sound(SoundType.WOOD)
-                    , "","","", true, STRIPPED_DARK_OAK_LOG_STAIR.get().defaultBlockState()), 5001);
+            () -> new woodStair(DARK_OAK_WOOD, SoundType.WOOD, true, STRIPPED_DARK_OAK_LOG_STAIR.get().defaultBlockState()), 5001);
     public static final RegistryObject<StairBlock> JUNGLE_LOG_STAIR = register("jungle_log_stair",
-            () -> new woodStair(JUNGLE_WOOD::defaultBlockState, BlockBehaviour.Properties.copy(JUNGLE_WOOD).sound(SoundType.WOOD)
-                    , "","","", true, STRIPPED_JUNGLE_LOG_STAIR.get().defaultBlockState()), 5001);
+            () -> new woodStair(JUNGLE_WOOD, SoundType.WOOD, true, STRIPPED_JUNGLE_LOG_STAIR.get().defaultBlockState()), 5001);
     public static final RegistryObject<StairBlock> BIRCH_LOG_STAIR = register("birch_log_stair",
-            () -> new woodStair(BIRCH_WOOD::defaultBlockState, BlockBehaviour.Properties.copy(BIRCH_WOOD).sound(SoundType.WOOD)
-                    , "","","", true, STRIPPED_BIRCH_LOG_STAIR.get().defaultBlockState()), 5001);
+            () -> new woodStair(BIRCH_WOOD, SoundType.WOOD, true, STRIPPED_BIRCH_LOG_STAIR.get().defaultBlockState()), 5001);
     public static final RegistryObject<StairBlock> WARPED_STEM_STAIR = register("warped_stem_stair",
-            () -> new woodStair(WARPED_HYPHAE::defaultBlockState, BlockBehaviour.Properties.copy(WARPED_HYPHAE).sound(SoundType.WOOD)
-                    , "","","", false, STRIPPED_WARPED_STEM_STAIR.get().defaultBlockState()));
+            () -> new woodStair(WARPED_HYPHAE, SoundType.WOOD, false, STRIPPED_WARPED_STEM_STAIR.get().defaultBlockState()));
     public static final RegistryObject<StairBlock> CRIMSON_STEM_STAIR = register("crimson_stem_stair",
-            () -> new woodStair(CRIMSON_HYPHAE::defaultBlockState, BlockBehaviour.Properties.copy(CRIMSON_HYPHAE).sound(SoundType.WOOD)
-                    , "","","", false, STRIPPED_CRIMSON_STEM_STAIR.get().defaultBlockState()));
+            () -> new woodStair(CRIMSON_HYPHAE, SoundType.WOOD, false, STRIPPED_CRIMSON_STEM_STAIR.get().defaultBlockState()));
     public static final RegistryObject<StairBlock> MANGROVE_WOOD_STAIR = register("mangrove_wood_stair",
-            () -> new woodStair(MANGROVE_WOOD::defaultBlockState, BlockBehaviour.Properties.copy(MANGROVE_WOOD).sound(SoundType.WOOD)
-                    , "","","", true, STRIPPED_MANGROVE_WOOD_STAIR.get().defaultBlockState()), 5001);
+            () -> new woodStair(MANGROVE_WOOD, SoundType.WOOD, true, STRIPPED_MANGROVE_WOOD_STAIR.get().defaultBlockState()), 5001);
     public static final RegistryObject<StairBlock> MANGROVE_LOG_STAIR = register("mangrove_log_stair",
-            () -> new woodStair(MANGROVE_WOOD::defaultBlockState, BlockBehaviour.Properties.copy(MANGROVE_WOOD).sound(SoundType.WOOD)
-                    , "","","", true, STRIPPED_MANGROVE_LOG_STAIR.get().defaultBlockState()), 5001);
+            () -> new woodStair(MANGROVE_WOOD, SoundType.WOOD, true, STRIPPED_MANGROVE_LOG_STAIR.get().defaultBlockState()), 5001);
     public static final RegistryObject<StairBlock> CHERRY_WOOD_STAIR = register("cherry_wood_stair",
-            () -> new woodStair(CHERRY_WOOD::defaultBlockState, BlockBehaviour.Properties.copy(CHERRY_WOOD).sound(SoundType.CHERRY_WOOD)
-                    , "","","", true, STRIPPED_CHERRY_WOOD_STAIR.get().defaultBlockState()), 5001);
+            () -> new woodStair(CHERRY_WOOD, SoundType.CHERRY_WOOD, true, STRIPPED_CHERRY_WOOD_STAIR.get().defaultBlockState()), 5001);
     public static final RegistryObject<StairBlock> CHEERY_LOG_STAIR = register("cherry_log_stair",
-            () -> new woodStair(CHERRY_WOOD::defaultBlockState, BlockBehaviour.Properties.copy(CHERRY_WOOD).sound(SoundType.CHERRY_WOOD)
-                    , "","","", true, STRIPPED_CHERRY_LOG_STAIR.get().defaultBlockState()), 5001);
+            () -> new woodStair(CHERRY_WOOD, SoundType.CHERRY_WOOD, true, STRIPPED_CHERRY_LOG_STAIR.get().defaultBlockState()), 5001);
     public static final RegistryObject<StairBlock> BAMBOO_BLOCK_STAIR = register("bamboo_block_stair",
-            () -> new woodStair(BAMBOO_PLANKS::defaultBlockState, BlockBehaviour.Properties.copy(BAMBOO_PLANKS).sound(SoundType.BAMBOO_WOOD)
-                    , "","","", true, STRIPPED_BAMBOO_BLOCK_STAIR.get().defaultBlockState()), 5001);
+            () -> new woodStair(BAMBOO_PLANKS, SoundType.BAMBOO_WOOD, true, STRIPPED_BAMBOO_BLOCK_STAIR.get().defaultBlockState()), 5001);
 
     public static void register(IEventBus eventBus) {
         BLOCKS.register(eventBus);

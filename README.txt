@@ -16,6 +16,7 @@ Latest Version
 -1.19.3 = 1.4.9
 -1.19.2 = 1.4.9
 -1.18.2 = 1.4.9
+
 Companion Mod
 - DePhoegons' Chocobos
 -- GitHub - https://github.com/DePhoegon/delchoco
@@ -23,6 +24,8 @@ Companion Mod
 -- Download - https://www.curseforge.com/minecraft/mc-mods/dephoegons-chocobos
 -- Download - Monrith Link Placeholder
 -- Author - DePhoegon
+-- Artist - AtticusJay (Credits.md)
+
 -- Latest Version
 ---- 1.20 / 1.20.1 = 3.3.4
 ---- 1.19.3 = 3.3.4
