@@ -36,6 +36,7 @@ import static com.dephoegon.delbase.aid.slots.planSlots.getFullPlanSlotArray;
 import static com.dephoegon.delbase.item.blockCutterPlans.*;
 import static net.minecraft.world.item.Items.DIAMOND;
 
+@SuppressWarnings("RedundantMethodOverride")
 public class blockCuttingStation extends BlockEntity implements MenuProvider {
     public static final int outputSlot = 1;
     public static final int inputSlot = 0;

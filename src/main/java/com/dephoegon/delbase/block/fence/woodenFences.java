@@ -22,6 +22,7 @@ import static com.dephoegon.delbase.block.fence.strippedWoodenFences.*;
 import static com.dephoegon.delbase.delbase.Mod_ID;
 import static net.minecraft.world.level.block.Blocks.*;
 
+@SuppressWarnings("SameParameterValue")
 public class woodenFences {
     private static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, Mod_ID);
     private static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, Mod_ID);

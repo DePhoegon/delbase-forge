@@ -110,8 +110,8 @@ public class regList {
 
         //Special Blocks
         ashBlocks.register(eventBus);
-        machineBlocks.register(eventBus);
         blockEntities.register(eventBus);
+        machineBlocks.register(eventBus);
 
         //Special
         menuTypes.register(eventBus);

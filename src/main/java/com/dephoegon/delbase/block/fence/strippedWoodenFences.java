@@ -21,6 +21,7 @@ import java.util.function.Supplier;
 import static com.dephoegon.delbase.delbase.Mod_ID;
 import static net.minecraft.world.level.block.Blocks.*;
 
+@SuppressWarnings("SameParameterValue")
 public class strippedWoodenFences {
     private static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, Mod_ID);
     private static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, Mod_ID);
@@ -90,13 +91,13 @@ public class strippedWoodenFences {
     public static final RegistryObject<FenceGateBlock> STRIPPED_WARPED_STEM_FENCE_GATE = register("stripped_warped_stem_fence_gate",
             () -> new woodFenceGate(STRIPPED_WARPED_HYPHAE, SoundType.WOOD, false, null));
     public static final RegistryObject<FenceBlock> STRIPPED_MANGROVE_WOOD_FENCE = register("stripped_mangrove_wood_fence",
-            () -> new woodFence(STRIPPED_MANGROVE_WOOD, SoundType.WOOD, true, null), 1000);
+            () -> new woodFence(STRIPPED_OAK_WOOD, SoundType.WOOD, true, null), 1000);
     public static final RegistryObject<FenceGateBlock> STRIPPED_MANGROVE_WOOD_FENCE_GATE = register("stripped_mangrove_wood_fence_gate",
-            () -> new woodFenceGate(STRIPPED_MANGROVE_WOOD, SoundType.WOOD, true, null), 1000);
+            () -> new woodFenceGate(STRIPPED_OAK_WOOD, SoundType.WOOD, true, null), 1000);
     public static final RegistryObject<FenceBlock> STRIPPED_MANGROVE_LOG_FENCE = register("stripped_mangrove_log_fence",
-            () -> new woodFence(STRIPPED_MANGROVE_WOOD, SoundType.WOOD, true, null), 1000);
+            () -> new woodFence(STRIPPED_OAK_WOOD, SoundType.WOOD, true, null), 1000);
     public static final RegistryObject<FenceGateBlock> STRIPPED_MANGROVE_LOG_FENCE_GATE = register("stripped_mangrove_log_fence_gate",
-            () -> new woodFenceGate(STRIPPED_MANGROVE_WOOD, SoundType.WOOD, true, null), 1000);
+            () -> new woodFenceGate(STRIPPED_OAK_WOOD, SoundType.WOOD, true, null), 1000);
 
     public static void register(IEventBus eventBus) {
         BLOCKS.register(eventBus);

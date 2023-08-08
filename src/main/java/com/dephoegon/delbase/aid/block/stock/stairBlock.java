@@ -21,7 +21,6 @@ import org.jetbrains.annotations.Nullable;
 import java.util.List;
 
 import static com.dephoegon.delbase.aid.util.burnChance.rngBurn;
-import static com.dephoegon.delbase.block.general.ashBlocks.ASH_STAIR;
 import static net.minecraftforge.common.ToolActions.AXE_STRIP;
 
 public class stairBlock extends StairBlock {
@@ -63,7 +62,7 @@ public class stairBlock extends StairBlock {
     public boolean isFlammable(BlockState state, BlockGetter world, BlockPos pos, Direction face)
     {
         if (flame && !state.getValue(WATERLOGGED)) {
-            rngBurn(world, state, ASH_STAIR.get().defaultBlockState(), pos, 40 ,60);
+            rngBurn(world, state, pos, 40 ,60);
             return state.getValue(StairBlock.HALF) == Half.TOP;
         }
         return false;

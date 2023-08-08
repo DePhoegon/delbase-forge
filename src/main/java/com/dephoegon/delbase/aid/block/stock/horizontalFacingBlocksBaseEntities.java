@@ -28,7 +28,6 @@ import org.jetbrains.annotations.Nullable;
 import java.util.List;
 
 import static com.dephoegon.delbase.aid.util.burnChance.rngBurn;
-import static com.dephoegon.delbase.block.general.miscSpecialCases.ASH_BLOCK;
 
 @SuppressWarnings("deprecation")
 public class horizontalFacingBlocksBaseEntities extends BaseEntityBlock {
@@ -86,7 +85,7 @@ public class horizontalFacingBlocksBaseEntities extends BaseEntityBlock {
     public boolean isFlammable(BlockState state, BlockGetter world, BlockPos pos, Direction face)
     {
         if (flame) {
-            rngBurn(world, state, ASH_BLOCK.get().defaultBlockState(), pos, 40, 60);
+            rngBurn(world, state, pos, 40, 60);
             return true;
         }
         return false;
@@ -104,11 +103,11 @@ public class horizontalFacingBlocksBaseEntities extends BaseEntityBlock {
     }
 
     @Override
-    public RenderShape getRenderShape(BlockState pState) {
+    public @NotNull RenderShape getRenderShape(@NotNull BlockState pState) {
         return RenderShape.MODEL;
     }
     @Override
-    public void onRemove(BlockState pState, Level pLevel, BlockPos pPos, BlockState pNewState, boolean pIsMoving) {
+    public void onRemove(@NotNull BlockState pState, @NotNull Level pLevel, @NotNull BlockPos pPos, @NotNull BlockState pNewState, boolean pIsMoving) {
         if (pState.getBlock() != pNewState.getBlock()) {
             BlockEntity blockEntity = pLevel.getBlockEntity(pPos);
             if (blockEntity instanceof blockCuttingStation) {
@@ -117,7 +116,7 @@ public class horizontalFacingBlocksBaseEntities extends BaseEntityBlock {
         }super.onRemove(pState, pLevel, pPos, pNewState, pIsMoving);
     }
     @Override
-    public InteractionResult use(BlockState pState, Level pLevel, BlockPos pPos, Player pPlayer, InteractionHand pHand, BlockHitResult pHit) {
+    public @NotNull InteractionResult use(@NotNull BlockState pState, @NotNull Level pLevel, @NotNull BlockPos pPos, @NotNull Player pPlayer, @NotNull InteractionHand pHand, @NotNull BlockHitResult pHit) {
         if (!pLevel.isClientSide()) {
             BlockEntity entity = pLevel.getBlockEntity(pPos);
             if(entity instanceof blockCuttingStation) {

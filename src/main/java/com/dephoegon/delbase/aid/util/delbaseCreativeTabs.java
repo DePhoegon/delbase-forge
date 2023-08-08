@@ -4,7 +4,6 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Items;
 import net.minecraft.world.level.ItemLike;
 import net.minecraftforge.event.CreativeModeTabEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -18,6 +17,7 @@ import static com.dephoegon.delbase.aid.util.creativeTabsArrayLists.*;
 import static com.dephoegon.delbase.block.general.machineBlocks.BLOCK_CUTTING_STATION;
 import static com.dephoegon.delbase.block.general.miscSpecialCases.HARDENED_OAK_PLANKS;
 import static com.dephoegon.delbase.delbase.Mod_ID;
+import static com.dephoegon.delbase.item.blockCutterPlans.WALL_PLANS;
 
 @Mod.EventBusSubscriber(modid = Mod_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
 public class delbaseCreativeTabs {
@@ -27,10 +27,10 @@ public class delbaseCreativeTabs {
     @SubscribeEvent
     public static void registerCreativeModeTabs(CreativeModeTabEvent.@NotNull Register event){
         DELBASE_BLOCK = event.registerCreativeModeTab(new ResourceLocation(Mod_ID, "dephoegon_blocks"),
-                builder -> builder.icon(() -> new ItemStack(Items.REDSTONE_BLOCK))
+                builder -> builder.icon(() -> new ItemStack(BLOCK_CUTTING_STATION.get().asItem()))
                         .title(Component.translatable("itemGroup.dephoegon_blocks")));
         DELBASE_ITEM = event.registerCreativeModeTab(new ResourceLocation(Mod_ID, "dephoegon_items"),
-                builder -> builder.icon(() -> new ItemStack(Items.RED_DYE))
+                builder -> builder.icon(() -> new ItemStack(WALL_PLANS.get()))
                         .title(Component.translatable("itemGroup.dephoegon_items")));
     }
 
@@ -42,9 +42,9 @@ public class delbaseCreativeTabs {
         return out;
     }
 
+    @SuppressWarnings("UnnecessaryLocalVariable")
     public static @NotNull ArrayList<RegistryObject<? extends ItemLike>> getDelNaturalBlockList() {
-        ArrayList<RegistryObject<? extends ItemLike>> out = new ArrayList<>();
-        out.addAll(setSands());
+        ArrayList<RegistryObject<? extends ItemLike>> out = new ArrayList<>(setSands());
         return out;
     }
     public static @NotNull ArrayList<RegistryObject<? extends ItemLike>> getDelBlockList() {

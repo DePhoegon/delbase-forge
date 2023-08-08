@@ -20,7 +20,6 @@ import org.jetbrains.annotations.Nullable;
 import java.util.List;
 
 import static com.dephoegon.delbase.aid.util.burnChance.rngBurn;
-import static com.dephoegon.delbase.block.general.ashBlocks.ASH_FENCE_GATE;
 import static net.minecraftforge.common.ToolActions.AXE_STRIP;
 
 public class fenceGateBlock extends FenceGateBlock {
@@ -62,7 +61,7 @@ public class fenceGateBlock extends FenceGateBlock {
     public boolean isFlammable(BlockState state, BlockGetter world, BlockPos pos, Direction face)
     {
         if (flame) {
-            rngBurn(world, state, ASH_FENCE_GATE.get().defaultBlockState(), pos, 40, 60);
+            rngBurn(world, state, pos, 40, 60);
             return true;
         }
         return false;
