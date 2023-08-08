@@ -120,6 +120,7 @@ public class creativeTabsArrayLists {
         out.add(LIGHT_BLUE_CUT_SAND_STONE);
         out.add(YELLOW_CUT_SAND_STONE);
         out.add(LIME_CUT_SAND_STONE);
+        out.add(GREEN_CUT_SAND_STONE);
         out.add(PINK_CUT_SAND_STONE);
         out.add(GRAY_CUT_SAND_STONE);
         out.add(LIGHT_GRAY_CUT_SAND_STONE);
@@ -356,7 +357,6 @@ public class creativeTabsArrayLists {
         out.add(PURPLE_SAND_FENCE);
         out.add(BLUE_SAND_FENCE);
         out.add(BROWN_SAND_FENCE);
-        out.add(BROWN_SAND_FENCE);
         out.add(GREEN_SAND_FENCE);
         out.add(RED_SAND_FENCE);
         out.add(BLACK_SAND_FENCE);
@@ -378,7 +378,6 @@ public class creativeTabsArrayLists {
         out.add(CYAN_SAND_FENCE_GATE);
         out.add(PURPLE_SAND_FENCE_GATE);
         out.add(BLUE_SAND_FENCE_GATE);
-        out.add(BROWN_SAND_FENCE_GATE);
         out.add(BROWN_SAND_FENCE_GATE);
         out.add(GREEN_SAND_FENCE_GATE);
         out.add(RED_SAND_FENCE_GATE);
@@ -434,7 +433,7 @@ public class creativeTabsArrayLists {
     public static @NotNull ArrayList<RegistryObject<FenceBlock>> setSmoothSandStoneFences() {
         ArrayList<RegistryObject<FenceBlock>> out = new ArrayList<>();
         out.add(WHITE_SMOOTH_SAND_STONE_FENCE);
-        out.add(ORANGE_SAND_STONE_FENCE);
+        out.add(ORANGE_SMOOTH_SAND_STONE_FENCE);
         out.add(MAGENTA_SMOOTH_SAND_STONE_FENCE);
         out.add(LIGHT_BLUE_SMOOTH_SAND_STONE_FENCE);
         out.add(YELLOW_SMOOTH_SAND_STONE_FENCE);
@@ -456,7 +455,7 @@ public class creativeTabsArrayLists {
     public static @NotNull ArrayList<RegistryObject<FenceGateBlock>> setSmoothSandStoneFenceGates() {
         ArrayList<RegistryObject<FenceGateBlock>> out = new ArrayList<>();
         out.add(WHITE_SMOOTH_SAND_STONE_FENCE_GATE);
-        out.add(ORANGE_SAND_STONE_FENCE_GATE);
+        out.add(ORANGE_SMOOTH_SAND_STONE_FENCE_GATE);
         out.add(MAGENTA_SMOOTH_SAND_STONE_FENCE_GATE);
         out.add(LIGHT_BLUE_SMOOTH_SAND_STONE_FENCE_GATE);
         out.add(YELLOW_SMOOTH_SAND_STONE_FENCE_GATE);
@@ -512,6 +511,7 @@ public class creativeTabsArrayLists {
         out.add(STRIPPED_CRIMSON_HYPHAE_FENCE);
         out.add(STRIPPED_CRIMSON_STEM_FENCE);
         out.add(STRIPPED_DARK_OAK_WOOD_FENCE);
+        out.add(STRIPPED_DARK_OAK_LOG_FENCE);
         out.add(STRIPPED_JUNGLE_WOOD_FENCE);
         out.add(STRIPPED_JUNGLE_LOG_FENCE);
         out.add(STRIPPED_OAK_WOOD_FENCE);
@@ -535,6 +535,7 @@ public class creativeTabsArrayLists {
         out.add(STRIPPED_CRIMSON_HYPHAE_FENCE_GATE);
         out.add(STRIPPED_CRIMSON_STEM_FENCE_GATE);
         out.add(STRIPPED_DARK_OAK_WOOD_FENCE_GATE);
+        out.add(STRIPPED_DARK_OAK_LOG_FENCE_GATE);
         out.add(STRIPPED_JUNGLE_WOOD_FENCE_GATE);
         out.add(STRIPPED_JUNGLE_LOG_FENCE_GATE);
         out.add(STRIPPED_OAK_WOOD_FENCE_GATE);
@@ -645,6 +646,7 @@ public class creativeTabsArrayLists {
         out.add(ASH_STAIR);
         out.add(ASH_LOG);
         out.add(ASH_BLOCK);
+        out.add(ASH_WALL);
         return out;
     }
     public static @NotNull ArrayList<RegistryObject<Block>> setChiseledSandStones() {
@@ -703,6 +705,7 @@ public class creativeTabsArrayLists {
         out.add(PURPLE_SMOOTH_SAND_STONE);
         out.add(BLUE_SMOOTH_SAND_STONE);
         out.add(GREEN_SMOOTH_SAND_STONE);
+        out.add(BROWN_SMOOTH_SAND_STONE);
         out.add(BLACK_SMOOTH_SAND_STONE);
         return out;
     }
@@ -942,6 +945,7 @@ public class creativeTabsArrayLists {
         out.add(PINK_SAND_STONE_SLAB);
         out.add(GRAY_SAND_STONE_SLAB);
         out.add(LIGHT_GRAY_SAND_STONE_SLAB);
+        out.add(CYAN_SAND_STONE_SLAB);
         out.add(PURPLE_SAND_STONE_SLAB);
         out.add(BLUE_SAND_STONE_SLAB);
         out.add(GREEN_SAND_STONE_SLAB);
@@ -951,6 +955,8 @@ public class creativeTabsArrayLists {
     }
     public static @NotNull ArrayList<RegistryObject<SlabBlock>> setSandStoneEnergySlabs() {
         ArrayList<RegistryObject<SlabBlock>> out = new ArrayList<>();
+        out.add(OVERRIDE_SAND_STONE_SLAB_ENERGY);
+        out.add(OVERRIDE_RED_SAND_STONE_SLAB_ENERGY);
         out.add(BLOOD_SAND_STONE_SLAB_ENERGY);
         out.add(WHITE_SAND_STONE_SLAB_ENERGY);
         out.add(ORANGE_SAND_STONE_SLAB_ENERGY);
@@ -961,6 +967,7 @@ public class creativeTabsArrayLists {
         out.add(PINK_SAND_STONE_SLAB_ENERGY);
         out.add(GRAY_SAND_STONE_SLAB_ENERGY);
         out.add(LIGHT_GRAY_SAND_STONE_SLAB_ENERGY);
+        out.add(CYAN_SAND_STONE_SLAB_ENERGY);
         out.add(PURPLE_SAND_STONE_SLAB_ENERGY);
         out.add(BLUE_SAND_STONE_SLAB_ENERGY);
         out.add(GREEN_SAND_STONE_SLAB_ENERGY);
@@ -975,6 +982,7 @@ public class creativeTabsArrayLists {
         out.add(ORANGE_SMOOTH_SAND_STONE_SLAB);
         out.add(MAGENTA_SMOOTH_SAND_STONE_SLAB);
         out.add(LIGHT_BLUE_SMOOTH_SAND_STONE_SLAB);
+        out.add(YELLOW_SMOOTH_SAND_STONE_SLAB);
         out.add(LIME_SMOOTH_SAND_STONE_SLAB);
         out.add(PINK_SMOOTH_SAND_STONE_SLAB);
         out.add(GRAY_SMOOTH_SAND_STONE_SLAB);
@@ -1040,6 +1048,7 @@ public class creativeTabsArrayLists {
         ArrayList<RegistryObject<SlabBlock>> out = new ArrayList<>();
         out.add(WHITE_TERRACOTTA_SLAB);
         out.add(ORANGE_TERRACOTTA_SLAB);
+        out.add(MAGENTA_TERRACOTTA_SLAB);
         out.add(LIGHT_BLUE_TERRACOTTA_SLAB);
         out.add(YELLOW_TERRACOTTA_SLAB);
         out.add(LIME_TERRACOTTA_SLAB);
@@ -1097,6 +1106,7 @@ public class creativeTabsArrayLists {
         out.add(LIGHT_GRAY_CHISELED_SAND_STONE_STAIR);
         out.add(CYAN_CHISELED_SAND_STONE_STAIR);
         out.add(PURPLE_CHISELED_SAND_STONE_STAIR);
+        out.add(BLUE_CHISELED_SAND_STONE_STAIR);
         out.add(GREEN_CHISELED_SAND_STONE_STAIR);
         out.add(BROWN_CHISELED_SAND_STONE_STAIR);
         out.add(BLACK_CHISELED_SAND_STONE_STAIR);
@@ -1283,7 +1293,7 @@ public class creativeTabsArrayLists {
         out.add(LIME_TERRACOTTA_STAIR);
         out.add(PINK_TERRACOTTA_STAIR);
         out.add(GRAY_TERRACOTTA_STAIR);
-        out.add(LIGHT_GRAY_SAND_STONE_STAIR);
+        out.add(LIGHT_GRAY_TERRACOTTA_STAIR);
         out.add(CYAN_TERRACOTTA_STAIR);
         out.add(PURPLE_TERRACOTTA_STAIR);
         out.add(BLUE_TERRACOTTA_STAIR);
@@ -1440,7 +1450,6 @@ public class creativeTabsArrayLists {
         out.add(CYAN_SAND_WALL);
         out.add(PURPLE_SAND_WALL);
         out.add(BLUE_SAND_WALL);
-        out.add(GREEN_SAND_WALL);
         out.add(GREEN_SAND_WALL);
         out.add(BROWN_SAND_WALL);
         out.add(BLACK_SAND_WALL);
