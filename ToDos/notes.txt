@@ -1,6 +1,6 @@
 animated texture
 ---------
-crimoson_stem.png.mcmeta
+crimson_stem.png.mcmeta
 --
 {
   "animation": {

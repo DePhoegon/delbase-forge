@@ -29,6 +29,7 @@ println "Java: ${System.getProperty 'java.version'}, JVM: ${System.getProperty '
 minecraft {
 
     // mappings channel: 'official', version: '1.18.2'
+    //noinspection GroovyAssignabilityCheck
     mappings channel: project.map_type, version: project.map_type_version
 
     //accessTransformer = file('src/main/resources/META-INF/accesstransformer.cfg') // Currently, this location cannot be changed from the default.
@@ -36,6 +37,7 @@ minecraft {
     // These can be tweaked, removed, or duplicated as needed.
     runs {
         client {
+            //noinspection GroovyAssignabilityCheck
             workingDirectory project.file('run')
             property 'mixin.env.remapRefMap', 'true'
             property 'mixin.env.refMapRemappingFile', "${projectDir}/build/createSrgToMcp/output.srg"
@@ -48,12 +50,15 @@ minecraft {
 
             mods {
                 delbase {
+                    //noinspection GroovyAssignabilityCheck
                     source sourceSets.main
                 }
             }
         }
 
         server {
+            //noinspection GroovyAssignabilityCheck
+            //noinspection GroovyAssignabilityCheck
             workingDirectory project.file('run')
             property 'mixin.env.remapRefMap', 'true'
             property 'mixin.env.refMapRemappingFile', "${projectDir}/build/createSrgToMcp/output.srg"
@@ -66,12 +71,14 @@ minecraft {
 
             mods {
                 delbase {
+                    //noinspection GroovyAssignabilityCheck
                     source sourceSets.main
                 }
             }
         }
 
         gameTestServer {
+            //noinspection GroovyAssignabilityCheck
             workingDirectory project.file('run')
             property 'mixin.env.remapRefMap', 'true'
             property 'mixin.env.refMapRemappingFile', "${projectDir}/build/createSrgToMcp/output.srg"
@@ -84,12 +91,14 @@ minecraft {
 
             mods {
                 delbase {
+                    //noinspection GroovyAssignabilityCheck
                     source sourceSets.main
                 }
             }
         }
 
         data {
+            //noinspection GroovyAssignabilityCheck
             workingDirectory project.file('run')
             property 'mixin.env.remapRefMap', 'true'
             property 'mixin.env.refMapRemappingFile', "${projectDir}/build/createSrgToMcp/output.srg"
@@ -103,6 +112,7 @@ minecraft {
 
             mods {
                 delbase {
+                    //noinspection GroovyAssignabilityCheck
                     source sourceSets.main
                 }
             }
@@ -177,7 +187,9 @@ jar.finalizedBy('reobfJar')
 
 publishing {
     publications {
+        //noinspection GroovyAssignabilityCheck
         mavenJava(MavenPublication) {
+            //noinspection GroovyAssignabilityCheck
             artifact jar
         }
     }

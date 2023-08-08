@@ -21,9 +21,9 @@ public class solidSandBlock extends gravBlock {
         super(dustColorIn, BlockBehaviour.Properties.copy(block).sound(SoundType.SAND), "", "", "", false);
     }
     @Override
-    public boolean canSustainPlant(@NotNull BlockState state, @NotNull BlockGetter world, BlockPos pos, @NotNull Direction facing, net.minecraftforge.common.IPlantable plantable) {
-        BlockState plant = plantable.getPlant(world, pos.relative(facing));
-        net.minecraftforge.common.PlantType type = plantable.getPlantType(world, pos.relative(facing));
+    public boolean canSustainPlant(@NotNull BlockState state, @NotNull BlockGetter world, BlockPos pos, @NotNull Direction facing, net.minecraftforge.common.IPlantable iPlantable) {
+        BlockState plant = iPlantable.getPlant(world, pos.relative(facing));
+        net.minecraftforge.common.PlantType type = iPlantable.getPlantType(world, pos.relative(facing));
         if (plant.getBlock() == Blocks.CACTUS)
             return true;
         if (plant.getBlock() == Blocks.SUGAR_CANE) {

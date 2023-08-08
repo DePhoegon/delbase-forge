@@ -64,10 +64,10 @@ Custom Template JSONs
 == axis, slabs, stairs, walls, general blocks, gravity.
 ==~ Based on practical  differences in placement information & where they are in java classes.
 == uses array sets to catch & use built in vanilla Minecraft blocks without doing a catch-all with something vast (Blocks catching Slabs, stairs, rotated pillars, as well as general blocks)
-== Used of a interchanging & versatile color swap based on Built in MC colors & MC color mixing, allowing for leaving out of colors of a set
+== Used of an interchanging & versatile color swap based on Built in MC colors & MC color mixing, allowing for leaving out of colors of a set
 
 - Fence / Fence Gate
-= Created NodeJS JSON maker for fences, and fence gates
+= Created Node.js JSON maker for fences, and fence gates
 == tweaked js file & own template files.
 
 -Minor Fixes

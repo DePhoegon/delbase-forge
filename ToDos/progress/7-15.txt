@@ -42,7 +42,7 @@ Odd Fixes
 Pachouli lines added to build.gradle (data, server, gametestserver)
 Refactored Client setup - Allowing MP server use
 Fixed overlooked cut_lock in color swap logic - cause client crash - attempting to apply Direction.Axis to a block that doesn't support it
---  This is reliant on assuming that base versions & red versions are base Minecraft (example, cut_sandstone & cut_red_sandstone, not directional.. while the modded cut blocks are)
+--  This is reliant on assuming that base versions & red versions are base Minecraft (example, cut_sandstone & cut_red_sandstone, not directional. while the modded cut blocks are)
 Fixing Sandstone class extending genBlock instead of Block directly
 
 Tags

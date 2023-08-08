@@ -21,7 +21,6 @@ import org.jetbrains.annotations.Nullable;
 import java.util.List;
 
 import static com.dephoegon.delbase.aid.util.burnChance.rngBurn;
-import static com.dephoegon.delbase.block.general.ashBlocks.ASH_FENCE;
 import static net.minecraftforge.common.ToolActions.AXE_STRIP;
 
 public class fenceBlock extends FenceBlock {
@@ -32,7 +31,7 @@ public class fenceBlock extends FenceBlock {
     private final int spread;
     private final int flammability;
     private final BlockState stripped;
-    public fenceBlock(Properties properties, String normToolTip, String shiftToolTip, String ctrlToolTip, boolean flames, int fireChance, int fireSpread, BlockState strippedState) {
+    public fenceBlock(Properties properties, @NotNull String normToolTip, String shiftToolTip, String ctrlToolTip, boolean flames, int fireChance, int fireSpread, BlockState strippedState) {
         super(properties);
         if(normToolTip.isEmpty()) { tip0 = null; } else { tip0 = normToolTip; }
         if(shiftToolTip.isEmpty()) { tip1 = null; } else { tip1 = shiftToolTip; }
@@ -57,13 +56,13 @@ public class fenceBlock extends FenceBlock {
         super.appendHoverText(stack, worldIn, toolTip, flag);
         if(!kb.HShift() && !kb.HCtrl() && tip0 != null) { toolTip.add(new TranslatableComponent(tip0)); }//if neither pressed, show tip0 (if not empty)
         if(kb.HCtrl() && tip2 != null) { toolTip.add(new TranslatableComponent(tip2)); }//if ctrl, show tip2 (if not empty), do first
-        if(kb.HShift() && tip1 != null) { toolTip.add(new TranslatableComponent(tip1)); } //if shift, show tip1 (if not empty)
+        if(kb.HShift() && tip1 != null) { toolTip.add(new TranslatableComponent(tip1)); } //if shifted, show tip1 (if not empty)
     }
     @Override
     public boolean isFlammable(BlockState state, BlockGetter world, BlockPos pos, Direction face)
     {
-        if (flame && !state.getValue(WATERLOGGED) && state.getBlock().defaultBlockState() != ASH_FENCE.get().defaultBlockState()) {
-            rngBurn(world, state, ASH_FENCE.get().defaultBlockState(), pos, 40, 60);
+        if (flame && !state.getValue(WATERLOGGED)) {
+            rngBurn(world, state, pos, 40, 60);
             return true;
         }
         return false;

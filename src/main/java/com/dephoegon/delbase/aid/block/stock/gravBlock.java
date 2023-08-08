@@ -28,7 +28,7 @@ public class gravBlock extends SandBlock {
     private final String tip1;
     private final String tip2;
     private final boolean fall;
-    public gravBlock(int dustColorIn, Properties properties, String normToolTip, String shiftToolTip, String ctrlToolTip, boolean falls) {
+    public gravBlock(int dustColorIn, Properties properties, @NotNull String normToolTip, String shiftToolTip, String ctrlToolTip, boolean falls) {
         super(dustColorIn, properties);
         if (normToolTip.isEmpty()) { tip0 = null; } else { tip0 = normToolTip; }
         if (shiftToolTip.isEmpty()) { tip1 = null; } else { tip1 = shiftToolTip; }

@@ -31,7 +31,7 @@ public class stairMisc {
     public static final RegistryObject<StairBlock> BONE_BLOCK_STAIR = register("bone_block_stair",
             ()-> new stairBlock(BONE_BLOCK, BlockBehaviour.Properties.copy(BONE_BLOCK).sound(SoundType.BONE_BLOCK), false, 0, 0, null));
     public static final RegistryObject<StairBlock> DRIED_KELP_STAIR = register("dried_kelp_stair",
-            ()-> new leafStair(DRIED_KELP_BLOCK, SoundType.GRASS, true, null),4001);
+            ()-> new leafStair(DRIED_KELP_BLOCK, DRIED_KELP_BLOCK, SoundType.GRASS, true, null),4001);
     public static final RegistryObject<StairBlock> GLOWSTONE_STAIR = register("glowstone_stair",
             ()-> new stairBlock(GLOWSTONE, BlockBehaviour.Properties.copy(GLOWSTONE).sound(SoundType.GLASS).lightLevel((blockState)-> 15), false, 0 ,0, null));
     public static final RegistryObject<StairBlock> BASALT_STAIR = register("basalt_stair",

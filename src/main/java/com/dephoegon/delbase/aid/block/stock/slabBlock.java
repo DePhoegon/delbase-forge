@@ -20,7 +20,6 @@ import org.jetbrains.annotations.Nullable;
 import java.util.List;
 
 import static com.dephoegon.delbase.aid.util.burnChance.rngBurn;
-import static com.dephoegon.delbase.block.general.ashBlocks.ASH_SLAB;
 import static net.minecraftforge.common.ToolActions.AXE_STRIP;
 
 public class slabBlock extends SlabBlock {
@@ -56,12 +55,12 @@ public class slabBlock extends SlabBlock {
         super.appendHoverText(stack, worldIn, toolTip, flag);
         if(!kb.HShift() && !kb.HCtrl() && tip0 != null) { toolTip.add(new TranslatableComponent(tip0)); }//if neither pressed, show tip0 (if not empty)
         if(kb.HCtrl() && tip2 != null) { toolTip.add(new TranslatableComponent(tip2)); }//if ctrl, show tip2 (if not empty), do first
-        if(kb.HShift() && tip1 != null) { toolTip.add(new TranslatableComponent(tip1)); } //if shift, show tip1 (if not empty)
+        if(kb.HShift() && tip1 != null) { toolTip.add(new TranslatableComponent(tip1)); } //if shifted, show tip1 (if not empty)
     }
     public boolean isFlammable(BlockState state, BlockGetter world, BlockPos pos, Direction face)
     {
-        if (flame && !state.getValue(WATERLOGGED) && state.getBlock().defaultBlockState() != ASH_SLAB.get().defaultBlockState()) {
-            rngBurn(world, state, ASH_SLAB.get().defaultBlockState(), pos, 40, 60);
+        if (flame && !state.getValue(WATERLOGGED)) {
+            rngBurn(world, state, pos, 40, 60);
             return state.getValue(SlabBlock.TYPE) != SlabType.BOTTOM;
         }
         return false;

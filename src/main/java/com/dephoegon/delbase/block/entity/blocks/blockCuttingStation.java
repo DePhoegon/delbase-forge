@@ -47,6 +47,7 @@ public class blockCuttingStation extends BlockEntity implements MenuProvider {
             return false;
         }
         protected void onContentsChanged(int slot) {
+            //noinspection UnnecessaryReturnStatement
             return;
         }
     };

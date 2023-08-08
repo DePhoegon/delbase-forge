@@ -23,11 +23,11 @@ public class sandSlab extends slabBlock {
         super(BlockBehaviour.Properties.copy(block).sound(SoundType.SAND), "", "", "", false, 0, 0, null);
     }
     @Override
-    public boolean canSustainPlant(BlockState state, @NotNull BlockGetter world, BlockPos pos, @NotNull Direction facing, net.minecraftforge.common.IPlantable plantable) {
-        BlockState plant = plantable.getPlant(world, pos.relative(facing));
+    public boolean canSustainPlant(BlockState state, @NotNull BlockGetter world, BlockPos pos, @NotNull Direction facing, net.minecraftforge.common.IPlantable iPlantable) {
+        BlockState plant = iPlantable.getPlant(world, pos.relative(facing));
         SlabType s_type = state.getValue(TYPE);
         boolean w_logged = state.getValue(SlabBlock.WATERLOGGED);
-        net.minecraftforge.common.PlantType type = plantable.getPlantType(world, pos.relative(facing));
+        net.minecraftforge.common.PlantType type = iPlantable.getPlantType(world, pos.relative(facing));
         if (s_type != SlabType.BOTTOM) {
             if (plant.getBlock() == Blocks.CACTUS) {
                 return true;
