@@ -18,6 +18,7 @@ public class menuTypes {
     public static final RegistryObject<MenuType<blockCuttingStationMenu>> BLOCK_CUTTING_STATION_MENU =
             registerMenuType(blockCuttingStationMenu::new, "block_cutting_station_menu");
 
+    @SuppressWarnings("SameParameterValue")
     private static <T extends AbstractContainerMenu>RegistryObject<MenuType<T>> registerMenuType(IContainerFactory<T> factory, String name) {
         return MENUS.register(name, () -> IForgeMenuType.create(factory));
     }

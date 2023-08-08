@@ -19,12 +19,15 @@ import org.jetbrains.annotations.NotNull;
 import static com.dephoegon.delbase.aid.util.creativeTabsArrayLists.*;
 import static com.dephoegon.delbase.delbase.Mod_ID;
 
+@SuppressWarnings("unused")
 @Mod.EventBusSubscriber(modid = Mod_ID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 public class eventBusEvents {
+    @SuppressWarnings("unused")
     @SubscribeEvent
     public static void clientSetup(final FMLCommonSetupEvent event) {
         MenuScreens.register(menuTypes.BLOCK_CUTTING_STATION_MENU.get(), blockCuttingStationScreen::new);
     }
+    @SuppressWarnings("unused")
     @SubscribeEvent
     public static void registerBlockColors(RegisterColorHandlersEvent.@NotNull Block event) {
         BlockColor DEFAULT_LEAVES = (state, reader, pos, color) -> reader != null && pos != null ? BiomeColors.getAverageFoliageColor(reader, pos) : FoliageColor.getDefaultColor();
@@ -35,6 +38,7 @@ public class eventBusEvents {
         SpruceColoredLeaves().forEach((block) -> event.register(SPRUCE_LEAVES, block.get()));
         MangroveColoredLeaves().forEach((block) -> event.register(DEFAULT_LEAVES, block.get()));
     }
+    @SuppressWarnings("unused")
     @SubscribeEvent
     public static void registerItemColors(RegisterColorHandlersEvent.@NotNull Item event) {
         ColoredLeaves().forEach((block) -> event.register((stack, color) -> event.getBlockColors().getColor(((BlockItem) stack.getItem()).getBlock().defaultBlockState(), null, null, color), block.get()));

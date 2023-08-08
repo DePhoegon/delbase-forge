@@ -23,6 +23,7 @@ public class delbase
 {
     public static final String Mod_ID = "delbase";
     // Directly reference a log4j logger.
+    @SuppressWarnings("unused")
     private static final Logger LOGGER = LogManager.getLogger();
 
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
@@ -32,6 +33,7 @@ public class delbase
         if(event.getTabKey() == CreativeModeTabs.FUNCTIONAL_BLOCKS) { getDelFunctionalBlockList().forEach(event::accept); }
         if(event.getTabKey() == CreativeModeTabs.NATURAL_BLOCKS) { getDelNaturalBlockList().forEach(event::accept); }
     }
+    @SuppressWarnings("unused")
     public delbase() {
         IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
         regList.firstList(eventBus);

@@ -44,7 +44,7 @@ public class gravBlock extends SandBlock {
         super.appendHoverText(stack, worldIn, toolTip, flag);
         if(!(kb.HShift()) && !(kb.HCtrl()) && tip0 != null) { toolTip.add(Component.translatable(tip0)); } //if neither pressed, show tip0 (if not empty)
         if(kb.HCtrl() && tip2 != null) { toolTip.add(Component.translatable(tip2)); } //if ctrl, show tip2 (if not empty), do first
-        if(kb.HShift() && tip1 != null) { toolTip.add(Component.translatable(tip1)); } //if shift, show tip1 (if not empty)
+        if(kb.HShift() && tip1 != null) { toolTip.add(Component.translatable(tip1)); } //if shifted, show tip1 (if not empty)
     }
     public void tick(@NotNull BlockState state, @NotNull ServerLevel worldIn, @NotNull BlockPos pos, @NotNull RandomSource pRandom) {
         if (gravity(worldIn, pos) && pos.getY() >= -164) {
@@ -71,7 +71,7 @@ public class gravBlock extends SandBlock {
         Block bob = worldIn.getBlockState(pos).getBlock();
         if (blockArrayList.checkFallLock(bob)) { last = true; }
         else if (
-                // Recursive calls as it allows for go up through custom gravity block class
+                // Recursive call as it allows for go up through custom gravity block class
                 // includes checks for sand & red sand
                 // Will expand exceptions if gravBlock also expands beyond sand & solid sand
                 bob instanceof gravBlock && l_count < 7 ||

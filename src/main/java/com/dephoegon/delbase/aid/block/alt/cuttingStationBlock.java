@@ -31,6 +31,7 @@ import org.jetbrains.annotations.Nullable;
 import java.util.stream.Stream;
 
 
+@SuppressWarnings("RedundantMethodOverride")
 public class cuttingStationBlock extends horizontalFacingBlocksBaseEntities {
     public static final DirectionProperty FACING = BlockStateProperties.HORIZONTAL_FACING;
     public cuttingStationBlock(Properties properties, String normToolTip, String shiftToolTip, String ctrlToolTip) {

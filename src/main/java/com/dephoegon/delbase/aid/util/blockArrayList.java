@@ -182,7 +182,7 @@ public abstract class blockArrayList {
     }
     public static ArrayList<Object> getWall_list() { return wall_list; }
 
-    // call methods to set private lists, called first in register list to avoid any issue
+    // call methods to set private lists, called first in a register list to avoid any issue
     public static void setBlockArrays() {
         setFall_hold();
         setGeneral_list();

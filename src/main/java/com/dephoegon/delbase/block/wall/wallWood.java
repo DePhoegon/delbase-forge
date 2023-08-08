@@ -75,6 +75,7 @@ public class wallWood {
         BLOCKS.register(eventBus);
         ITEMS.register(eventBus);
     }
+    @SuppressWarnings("SameParameterValue")
     private static <T extends Block> RegistryObject<T> register(String name, Supplier<T> block, int burn) {
         RegistryObject<T> exit = BLOCKS.register(name, block);
         ITEMS.register(name, () -> new BlockItem(exit.get(),

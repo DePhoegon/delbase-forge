@@ -36,6 +36,7 @@ public class blockCuttingStationRecipes implements Recipe<SimpleContainer> {
         }
     }
 
+    @SuppressWarnings("NullableProblems")
     @Override
     public ItemStack assemble(@NotNull SimpleContainer p_44001_, @NotNull RegistryAccess p_267165_) { return null; }
 

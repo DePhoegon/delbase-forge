@@ -15,13 +15,13 @@ import java.util.function.Supplier;
 
 import static com.dephoegon.delbase.delbase.Mod_ID;
 
+@SuppressWarnings("unused")
 public class gravColorSands {
     private static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, Mod_ID);
     private static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, Mod_ID);
     private static final DeferredRegister<Block> OVERRIDE_BLOCK = DeferredRegister.create(ForgeRegistries.BLOCKS, "minecraft");
     private static final DeferredRegister<Item> OVERRIDE_ITEM = DeferredRegister.create(ForgeRegistries.ITEMS, "minecraft");
 
-    @SuppressWarnings("unused")
     public static final RegistryObject<SandBlock> OVERRIDE_SAND = overrideRegister("sand",
             () -> new sandBlock(14406560, MapColor.SAND, "tooltip.delbase.info.more","tooltip.delbase.sand.hold.info","tooltip.delbase.sand.hold.flavor",true));
     public static final RegistryObject<SandBlock> OVERRIDE_RED_SAND = overrideRegister("red_sand",

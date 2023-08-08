@@ -90,13 +90,13 @@ public class strippedWoodenFences {
     public static final RegistryObject<FenceGateBlock> STRIPPED_WARPED_STEM_FENCE_GATE = register("stripped_warped_stem_fence_gate",
             () -> new woodFenceGate(STRIPPED_WARPED_HYPHAE, SoundType.WOOD, false, null));
     public static final RegistryObject<FenceBlock> STRIPPED_MANGROVE_WOOD_FENCE = register("stripped_mangrove_wood_fence",
-            () -> new woodFence(STRIPPED_MANGROVE_WOOD, SoundType.WOOD, true, null), 1000);
+            () -> new woodFence(STRIPPED_OAK_WOOD, SoundType.WOOD, true, null), 1000);
     public static final RegistryObject<FenceGateBlock> STRIPPED_MANGROVE_WOOD_FENCE_GATE = register("stripped_mangrove_wood_fence_gate",
-            () -> new woodFenceGate(STRIPPED_MANGROVE_WOOD, SoundType.WOOD, true, null), 1000);
+            () -> new woodFenceGate(STRIPPED_OAK_WOOD, SoundType.WOOD, true, null), 1000);
     public static final RegistryObject<FenceBlock> STRIPPED_MANGROVE_LOG_FENCE = register("stripped_mangrove_log_fence",
-            () -> new woodFence(STRIPPED_MANGROVE_WOOD, SoundType.WOOD, true, null), 1000);
+            () -> new woodFence(STRIPPED_OAK_WOOD, SoundType.WOOD, true, null), 1000);
     public static final RegistryObject<FenceGateBlock> STRIPPED_MANGROVE_LOG_FENCE_GATE = register("stripped_mangrove_log_fence_gate",
-            () -> new woodFenceGate(STRIPPED_MANGROVE_WOOD, SoundType.WOOD, true, null), 1000);
+            () -> new woodFenceGate(STRIPPED_OAK_WOOD, SoundType.WOOD, true, null), 1000);
     public static final RegistryObject<FenceBlock> STRIPPED_CHERRY_WOOD_FENCE = register("stripped_cherry_wood_fence",
             () -> new woodFence(STRIPPED_CHERRY_WOOD, SoundType.CHERRY_WOOD, true, null), 1000);
     public static final RegistryObject<FenceGateBlock> STRIPPED_CHERRY_WOOD_FENCE_GATE = register("stripped_cherry_wood_fence_gate",
@@ -111,6 +111,7 @@ public class strippedWoodenFences {
         BLOCKS.register(eventBus);
         ITEMS.register(eventBus);
     }
+    @SuppressWarnings("SameParameterValue")
     private static <T extends Block> RegistryObject<T> register(String name, Supplier<T> block, int burn) {
         RegistryObject<T> exit = BLOCKS.register(name, block);
         ITEMS.register(name, () -> new BlockItem(exit.get(),

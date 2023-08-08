@@ -22,9 +22,9 @@ public class sandBlock extends gravBlock {
         super(dustColorIn, BlockBehaviour.Properties.of().mapColor(color).instrument(NoteBlockInstrument.SNARE).strength(0.5F).sound(SoundType.SAND), "", "", "", falls);
     }
     @Override
-    public boolean canSustainPlant(@NotNull BlockState state, @NotNull BlockGetter world, @NotNull BlockPos pos, @NotNull Direction facing, net.minecraftforge.common.@NotNull IPlantable plantable) {
-        BlockState plant = plantable.getPlant(world, pos.relative(facing));
-        net.minecraftforge.common.PlantType type = plantable.getPlantType(world, pos.relative(facing));
+    public boolean canSustainPlant(@NotNull BlockState state, @NotNull BlockGetter world, @NotNull BlockPos pos, @NotNull Direction facing, net.minecraftforge.common.@NotNull IPlantable iPlantable) {
+        BlockState plant = iPlantable.getPlant(world, pos.relative(facing));
+        net.minecraftforge.common.PlantType type = iPlantable.getPlantType(world, pos.relative(facing));
         if (plant.getBlock() == Blocks.CACTUS)
             return true;
         if (plant.getBlock() == Blocks.SUGAR_CANE) {
