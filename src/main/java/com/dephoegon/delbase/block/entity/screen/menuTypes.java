@@ -11,6 +11,7 @@ import net.minecraftforge.registries.RegistryObject;
 
 import static com.dephoegon.delbase.delbase.Mod_ID;
 
+@SuppressWarnings("ALL")
 public class menuTypes {
     public static final DeferredRegister<MenuType<?>> MENUS =
             DeferredRegister.create(ForgeRegistries.MENU_TYPES, Mod_ID);

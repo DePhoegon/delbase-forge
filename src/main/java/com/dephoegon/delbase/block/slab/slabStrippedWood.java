@@ -2,14 +2,11 @@ package com.dephoegon.delbase.block.slab;
 
 import com.dephoegon.delbase.aid.block.alt.woodSlab;
 import net.minecraft.world.item.BlockItem;
-import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.RecipeType;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.SlabBlock;
-import net.minecraft.world.level.block.SoundType;
-import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -22,6 +19,7 @@ import static com.dephoegon.delbase.delbase.BASE_BLOCK;
 import static com.dephoegon.delbase.delbase.Mod_ID;
 import static net.minecraft.world.level.block.Blocks.*;
 
+@SuppressWarnings("ALL")
 public class slabStrippedWood {
     private static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, Mod_ID);
     private static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, Mod_ID);

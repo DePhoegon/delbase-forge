@@ -5,7 +5,6 @@ import net.minecraft.world.level.ItemLike;
 import org.jetbrains.annotations.NotNull;
 
 import static com.dephoegon.delbase.aid.util.creativeTabsArrayLists.getAllLeaves;
-import static com.dephoegon.delbase.block.wall.hedgeLeaves.*;
 import static net.minecraft.world.level.block.ComposterBlock.COMPOSTABLES;
 
 public class composable {

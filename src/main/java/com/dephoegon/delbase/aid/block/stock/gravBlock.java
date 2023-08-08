@@ -47,7 +47,7 @@ public class gravBlock extends SandBlock {
         if(kb.HShift() && tip1 != null) //noinspection GrazieInspection
             toolTip.add(Component.translatable(tip1)); //if shift, show tip1 (if not empty)
     }
-    public void tick(BlockState state, ServerLevel worldIn, BlockPos pos, RandomSource pRandom) {
+    public void tick(@NotNull BlockState state, @NotNull ServerLevel worldIn, @NotNull BlockPos pos, @NotNull RandomSource pRandom) {
         if (gravity(worldIn, pos) && pos.getY() >= -164) {
             FallingBlockEntity fallingblockentity = FallingBlockEntity.fall(worldIn, pos, state);
             this.falling(fallingblockentity);
@@ -72,7 +72,7 @@ public class gravBlock extends SandBlock {
         Block bob = worldIn.getBlockState(pos).getBlock();
         if (blockArrayList.checkFallLock(bob)) { last = true; }
         else if (
-                // Recursive calls as it allows for go up through custom gravity block class
+                // Recursive call as it allows for go up through custom gravity block class
                 // includes checks for sand & red sand
                 // Will expand exceptions if gravBlock also expands beyond sand & solid sand
                 bob instanceof gravBlock && l_count < 7 ||

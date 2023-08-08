@@ -406,7 +406,7 @@ public class colorMixInteraction {
                         blockReplacer.slabPlacement(world, blockPos, place_me);
                 case 4 ->
                     //Axis, lock_cut used to mix 'non-axis' default blocks with axis blocks in the set (cut_sandstone // cut_red_sandstone) as example
-                    //Is triggered only one base block & red block, (dumb method) possible to rework stack to allow cutLocking on any... but no reason to atm
+                    //Is triggered only one base block & red block, (foolish method) possible to rework stack to allow cutLocking on any... but no reason to atm
                         blockReplacer.axisPlacement(world, blockPos, place_me, lock_cut);
                 case 5 ->
                     //DefaultBocks with no special placements

@@ -25,7 +25,7 @@ Conversions added between packed mud & mud bricks
 
 Corrections
 ------------
-Fixed nameplace issues around mangrove items
+Fixed name place issues around mangrove items
 
 BackPorting
 ------------

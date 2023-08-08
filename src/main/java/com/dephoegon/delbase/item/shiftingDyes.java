@@ -1,7 +1,6 @@
 package com.dephoegon.delbase.item;
 
 import com.dephoegon.delbase.aid.block.item.blockDye;
-import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.eventbus.api.IEventBus;

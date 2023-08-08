@@ -1,2 +1,2 @@
 1.2.6  Setup
-- addeded sands, to sand tag (recipes)
+- added sands to sand tag (recipes)

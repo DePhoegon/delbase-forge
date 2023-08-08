@@ -15,7 +15,6 @@ import org.jetbrains.annotations.Nullable;
 import java.util.List;
 
 import static com.dephoegon.delbase.aid.util.burnChance.rngBurn;
-import static com.dephoegon.delbase.block.general.ashBlocks.ASH_LOG;
 
 public class axisBlock extends RotatedPillarBlock {
     private final String tip0;
@@ -46,11 +45,11 @@ public class axisBlock extends RotatedPillarBlock {
         super.appendHoverText(stack, worldIn, toolTip, flag);
         if(!kb.HShift() && !kb.HCtrl() && tip0 != null) { toolTip.add(Component.translatable(tip0)); } //if neither pressed, show tip0 (if not empty)
         if(kb.HCtrl() && tip2 != null) { toolTip.add(Component.translatable(tip2)); } //if ctrl, show tip2 (if not empty), do first
-        if(kb.HShift() && tip1 != null) { toolTip.add(Component.translatable(tip1)); } //if shift, show tip1 (if not empty)
+        if(kb.HShift() && tip1 != null) { toolTip.add(Component.translatable(tip1)); } //if shifted, show tip1 (if not empty)
     }
     public boolean isFlammable(BlockState state, BlockGetter world, BlockPos pos, Direction face) {
         if (flame) {
-            rngBurn(world, state, ASH_LOG.get().defaultBlockState(), pos, 40, 60);
+            rngBurn(world, state, pos, 40, 60);
             return true;
         }
         return false;

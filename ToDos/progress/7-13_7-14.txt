@@ -4,7 +4,7 @@ added last of Base block variants
 Finished on the Recipes
 Corrected/added Which tools & tool level for mining of said blocks
 Fixed wrongly dated Progress txt
-Cleard out 'ShortList'
+Cleared out 'ShortList'
 
 Updated Mod Info
 -mods.toml

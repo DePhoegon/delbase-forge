@@ -6,7 +6,7 @@ Sands
 minecraft:dripstone_block
 - 3 calls of 'minecraft:dripstone' instead of 'minecraft:dripstone_block'
 
-updated vendername
+updated vender name
 
 Removed direct crafting of colored shift dyes
 -only Cleanse dye is craftable directly
