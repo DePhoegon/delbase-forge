@@ -5,7 +5,6 @@ import com.dephoegon.delbase.aid.event.eventBusEvents;
 import com.dephoegon.delbase.aid.util.regList;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Items;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.ModLoadingContext;
@@ -16,7 +15,9 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.jetbrains.annotations.NotNull;
 
+import static com.dephoegon.delbase.block.general.machineBlocks.BLOCK_CUTTING_STATION;
 import static com.dephoegon.delbase.delbase.Mod_ID;
+import static com.dephoegon.delbase.item.blockCutterPlans.WALL_PLANS;
 
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod(Mod_ID)
@@ -29,12 +30,12 @@ public class delbase
     public static final CreativeModeTab BASE_BLOCK = new CreativeModeTab("dephoegon_blocks") {
         @Override
         public @NotNull ItemStack makeIcon() {
-            return new ItemStack(Items.REDSTONE_BLOCK);
+            return new ItemStack(BLOCK_CUTTING_STATION.get().asItem());
         }
     };
     public static final CreativeModeTab DELBASE_ITEMS = new CreativeModeTab("dephoegon_items") {
         @Override
-        public @NotNull ItemStack makeIcon() { return new ItemStack(Items.RED_DYE); }
+        public @NotNull ItemStack makeIcon() { return new ItemStack(WALL_PLANS.get()); }
     };
     public delbase() {
         IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
