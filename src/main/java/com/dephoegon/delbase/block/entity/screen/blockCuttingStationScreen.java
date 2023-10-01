@@ -63,7 +63,7 @@ public class blockCuttingStationScreen extends AbstractContainerScreen<blockCutt
     }
     @Override
     public void render(@NotNull GuiGraphics pPoseStack, int mouseX, int mouseY, float delta) {
-        renderBackground(pPoseStack);
+        renderBackground(pPoseStack, mouseX, mouseY, delta);
         super.render(pPoseStack, mouseX, mouseY, delta);
         renderTooltip(pPoseStack, mouseX, mouseY);
     }

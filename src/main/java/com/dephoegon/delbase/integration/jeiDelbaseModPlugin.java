@@ -10,9 +10,11 @@ import mezz.jei.api.registration.IRecipeRegistration;
 import net.minecraft.client.Minecraft;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.crafting.RecipeHolder;
 import net.minecraft.world.item.crafting.RecipeManager;
 import org.jetbrains.annotations.NotNull;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
@@ -37,7 +39,9 @@ public class jeiDelbaseModPlugin implements IModPlugin {
 
     public void registerRecipes(@NotNull IRecipeRegistration registration) {
         RecipeManager rm = Objects.requireNonNull(Minecraft.getInstance().level).getRecipeManager();
-        List<blockCuttingStationRecipes> recipesList = rm.getAllRecipesFor(blockCuttingStationRecipes.Type.INSTANCE);
-        registration.addRecipes(new RecipeType<>(blockCuttingStationRecipeCategory.UID, blockCuttingStationRecipes.class), recipesList);
+        List<RecipeHolder<blockCuttingStationRecipes>> recipesList = rm.getAllRecipesFor(blockCuttingStationRecipes.Type.INSTANCE);
+        List<blockCuttingStationRecipes> out = new ArrayList<>();
+        for (int i = 0; i < recipesList.size(); ++i) { out.add(i, recipesList.get(i).value()); }
+        registration.addRecipes(new RecipeType<>(blockCuttingStationRecipeCategory.UID, blockCuttingStationRecipes.class), out);
     }
 }
