@@ -24,6 +24,7 @@ import net.minecraft.world.phys.shapes.BooleanOp;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
+import net.minecraftforge.network.NetworkHooks;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
@@ -132,7 +133,7 @@ public class cuttingStationBlock extends horizontalFacingBlocksBaseEntities {
         if(!pLevel.isClientSide()) {
             BlockEntity entity = pLevel.getBlockEntity(pPos);
             if(entity instanceof blockCuttingStation) {
-                ((ServerPlayer) pPlayer).openMenu((blockCuttingStation)entity, pPos);
+                NetworkHooks.openScreen(((ServerPlayer) pPlayer), (blockCuttingStation)entity, pPos);
             } else {
                 throw new IllegalStateException("Delbase Container Provider is Missing - Block Cutting Station");
             }

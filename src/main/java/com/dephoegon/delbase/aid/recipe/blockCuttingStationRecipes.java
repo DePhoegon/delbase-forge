@@ -2,11 +2,8 @@ package com.dephoegon.delbase.aid.recipe;
 
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
-import com.google.gson.JsonSyntaxException;
-import com.mojang.serialization.Codec;
 import net.minecraft.core.NonNullList;
 import net.minecraft.core.RegistryAccess;
-import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.GsonHelper;
@@ -15,7 +12,6 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.*;
 import net.minecraft.world.level.Level;
 import org.jetbrains.annotations.NotNull;
-import org.jetbrains.annotations.Nullable;
 
 import static com.dephoegon.delbase.block.entity.blocks.blockCuttingStation.inputSlot;
 import static com.dephoegon.delbase.block.entity.blocks.blockCuttingStation.planSlot;
@@ -67,29 +63,28 @@ public class blockCuttingStationRecipes implements Recipe<SimpleContainer> {
         public static final ResourceLocation ID = new ResourceLocation(Mod_ID, Type.ID);
 
         public @NotNull blockCuttingStationRecipes fromJson(@NotNull ResourceLocation id, @NotNull JsonObject json) {
-            ItemStack output = new ItemStack(GsonHelper.getAsItem(json, "output").get());
+            ItemStack output = ShapedRecipe.itemStackFromJson(GsonHelper.getAsJsonObject(json, "output"));
 
             JsonArray ingredients = GsonHelper.getAsJsonArray(json, "ingredients");
             NonNullList<Ingredient> inputs = withSize(2, Ingredient.EMPTY);
             if (inputs.size() == 2){
                 for (int i = 0; i < inputs.size(); ++i) {
-                    inputs.set(i, Ingredient.of(GsonHelper.getAsItem(ingredients.get(i).getAsJsonObject(), "item").get()));
+                    inputs.set(i, Ingredient.fromJson(ingredients.get(i)));
                 }
                 return new blockCuttingStationRecipes(id, output, inputs);
             } else return new blockCuttingStationRecipes(id, output, null);
         }
-        public Codec<blockCuttingStationRecipes> codec() {
-            return null;
-        }
-        public @Nullable blockCuttingStationRecipes fromNetwork(@NotNull FriendlyByteBuf buf) {
+        public blockCuttingStationRecipes fromNetwork(@NotNull ResourceLocation id, @NotNull FriendlyByteBuf buf) {
             NonNullList<Ingredient> inputs = withSize(buf.readInt(), Ingredient.EMPTY);
             inputs.replaceAll(ignored -> Ingredient.fromNetwork(buf));
             ItemStack output = buf.readItem();
-            return new blockCuttingStationRecipes(buf.readResourceLocation(), output, inputs);
+            return new blockCuttingStationRecipes(id, output, inputs);
         }
         public void toNetwork(@NotNull FriendlyByteBuf buf, @NotNull blockCuttingStationRecipes recipe) {
             buf.writeInt(recipe.getIngredients().size());
-            for (Ingredient ing : recipe.getIngredients()) { ing.toNetwork(buf); }
+            for (Ingredient ing : recipe.getIngredients()) {
+                ing.toNetwork(buf);
+            }
             buf.writeItemStack(recipe.getResultItem(), false);
         }
     }

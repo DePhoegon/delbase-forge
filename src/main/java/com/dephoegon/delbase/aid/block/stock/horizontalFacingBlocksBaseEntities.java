@@ -21,6 +21,7 @@ import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.DirectionProperty;
 import net.minecraft.world.phys.BlockHitResult;
+import net.minecraftforge.network.NetworkHooks;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
@@ -104,7 +105,7 @@ public class horizontalFacingBlocksBaseEntities extends BaseEntityBlock {
         if (!pLevel.isClientSide()) {
             BlockEntity entity = pLevel.getBlockEntity(pPos);
             if(entity instanceof blockCuttingStation) {
-                ((ServerPlayer) pPlayer).openMenu((blockCuttingStation)entity, pPos);
+                NetworkHooks.openScreen(((ServerPlayer) pPlayer), (blockCuttingStation)entity, pPos);
             } else {
                 throw new IllegalStateException("Delbase Block Cutting Station, Container Provider missing");
             }
