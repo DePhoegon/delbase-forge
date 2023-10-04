@@ -71,12 +71,6 @@ public class stoneFences {
     public static final RegistryObject<FenceGateBlock> MUD_BRICK_FENCE_GATE = register("mud_brick_fence_gate",
             () -> new fenceGateBlock(BlockBehaviour.Properties.copy(MUD_BRICKS).sound(SoundType.MUD_BRICKS),
                     "","","", false, 0, 0, null));
-    public static final RegistryObject<FenceBlock> PACKED_MUD_FENCE = register("packed_mud_fence",
-            () -> new fenceBlock(BlockBehaviour.Properties.copy(PACKED_MUD).sound(SoundType.PACKED_MUD),
-                    "","","", false, 0, 0, null));
-    public static final RegistryObject<FenceGateBlock> PACKED_MUD_FENCE_GATE = register("packed_mud_fence_gate",
-            () -> new fenceGateBlock(BlockBehaviour.Properties.copy(PACKED_MUD).sound(SoundType.PACKED_MUD),
-                    "","","", false, 0, 0, null));
     public static final RegistryObject<FenceBlock> BRICK_FENCE = register("brick_fence",
             () -> new fenceBlock(BlockBehaviour.Properties.copy(BRICKS).sound(SoundType.NETHER_BRICKS),
                     "","","", false, 0, 0, null));

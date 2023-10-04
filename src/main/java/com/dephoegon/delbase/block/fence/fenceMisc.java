@@ -155,6 +155,12 @@ public class fenceMisc {
     public static final RegistryObject<FenceGateBlock> SCULK_FENCE_GATE = register("sculk_fence_gate",
             () -> new fenceGateBlock(BlockBehaviour.Properties.copy(SCULK).sound(SoundType.SCULK),
                     "","","", false, 0, 0, null));
+    public static final RegistryObject<FenceBlock> PACKED_MUD_FENCE = register("packed_mud_fence",
+            () -> new fenceBlock(BlockBehaviour.Properties.copy(PACKED_MUD).sound(SoundType.PACKED_MUD),
+                    "","","", false, 0, 0, null));
+    public static final RegistryObject<FenceGateBlock> PACKED_MUD_FENCE_GATE = register("packed_mud_fence_gate",
+            () -> new fenceGateBlock(BlockBehaviour.Properties.copy(PACKED_MUD).sound(SoundType.PACKED_MUD),
+                    "","","", false, 0, 0, null));
     public static final RegistryObject<FenceBlock> MUD_FENCE = register("mud_fence",
             () -> new fenceBlock(BlockBehaviour.Properties.copy(MUD).sound(SoundType.MUD),
                     "","","", false, 0, 0, null));
