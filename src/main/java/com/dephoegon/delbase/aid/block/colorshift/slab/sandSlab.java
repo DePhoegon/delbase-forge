@@ -23,7 +23,7 @@ public class sandSlab extends slabBlock {
         super(BlockBehaviour.Properties.copy(block).sound(SoundType.SAND), "", "", "", false, 0, 0, null);
     }
     @Override
-    public boolean canSustainPlant(BlockState state, @NotNull BlockGetter world, BlockPos pos, @NotNull Direction facing, net.minecraftforge.common.IPlantable iPlantable) {
+    public boolean canSustainPlant(@NotNull BlockState state, @NotNull BlockGetter world, @NotNull BlockPos pos, @NotNull Direction facing, net.minecraftforge.common.@NotNull IPlantable iPlantable) {
         BlockState plant = iPlantable.getPlant(world, pos.relative(facing));
         SlabType s_type = state.getValue(TYPE);
         boolean w_logged = state.getValue(SlabBlock.WATERLOGGED);
