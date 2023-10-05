@@ -28,7 +28,6 @@
   "item.delbase.fence_gate_plans": "Fence Gate Making Plans",
   "item.delbase.armor_compound": "Armors & Tools Dissolver",
 
-
   "block.delbase.blood_chiseled_sand_stone": "Dark Red Chiseled Sandstone",
   "block.delbase.white_chiseled_sand_stone": "White Chiseled Sandstone",
   "block.delbase.orange_chiseled_sand_stone": "Orange Chiseled Sandstone",
@@ -1241,7 +1240,7 @@
   "itemGroup.dephoegon_blocks": "DePhoegons' Blocks",
   "itemGroup.dephoegon_items": "DePhoegons' Items",
 
-  "tooltip.delbase.info.more": "§7§oDefault Keys\nShift for More Details \nControl for Flavor Text",
+  "tooltip.delbase.info.more": "§7§oShift for More Details -- Control for Flavor Text",
   "tooltip.delbase.info.control.more": "§7§oHold Control for Flavor Text",
   "tooltip.delbase.info.shift.more": "§7§oHold Shift for More Details",
   "tooltip.delbase.color.shifter": "§7§oUse on Colorful Blocks to change its' color",
