@@ -1,6 +1,6 @@
 modLoader="javafml"
 loaderVersion="[40,)"
-license="MIT"
+license="All Rights Reserved"
 [[mods]]
 modId="delbase"
 version="${file.jarVersion}"

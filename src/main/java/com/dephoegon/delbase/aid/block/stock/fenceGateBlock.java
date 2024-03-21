@@ -58,9 +58,8 @@ public class fenceGateBlock extends FenceGateBlock {
     public boolean isFlammable(BlockState state, BlockGetter world, BlockPos pos, Direction face) {
         if (flame) {
             rngBurn(world, state, pos, 40, 60);
-            return true;
         }
-        return false;
+        return flame;
     }
     public int getFlammability(BlockState state, BlockGetter world, BlockPos pos, Direction face) {
         if (flame) { return flammability; }

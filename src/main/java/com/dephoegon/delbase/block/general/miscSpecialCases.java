@@ -1,5 +1,6 @@
 package com.dephoegon.delbase.block.general;
 
+import com.dephoegon.delbase.aid.block.stock.axisBlock;
 import com.dephoegon.delbase.aid.block.stock.genBlock;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
@@ -29,7 +30,7 @@ public class miscSpecialCases {
     public static final RegistryObject<Block> HARDENED_OAK_PLANKS = register("hardened_oak_planks",
             () -> new genBlock(BlockBehaviour.Properties.copy(STONE).sound(SoundType.STONE), false, 0, 0));
     public static final RegistryObject<Block> ASH_BLOCK = register("ash_block",
-            ()-> new genBlock(BlockBehaviour.Properties.copy(OAK_PLANKS).sound(SoundType.WOOD),
+            ()-> new axisBlock(BlockBehaviour.Properties.copy(OAK_PLANKS).sound(SoundType.WOOD),
                     "","","", false, 0, 0),16000);
 
     public static void register(IEventBus eventBus) {

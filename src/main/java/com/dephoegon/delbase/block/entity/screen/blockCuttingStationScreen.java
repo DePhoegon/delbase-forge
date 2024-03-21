@@ -11,8 +11,7 @@ import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.item.Item;
 import org.jetbrains.annotations.NotNull;
 
-import static com.dephoegon.delbase.aid.slots.planSlots.getFullPlanSlotArray;
-import static com.dephoegon.delbase.aid.slots.planSlots.getPlanOnlyArray;
+import static com.dephoegon.delbase.aid.slots.planSlots.*;
 import static com.dephoegon.delbase.delbase.Mod_ID;
 import static com.dephoegon.delbase.item.blockCutterPlans.*;
 
@@ -39,21 +38,21 @@ public class blockCuttingStationScreen extends AbstractContainerScreen<blockCutt
     protected void renderBg(@NotNull PoseStack pPoseStack, float pPartialTick, int pMouseX, int pMouseY) {
         RenderSystem.setShader(GameRenderer::getPositionTexShader);
         RenderSystem.setShaderColor(1.0F,1.0F,1.0F,1.0F);
-        //Item item = blockCuttingStation.iHandler.getStackInSlot(planSlot).getItem();
         Item item = blockCuttingStation.getPlanSlotItem();
-        if (getFullPlanSlotArray().contains(item)) {
-            // Contains one of the valid items
-            if (getPlanOnlyArray().contains(item)) {
-                if (item == WALL_PLANS.get().asItem()) { RenderSystem.setShaderTexture(0, PLANS_WALL_TEXTURE); }
-                if (item == FENCE_GATE_PLANS.get().asItem()) { RenderSystem.setShaderTexture(0, PLANS_FENCE_GATE_TEXTURE); }
-                if (item == FENCE_PLANS.get().asItem()) { RenderSystem.setShaderTexture(0, PLANS_FENCE_TEXTURE); }
-                if (item == SLAB_PLANS.get().asItem()) { RenderSystem.setShaderTexture(0, PLANS_SLAB_TEXTURE); }
-                if (item == STAIR_PLANS.get().asItem()) { RenderSystem.setShaderTexture(0, PLANS_STAIR_TEXTURE); }
-                // No other valid items it could be
-            } else { RenderSystem.setShaderTexture(0, COMPOUND_TEXTURE); }
-        } else { RenderSystem.setShaderTexture(0, EMPTY_TEXTURE); }
+        ResourceLocation TEXTURE = null;
+        if (isPlansSlotItem(item)) {
+            if (item == WALL_PLANS.get().asItem()) { TEXTURE = PLANS_WALL_TEXTURE; }
+            if (item == FENCE_GATE_PLANS.get().asItem()) { TEXTURE = PLANS_FENCE_GATE_TEXTURE; }
+            if (item == FENCE_PLANS.get().asItem()) { TEXTURE = PLANS_FENCE_TEXTURE; }
+            if (item == SLAB_PLANS.get().asItem()) { TEXTURE = PLANS_SLAB_TEXTURE; }
+            if (item == STAIR_PLANS.get().asItem()) { TEXTURE = PLANS_STAIR_TEXTURE; }
+            if (item == ARMOR_COMPOUND.get().asItem()) { TEXTURE = COMPOUND_TEXTURE; }
+        } else { TEXTURE = EMPTY_TEXTURE; }
         int x = (width - imageWidth) / 2;
         int y = (height - imageHeight) / 2;
+
+        TEXTURE = TEXTURE != null ? TEXTURE : EMPTY_TEXTURE;
+        RenderSystem.setShaderTexture(0, TEXTURE);
 
         this.blit(pPoseStack, x, y, 0, 0, imageWidth, imageHeight);
         if (menu.isCrafting()) {

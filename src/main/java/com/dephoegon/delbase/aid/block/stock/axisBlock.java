@@ -48,11 +48,8 @@ public class axisBlock extends RotatedPillarBlock {
         if(kb.HShift() && tip1 != null) { toolTip.add(Component.translatable(tip1)); } //if shifted, show tip1 (if not empty)
     }
     public boolean isFlammable(BlockState state, BlockGetter world, BlockPos pos, Direction face) {
-        if (flame) {
-            rngBurn(world, state, pos, 40, 60);
-            return true;
-        }
-        return false;
+        if (flame) { rngBurn(world, state, pos, 40, 60); }
+        return flame;
     }
     public int getFlammability(BlockState state, BlockGetter world, BlockPos pos, Direction face) {
         if (flame) { return flammability; }

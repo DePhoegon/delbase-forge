@@ -23,7 +23,6 @@ import static com.dephoegon.delbase.block.general.machineBlocks.BLOCK_CUTTING_ST
 import static com.dephoegon.delbase.delbase.Mod_ID;
 import static net.minecraft.world.item.Items.*;
 
-@SuppressWarnings("removal")
 public class blockCuttingStationRecipeCategory implements IRecipeCategory<blockCuttingStationRecipes> {
     public final static ResourceLocation UID = new ResourceLocation(Mod_ID, "block_cutting");
     public final static ResourceLocation TEXTURE = new ResourceLocation(Mod_ID, "textures/gui/block_cutting_station_gui_jei.png");
@@ -41,8 +40,8 @@ public class blockCuttingStationRecipeCategory implements IRecipeCategory<blockC
     public @NotNull IDrawable getIcon() { return this.icon; }
     public void setRecipe(@Nonnull IRecipeLayoutBuilder builder, @Nonnull blockCuttingStationRecipes recipe, @Nonnull IFocusGroup focusGroup) {
         ItemStack itemStack = recipe.getResultItem();
-        builder.addSlot(RecipeIngredientRole.INPUT, 57, 18).addIngredients(recipe.getIngredients().get(1));
-        builder.addSlot(RecipeIngredientRole.INPUT, 103, 18).addIngredients(recipe.getIngredients().get(0));
+        builder.addSlot(RecipeIngredientRole.INPUT, 57, 18).addItemStack(recipe.getInput());
+        builder.addSlot(RecipeIngredientRole.INPUT, 103, 18).addItemStack(recipe.getPlans());
         boolean useStatic = true;
         if (recipe.getResultItem().getItem().asItem() == DIRT.asItem()) {
             useStatic = false;
