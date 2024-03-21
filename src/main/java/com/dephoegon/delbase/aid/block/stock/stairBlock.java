@@ -51,36 +51,27 @@ public class stairBlock extends StairBlock {
         flammability = fireChance;
         stripped = strippedState;
     }
-    @Override
     public void appendHoverText(@NotNull ItemStack stack, @Nullable BlockGetter worldIn, @NotNull List<Component> toolTip, @NotNull TooltipFlag flag) {
         super.appendHoverText(stack, worldIn, toolTip, flag);
         if(!kb.HShift() && !kb.HCtrl() && tip0 != null) { toolTip.add(Component.translatable(tip0)); } //if neither pressed, show tip0 (if not empty)
         if(kb.HCtrl() && tip2 != null) { toolTip.add(Component.translatable(tip2)); } //if ctrl, show tip2 (if not empty), do first
         if(kb.HShift() && tip1 != null) { toolTip.add(Component.translatable(tip1)); } //if shift, show tip1 (if not empty)
     }
-    @Override
-    public boolean isFlammable(BlockState state, BlockGetter world, BlockPos pos, Direction face)
-    {
+    public boolean isFlammable(BlockState state, BlockGetter world, BlockPos pos, Direction face) {
         if (flame && !state.getValue(WATERLOGGED)) {
             rngBurn(world, state, pos, 40 ,60);
             return state.getValue(StairBlock.HALF) == Half.TOP;
         }
         return false;
     }
-    @Override
     public int getFlammability(BlockState state, BlockGetter world, BlockPos pos, Direction face) {
         if (flame) { return flammability; }
         return 0;
     }
-
-    @Override
     public int getFireSpreadSpeed(BlockState state, BlockGetter world, BlockPos pos, Direction face) {
         if (flame) { return spread; }
         return 0;
     }
-
-    @Nullable
-    @Override
     public BlockState getToolModifiedState(BlockState state, @NotNull UseOnContext context, ToolAction toolAction, boolean simulate) {
         Level world = context.getLevel();
         BlockPos blockPos = context.getClickedPos();

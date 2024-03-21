@@ -27,7 +27,6 @@ public class fenceBlock extends FenceBlock {
     private final String tip1;
     private final String tip2;
     private final boolean flame;
-
     private final int spread;
     private final int flammability;
     private final BlockState stripped;
@@ -59,27 +58,21 @@ public class fenceBlock extends FenceBlock {
         if(kb.HShift() && tip1 != null) { toolTip.add(Component.translatable(tip1)); } //if shift, show tip1 (if not empty)
     }
     @Override
-    public boolean isFlammable(BlockState state, BlockGetter world, BlockPos pos, Direction face)
-    {
+    public boolean isFlammable(BlockState state, BlockGetter world, BlockPos pos, Direction face) {
         if (flame && !state.getValue(WATERLOGGED)) {
             rngBurn(world, state, pos, 40, 60);
             return true;
         }
         return false;
     }
-    @Override
     public int getFlammability(BlockState state, BlockGetter world, BlockPos pos, Direction face) {
         if (flame) { return flammability; }
         return 0;
     }
-
-    @Override
     public int getFireSpreadSpeed(BlockState state, BlockGetter world, BlockPos pos, Direction face) {
         if (flame) { return spread; }
         return 0;
     }
-    @Nullable
-    @Override
     public BlockState getToolModifiedState(BlockState state, @NotNull UseOnContext context, ToolAction toolAction, boolean simulate) {
         Level world = context.getLevel();
         BlockPos blockPos = context.getClickedPos();

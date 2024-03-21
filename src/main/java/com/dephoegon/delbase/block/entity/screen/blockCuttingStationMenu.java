@@ -11,11 +11,11 @@ import net.minecraft.world.inventory.*;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;
-import net.minecraftforge.items.CapabilityItemHandler;
 import org.jetbrains.annotations.NotNull;
 
 import static com.dephoegon.delbase.block.entity.blocks.blockCuttingStation.*;
 import static com.dephoegon.delbase.block.general.machineBlocks.BLOCK_CUTTING_STATION;
+import static net.minecraftforge.common.capabilities.ForgeCapabilities.ITEM_HANDLER;
 
 public class blockCuttingStationMenu extends AbstractContainerMenu {
     private final blockCuttingStation blockEntity;
@@ -35,7 +35,7 @@ public class blockCuttingStationMenu extends AbstractContainerMenu {
         addPlayerInventory(inv);
         addPlayerHotbar(inv);
 
-        this.blockEntity.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY).ifPresent(handler -> {
+        this.blockEntity.getCapability(ITEM_HANDLER).ifPresent(handler -> {
             this.addSlot(new itemSlot(handler, inputSlot, 57, 18));
             this.addSlot(new planSlots(handler, planSlot, 103, 18));
             this.addSlot(new resultSlots(handler, outputSlot, 80, 60));

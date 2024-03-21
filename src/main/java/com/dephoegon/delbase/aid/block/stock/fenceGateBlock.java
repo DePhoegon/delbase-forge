@@ -58,13 +58,9 @@ public class fenceGateBlock extends FenceGateBlock {
         if(kb.HShift() && tip1 != null) { toolTip.add(Component.translatable(tip1)); } //if shift, show tip1 (if not empty)
     }
     @Override
-    public boolean isFlammable(BlockState state, BlockGetter world, BlockPos pos, Direction face)
-    {
-        if (flame) {
-            rngBurn(world, state, pos, 40, 60);
-            return true;
-        }
-        return false;
+    public boolean isFlammable(BlockState state, BlockGetter world, BlockPos pos, Direction face) {
+        if (flame) { rngBurn(world, state, pos, 40, 60); }
+        return flame;
     }
     @Override
     public int getFlammability(BlockState state, BlockGetter world, BlockPos pos, Direction face) {

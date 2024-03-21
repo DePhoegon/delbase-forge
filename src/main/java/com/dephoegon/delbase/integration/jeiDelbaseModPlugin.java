@@ -1,5 +1,6 @@
 package com.dephoegon.delbase.integration;
 
+import com.dephoegon.delbase.aid.recipe.blockCuttingStationRecipeCategory;
 import com.dephoegon.delbase.aid.recipe.blockCuttingStationRecipes;
 import mezz.jei.api.IModPlugin;
 import mezz.jei.api.JeiPlugin;
