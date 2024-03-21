@@ -1,11 +1,13 @@
 package com.dephoegon.delbase.block.general;
 
+import com.dephoegon.delbase.aid.block.stock.axisBlock;
 import com.dephoegon.delbase.aid.block.stock.genBlock;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.RecipeType;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.RotatedPillarBlock;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -27,8 +29,8 @@ public class miscSpecialCases {
     public static final RegistryObject<Block> HARDENED_OAK_PLANKS = register("hardened_oak_planks",
             () -> new genBlock(BlockBehaviour.Properties.copy(STONE).sound(SoundType.STONE),
                      "", "", "", false, 0, 0));
-    public static final RegistryObject<Block> ASH_BLOCK = register("ash_block",
-            ()-> new genBlock(BlockBehaviour.Properties.copy(OAK_PLANKS).sound(SoundType.WOOD),
+    public static final RegistryObject<RotatedPillarBlock> ASH_BLOCK = register("ash_block",
+            ()-> new axisBlock(BlockBehaviour.Properties.copy(OAK_PLANKS).sound(SoundType.WOOD),
                     "","","", false, 0, 0),16000);
 
     public static void register(IEventBus eventBus) {

@@ -45,9 +45,7 @@ public class TierRandomDropAid {
     public static @NotNull SimpleContainer netheriteToolsBonus(int diamond) {
         int bonusSize = commonConfig.NETHERRITE_BONUS_ROLLS.get();
         SimpleContainer stone = new SimpleContainer(bonusSize+diamond);
-        for (int i = 0; i < diamond; i++) {
-            stone.setItem(i, DIAMOND.getDefaultInstance());
-        }
+        for (int i = 0; i < diamond; i++) { stone.setItem(i, DIAMOND.getDefaultInstance()); }
         for (int i = 0; i < bonusSize; i++) {
             Random random = new Random();
             int RNGs = random.nextInt(5);

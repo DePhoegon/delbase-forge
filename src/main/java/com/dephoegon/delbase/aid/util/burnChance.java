@@ -15,6 +15,7 @@ import org.jetbrains.annotations.NotNull;
 
 import java.util.Random;
 
+import static com.dephoegon.delbase.aid.util.blockArrayList.getVanilla_wood_list;
 import static com.dephoegon.delbase.block.general.ashBlocks.*;
 import static com.dephoegon.delbase.block.general.miscSpecialCases.ASH_BLOCK;
 import static net.minecraft.world.level.block.StairBlock.SHAPE;
@@ -24,12 +25,13 @@ public class burnChance {
     private static boolean ashReplaceRNG() {
         return randomNum(commonConfig.BURN_CHANCE_NUMBER_CAP.get()) > commonConfig.BURN_CHANCE_NUMBER.get();
     } //used to control % odds for replacing blocks/spawning fire
-    private static boolean threshHold(int cap, int thresh) { return randomNum(cap) > thresh; }
+    public static boolean threshHold(int cap, int thresh) { return randomNum(cap) > thresh; }
     public static void rngBurn(@NotNull BlockGetter world, @NotNull BlockState burningBlock, BlockPos pos, int burnThreshHold, int burnCap){
         // Double Comparison is used to avoid drastic failure.  They should always match, but if for some reason it manages to pull the wrong blockstate, it won't break the game.
-        boolean genBlock;
+        boolean genBlock = true;
         boolean waterlogged = false;
         if (burningBlock.getBlock() instanceof WallBlock) {
+            genBlock = false;
             if (threshHold(burnCap, burnThreshHold)) {
                 WallSide east = burningBlock.getValue(EAST_WALL);
                 WallSide west = burningBlock.getValue(WEST_WALL);
@@ -43,6 +45,7 @@ public class burnChance {
             }
         }
         if (burningBlock.getBlock() instanceof StairBlock) {
+            genBlock = false;
             if (threshHold(burnCap, burnThreshHold)) {
                 Direction facing = burningBlock.getValue(StairBlock.FACING);
                 Half half = burningBlock.getValue(StairBlock.HALF);
@@ -54,6 +57,7 @@ public class burnChance {
             }
         }
         if (burningBlock.getBlock() instanceof SlabBlock) {
+            genBlock = false;
             if (threshHold(burnCap,burnThreshHold)) {
                 SlabType type = burningBlock.getValue(SlabBlock.TYPE);
                 if (ashReplaceRNG()) {
@@ -63,14 +67,17 @@ public class burnChance {
             }
         }
         if (burningBlock.getBlock() instanceof RotatedPillarBlock) {
+            genBlock = false;
             if (threshHold(burnCap, burnThreshHold)) {
                 Direction.Axis axis = burningBlock.getValue(AXIS);
+                BlockState blockState = getVanilla_wood_list().contains(burningBlock.getBlock().defaultBlockState()) ? ASH_BLOCK.get().defaultBlockState() : ASH_LOG.get().defaultBlockState();
                 if(ashReplaceRNG()) {
-                    ((Level) world).setBlockAndUpdate(pos, ASH_LOG.get().defaultBlockState().setValue(AXIS, axis));
+                    ((Level) world).setBlockAndUpdate(pos, blockState.setValue(AXIS, axis));
                 } // chance to replace block with supplied ashBlock.
             }
         }
         if (burningBlock.getBlock() instanceof FenceBlock) {
+            genBlock = false;
             if (threshHold(burnCap, burnThreshHold)) {
                 Boolean east = burningBlock.getValue(CrossCollisionBlock.EAST);
                 Boolean west = burningBlock.getValue(CrossCollisionBlock.WEST);
@@ -82,6 +89,7 @@ public class burnChance {
             }
         }
         if (burningBlock.getBlock() instanceof FenceGateBlock) {
+            genBlock = false;
             if (threshHold(burnCap, burnThreshHold)) {
                 Boolean open = burningBlock.getValue(OPEN);
                 Boolean powered = burningBlock.getValue(POWERED);
@@ -92,11 +100,8 @@ public class burnChance {
                 }
             }
         }
-        genBlock = !(burningBlock.getBlock() instanceof WallBlock) && !(burningBlock.getBlock() instanceof StairBlock) &&
-                !(burningBlock.getBlock() instanceof SlabBlock) && !(burningBlock.getBlock() instanceof RotatedPillarBlock) &&
-                !(burningBlock.getBlock() instanceof FenceBlock) && !(burningBlock.getBlock() instanceof FenceGateBlock);
         if (genBlock) {
-            if (ashReplaceRNG()) {
+            if (threshHold(burnCap, burnThreshHold)) {
                 BlockState defaultBlock = ASH_BLOCK.get().defaultBlockState().getBlock().defaultBlockState();
                 ((Level) world).setBlockAndUpdate(pos, defaultBlock);
             } // chance to replace block with supplied ashBlock.

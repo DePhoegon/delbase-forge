@@ -1,6 +1,7 @@
-package com.dephoegon.delbase.integration;
+package com.dephoegon.delbase.aid.recipe;
 
 import com.dephoegon.delbase.aid.recipe.blockCuttingStationRecipes;
+import com.dephoegon.delbase.integration.jeiDelbaseModPlugin;
 import mezz.jei.api.constants.VanillaTypes;
 import mezz.jei.api.gui.builder.IRecipeLayoutBuilder;
 import mezz.jei.api.gui.drawable.IDrawable;
@@ -40,8 +41,8 @@ public class blockCuttingStationRecipeCategory implements IRecipeCategory<blockC
     public @NotNull IDrawable getIcon() { return this.icon; }
     public void setRecipe(@Nonnull IRecipeLayoutBuilder builder, @Nonnull blockCuttingStationRecipes recipe, @Nonnull IFocusGroup focusGroup) {
         ItemStack itemStack = recipe.getResultItem();
-        builder.addSlot(RecipeIngredientRole.INPUT, 57, 18).addIngredients(recipe.getIngredients().get(1));
-        builder.addSlot(RecipeIngredientRole.INPUT, 103, 18).addIngredients(recipe.getIngredients().get(0));
+        builder.addSlot(RecipeIngredientRole.INPUT, 57, 18).addItemStack(recipe.getInput());
+        builder.addSlot(RecipeIngredientRole.INPUT, 103, 18).addItemStack(recipe.getPlans());
         boolean useStatic = true;
         if (recipe.getResultItem().getItem().asItem() == DIRT.asItem()) {
             useStatic = false;
