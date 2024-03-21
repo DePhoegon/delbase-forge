@@ -32,11 +32,11 @@ import java.util.Optional;
 import static com.dephoegon.delbase.aid.recipe.TierRandomDropAid.*;
 import static com.dephoegon.delbase.aid.recipe.countAid.netheriteDiamondBonus;
 import static com.dephoegon.delbase.aid.slots.planSlots.isPlansSlotItem;
+import static com.dephoegon.delbase.aid.util.burnChance.threshHold;
 import static com.dephoegon.delbase.item.blockCutterPlans.*;
 import static net.minecraft.world.item.Items.DIAMOND;
 import static net.minecraftforge.common.capabilities.ForgeCapabilities.ITEM_HANDLER;
 
-@SuppressWarnings("RedundantMethodOverride")
 public class blockCuttingStation extends BlockEntity implements MenuProvider {
     public static final int outputSlot = 1;
     public static final int inputSlot = 0;
@@ -259,7 +259,8 @@ public class blockCuttingStation extends BlockEntity implements MenuProvider {
             int count = match.get().getResultItem().getCount();
             if (entity.itemHandler.getStackInSlot(planSlot).getItem() == ARMOR_COMPOUND.get().asItem()) {
                 Item le_item = entity.itemHandler.getStackInSlot(inputSlot).getItem();
-                boolean skipCompoundEat = false;
+                int armCompCount = match.get().getPlans().getCount();
+                boolean compoundEat = true;
                 if (le_item instanceof ArmorItem recycle) {
                     if (recycle.getMaterial() == ArmorMaterials.NETHERITE) {
                         count = 1;
@@ -274,16 +275,17 @@ public class blockCuttingStation extends BlockEntity implements MenuProvider {
                 if (le_item instanceof TieredItem tieredItem) {
                     if (tieredItem.getTier() == Tiers.STONE) {
                         skipOutputSlot = true;
-                        skipCompoundEat = true;
+                        compoundEat = threshHold(100, 25);
                         keyString = "stone";
                     }
                     if (tieredItem.getTier() == Tiers.WOOD) {
                         skipOutputSlot = true;
-                        skipCompoundEat = true;
+                        compoundEat = threshHold(100, 50);
                         keyString = "wood";
                     }
                     if (tieredItem.getTier() == Tiers.NETHERITE) {
                         skipOutputSlot = true;
+                        compoundEat = threshHold(100, 10);
                         keyString = "netherite";
                         if (le_item instanceof SwordItem) {
                             count = commonConfig.NETHERRITE_SWORD_BONUS.get();
@@ -304,7 +306,7 @@ public class blockCuttingStation extends BlockEntity implements MenuProvider {
                         //Special Behaviors for the Tiers of items
                     }
                 }
-                if (!(skipCompoundEat)){ entity.itemHandler.extractItem(planSlot, 1, false); }
+                if (compoundEat){ entity.itemHandler.extractItem(planSlot, armCompCount, false); }
             }
             entity.itemHandler.extractItem(inputSlot, 1, false);
             if (skipOutputSlot) {

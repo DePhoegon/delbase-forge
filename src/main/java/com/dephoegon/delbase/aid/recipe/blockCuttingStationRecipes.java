@@ -1,5 +1,7 @@
 package com.dephoegon.delbase.aid.recipe;
 
+import com.dephoegon.delbase.aid.block.item.compoundPlans;
+import com.dephoegon.delbase.aid.block.item.cutterPlans;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import net.minecraft.core.NonNullList;
@@ -16,39 +18,46 @@ import org.jetbrains.annotations.NotNull;
 import static com.dephoegon.delbase.block.entity.blocks.blockCuttingStation.inputSlot;
 import static com.dephoegon.delbase.block.entity.blocks.blockCuttingStation.planSlot;
 import static com.dephoegon.delbase.delbase.Mod_ID;
+import static com.dephoegon.delbase.item.blockCutterPlans.ARMOR_COMPOUND;
 import static net.minecraft.core.NonNullList.withSize;
 
 public class blockCuttingStationRecipes implements Recipe<SimpleContainer> {
-    private static final int jsonIngredientItem = 1;
-    private static final int jsonPlanItem = 0;
     private final ResourceLocation id;
     private final ItemStack output;
-    private final NonNullList<Ingredient> recipeItems;
+    private final ItemStack plan;
+    private final ItemStack input;
+    @Override
+    public @NotNull ItemStack getResultItem(@NotNull RegistryAccess p_267052_) { return this.output; }
+    public @NotNull ItemStack getResultItem() { return output.copy(); }
+    public ItemStack getPlans() { return plan; }
+    public ItemStack getInput() { return input; }
+    private @NotNull ItemStack getDefault(@NotNull ItemStack input) { return input.getItem().getDefaultInstance(); }
 
-    public blockCuttingStationRecipes(ResourceLocation id, ItemStack output, NonNullList<Ingredient> recipeItems) {
+    public blockCuttingStationRecipes(ResourceLocation id, ItemStack output, ItemStack plan, ItemStack input) {
         this.id = id;
         this.output = output;
-        this.recipeItems = recipeItems;
+        this.plan = plan;
+        this.input = input;
     }
     public boolean matches(@NotNull SimpleContainer pContainer, @NotNull Level pLevel) {
-        if (recipeItems == null) { return false; } else {
-            return (recipeItems.get(jsonIngredientItem).test(pContainer.getItem(inputSlot)) && recipeItems.get(jsonPlanItem).test(pContainer.getItem(planSlot)));
+        if (getInput().equals(ItemStack.EMPTY) || getPlans().equals(ItemStack.EMPTY)) { return false; }
+        boolean inputs = getDefault(getInput()).toString().equals(getDefault(pContainer.getItem(inputSlot)).toString());
+        boolean outputs = false;
+        boolean hold = false;
+        if (inputs) { outputs = getDefault(getPlans()).toString().equals(getDefault(pContainer.getItem(planSlot)).toString()); }
+        if (inputs && outputs) {
+            int planSlots = getPlans().getItem() instanceof compoundPlans ? getPlans().getCount() : 1;
+            hold = planSlots <= pContainer.getItem(planSlot).getCount() && getInput().getCount() <= pContainer.getItem(inputSlot).getCount();
         }
+        return hold;
     }
 
     @SuppressWarnings("NullableProblems")
     @Override
     public ItemStack assemble(@NotNull SimpleContainer p_44001_, @NotNull RegistryAccess p_267165_) { return null; }
-
-    public @NotNull NonNullList<Ingredient> getIngredients() { return recipeItems; }
     public boolean isSpecial() { return true; }
     public @NotNull ItemStack assemble(@NotNull SimpleContainer pContainer) { return output; }
     public boolean canCraftInDimensions(int pWidth, int pHeight) { return true; }
-
-    @Override
-    public @NotNull ItemStack getResultItem(@NotNull RegistryAccess p_267052_) { return this.output; }
-
-    public @NotNull ItemStack getResultItem() { return output.copy(); }
     public @NotNull ResourceLocation getId() { return id; }
     public @NotNull RecipeSerializer<?> getSerializer() { return Serializer.INSTANCE; }
     public @NotNull RecipeType<?> getType() { return Type.INSTANCE; }
@@ -64,28 +73,23 @@ public class blockCuttingStationRecipes implements Recipe<SimpleContainer> {
 
         public @NotNull blockCuttingStationRecipes fromJson(@NotNull ResourceLocation id, @NotNull JsonObject json) {
             ItemStack output = ShapedRecipe.itemStackFromJson(GsonHelper.getAsJsonObject(json, "output"));
+            ItemStack input = ShapedRecipe.itemStackFromJson(GsonHelper.getAsJsonObject(json, "input"));
+            ItemStack plan = ShapedRecipe.itemStackFromJson(GsonHelper.getAsJsonObject(json, "plans"));
 
-            JsonArray ingredients = GsonHelper.getAsJsonArray(json, "ingredients");
-            NonNullList<Ingredient> inputs = withSize(2, Ingredient.EMPTY);
-            if (inputs.size() == 2){
-                for (int i = 0; i < inputs.size(); ++i) {
-                    inputs.set(i, Ingredient.fromJson(ingredients.get(i)));
-                }
-                return new blockCuttingStationRecipes(id, output, inputs);
-            } else return new blockCuttingStationRecipes(id, output, null);
+            return new blockCuttingStationRecipes(id, output, plan, input);
         }
         public blockCuttingStationRecipes fromNetwork(@NotNull ResourceLocation id, @NotNull FriendlyByteBuf buf) {
-            NonNullList<Ingredient> inputs = withSize(buf.readInt(), Ingredient.EMPTY);
-            inputs.replaceAll(ignored -> Ingredient.fromNetwork(buf));
             ItemStack output = buf.readItem();
-            return new blockCuttingStationRecipes(id, output, inputs);
+            ItemStack plans = buf.readItem();
+            ItemStack inputs = buf.readItem();
+            if (plans.getItem() instanceof cutterPlans) { plans.setCount(1); }
+            return new blockCuttingStationRecipes(id, output, plans, inputs);
         }
         public void toNetwork(@NotNull FriendlyByteBuf buf, @NotNull blockCuttingStationRecipes recipe) {
-            buf.writeInt(recipe.getIngredients().size());
-            for (Ingredient ing : recipe.getIngredients()) {
-                ing.toNetwork(buf);
-            }
-            buf.writeItemStack(recipe.getResultItem(), false);
+            buf.writeItemStack(recipe.output, false);
+            if (recipe.getPlans().getItem() instanceof cutterPlans) { recipe.plan.setCount(1); }
+            buf.writeItemStack(recipe.plan, false);
+            buf.writeItemStack(recipe.input, false);
         }
     }
 }
