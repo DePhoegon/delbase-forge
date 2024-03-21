@@ -28,16 +28,12 @@ public class sandSlabEnergy extends energySlab {
         boolean w_logged = state.getValue(SlabBlock.WATERLOGGED);
         net.minecraftforge.common.PlantType type = iPlantable.getPlantType(world, pos.relative(facing));
         if (s_type != SlabType.BOTTOM) {
-            if (plant.getBlock() == Blocks.CACTUS) {
-                return true;
-            }
+            if (plant.getBlock() == Blocks.CACTUS) { return true; }
             if (plant.getBlock() == Blocks.SUGAR_CANE) {
                 for (Direction direction : Direction.Plane.HORIZONTAL) {
                     BlockState blockState = world.getBlockState(pos.relative(direction));
                     FluidState fluidState = world.getFluidState(pos.relative(direction));
-                    if (w_logged || fluidState.is(FluidTags.WATER) || blockState.is(Blocks.FROSTED_ICE)) {
-                        return true;
-                    }
+                    if (w_logged || fluidState.is(FluidTags.WATER) || blockState.is(Blocks.FROSTED_ICE)) { return true; }
                 }
             }
             return net.minecraftforge.common.PlantType.DESERT.equals(type);

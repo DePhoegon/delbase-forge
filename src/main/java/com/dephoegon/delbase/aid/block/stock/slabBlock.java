@@ -55,13 +55,13 @@ public class slabBlock extends SlabBlock {
         if(kb.HCtrl() && tip2 != null) { toolTip.add(Component.translatable(tip2)); } //if ctrl, show tip2 (if not empty), do first
         if(kb.HShift() && tip1 != null) { toolTip.add(Component.translatable(tip1)); } //if shifted, show tip1 (if not empty)
     }
-    public boolean isFlammable(BlockState state, BlockGetter world, BlockPos pos, Direction face)
-    {
+    public boolean isFlammable(BlockState state, BlockGetter world, BlockPos pos, Direction face) {
+        boolean flames = false;
         if (flame && !state.getValue(WATERLOGGED)) {
             rngBurn(world, state, pos, 40, 60);
-            return state.getValue(SlabBlock.TYPE) != SlabType.BOTTOM;
+            flames = state.getValue(SlabBlock.TYPE) != SlabType.BOTTOM;
         }
-        return false;
+        return flames;
     }
     public int getFlammability(BlockState state, BlockGetter world, BlockPos pos, Direction face) {
         if (flame) { return flammability; }
