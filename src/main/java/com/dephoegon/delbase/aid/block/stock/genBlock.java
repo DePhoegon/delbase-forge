@@ -42,30 +42,22 @@ public class genBlock extends Block {
         spread = fireSpread;
         flammability = fireChance;
     }
-
-    @Override
     public void appendHoverText(@NotNull ItemStack stack, @Nullable BlockGetter worldIn, @NotNull List<Component> toolTip, @NotNull TooltipFlag flag) {
         super.appendHoverText(stack, worldIn, toolTip, flag);
         if(!kb.HShift() && !kb.HCtrl() && tip0 != null) { toolTip.add(new TranslatableComponent(tip0)); }//if neither pressed, show tip0 (if not empty)
         if(kb.HCtrl() && tip2 != null) { toolTip.add(new TranslatableComponent(tip2)); }//if ctrl, show tip2 (if not empty), do first
         if(kb.HShift() && tip1 != null) { toolTip.add(new TranslatableComponent(tip1)); } //if shifted, show tip1 (if not empty)
     }
-    @Override
-    public boolean isFlammable(BlockState state, BlockGetter world, BlockPos pos, Direction face)
-    {
+    public boolean isFlammable(BlockState state, BlockGetter world, BlockPos pos, Direction face) {
         if (flame) {
             rngBurn(world, state, pos, 40, 60);
-            return true;
         }
-        return false;
+        return flame;
     }
-    @Override
     public int getFlammability(BlockState state, BlockGetter world, BlockPos pos, Direction face) {
         if (flame) { return flammability; }
         return 0;
     }
-
-    @Override
     public int getFireSpreadSpeed(BlockState state, BlockGetter world, BlockPos pos, Direction face) {
         if (flame) { return spread; }
         return 0;

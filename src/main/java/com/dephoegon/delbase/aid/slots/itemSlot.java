@@ -8,14 +8,11 @@ import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
 
+import static com.dephoegon.delbase.aid.slots.planSlots.isPlansSlotItem;
+
 public class itemSlot extends SlotItemHandler {
     public itemSlot(IItemHandler itemHandler, int index, int xPosition, int yPosition) {
         super(itemHandler, index, xPosition, yPosition);
     }
-
-    @Override
-    public boolean mayPlace(@NotNull ItemStack itemStack) {
-        ArrayList<Item> plansList = planSlots.getFullPlanSlotArray();
-        return !plansList.contains(itemStack.getItem());
-    }
+    public boolean mayPlace(@NotNull ItemStack itemStack) { return !isPlansSlotItem(itemStack.getItem()); }
 }

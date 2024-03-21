@@ -20,6 +20,7 @@ public abstract class blockArrayList {
     private static ArrayList<Object> general_list = new ArrayList<>();
     private static ArrayList<Object> gravity_list = new ArrayList<>();
     private static ArrayList<Object> wall_list = new ArrayList<>();
+    private static ArrayList<Object> vanilla_wood_list = new ArrayList<>();
     private static ArrayList<Object> axis_list = new ArrayList<>();
     private static ArrayList<Object> fall_hold = new ArrayList<>();
     private static ArrayList<Object> concretePowder_list = new ArrayList<>();
@@ -174,6 +175,23 @@ public abstract class blockArrayList {
         sand_list = sand_set;
     }
     public static ArrayList<Object> getSand_list() { return sand_list; }
+    public static ArrayList<Object> getVanilla_wood_list() { return vanilla_wood_list; }
+    private static void setVanillaWoodList() {
+        ArrayList<Object> setWood_list = new ArrayList<>();
+        setWood_list.add(STRIPPED_DARK_OAK_WOOD.defaultBlockState());
+        setWood_list.add(DARK_OAK_WOOD.defaultBlockState());
+        setWood_list.add(STRIPPED_ACACIA_WOOD.defaultBlockState());
+        setWood_list.add(ACACIA_WOOD.defaultBlockState());
+        setWood_list.add(STRIPPED_JUNGLE_WOOD.defaultBlockState());
+        setWood_list.add(JUNGLE_WOOD.defaultBlockState());
+        setWood_list.add(STRIPPED_BIRCH_WOOD.defaultBlockState());
+        setWood_list.add(BIRCH_WOOD.defaultBlockState());
+        setWood_list.add(STRIPPED_SPRUCE_WOOD.defaultBlockState());
+        setWood_list.add(SPRUCE_WOOD.defaultBlockState());
+        setWood_list.add(STRIPPED_OAK_WOOD.defaultBlockState());
+        setWood_list.add(OAK_WOOD.defaultBlockState());
+        vanilla_wood_list = setWood_list;
+    }
     private static void setWall_list() {
         ArrayList<Object> wall_set = new ArrayList<>();
         wall_set.add(SANDSTONE_WALL.defaultBlockState());
@@ -189,6 +207,7 @@ public abstract class blockArrayList {
         setSlab_list();
         setStair_list();
         setGravity_list();
+        setVanillaWoodList();
         setWall_list();
         setAxis_list();
     }

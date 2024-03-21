@@ -42,7 +42,6 @@ public class gravBlock extends SandBlock {
         tip2 = null;
         fall = falls;
     }
-    @Override
     public void appendHoverText(@NotNull ItemStack stack, @Nullable BlockGetter worldIn, @NotNull List<Component> toolTip, @NotNull TooltipFlag flag) {
         super.appendHoverText(stack, worldIn, toolTip, flag);
         if(!(kb.HShift()) && !(kb.HCtrl()) && tip0 != null) toolTip.add(new TranslatableComponent(tip0)); //if neither pressed, show tip0 (if not empty)
@@ -50,7 +49,6 @@ public class gravBlock extends SandBlock {
         if(kb.HShift() && tip1 != null) //noinspection GrazieInspection
             toolTip.add(new TranslatableComponent(tip1)); //if shift, show tip1 (if not empty)
     }
-    @Override
     public void tick(@Nonnull BlockState state, @Nonnull ServerLevel worldIn, @Nonnull BlockPos pos, @Nonnull Random rand) {
         if (gravity(worldIn, pos) && pos.getY() >= -164) {
             FallingBlockEntity fallingblockentity = FallingBlockEntity.fall(worldIn, pos, state);
@@ -58,7 +56,6 @@ public class gravBlock extends SandBlock {
             worldIn.addFreshEntity(fallingblockentity);
         }
     }
-
     private boolean gravity(ServerLevel worldIn, BlockPos pos) {
         boolean t_fall;
         boolean airOrFallthrough;
