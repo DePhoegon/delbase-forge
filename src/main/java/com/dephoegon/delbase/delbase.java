@@ -24,7 +24,7 @@ public class delbase
     public static final String Mod_ID = "delbase";
     // Directly reference a log4j logger.
     @SuppressWarnings("unused")
-    private static final Logger LOGGER = LogManager.getLogger();
+    public static final Logger LOGGER = LogManager.getLogger();
 
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
         if(event.getTabKey() == DELBASE_ITEM.getKey() || event.getTabKey() == CreativeModeTabs.INGREDIENTS) { getDelItemList().forEach(event::accept); }

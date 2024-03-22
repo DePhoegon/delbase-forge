@@ -74,7 +74,7 @@ public class blockCuttingStation extends BlockEntity implements MenuProvider {
     };
     private final LazyOptional<IItemHandler> lazyItemHandler = LazyOptional.of(() -> itemHandler);
     private final ItemStackHandler inputHandle = new ItemStackHandler(1) {
-        @Override
+        public boolean isItemValid(int slot, @NotNull ItemStack stack) { return !isPlansSlotItem(stack.getItem().asItem()); }
         protected void onContentsChanged(int slot) {
             if (inputHandle.getStackInSlot(slot) != itemHandler.getStackInSlot(inputSlot)) {
                 itemHandler.setStackInSlot(inputSlot, inputHandle.getStackInSlot(slot));
@@ -92,9 +92,7 @@ public class blockCuttingStation extends BlockEntity implements MenuProvider {
         }
     };
     private final ItemStackHandler planHandle = new ItemStackHandler(1){
-        public boolean isItemValid(int slot, @NotNull ItemStack stack) {
-            return isPlansSlotItem(stack.getItem().asItem());
-        }
+        public boolean isItemValid(int slot, @NotNull ItemStack stack) { return isPlansSlotItem(stack.getItem().asItem()); }
         @Override
         protected void onContentsChanged(int slot) {
             if (planHandle.getStackInSlot(slot) != itemHandler.getStackInSlot(planSlot)) {

@@ -2,6 +2,7 @@ package com.dephoegon.delbase.aid.recipe;
 
 import com.dephoegon.delbase.aid.block.item.compoundPlans;
 import com.dephoegon.delbase.aid.block.item.cutterPlans;
+import com.dephoegon.delbase.delbase;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import net.minecraft.core.NonNullList;
@@ -13,6 +14,7 @@ import net.minecraft.world.SimpleContainer;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.*;
 import net.minecraft.world.level.Level;
+import org.jetbrains.annotations.Contract;
 import org.jetbrains.annotations.NotNull;
 
 import static com.dephoegon.delbase.block.entity.blocks.blockCuttingStation.inputSlot;
@@ -72,24 +74,37 @@ public class blockCuttingStationRecipes implements Recipe<SimpleContainer> {
         public static final ResourceLocation ID = new ResourceLocation(Mod_ID, Type.ID);
 
         public @NotNull blockCuttingStationRecipes fromJson(@NotNull ResourceLocation id, @NotNull JsonObject json) {
-            ItemStack output = ShapedRecipe.itemStackFromJson(GsonHelper.getAsJsonObject(json, "output"));
-            ItemStack input = ShapedRecipe.itemStackFromJson(GsonHelper.getAsJsonObject(json, "input"));
-            ItemStack plan = ShapedRecipe.itemStackFromJson(GsonHelper.getAsJsonObject(json, "plans"));
+            ItemStack output = capAtMaxStackSize(ShapedRecipe.itemStackFromJson(GsonHelper.getAsJsonObject(json, "output")));
+            ItemStack plan = capAtMaxStackSize(ShapedRecipe.itemStackFromJson(GsonHelper.getAsJsonObject(json, "plans")));
+            ItemStack input = capAtMaxStackSize(ShapedRecipe.itemStackFromJson(GsonHelper.getAsJsonObject(json, "input")));
 
             return new blockCuttingStationRecipes(id, output, plan, input);
         }
-        public blockCuttingStationRecipes fromNetwork(@NotNull ResourceLocation id, @NotNull FriendlyByteBuf buf) {
-            ItemStack output = buf.readItem();
-            ItemStack plans = buf.readItem();
-            ItemStack inputs = buf.readItem();
-            if (plans.getItem() instanceof cutterPlans) { plans.setCount(1); }
+        public blockCuttingStationRecipes fromNetwork(@NotNull ResourceLocation id, @NotNull FriendlyByteBuf pBuffer) {
+            final ItemStack output = capAtMaxStackSize(pBuffer.readItem());
+            final ItemStack plans = capAtMaxStackSize(pBuffer.readItem());
+            final ItemStack inputs = capAtMaxStackSize(pBuffer.readItem());
             return new blockCuttingStationRecipes(id, output, plans, inputs);
         }
-        public void toNetwork(@NotNull FriendlyByteBuf buf, @NotNull blockCuttingStationRecipes recipe) {
-            buf.writeItemStack(recipe.output, false);
-            if (recipe.getPlans().getItem() instanceof cutterPlans) { recipe.plan.setCount(1); }
-            buf.writeItemStack(recipe.plan, false);
-            buf.writeItemStack(recipe.input, false);
+        public void toNetwork(@NotNull FriendlyByteBuf pBuffer, @NotNull blockCuttingStationRecipes pRecipe) {
+            pBuffer.writeItem(capAtMaxStackSize(pRecipe.output));
+            pBuffer.writeItem(capAtMaxStackSize(pRecipe.plan));
+            pBuffer.writeItem(capAtMaxStackSize(pRecipe.input));
+        }
+        @Contract("_ -> param1")
+        private @NotNull ItemStack capAtMaxStackSize(@NotNull ItemStack stack) {
+            int fCount = 0;
+            int iCount = stack.getCount();
+            if (iCount > stack.getMaxStackSize()) {
+                fCount = stack.getMaxStackSize();
+                stack.setCount(stack.getMaxStackSize());
+            }
+            if (iCount < 1) {
+                fCount = 1;
+                stack.setCount(1);
+            }
+            if (fCount != 0) { delbase.LOGGER.warn(stack.getItem().asItem() + " - in a recipe has an improper count size - "+ iCount +" - Set to count of -> "+ fCount); }
+            return stack;
         }
     }
 }
