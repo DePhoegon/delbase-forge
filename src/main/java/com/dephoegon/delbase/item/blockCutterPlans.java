@@ -2,7 +2,6 @@ package com.dephoegon.delbase.item;
 
 import com.dephoegon.delbase.aid.block.item.compoundPlans;
 import com.dephoegon.delbase.aid.block.item.cutterPlans;
-import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -23,8 +22,8 @@ public class blockCutterPlans {
     public static final RegistryObject<Item> STAIR_PLANS = regPlans("stair_plans", 1);
     public static final RegistryObject<Item> ARMOR_COMPOUND = regCompound("armor_compound", 64);
 
-    private static @NotNull RegistryObject<Item> regPlans(String name, int stack) { return ITEMS.register(name, () -> new cutterPlans(new Item.Properties().stacksTo(stack))); }
-    private static @NotNull RegistryObject<Item> regCompound(String name, int stack) { return ITEMS.register(name, () -> new compoundPlans(new Item.Properties().stacksTo(stack))); }
+    private static @NotNull RegistryObject<Item> regPlans(String name, int stack) { return ITEMS.register(name, () -> new cutterPlans(new Item.Properties().stacksTo(stack).tab(DELBASE_ITEMS))); }
+    private static @NotNull RegistryObject<Item> regCompound(String name, int stack) { return ITEMS.register(name, () -> new compoundPlans(new Item.Properties().stacksTo(stack).tab(DELBASE_ITEMS))); }
 
     public static void register(IEventBus eventBus) { ITEMS.register(eventBus); }
 }

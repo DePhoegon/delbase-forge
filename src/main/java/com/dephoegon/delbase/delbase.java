@@ -21,11 +21,10 @@ import static com.dephoegon.delbase.item.blockCutterPlans.WALL_PLANS;
 
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod(Mod_ID)
-public class delbase
-{
+public class delbase {
     public static final String Mod_ID = "delbase";
     // Directly reference a log4j logger.
-    private static final Logger LOGGER = LogManager.getLogger();
+    public static final Logger LOGGER = LogManager.getLogger();
 
     public static final CreativeModeTab BASE_BLOCK = new CreativeModeTab("dephoegon_blocks") {
         @Override

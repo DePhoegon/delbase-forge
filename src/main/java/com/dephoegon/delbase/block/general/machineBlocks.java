@@ -2,7 +2,6 @@ package com.dephoegon.delbase.block.general;
 
 import com.dephoegon.delbase.aid.block.alt.cuttingStationBlock;
 import net.minecraft.world.item.BlockItem;
-import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
@@ -14,7 +13,8 @@ import net.minecraftforge.registries.RegistryObject;
 
 import java.util.function.Supplier;
 
-import static com.dephoegon.delbase.delbase.*;
+import static com.dephoegon.delbase.delbase.DELBASE_ITEMS;
+import static com.dephoegon.delbase.delbase.Mod_ID;
 
 public class machineBlocks {
     private static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, Mod_ID);
@@ -32,7 +32,7 @@ public class machineBlocks {
     private static <T extends Block> RegistryObject<T> register(String name, Supplier<T> block) {
         RegistryObject<T> exit = BLOCKS.register(name, block);
         ITEMS.register(name, () -> new BlockItem(exit.get(),
-                new Item.Properties().stacksTo(1).tab(DELBASE_ITEMS).tab(CreativeModeTab.TAB_TOOLS)));
+                new Item.Properties().stacksTo(1).tab(DELBASE_ITEMS)));
         return exit;
     }
 }
