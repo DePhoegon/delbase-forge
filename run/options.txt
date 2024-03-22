@@ -38,7 +38,7 @@ biomeBlendRadius:2
 renderClouds:fast
 resourcePacks:[]
 incompatibleResourcePacks:[]
-lastServer:
+lastServer:localhost
 lang:en_us
 soundDevice:
 chatVisibility:0

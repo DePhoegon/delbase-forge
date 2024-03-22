@@ -22,8 +22,8 @@ public class blockCutterPlans {
     public static final RegistryObject<Item> STAIR_PLANS = regPlans("stair_plans", 1);
     public static final RegistryObject<Item> ARMOR_COMPOUND = regCompound("armor_compound", 64);
 
-    private static @NotNull RegistryObject<Item> regPlans(String name, int stack) { return ITEMS.register(name, () -> new cutterPlans(new Item.Properties().stacksTo(stack))); }
-    private static @NotNull RegistryObject<Item> regCompound(String name, int stack) { return ITEMS.register(name, () -> new compoundPlans(new Item.Properties().stacksTo(stack))); }
+    private static @NotNull RegistryObject<Item> regPlans(String name, int stack) { return ITEMS.register(name, () -> new cutterPlans(new Item.Properties().stacksTo(stack).tab(DELBASE_ITEMS))); }
+    private static @NotNull RegistryObject<Item> regCompound(String name, int stack) { return ITEMS.register(name, () -> new compoundPlans(new Item.Properties().stacksTo(stack).tab(DELBASE_ITEMS))); }
 
     public static void register(IEventBus eventBus) { ITEMS.register(eventBus); }
 }
