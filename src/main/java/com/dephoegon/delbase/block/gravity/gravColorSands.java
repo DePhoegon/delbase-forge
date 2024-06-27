@@ -22,10 +22,6 @@ public class gravColorSands {
     private static final DeferredRegister<Block> OVERRIDE_BLOCK = DeferredRegister.create(ForgeRegistries.BLOCKS, "minecraft");
     private static final DeferredRegister<Item> OVERRIDE_ITEM = DeferredRegister.create(ForgeRegistries.ITEMS, "minecraft");
 
-    public static final RegistryObject<SandBlock> OVERRIDE_SAND = overrideRegister("sand",
-            () -> new sandBlock(14406560, MapColor.SAND, "tooltip.delbase.info.more","tooltip.delbase.sand.hold.info","tooltip.delbase.sand.hold.flavor",true));
-    public static final RegistryObject<SandBlock> OVERRIDE_RED_SAND = overrideRegister("red_sand",
-            () -> new sandBlock(11098145, MapColor.COLOR_ORANGE,"tooltip.delbase.info.more","tooltip.delbase.sand.hold.info","tooltip.delbase.sand.hold.flavor",true));
     public static final RegistryObject<SandBlock> BLOOD_SAND = register("blood_sand",
             () -> new sandBlock(0xff0000, MapColor.TERRACOTTA_RED,"tooltip.delbase.info.more","tooltip.delbase.sand.hold.info","tooltip.delbase.sand.hold.flavor",true));
     public static final RegistryObject<SandBlock> WHITE_SAND = register("white_sand",
