@@ -17,103 +17,70 @@ import static com.dephoegon.delbase.item.shiftingDyes.*;
 public class colorMixInteraction {
     @SuppressWarnings("ConstantConditions")
     public static InteractionResult ColorLogic(Level world, BlockPos blockPos, BlockState TargetBlock, BlockState BaseDefaultBlock, BlockState RedBaseDefaultBlock, BlockState DarkRedDefaultBlock, BlockState WhiteDefaultBlock, BlockState OrangeDefaultBlock, BlockState MagentaDefaultBlock, BlockState LightBlueDefaultBlock, BlockState YellowDefaultBlock, BlockState LimeDefaultBlock, BlockState PinkDefaultBlock, BlockState GrayDefaultBlock, BlockState LightGrayDefaultBlock, BlockState CyanDefaultBlock, BlockState PurpleDefaultBlock, BlockState BlueDefaultBlock, BlockState GreenDefaultBlock, BlockState BrownDefaultBlock, BlockState BlackDefaultBlock, int DefaultBlockIndex, @NotNull Item inHand, Player playerEntity) {
+        ItemStack pHand = playerEntity.getMainHandItem();
+        if (TargetBlock == null || inHand != pHand.getItem()) { return InteractionResult.FAIL; }
         BlockState place_me = null;
         boolean place = false;
         boolean lock_cut = false;
+        ItemStack returnItem = null;
 
         if (inHand.equals(cleanse.getItem()) && BaseDefaultBlock != null) {
-                if (TargetBlock != BaseDefaultBlock && BaseDefaultBlock != null) {
-                    place = true;
-                }
-                if (TargetBlock == RedBaseDefaultBlock && RedBaseDefaultBlock != null) {
-                    playerEntity.addItem(new ItemStack(RED_SHIFT_DYE.get().asItem()));
-                }
-                if (TargetBlock == DarkRedDefaultBlock && DarkRedDefaultBlock != null) {
-                    playerEntity.addItem(new ItemStack(BLOOD_SHIFT_DYE.get().asItem()));
-                }
-                if (TargetBlock == WhiteDefaultBlock && WhiteDefaultBlock != null) {
-                    playerEntity.addItem(new ItemStack(WHITE_SHIFT_DYE.get().asItem()));
-                }
-                if (TargetBlock == OrangeDefaultBlock && OrangeDefaultBlock != null) {
-                    playerEntity.addItem(new ItemStack(ORANGE_SHIFT_DYE.get().asItem()));
-                }
-                if (TargetBlock == MagentaDefaultBlock && MagentaDefaultBlock != null) {
-                    playerEntity.addItem(new ItemStack(MAGENTA_SHIFT_DYE.get().asItem()));
-                }
-                if (TargetBlock == LightBlueDefaultBlock && LightBlueDefaultBlock != null) {
-                    playerEntity.addItem(new ItemStack(LIGHT_BLUE_SHIFT_DYE.get().asItem()));
-                }
-                if (TargetBlock == YellowDefaultBlock && YellowDefaultBlock != null) {
-                    playerEntity.addItem(new ItemStack(YELLOW_SHIFT_DYE.get().asItem()));
-                }
-                if (TargetBlock == LimeDefaultBlock && LimeDefaultBlock != null) {
-                    playerEntity.addItem(new ItemStack(LIME_SHIFT_DYE.get().asItem()));
-                }
-                if (TargetBlock == PinkDefaultBlock && PinkDefaultBlock != null) {
-                    playerEntity.addItem(new ItemStack(PINK_SHIFT_DYE.get().asItem()));
-                }
-                if (TargetBlock == GrayDefaultBlock && GrayDefaultBlock != null) {
-                    playerEntity.addItem(new ItemStack(GRAY_SHIFT_DYE.get().asItem()));
-                }
-                if (TargetBlock == LightGrayDefaultBlock && LightGrayDefaultBlock != null) {
-                    playerEntity.addItem(new ItemStack(LIGHT_GRAY_SHIFT_DYE.get().asItem()));
-                }
-                if (TargetBlock == CyanDefaultBlock && CyanDefaultBlock != null) {
-                    playerEntity.addItem(new ItemStack(CYAN_SHIFT_DYE.get().asItem()));
-                }
-                if (TargetBlock == PurpleDefaultBlock && PurpleDefaultBlock != null) {
-                    playerEntity.addItem(new ItemStack(PURPLE_SHIFT_DYE.get().asItem()));
-                }
-                if (TargetBlock == BlueDefaultBlock && BlueDefaultBlock != null) {
-                    playerEntity.addItem(new ItemStack(BLUE_SHIFT_DYE.get().asItem()));
-                }
-                if (TargetBlock == GreenDefaultBlock && GreenDefaultBlock != null) {
-                    playerEntity.addItem(new ItemStack(GREEN_SHIFT_DYE.get().asItem()));
-                }
-                if (TargetBlock == BrownDefaultBlock && BrownDefaultBlock != null) {
-                    playerEntity.addItem(new ItemStack(BROWN_SHIFT_DYE.get().asItem()));
-                }
-                if (TargetBlock == BlackDefaultBlock && BlackDefaultBlock != null) {
-                    playerEntity.addItem(new ItemStack(BLACK_SHIFT_DYE.get().asItem()));
-                }
-                if (place) {
-                    place_me = BaseDefaultBlock;
-                    lock_cut = true;
-                }
+            if (TargetBlock != BaseDefaultBlock) { place = true; }
+            if (TargetBlock == RedBaseDefaultBlock) { returnItem = new ItemStack(RED_SHIFT_DYE.get().asItem()); }
+            if (TargetBlock == DarkRedDefaultBlock) { returnItem = new ItemStack(BLOOD_SHIFT_DYE.get().asItem()); }
+            if (TargetBlock == WhiteDefaultBlock) { returnItem = new ItemStack(WHITE_SHIFT_DYE.get().asItem()); }
+            if (TargetBlock == OrangeDefaultBlock) { returnItem = new ItemStack(ORANGE_SHIFT_DYE.get().asItem()); }
+            if (TargetBlock == MagentaDefaultBlock) { returnItem = new ItemStack(MAGENTA_SHIFT_DYE.get().asItem()); }
+            if (TargetBlock == LightBlueDefaultBlock) { returnItem = new ItemStack(LIGHT_BLUE_SHIFT_DYE.get().asItem()); }
+            if (TargetBlock == YellowDefaultBlock) { returnItem = new ItemStack(YELLOW_SHIFT_DYE.get().asItem()); }
+            if (TargetBlock == LimeDefaultBlock) { returnItem = new ItemStack(LIME_SHIFT_DYE.get().asItem()); }
+            if (TargetBlock == PinkDefaultBlock) { returnItem = new ItemStack(PINK_SHIFT_DYE.get().asItem()); }
+            if (TargetBlock == GrayDefaultBlock) { returnItem = new ItemStack(GRAY_SHIFT_DYE.get().asItem()); }
+            if (TargetBlock == LightGrayDefaultBlock) { returnItem = new ItemStack(LIGHT_GRAY_SHIFT_DYE.get().asItem()); }
+            if (TargetBlock == CyanDefaultBlock) { returnItem = new ItemStack(CYAN_SHIFT_DYE.get().asItem()); }
+            if (TargetBlock == PurpleDefaultBlock) { returnItem = new ItemStack(PURPLE_SHIFT_DYE.get().asItem()); }
+            if (TargetBlock == BlueDefaultBlock) { returnItem = new ItemStack(BLUE_SHIFT_DYE.get().asItem()); }
+            if (TargetBlock == GreenDefaultBlock) { returnItem = new ItemStack(GREEN_SHIFT_DYE.get().asItem()); }
+            if (TargetBlock == BrownDefaultBlock) { returnItem = new ItemStack(BROWN_SHIFT_DYE.get().asItem()); }
+            if (TargetBlock == BlackDefaultBlock) { returnItem = new ItemStack(BLACK_SHIFT_DYE.get().asItem()); }
+            if (place) {
+                place_me = BaseDefaultBlock;
+                lock_cut = true;
+            }
         }
         if (inHand.equals(red.getItem())) {
             if (RedBaseDefaultBlock != null) { place = true; }
             if (TargetBlock == RedBaseDefaultBlock && DarkRedDefaultBlock != null) {
-                playerEntity.addItem(new ItemStack(CLEANSE_SHIFT_DYE.get().asItem()));
+                returnItem = new ItemStack(CLEANSE_SHIFT_DYE.get().asItem());
                 place_me = DarkRedDefaultBlock;
                 lock_cut = true;
                 place = true;
             }
             if (TargetBlock == YellowDefaultBlock && OrangeDefaultBlock != null) {
                 place_me = OrangeDefaultBlock;
-                playerEntity.addItem(new ItemStack(ORANGE_SHIFT_DYE.get().asItem()));
+                returnItem = new ItemStack(ORANGE_SHIFT_DYE.get().asItem());
                 place = true;
             }
             if (TargetBlock == BlueDefaultBlock && PurpleDefaultBlock != null) {
                 place_me = PurpleDefaultBlock;
-                playerEntity.addItem(new ItemStack(PURPLE_SHIFT_DYE.get().asItem()));
+                returnItem = new ItemStack(PURPLE_SHIFT_DYE.get().asItem());
                 place = true;
             }
             if (TargetBlock == WhiteDefaultBlock && PinkDefaultBlock != null) {
                 place_me = PinkDefaultBlock;
-                playerEntity.addItem(new ItemStack(PINK_SHIFT_DYE.get().asItem()));
+                returnItem = new ItemStack(PINK_SHIFT_DYE.get().asItem());
                 place = true;
             }
             if (TargetBlock == DarkRedDefaultBlock && RedBaseDefaultBlock != null) {
                 place_me = RedBaseDefaultBlock;
-                playerEntity.addItem(new ItemStack(RED_SHIFT_DYE.get().asItem()));
+                returnItem = new ItemStack(RED_SHIFT_DYE.get().asItem());
                 place = true;
                 lock_cut = true;
             }
             if (place && place_me == null) {
                 place_me = RedBaseDefaultBlock;
                 lock_cut = true;
-                playerEntity.addItem(new ItemStack(CLEANSE_SHIFT_DYE.get().asItem()));
+                returnItem = new ItemStack(CLEANSE_SHIFT_DYE.get().asItem());
             }
         }
         if (inHand.equals(blood.getItem())) {
@@ -121,28 +88,28 @@ public class colorMixInteraction {
             if (TargetBlock == BaseDefaultBlock && BaseDefaultBlock != null) { lock_cut = true; }
             if (TargetBlock == RedBaseDefaultBlock && DarkRedDefaultBlock != null) {
                 lock_cut = true;
-                playerEntity.addItem(new ItemStack(RED_SHIFT_DYE.get().asItem()));
+                returnItem = new ItemStack(RED_SHIFT_DYE.get().asItem());
                 place_me = DarkRedDefaultBlock;
                 place = true;
             }
             if (TargetBlock == YellowDefaultBlock && OrangeDefaultBlock != null) {
                 place_me = OrangeDefaultBlock;
-                playerEntity.addItem(new ItemStack(RED_SHIFT_DYE.get().asItem()));
+                returnItem = new ItemStack(RED_SHIFT_DYE.get().asItem());
                 place = true;
             }
             if (TargetBlock == BlueDefaultBlock && PurpleDefaultBlock != null) {
                 place_me = PurpleDefaultBlock;
-                playerEntity.addItem(new ItemStack(RED_SHIFT_DYE.get().asItem()));
+                returnItem = new ItemStack(RED_SHIFT_DYE.get().asItem());
                 place = true;
             }
             if (TargetBlock == WhiteDefaultBlock && PinkDefaultBlock != null) {
                 place_me = PinkDefaultBlock;
-                playerEntity.addItem(new ItemStack(RED_SHIFT_DYE.get().asItem()));
+                returnItem = new ItemStack(RED_SHIFT_DYE.get().asItem());
                 place = true;
             }
             if (place_me == null && place) {
                 place_me = DarkRedDefaultBlock;
-                playerEntity.addItem(new ItemStack(CLEANSE_SHIFT_DYE.get().asItem()));
+                returnItem = new ItemStack(CLEANSE_SHIFT_DYE.get().asItem());
             }
         }
         if (inHand.equals(white.getItem())) {
@@ -150,38 +117,38 @@ public class colorMixInteraction {
             if (TargetBlock == RedBaseDefaultBlock && PinkDefaultBlock != null) {
                 lock_cut = true;
                 place_me = PinkDefaultBlock;
-                playerEntity.addItem(new ItemStack(PINK_SHIFT_DYE.get().asItem()));
+                returnItem = new ItemStack(PINK_SHIFT_DYE.get().asItem());
                 place = true;
             }
             if (TargetBlock == BaseDefaultBlock && BaseDefaultBlock != null) { lock_cut = true; }
             if (TargetBlock == DarkRedDefaultBlock && PinkDefaultBlock != null) {
                 place_me = PinkDefaultBlock;
-                playerEntity.addItem(new ItemStack(PINK_SHIFT_DYE.get().asItem()));
+                returnItem = new ItemStack(PINK_SHIFT_DYE.get().asItem());
                 place = true;
             }
             if (TargetBlock == GreenDefaultBlock && LimeDefaultBlock != null) {
                 place_me = LimeDefaultBlock;
-                playerEntity.addItem(new ItemStack(LIME_SHIFT_DYE.get().asItem()));
+                returnItem = new ItemStack(LIME_SHIFT_DYE.get().asItem());
                 place = true;
             }
             if (TargetBlock == BlueDefaultBlock && LightBlueDefaultBlock != null) {
                 place_me = LightBlueDefaultBlock;
-                playerEntity.addItem(new ItemStack(LIGHT_BLUE_SHIFT_DYE.get().asItem()));
+                returnItem = new ItemStack(LIGHT_BLUE_SHIFT_DYE.get().asItem());
                 place = true;
             }
             if (TargetBlock == BlackDefaultBlock && GrayDefaultBlock != null) {
                 place_me = GrayDefaultBlock;
-                playerEntity.addItem(new ItemStack(GRAY_SHIFT_DYE.get().asItem()));
+                returnItem = new ItemStack(GRAY_SHIFT_DYE.get().asItem());
                 place = true;
             }
             if (TargetBlock == GrayDefaultBlock && LightGrayDefaultBlock != null) {
                 place_me = LightGrayDefaultBlock;
-                playerEntity.addItem(new ItemStack(LIGHT_GRAY_SHIFT_DYE.get().asItem()));
+                returnItem = new ItemStack(LIGHT_GRAY_SHIFT_DYE.get().asItem());
                 place = true;
             }
             if (place && place_me == null) {
                 place_me = WhiteDefaultBlock;
-                playerEntity.addItem(new ItemStack(CLEANSE_SHIFT_DYE.get().asItem()));
+                returnItem = new ItemStack(CLEANSE_SHIFT_DYE.get().asItem());
             }
         }
         if (inHand.equals(orange.getItem())) {
@@ -190,7 +157,7 @@ public class colorMixInteraction {
             if (TargetBlock == BaseDefaultBlock && BaseDefaultBlock != null) { lock_cut = true; }
             if (place) {
                 place_me = OrangeDefaultBlock;
-                playerEntity.addItem(new ItemStack(CLEANSE_SHIFT_DYE.get().asItem()));
+                returnItem = new ItemStack(CLEANSE_SHIFT_DYE.get().asItem());
             }
         }
         if (inHand.equals(magenta.getItem())) {
@@ -199,7 +166,7 @@ public class colorMixInteraction {
             if (TargetBlock == BaseDefaultBlock && BaseDefaultBlock != null) { lock_cut = true; }
             if (place) {
                 place_me = MagentaDefaultBlock;
-                playerEntity.addItem(new ItemStack(CLEANSE_SHIFT_DYE.get().asItem()));
+                returnItem = new ItemStack(CLEANSE_SHIFT_DYE.get().asItem());
             }
         }
         if (inHand.equals(light_blue.getItem())) {
@@ -208,7 +175,7 @@ public class colorMixInteraction {
             if (TargetBlock == BaseDefaultBlock && BaseDefaultBlock != null) { lock_cut = true; }
             if (place) {
                 place_me = LightBlueDefaultBlock;
-                playerEntity.addItem(new ItemStack(CLEANSE_SHIFT_DYE.get().asItem()));
+                returnItem = new ItemStack(CLEANSE_SHIFT_DYE.get().asItem());
             }
         }
         if (inHand.equals(yellow.getItem())) {
@@ -216,18 +183,18 @@ public class colorMixInteraction {
             if (TargetBlock == RedBaseDefaultBlock && OrangeDefaultBlock != null) {
                 lock_cut = true;
                 place_me = OrangeDefaultBlock;
-                playerEntity.addItem(new ItemStack(ORANGE_SHIFT_DYE.get().asItem()));
+                returnItem = new ItemStack(ORANGE_SHIFT_DYE.get().asItem());
                 place = true;
             }
             if (TargetBlock == BaseDefaultBlock && BaseDefaultBlock != null) { lock_cut = true; }
             if (TargetBlock == DarkRedDefaultBlock && OrangeDefaultBlock != null) {
                 place_me = OrangeDefaultBlock;
-                playerEntity.addItem(new ItemStack(RED_SHIFT_DYE.get().asItem()));
+                returnItem = new ItemStack(RED_SHIFT_DYE.get().asItem());
                 place = true;
             }
             if (place && place_me == null) {
                 place_me = YellowDefaultBlock;
-                playerEntity.addItem(new ItemStack(CLEANSE_SHIFT_DYE.get().asItem()));
+                returnItem = new ItemStack(CLEANSE_SHIFT_DYE.get().asItem());
             }
         }
         if (inHand.equals(lime.getItem())) {
@@ -236,7 +203,7 @@ public class colorMixInteraction {
             if (TargetBlock == BaseDefaultBlock && BaseDefaultBlock != null) { lock_cut = true; }
             if (place) {
                 place_me = LimeDefaultBlock;
-                playerEntity.addItem(new ItemStack(CLEANSE_SHIFT_DYE.get().asItem()));
+                returnItem = new ItemStack(CLEANSE_SHIFT_DYE.get().asItem());
             }
         }
         if (inHand.equals(pink.getItem())) {
@@ -245,18 +212,18 @@ public class colorMixInteraction {
             if (TargetBlock == BaseDefaultBlock && BaseDefaultBlock != null) { lock_cut = true; }
             if (TargetBlock == PurpleDefaultBlock && MagentaDefaultBlock != null) {
                 place_me = MagentaDefaultBlock;
-                playerEntity.addItem(new ItemStack(MAGENTA_SHIFT_DYE.get().asItem()));
+                returnItem = new ItemStack(MAGENTA_SHIFT_DYE.get().asItem());
                 place = true;
             }
             if (TargetBlock == BlackDefaultBlock && RedBaseDefaultBlock != null) {
                 place_me = RedBaseDefaultBlock;
                 lock_cut = true;
-                playerEntity.addItem(new ItemStack(RED_SHIFT_DYE.get().asItem()));
+                returnItem = new ItemStack(RED_SHIFT_DYE.get().asItem());
                 place = true;
             }
             if (place && place_me == null) {
                 place_me = PinkDefaultBlock;
-                playerEntity.addItem(new ItemStack(CLEANSE_SHIFT_DYE.get().asItem()));
+                returnItem = new ItemStack(CLEANSE_SHIFT_DYE.get().asItem());
             }
         }
         if (inHand.equals(gray.getItem())) {
@@ -265,12 +232,12 @@ public class colorMixInteraction {
             if (TargetBlock == BaseDefaultBlock && BaseDefaultBlock != null) { lock_cut = true; }
             if (TargetBlock == WhiteDefaultBlock && LightGrayDefaultBlock != null) {
                 place_me = LightGrayDefaultBlock;
-                playerEntity.addItem(new ItemStack(LIGHT_GRAY_SHIFT_DYE.get().asItem()));
+                returnItem = new ItemStack(LIGHT_GRAY_SHIFT_DYE.get().asItem());
                 place = true;
             }
             if (place && place_me == null) {
                 place_me = GrayDefaultBlock;
-                playerEntity.addItem(new ItemStack(CLEANSE_SHIFT_DYE.get().asItem()));
+                returnItem = new ItemStack(CLEANSE_SHIFT_DYE.get().asItem());
             }
         }
         if (inHand.equals(light_gray.getItem())) {
@@ -279,12 +246,12 @@ public class colorMixInteraction {
             if (TargetBlock == BaseDefaultBlock && BaseDefaultBlock != null) { lock_cut = true; }
             if (TargetBlock == BlackDefaultBlock && GrayDefaultBlock != null) {
                 place_me = GrayDefaultBlock;
-                playerEntity.addItem(new ItemStack(GRAY_SHIFT_DYE.get().asItem()));
+                returnItem = new ItemStack(GRAY_SHIFT_DYE.get().asItem());
                 place = true;
             }
             if (place && place_me == null) {
                 place_me = LightGrayDefaultBlock;
-                playerEntity.addItem(new ItemStack(CLEANSE_SHIFT_DYE.get().asItem()));
+                returnItem = new ItemStack(CLEANSE_SHIFT_DYE.get().asItem());
             }
         }
         if (inHand.equals(cyan.getItem())) {
@@ -293,7 +260,7 @@ public class colorMixInteraction {
             if (TargetBlock == BaseDefaultBlock && BaseDefaultBlock != null) { lock_cut = true; }
             if (place) {
                 place_me = CyanDefaultBlock;
-                playerEntity.addItem(new ItemStack(CLEANSE_SHIFT_DYE.get().asItem()));
+                returnItem = new ItemStack(CLEANSE_SHIFT_DYE.get().asItem());
             }
         }
         if (inHand.equals(purple.getItem())) {
@@ -302,12 +269,12 @@ public class colorMixInteraction {
             if (TargetBlock == BaseDefaultBlock && BaseDefaultBlock != null) { lock_cut = true; }
             if (TargetBlock == PinkDefaultBlock && MagentaDefaultBlock != null) {
                 place_me = MagentaDefaultBlock;
-                playerEntity.addItem(new ItemStack(MAGENTA_SHIFT_DYE.get().asItem()));
+                returnItem = new ItemStack(MAGENTA_SHIFT_DYE.get().asItem());
                 place = true;
             }
             if (place && place_me == null) {
                 place_me = PurpleDefaultBlock;
-                playerEntity.addItem(new ItemStack(CLEANSE_SHIFT_DYE.get().asItem()));
+                returnItem = new ItemStack(CLEANSE_SHIFT_DYE.get().asItem());
             }
         }
         if (inHand.equals(blue.getItem())) {
@@ -315,23 +282,23 @@ public class colorMixInteraction {
             if (TargetBlock == RedBaseDefaultBlock && PurpleDefaultBlock != null) {
                 lock_cut = true;
                 place_me = PurpleDefaultBlock;
-                playerEntity.addItem(new ItemStack(PURPLE_SHIFT_DYE.get().asItem()));
+                returnItem = new ItemStack(PURPLE_SHIFT_DYE.get().asItem());
                 place = true;
             }
             if (TargetBlock == BaseDefaultBlock && BaseDefaultBlock != null) { lock_cut = true; }
             if (TargetBlock == GreenDefaultBlock && CyanDefaultBlock != null) {
                 place_me = CyanDefaultBlock;
-                playerEntity.addItem(new ItemStack(CYAN_SHIFT_DYE.get().asItem()));
+                returnItem = new ItemStack(CYAN_SHIFT_DYE.get().asItem());
                 place = true;
             }
             if (TargetBlock == WhiteDefaultBlock && LightBlueDefaultBlock != null) {
                 place_me = LightBlueDefaultBlock;
-                playerEntity.addItem(new ItemStack(LIGHT_BLUE_SHIFT_DYE.get().asItem()));
+                returnItem = new ItemStack(LIGHT_BLUE_SHIFT_DYE.get().asItem());
                 place = true;
             }
             if (place && place_me == null) {
                 place_me = BlueDefaultBlock;
-                playerEntity.addItem(new ItemStack(CLEANSE_SHIFT_DYE.get().asItem()));
+                returnItem = new ItemStack(CLEANSE_SHIFT_DYE.get().asItem());
             }
 
         }
@@ -341,17 +308,17 @@ public class colorMixInteraction {
             if (TargetBlock == BaseDefaultBlock && BaseDefaultBlock != null) { lock_cut = true; }
             if (TargetBlock == WhiteDefaultBlock && LimeDefaultBlock != null) {
                 place_me = LimeDefaultBlock;
-                playerEntity.addItem(new ItemStack(LIME_SHIFT_DYE.get().asItem()));
+                returnItem = new ItemStack(LIME_SHIFT_DYE.get().asItem());
                 place = true;
             }
             if (TargetBlock == BlueDefaultBlock && PurpleDefaultBlock != null) {
                 place_me = PurpleDefaultBlock;
-                playerEntity.addItem(new ItemStack(PURPLE_SHIFT_DYE.get().asItem()));
+                returnItem = new ItemStack(PURPLE_SHIFT_DYE.get().asItem());
                 place = true;
             }
             if (place && place_me == null) {
                 place_me = GreenDefaultBlock;
-                playerEntity.addItem(new ItemStack(CLEANSE_SHIFT_DYE.get().asItem()));
+                returnItem = new ItemStack(CLEANSE_SHIFT_DYE.get().asItem());
             }
         }
         if (inHand.equals(brown.getItem())) {
@@ -360,7 +327,7 @@ public class colorMixInteraction {
             if (TargetBlock == BaseDefaultBlock && BaseDefaultBlock != null) { lock_cut = true; }
             if (place) {
                 place_me = BrownDefaultBlock;
-                playerEntity.addItem(new ItemStack(CLEANSE_SHIFT_DYE.get().asItem()));
+                returnItem = new ItemStack(CLEANSE_SHIFT_DYE.get().asItem());
             }
         }
         if (inHand.equals(black.getItem())) {
@@ -369,31 +336,31 @@ public class colorMixInteraction {
             if (TargetBlock == BaseDefaultBlock && BaseDefaultBlock != null) { lock_cut = true; }
             if (TargetBlock == LightGrayDefaultBlock && GrayDefaultBlock != null) {
                 place_me = GrayDefaultBlock;
-                playerEntity.addItem(new ItemStack(GRAY_SHIFT_DYE.get().asItem()));
+                returnItem = new ItemStack(GRAY_SHIFT_DYE.get().asItem());
                 place = true;
             }
             if (TargetBlock == LightBlueDefaultBlock && BlueDefaultBlock != null) {
                 place_me = BlueDefaultBlock;
-                playerEntity.addItem(new ItemStack(BLUE_SHIFT_DYE.get().asItem()));
+                returnItem = new ItemStack(BLUE_SHIFT_DYE.get().asItem());
                 place = true;
             }
             if (TargetBlock == LimeDefaultBlock && GreenDefaultBlock != null) {
                 place_me = GreenDefaultBlock;
-                playerEntity.addItem(new ItemStack(GREEN_SHIFT_DYE.get().asItem()));
+                returnItem = new ItemStack(GREEN_SHIFT_DYE.get().asItem());
                 place = true;
             }
             if (TargetBlock == PinkDefaultBlock && RedBaseDefaultBlock != null) {
                 place_me = RedBaseDefaultBlock;
-                playerEntity.addItem(new ItemStack(RED_SHIFT_DYE.get().asItem()));
+                returnItem = new ItemStack(RED_SHIFT_DYE.get().asItem());
                 lock_cut = true;
                 place = true;
             }
             if (place && place_me == null) {
                 place_me = BlackDefaultBlock;
-                playerEntity.addItem(new ItemStack(CLEANSE_SHIFT_DYE.get().asItem()));
+                returnItem = new ItemStack(CLEANSE_SHIFT_DYE.get().asItem());
             }
         }
-        if (place) {
+        if (place && place_me != null) {
             switch (DefaultBlockIndex) {
                 case 1 ->
                     //walls
@@ -410,9 +377,8 @@ public class colorMixInteraction {
                         blockReplacer.axisPlacement(world, blockPos, place_me, lock_cut);
                 case 5 ->
                     //DefaultBocks with no special placements
+                    //AxisPlacement set to do default states on which suits default blocks
                         blockReplacer.axisPlacement(world, blockPos, place_me, true);
-
-                //AxisPlacement set to do default states on which suits default blocks
                 case 6 ->
                     //Fence Blocks
                         blockReplacer.fencePlacement(world, blockPos, place_me);
@@ -424,7 +390,8 @@ public class colorMixInteraction {
                     return InteractionResult.FAIL;
                 }
             }
-            playerEntity.getMainHandItem().setCount(playerEntity.getMainHandItem().getCount()-1);
+            playerEntity.getMainHandItem().setCount(pHand.getCount()-1);
+            if (returnItem != null) { playerEntity.addItem(returnItem); }
             return InteractionResult.SUCCESS;
 
         } else return InteractionResult.FAIL;
