@@ -1,17 +1,17 @@
 package com.dephoegon.delbase.aid.event;
 
-import com.mojang.blaze3d.platform.InputConstants;
 import net.minecraft.client.KeyMapping;
 import net.minecraftforge.client.ClientRegistry;
 import org.jetbrains.annotations.NotNull;
+import org.lwjgl.glfw.GLFW;
 
 public class KeyBindManager {
-    public static KeyMapping tooltipShift;
-    public static KeyMapping tooltipCtrl;
+    public static KeyMapping R_Shift;
+    public static KeyMapping R_Ctrl;
 
     public static void mapKeys() {
-        tooltipShift = registerKey("tooltip.key.shift", InputConstants.KEY_LSHIFT);
-        tooltipCtrl = registerKey("tooltip.key.ctrl", InputConstants.KEY_LCONTROL);
+        R_Shift = registerKey("tooltip.key.shift", GLFW.GLFW_KEY_RIGHT_SHIFT);
+        R_Ctrl = registerKey("tooltip.key.ctrl", GLFW.GLFW_KEY_RIGHT_CONTROL);
     }
 
     private static @NotNull KeyMapping registerKey(String name, int keyCode) {
