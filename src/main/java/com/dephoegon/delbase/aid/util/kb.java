@@ -4,18 +4,15 @@ import com.mojang.blaze3d.platform.InputConstants;
 import net.minecraft.client.KeyMapping;
 import net.minecraft.client.Minecraft;
 import net.minecraftforge.common.util.Lazy;
-import org.lwjgl.glfw.GLFW;
 
 import static com.dephoegon.delbase.aid.event.KeyBindManager.*;
 import static com.mojang.blaze3d.platform.InputConstants.isKeyDown;
 
 public class kb {
-    private static boolean LShift() { return isKB_KeyBindDown(tooltipShift); }
-    private static boolean RShift() { return keyCheck(GLFW.GLFW_KEY_RIGHT_SHIFT); }
-    private static boolean LCtrl() { return isKB_KeyBindDown(tooltipCtrl); }
-    private static boolean RCtrl() { return keyCheck(GLFW.GLFW_KEY_RIGHT_CONTROL); }
-    public static boolean HShift() { return isKeyBindDefault(tooltipShift) ? LShift() || RShift() : LShift(); }
-    public static boolean HCtrl() { return isKeyBindDefault(tooltipCtrl) ? LCtrl() || RCtrl() : LCtrl(); }
+    private static boolean RShift() { return isKB_KeyBindDown(R_Shift); }
+    private static boolean RCtrl() { return isKB_KeyBindDown(R_Ctrl); }
+    public static boolean HShift() { return RShift(); }
+    public static boolean HCtrl() { return RCtrl(); }
 
     public static boolean isKB_KeyBindDown(Lazy<KeyMapping> mapping) {
         if (mapping == null) { return false; }
