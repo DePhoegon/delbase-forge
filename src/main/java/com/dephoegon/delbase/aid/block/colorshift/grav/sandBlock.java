@@ -29,9 +29,9 @@ public class sandBlock extends gravBlock {
             return true;
         if (plant.getBlock() == Blocks.SUGAR_CANE) {
             for (Direction direction : Direction.Plane.HORIZONTAL) {
-                BlockState blockstate1 = world.getBlockState(pos.relative(direction));
+                BlockState blockState1 = world.getBlockState(pos.relative(direction));
                 FluidState fluidstate = world.getFluidState(pos.relative(direction));
-                if (fluidstate.is(FluidTags.WATER) || blockstate1.is(Blocks.FROSTED_ICE)) {
+                if (fluidstate.is(FluidTags.WATER) || blockState1.is(Blocks.FROSTED_ICE)) {
                     return true;
                 }
             }

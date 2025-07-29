@@ -50,7 +50,7 @@ public class blockCuttingStationRecipes implements Recipe<SimpleContainer> {
         return hold;
     }
 
-    @SuppressWarnings("NullableProblems")
+    @SuppressWarnings({"NullableProblems", "DataFlowIssue"})
     @Override
     public ItemStack assemble(@NotNull SimpleContainer p_44001_, @NotNull RegistryAccess p_267165_) { return null; }
     public boolean isSpecial() { return true; }
@@ -101,7 +101,8 @@ public class blockCuttingStationRecipes implements Recipe<SimpleContainer> {
                 fCount = 1;
                 stack.setCount(1);
             }
-            if (fCount != 0) { delbase.LOGGER.warn(stack.getItem().asItem() + " - in a recipe has an improper count size - "+ iCount +" - Set to count of -> "+ fCount); }
+            if (fCount != 0) {
+                delbase.LOGGER.warn("{} - in a recipe has an improper count size - {} - Set to count of -> {}", stack.getItem().asItem(), iCount, fCount); }
             return stack;
         }
     }

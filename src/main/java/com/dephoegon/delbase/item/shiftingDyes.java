@@ -10,6 +10,7 @@ import net.minecraftforge.registries.RegistryObject;
 
 import static com.dephoegon.delbase.delbase.Mod_ID;
 
+@SuppressWarnings("SameParameterValue")
 public class shiftingDyes {
     private static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, Mod_ID);
     public static final RegistryObject<Item> CLEANSE_SHIFT_DYE = ITEMS.register("cleanse_shift_dye",
