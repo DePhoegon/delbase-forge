@@ -8,7 +8,7 @@ var fs = require('fs');
 const { resolve } = require('path');
 const path = require('path');
 
-var baseDrive = 'G:/' // Set This block of variables as needed
+var baseDrive = 'D:/' // Set This block of variables as needed
 var baseFolder = baseDrive+'MC_JSONS';
 var bridgeModID = 'delbridgebop'; // ModID of the mod intended be the namespace of the model jsons
 var baseModID = 'minecraft';
